@@ -18,18 +18,18 @@
   },
   "traffic_2min.mp4": {
     "status": "demo_calibration",
-    "description": "Demonstrator calibration for 2-minute video feed (traffic_2min.mp4).",
-    "resolution": [720, 1280],
+    "description": "Demonstrator calibration for 2-minute 1080p video feed (traffic_2min.mp4). Approximates a 14m wide by 60m deep multi-lane road perspective.",
+    "resolution": [1080, 1920],
     "image_points": [
-      [160.0, 700.0],
-      [560.0, 700.0],
-      [700.0, 1260.0],
-      [20.0, 1260.0]
+      [500.0, 480.0],
+      [1400.0, 480.0],
+      [1750.0, 1020.0],
+      [100.0, 1020.0]
     ],
     "world_points": [
-      [0.0, 35.0],
-      [10.0, 35.0],
-      [10.0, 0.0],
+      [0.0, 60.0],
+      [14.0, 60.0],
+      [14.0, 0.0],
       [0.0, 0.0]
     ]
   },
