@@ -44,11 +44,13 @@ import numpy as np
 import pandas as pd
 import cv2
 
-# Import homography calibration engine
+# Import homography calibration engine & Kalman tracker
 try:
     from vision.calibration import HomographyCalibrator, draw_calibration_overlay
+    from vision.kalman_tracker import GroundPlaneKalmanTracker
 except ImportError:
     from calibration import HomographyCalibrator, draw_calibration_overlay
+    from kalman_tracker import GroundPlaneKalmanTracker
 
 
 # ==============================================================================
@@ -211,11 +213,47 @@ def calculate_vehicle_kinematics(
         kinematics.loc[world_jump_mask, "distance_meters"] = np.nan
 
         kinematics["speed_mps"] = kinematics["distance_meters"] / kinematics["elapsed_seconds"]
-        kinematics["speed_kmh"] = (kinematics["speed_mps"] * 3.6).round(2)
+        kinematics["speed_kmh_raw"] = (kinematics["speed_mps"] * 3.6).round(2)
+
+        # 2D Ground-Plane Kalman Filter with Occlusion Gating
+        kalman_tracker = GroundPlaneKalmanTracker(sigma_a=1.5, sigma_pos=0.50)
+        has_occ = "is_occluded" in kinematics.columns
+
+        kalman_speeds = []
+        kalman_xs = []
+        kalman_ys = []
+
+        for row in kinematics.itertuples():
+            t_id = int(row.track_id)
+            wx = float(row.world_x) if np.isfinite(row.world_x) else np.nan
+            wy = float(row.world_y) if np.isfinite(row.world_y) else np.nan
+            ts = float(row.timestamp_seconds)
+            is_occ = bool(getattr(row, "is_occluded", False)) if has_occ else False
+
+            res = kalman_tracker.process_observation(t_id, wx, wy, ts, is_occluded=is_occ)
+            kalman_speeds.append(res["kalman_speed_kmh"])
+            kalman_xs.append(res["kalman_x"])
+            kalman_ys.append(res["kalman_y"])
+
+        kinematics["kalman_x"] = kalman_xs
+        kinematics["kalman_y"] = kalman_ys
+        kinematics["kalman_speed_kmh"] = kalman_speeds
+
+        # Primary physical speed uses Kalman-filtered velocity with NaN on first observation
+        kinematics["speed_kmh"] = kinematics["kalman_speed_kmh"]
     else:
         kinematics["distance_meters"] = np.nan
         kinematics["speed_mps"] = np.nan
+        kinematics["speed_kmh_raw"] = np.nan
+        kinematics["kalman_speed_kmh"] = np.nan
         kinematics["speed_kmh"] = np.nan
+
+    # Pixel speed smoothing
+    kinematics["pixel_speed_raw"] = kinematics["pixel_speed"]
+    kinematics["pixel_speed"] = (
+        kinematics.groupby("track_id")["pixel_speed_raw"]
+        .transform(lambda s: s.rolling(3, min_periods=1).mean().round(2))
+    )
 
     return kinematics
 

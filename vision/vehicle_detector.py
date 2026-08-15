@@ -5,8 +5,15 @@ import argparse
 from datetime import datetime, timezone
 import cv2
 import pandas as pd
+import numpy as np
 from pathlib import Path
 from ultralytics import YOLO
+
+# Import adaptive lighting preprocessor
+try:
+    from vision.enhancement import adaptive_preprocess_frame
+except ImportError:
+    from enhancement import adaptive_preprocess_frame
 
 
 # ============================================================
@@ -35,8 +42,6 @@ VEHICLE_CLASSES = {
 def resolve_output_paths(session_id: str = None):
     """
     Resolves metrics and trajectory output paths based on session_id.
-    If session_id is provided, routes to data/sessions/{session_id}/.
-    Otherwise defaults to root data/ paths.
     """
     if session_id:
         session_dir = Path("data") / "sessions" / session_id
@@ -49,6 +54,51 @@ def resolve_output_paths(session_id: str = None):
 
 
 # ============================================================
+# OCCLUSION OVERLAP DETECTOR
+# ============================================================
+
+def compute_occlusion_flags(boxes_xyxy: List[np.ndarray], threshold: float = 0.15) -> List[bool]:
+    """
+    Detects if any vehicle bounding box is occluded from the camera's bottom perspective
+    by another vehicle positioned lower down in the frame (closer to the camera).
+
+    When a vehicle is behind another in heavy traffic, the front vehicle occludes
+    the bottom contact point of the rear vehicle.
+    """
+    n = len(boxes_xyxy)
+    if n <= 1:
+        return [False] * n
+
+    is_occluded = [False] * n
+
+    for i in range(n):
+        box_a = boxes_xyxy[i]  # [x1, y1, x2, y2]
+        area_a = max((box_a[2] - box_a[0]) * (box_a[3] - box_a[1]), 1)
+
+        for j in range(n):
+            if i == j:
+                continue
+            box_b = boxes_xyxy[j]
+
+            # Check if box_b is in front (lower in the image -> box_b[3] > box_a[3])
+            if box_b[3] > box_a[1]:
+                # Compute intersection
+                ix1 = max(box_a[0], box_b[0])
+                iy1 = max(box_a[1], box_b[1])
+                ix2 = min(box_a[2], box_b[2])
+                iy2 = min(box_a[3], box_b[3])
+
+                if ix2 > ix1 and iy2 > iy1:
+                    inter_area = (ix2 - ix1) * (iy2 - iy1)
+                    overlap_ratio = inter_area / float(area_a)
+                    if overlap_ratio >= threshold:
+                        is_occluded[i] = True
+                        break
+
+    return is_occluded
+
+
+# ============================================================
 # MAIN VIDEO PROCESSING
 # ============================================================
 
@@ -58,7 +108,8 @@ def process_video(
     location_id: str = "loc_01",
     camera_id: str = "cam_01",
     observation_date: str = None,
-    show_preview: bool = False
+    show_preview: bool = False,
+    force_night_mode: bool = False
 ):
     metrics_output, trajectory_output, metadata_output, output_dir = resolve_output_paths(session_id)
 
@@ -67,7 +118,7 @@ def process_video(
 
     print("=" * 70)
     print("ROAD SENSE AI - COMPUTER VISION MODULE")
-    print("VEHICLE DETECTION + TRAJECTORY TRACKING")
+    print("VEHICLE DETECTION + TRAJECTORY TRACKING + OCCLUSION & LIGHTING ADAPTATION")
     print("=" * 70)
     if session_id:
         print(f"Active Session: {session_id}")
@@ -99,12 +150,9 @@ def process_video(
     cap = cv2.VideoCapture(video_path)
 
     if not cap.isOpened():
-        raise RuntimeError(
-            f"Could not open the traffic video: {video_path}"
-        )
+        raise RuntimeError(f"Could not open the traffic video: {video_path}")
 
     fps = cap.get(cv2.CAP_PROP_FPS)
-
     if fps <= 0:
         fps = 30.0
 
@@ -125,14 +173,15 @@ def process_video(
 
     metric_records = []
     trajectory_records = []
+    lighting_conditions_observed = set()
 
     frame_number = 0
-
-    # Process every 5th frame
     PROCESS_EVERY_N_FRAMES = 5
 
     print("\nStarting vehicle detection...")
-    print("Trajectory logging: ENABLED")
+    print("Trajectory logging: ENABLED (Bottom-Center Road Contact)")
+    print("Adaptive Low-Light / Night Enhancement: ACTIVE")
+    print("Heavy Traffic Occlusion Detection: ACTIVE")
     if show_preview:
         print("Live preview: ENABLED (Press Q in window to stop)\n")
     else:
@@ -144,23 +193,26 @@ def process_video(
 
     while True:
         success, frame = cap.read()
-
         if not success:
             break
 
         frame_number += 1
-
         if frame_number % PROCESS_EVERY_N_FRAMES != 0:
             continue
 
         timestamp = frame_number / fps
 
         # ----------------------------------------------------
-        # YOLO tracking (persist=True maintains IDs within this video)
+        # 1. Adaptive Night / Low-Light Preprocessor
         # ----------------------------------------------------
+        processed_frame, light_audit = adaptive_preprocess_frame(frame, force_enhancement=force_night_mode)
+        lighting_conditions_observed.add(light_audit["lighting_condition"])
 
+        # ----------------------------------------------------
+        # 2. YOLO tracking (persist=True maintains IDs within this video)
+        # ----------------------------------------------------
         results = model.track(
-            frame,
+            processed_frame,
             persist=True,
             tracker="bytetrack.yaml",
             verbose=False
@@ -168,84 +220,80 @@ def process_video(
 
         result = results[0]
 
-        # ----------------------------------------------------
-        # Vehicle counters
-        # ----------------------------------------------------
-
         counts = {
             "car": 0,
             "motorcycle": 0,
             "bus": 0,
             "truck": 0
         }
-
         total_vehicles = 0
 
         # ----------------------------------------------------
-        # Process detections
+        # 3. Process detections & compute occlusion overlap
         # ----------------------------------------------------
+        valid_boxes = []
+        valid_classes = []
+        valid_track_ids = []
 
         if result.boxes is not None:
             boxes = result.boxes
-
             for i in range(len(boxes)):
                 class_id = int(boxes.cls[i].item())
-
                 if class_id not in VEHICLE_CLASSES:
                     continue
 
-                vehicle_type = VEHICLE_CLASSES[class_id]
-                counts[vehicle_type] += 1
+                vtype = VEHICLE_CLASSES[class_id]
+                counts[vtype] += 1
                 total_vehicles += 1
 
                 xyxy = boxes.xyxy[i].cpu().numpy().astype(int)
-                x1, y1, x2, y2 = xyxy
+                valid_boxes.append(xyxy)
+                valid_classes.append(vtype)
 
-                # Tracking Point: Bottom-center of the bounding box
-                # The bottom-center point approximates the vehicle's contact point
-                # with the road plane and is therefore more appropriate for
-                # perspective transformation than the bounding-box center.
-                center_x = (x1 + x2) / 2.0
-                center_y = float(y2)
+                track_id = int(boxes.id[i].item()) if boxes.id is not None else None
+                valid_track_ids.append(track_id)
 
-                track_id = None
-                if boxes.id is not None:
-                    track_id = int(boxes.id[i].item())
+        # Compute occlusion flags for all vehicles in this frame
+        occlusion_flags = compute_occlusion_flags(valid_boxes, threshold=0.15) if valid_boxes else []
 
-                # Save trajectory
-                if track_id is not None:
-                    trajectory_records.append({
-                        "timestamp_seconds": round(timestamp, 3),
-                        "frame_number": frame_number,
-                        "track_id": track_id,
-                        "vehicle_type": vehicle_type,
-                        "center_x": round(center_x, 2),
-                        "center_y": round(center_y, 2),
-                        "bbox_width": int(x2 - x1),
-                        "bbox_height": int(y2 - y1)
-                    })
+        for i in range(len(valid_boxes)):
+            xyxy = valid_boxes[i]
+            x1, y1, x2, y2 = xyxy
+            vehicle_type = valid_classes[i]
+            track_id = valid_track_ids[i]
+            is_occ = occlusion_flags[i] if i < len(occlusion_flags) else False
 
-                # Visual annotation if preview enabled
-                if show_preview:
-                    cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), 2)
-                    cv2.circle(frame, (int(center_x), int(center_y)), 4, (0, 0, 255), -1)
-                    label = vehicle_type
-                    if track_id is not None:
-                        label += f" ID:{track_id}"
-                    cv2.putText(
-                        frame,
-                        label,
-                        (x1, max(y1 - 10, 20)),
-                        cv2.FONT_HERSHEY_SIMPLEX,
-                        0.5,
-                        (0, 255, 0),
-                        2
-                    )
+            # Tracking Point: Bottom-center of the bounding box
+            # Approximates the vehicle's contact point with the road plane
+            center_x = (x1 + x2) / 2.0
+            center_y = float(y2)
+
+            if track_id is not None:
+                trajectory_records.append({
+                    "timestamp_seconds": round(timestamp, 3),
+                    "frame_number": frame_number,
+                    "track_id": track_id,
+                    "vehicle_type": vehicle_type,
+                    "center_x": round(center_x, 2),
+                    "center_y": round(center_y, 2),
+                    "bbox_width": int(x2 - x1),
+                    "bbox_height": int(y2 - y1),
+                    "is_occluded": bool(is_occ)
+                })
+
+            # Visual annotation if preview enabled
+            if show_preview:
+                box_col = (0, 165, 255) if is_occ else (0, 255, 0)
+                cv2.rectangle(frame, (x1, y1), (x2, y2), box_col, 2)
+                cv2.circle(frame, (int(center_x), int(center_y)), 4, (0, 0, 255), -1)
+                label = f"{vehicle_type} ID:{track_id}" if track_id is not None else vehicle_type
+                if is_occ:
+                    label += " [OCCLUDED]"
+                cv2.putText(frame, label, (x1, max(y1 - 10, 20)), cv2.FONT_HERSHEY_SIMPLEX, 0.5, box_col, 2)
 
         # ----------------------------------------------------
-        # Save frame-level metrics
+        # 4. Save frame-level metrics
         # ----------------------------------------------------
-
         metric_records.append({
             "timestamp_seconds": round(timestamp, 3),
             "vehicle_count": total_vehicles,
@@ -255,14 +303,9 @@ def process_video(
             "trucks": counts["truck"]
         })
 
-        # ----------------------------------------------------
-        # Display preview if requested
-        # ----------------------------------------------------
-
         if show_preview:
             cv2.putText(frame, f"Vehicles: {total_vehicles}", (20, 40), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 255), 2)
-            cv2.putText(frame, f"Time: {timestamp:.1f}s", (20, 80), cv2.FONT_HERSHEY_SIMPLEX, 0.8, (0, 255, 255), 2)
-            cv2.putText(frame, "Trajectory Tracking: ON", (20, 120), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 255), 2)
+            cv2.putText(frame, f"Lighting: {light_audit['lighting_condition']}", (20, 80), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 255), 2)
             cv2.imshow("RoadSense AI - Vehicle Tracking", frame)
             key = cv2.waitKey(1) & 0xFF
             if key == ord("q"):
@@ -271,35 +314,21 @@ def process_video(
     # --------------------------------------------------------
     # Cleanup
     # --------------------------------------------------------
-
     cap.release()
     if show_preview:
         cv2.destroyAllWindows()
 
     # --------------------------------------------------------
-    # Convert to DataFrames
+    # Convert & Save DataFrames
     # --------------------------------------------------------
-
     metrics_df = pd.DataFrame(metric_records)
     trajectory_df = pd.DataFrame(trajectory_records)
-
-    # --------------------------------------------------------
-    # Create output directories
-    # --------------------------------------------------------
 
     Path(metrics_output).parent.mkdir(parents=True, exist_ok=True)
     Path(trajectory_output).parent.mkdir(parents=True, exist_ok=True)
 
-    # --------------------------------------------------------
-    # Save frame metrics & trajectories
-    # --------------------------------------------------------
-
     metrics_df.to_csv(metrics_output, index=False)
     trajectory_df.to_csv(trajectory_output, index=False)
-
-    # --------------------------------------------------------
-    # Save session metadata if in session mode
-    # --------------------------------------------------------
 
     unique_tracked = int(trajectory_df["track_id"].nunique()) if not trajectory_df.empty else 0
 
@@ -316,26 +345,26 @@ def process_video(
             "created_at": datetime.now(timezone.utc).isoformat(),
             "record_count": len(metrics_df),
             "trajectory_count": len(trajectory_df),
-            "unique_tracked_vehicles": unique_tracked
+            "unique_tracked_vehicles": unique_tracked,
+            "lighting_conditions": list(lighting_conditions_observed)
         }
         with open(metadata_output, "w") as f:
             json.dump(session_meta, f, indent=4)
         print(f"[+] Session metadata saved to: {metadata_output}")
 
     # --------------------------------------------------------
-    # Final report
+    # Report
     # --------------------------------------------------------
-
     print("\n" + "=" * 70)
     print("VISION PROCESSING COMPLETE")
     print("=" * 70)
-
     print(f"\nProcessed metric records : {len(metrics_df)}")
     print(f"Trajectory records       : {len(trajectory_df)}")
-
     if not trajectory_df.empty:
         print(f"Unique tracked vehicles  : {unique_tracked}")
-        print(f"Tracked vehicle types    : {trajectory_df['vehicle_type'].nunique()}")
+        occluded_pct = (trajectory_df['is_occluded'].sum() / len(trajectory_df)) * 100.0 if 'is_occluded' in trajectory_df.columns else 0.0
+        print(f"Occluded observation rate: {occluded_pct:.1f}%")
+        print(f"Lighting conditions      : {list(lighting_conditions_observed)}")
 
     print(f"\nTraffic metrics saved to:\n  {metrics_output}")
     print(f"\nVehicle trajectories saved to:\n  {trajectory_output}")
@@ -349,13 +378,14 @@ def process_video(
 # ============================================================
 
 def main():
-    parser = argparse.ArgumentParser(description="RoadSense AI - Vehicle Detector and Trajectory Tracker")
+    parser = argparse.ArgumentParser(description="RoadSense AI - Vehicle Detector, Trajectory Tracker & Preprocessor")
     parser.add_argument("--video", type=str, default=DEFAULT_VIDEO_PATH, help="Path to input video file")
-    parser.add_argument("--session", type=str, default=None, help="Session identifier (e.g. session_002)")
+    parser.add_argument("--session", type=str, default=None, help="Session identifier (e.g. session_001)")
     parser.add_argument("--location-id", type=str, default="loc_01", help="Location identifier")
     parser.add_argument("--camera-id", type=str, default="cam_01", help="Camera identifier")
     parser.add_argument("--date", type=str, default=None, help="Observation date (YYYY-MM-DD)")
     parser.add_argument("--show", action="store_true", help="Display live video playback window")
+    parser.add_argument("--night-mode", action="store_true", help="Force night/low-light enhancement mode")
 
     args = parser.parse_args()
 
@@ -365,7 +395,8 @@ def main():
         location_id=args.location_id,
         camera_id=args.camera_id,
         observation_date=args.date,
-        show_preview=args.show
+        show_preview=args.show,
+        force_night_mode=args.night_mode
     )
 
 

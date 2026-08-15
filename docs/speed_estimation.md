@@ -1,77 +1,67 @@
-# RoadSense AI - Scientifically Defensible Vehicle Speed Estimation
+# RoadSense AI - Advanced CCTV Speed Estimation & Computer Vision Enhancements
 
 ## Overview
-This document describes the computer vision kinematics and perspective homography architecture implemented in RoadSense AI for vehicle speed estimation.
+This document describes the computer vision kinematics, perspective homography, wide-angle lens compensation, heavy traffic occlusion mitigation, and adaptive night-vision processing in RoadSense AI.
 
 ---
 
-## 1. Scientific Foundations
+## 1. Real-World CCTV Challenges & Engineered Solutions
 
-### A. Road-Contact Point Tracking
-- **Limitation of Geometric Bounding-Box Center**:
-  The 2D geometric center of a vehicle bounding box $((x_1 + x_2)/2, (y_1 + y_2)/2)$ is elevated in 3D space above the road plane. Because cameras view traffic at an oblique pitch angle, the 3D elevation causes severe perspective parallax errors when projected onto a 2D ground plane.
-- **Scientific Solution**:
-  We track the **bottom-center point** of the bounding box:
-  $$x_{\text{contact}} = \frac{x_1 + x_2}{2.0}, \quad y_{\text{contact}} = y_2$$
-  The bottom-center point approximates the vehicle's contact point with the road plane and is therefore more appropriate for perspective transformation than the bounding-box center.
+### A. Wide-Angle & Fisheye Lens Distortion
+- **Challenge**: Wide-angle CCTV lenses suffer from radial barrel distortion ($k_1, k_2, p_1, p_2$), curving straight lanes near frame borders and corrupting planar homography coordinates.
+- **Solution**:
+  - `HomographyCalibrator` in [`vision/calibration.py`](file:///c:/Users/asus/Downloads/traffic_sim-main%20%283%29/traffic_sim-main/vision/calibration.py) incorporates optional camera intrinsics matrix $K$ and distortion coefficients $D = [k_1, k_2, p_1, p_2]$.
+  - Distorted image coordinates $(u_d, v_d)$ are rectified via `cv2.undistortPoints()` prior to homography matrix multiplication:
+    $$x_u = x_d(1 + k_1 r^2 + k_2 r^4) + 2 p_1 x_d y_d + p_2(r^2 + 2 x_d^2)$$
+    $$y_u = y_d(1 + k_1 r^2 + k_2 r^4) + p_1(r^2 + 2 y_d^2) + 2 p_2 x_d y_d$$
 
-### B. Planar Perspective Homography
-- **Why Homography is Required**:
-  Image coordinates are affected by camera perspective projection. Equal pixel displacements near the camera horizon represent much larger real-world physical distances than pixel displacements near the bottom of the camera frame. A 4-point planar projective transformation maps 2D image coordinates onto a metric real-world ground coordinate system (in meters).
-- **Mathematical Transformation**:
-  Given 4 non-collinear image points $p_i = [x_i, y_i]^T$ and 4 surveyed real-world landmarks $P_i = [X_i, Y_i]^T$, a $3 \times 3$ non-singular matrix $H$ is computed via `cv2.getPerspectiveTransform()` satisfying:
-  $$s \begin{bmatrix} X \\ Y \\ 1 \end{bmatrix} = H \begin{bmatrix} x \\ y \\ 1 \end{bmatrix}$$
-  Arbitrary vehicle contact points are projected via `cv2.perspectiveTransform()`.
+### B. Heavy Traffic & Bumper-to-Bumper Occlusions
+- **Challenge**: In dense traffic jams, front vehicles occlude the lower tires of rear vehicles, pushing bounding-box bottoms upward and creating false speed spikes.
+- **Solution**:
+  1. **Occlusion Detection**: [`vision/vehicle_detector.py`](file:///c:/Users/asus/Downloads/traffic_sim-main%20%283%29/traffic_sim-main/vision/vehicle_detector.py) performs perspective overlap checks on adjacent bounding boxes. If a rear vehicle overlaps $> 15\%$ with a front vehicle, `is_occluded = True`.
+  2. **2D Ground-Plane Kalman Filter**: [`vision/kalman_tracker.py`](file:///c:/Users/asus/Downloads/traffic_sim-main%20%283%29/traffic_sim-main/vision/kalman_tracker.py) maintains a state vector $\mathbf{x} = [X, Y, v_X, v_Y]^T$. When an occluded or outlier measurement is detected ($> 4\sigma$ innovation gate), the filter **coast-predicts** using learned vehicle momentum, preventing false speed spikes.
 
-### C. Scene-Specific Calibration
-- A homography is dependent on the camera viewpoint, focal length, mounting height, tilt angle, and the physical geometry represented by the selected reference points.
-- Homography cannot be generalized across different camera viewpoints without site-specific metric surveys.
+### C. Nighttime & Low-Light Contrast Enhancement
+- **Challenge**: At night, vehicle bodies blend into dark tarmac while headlamps cause glare and blooming, degrading YOLO detection confidence.
+- **Solution**:
+  - [`vision/enhancement.py`](file:///c:/Users/asus/Downloads/traffic_sim-main%20%283%29/traffic_sim-main/vision/enhancement.py) analyzes mean luminance $L^*$ in CIELAB color space.
+  - If low light ($L^* < 65$), it applies **Contrast Limited Adaptive Histogram Equalization (CLAHE)** on the $L^*$ channel (clipLimit = 2.5, tileGrid = (8, 8)), boosting vehicle contours while avoiding noise amplification.
+  - If deep night ($L^* < 40$), it applies power-law gamma correction ($\gamma = 0.75$).
+  - Daytime frames ($L^* \ge 65$) bypass enhancement with zero alteration and zero overhead.
 
 ---
 
 ## 2. Speed Calculation Pipeline
 
 ```
-YOLO Detection (Bounding Box)
-       ↓
-Bottom-Center Road Contact Point: (x, y2)
-       ↓
-Planar Homography Projection H: (X_world, Y_world) [meters]
-       ↓
-Temporal Tracking by Track ID: (X_{t-1}, Y_{t-1}) → (X_t, Y_t)
-       ↓
-Real-World Displacement: Δd = sqrt((X_t - X_{t-1})² + (Y_t - Y_{t-1})²) [m]
-       ↓
-Elapsed Time: Δt = t - t_{prev} [s]
-       ↓
-Physical Speed (m/s): speed_mps = Δd / Δt
-       ↓
-Physical Speed (km/h): speed_kmh = speed_mps × 3.6
+Raw CCTV Frame
+      ↓
+[Adaptive Night / Low-Light Detector] (CLAHE / Gamma if L* < 65)
+      ↓
+[Lens Distortion Rectification] (cv2.undistortPoints)
+      ↓
+[YOLOv8 Detection + ByteTrack]
+      ↓
+[Occlusion Overlap Analysis] (Flags is_occluded)
+      ↓
+[Bottom-Center Ground Contact Point: ((x1+x2)/2, y2)]
+      ↓
+[Planar Homography H Projection: (X, Y) meters]
+      ↓
+[2D Ground-Plane Kalman Filter: State [X, Y, vX, vY]]
+      ↓
+[Defensible Physical Speed: sqrt(vX² + vY²) × 3.6 km/h]
 ```
 
-### First Observation Integrity
-The first observation for every tracked vehicle has no previous position ($t_{\text{prev}}$ is `None`).
-- **Policy**: `speed = NaN` (strictly excluded from downstream speed aggregations).
-- **Rule**: We never insert artificial `0.0` values, ensuring initial track formation does not depress mean or median traffic velocity metrics.
-
-### Defensive Physical Validation
-- Non-positive time intervals ($\Delta t \le 0$) $\to$ `NaN` (`invalid_speed_reason = "invalid_time_interval"`).
-- Impossible physical jumps ($\Delta d > 50.0\text{ m}$ in $0.167\text{ s} \implies > 1080\text{ km/h}$) caused by tracker ID swaps $\to$ `NaN` (`invalid_speed_reason = "unreasonable_world_displacement"`).
-- No arbitrary artificial clamping (e.g. `min(speed, 80)`); physical outliers are flagged observably.
+### Initial Observation Integrity
+The first observation for every tracked vehicle receives `speed = NaN` (never artificially $0.0$) and is excluded from downstream aggregations.
 
 ---
 
-## 3. Operational Modes & Fallbacks
+## 3. Operational Calibration Modes
 
-| Mode | Calibration State | Speed Output | Calibration Status Label |
+| Mode | Trigger | Speed Metric | Calibration Label |
 | :--- | :--- | :--- | :--- |
-| **`CALIBRATED`** | Verified surveyed landmarks supplied | Physical speed ($\text{km/h}$) | `"calibrated"` |
-| **`DEMO_CALIBRATION`** | Predefined reference trapezoid for `videos/traffic.mp4` | Estimated physical speed ($\text{km/h}$) | `"demo_calibration"` |
-| **`UNCALIBRATED`** | No homography supplied | Physical speed evaluates to `NaN`; camera pixel speed ($\text{px/s}$) retained | `"uncalibrated"` |
-
----
-
-## 4. Remaining Limitations
-1. **Pitch/Elevation Road Slopes**: 2D planar homography assumes a locally flat planar road. Roads with steep vertical grade changes require 3D calibration.
-2. **Lens Distortion**: Non-linear radial lens distortion (e.g. wide-angle fisheye) should ideally be rectified prior to planar projection.
-3. **Camera Vibration / Wind Shake**: Extreme camera shake can introduce high-frequency displacement noise, which can be mitigated with Kalman filtering or smoothing.
+| **`CALIBRATED`** | 4+ surveyed reference points configured | Physical speed ($\text{km/h}$) | `"calibrated"` |
+| **`DEMO_CALIBRATION`** | Predefined reference for `traffic.mp4` | Estimated physical speed ($\text{km/h}$) | `"demo_calibration"` |
+| **`UNCALIBRATED`** | Unknown camera / no homography | `speed_kmh = NaN`; pixel speed ($\text{px/s}$) retained | `"uncalibrated"` |
