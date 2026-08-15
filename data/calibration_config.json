@@ -1,0 +1,53 @@
+{
+  "traffic.mp4": {
+    "status": "demo_calibration",
+    "description": "Predefined demonstrator calibration for videos/traffic.mp4 (720x1280). Approximates a 10m wide by 35m long road perspective quadrilateral on the lower camera road plane. Not for certified legal enforcement.",
+    "resolution": [720, 1280],
+    "image_points": [
+      [160.0, 700.0],
+      [560.0, 700.0],
+      [700.0, 1260.0],
+      [20.0, 1260.0]
+    ],
+    "world_points": [
+      [0.0, 35.0],
+      [10.0, 35.0],
+      [10.0, 0.0],
+      [0.0, 0.0]
+    ]
+  },
+  "traffic_2min.mp4": {
+    "status": "demo_calibration",
+    "description": "Demonstrator calibration for 2-minute video feed (traffic_2min.mp4).",
+    "resolution": [720, 1280],
+    "image_points": [
+      [160.0, 700.0],
+      [560.0, 700.0],
+      [700.0, 1260.0],
+      [20.0, 1260.0]
+    ],
+    "world_points": [
+      [0.0, 35.0],
+      [10.0, 35.0],
+      [10.0, 0.0],
+      [0.0, 0.0]
+    ]
+  },
+  "custom_camera_template": {
+    "status": "calibrated",
+    "description": "Template schema for custom camera installations. Replace with 4 surveyed ground-plane landmarks (e.g. lane markings, stop lines) and measured distances in meters.",
+    "resolution": [1920, 1080],
+    "image_points": [
+      [450.0, 600.0],
+      [1450.0, 600.0],
+      [1800.0, 1050.0],
+      [120.0, 1050.0]
+    ],
+    "world_points": [
+      [0.0, 40.0],
+      [12.0, 40.0],
+      [12.0, 0.0],
+      [0.0, 0.0]
+    ]
+  }
+}
