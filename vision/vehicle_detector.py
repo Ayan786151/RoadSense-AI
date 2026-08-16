@@ -25,15 +25,30 @@ DEFAULT_VIDEO_PATH = "videos/traffic.mp4"
 DEFAULT_METRICS_OUTPUT = "data/vision_traffic_metrics.csv"
 DEFAULT_TRAJECTORY_OUTPUT = "data/vehicle_trajectories.csv"
 
-MODEL_NAME = "yolo11n.pt"
+DEFAULT_MODEL_NAME = "yolo11n.pt"
 
-# COCO vehicle classes
-VEHICLE_CLASSES = {
-    2: "car",
-    3: "motorcycle",
-    5: "bus",
-    7: "truck"
-}
+# Unified vehicle mapping for COCO, IISc UVH-26, and Indian Traffic classes
+def resolve_vehicle_class(class_id: int, model_names: dict) -> str:
+    """
+    Dynamically maps class ID to standard vehicle categories.
+    Supports COCO (cars, bikes, buses, trucks) and IISc UVH-26 Indian traffic classes (auto-rickshaws, tempos, etc.).
+    """
+    raw = str(model_names.get(class_id, "")).lower()
+    
+    if any(k in raw for k in ["auto", "rickshaw", "tuk", "3-wheeler", "three_wheeler"]):
+        return "auto_rickshaw"
+    elif any(k in raw for k in ["motorcycle", "bike", "two_wheeler", "2-wheeler", "scooter"]):
+        return "motorcycle"
+    elif any(k in raw for k in ["bus", "mini_bus", "van"]):
+        return "bus"
+    elif any(k in raw for k in ["truck", "lcv", "tempo", "lorry", "container", "tractor"]):
+        return "truck"
+    elif any(k in raw for k in ["car", "sedan", "suv", "taxi", "jeep"]):
+        return "car"
+    
+    # Fallback to COCO default IDs if names missing
+    coco_map = {2: "car", 3: "motorcycle", 5: "bus", 7: "truck"}
+    return coco_map.get(class_id, None)
 
 
 # ============================================================
@@ -105,6 +120,7 @@ def compute_occlusion_flags(boxes_xyxy: List[np.ndarray], threshold: float = 0.1
 
 def process_video(
     video_path: str = DEFAULT_VIDEO_PATH,
+    model_name: str = DEFAULT_MODEL_NAME,
     session_id: str = None,
     location_id: str = "loc_01",
     camera_id: str = "cam_01",
@@ -124,6 +140,7 @@ def process_video(
     if session_id:
         print(f"Active Session: {session_id}")
     print(f"Source Video  : {video_path}")
+    print(f"Model Path    : {model_name}")
     print(f"Target Output : {output_dir}")
 
     # --------------------------------------------------------
@@ -140,8 +157,8 @@ def process_video(
     # Load model (Fresh instance ensures tracker isolation)
     # --------------------------------------------------------
 
-    print("\nLoading YOLO model...")
-    model = YOLO(MODEL_NAME)
+    print(f"\nLoading YOLO model ({model_name})...")
+    model = YOLO(model_name)
     print("YOLO model loaded with fresh tracker state.")
 
     # --------------------------------------------------------
@@ -225,7 +242,8 @@ def process_video(
             "car": 0,
             "motorcycle": 0,
             "bus": 0,
-            "truck": 0
+            "truck": 0,
+            "auto_rickshaw": 0
         }
         total_vehicles = 0
 
@@ -240,11 +258,11 @@ def process_video(
             boxes = result.boxes
             for i in range(len(boxes)):
                 class_id = int(boxes.cls[i].item())
-                if class_id not in VEHICLE_CLASSES:
+                vtype = resolve_vehicle_class(class_id, model.names)
+                if not vtype:
                     continue
 
-                vtype = VEHICLE_CLASSES[class_id]
-                counts[vtype] += 1
+                counts[vtype] = counts.get(vtype, 0) + 1
                 total_vehicles += 1
 
                 xyxy = boxes.xyxy[i].cpu().numpy().astype(int)
@@ -298,10 +316,11 @@ def process_video(
         metric_records.append({
             "timestamp_seconds": round(timestamp, 3),
             "vehicle_count": total_vehicles,
-            "cars": counts["car"],
-            "motorcycles": counts["motorcycle"],
-            "buses": counts["bus"],
-            "trucks": counts["truck"]
+            "cars": counts.get("car", 0),
+            "motorcycles": counts.get("motorcycle", 0),
+            "buses": counts.get("bus", 0),
+            "trucks": counts.get("truck", 0),
+            "auto_rickshaws": counts.get("auto_rickshaw", 0)
         })
 
         if show_preview:
@@ -381,6 +400,7 @@ def process_video(
 def main():
     parser = argparse.ArgumentParser(description="RoadSense AI - Vehicle Detector, Trajectory Tracker & Preprocessor")
     parser.add_argument("--video", type=str, default=DEFAULT_VIDEO_PATH, help="Path to input video file")
+    parser.add_argument("--model", type=str, default=DEFAULT_MODEL_NAME, help="YOLO model path or HuggingFace ID (e.g. yolo11n.pt or iisc-aim/UVH-26 weights)")
     parser.add_argument("--session", type=str, default=None, help="Session identifier (e.g. session_001)")
     parser.add_argument("--location-id", type=str, default="loc_01", help="Location identifier")
     parser.add_argument("--camera-id", type=str, default="cam_01", help="Camera identifier")
@@ -392,6 +412,7 @@ def main():
 
     process_video(
         video_path=args.video,
+        model_name=args.model,
         session_id=args.session,
         location_id=args.location_id,
         camera_id=args.camera_id,

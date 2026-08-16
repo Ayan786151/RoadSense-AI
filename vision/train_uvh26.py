@@ -1,0 +1,98 @@
+"""
+================================================================================
+ROAD SENSE AI - IISc UVH-26 FINE-TUNING & MODEL TRAINING MODULE
+================================================================================
+Train and fine-tune YOLO models on the IISc AIM UVH-26 Indian traffic dataset
+(26,646 CCTV images with 14 Indian vehicle classes including Auto-Rickshaws).
+================================================================================
+"""
+
+import os
+import argparse
+from pathlib import Path
+from ultralytics import YOLO
+
+# 14 Indian Traffic Vehicle Classes defined by IISc AIM @ UVH-26
+UVH26_CLASSES = [
+    "two_wheeler",
+    "auto_rickshaw",
+    "car",
+    "suv",
+    "bus",
+    "truck",
+    "lcv",
+    "mini_bus",
+    "tractor",
+    "bicycle",
+    "e_rickshaw",
+    "container_truck",
+    "tempo_traveller",
+    "other_vehicle"
+]
+
+
+def train_yolo_uvh26(
+    data_yaml: str = "iisc-aim/UVH-26",
+    base_model: str = "yolo11n.pt",
+    epochs: int = 30,
+    batch_size: int = 16,
+    img_size: int = 640,
+    output_dir: str = "models/uvh26_finetuned"
+):
+    """
+    Fine-tunes base YOLO model on IISc UVH-26 dataset.
+    """
+    print("=" * 70)
+    print("ROAD SENSE AI - IISc UVH-26 MODEL TRAINING PIPELINE")
+    print("=" * 70)
+    print(f"Base Model    : {base_model}")
+    print(f"Dataset Target: {data_yaml}")
+    print(f"Epochs        : {epochs}")
+    print(f"Batch Size    : {batch_size}")
+    print(f"Target Output : {output_dir}")
+    print("=" * 70)
+
+    # 1. Load base model
+    model = YOLO(base_model)
+
+    # 2. Execute training
+    print("\nStarting fine-tuning...")
+    results = model.train(
+        data=data_yaml,
+        epochs=epochs,
+        batch=batch_size,
+        imgsz=img_size,
+        project=output_dir,
+        name="yolo11_uvh26",
+        save=True,
+        exist_ok=True
+    )
+
+    print("\n[+] Training complete!")
+    print(f"[+] Best weights saved to: {output_dir}/yolo11_uvh26/weights/best.pt")
+    return results
+
+
+def main():
+    parser = argparse.ArgumentParser(description="RoadSense AI - IISc UVH-26 Model Fine-Tuning Pipeline")
+    parser.add_argument("--data", type=str, default="iisc-aim/UVH-26", help="Path to uvh26.yaml dataset config or HF repo")
+    parser.add_argument("--model", type=str, default="yolo11n.pt", help="Base model weights (e.g. yolo11n.pt, yolo11s.pt)")
+    parser.add_argument("--epochs", type=int, default=30, help="Number of training epochs")
+    parser.add_argument("--batch", type=int, default=16, help="Batch size for training")
+    parser.add_argument("--imgsz", type=int, default=640, help="Input image size")
+    parser.add_argument("--output", type=str, default="models/uvh26_finetuned", help="Directory to save trained weights")
+
+    args = parser.parse_args()
+
+    train_yolo_uvh26(
+        data_yaml=args.data,
+        base_model=args.model,
+        epochs=args.epochs,
+        batch_size=args.batch,
+        img_size=args.imgsz,
+        output_dir=args.output
+    )
+
+
+if __name__ == "__main__":
+    main()

@@ -9,16 +9,13 @@ This module provides a modular, self-contained testing dashboard for the 50-zone
 
 KEY CAPABILITIES:
 1. ZONE & WEEK SELECTOR:
-   - Browse all 50 municipal zones (Andheri, Bandra, BKC, Powai, etc.) across Weeks 1 to 52.
-2. COMPREHENSIVE RISK METRICS:
-   - Live ML Risk Model probability predictions with incident risk gauges.
-   - Traffic density, congestion, vehicle speed, and environmental/violation drivers.
-3. WEEK-OVER-WEEK COMPARATIVE ANALYTICS:
-   - Instant delta calculation vs Previous Week (W-1) and 4-Week Rolling Baselines.
-   - 52-week interactive historical trend charts with current week markers.
-   - 4-week OLS regression trend slopes (accelerating vs subsiding risk).
+   - Browse all 50 municipal zones across Weeks 1 to 52.
+2. AI-POWERED BRIEFING & LLM INSIGHTS:
+   - Automated natural-language executive briefs (Groq LLaMA 3.3 / Gemini 2.5) focusing on citizen safety and social impact.
+3. ADAPTIVE SIGNAL CONTROL & CO2 SUSTAINABILITY:
+   - Dynamic green-light timing optimization and civic emission/fuel savings estimates.
 4. CITY-WIDE 50-ZONE LEADERBOARD:
-   - Priority rankings and risk distribution across all urban zones.
+   - High-throughput batch inference with geographic scatter mapbox.
 5. WHAT-IF RISK SIMULATION SANDBOX:
    - Real-time parameter tweaking to test ML model sensitivity under dynamic conditions.
 ================================================================================
@@ -35,6 +32,9 @@ import plotly.graph_objects as go
 import streamlit as st
 from typing import Dict, Tuple, Optional, Any
 
+from intelligence.signal_co2 import compute_optimal_signal_timing, estimate_co2_impact
+from intelligence.llm_briefing import generate_zone_briefing, generate_city_summary
+
 
 # ==============================================================================
 # 1. DATA INGESTION & CACHING
@@ -42,9 +42,7 @@ from typing import Dict, Tuple, Optional, Any
 
 @st.cache_data
 def load_simulation_data() -> Tuple[pd.DataFrame, pd.DataFrame]:
-    """
-    Loads full 52-week temporal simulation dataset and location mappings.
-    """
+    """Loads full 52-week temporal simulation dataset and location mappings."""
     sim_path = "data/simulation_temporal_features.csv"
     loc_path = "data/location_mapping.csv"
 
@@ -55,7 +53,6 @@ def load_simulation_data() -> Tuple[pd.DataFrame, pd.DataFrame]:
 
     if os.path.exists(loc_path):
         loc_df = pd.read_csv(loc_path)
-        # Merge location metadata
         merged = pd.merge(sim_df, loc_df, on="zone_id", how="left")
     else:
         merged = sim_df.copy()
@@ -70,14 +67,11 @@ def load_simulation_data() -> Tuple[pd.DataFrame, pd.DataFrame]:
 
 @st.cache_resource
 def load_trained_risk_model():
-    """
-    Loads the trained Supervised ML Risk Model pipeline with integrity verification.
-    """
+    """Loads the trained Supervised ML Risk Model pipeline with integrity verification."""
     model_path = "models/best_risk_model.pkl"
     if not os.path.exists(model_path):
         return None
     try:
-        # Compute SHA-256 hash for integrity auditing
         with open(model_path, "rb") as f:
             model_hash = hashlib.sha256(f.read()).hexdigest()[:16]
         model = joblib.load(model_path)
@@ -86,6 +80,24 @@ def load_trained_risk_model():
     except Exception as e:
         st.error(f"Error loading ML model from {model_path}: {e}")
         return None
+
+
+@st.cache_data
+def get_zone_risk_timeline(_model, _zone_df: pd.DataFrame) -> list:
+    """Caches timeline predictions across all 52 weeks for a given zone."""
+    if _model is None:
+        return [None] * len(_zone_df)
+    results = []
+    for _, row in _zone_df.iterrows():
+        if row["week"] < 5:
+            results.append(None)
+        else:
+            try:
+                p = float(_model.predict_proba(pd.DataFrame([row]))[0, 1])
+                results.append(round(p * 100.0, 1))
+            except Exception:
+                results.append(None)
+    return results
 
 
 # ==============================================================================
@@ -111,15 +123,24 @@ def compute_live_risk(model, row_df: pd.DataFrame) -> float:
     if model is None or row_df.empty:
         return np.nan
     try:
-        # Check if week is in warmup period (< Week 5)
         week = row_df["week"].iloc[0]
         if week < 5:
             return np.nan
         prob = model.predict_proba(row_df)[0, 1]
         return float(prob)
     except Exception:
-        # Fallback to rolling incident rate heuristic if model feature mismatch
         return float(row_df.get("rolling_4_week_incident_rate", pd.Series([np.nan])).iloc[0])
+
+
+def render_metric_card(label: str, value: str, delta_str: str, delta_class: str, val_color: str = "#fff"):
+    """Reusable metric card component."""
+    st.markdown(f"""
+    <div class="metric-card">
+        <div class="metric-label">{html.escape(label)}</div>
+        <div class="metric-value" style="color: {val_color};">{value}</div>
+        <div class="{delta_class}">{html.escape(delta_str)}</div>
+    </div>
+    """, unsafe_allow_html=True)
 
 
 # ==============================================================================
@@ -129,9 +150,6 @@ def compute_live_risk(model, row_df: pd.DataFrame) -> float:
 def render_simulation_dashboard():
     """Renders the comprehensive zone-wise and week-wise simulation testing lab."""
     
-    # ----------------------------------------------------
-    # Custom CSS for Sleek Theme
-    # ----------------------------------------------------
     st.markdown("""
     <style>
     .metric-card {
@@ -169,6 +187,13 @@ def render_simulation_dashboard():
     .badge-moderate { background-color: rgba(255, 193, 7, 0.2); color: #ffd43b; border: 1px solid #ffc107; padding: 4px 10px; border-radius: 6px; font-weight: 700; font-size: 13px; }
     .badge-low { background-color: rgba(40, 167, 69, 0.2); color: #69db7c; border: 1px solid #28a745; padding: 4px 10px; border-radius: 6px; font-weight: 700; font-size: 13px; }
     .badge-warmup { background-color: rgba(108, 117, 125, 0.2); color: #adb5bd; border: 1px solid #6c757d; padding: 4px 10px; border-radius: 6px; font-weight: 700; font-size: 13px; }
+    .ai-briefing-box {
+        background: linear-gradient(135deg, rgba(26, 42, 68, 0.7), rgba(18, 30, 49, 0.7));
+        border: 1px solid rgba(77, 171, 247, 0.35);
+        border-radius: 12px;
+        padding: 16px 20px;
+        margin-bottom: 20px;
+    }
     </style>
     """, unsafe_allow_html=True)
 
@@ -188,10 +213,10 @@ def render_simulation_dashboard():
     st.markdown("""
     <div style="background: linear-gradient(90deg, #1e3c72 0%, #2a5298 100%); padding: 22px 28px; border-radius: 12px; margin-bottom: 24px; color: white;">
         <h2 style="margin: 0; font-weight: 700; display: flex; align-items: center; gap: 12px;">
-            🚦 RoadSense AI — Simulation & ML Risk Testing Lab
+            🚦 RoadSense AI — Traffic Intelligence & Civic Social Service Hub
         </h2>
         <p style="margin: 6px 0 0 0; opacity: 0.88; font-size: 14px;">
-            Interactive 50-Zone & 52-Week Traffic Risk Telemetry, Predictive Machine Learning, and Multi-Week Comparative Intelligence.
+            AI-Driven Traffic Risk Forecasting, Adaptive Signal Timing, and Civic Carbon Emission Reduction for 50 Urban Municipal Zones.
         </p>
     </div>
     """, unsafe_allow_html=True)
@@ -201,16 +226,12 @@ def render_simulation_dashboard():
     # ----------------------------------------------------
     st.sidebar.markdown("### 🎛️ Simulation Controls")
     
-    # 1. Zone Type Filter
     all_types = ["All Types"] + sorted(list(df["zone_type"].dropna().unique()))
     selected_type = st.sidebar.selectbox("Filter Zone Type", all_types, index=0)
 
     filtered_df = df if selected_type == "All Types" else df[df["zone_type"] == selected_type]
-
-    # 2. Zone Selector
     unique_zones = sorted(filtered_df["zone_id"].unique())
     
-    # Format zone labels with location names
     zone_label_map = {}
     for z in unique_zones:
         sub = filtered_df[filtered_df["zone_id"] == z].iloc[0]
@@ -226,14 +247,13 @@ def render_simulation_dashboard():
         index=0
     )
 
-    # 3. Week Selector
     st.sidebar.markdown("---")
     selected_week = st.sidebar.slider(
         "📅 Select Calendar Week",
         min_value=1,
         max_value=52,
         value=50,
-        help="Weeks 1-4 are Warmup (baseline). Weeks 5-52 contain trained ML risk predictions and 4-week trend regressions."
+        help="Weeks 1-4 establish rolling baselines. Weeks 5-52 contain trained ML risk predictions."
     )
 
     if selected_week < 5:
@@ -256,8 +276,24 @@ def render_simulation_dashboard():
     # Calculate Current Risk Probability
     current_risk_prob = compute_live_risk(model, current_row)
     prev_risk_prob = compute_live_risk(model, prev_row) if prev_data is not None else np.nan
-
     risk_label, risk_color, risk_class = get_risk_badge(current_risk_prob)
+
+    # Calculate Signal & CO2 Intelligence
+    signal_info = compute_optimal_signal_timing(
+        congestion=float(current_data["congestion"]),
+        vehicle_density=float(current_data["vehicle_density"]),
+        average_speed=float(current_data["average_speed"]),
+        zone_type=str(current_data.get("zone_type", "Residential")),
+        special_event=int(current_data.get("special_event", 0)),
+        weather=str(current_data.get("weather", "Normal")),
+    )
+
+    co2_info = estimate_co2_impact(
+        vehicle_density=float(current_data["vehicle_density"]),
+        congestion=float(current_data["congestion"]),
+        average_speed=float(current_data["average_speed"]),
+        population_density=int(current_data.get("population_density", 5000)),
+    )
 
     # ----------------------------------------------------
     # ZONE SUMMARY HEADER
@@ -268,7 +304,7 @@ def render_simulation_dashboard():
     safe_zone = html.escape(str(selected_zone))
 
     st.markdown(f"""
-    <div style="display: flex; justify-content: space-between; align-items: center; background: rgba(255,255,255,0.03); padding: 14px 20px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.08); margin-bottom: 20px;">
+    <div style="display: flex; justify-content: space-between; align-items: center; background: rgba(255,255,255,0.03); padding: 14px 20px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.08); margin-bottom: 16px;">
         <div>
             <span style="font-size: 20px; font-weight: 700; color: #fff;">{safe_zone} — {loc_display}</span>
             <span style="color: #9aa0a6; font-size: 14px; margin-left: 10px;">({city_display} | {type_display})</span>
@@ -281,11 +317,37 @@ def render_simulation_dashboard():
     """, unsafe_allow_html=True)
 
     # ----------------------------------------------------
-    # TOP KPI METRIC CARDS (WITH WOW DELTAS)
+    # LLM INTELLIGENCE BRIEFING (AI SOCIAL SERVICE ANALYST)
+    # ----------------------------------------------------
+    zone_payload = current_data.to_dict()
+    zone_payload["risk_prob"] = current_risk_prob
+
+    # Generate or retrieve briefing
+    briefing_key = f"brief_{selected_zone}_{selected_week}"
+    if briefing_key not in st.session_state:
+        st.session_state[briefing_key] = generate_zone_briefing(zone_payload, signal_info, co2_info)
+
+    briefing_text = st.session_state[briefing_key]
+
+    st.markdown(f"""
+    <div class="ai-briefing-box">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+            <span style="font-size: 14px; font-weight: 700; color: #74c0fc; display: flex; align-items: center; gap: 8px;">
+                🤖 AI Review & Safety Briefing
+            </span>
+            <span style="font-size: 12px; color: #adb5bd;">Citizen Protection Focus</span>
+        </div>
+        <p style="margin: 0; font-size: 14px; line-height: 1.5; color: #e9ecef;">
+            {html.escape(briefing_text)}
+        </p>
+    </div>
+    """, unsafe_allow_html=True)
+
+    # ----------------------------------------------------
+    # TOP KPI METRIC CARDS
     # ----------------------------------------------------
     kpi1, kpi2, kpi3, kpi4 = st.columns(4)
 
-    # Metric 1: Predicted Risk
     with kpi1:
         if not np.isnan(current_risk_prob):
             val_str = f"{current_risk_prob * 100:.1f}%"
@@ -301,16 +363,8 @@ def render_simulation_dashboard():
             val_str = "WARMUP"
             delta_str = "Insufficient History"
             delta_class = "text-muted"
+        render_metric_card("Predicted Incident Risk", val_str, delta_str, delta_class, val_color=risk_color)
 
-        st.markdown(f"""
-        <div class="metric-card">
-            <div class="metric-label">Predicted Incident Risk</div>
-            <div class="metric-value" style="color: {risk_color};">{val_str}</div>
-            <div class="{delta_class}">{delta_str}</div>
-        </div>
-        """, unsafe_allow_html=True)
-
-    # Metric 2: Congestion
     with kpi2:
         cong = current_data["congestion"]
         if prev_data is not None:
@@ -321,36 +375,20 @@ def render_simulation_dashboard():
         else:
             cong_delta_str = "Baseline"
             cong_class = "text-muted"
+        render_metric_card("Congestion Index", f"{cong:.1f}/100", cong_delta_str, cong_class, val_color="#4dabf7")
 
-        st.markdown(f"""
-        <div class="metric-card">
-            <div class="metric-label">Congestion Index</div>
-            <div class="metric-value" style="color: #4dabf7;">{cong:.1f}<span style="font-size: 16px; color: #868e96;">/100</span></div>
-            <div class="{cong_class}">{cong_delta_str}</div>
-        </div>
-        """, unsafe_allow_html=True)
-
-    # Metric 3: Average Speed
     with kpi3:
         spd = current_data["average_speed"]
         if prev_data is not None:
             spd_delta = spd - prev_data["average_speed"]
             spd_sign = "+" if spd_delta >= 0 else ""
-            spd_class = "metric-delta-neg" if spd_delta >= 0 else "metric-delta-pos"  # Speed drop is bad
+            spd_class = "metric-delta-neg" if spd_delta >= 0 else "metric-delta-pos"
             spd_delta_str = f"{spd_sign}{spd_delta:.1f} km/h vs W{selected_week-1}"
         else:
             spd_delta_str = "Baseline"
             spd_class = "text-muted"
+        render_metric_card("Average Speed", f"{spd:.1f} km/h", spd_delta_str, spd_class, val_color="#69db7c")
 
-        st.markdown(f"""
-        <div class="metric-card">
-            <div class="metric-label">Average Speed</div>
-            <div class="metric-value" style="color: #69db7c;">{spd:.1f} <span style="font-size: 16px; color: #868e96;">km/h</span></div>
-            <div class="{spd_class}">{spd_delta_str}</div>
-        </div>
-        """, unsafe_allow_html=True)
-
-    # Metric 4: Vehicle Density
     with kpi4:
         dens = current_data["vehicle_density"]
         if prev_data is not None:
@@ -360,24 +398,18 @@ def render_simulation_dashboard():
             dens_delta_str = f"{dens_sign}{dens_delta:.0f} veh/km vs W{selected_week-1}"
         else:
             dens_delta_str = "Baseline"
-            dens_class = "text-muted"
-
-        st.markdown(f"""
-        <div class="metric-card">
-            <div class="metric-label">Vehicle Density</div>
-            <div class="metric-value" style="color: #da77f2;">{dens:.0f} <span style="font-size: 16px; color: #868e96;">veh/km</span></div>
-            <div class="{dens_class}">{dens_delta_str}</div>
-        </div>
-        """, unsafe_allow_html=True)
+            delta_class = "text-muted"
+        render_metric_card("Vehicle Density", f"{dens:.0f} veh/km", dens_delta_str, dens_class, val_color="#da77f2")
 
     st.markdown("<br>", unsafe_allow_html=True)
 
     # ----------------------------------------------------
-    # MULTI-TAB COMPREHENSIVE VIEW
+    # MULTI-TAB VIEW
     # ----------------------------------------------------
-    tab1, tab2, tab3, tab4 = st.tabs([
+    tab1, tab2, tab3, tab4, tab5 = st.tabs([
         "📊 Week-over-Week Comparison & Trends",
-        "🗺️ City-Wide 50-Zone Leaderboard",
+        "🚦 Adaptive Signal Timing & Eco-Impact (CO2)",
+        "🗺️ City-Wide 50-Zone Leaderboard & AI Briefing",
         "🧪 What-If Risk Simulation Sandbox",
         "📋 Full Observation Diagnostics"
     ])
@@ -388,10 +420,7 @@ def render_simulation_dashboard():
     with tab1:
         st.markdown("#### 📈 52-Week Historical Timeline & Trend Analysis")
 
-        # 1. Plotly 52-Week Risk & Congestion Timeline
         fig_trend = go.Figure()
-
-        # Add Congestion Curve
         fig_trend.add_trace(go.Scatter(
             x=zone_all_weeks["week"],
             y=zone_all_weeks["congestion"],
@@ -400,8 +429,6 @@ def render_simulation_dashboard():
             line=dict(color="#4dabf7", width=2.5),
             marker=dict(size=4)
         ))
-
-        # Add Speed Curve
         fig_trend.add_trace(go.Scatter(
             x=zone_all_weeks["week"],
             y=zone_all_weeks["average_speed"],
@@ -410,16 +437,7 @@ def render_simulation_dashboard():
             line=dict(color="#69db7c", width=2, dash="dot")
         ))
 
-        # Compute Model Risk Probabilities across all weeks >= 5
-        risk_probs_timeline = []
-        for w in zone_all_weeks["week"]:
-            if w < 5:
-                risk_probs_timeline.append(None)
-            else:
-                w_row = zone_all_weeks[zone_all_weeks["week"] == w]
-                p = compute_live_risk(model, w_row)
-                risk_probs_timeline.append(p * 100.0 if not np.isnan(p) else None)
-
+        risk_probs_timeline = get_zone_risk_timeline(model, zone_all_weeks)
         fig_trend.add_trace(go.Scatter(
             x=zone_all_weeks["week"],
             y=risk_probs_timeline,
@@ -429,7 +447,6 @@ def render_simulation_dashboard():
             marker=dict(size=5)
         ))
 
-        # Vertical marker for selected week
         fig_trend.add_vline(
             x=selected_week,
             line_width=2.5,
@@ -448,17 +465,11 @@ def render_simulation_dashboard():
             yaxis_title="Score / Speed (km/h) / Probability (%)",
             hovermode="x unified"
         )
-
         st.plotly_chart(fig_trend, use_container_width=True)
 
-        # ----------------------------------------------------
-        # Side-by-Side Detailed Comparison Table
-        # ----------------------------------------------------
-        st.markdown("#### 🔍 Granular Comparative Feature Matrix")
-
         col_left, col_right = st.columns([3, 2])
-
         with col_left:
+            st.markdown("#### 🔍 Granular Comparative Feature Matrix")
             comp_metrics = [
                 ("Predicted Risk Probability", f"{current_risk_prob*100:.1f}%" if not np.isnan(current_risk_prob) else "WARMUP", f"{prev_risk_prob*100:.1f}%" if not np.isnan(prev_risk_prob) else "N/A"),
                 ("Congestion Score (0-100)", f"{current_data['congestion']:.2f}", f"{prev_data['congestion']:.2f}" if prev_data is not None else "N/A"),
@@ -470,13 +481,11 @@ def render_simulation_dashboard():
                 ("Weather Condition", str(current_data.get('weather', 'Clear')), str(prev_data.get('weather', 'Clear')) if prev_data is not None else "N/A"),
                 ("Special Event Active", "🎉 Yes" if current_data.get('special_event', 0) == 1 else "No", "🎉 Yes" if prev_data is not None and prev_data.get('special_event', 0) == 1 else "No")
             ]
-
             comp_df = pd.DataFrame(comp_metrics, columns=["Feature / Parameter", f"Current Week (W{selected_week})", f"Previous Week (W{selected_week-1 if selected_week > 1 else 1})"])
             st.dataframe(comp_df, hide_index=True, use_container_width=True)
 
         with col_right:
             st.markdown("##### 📈 4-Week Rolling Trend Slopes (OLS)")
-            
             c_trend = current_data.get("congestion_trend_4w", np.nan)
             s_trend = current_data.get("speed_trend_4w", np.nan)
             i_trend = current_data.get("incident_trend_4w", np.nan)
@@ -513,24 +522,90 @@ def render_simulation_dashboard():
             """, unsafe_allow_html=True)
 
     # ==========================================================================
-    # TAB 2: CITY-WIDE 50-ZONE LEADERBOARD
+    # TAB 2: ADAPTIVE SIGNAL TIMING & ECO SUSTAINABILITY (CO2)
     # ==========================================================================
     with tab2:
-        st.markdown(f"#### 🏆 City-Wide Risk & Priority Leaderboard for Week {selected_week}")
+        st.markdown(f"#### 🚦 Adaptive Traffic Signal Optimization & Environmental Impact: {loc_display}")
+        st.caption("Converts live risk & congestion telemetry into actionable intersection signal timings and civic emission savings.")
+
+        col_sig, col_co2 = st.columns([1, 1])
+
+        with col_sig:
+            st.markdown("##### ⏱️ Dynamic Green-Light Timing Calculator")
+            
+            sig_urgency = signal_info["urgency"]
+            urg_colors = {"CRITICAL": "#dc3545", "HIGH": "#fd7e14", "MODERATE": "#ffc107", "OPTIMIZE": "#4dabf7", "NOMINAL": "#28a745"}
+            urg_col = urg_colors.get(sig_urgency, "#28a745")
+
+            st.markdown(f"""
+            <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; padding: 16px; margin-bottom: 16px;">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <span style="font-size: 13px; color: #9aa0a6;">RECOMMENDED SIGNAL STATE</span>
+                    <span style="background-color: {urg_col}33; color: {urg_col}; border: 1px solid {urg_col}; padding: 3px 8px; border-radius: 4px; font-size: 12px; font-weight: 700;">
+                        {sig_urgency}
+                    </span>
+                </div>
+                <div style="display: flex; align-items: baseline; gap: 12px; margin: 12px 0;">
+                    <span style="font-size: 36px; font-weight: 700; color: #69db7c;">{signal_info['recommended_green_seconds']}s</span>
+                    <span style="font-size: 14px; color: #adb5bd;">Green Phase (Default: {signal_info['base_green_seconds']}s)</span>
+                </div>
+                <div style="font-size: 13px; color: #ced4da;">{signal_info['reason']}</div>
+            </div>
+            """, unsafe_allow_html=True)
+
+            # Factors breakdown
+            st.markdown("###### Multiplier Breakdown:")
+            f = signal_info["factors"]
+            factor_df = pd.DataFrame([
+                {"Component": "Congestion Multiplier", "Value": f"{f['congestion_factor']}x"},
+                {"Component": "Vehicle Density Weight", "Value": f"{f['density_factor']}x"},
+                {"Component": "Velocity Clearance Factor", "Value": f"{f['speed_factor']}x"},
+                {"Component": "Special Event Boost", "Value": f"{f['event_boost']}x"},
+                {"Component": "Adverse Weather Boost", "Value": f"{f['weather_boost']}x"},
+            ])
+            st.dataframe(factor_df, hide_index=True, use_container_width=True)
+
+        with col_co2:
+            st.markdown("##### 🌱 Civic Environmental & Social Impact")
+            
+            c_card1, c_card2 = st.columns(2)
+            with c_card1:
+                st.metric("Potential CO2 Saved", f"{co2_info['potential_savings_kg_per_week']:,.0f} kg/wk", f"{co2_info['optimization_factor_pct']}% reduction")
+            with c_card2:
+                st.metric("Annual Tree Equivalent", f"{co2_info['trees_equivalent_per_year']:,} trees", "carbon offset")
+
+            c_card3, c_card4 = st.columns(2)
+            with c_card3:
+                st.metric("Fuel Conserved", f"{co2_info['fuel_saved_liters_per_week']:,.0f} L/wk", "petrol/diesel")
+            with c_card4:
+                st.metric("Citizens Impacted", f"{co2_info['citizens_impacted']:,} residents", f"{loc_display}")
+
+            st.markdown(f"""
+            <div style="background: rgba(40, 167, 69, 0.1); border: 1px solid #28a745; border-radius: 8px; padding: 14px; margin-top: 14px;">
+                <div style="font-size: 13px; font-weight: 700; color: #69db7c;">🌍 Social Service Impact Summary</div>
+                <div style="font-size: 13px; color: #e9ecef; margin-top: 6px;">
+                    By dynamically adapting green light phases to clear the <b>{current_data['congestion']:.0f}/100</b> congestion in {loc_display}, the municipality can prevent <b>{co2_info['potential_savings_tonnes_per_year']:.1f} tonnes of CO2/year</b> and save citizens <b>{co2_info['fuel_saved_liters_per_week']:,.0f} liters of wasted fuel weekly</b>.
+                </div>
+            </div>
+            """, unsafe_allow_html=True)
+
+    # ==========================================================================
+    # TAB 3: CITY-WIDE 50-ZONE LEADERBOARD & AI BRIEFING
+    # ==========================================================================
+    with tab3:
+        st.markdown(f"#### 🏆 City-Wide Risk & Priority Leaderboard (Week {selected_week})")
 
         week_all_zones = df[df["week"] == selected_week].copy()
 
-        # Compute risk predictions for all zones in this week
+        # Batch Model Inference for extreme performance
         if model is not None and selected_week >= 5:
             try:
                 week_all_zones["risk_prob"] = model.predict_proba(week_all_zones)[:, 1]
             except Exception as e:
-                st.warning(f"ML model prediction failed for leaderboard: {e}. Using fallback rolling incident rate.")
                 week_all_zones["risk_prob"] = week_all_zones.get("rolling_4_week_incident_rate", pd.Series(0.0, index=week_all_zones.index))
         else:
             week_all_zones["risk_prob"] = np.nan
 
-        # Composite priority proxy
         pop_max = week_all_zones["population_density"].max()
         pop_max = pop_max if pop_max > 0 else 1
         week_all_zones["priority_score"] = (
@@ -542,15 +617,24 @@ def render_simulation_dashboard():
         week_all_zones = week_all_zones.sort_values(by="priority_score", ascending=False).reset_index(drop=True)
         week_all_zones["rank"] = np.arange(1, len(week_all_zones) + 1)
 
-        # --- Interactive Map Visualization ---
+        # City-Wide AI Briefing Box
+        city_summary_key = f"city_summary_w{selected_week}"
+        if city_summary_key not in st.session_state:
+            st.session_state[city_summary_key] = generate_city_summary(week_all_zones.head(15).to_dict(orient="records"))
+
+        st.markdown(f"""
+        <div style="background: rgba(18, 30, 49, 0.7); border: 1px solid rgba(77, 171, 247, 0.3); border-radius: 10px; padding: 14px 18px; margin-bottom: 18px;">
+            <div style="font-size: 13px; font-weight: 700; color: #74c0fc;">🏙️ AI Review — City-Wide Executive Briefing (Week {selected_week})</div>
+            <p style="margin: 4px 0 0 0; font-size: 13px; color: #dee2e6;">{html.escape(st.session_state[city_summary_key])}</p>
+        </div>
+        """, unsafe_allow_html=True)
+
+        # Interactive Map Visualization
         if "latitude" in week_all_zones.columns and "longitude" in week_all_zones.columns:
-            has_valid_coords = (
-                week_all_zones["latitude"].notnull().any() and
-                week_all_zones["longitude"].notnull().any()
-            )
+            has_valid_coords = week_all_zones["latitude"].notnull().any() and week_all_zones["longitude"].notnull().any()
             if has_valid_coords:
-                st.markdown("##### 🗺️ Geographic Risk Heatmap")
-                map_data = week_all_zones[["latitude", "longitude", "risk_prob", "priority_score", "location_name", "zone_id"]].dropna(subset=["latitude", "longitude"]).copy()
+                st.markdown("##### 🗺️ Geographic Risk & Priority Heatmap")
+                map_data = week_all_zones[["latitude", "longitude", "risk_prob", "priority_score", "location_name", "zone_id", "city"]].dropna(subset=["latitude", "longitude"]).copy()
                 map_data["risk_pct"] = (map_data["risk_prob"].fillna(0) * 100).round(1)
                 map_data["size"] = (map_data["priority_score"].clip(5, 100) * 3).astype(int)
 
@@ -563,19 +647,17 @@ def render_simulation_dashboard():
                     color_continuous_scale=["#28a745", "#ffc107", "#fd7e14", "#dc3545"],
                     range_color=[0, 80],
                     hover_name="location_name",
-                    hover_data={"zone_id": True, "risk_pct": True, "priority_score": True, "size": False, "latitude": False, "longitude": False},
+                    hover_data={"zone_id": True, "city": True, "risk_pct": True, "priority_score": True, "size": False, "latitude": False, "longitude": False},
                     labels={"risk_pct": "Risk %", "priority_score": "Priority"},
                     mapbox_style="carto-darkmatter",
-                    zoom=10,
-                    height=420
+                    zoom=9.5,
+                    height=400
                 )
-                fig_map.update_layout(
-                    margin=dict(l=0, r=0, t=0, b=0),
-                    coloraxis_colorbar=dict(title="Risk %")
-                )
+                fig_map.update_layout(margin=dict(l=0, r=0, t=0, b=0), coloraxis_colorbar=dict(title="Risk %"))
                 st.plotly_chart(fig_map, use_container_width=True)
 
-        # Plotly Scatter Matrix: Congestion vs Risk Probability
+        # Scatter Matrix & Table
+        st.markdown("##### 📊 Risk vs. Congestion by Zone Type")
         fig_scatter = px.scatter(
             week_all_zones,
             x="congestion",
@@ -584,15 +666,13 @@ def render_simulation_dashboard():
             size="vehicle_density",
             hover_name="location_name",
             hover_data=["zone_id", "average_speed", "priority_score"],
-            title=f"Zone Risk vs. Congestion Matrix (Week {selected_week})",
             labels={"congestion": "Congestion Score (0-100)", "risk_prob": "Predicted Risk Probability (0-1)"},
             template="plotly_dark",
-            height=400
+            height=360
         )
-        fig_scatter.update_layout(margin=dict(l=20, r=20, t=40, b=20))
+        fig_scatter.update_layout(margin=dict(l=20, r=20, t=30, b=20))
         st.plotly_chart(fig_scatter, use_container_width=True)
 
-        # Ranked Table Display
         display_cols = ["rank", "zone_id", "location_name", "city", "zone_type", "risk_prob", "congestion", "average_speed", "priority_score"]
         avail_cols = [c for c in display_cols if c in week_all_zones.columns]
 
@@ -604,13 +684,13 @@ def render_simulation_dashboard():
                 "priority_score": "{:.1f}"
             }),
             use_container_width=True,
-            height=350
+            height=300
         )
 
     # ==========================================================================
-    # TAB 3: WHAT-IF RISK SIMULATION SANDBOX
+    # TAB 4: WHAT-IF RISK SIMULATION SANDBOX
     # ==========================================================================
-    with tab3:
+    with tab4:
         st.markdown("#### 🧪 Real-Time What-If Machine Learning Sandbox")
         st.caption("Interactively adjust traffic and environmental parameters for this zone to test ML risk sensitivity in real-time.")
 
@@ -632,10 +712,8 @@ def render_simulation_dashboard():
                 cur_w = str(current_data.get("weather", "Normal"))
                 default_w_idx = weather_options.index(cur_w) if cur_w in weather_options else 0
                 test_weather = st.selectbox("Weather Condition", weather_options, index=default_w_idx)
-
                 test_event = st.checkbox("Special Municipal Event Active", value=bool(current_data.get("special_event", 0)))
 
-            # Build mock input vector based on current_row
             mock_row = current_row.copy()
             mock_row["average_speed"] = test_speed
             mock_row["congestion"] = test_congestion
@@ -644,7 +722,6 @@ def render_simulation_dashboard():
             mock_row["weather"] = test_weather
             mock_row["special_event"] = 1 if test_event else 0
 
-            # Run inference
             try:
                 simulated_risk = float(model.predict_proba(mock_row)[0, 1])
                 sim_badge, sim_color, _ = get_risk_badge(simulated_risk)
@@ -684,8 +761,8 @@ def render_simulation_dashboard():
                 st.error(f"Simulation inference error: {e}")
 
     # ==========================================================================
-    # TAB 4: FULL OBSERVATION DIAGNOSTICS
+    # TAB 5: FULL OBSERVATION DIAGNOSTICS
     # ==========================================================================
-    with tab4:
+    with tab5:
         st.markdown(f"#### 📋 Complete Diagnostic Record: {html.escape(str(selected_zone))} (Week {selected_week})")
         st.json(current_data.to_dict())
