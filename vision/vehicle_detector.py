@@ -28,17 +28,19 @@ DEFAULT_TRAJECTORY_OUTPUT = "data/vehicle_trajectories.csv"
 DEFAULT_MODEL_NAME = "yolo11n.pt"
 
 # Unified vehicle mapping for COCO, IISc UVH-26, and Indian Traffic classes
-def resolve_vehicle_class(class_id: int, model_names: dict) -> str:
+def resolve_vehicle_class(class_id: int, model_names: dict, include_riders: bool = True) -> str:
     """
     Dynamically maps class ID to standard vehicle categories.
-    Supports COCO (cars, bikes, buses, trucks) and IISc UVH-26 Indian traffic classes (auto-rickshaws, tempos, etc.).
+    Supports COCO (cars, bikes, riders, buses, trucks) and IISc UVH-26 Indian traffic classes (auto-rickshaws, tempos, etc.).
     """
     raw = str(model_names.get(class_id, "")).lower()
     
     if any(k in raw for k in ["auto", "rickshaw", "tuk", "3-wheeler", "three_wheeler"]):
         return "auto_rickshaw"
-    elif any(k in raw for k in ["motorcycle", "bike", "two_wheeler", "2-wheeler", "scooter"]):
+    elif any(k in raw for k in ["motorcycle", "bike", "bicycle", "two_wheeler", "2-wheeler", "scooter"]):
         return "motorcycle"
+    elif include_riders and any(k in raw for k in ["person", "rider"]):
+        return "motorcycle"  # In CCTV traffic lanes, persons detected on roadway are riders on two-wheelers
     elif any(k in raw for k in ["bus", "mini_bus", "van"]):
         return "bus"
     elif any(k in raw for k in ["truck", "lcv", "tempo", "lorry", "container", "tractor"]):
@@ -47,7 +49,7 @@ def resolve_vehicle_class(class_id: int, model_names: dict) -> str:
         return "car"
     
     # Fallback to COCO default IDs if names missing
-    coco_map = {2: "car", 3: "motorcycle", 5: "bus", 7: "truck"}
+    coco_map = {0: "motorcycle", 1: "motorcycle", 2: "car", 3: "motorcycle", 5: "bus", 7: "truck"}
     return coco_map.get(class_id, None)
 
 

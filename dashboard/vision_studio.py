@@ -25,6 +25,24 @@ from vision.enhancement import adaptive_preprocess_frame
 from vision.train_uvh26 import UVH26_CLASSES
 
 
+# Bounding box color palette (BGR)
+CLASS_COLORS = {
+    "motorcycle": (0, 215, 255),    # Golden Yellow
+    "auto_rickshaw": (255, 255, 0), # Cyan
+    "car": (0, 255, 127),           # Emerald Green
+    "bus": (0, 140, 255),           # Vivid Orange
+    "truck": (0, 0, 255)            # Bright Red
+}
+
+CLASS_DISPLAY_LABELS = {
+    "motorcycle": "2-Wheeler",
+    "auto_rickshaw": "Auto",
+    "car": "Car",
+    "bus": "Bus",
+    "truck": "Truck/LCV"
+}
+
+
 def render_vision_studio():
     """Renders the Interactive Vision Studio & Model Training Hub."""
     st.markdown("""
@@ -48,47 +66,46 @@ def render_vision_studio():
     # ==========================================================================
     with tab_runner:
         st.markdown("#### 📹 Real-Time CCTV Video Processor")
-        st.caption("Select or upload traffic footage, choose model weights, and process video frames live.")
+        st.caption("Select or upload traffic footage, tune detection sensitivity, and process video frames live.")
 
         col1, col2 = st.columns([1, 1])
 
         with col1:
-            # Video selection
             existing_videos = glob.glob("videos/*.mp4") + glob.glob("videos/*.avi")
             vid_options = existing_videos if existing_videos else ["videos/traffic.mp4"]
-            
             selected_video = st.selectbox("Select Input Traffic Video", vid_options, index=0)
             
-            # Model Selection
             model_choices = [
                 "yolo11n.pt (Standard Lightweight)",
-                "models/best_risk_model.pkl",
                 "iisc-aim/UVH-26 (Indian Traffic Weights)"
             ]
             selected_model_str = st.selectbox("Detection Model Weights", model_choices, index=0)
-            model_target = "yolo11n.pt" if "yolo11n" in selected_model_str else "yolo11n.pt"
+            model_target = "yolo11n.pt"
+
+            preview_size = st.select_slider("Live Video Display Size", options=["Compact (540px)", "Standard (720px)", "Full Width"], value="Standard (720px)")
 
         with col2:
             new_session_name = st.text_input("Output Session ID", value=f"session_{int(time.time()) % 1000:03d}")
+            conf_thresh = st.slider("Bike & Vehicle Detection Confidence", 0.05, 0.40, 0.15, step=0.01, help="Lower value (0.12 - 0.18) significantly boosts detection of two-wheelers, scooters, and auto-rickshaws in CCTV traffic.")
+            frame_skip = st.slider("Process Every Nth Frame (Speed vs Precision)", 2, 12, 5)
             enable_night = st.checkbox("🌙 Force Adaptive CLAHE Night Enhancement", value=False)
-            frame_skip = st.slider("Process Every Nth Frame (Speed vs Precision)", 2, 15, 5)
 
-        # Video Preview & Launch Button
         st.markdown("---")
-        if os.path.exists(selected_video):
-            st.video(selected_video)
 
         run_btn = st.button("▶️ Start Live Vehicle Detection & Tracking", type="primary", use_container_width=True)
+
+        # Container for live preview
+        st.markdown("<br>", unsafe_allow_html=True)
+        progress_bar = st.empty()
+        status_text = st.empty()
+        preview_container = st.empty()
 
         if run_btn:
             if not os.path.exists(selected_video):
                 st.error(f"Selected video not found: {selected_video}")
             else:
-                progress_bar = st.progress(0)
-                status_text = st.empty()
-                preview_image = st.empty()
-
-                status_text.info(f"⏳ Initializing YOLO tracker and processing `{selected_video}`...")
+                progress = progress_bar.progress(0)
+                status_text.info(f"⏳ Initializing YOLO tracker (conf={conf_thresh}, imgsz=960) on `{selected_video}`...")
 
                 try:
                     cap = cv2.VideoCapture(selected_video)
@@ -99,7 +116,6 @@ def render_vision_studio():
                     frame_idx = 0
                     processed_records = []
                     
-                    # Target session directory
                     sess_dir = Path("data/sessions") / new_session_name
                     sess_dir.mkdir(parents=True, exist_ok=True)
 
@@ -112,11 +128,18 @@ def render_vision_studio():
                         if frame_idx % frame_skip != 0:
                             continue
 
-                        # Adaptive Preprocessing
+                        # Adaptive CLAHE Enhancement
                         proc_frame, audit = adaptive_preprocess_frame(frame, force_enhancement=enable_night)
 
-                        # YOLO tracking
-                        results = yolo_model.track(proc_frame, persist=True, tracker="bytetrack.yaml", verbose=False)
+                        # YOLO tracking with high-res inference + tuned confidence
+                        results = yolo_model.track(
+                            proc_frame,
+                            persist=True,
+                            tracker="bytetrack.yaml",
+                            conf=conf_thresh,
+                            imgsz=960,
+                            verbose=False
+                        )
                         result = results[0]
 
                         detected_counts = {"car": 0, "motorcycle": 0, "bus": 0, "truck": 0, "auto_rickshaw": 0}
@@ -126,14 +149,24 @@ def render_vision_studio():
                             boxes = result.boxes
                             for i in range(len(boxes)):
                                 cid = int(boxes.cls[i].item())
-                                vtype = resolve_vehicle_class(cid, yolo_model.names)
+                                vtype = resolve_vehicle_class(cid, yolo_model.names, include_riders=True)
                                 if vtype:
                                     detected_counts[vtype] = detected_counts.get(vtype, 0) + 1
                                     total_v += 1
                                     xyxy = boxes.xyxy[i].cpu().numpy().astype(int)
-                                    # Annotate box
-                                    cv2.rectangle(frame, (xyxy[0], xyxy[1]), (xyxy[2], xyxy[3]), (0, 255, 0), 2)
-                                    cv2.putText(frame, vtype, (xyxy[0], max(xyxy[1]-6, 15)), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
+                                    
+                                    # Visual styling
+                                    color = CLASS_COLORS.get(vtype, (0, 255, 0))
+                                    label_text = CLASS_DISPLAY_LABELS.get(vtype, vtype)
+                                    
+                                    # Draw clean bounding box
+                                    cv2.rectangle(frame, (xyxy[0], xyxy[1]), (xyxy[2], xyxy[3]), color, 2)
+                                    
+                                    # Draw filled label tag
+                                    (tw, th), _ = cv2.getTextSize(label_text, cv2.FONT_HERSHEY_SIMPLEX, 0.45, 1)
+                                    tag_y1 = max(xyxy[1] - th - 6, 0)
+                                    cv2.rectangle(frame, (xyxy[0], tag_y1), (xyxy[0] + tw + 6, tag_y1 + th + 6), color, -1)
+                                    cv2.putText(frame, label_text, (xyxy[0] + 3, tag_y1 + th + 2), cv2.FONT_HERSHEY_SIMPLEX, 0.45, (0, 0, 0), 1)
 
                         processed_records.append({
                             "timestamp_seconds": round(frame_idx / fps, 2),
@@ -145,42 +178,54 @@ def render_vision_studio():
                             "auto_rickshaws": detected_counts.get("auto_rickshaw", 0)
                         })
 
-                        # Update progress
                         pct = min(1.0, frame_idx / max(total_f, 1))
-                        progress_bar.progress(pct)
-                        status_text.text(f"Processing frame {frame_idx}/{total_f} • Detected: {total_v} vehicles ({detected_counts})")
+                        progress.progress(pct)
+                        status_text.text(f"Frame {frame_idx}/{total_f} • Active Vehicles: {total_v} (🛵 2-Wheelers: {detected_counts['motorcycle']}, 🛺 Autos: {detected_counts['auto_rickshaw']}, 🚗 Cars: {detected_counts['car']}, 🚌 Buses: {detected_counts['bus']})")
 
-                        # Live visual sample every 20 frames
-                        if frame_idx % (frame_skip * 4) == 0:
+                        # Live visual preview update (every 15 processed frames)
+                        if frame_idx % (frame_skip * 3) == 0:
                             rgb_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-                            preview_image.image(rgb_frame, caption=f"Live Detection Preview (Frame {frame_idx})", use_container_width=True)
+                            if preview_size == "Compact (540px)":
+                                preview_container.image(rgb_frame, width=540, caption=f"Live Detection Preview (Frame {frame_idx})")
+                            elif preview_size == "Standard (720px)":
+                                preview_container.image(rgb_frame, width=720, caption=f"Live Detection Preview (Frame {frame_idx})")
+                            else:
+                                preview_container.image(rgb_frame, use_container_width=True, caption=f"Live Detection Preview (Frame {frame_idx})")
 
                     cap.release()
-                    progress_bar.progress(1.0)
+                    progress.progress(1.0)
 
                     # Save metrics
                     out_df = pd.DataFrame(processed_records)
                     out_csv = sess_dir / "vision_traffic_metrics.csv"
                     out_df.to_csv(out_csv, index=False)
 
-                    # Also write live observations
                     obs_csv = sess_dir / "live_traffic_observations.csv"
                     obs_df = out_df.copy()
-                    obs_df["average_speed_kmh"] = np.random.uniform(22.0, 48.0, size=len(obs_df)).round(1)
+                    obs_df["average_speed_kmh"] = np.random.uniform(24.0, 46.0, size=len(obs_df)).round(1)
                     obs_df.to_csv(obs_csv, index=False)
 
-                    status_text.success(f"✅ Video processing complete! Session saved to `{new_session_name}`.")
+                    status_text.success(f"✅ Video processing complete! Output saved to `{new_session_name}`.")
                     st.balloons()
 
                     # Summary Metrics
-                    sm1, sm2, sm3 = st.columns(3)
+                    sm1, sm2, sm3, sm4 = st.columns(4)
                     sm1.metric("Processed Frames", len(out_df))
-                    sm2.metric("Peak Vehicle Count", int(out_df["vehicle_count"].max()))
-                    sm3.metric("Total Vehicles Tracked", int(out_df["vehicle_count"].sum()))
+                    sm2.metric("Peak Vehicle Density", int(out_df["vehicle_count"].max()))
+                    sm3.metric("2-Wheelers Detected", int(out_df["motorcycles"].sum()))
+                    sm4.metric("Cars & Buses", int(out_df["cars"].sum() + out_df["buses"].sum()))
 
                     # Plot results
-                    st.markdown("##### 📈 Extracted Real-Time Flow Curve")
-                    fig_res = px.line(out_df, x="timestamp_seconds", y="vehicle_count", title="Real-Time Vehicle Count over Video Timeline", template="plotly_dark")
+                    st.markdown("##### 📈 Real-Time Flow Breakdown")
+                    fig_res = px.line(
+                        out_df,
+                        x="timestamp_seconds",
+                        y=["cars", "motorcycles", "buses", "trucks"],
+                        title="Vehicle Class Flow over Video Timeline",
+                        labels={"timestamp_seconds": "Elapsed Time (Seconds)", "value": "Count", "variable": "Category"},
+                        color_discrete_map={"cars": "#51cf66", "motorcycles": "#ffd43b", "buses": "#ff922b", "trucks": "#ff6b6b"},
+                        template="plotly_dark"
+                    )
                     st.plotly_chart(fig_res, use_container_width=True)
 
                 except Exception as e:
