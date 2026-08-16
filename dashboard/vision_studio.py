@@ -283,38 +283,70 @@ def render_vision_studio():
                     status_text.error(f"Error during video processing: {e}")
 
     # ==========================================================================
-    # TAB 2: IISC UVH-26 BENCHMARK HUB
+    # TAB 2: IISC UVH-26 & BMD-45 BENCHMARK HUB
     # ==========================================================================
     with tab_uvh26:
-        st.markdown("#### 🇮🇳 IISc AIM UVH-26 Indian Traffic Benchmark")
-        st.caption("Released by AI for Integrated Mobility (AIM) @ Indian Institute of Science (IISc), Bengaluru.")
+        st.markdown("#### 🇮🇳 IISc AIM Indian Traffic Benchmark Datasets")
+        st.caption("Developed by AI for Integrated Mobility (AIM) @ Indian Institute of Science (IISc), Bengaluru.")
+
+        # Comparison cards for UVH-26 and BMD-45
+        d_col1, d_col2 = st.columns(2)
+        with d_col1:
+            st.markdown("""
+            <div style="background: rgba(30, 41, 59, 0.7); border: 1px solid #3b82f6; border-radius: 10px; padding: 16px; min-height: 190px;">
+                <div style="color: #60a5fa; font-weight: 700; font-size: 15px;">📊 IISc UVH-26 Benchmark</div>
+                <div style="font-size: 12px; color: #94a3b8; margin: 4px 0 10px 0;">Urban Vehicle Heterogeneity (2025)</div>
+                <ul style="font-size: 13px; color: #e2e8f0; margin: 0; padding-left: 18px; line-height: 1.6;">
+                    <li><b>26,646 1080p CCTV Images</b></li>
+                    <li><b>1.8 Million Bounding Boxes</b></li>
+                    <li>14 Indian Vehicle Classes (Auto, Tempo, etc.)</li>
+                    <li>Fast fine-tuning convergence</li>
+                </ul>
+            </div>
+            """, unsafe_allow_html=True)
+
+        with d_col2:
+            st.markdown("""
+            <div style="background: rgba(30, 41, 59, 0.7); border: 1px solid #10b981; border-radius: 10px; padding: 16px; min-height: 190px;">
+                <div style="color: #34d399; font-weight: 700; font-size: 15px;">🚀 IISc BMD-45 Flagship Dataset</div>
+                <div style="font-size: 12px; color: #94a3b8; margin: 4px 0 10px 0;">Bengaluru Mobility Dataset (2026)</div>
+                <ul style="font-size: 13px; color: #e2e8f0; margin: 0; padding-left: 18px; line-height: 1.6;">
+                    <li><b>45,000 CCTV Images</b></li>
+                    <li><b>3,600+ Safe City Cameras</b></li>
+                    <li><b>480,000+ Verified Annotations</b></li>
+                    <li>Maximum geographic and viewpoint diversity</li>
+                </ul>
+            </div>
+            """, unsafe_allow_html=True)
+
+        st.markdown("<br>", unsafe_allow_html=True)
 
         u_col1, u_col2 = st.columns([3, 2])
 
         with u_col1:
-            st.markdown(f"""
-            <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; padding: 18px; margin-bottom: 16px;">
-                <h4 style="margin: 0; color: #74c0fc;">Why UVH-26 Matters for Indian Smart Cities</h4>
-                <p style="margin: 8px 0 0 0; font-size: 13px; color: #ced4da; line-height: 1.6;">
-                    Standard AI models trained on Western highways (COCO) fail on Indian roads because they cannot recognize auto-rickshaws, crowded 2-wheelers, or mixed-lane chaos.
-                    <b>UVH-26</b> provides <b>26,646 1080p CCTV frames</b> with <b>1.8 Million bounding boxes</b> across 14 India-specific categories, delivering up to <b>31.5% higher detection accuracy</b>.
-                </p>
-            </div>
-            """, unsafe_allow_html=True)
-
-            st.markdown("##### 🚗 Supported 14 Indian Vehicle Classes:")
+            st.markdown("##### 🚗 Unified 14 Indian Vehicle Categories:")
             class_tags = "".join([f'<span style="display: inline-block; background: rgba(77, 171, 247, 0.15); color: #74c0fc; border: 1px solid rgba(77, 171, 247, 0.3); padding: 4px 10px; border-radius: 6px; font-size: 12px; margin: 3px;">{cls.replace("_", " ").title()}</span>' for cls in UVH26_CLASSES])
             st.markdown(f'<div style="margin-bottom: 20px;">{class_tags}</div>', unsafe_allow_html=True)
 
-        with u_col2:
-            st.markdown("##### ⚙️ Fine-Tuning Setup Generator")
             st.markdown("""
-            <div style="background: rgba(18, 30, 49, 0.7); border: 1px solid rgba(77, 171, 247, 0.3); border-radius: 10px; padding: 16px;">
-                <div style="font-size: 13px; font-weight: 700; color: #69db7c;">🎯 One-Click Training Command</div>
-                <pre style="background: #000; color: #51cf66; padding: 10px; border-radius: 6px; font-size: 12px; margin-top: 8px; overflow-x: auto;">python -m vision.train_uvh26 \
-  --data iisc-aim/UVH-26 \
-  --model yolo11n.pt \
-  --epochs 30 \
+            <div style="background: rgba(16, 185, 129, 0.08); border-left: 4px solid #10b981; padding: 12px 16px; border-radius: 6px; font-size: 13px; color: #d1fae5; line-height: 1.5;">
+                <b>⚡ Will a larger dataset make live detection slower?</b><br>
+                <b>NO!</b> Inference speed depends strictly on the model backbone (e.g. YOLOv11s has ~9.4M parameters). Whether trained on 1,000 or 45,000 images, the live detection runs at the exact same ~20ms per frame. Larger datasets only give <b>higher detection accuracy</b> on complex Indian roads.
+            </div>
+            """, unsafe_allow_html=True)
+
+        with u_col2:
+            st.markdown("##### ⚙️ One-Click Fine-Tuning Setup")
+            selected_ds = st.selectbox("Target IISc Dataset", ["iisc-aim/BMD-45 (45k Images)", "iisc-aim/UVH-26 (26k Images)"])
+            ds_name = "iisc-aim/BMD-45" if "BMD-45" in selected_ds else "iisc-aim/UVH-26"
+            
+            st.markdown(f"""
+            <div style="background: rgba(18, 30, 49, 0.7); border: 1px solid rgba(77, 171, 247, 0.3); border-radius: 10px; padding: 16px; margin-top: 10px;">
+                <div style="font-size: 13px; font-weight: 700; color: #69db7c;">🎯 Terminal / Cloud Training Command</div>
+                <pre style="background: #000; color: #51cf66; padding: 10px; border-radius: 6px; font-size: 12px; margin-top: 8px; overflow-x: auto;">python -m vision.train_uvh26 \\
+  --data {ds_name} \\
+  --model yolo11s.pt \\
+  --epochs 30 \\
   --batch 16</pre>
             </div>
             """, unsafe_allow_html=True)

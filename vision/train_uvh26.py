@@ -1,9 +1,9 @@
 """
 ================================================================================
-ROAD SENSE AI - IISc UVH-26 FINE-TUNING & MODEL TRAINING MODULE
+ROAD SENSE AI - IISc UVH-26 & BMD-45 FINE-TUNING & MODEL TRAINING MODULE
 ================================================================================
-Train and fine-tune YOLO models on the IISc AIM UVH-26 Indian traffic dataset
-(26,646 CCTV images with 14 Indian vehicle classes including Auto-Rickshaws).
+Train and fine-tune YOLO models on the IISc AIM UVH-26 (26k frames) or BMD-45 (45k frames)
+Indian traffic datasets with 14 Indian vehicle classes including Auto-Rickshaws & Tempos.
 ================================================================================
 """
 
@@ -12,7 +12,7 @@ import argparse
 from pathlib import Path
 from ultralytics import YOLO
 
-# 14 Indian Traffic Vehicle Classes defined by IISc AIM @ UVH-26
+# 14 Indian Traffic Vehicle Classes defined by IISc AIM @ UVH-26 & BMD-45
 UVH26_CLASSES = [
     "two_wheeler",
     "auto_rickshaw",
@@ -32,15 +32,15 @@ UVH26_CLASSES = [
 
 
 def train_yolo_uvh26(
-    data_yaml: str = "iisc-aim/UVH-26",
-    base_model: str = "yolo11n.pt",
+    data_yaml: str = "iisc-aim/BMD-45",
+    base_model: str = "yolo11s.pt",
     epochs: int = 30,
     batch_size: int = 16,
     img_size: int = 640,
-    output_dir: str = "models/uvh26_finetuned"
+    output_dir: str = "models/iisc_finetuned"
 ):
     """
-    Fine-tunes base YOLO model on IISc UVH-26 dataset.
+    Fine-tunes base YOLO model on IISc AIM BMD-45 / UVH-26 datasets.
     """
     print("=" * 70)
     print("ROAD SENSE AI - IISc UVH-26 MODEL TRAINING PIPELINE")
