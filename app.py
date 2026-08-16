@@ -9,7 +9,7 @@ Main application entrypoint orchestrating:
 ================================================================================
 """
 
-import sys
+import html
 import streamlit as st
 
 # Configure global page settings
@@ -50,6 +50,16 @@ def main():
     else:
         render_live_vision_dashboard()
 
+    # Sidebar footer
+    st.sidebar.markdown("---")
+    st.sidebar.markdown(
+        '<div style="font-size: 12px; color: #9aa0a6; text-align: center;">'
+        'RoadSense AI v1.0<br>'
+        'Simulation • Vision • ML Risk • Priority'
+        '</div>',
+        unsafe_allow_html=True
+    )
+
 
 def render_live_vision_dashboard():
     """Renders the Live CCTV Sessions explorer."""
@@ -68,11 +78,14 @@ def render_live_vision_dashboard():
 
     sessions = sorted(glob.glob("data/sessions/*"))
     if not sessions:
-        st.info("No recorded CCTV sessions found in data/sessions/.")
+        st.info("📂 No recorded CCTV sessions found in `data/sessions/`. Run the vision pipeline first to generate session data.")
         return
 
     session_names = [os.path.basename(s) for s in sessions]
     selected_sess = st.selectbox("Select Session", session_names, index=len(session_names)-1)
+
+    # Sanitize session name for HTML output
+    safe_sess = html.escape(str(selected_sess))
 
     sess_dir = os.path.join("data/sessions", selected_sess)
     obs_file = os.path.join(sess_dir, "live_traffic_observations.csv")
@@ -90,11 +103,14 @@ def render_live_vision_dashboard():
                 st.metric("Peak Vehicle Count", int(df_obs["vehicle_count"].max()))
             if "average_speed_kmh" in df_obs.columns and df_obs["average_speed_kmh"].notnull().any():
                 st.metric("Mean Speed", f"{df_obs['average_speed_kmh'].dropna().mean():.1f} km/h")
+    else:
+        with c1:
+            st.warning(f"No observation data found for session `{safe_sess}`.")
 
     with c2:
         if os.path.exists(img_overlay):
             st.markdown("#### 📐 Perspective Calibration Overlay")
-            st.image(img_overlay, caption=f"Homography Quad Overlay ({selected_sess})", use_container_width=True)
+            st.image(img_overlay, caption=f"Homography Quad Overlay ({safe_sess})", use_container_width=True)
 
     if os.path.exists(mov_file):
         df_mov = pd.read_csv(mov_file)

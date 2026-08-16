@@ -621,10 +621,10 @@ def save_simulation_data(df: pd.DataFrame, target_path: str):
 
 
 if __name__ == "__main__":
-    script_dir = os.path.dirname(os.path.abspath(__file__))
-    project_root = script_dir if os.path.basename(script_dir) == "traffic_sim" else os.path.dirname(script_dir)
-    data_dir = os.path.join(project_root, "data")
-    os.makedirs(data_dir, exist_ok=True)
+    from pathlib import Path
+    project_root = Path(__file__).resolve().parent
+    data_dir = project_root / "data"
+    data_dir.mkdir(parents=True, exist_ok=True)
 
     print(f"\n[+] Executing Definitive Simulation ({NUM_ZONES} Zones x {NUM_WEEKS} Weeks = {NUM_ZONES * NUM_WEEKS:,} records)...")
     df_sim = run_traffic_simulator(
@@ -637,5 +637,5 @@ if __name__ == "__main__":
     validate_and_display_data(df_sim)
 
     # Save dataset safely
-    output_path = os.path.join(data_dir, "traffic_simulation.csv")
+    output_path = str(data_dir / "traffic_simulation.csv")
     save_simulation_data(df_sim, output_path)

@@ -153,14 +153,17 @@ def calculate_temporal_score(df):
 
     trend = df["congestion_trend_4w"]
 
-    # Observed range in the current simulation
-    trend_min = -13.791
-    trend_max = 11.964
+    # Dynamically compute normalization bounds from actual data
+    trend_min = trend.min()
+    trend_max = trend.max()
 
-    df["temporal_trend_score"] = (
-        (trend - trend_min)
-        / (trend_max - trend_min)
-    ) * 100
+    if trend_max == trend_min:
+        df["temporal_trend_score"] = 50.0
+    else:
+        df["temporal_trend_score"] = (
+            (trend - trend_min)
+            / (trend_max - trend_min)
+        ) * 100
 
     df["temporal_trend_score"] = (
         df["temporal_trend_score"]

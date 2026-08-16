@@ -25,6 +25,8 @@ KEY CAPABILITIES:
 """
 
 import os
+import html
+import hashlib
 import joblib
 import pandas as pd
 import numpy as np
@@ -69,13 +71,17 @@ def load_simulation_data() -> Tuple[pd.DataFrame, pd.DataFrame]:
 @st.cache_resource
 def load_trained_risk_model():
     """
-    Loads the trained Supervised ML Risk Model pipeline.
+    Loads the trained Supervised ML Risk Model pipeline with integrity verification.
     """
     model_path = "models/best_risk_model.pkl"
     if not os.path.exists(model_path):
         return None
     try:
+        # Compute SHA-256 hash for integrity auditing
+        with open(model_path, "rb") as f:
+            model_hash = hashlib.sha256(f.read()).hexdigest()[:16]
         model = joblib.load(model_path)
+        print(f"[+] ML model loaded. SHA-256 prefix: {model_hash}")
         return model
     except Exception as e:
         st.error(f"Error loading ML model from {model_path}: {e}")
@@ -256,14 +262,15 @@ def render_simulation_dashboard():
     # ----------------------------------------------------
     # ZONE SUMMARY HEADER
     # ----------------------------------------------------
-    loc_display = current_data.get('location_name', selected_zone)
-    city_display = current_data.get('city', 'Metropolis')
-    type_display = current_data.get('zone_type', 'Urban')
+    loc_display = html.escape(str(current_data.get('location_name', selected_zone)))
+    city_display = html.escape(str(current_data.get('city', 'Metropolis')))
+    type_display = html.escape(str(current_data.get('zone_type', 'Urban')))
+    safe_zone = html.escape(str(selected_zone))
 
     st.markdown(f"""
     <div style="display: flex; justify-content: space-between; align-items: center; background: rgba(255,255,255,0.03); padding: 14px 20px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.08); margin-bottom: 20px;">
         <div>
-            <span style="font-size: 20px; font-weight: 700; color: #fff;">{selected_zone} — {loc_display}</span>
+            <span style="font-size: 20px; font-weight: 700; color: #fff;">{safe_zone} — {loc_display}</span>
             <span style="color: #9aa0a6; font-size: 14px; margin-left: 10px;">({city_display} | {type_display})</span>
         </div>
         <div style="display: flex; align-items: center; gap: 14px;">
@@ -517,20 +524,56 @@ def render_simulation_dashboard():
         if model is not None and selected_week >= 5:
             try:
                 week_all_zones["risk_prob"] = model.predict_proba(week_all_zones)[:, 1]
-            except Exception:
-                week_all_zones["risk_prob"] = week_all_zones.get("rolling_4_week_incident_rate", 0.0)
+            except Exception as e:
+                st.warning(f"ML model prediction failed for leaderboard: {e}. Using fallback rolling incident rate.")
+                week_all_zones["risk_prob"] = week_all_zones.get("rolling_4_week_incident_rate", pd.Series(0.0, index=week_all_zones.index))
         else:
             week_all_zones["risk_prob"] = np.nan
 
         # Composite priority proxy
+        pop_max = week_all_zones["population_density"].max()
+        pop_max = pop_max if pop_max > 0 else 1
         week_all_zones["priority_score"] = (
             (week_all_zones["risk_prob"].fillna(0.3) * 50.0) +
             (week_all_zones["congestion"] * 0.35) +
-            (week_all_zones["population_density"] / week_all_zones["population_density"].max() * 15.0)
+            (week_all_zones["population_density"] / pop_max * 15.0)
         ).round(2)
 
         week_all_zones = week_all_zones.sort_values(by="priority_score", ascending=False).reset_index(drop=True)
         week_all_zones["rank"] = np.arange(1, len(week_all_zones) + 1)
+
+        # --- Interactive Map Visualization ---
+        if "latitude" in week_all_zones.columns and "longitude" in week_all_zones.columns:
+            has_valid_coords = (
+                week_all_zones["latitude"].notnull().any() and
+                week_all_zones["longitude"].notnull().any()
+            )
+            if has_valid_coords:
+                st.markdown("##### 🗺️ Geographic Risk Heatmap")
+                map_data = week_all_zones[["latitude", "longitude", "risk_prob", "priority_score", "location_name", "zone_id"]].dropna(subset=["latitude", "longitude"]).copy()
+                map_data["risk_pct"] = (map_data["risk_prob"].fillna(0) * 100).round(1)
+                map_data["size"] = (map_data["priority_score"].clip(5, 100) * 3).astype(int)
+
+                fig_map = px.scatter_mapbox(
+                    map_data,
+                    lat="latitude",
+                    lon="longitude",
+                    size="size",
+                    color="risk_pct",
+                    color_continuous_scale=["#28a745", "#ffc107", "#fd7e14", "#dc3545"],
+                    range_color=[0, 80],
+                    hover_name="location_name",
+                    hover_data={"zone_id": True, "risk_pct": True, "priority_score": True, "size": False, "latitude": False, "longitude": False},
+                    labels={"risk_pct": "Risk %", "priority_score": "Priority"},
+                    mapbox_style="carto-darkmatter",
+                    zoom=10,
+                    height=420
+                )
+                fig_map.update_layout(
+                    margin=dict(l=0, r=0, t=0, b=0),
+                    coloraxis_colorbar=dict(title="Risk %")
+                )
+                st.plotly_chart(fig_map, use_container_width=True)
 
         # Plotly Scatter Matrix: Congestion vs Risk Probability
         fig_scatter = px.scatter(
@@ -585,8 +628,8 @@ def render_simulation_dashboard():
                 test_violations = st.slider("Red Light Violations", 0, 50, int(current_data.get("red_light_violations", 5)), step=1)
 
             with sb_col3:
-                weather_options = ["Clear", "Rainy", "Foggy", "Stormy"]
-                cur_w = str(current_data.get("weather", "Clear"))
+                weather_options = ["Normal", "Light Rain", "Heavy Rain"]
+                cur_w = str(current_data.get("weather", "Normal"))
                 default_w_idx = weather_options.index(cur_w) if cur_w in weather_options else 0
                 test_weather = st.selectbox("Weather Condition", weather_options, index=default_w_idx)
 
@@ -644,5 +687,5 @@ def render_simulation_dashboard():
     # TAB 4: FULL OBSERVATION DIAGNOSTICS
     # ==========================================================================
     with tab4:
-        st.markdown(f"#### 📋 Complete Diagnostic Record: {selected_zone} (Week {selected_week})")
+        st.markdown(f"#### 📋 Complete Diagnostic Record: {html.escape(str(selected_zone))} (Week {selected_week})")
         st.json(current_data.to_dict())

@@ -6,3 +6,25 @@ env/
 venv/
 .idea/
 .vscode/
+
+# Model artifacts (use Git LFS for large binaries)
+*.pkl
+*.pt
+*.onnx
+
+# Generated data files
+data/*.csv
+data/sessions/
+
+# Video files
+*.mp4
+*.avi
+*.mkv
+
+# Environment
+.env
+.env.*
+
+# OS artifacts
+.DS_Store
+Thumbs.db

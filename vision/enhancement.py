@@ -98,7 +98,6 @@ def enhance_low_light_clahe(
     l_enhanced = clahe.apply(l_channel)
 
     enhanced_lab = cv2.merge([l_enhanced, a_channel, b_channel])
-    enhanced_bgr = cv2.cvtColor(enhanced_lab, cv2.COLOR_BGR2LAB)
     return cv2.cvtColor(enhanced_lab, cv2.COLOR_LAB2BGR)
 
 

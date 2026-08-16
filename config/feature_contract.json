@@ -1,0 +1,93 @@
+{
+  "model_name": "RoadSense AI Traffic Incident Risk Model",
+  "model_version": "1.0",
+  "total_features": 40,
+  "categorical_features": [
+    {
+      "name": "zone_type",
+      "dtype": "string",
+      "source": "CONTEXT",
+      "required": true,
+      "live_available": true,
+      "demo_available": true,
+      "calibration_required": false,
+      "lookback_window": null,
+      "default_policy": "Use location_context.csv",
+      "valid_values": ["Residential", "Commercial_Downtown", "University_District", "Industrial_Corridor", "Highway_Junction", "Suburban_LowDensity"]
+    },
+    {
+      "name": "weather",
+      "dtype": "string",
+      "source": "CONTEXT",
+      "required": true,
+      "live_available": false,
+      "demo_available": true,
+      "calibration_required": false,
+      "lookback_window": null,
+      "default_policy": "Weather API or location_context.csv",
+      "valid_values": ["Normal", "Light Rain", "Heavy Rain"]
+    },
+    {
+      "name": "road_condition",
+      "dtype": "string",
+      "source": "CONTEXT",
+      "required": true,
+      "live_available": false,
+      "demo_available": true,
+      "calibration_required": false,
+      "lookback_window": null,
+      "default_policy": "Road survey data or location_context.csv",
+      "valid_values": ["Good", "Moderate", "Poor"]
+    }
+  ],
+  "numerical_features": [
+    {"name": "population_density", "dtype": "float", "unit": "persons/km²", "source": "CONTEXT", "required": true, "live_available": true, "demo_available": true, "calibration_required": false, "lookback_window": null, "default_policy": "Census/municipal data", "validation": {"min": 0, "max": 50000}},
+    {"name": "road_capacity", "dtype": "float", "unit": "index (0-100)", "source": "CONTEXT", "required": true, "live_available": true, "demo_available": true, "calibration_required": false, "lookback_window": null, "default_policy": "Infrastructure registry", "validation": {"min": 0, "max": 100}},
+    {"name": "effective_road_capacity", "dtype": "float", "unit": "index (0-100)", "source": "CONTEXT", "required": true, "live_available": true, "demo_available": true, "calibration_required": false, "lookback_window": null, "default_policy": "Computed from road_capacity + weather + events", "validation": {"min": 0, "max": 100}},
+    {"name": "vehicle_density", "dtype": "float", "unit": "vehicles/km²", "source": "CAMERA", "required": true, "live_available": true, "demo_available": true, "calibration_required": true, "lookback_window": null, "default_policy": "Camera vehicle_density_proxy with calibration", "validation": {"min": 0, "max": 500}},
+    {"name": "traffic_pressure", "dtype": "float", "unit": "ratio", "source": "CONTEXT", "required": true, "live_available": true, "demo_available": true, "calibration_required": false, "lookback_window": null, "default_policy": "vehicle_density / effective_road_capacity", "validation": {"min": 0, "max": 10}},
+    {"name": "congestion", "dtype": "float", "unit": "index (0-100)", "source": "CAMERA", "required": true, "live_available": true, "demo_available": true, "calibration_required": false, "lookback_window": null, "default_policy": "camera_congestion from vision pipeline", "validation": {"min": 0, "max": 100}},
+    {"name": "average_speed", "dtype": "float", "unit": "km/h", "source": "CAMERA", "required": true, "live_available": true, "demo_available": true, "calibration_required": true, "lookback_window": null, "default_policy": "Homography-calibrated speed", "validation": {"min": 0, "max": 200}},
+    {"name": "red_light_violations", "dtype": "int", "unit": "count", "source": "UNAVAILABLE", "required": true, "live_available": false, "demo_available": true, "calibration_required": false, "lookback_window": null, "default_policy": "Enforcement camera data — not available from CCTV", "validation": {"min": 0, "max": 100}},
+    {"name": "special_event", "dtype": "int", "unit": "binary (0/1)", "source": "CONTEXT", "required": true, "live_available": false, "demo_available": true, "calibration_required": false, "lookback_window": null, "default_policy": "Municipal event calendar", "validation": {"min": 0, "max": 1}},
+    {"name": "vehicle_population_ratio", "dtype": "float", "unit": "ratio", "source": "CONTEXT", "required": true, "live_available": true, "demo_available": true, "calibration_required": false, "lookback_window": null, "default_policy": "vehicle_density / (population_density / 1000)", "validation": {"min": 0, "max": 100}},
+
+    {"name": "previous_week_vehicle_density", "dtype": "float", "unit": "vehicles/km²", "source": "TEMPORAL", "required": true, "live_available": false, "demo_available": true, "calibration_required": false, "lookback_window": "1 week", "default_policy": "temporal_traffic_store.csv (>= 2 weeks)", "validation": {"min": 0, "max": 500}},
+    {"name": "previous_week_congestion", "dtype": "float", "unit": "index (0-100)", "source": "TEMPORAL", "required": true, "live_available": false, "demo_available": true, "calibration_required": false, "lookback_window": "1 week", "default_policy": "temporal_traffic_store.csv", "validation": {"min": 0, "max": 100}},
+    {"name": "previous_week_average_speed", "dtype": "float", "unit": "km/h", "source": "TEMPORAL", "required": true, "live_available": false, "demo_available": true, "calibration_required": false, "lookback_window": "1 week", "default_policy": "temporal_traffic_store.csv", "validation": {"min": 0, "max": 200}},
+    {"name": "previous_week_red_light_violations", "dtype": "int", "unit": "count", "source": "UNAVAILABLE", "required": true, "live_available": false, "demo_available": true, "calibration_required": false, "lookback_window": "1 week", "default_policy": "Enforcement data — not from CCTV", "validation": {"min": 0, "max": 100}},
+    {"name": "previous_week_incident_count", "dtype": "int", "unit": "count", "source": "UNAVAILABLE", "required": true, "live_available": false, "demo_available": true, "calibration_required": false, "lookback_window": "1 week", "default_policy": "Incident dispatch logs", "validation": {"min": 0, "max": 50}},
+    {"name": "previous_week_incident_occurred", "dtype": "int", "unit": "binary (0/1)", "source": "UNAVAILABLE", "required": true, "live_available": false, "demo_available": true, "calibration_required": false, "lookback_window": "1 week", "default_policy": "Incident dispatch logs", "validation": {"min": 0, "max": 1}},
+    {"name": "previous_week_traffic_pressure", "dtype": "float", "unit": "ratio", "source": "TEMPORAL", "required": true, "live_available": false, "demo_available": true, "calibration_required": false, "lookback_window": "1 week", "default_policy": "temporal_traffic_store.csv", "validation": {"min": 0, "max": 10}},
+
+    {"name": "rolling_4_week_avg_vehicle_density", "dtype": "float", "unit": "vehicles/km²", "source": "TEMPORAL", "required": true, "live_available": false, "demo_available": true, "calibration_required": false, "lookback_window": "4 weeks", "default_policy": "temporal_traffic_store.csv (>= 5 weeks)", "validation": {"min": 0, "max": 500}},
+    {"name": "rolling_4_week_avg_congestion", "dtype": "float", "unit": "index (0-100)", "source": "TEMPORAL", "required": true, "live_available": false, "demo_available": true, "calibration_required": false, "lookback_window": "4 weeks", "default_policy": "temporal_traffic_store.csv", "validation": {"min": 0, "max": 100}},
+    {"name": "rolling_4_week_avg_speed", "dtype": "float", "unit": "km/h", "source": "TEMPORAL", "required": true, "live_available": false, "demo_available": true, "calibration_required": false, "lookback_window": "4 weeks", "default_policy": "temporal_traffic_store.csv", "validation": {"min": 0, "max": 200}},
+    {"name": "rolling_4_week_avg_violations", "dtype": "float", "unit": "count", "source": "UNAVAILABLE", "required": true, "live_available": false, "demo_available": true, "calibration_required": false, "lookback_window": "4 weeks", "default_policy": "Enforcement data", "validation": {"min": 0, "max": 100}},
+    {"name": "rolling_4_week_incident_count", "dtype": "float", "unit": "count", "source": "UNAVAILABLE", "required": true, "live_available": false, "demo_available": true, "calibration_required": false, "lookback_window": "4 weeks", "default_policy": "Incident dispatch logs", "validation": {"min": 0, "max": 50}},
+    {"name": "rolling_4_week_incident_rate", "dtype": "float", "unit": "rate (0-1)", "source": "UNAVAILABLE", "required": true, "live_available": false, "demo_available": true, "calibration_required": false, "lookback_window": "4 weeks", "default_policy": "Incident dispatch logs", "validation": {"min": 0, "max": 1}},
+    {"name": "rolling_4_week_avg_traffic_pressure", "dtype": "float", "unit": "ratio", "source": "TEMPORAL", "required": true, "live_available": false, "demo_available": true, "calibration_required": false, "lookback_window": "4 weeks", "default_policy": "temporal_traffic_store.csv", "validation": {"min": 0, "max": 10}},
+
+    {"name": "vehicle_density_change", "dtype": "float", "unit": "delta", "source": "TEMPORAL", "required": true, "live_available": false, "demo_available": true, "calibration_required": false, "lookback_window": "1 week", "default_policy": "Computed: current - previous", "validation": {"min": -500, "max": 500}},
+    {"name": "congestion_change", "dtype": "float", "unit": "delta", "source": "TEMPORAL", "required": true, "live_available": false, "demo_available": true, "calibration_required": false, "lookback_window": "1 week", "default_policy": "Computed: current - previous", "validation": {"min": -100, "max": 100}},
+    {"name": "speed_change", "dtype": "float", "unit": "km/h delta", "source": "TEMPORAL", "required": true, "live_available": false, "demo_available": true, "calibration_required": false, "lookback_window": "1 week", "default_policy": "Computed: current - previous", "validation": {"min": -100, "max": 100}},
+    {"name": "violations_change", "dtype": "float", "unit": "delta", "source": "TEMPORAL", "required": true, "live_available": false, "demo_available": true, "calibration_required": false, "lookback_window": "1 week", "default_policy": "Computed: current - previous", "validation": {"min": -50, "max": 50}},
+    {"name": "traffic_pressure_change", "dtype": "float", "unit": "delta", "source": "TEMPORAL", "required": true, "live_available": false, "demo_available": true, "calibration_required": false, "lookback_window": "1 week", "default_policy": "Computed: current - previous", "validation": {"min": -10, "max": 10}},
+    {"name": "incident_count_change", "dtype": "float", "unit": "delta", "source": "UNAVAILABLE", "required": true, "live_available": false, "demo_available": true, "calibration_required": false, "lookback_window": "1 week", "default_policy": "Computed from incident logs", "validation": {"min": -50, "max": 50}},
+
+    {"name": "vehicle_density_pct_change", "dtype": "float", "unit": "percent", "source": "TEMPORAL", "required": true, "live_available": false, "demo_available": true, "calibration_required": false, "lookback_window": "1 week", "default_policy": "Computed: (current - previous) / previous * 100", "validation": {"min": -500, "max": 500}},
+    {"name": "congestion_pct_change", "dtype": "float", "unit": "percent", "source": "TEMPORAL", "required": true, "live_available": false, "demo_available": true, "calibration_required": false, "lookback_window": "1 week", "default_policy": "Computed", "validation": {"min": -500, "max": 500}},
+    {"name": "speed_pct_change", "dtype": "float", "unit": "percent", "source": "TEMPORAL", "required": true, "live_available": false, "demo_available": true, "calibration_required": false, "lookback_window": "1 week", "default_policy": "Computed", "validation": {"min": -500, "max": 500}},
+
+    {"name": "congestion_trend_4w", "dtype": "float", "unit": "slope", "source": "TEMPORAL", "required": true, "live_available": false, "demo_available": true, "calibration_required": false, "lookback_window": "4 weeks", "default_policy": "OLS slope over weeks t-4 to t-1", "validation": {"min": -50, "max": 50}},
+    {"name": "vehicle_density_trend_4w", "dtype": "float", "unit": "slope", "source": "TEMPORAL", "required": true, "live_available": false, "demo_available": true, "calibration_required": false, "lookback_window": "4 weeks", "default_policy": "OLS slope over weeks t-4 to t-1", "validation": {"min": -50, "max": 50}},
+    {"name": "speed_trend_4w", "dtype": "float", "unit": "slope", "source": "TEMPORAL", "required": true, "live_available": false, "demo_available": true, "calibration_required": false, "lookback_window": "4 weeks", "default_policy": "OLS slope over weeks t-4 to t-1", "validation": {"min": -50, "max": 50}},
+    {"name": "incident_trend_4w", "dtype": "float", "unit": "slope", "source": "UNAVAILABLE", "required": true, "live_available": false, "demo_available": true, "calibration_required": false, "lookback_window": "4 weeks", "default_policy": "OLS slope from incident logs", "validation": {"min": -50, "max": 50}}
+  ],
+  "feature_source_summary": {
+    "CAMERA": 3,
+    "CONTEXT": 10,
+    "TEMPORAL": 16,
+    "UNAVAILABLE": 11
+  }
+}

@@ -3,6 +3,7 @@ import sys
 import json
 import argparse
 from datetime import datetime, timezone
+from typing import List
 import cv2
 import pandas as pd
 import numpy as np
