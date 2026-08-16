@@ -25,7 +25,16 @@ DEFAULT_VIDEO_PATH = "videos/traffic.mp4"
 DEFAULT_METRICS_OUTPUT = "data/vision_traffic_metrics.csv"
 DEFAULT_TRAJECTORY_OUTPUT = "data/vehicle_trajectories.csv"
 
-DEFAULT_MODEL_NAME = "yolo11n.pt"
+DEFAULT_MODEL_NAME = "yolo11s.pt"
+
+# Class-specific confidence thresholds for precision filtering
+CLASS_CONF_THRESHOLDS = {
+    "motorcycle": 0.13,
+    "auto_rickshaw": 0.16,
+    "car": 0.18,
+    "bus": 0.25,
+    "truck": 0.38
+}
 
 # Unified vehicle mapping for COCO, IISc UVH-26, and Indian Traffic classes
 def resolve_vehicle_class(class_id: int, model_names: dict, include_riders: bool = True) -> str:
@@ -235,6 +244,10 @@ def process_video(
             processed_frame,
             persist=True,
             tracker="bytetrack.yaml",
+            conf=0.13,
+            imgsz=960,
+            agnostic_nms=True,
+            iou=0.48,
             verbose=False
         )
 
@@ -260,14 +273,35 @@ def process_video(
             boxes = result.boxes
             for i in range(len(boxes)):
                 class_id = int(boxes.cls[i].item())
-                vtype = resolve_vehicle_class(class_id, model.names)
+                conf_val = float(boxes.conf[i].item()) if boxes.conf is not None else 0.5
+                xyxy = boxes.xyxy[i].cpu().numpy().astype(int)
+                x1, y1, x2, y2 = xyxy
+
+                # Roadway Horizon Filter: Ignore non-road objects above the road plane (e.g. overhead billboards/gantries)
+                if y2 < int(frame_height * 0.14):
+                    continue
+
+                vtype = resolve_vehicle_class(class_id, model.names, include_riders=True)
                 if not vtype:
                     continue
+
+                # Apply class-specific confidence filtering
+                min_conf = CLASS_CONF_THRESHOLDS.get(vtype, 0.18)
+                if conf_val < min_conf:
+                    if vtype == "truck" and conf_val >= CLASS_CONF_THRESHOLDS["car"]:
+                        vtype = "car"
+                    else:
+                        continue
+
+                # Geometric check: Reclassify small false-positive trucks to cars
+                bbox_w = x2 - x1
+                bbox_h = y2 - y1
+                if vtype == "truck" and (bbox_w * bbox_h) < (frame_width * frame_height * 0.015) and conf_val < 0.55:
+                    vtype = "car"
 
                 counts[vtype] = counts.get(vtype, 0) + 1
                 total_vehicles += 1
 
-                xyxy = boxes.xyxy[i].cpu().numpy().astype(int)
                 valid_boxes.append(xyxy)
                 valid_classes.append(vtype)
 
