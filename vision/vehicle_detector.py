@@ -25,40 +25,28 @@ DEFAULT_VIDEO_PATH = "videos/traffic.mp4"
 DEFAULT_METRICS_OUTPUT = "data/vision_traffic_metrics.csv"
 DEFAULT_TRAJECTORY_OUTPUT = "data/vehicle_trajectories.csv"
 
-DEFAULT_MODEL_NAME = "models/iisc_yolov11s_indian_traffic.pt" if os.path.exists("models/iisc_yolov11s_indian_traffic.pt") else "yolo11s.pt"
+DEFAULT_MODEL_NAME = "yolo11s.pt"
 
-# Class-specific confidence thresholds for precision filtering
-CLASS_CONF_THRESHOLDS = {
-    "motorcycle": 0.15,
-    "auto_rickshaw": 0.18,
-    "car": 0.20,
-    "bus": 0.25,
-    "truck": 0.35
-}
-
-# Unified vehicle mapping for COCO, IISc UVH-26, and Indian Traffic classes
-def resolve_vehicle_class(class_id: int, model_names: dict, include_riders: bool = True) -> str:
+# Universal vehicle mapping across standard YOLO models and custom datasets
+def resolve_vehicle_class(class_id: int, model_names: dict) -> Optional[str]:
     """
-    Dynamically maps class ID to standard vehicle categories.
-    Supports COCO (cars, bikes, riders, buses, trucks) and IISc UVH-26 Indian traffic classes (auto-rickshaws, tempos, etc.).
+    Universal vehicle category resolver supporting standard COCO and custom models.
     """
     raw = str(model_names.get(class_id, "")).lower()
     
-    if any(k in raw for k in ["auto", "rickshaw", "tuk", "3-wheeler", "three-wheeler", "three_wheeler", "e_rickshaw"]):
+    if any(k in raw for k in ["auto", "rickshaw", "tuk", "three-wheeler", "three_wheeler"]):
         return "auto_rickshaw"
-    elif any(k in raw for k in ["motorcycle", "bike", "bicycle", "two-wheeler", "two_wheeler", "2-wheeler", "scooter"]):
+    elif any(k in raw for k in ["motorcycle", "bike", "bicycle", "two-wheeler", "two_wheeler", "scooter"]):
         return "motorcycle"
-    elif include_riders and any(k in raw for k in ["person", "rider"]):
-        return "motorcycle"  # In CCTV traffic lanes, persons detected on roadway are riders on two-wheelers
-    elif any(k in raw for k in ["bus", "mini-bus", "mini_bus", "van"]):
+    elif any(k in raw for k in ["bus", "mini-bus", "mini_bus"]):
         return "bus"
-    elif any(k in raw for k in ["truck", "lcv", "tempo", "tempo-traveller", "tempo_traveller", "lorry", "container", "tractor"]):
+    elif any(k in raw for k in ["truck", "lcv", "tempo", "lorry", "container", "tractor"]):
         return "truck"
-    elif any(k in raw for k in ["car", "hatchback", "sedan", "suv", "muv", "taxi", "jeep"]):
+    elif any(k in raw for k in ["car", "hatchback", "sedan", "suv", "van", "taxi", "jeep"]):
         return "car"
     
-    # Fallback to COCO default IDs if names missing
-    coco_map = {0: "motorcycle", 1: "motorcycle", 2: "car", 3: "motorcycle", 5: "bus", 7: "truck"}
+    # Standard COCO fallback (1: bicycle, 2: car, 3: motorcycle, 5: bus, 7: truck)
+    coco_map = {1: "motorcycle", 2: "car", 3: "motorcycle", 5: "bus", 7: "truck"}
     return coco_map.get(class_id, None)
 
 
@@ -313,16 +301,14 @@ def process_video(
         lighting_conditions_observed.add(light_audit["lighting_condition"])
 
         # ----------------------------------------------------
-        # 2. YOLO tracking (persist=True maintains IDs within this video)
+        # 2. YOLO tracking with standard universal parameters
         # ----------------------------------------------------
         results = model.track(
             processed_frame,
             persist=True,
             tracker="bytetrack.yaml",
-            conf=0.13,
-            imgsz=960,
-            agnostic_nms=True,
-            iou=0.48,
+            conf=0.35,
+            imgsz=640,
             verbose=False
         )
 
@@ -340,55 +326,27 @@ def process_video(
         # ----------------------------------------------------
         # 3. Process detections & compute occlusion overlap
         # ----------------------------------------------------
-        cand_boxes = []
-        cand_classes = []
-        cand_confs = []
-        cand_ids = []
+        valid_boxes = []
+        valid_classes = []
+        valid_track_ids = []
 
         if result.boxes is not None:
             boxes = result.boxes
             for i in range(len(boxes)):
                 class_id = int(boxes.cls[i].item())
-                conf_val = float(boxes.conf[i].item()) if boxes.conf is not None else 0.5
-                xyxy = boxes.xyxy[i].cpu().numpy().astype(int)
-                x1, y1, x2, y2 = xyxy
-
-                # Roadway Horizon Filter: Ignore non-road objects above road plane (sky, billboards, gantries)
-                if y2 < int(frame_height * 0.22):
-                    continue
-
-                vtype = resolve_vehicle_class(class_id, model.names, include_riders=True)
+                vtype = resolve_vehicle_class(class_id, model.names)
                 if not vtype:
                     continue
 
-                # Apply class-specific confidence filtering
-                min_conf = CLASS_CONF_THRESHOLDS.get(vtype, 0.18)
-                if conf_val < min_conf:
-                    if vtype == "truck" and conf_val >= CLASS_CONF_THRESHOLDS["car"]:
-                        vtype = "car"
-                    else:
-                        continue
+                xyxy = boxes.xyxy[i].cpu().numpy().astype(int)
+                counts[vtype] = counts.get(vtype, 0) + 1
+                total_vehicles += 1
 
-                # Geometric check: Reclassify small false-positive trucks to cars
-                bbox_w = x2 - x1
-                bbox_h = y2 - y1
-                if vtype == "truck" and (bbox_w * bbox_h) < (frame_width * frame_height * 0.015) and conf_val < 0.55:
-                    vtype = "car"
+                valid_boxes.append(xyxy)
+                valid_classes.append(vtype)
 
-                cand_boxes.append(xyxy)
-                cand_classes.append(vtype)
-                cand_confs.append(conf_val)
                 track_id = int(boxes.id[i].item()) if boxes.id is not None else None
-                cand_ids.append(track_id)
-
-        # Fuse driver + pillion passengers riding the same motorcycle
-        valid_boxes, valid_classes, valid_confs, valid_track_ids = fuse_driver_pillion_riders(
-            cand_boxes, cand_classes, cand_confs, cand_ids
-        )
-
-        for vtype in valid_classes:
-            counts[vtype] = counts.get(vtype, 0) + 1
-            total_vehicles += 1
+                valid_track_ids.append(track_id)
 
         # Compute occlusion flags for all vehicles in this frame
         occlusion_flags = compute_occlusion_flags(valid_boxes, threshold=0.15) if valid_boxes else []
