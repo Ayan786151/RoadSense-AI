@@ -3,7 +3,7 @@ import sys
 import json
 import argparse
 from datetime import datetime, timezone
-from typing import List
+from typing import List, Tuple, Optional, Dict, Any
 import cv2
 import pandas as pd
 import numpy as np
@@ -60,6 +60,81 @@ def resolve_vehicle_class(class_id: int, model_names: dict, include_riders: bool
     # Fallback to COCO default IDs if names missing
     coco_map = {0: "motorcycle", 1: "motorcycle", 2: "car", 3: "motorcycle", 5: "bus", 7: "truck"}
     return coco_map.get(class_id, None)
+
+
+# ============================================================
+# DRIVER + PILLION RIDER FUSION
+# ============================================================
+
+def fuse_driver_pillion_riders(
+    candidate_boxes: List[np.ndarray],
+    candidate_classes: List[str],
+    candidate_confs: List[float],
+    candidate_ids: List[Optional[int]]
+) -> Tuple[List[np.ndarray], List[str], List[float], List[Optional[int]]]:
+    """
+    Fuses vertically stacked driver + pillion passenger bounding boxes into a single unified motorcycle unit.
+    Prevents counting two bikes when two people are riding the same physical motorcycle.
+    """
+    tw_indices = [i for i, c in enumerate(candidate_classes) if c == "motorcycle"]
+    other_indices = [i for i, c in enumerate(candidate_classes) if c != "motorcycle"]
+    
+    if len(tw_indices) <= 1:
+        return candidate_boxes, candidate_classes, candidate_confs, candidate_ids
+
+    merged_tw_boxes = []
+    merged_tw_confs = []
+    merged_tw_ids = []
+    used = [False] * len(tw_indices)
+
+    for i, idx1 in enumerate(tw_indices):
+        if used[i]:
+            continue
+        b1 = candidate_boxes[idx1]
+        union_box = list(b1)
+        max_conf = candidate_confs[idx1]
+        best_id = candidate_ids[idx1]
+        used[i] = True
+
+        w1 = b1[2] - b1[0]
+        h1 = b1[3] - b1[1]
+        cx1 = (b1[0] + b1[2]) / 2.0
+
+        for j in range(i + 1, len(tw_indices)):
+            if used[j]:
+                continue
+            idx2 = tw_indices[j]
+            b2 = candidate_boxes[idx2]
+            w2 = b2[2] - b2[0]
+            h2 = b2[3] - b2[1]
+            cx2 = (b2[0] + b2[2]) / 2.0
+
+            x_dist = abs(cx1 - cx2)
+            y_gap = max(0, max(b1[1], b2[1]) - min(b1[3], b2[3]))
+
+            # Driver and pillion are in the same lane and vertically stacked
+            if x_dist < max(w1, w2) * 0.75 and y_gap < max(h1, h2) * 0.60:
+                union_box = [
+                    min(union_box[0], b2[0]),
+                    min(union_box[1], b2[1]),
+                    max(union_box[2], b2[2]),
+                    max(union_box[3], b2[3])
+                ]
+                max_conf = max(max_conf, candidate_confs[idx2])
+                if best_id is None and candidate_ids[idx2] is not None:
+                    best_id = candidate_ids[idx2]
+                used[j] = True
+
+        merged_tw_boxes.append(np.array(union_box, dtype=int))
+        merged_tw_confs.append(max_conf)
+        merged_tw_ids.append(best_id)
+
+    final_boxes = [candidate_boxes[i] for i in other_indices] + merged_tw_boxes
+    final_classes = [candidate_classes[i] for i in other_indices] + ["motorcycle"] * len(merged_tw_boxes)
+    final_confs = [candidate_confs[i] for i in other_indices] + merged_tw_confs
+    final_ids = [candidate_ids[i] for i in other_indices] + merged_tw_ids
+
+    return final_boxes, final_classes, final_confs, final_ids
 
 
 # ============================================================
@@ -265,9 +340,10 @@ def process_video(
         # ----------------------------------------------------
         # 3. Process detections & compute occlusion overlap
         # ----------------------------------------------------
-        valid_boxes = []
-        valid_classes = []
-        valid_track_ids = []
+        cand_boxes = []
+        cand_classes = []
+        cand_confs = []
+        cand_ids = []
 
         if result.boxes is not None:
             boxes = result.boxes
@@ -277,8 +353,8 @@ def process_video(
                 xyxy = boxes.xyxy[i].cpu().numpy().astype(int)
                 x1, y1, x2, y2 = xyxy
 
-                # Roadway Horizon Filter: Ignore non-road objects above the road plane (e.g. overhead billboards/gantries)
-                if y2 < int(frame_height * 0.14):
+                # Roadway Horizon Filter: Ignore non-road objects above road plane (sky, billboards, gantries)
+                if y2 < int(frame_height * 0.22):
                     continue
 
                 vtype = resolve_vehicle_class(class_id, model.names, include_riders=True)
@@ -299,14 +375,20 @@ def process_video(
                 if vtype == "truck" and (bbox_w * bbox_h) < (frame_width * frame_height * 0.015) and conf_val < 0.55:
                     vtype = "car"
 
-                counts[vtype] = counts.get(vtype, 0) + 1
-                total_vehicles += 1
-
-                valid_boxes.append(xyxy)
-                valid_classes.append(vtype)
-
+                cand_boxes.append(xyxy)
+                cand_classes.append(vtype)
+                cand_confs.append(conf_val)
                 track_id = int(boxes.id[i].item()) if boxes.id is not None else None
-                valid_track_ids.append(track_id)
+                cand_ids.append(track_id)
+
+        # Fuse driver + pillion passengers riding the same motorcycle
+        valid_boxes, valid_classes, valid_confs, valid_track_ids = fuse_driver_pillion_riders(
+            cand_boxes, cand_classes, cand_confs, cand_ids
+        )
+
+        for vtype in valid_classes:
+            counts[vtype] = counts.get(vtype, 0) + 1
+            total_vehicles += 1
 
         # Compute occlusion flags for all vehicles in this frame
         occlusion_flags = compute_occlusion_flags(valid_boxes, threshold=0.15) if valid_boxes else []
