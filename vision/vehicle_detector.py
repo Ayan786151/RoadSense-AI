@@ -25,15 +25,15 @@ DEFAULT_VIDEO_PATH = "videos/traffic.mp4"
 DEFAULT_METRICS_OUTPUT = "data/vision_traffic_metrics.csv"
 DEFAULT_TRAJECTORY_OUTPUT = "data/vehicle_trajectories.csv"
 
-DEFAULT_MODEL_NAME = "yolo11s.pt"
+DEFAULT_MODEL_NAME = "models/iisc_yolov11s_indian_traffic.pt" if os.path.exists("models/iisc_yolov11s_indian_traffic.pt") else "yolo11s.pt"
 
 # Class-specific confidence thresholds for precision filtering
 CLASS_CONF_THRESHOLDS = {
-    "motorcycle": 0.13,
-    "auto_rickshaw": 0.16,
-    "car": 0.18,
+    "motorcycle": 0.15,
+    "auto_rickshaw": 0.18,
+    "car": 0.20,
     "bus": 0.25,
-    "truck": 0.38
+    "truck": 0.35
 }
 
 # Unified vehicle mapping for COCO, IISc UVH-26, and Indian Traffic classes
@@ -44,17 +44,17 @@ def resolve_vehicle_class(class_id: int, model_names: dict, include_riders: bool
     """
     raw = str(model_names.get(class_id, "")).lower()
     
-    if any(k in raw for k in ["auto", "rickshaw", "tuk", "3-wheeler", "three_wheeler"]):
+    if any(k in raw for k in ["auto", "rickshaw", "tuk", "3-wheeler", "three-wheeler", "three_wheeler", "e_rickshaw"]):
         return "auto_rickshaw"
-    elif any(k in raw for k in ["motorcycle", "bike", "bicycle", "two_wheeler", "2-wheeler", "scooter"]):
+    elif any(k in raw for k in ["motorcycle", "bike", "bicycle", "two-wheeler", "two_wheeler", "2-wheeler", "scooter"]):
         return "motorcycle"
     elif include_riders and any(k in raw for k in ["person", "rider"]):
         return "motorcycle"  # In CCTV traffic lanes, persons detected on roadway are riders on two-wheelers
-    elif any(k in raw for k in ["bus", "mini_bus", "van"]):
+    elif any(k in raw for k in ["bus", "mini-bus", "mini_bus", "van"]):
         return "bus"
-    elif any(k in raw for k in ["truck", "lcv", "tempo", "lorry", "container", "tractor"]):
+    elif any(k in raw for k in ["truck", "lcv", "tempo", "tempo-traveller", "tempo_traveller", "lorry", "container", "tractor"]):
         return "truck"
-    elif any(k in raw for k in ["car", "sedan", "suv", "taxi", "jeep"]):
+    elif any(k in raw for k in ["car", "hatchback", "sedan", "suv", "muv", "taxi", "jeep"]):
         return "car"
     
     # Fallback to COCO default IDs if names missing

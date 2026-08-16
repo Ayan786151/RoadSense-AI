@@ -81,12 +81,17 @@ def render_vision_studio():
             selected_video = st.selectbox("Select Input Traffic Video", vid_options, index=0)
             
             model_choices = [
-                "yolo11s.pt (Recommended — High Precision)",
-                "yolo11n.pt (Ultra-Fast Lightweight)",
-                "iisc-aim/UVH-26 (Indian Traffic Weights)"
+                "models/iisc_yolov11s_indian_traffic.pt (Official IISc AIM Indian Traffic)",
+                "yolo11s.pt (Standard YOLOv11-S)",
+                "yolo11n.pt (Ultra-Fast Lightweight)"
             ]
             selected_model_str = st.selectbox("Detection Model Weights", model_choices, index=0)
-            model_target = "yolo11n.pt" if "yolo11n" in selected_model_str else "yolo11s.pt"
+            if "iisc_yolov11s" in selected_model_str:
+                model_target = "models/iisc_yolov11s_indian_traffic.pt"
+            elif "yolo11n" in selected_model_str:
+                model_target = "yolo11n.pt"
+            else:
+                model_target = "yolo11s.pt"
 
             preview_size = st.select_slider("Live Video Display Size", options=["Compact (540px)", "Standard (720px)", "Full Width"], value="Standard (720px)")
 
