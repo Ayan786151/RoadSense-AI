@@ -26,11 +26,18 @@ CITY_LON_CENTER = 77.5946
 
 
 def generate_zone_coordinates(num_zones: int = 50) -> pd.DataFrame:
-    """Generates synthetic geospatial coordinate grid for 50 municipal zones."""
+    """Generates or loads geospatial coordinate grid for municipal zones."""
+    loc_file = Path("data/location_mapping.csv")
+    if loc_file.exists():
+        loc_df = pd.read_csv(loc_file)
+        loc_df["zone_id"] = loc_df["zone_id"].astype(str)
+        loc_df["zone_name"] = loc_df["zone_id"] + ": " + loc_df["location_name"] + " (" + loc_df["city"] + ")"
+        return loc_df[["zone_id", "latitude", "longitude", "zone_name"]]
+
     np.random.seed(42)
     zones = []
     
-    # Ring clusters: Central CBD, Tech Corridors, Residential Hubs, Outer Ring
+    # Fallback synthetic grid
     for z in range(1, num_zones + 1):
         radius = np.random.uniform(0.01, 0.12)
         angle = np.random.uniform(0, 2 * np.pi)
@@ -38,7 +45,7 @@ def generate_zone_coordinates(num_zones: int = 50) -> pd.DataFrame:
         lon = CITY_LON_CENTER + radius * np.cos(angle)
         
         zones.append({
-            "zone_id": z,
+            "zone_id": f"Zone_{z:02d}",
             "latitude": round(lat, 5),
             "longitude": round(lon, 5),
             "zone_name": f"Zone {z:02d} ({'CBD Sector' if radius < 0.04 else ('Ring Highway' if radius > 0.08 else 'Metro Corridor')})"
@@ -75,8 +82,17 @@ def render_city_command_map():
         metric_choice = st.selectbox("Heatmap Metric", ["Congestion Score", "Vehicle Density", "Predicted Risk Score"])
 
     week_data = df_sim[df_sim["week"] == sel_week].copy()
+    week_data["zone_id"] = week_data["zone_id"].astype(str)
+
     coords_df = generate_zone_coordinates(len(week_data))
-    merged = pd.merge(week_data, coords_df, on="zone_id")
+    coords_df["zone_id"] = coords_df["zone_id"].astype(str)
+
+    # Clean merge with deduplicated columns
+    cols_to_drop = [c for c in ["latitude", "longitude", "zone_name"] if c in week_data.columns]
+    if cols_to_drop:
+        week_data = week_data.drop(columns=cols_to_drop)
+
+    merged = pd.merge(week_data, coords_df, on="zone_id", how="left")
 
     # Map metric to column
     col_map = {
