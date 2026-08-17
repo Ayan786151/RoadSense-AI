@@ -1,10 +1,10 @@
 """
 ================================================================================
-ROAD SENSE AI - INTERACTIVE VISION STUDIO & VIOLATION ENFORCEMENT HUB
+ROAD SENSE AI - INTERACTIVE VISION STUDIO & REAL-TIME VIOLATION HUB
 ================================================================================
-Allows running live vehicle detection, no-helmet violation tracking, red-light
-breaking detection, CLAHE night preprocessor, perspective speed telemetry,
-and IISc / custom model training pipelines directly from the browser UI.
+Allows running ultra-fast real-time vehicle tracking, continuous 24/7 video looping,
+webcam streaming, no-helmet violation tracking, red-light breaking enforcement,
+triple-riding detection, adaptive lighting, and instant legal E-Challan generation.
 ================================================================================
 """
 
@@ -58,130 +58,125 @@ CLASS_DISPLAY_LABELS = {
 
 
 def resolve_youtube_stream_url(url: str):
-    """Extracts direct streamable URL and metadata from a YouTube video or live stream."""
-    if not yt_dlp:
-        raise RuntimeError("yt-dlp package is not installed. Please run 'pip install yt-dlp'.")
+    """Resolves direct stream URL using yt-dlp."""
+    if yt_dlp is None:
+        raise RuntimeError("yt-dlp package is not installed. Install with: pip install yt-dlp")
     ydl_opts = {
         'format': 'best[ext=mp4][height<=720]/best[height<=720]/best',
         'quiet': True,
-        'no_warnings': True,
-        'extractor_args': {
-            'youtube': {
-                'player_client': ['android', 'ios', 'mweb', 'web_embedded']
-            }
-        }
+        'no_warnings': True
     }
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
         info = ydl.extract_info(url, download=False)
         stream_url = info.get('url')
-        title = info.get('title', 'YouTube Stream')
         is_live = info.get('is_live', False)
+        title = info.get('title', 'YouTube Live Stream')
         return stream_url, title, is_live
 
 
-def download_youtube_clip(url: str, output_path: str, max_duration_sec: int = 30):
-    """Downloads a short preview clip from YouTube for offline local showcase."""
-    if not yt_dlp:
-        raise RuntimeError("yt-dlp package is not installed.")
-    ydl_opts = {
-        'format': 'best[ext=mp4][height<=720]/best[height<=720]/best',
-        'outtmpl': output_path,
-        'quiet': True,
-        'no_warnings': True,
-        'extractor_args': {
-            'youtube': {
-                'player_client': ['android', 'ios', 'mweb', 'web_embedded']
-            }
-        },
-        'download_ranges': lambda info_dict, ydl: [{'start_time': 0, 'end_time': max_duration_sec}]
-    }
-    with yt_dlp.YoutubeDL(ydl_opts) as ydl:
-        ydl.download([url])
-
-
 def render_vision_studio():
-    """Renders the Interactive Vision Studio, Violation Enforcement & Model Hub."""
+    """Renders the Interactive Vision Studio, Real-Time Violation Enforcement & Model Hub."""
     st.markdown("""
     <div style="background: linear-gradient(90deg, #1f1c2c, #928DAB); padding: 22px 28px; border-radius: 12px; margin-bottom: 24px; color: white;">
         <h2 style="margin: 0; font-weight: 700; display: flex; align-items: center; gap: 12px;">
-            🚀 Interactive Computer Vision Studio & AI Violation Hub
+            🚀 Real-Time Vision Studio & AI Violation Enforcement Hub
         </h2>
         <p style="margin: 6px 0 0 0; opacity: 0.9; font-size: 14px;">
-            Run live video detection with <b>No-Helmet Tracking</b>, <b>Red-Light Breaking Enforcement</b>, adaptive lighting, and train specialized safety models.
+            Continuous <b>Real-Time 30-60+ FPS Video Tracking</b>, <b>No-Helmet Detection</b>, <b>Red-Light Breaking</b>, <b>Triple-Riding AI</b>, and <b>Automated E-Challan Dispatch</b>.
         </p>
     </div>
     """, unsafe_allow_html=True)
 
     tab_runner, tab_violations, tab_uvh26 = st.tabs([
-        "🎬 Run Live Video & Violation Detector",
+        "🎬 Real-Time Live Detection & Enforcement",
         "🪖 Violation Enforcement & Model Trainer",
         "🇮🇳 IISc Indian Traffic Benchmark Hub"
     ])
 
     # ==========================================================================
-    # TAB 1: RUN LIVE VIDEO & VIOLATION DETECTOR
+    # TAB 1: RUN REAL-TIME LIVE VIDEO & VIOLATION DETECTOR
     # ==========================================================================
     with tab_runner:
-        st.markdown("#### 📹 Real-Time CCTV Video Processor with Multi-Violation Tracking")
-        st.caption("Select traffic footage or paste a live YouTube stream, configure violation enforcement rules, and process video frames live.")
+        st.markdown("#### 📹 Real-Time Continuous CCTV & Camera Processor")
+        st.caption("Processes live video streams continuously at full real-time speed until stopped manually.")
 
         media_source = st.radio(
-            "Media Input Source",
-            ["📁 Local Video Footage (videos/*.mp4)", "🔴 YouTube Live Stream / Video URL"],
+            "Select Video Feed Source",
+            [
+                "📁 Local Video Footage (Looping 24/7)",
+                "📷 Live Laptop / USB Webcam (Camera 0)",
+                "🔴 YouTube Live Stream / Video URL"
+            ],
             horizontal=True
         )
 
         col1, col2 = st.columns([1, 1])
 
         yt_stream_url = None
-        is_yt_source = (media_source == "🔴 YouTube Live Stream / Video URL")
+        is_yt_source = ("YouTube" in media_source)
+        is_webcam = ("Webcam" in media_source)
 
         with col1:
-            if not is_yt_source:
+            if is_webcam:
+                selected_video = 0
+                st.info("📷 Connected to Primary Webcam (Device Index: 0)")
+            elif not is_yt_source:
                 existing_videos = glob.glob("videos/*.mp4") + glob.glob("videos/*.avi")
                 vid_options = existing_videos if existing_videos else ["videos/traffic.mp4"]
-                selected_video = st.selectbox("Select Input Traffic Video", vid_options, index=0)
+                selected_video = st.selectbox("Select Traffic Video", vid_options, index=0)
             else:
                 yt_input_url = st.text_input(
                     "YouTube Video / Live Stream URL",
                     value="https://www.youtube.com/watch?v=1H0iTzv2jiQ",
-                    help="Paste any YouTube video or live traffic webcam stream URL."
+                    help="Paste any public YouTube traffic video or live CCTV stream URL."
                 )
                 selected_video = yt_input_url
-                
-                cache_col1, cache_col2 = st.columns([1, 1])
-                with cache_col1:
-                    yt_max_frames = st.slider("Live Stream Process Cap (Frames)", 50, 1500, 300, step=50, help="Caps frames for live streams to build observation metrics.")
-                with cache_col2:
-                    if st.button("⬇️ Cache 30s Sample to videos/"):
-                        with st.spinner("Downloading 30s sample clip for offline showcase..."):
-                            try:
-                                cache_file = "videos/yt_cached_sample.mp4"
-                                download_youtube_clip(yt_input_url, cache_file, max_duration_sec=30)
-                                st.success(f"Saved to `{cache_file}`! You can now select it in Local Videos.")
-                            except Exception as dl_err:
-                                st.error(f"Failed to cache YouTube clip: {dl_err}")
-            
+
             model_choices = [
-                "yolo11s.pt (Universal Traffic Model — High Precision)",
-                "yolo11n.pt (Ultra-Fast 60+ FPS)",
-                "models/iisc_yolov11s_indian_traffic.pt (IISc Bangalore SafeCity Weights)"
+                "yolo11n.pt (Ultra-Fast 60+ FPS Real-Time — Recommended)",
+                "models/helmet_yolo.pt (Fine-Tuned Helmet & Rider AI)",
+                "models/iisc_yolov11s_indian_traffic.pt (IISc Bangalore SafeCity Weights)",
+                "yolo11s.pt (Universal Traffic Model — High Precision)"
             ]
             selected_model_str = st.selectbox("Detection Model Weights", model_choices, index=0)
-            if "iisc_yolov11s" in selected_model_str:
+            if "helmet_yolo" in selected_model_str:
+                model_target = "models/helmet_yolo.pt"
+            elif "iisc_yolov11s" in selected_model_str:
                 model_target = "models/iisc_yolov11s_indian_traffic.pt"
             elif "yolo11n" in selected_model_str:
                 model_target = "yolo11n.pt"
             else:
                 model_target = "yolo11s.pt"
 
-            preview_size = st.select_slider("Live Video Display Size", options=["Compact (540px)", "Standard (720px)", "Full Width"], value="Standard (720px)")
+            preview_size = st.select_slider("Live Display Size", options=["Compact (540px)", "Standard (720px)", "Full Width"], value="Standard (720px)")
 
         with col2:
             new_session_name = st.text_input("Output Session ID", value=f"session_{int(time.time()) % 1000:03d}")
-            conf_thresh = st.slider("Detection Confidence Threshold", 0.20, 0.65, 0.35, step=0.05)
-            frame_skip = st.slider("Process Every Nth Frame (Speed Multiplier)", 1, 15, 5)
+            
+            speed_preset = st.selectbox(
+                "🏎️ Real-Time Performance Preset",
+                [
+                    "⚡ Ultra-Fast 60+ FPS (Optimized 480p, Frame Skip 1)",
+                    "🚀 Balanced Real-Time (Full FPS, Skip 2)",
+                    "🎯 High-Precision Mode (640p)"
+                ],
+                index=0
+            )
+
+            conf_thresh = st.slider("Detection Confidence Threshold", 0.20, 0.65, 0.30, step=0.05)
+            continuous_loop = st.checkbox("🔄 Continuous 24/7 Stream (Keep detecting indefinitely until stopped)", value=True)
             enable_night = st.checkbox("🌙 Force Adaptive CLAHE Night Enhancement", value=False)
+
+        # Performance hyperparameters based on preset
+        if "60+ FPS" in speed_preset:
+            target_imgsz = 480
+            frame_skip = 1
+        elif "Balanced" in speed_preset:
+            target_imgsz = 480
+            frame_skip = 2
+        else:
+            target_imgsz = 640
+            frame_skip = 1
 
         st.markdown("##### 🚨 Active AI Violation Enforcement Modules:")
         v_col1, v_col2, v_col3, v_col4 = st.columns(4)
@@ -196,51 +191,49 @@ def render_vision_studio():
 
         st.markdown("---")
 
-        run_btn = st.button("▶️ Start Live Detection & Violation Enforcement", type="primary", use_container_width=True)
+        run_col1, run_col2 = st.columns([3, 1])
+        start_btn = run_col1.button("▶️ Start Live Real-Time Detection & Enforcement", type="primary", use_container_width=True)
+        stop_btn = run_col2.button("🛑 Stop Live Stream", use_container_width=True)
 
-        # Container for live preview
+        # Container for live preview & telemetry
         st.markdown("<br>", unsafe_allow_html=True)
-        progress_bar = st.empty()
-        status_text = st.empty()
+        live_hud_metric = st.empty()
         preview_container = st.empty()
 
-        if run_btn:
+        if start_btn:
             stream_source = selected_video
             can_proceed = True
 
             if is_yt_source:
-                status_text.info(f"⏳ Resolving YouTube stream URL for `{selected_video}`...")
+                live_hud_metric.info(f"⏳ Resolving YouTube live stream URL for `{selected_video}`...")
                 try:
                     yt_stream_url, yt_title, yt_is_live = resolve_youtube_stream_url(selected_video)
                     stream_source = yt_stream_url
                     st.toast(f"Connected to YouTube: {yt_title}", icon="🔴")
                 except Exception as yt_err:
-                    status_text.empty()
-                    st.error(f"❌ YouTube Stream Error: {yt_err}\n\nPlease check the URL or ensure the stream is publicly accessible.")
+                    live_hud_metric.empty()
+                    st.error(f"❌ YouTube Stream Error: {yt_err}")
                     can_proceed = False
-            elif not os.path.exists(selected_video):
-                st.error(f"Selected video not found: {selected_video}")
+            elif not is_webcam and not os.path.exists(selected_video):
+                st.error(f"Selected video file not found: {selected_video}")
                 can_proceed = False
 
             if can_proceed:
-                progress = progress_bar.progress(0)
-                status_text.info(f"⏳ Initializing YOLO tracker ({model_target}) & Violation Detectors...")
+                live_hud_metric.info(f"⏳ Initializing Real-Time Neural Tracker ({model_target}, {target_imgsz}p)...")
 
                 try:
                     cap = cv2.VideoCapture(stream_source)
                     if not cap.isOpened():
-                        st.error(f"Could not open video stream: {stream_source}")
+                        st.error(f"Could not open video stream source: {stream_source}")
                         st.stop()
 
-                    raw_total_f = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
-                    if is_yt_source:
-                        total_f = yt_max_frames if raw_total_f <= 0 else min(raw_total_f, yt_max_frames)
-                    else:
-                        total_f = raw_total_f if raw_total_f > 0 else 500
-                    
+                    # Set webcam FPS & buffer if applicable
+                    if is_webcam:
+                        cap.set(cv2.CAP_PROP_BUFFERSIZE, 1)
+
                     fps = cap.get(cv2.CAP_PROP_FPS) or 30.0
-                    
                     yolo_model = YOLO(model_target)
+                    
                     helmet_detector = HelmetViolationDetector() if track_helmets else None
                     red_light_detector = RedLightViolationDetector(stop_line_y_ratio=stop_line_ratio) if track_red_lights else None
                     triple_detector = TripleRidingDetector() if track_triple else None
@@ -252,30 +245,44 @@ def render_vision_studio():
                     sess_dir = Path("data/sessions") / new_session_name
                     sess_dir.mkdir(parents=True, exist_ok=True)
 
-                    while True:
-                        ret, frame = cap.read()
-                        if not ret:
-                            break
-                        
-                        frame_idx += 1
-                        if is_yt_source and frame_idx >= total_f:
-                            break
+                    last_fps_time = time.time()
+                    current_fps = fps
 
+                    # Non-stop real-time loop until user clicks Stop
+                    while True:
+                        t_frame_start = time.time()
+                        ret, frame = cap.read()
+                        
+                        if not ret:
+                            if continuous_loop and not is_webcam and not is_yt_source:
+                                # Seamless 24/7 video rewind
+                                cap.set(cv2.CAP_PROP_POS_FRAMES, 0)
+                                continue
+                            else:
+                                break
+
+                        frame_idx += 1
                         if frame_idx % frame_skip != 0:
                             continue
 
                         timestamp = round(frame_idx / fps, 2)
 
-                        # Adaptive CLAHE Enhancement
-                        proc_frame, audit = adaptive_preprocess_frame(frame, force_enhancement=enable_night)
+                        # Downscale for lightning-fast inference if resolution is high
+                        h_orig, w_orig = frame.shape[:2]
+                        if w_orig > 960:
+                            scale = 720.0 / w_orig
+                            frame = cv2.resize(frame, (720, int(h_orig * scale)), interpolation=cv2.INTER_LINEAR)
 
-                        # Universal YOLO tracking
+                        # Adaptive CLAHE Enhancement
+                        proc_frame, _ = adaptive_preprocess_frame(frame, force_enhancement=enable_night)
+
+                        # Real-time YOLO Tracking (Fast inference)
                         results = yolo_model.track(
                             proc_frame,
                             persist=True,
                             tracker="bytetrack.yaml",
                             conf=conf_thresh,
-                            imgsz=640,
+                            imgsz=target_imgsz,
                             verbose=False
                         )
                         result = results[0]
@@ -367,6 +374,37 @@ def render_vision_studio():
                                     "details": f"Crossed Stop-Line during RED phase (y={viol['cross_y']})"
                                 })
 
+                        # Calculate instantaneous real-time FPS
+                        t_frame_end = time.time()
+                        frame_dur = max(0.001, t_frame_end - t_frame_start)
+                        instant_fps = 1.0 / frame_dur
+                        current_fps = 0.85 * current_fps + 0.15 * instant_fps
+
+                        no_helmet_cnt = len(helmet_detector.logged_violations) if helmet_detector else 0
+                        red_light_cnt = len(red_light_detector.logged_violations) if red_light_detector else 0
+                        triple_cnt = len(triple_detector.logged_violations) if triple_detector else 0
+
+                        # Live HUD telemetry header
+                        live_hud_metric.markdown(f"""
+                        <div style="display: flex; gap: 15px; background: rgba(15, 23, 42, 0.9); padding: 10px 18px; border-radius: 8px; border: 1px solid #334155; margin-bottom: 12px; font-size: 13px; color: #f8fafc;">
+                            <div>⚡ <b>Real-Time Speed:</b> <span style="color: #4ade80; font-weight: 700;">{current_fps:.1f} FPS</span></div>
+                            <div>🚗 <b>Active Vehicles:</b> <span style="color: #38bdf8; font-weight: 700;">{total_v}</span></div>
+                            <div>🪖 <b>No-Helmet:</b> <span style="color: #f87171; font-weight: 700;">{no_helmet_cnt}</span></div>
+                            <div>🚦 <b>Red-Light:</b> <span style="color: #ef4444; font-weight: 700;">{red_light_cnt}</span></div>
+                            <div>👥 <b>Triple-Riding:</b> <span style="color: #fb923c; font-weight: 700;">{triple_cnt}</span></div>
+                            <div>⏱️ <b>Status:</b> <span style="color: #a78bfa;">STREAMING LIVE</span></div>
+                        </div>
+                        """, unsafe_allow_html=True)
+
+                        # Stream real-time RGB frame to UI
+                        rgb_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+                        if preview_size == "Compact (540px)":
+                            preview_container.image(rgb_frame, width=540)
+                        elif preview_size == "Standard (720px)":
+                            preview_container.image(rgb_frame, width=720)
+                        else:
+                            preview_container.image(rgb_frame, use_container_width=True)
+
                         processed_records.append({
                             "timestamp_seconds": timestamp,
                             "vehicle_count": total_v,
@@ -377,26 +415,7 @@ def render_vision_studio():
                             "auto_rickshaws": detected_counts.get("auto_rickshaw", 0)
                         })
 
-                        pct = min(1.0, frame_idx / max(total_f, 1))
-                        progress.progress(pct)
-                        
-                        no_helmet_cnt = len(helmet_detector.logged_violations) if helmet_detector else 0
-                        red_light_cnt = len(red_light_detector.logged_violations) if red_light_detector else 0
-                        triple_cnt = len(triple_detector.logged_violations) if triple_detector else 0
-                        status_text.text(f"Frame {frame_idx}/{total_f} • Vehicles: {total_v} | 🚨 Violations: 🪖 No-Helmet: {no_helmet_cnt}, 🚦 Red-Light: {red_light_cnt}, 👥 Triple-Riding: {triple_cnt}")
-
-                        # Live visual preview update
-                        if frame_idx % (frame_skip * 3) == 0:
-                            rgb_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-                            if preview_size == "Compact (540px)":
-                                preview_container.image(rgb_frame, width=540, caption=f"Live HUD Preview (Frame {frame_idx})")
-                            elif preview_size == "Standard (720px)":
-                                preview_container.image(rgb_frame, width=720, caption=f"Live HUD Preview (Frame {frame_idx})")
-                            else:
-                                preview_container.image(rgb_frame, use_container_width=True, caption=f"Live HUD Preview (Frame {frame_idx})")
-
                     cap.release()
-                    progress.progress(1.0)
 
                     # Save traffic metrics
                     out_df = pd.DataFrame(processed_records)
@@ -416,7 +435,7 @@ def render_vision_studio():
                     viol_csv = sess_dir / "violation_events.csv"
                     viol_df.to_csv(viol_csv, index=False)
 
-                    status_text.success(f"✅ Video processing complete! Metrics & Violation logs saved to `{new_session_name}`.")
+                    live_hud_metric.success(f"✅ Video session complete. Metrics & Violation logs saved to `{new_session_name}`.")
                     st.balloons()
 
                     # Calculate fine recovery
@@ -429,8 +448,8 @@ def render_vision_studio():
                     # Summary Metrics Cards
                     st.markdown("### 📊 Detection & Violation Summary")
                     sm1, sm2, sm3, sm4, sm5 = st.columns(5)
-                    sm1.metric("Processed Frames", len(out_df))
-                    sm2.metric("Peak Vehicle Density", int(out_df["vehicle_count"].max()))
+                    sm1.metric("Frames Tracked", len(out_df))
+                    sm2.metric("Peak Density", int(out_df["vehicle_count"].max()) if not out_df.empty else 0)
                     sm3.metric("🪖 No-Helmet", len(helmet_detector.logged_violations) if helmet_detector else 0)
                     sm4.metric("🚦 Red-Light", len(red_light_detector.logged_violations) if red_light_detector else 0)
                     sm5.metric("💰 Fine Potential", f"₹{total_fines:,}")
@@ -465,21 +484,8 @@ def render_vision_studio():
                     else:
                         st.info("✅ Zero traffic safety violations recorded in this observation session.")
 
-                    # Plot results
-                    st.markdown("##### 📈 Real-Time Vehicle Flow Breakdown")
-                    fig_res = px.line(
-                        out_df,
-                        x="timestamp_seconds",
-                        y=["cars", "motorcycles", "buses", "trucks"],
-                        title="Vehicle Class Flow over Video Timeline",
-                        labels={"timestamp_seconds": "Elapsed Time (Seconds)", "value": "Count", "variable": "Category"},
-                        color_discrete_map={"cars": "#51cf66", "motorcycles": "#ffd43b", "buses": "#ff922b", "trucks": "#ff6b6b"},
-                        template="plotly_dark"
-                    )
-                    st.plotly_chart(fig_res, use_container_width=True)
-
                 except Exception as e:
-                    status_text.error(f"Error during video processing: {e}")
+                    live_hud_metric.error(f"Error during video processing: {e}")
 
     # ==========================================================================
     # TAB 2: VIOLATION ENFORCEMENT & MODEL TRAINER HUB
