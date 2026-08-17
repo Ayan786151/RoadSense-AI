@@ -1,0 +1,20 @@
+# RoadSense AI - IISc 14-Class Indian Traffic Dataset Config
+path: C:/Users/asus/Downloads/traffic_sim-main (3)/traffic_sim-main/datasets/iisc_dataset
+train: images/train
+val: images/val
+
+names:
+  0: two_wheeler
+  1: auto_rickshaw
+  2: car
+  3: suv
+  4: bus
+  5: truck
+  6: lcv
+  7: mini_bus
+  8: tractor
+  9: bicycle
+  10: e_rickshaw
+  11: container_truck
+  12: tempo_traveller
+  13: other_vehicle

@@ -1,34 +1,40 @@
-# 🚦 RoadSense AI — Traffic Intelligence & Risk Analytics
+# 🚦 RoadSense AI — Intelligent Traffic Risk & Civic Social Service Hub
 
-An end-to-end **AI-powered traffic risk prediction and priority intelligence system** combining synthetic city simulation, supervised machine learning, real-time computer vision, and interactive analytics dashboards.
+An end-to-end **AI-powered urban traffic intelligence system** built for civic social service, combining computer vision, predictive machine learning, adaptive traffic light optimization, and environmental carbon reduction analytics across 50 municipal zones.
+
+---
+
+## 🌟 Key Capabilities & Social Impact
+
+1. **AI Safety Briefings (Llama-3.3-70B / Gemini-2.5)**: Automated, plain-English executive briefings for municipal traffic controllers focusing on citizen safety, vulnerable pedestrian protection, and proactive risk mitigation.
+2. **Adaptive Signal Control (DTSC)**: Real-time calculation of optimal green-light timing based on queue density, vehicle kinematics, and weather conditions.
+3. **Civic Eco-Savings & Carbon Reduction**: Quantifies tonnes of CO2 prevented, liters of fuel saved, and tree-equivalent absorption resulting from dynamic traffic optimization.
+4. **Supervised ML Risk Forecaster**: Leakage-free panel modeling predicting incident probability `P(incident_occurred = 1)` across 52 weeks and 50 urban zones.
+5. **Real-Time CCTV Computer Vision**: YOLOv11 vehicle detection, ByteTrack ID persistence, and 4-point perspective homography ground-plane velocity estimation.
+6. **Geographic Priority Heatmaps**: Interactive Mapbox visualizations ranking municipal zones by composite public-risk exposure.
 
 ---
 
 ## 🏗️ Architecture Overview
 
 ```
-┌─────────────────────────────────────────────────────────────────────┐
-│                        RoadSense AI Pipeline                        │
-├──────────────┬──────────────┬───────────────┬───────────────────────┤
-│  SIMULATION  │   FEATURES   │   ML MODEL    │     DASHBOARD         │
-│              │              │               │                       │
-│  sim.py      │  temporal_   │  train_       │  app.py               │
-│  (50 zones   │  features.py │  model.py     │  simulation_          │
-│   52 weeks)  │  (lag, roll, │  (LR vs RF,   │  dashboard.py         │
-│              │   OLS trend) │   chrono       │  (Streamlit +         │
-│              │              │   split)      │   Plotly + Map)       │
-├──────────────┴──────────────┴───────────────┴───────────────────────┤
-│                     COMPUTER VISION PIPELINE                        │
-│  vehicle_detector.py → movement_analyzer.py → feature_fusion.py     │
-│  (YOLO + ByteTrack)   (Homography + Kalman)   (Density + Movement)  │
-│                                                                      │
-│  enhancement.py        calibration.py          kalman_tracker.py     │
-│  (Night/Low-Light)     (Perspective Transform)  (2D Ground Kalman)   │
-├──────────────────────────────────────────────────────────────────────┤
-│                      LIVE DATA & PRIORITY                            │
-│  temporal_store.py → live_inference.py → priority_engine.py          │
-│  (Historical Store)   (Safety Adapter)    (Risk × Exposure × Trend) │
-└──────────────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────────────────────────────────────┐
+│                           RoadSense AI — Civic Control Architecture                     │
+├──────────────────┬────────────────────┬────────────────────┬────────────────────────────┤
+│   SIMULATION     │  TEMPORAL FEATURES │    ML RISK MODEL   │     ADAPTIVE INTELLIGENCE  │
+│                  │                    │                    │                            │
+│  sim.py          │  temporal_         │  train_model.py    │  intelligence/             │
+│  (50 zones,      │  features.py       │  (Random Forest,   │  - signal_co2.py           │
+│   52 weeks panel)│  (lag, rolling,    │   chronological    │  - llm_briefing.py         │
+│                  │   OLS slopes)      │   split)           │  (Llama-3.3 / Gemini-2.5)  │
+├──────────────────┴────────────────────┴────────────────────┴────────────────────────────┤
+│                              COMPUTER VISION PIPELINE                                   │
+│  vehicle_detector.py   →   movement_analyzer.py   →   feature_fusion.py                 │
+│  (YOLO + ByteTrack)        (Homography Velocity)       (Live Congestion & Telemetry)    │
+├─────────────────────────────────────────────────────────────────────────────────────────┤
+│                               INTERACTIVE CONTROL HUB                                   │
+│  app.py  &  dashboard/simulation_dashboard.py  (Streamlit + Plotly + Mapbox Dark)       │
+└─────────────────────────────────────────────────────────────────────────────────────────┘
 ```
 
 ---
@@ -41,134 +47,58 @@ An end-to-end **AI-powered traffic risk prediction and priority intelligence sys
 pip install -r requirements.txt
 ```
 
-### 2. Run the Full Pipeline
-
-Execute these steps **in order**:
+### 2. Launch the Control Hub
 
 ```bash
-# Step 1: Generate synthetic traffic simulation (50 zones × 52 weeks)
-python sim.py
-
-# Step 2: Engineer temporal features (lag, rolling, OLS trends)
-python analysis/temporal_features.py
-
-# Step 3: Train the ML risk model (Logistic Regression vs Random Forest)
-python models/train_model.py
-
-# Step 4: Compute priority rankings
-python priority/priority_engine.py
-
-# Step 5: Launch the interactive dashboard
 streamlit run app.py
 ```
-
-### 3. Run the Vision Pipeline (Optional)
-
-```bash
-# Detect vehicles and track trajectories
-python -m vision.vehicle_detector --video videos/traffic.mp4 --session session_001 --show
-
-# Analyze movement and estimate speed
-python -m vision.movement_analyzer --session session_001 --show-calibration
-
-# Extract traffic features
-python -m vision.traffic_analyzer --session session_001
-
-# Fuse vision and movement features
-python -m vision.feature_fusion --session session_001
-```
+Open **[http://localhost:8501](http://localhost:8501)** in your browser.
 
 ---
 
-## 📁 Project Structure
+## 📁 Repository Structure
 
 ```
-traffic_sim-main/
-├── app.py                          # Main Streamlit entrypoint
-├── sim.py                          # Synthetic city traffic simulator
-├── requirements.txt                # Pinned Python dependencies
+traffic_sim/
+├── app.py                          # Streamlit master entrypoint & CCTV hub
+├── sim.py                          # 50-Zone × 52-Week synthetic urban simulator
+├── requirements.txt                # Pinned dependencies
 │
-├── analysis/
-│   ├── temporal_features.py        # Temporal feature engineering (lag, rolling, OLS)
-│   └── validate_sessions.py        # Session data validator
+├── intelligence/                   # NEW: Adaptive control & LLM engine
+│   ├── signal_co2.py               # Adaptive green light & CO2 savings calculator
+│   └── llm_briefing.py             # Multi-key Groq / Gemini executive brief engine
 │
 ├── dashboard/
-│   └── simulation_dashboard.py     # Interactive Streamlit dashboard
+│   └── simulation_dashboard.py     # Multi-tab analytics lab & Mapbox leaderboard
 │
-├── data/                           # Generated datasets (not tracked in git)
-│   ├── simulation_temporal_features.csv
-│   ├── location_mapping.csv
-│   ├── calibration_config.json
-│   └── sessions/                   # Per-session CCTV data
-│
-├── docs/
-│   ├── speed_estimation.md
-│   ├── temporal_architecture.md
-│   └── temporal_feature_engine.md
-│
-├── live_data/
-│   ├── ingest_session.py           # Session ingestion pipeline
-│   ├── live_inference.py           # Live ML inference safety adapter
-│   ├── temporal_feature_engine.py  # Live temporal feature computation
-│   ├── temporal_store.py           # Historical data accumulation
-│   └── traffic_observation_builder.py
+├── analysis/
+│   ├── temporal_features.py        # Leakage-free lag, rolling, and OLS trend features
+│   └── validate_sessions.py        # CCTV session integrity auditor
 │
 ├── models/
-│   ├── train_model.py              # ML model training & evaluation
+│   ├── train_model.py              # ML risk model trainer & evaluator
 │   └── best_risk_model.pkl         # Trained Random Forest pipeline
 │
 ├── priority/
-│   └── priority_engine.py          # Risk × Exposure × Trend priority scoring
+│   ├── priority_engine.py          # Risk × Exposure × Trend composite scoring
+│   └── intervention_engine.py      # Municipal intervention recommendation rules
 │
 ├── vision/
-│   ├── vehicle_detector.py         # YOLO vehicle detection + ByteTrack
-│   ├── movement_analyzer.py        # Homography speed estimation + Kalman
-│   ├── traffic_analyzer.py         # Traffic feature extraction
-│   ├── feature_fusion.py           # Multi-modal vision feature fusion
-│   ├── calibration.py              # Perspective homography calibration
-│   ├── enhancement.py              # Adaptive night/low-light enhancement
-│   └── kalman_tracker.py           # 2D ground-plane Kalman filter
+│   ├── vehicle_detector.py         # YOLO detection & ByteTrack tracking
+│   ├── movement_analyzer.py        # Homography perspective speed estimation
+│   ├── calibration.py              # 4-point quad homography matrix
+│   ├── enhancement.py              # Low-light CLAHE & night vision preprocessor
+│   └── feature_fusion.py           # Multi-modal vision feature aggregation
 │
-└── videos/                         # Input traffic footage
+├── data/                           # Panel datasets and CCTV telemetry sessions
+│   ├── sessions/                   # session_001, session_002, session_003
+│   ├── simulation_temporal_features.csv
+│   └── location_mapping.csv
+│
+└── videos/                         # Sample traffic CCTV footage
 ```
-
----
-
-## 🧠 Core Concepts
-
-### Risk Model
-- **Target**: `P(incident_occurred = 1)` — weekly incident probability
-- **Features**: 40 features across current conditions, lag-1, 4-week rolling, OLS trends
-- **Training**: Chronological split (Weeks 5-40 train, 41-46 val, 47-52 test)
-- **Models**: Logistic Regression baseline vs Random Forest (selected)
-- **Leakage Prevention**: Strict `shift(1)` for lags, `min_periods=4` for rolling
-
-### Priority Index
-```
-Priority = 0.40 × Risk + 0.25 × Population Exposure + 0.20 × Vehicle Exposure + 0.15 × Temporal Trend
-```
-
-### Vision Pipeline
-- **Detection**: YOLOv11n with COCO vehicle classes (car, motorcycle, bus, truck)
-- **Tracking**: ByteTrack with persistent IDs across frames
-- **Speed**: 4-point perspective homography → ground-plane Kalman filter → km/h
-- **Occlusion**: Bottom-contact point gating with Mahalanobis distance
-
----
-
-## 📊 Dashboard Features
-
-| Feature | Description |
-|:--------|:------------|
-| **KPI Cards** | Risk probability, congestion, speed, density with WoW deltas |
-| **52-Week Timeline** | Interactive Plotly chart with congestion, speed, and risk curves |
-| **Leaderboard** | All 50 zones ranked by composite priority score |
-| **Geographic Map** | Scatter mapbox with risk-colored zones on dark basemap |
-| **What-If Sandbox** | Real-time ML sensitivity testing with parameter sliders |
-| **Diagnostics** | Full JSON observation record per zone-week |
 
 ---
 
 ## 📄 License
-
-This project is provided as-is for educational and research purposes.
+Provided for smart city innovation, civic safety research, and hackathon evaluation.

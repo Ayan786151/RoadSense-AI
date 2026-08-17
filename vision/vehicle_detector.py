@@ -3,7 +3,7 @@ import sys
 import json
 import argparse
 from datetime import datetime, timezone
-from typing import List
+from typing import List, Tuple, Optional, Dict, Any
 import cv2
 import pandas as pd
 import numpy as np
@@ -25,15 +25,104 @@ DEFAULT_VIDEO_PATH = "videos/traffic.mp4"
 DEFAULT_METRICS_OUTPUT = "data/vision_traffic_metrics.csv"
 DEFAULT_TRAJECTORY_OUTPUT = "data/vehicle_trajectories.csv"
 
-MODEL_NAME = "yolo11n.pt"
+DEFAULT_MODEL_NAME = "yolo11s.pt"
 
-# COCO vehicle classes
-VEHICLE_CLASSES = {
-    2: "car",
-    3: "motorcycle",
-    5: "bus",
-    7: "truck"
-}
+# Universal vehicle mapping across standard YOLO models and custom datasets
+def resolve_vehicle_class(class_id: int, model_names: dict) -> Optional[str]:
+    """
+    Universal vehicle category resolver supporting standard COCO and custom models.
+    """
+    raw = str(model_names.get(class_id, "")).lower()
+    
+    if any(k in raw for k in ["auto", "rickshaw", "tuk", "three-wheeler", "three_wheeler"]):
+        return "auto_rickshaw"
+    elif any(k in raw for k in ["motorcycle", "bike", "bicycle", "two-wheeler", "two_wheeler", "scooter"]):
+        return "motorcycle"
+    elif any(k in raw for k in ["bus", "mini-bus", "mini_bus"]):
+        return "bus"
+    elif any(k in raw for k in ["truck", "lcv", "tempo", "lorry", "container", "tractor"]):
+        return "truck"
+    elif any(k in raw for k in ["car", "hatchback", "sedan", "suv", "van", "taxi", "jeep"]):
+        return "car"
+    
+    # Standard COCO fallback (1: bicycle, 2: car, 3: motorcycle, 5: bus, 7: truck)
+    coco_map = {1: "motorcycle", 2: "car", 3: "motorcycle", 5: "bus", 7: "truck"}
+    return coco_map.get(class_id, None)
+
+
+# ============================================================
+# DRIVER + PILLION RIDER FUSION
+# ============================================================
+
+def fuse_driver_pillion_riders(
+    candidate_boxes: List[np.ndarray],
+    candidate_classes: List[str],
+    candidate_confs: List[float],
+    candidate_ids: List[Optional[int]]
+) -> Tuple[List[np.ndarray], List[str], List[float], List[Optional[int]]]:
+    """
+    Fuses vertically stacked driver + pillion passenger bounding boxes into a single unified motorcycle unit.
+    Prevents counting two bikes when two people are riding the same physical motorcycle.
+    """
+    tw_indices = [i for i, c in enumerate(candidate_classes) if c == "motorcycle"]
+    other_indices = [i for i, c in enumerate(candidate_classes) if c != "motorcycle"]
+    
+    if len(tw_indices) <= 1:
+        return candidate_boxes, candidate_classes, candidate_confs, candidate_ids
+
+    merged_tw_boxes = []
+    merged_tw_confs = []
+    merged_tw_ids = []
+    used = [False] * len(tw_indices)
+
+    for i, idx1 in enumerate(tw_indices):
+        if used[i]:
+            continue
+        b1 = candidate_boxes[idx1]
+        union_box = list(b1)
+        max_conf = candidate_confs[idx1]
+        best_id = candidate_ids[idx1]
+        used[i] = True
+
+        w1 = b1[2] - b1[0]
+        h1 = b1[3] - b1[1]
+        cx1 = (b1[0] + b1[2]) / 2.0
+
+        for j in range(i + 1, len(tw_indices)):
+            if used[j]:
+                continue
+            idx2 = tw_indices[j]
+            b2 = candidate_boxes[idx2]
+            w2 = b2[2] - b2[0]
+            h2 = b2[3] - b2[1]
+            cx2 = (b2[0] + b2[2]) / 2.0
+
+            x_dist = abs(cx1 - cx2)
+            y_gap = max(0, max(b1[1], b2[1]) - min(b1[3], b2[3]))
+
+            # Driver and pillion are in the same lane and vertically stacked
+            if x_dist < max(w1, w2) * 0.75 and y_gap < max(h1, h2) * 0.60:
+                union_box = [
+                    min(union_box[0], b2[0]),
+                    min(union_box[1], b2[1]),
+                    max(union_box[2], b2[2]),
+                    max(union_box[3], b2[3])
+                ]
+                max_conf = max(max_conf, candidate_confs[idx2])
+                if best_id is None and candidate_ids[idx2] is not None:
+                    best_id = candidate_ids[idx2]
+                used[j] = True
+
+        merged_tw_boxes.append(np.array(union_box, dtype=int))
+        merged_tw_confs.append(max_conf)
+        merged_tw_ids.append(best_id)
+
+    final_boxes = [candidate_boxes[i] for i in other_indices] + merged_tw_boxes
+    final_classes = [candidate_classes[i] for i in other_indices] + ["motorcycle"] * len(merged_tw_boxes)
+    final_confs = [candidate_confs[i] for i in other_indices] + merged_tw_confs
+    final_ids = [candidate_ids[i] for i in other_indices] + merged_tw_ids
+
+    return final_boxes, final_classes, final_confs, final_ids
 
 
 # ============================================================
@@ -105,6 +194,7 @@ def compute_occlusion_flags(boxes_xyxy: List[np.ndarray], threshold: float = 0.1
 
 def process_video(
     video_path: str = DEFAULT_VIDEO_PATH,
+    model_name: str = DEFAULT_MODEL_NAME,
     session_id: str = None,
     location_id: str = "loc_01",
     camera_id: str = "cam_01",
@@ -124,6 +214,7 @@ def process_video(
     if session_id:
         print(f"Active Session: {session_id}")
     print(f"Source Video  : {video_path}")
+    print(f"Model Path    : {model_name}")
     print(f"Target Output : {output_dir}")
 
     # --------------------------------------------------------
@@ -140,8 +231,8 @@ def process_video(
     # Load model (Fresh instance ensures tracker isolation)
     # --------------------------------------------------------
 
-    print("\nLoading YOLO model...")
-    model = YOLO(MODEL_NAME)
+    print(f"\nLoading YOLO model ({model_name})...")
+    model = YOLO(model_name)
     print("YOLO model loaded with fresh tracker state.")
 
     # --------------------------------------------------------
@@ -210,12 +301,14 @@ def process_video(
         lighting_conditions_observed.add(light_audit["lighting_condition"])
 
         # ----------------------------------------------------
-        # 2. YOLO tracking (persist=True maintains IDs within this video)
+        # 2. YOLO tracking with standard universal parameters
         # ----------------------------------------------------
         results = model.track(
             processed_frame,
             persist=True,
             tracker="bytetrack.yaml",
+            conf=0.35,
+            imgsz=640,
             verbose=False
         )
 
@@ -225,7 +318,8 @@ def process_video(
             "car": 0,
             "motorcycle": 0,
             "bus": 0,
-            "truck": 0
+            "truck": 0,
+            "auto_rickshaw": 0
         }
         total_vehicles = 0
 
@@ -240,14 +334,14 @@ def process_video(
             boxes = result.boxes
             for i in range(len(boxes)):
                 class_id = int(boxes.cls[i].item())
-                if class_id not in VEHICLE_CLASSES:
+                vtype = resolve_vehicle_class(class_id, model.names)
+                if not vtype:
                     continue
 
-                vtype = VEHICLE_CLASSES[class_id]
-                counts[vtype] += 1
+                xyxy = boxes.xyxy[i].cpu().numpy().astype(int)
+                counts[vtype] = counts.get(vtype, 0) + 1
                 total_vehicles += 1
 
-                xyxy = boxes.xyxy[i].cpu().numpy().astype(int)
                 valid_boxes.append(xyxy)
                 valid_classes.append(vtype)
 
@@ -298,10 +392,11 @@ def process_video(
         metric_records.append({
             "timestamp_seconds": round(timestamp, 3),
             "vehicle_count": total_vehicles,
-            "cars": counts["car"],
-            "motorcycles": counts["motorcycle"],
-            "buses": counts["bus"],
-            "trucks": counts["truck"]
+            "cars": counts.get("car", 0),
+            "motorcycles": counts.get("motorcycle", 0),
+            "buses": counts.get("bus", 0),
+            "trucks": counts.get("truck", 0),
+            "auto_rickshaws": counts.get("auto_rickshaw", 0)
         })
 
         if show_preview:
@@ -381,6 +476,7 @@ def process_video(
 def main():
     parser = argparse.ArgumentParser(description="RoadSense AI - Vehicle Detector, Trajectory Tracker & Preprocessor")
     parser.add_argument("--video", type=str, default=DEFAULT_VIDEO_PATH, help="Path to input video file")
+    parser.add_argument("--model", type=str, default=DEFAULT_MODEL_NAME, help="YOLO model path or HuggingFace ID (e.g. yolo11n.pt or iisc-aim/UVH-26 weights)")
     parser.add_argument("--session", type=str, default=None, help="Session identifier (e.g. session_001)")
     parser.add_argument("--location-id", type=str, default="loc_01", help="Location identifier")
     parser.add_argument("--camera-id", type=str, default="cam_01", help="Camera identifier")
@@ -392,6 +488,7 @@ def main():
 
     process_video(
         video_path=args.video,
+        model_name=args.model,
         session_id=args.session,
         location_id=args.location_id,
         camera_id=args.camera_id,

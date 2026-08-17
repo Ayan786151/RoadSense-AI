@@ -1,0 +1,10 @@
+# RoadSense AI - Traffic_Light Detection Dataset Config
+path: C:/Users/asus/Downloads/traffic_sim-main (3)/traffic_sim-main/datasets/traffic_light_dataset
+train: images/train
+val: images/val
+
+names:
+  0: red_light
+  1: yellow_light
+  2: green_light
+  3: off

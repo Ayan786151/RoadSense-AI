@@ -360,7 +360,9 @@ def main():
     data_dir = os.path.join(project_root, "data")
     models_dir = os.path.join(project_root, "models")
 
-    input_path = os.path.join(data_dir, "temporal_features.csv")
+    input_path = os.path.join(data_dir, "simulation_temporal_features.csv")
+    if not os.path.exists(input_path) or os.path.getsize(input_path) < 2000:
+        input_path = os.path.join(data_dir, "temporal_features.csv")
     model_output_path = os.path.join(models_dir, "best_risk_model.pkl")
     predictions_output_path = os.path.join(data_dir, "risk_predictions.csv")
 

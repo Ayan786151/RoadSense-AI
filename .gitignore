@@ -4,8 +4,13 @@ __pycache__/
 .venv/
 env/
 venv/
+
+# IDE
 .idea/
 .vscode/
+*.swp
+*.swo
+*~
 
 # Model artifacts (use Git LFS for large binaries)
 *.pkl
@@ -20,6 +25,7 @@ data/sessions/
 *.mp4
 *.avi
 *.mkv
+*.webm
 
 # Environment
 .env
@@ -28,3 +34,21 @@ data/sessions/
 # OS artifacts
 .DS_Store
 Thumbs.db
+desktop.ini
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+*.egg
+
+# Jupyter
+.ipynb_checkpoints/
+
+# YOLO training runs
+runs/
+models/iisc_finetuned/
+models/uvh26_finetuned/
+
+# Logs
+*.log
