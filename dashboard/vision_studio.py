@@ -31,6 +31,11 @@ from vision.train_uvh26 import UVH26_CLASSES
 from vision.helmet_detector import HelmetViolationDetector
 from vision.red_light_detector import RedLightViolationDetector
 
+try:
+    import yt_dlp
+except ImportError:
+    yt_dlp = None
+
 
 # Bounding box color palette (BGR)
 CLASS_COLORS = {
@@ -48,6 +53,38 @@ CLASS_DISPLAY_LABELS = {
     "bus": "Bus",
     "truck": "Truck/LCV"
 }
+
+
+def resolve_youtube_stream_url(url: str):
+    """Extracts direct streamable URL and metadata from a YouTube video or live stream."""
+    if not yt_dlp:
+        raise RuntimeError("yt-dlp package is not installed. Please run 'pip install yt-dlp'.")
+    ydl_opts = {
+        'format': 'best[ext=mp4][height<=720]/best[height<=720]/best',
+        'quiet': True,
+        'no_warnings': True
+    }
+    with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+        info = ydl.extract_info(url, download=False)
+        stream_url = info.get('url')
+        title = info.get('title', 'YouTube Stream')
+        is_live = info.get('is_live', False)
+        return stream_url, title, is_live
+
+
+def download_youtube_clip(url: str, output_path: str, max_duration_sec: int = 30):
+    """Downloads a short preview clip from YouTube for offline local showcase."""
+    if not yt_dlp:
+        raise RuntimeError("yt-dlp package is not installed.")
+    ydl_opts = {
+        'format': 'best[ext=mp4][height<=720]/best[height<=720]/best',
+        'outtmpl': output_path,
+        'quiet': True,
+        'no_warnings': True,
+        'download_ranges': lambda info_dict, ydl: [{'start_time': 0, 'end_time': max_duration_sec}]
+    }
+    with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+        ydl.download([url])
 
 
 def render_vision_studio():
@@ -74,14 +111,44 @@ def render_vision_studio():
     # ==========================================================================
     with tab_runner:
         st.markdown("#### 📹 Real-Time CCTV Video Processor with Multi-Violation Tracking")
-        st.caption("Select traffic footage, configure violation enforcement rules, and process video frames live.")
+        st.caption("Select traffic footage or paste a live YouTube stream, configure violation enforcement rules, and process video frames live.")
+
+        media_source = st.radio(
+            "Media Input Source",
+            ["📁 Local Video Footage (videos/*.mp4)", "🔴 YouTube Live Stream / Video URL"],
+            horizontal=True
+        )
 
         col1, col2 = st.columns([1, 1])
 
+        yt_stream_url = None
+        is_yt_source = (media_source == "🔴 YouTube Live Stream / Video URL")
+
         with col1:
-            existing_videos = glob.glob("videos/*.mp4") + glob.glob("videos/*.avi")
-            vid_options = existing_videos if existing_videos else ["videos/traffic.mp4"]
-            selected_video = st.selectbox("Select Input Traffic Video", vid_options, index=0)
+            if not is_yt_source:
+                existing_videos = glob.glob("videos/*.mp4") + glob.glob("videos/*.avi")
+                vid_options = existing_videos if existing_videos else ["videos/traffic.mp4"]
+                selected_video = st.selectbox("Select Input Traffic Video", vid_options, index=0)
+            else:
+                yt_input_url = st.text_input(
+                    "YouTube Video / Live Stream URL",
+                    value="https://www.youtube.com/watch?v=1H0iTzv2jiQ",
+                    help="Paste any YouTube video or live traffic webcam stream URL."
+                )
+                selected_video = yt_input_url
+                
+                cache_col1, cache_col2 = st.columns([1, 1])
+                with cache_col1:
+                    yt_max_frames = st.slider("Live Stream Process Cap (Frames)", 50, 1500, 300, step=50, help="Caps frames for live streams to build observation metrics.")
+                with cache_col2:
+                    if st.button("⬇️ Cache 30s Sample to videos/"):
+                        with st.spinner("Downloading 30s sample clip for offline showcase..."):
+                            try:
+                                cache_file = "videos/yt_cached_sample.mp4"
+                                download_youtube_clip(yt_input_url, cache_file, max_duration_sec=30)
+                                st.success(f"Saved to `{cache_file}`! You can now select it in Local Videos.")
+                            except Exception as dl_err:
+                                st.error(f"Failed to cache YouTube clip: {dl_err}")
             
             model_choices = [
                 "yolo11s.pt (Universal Traffic Model — High Precision)",
@@ -124,15 +191,39 @@ def render_vision_studio():
         preview_container = st.empty()
 
         if run_btn:
-            if not os.path.exists(selected_video):
+            stream_source = selected_video
+            can_proceed = True
+
+            if is_yt_source:
+                status_text.info(f"⏳ Resolving YouTube stream URL for `{selected_video}`...")
+                try:
+                    yt_stream_url, yt_title, yt_is_live = resolve_youtube_stream_url(selected_video)
+                    stream_source = yt_stream_url
+                    st.toast(f"Connected to YouTube: {yt_title}", icon="🔴")
+                except Exception as yt_err:
+                    status_text.empty()
+                    st.error(f"❌ YouTube Stream Error: {yt_err}\n\nPlease check the URL or ensure the stream is publicly accessible.")
+                    can_proceed = False
+            elif not os.path.exists(selected_video):
                 st.error(f"Selected video not found: {selected_video}")
-            else:
+                can_proceed = False
+
+            if can_proceed:
                 progress = progress_bar.progress(0)
-                status_text.info(f"⏳ Initializing YOLO tracker ({model_target}) & Violation Detectors on `{selected_video}`...")
+                status_text.info(f"⏳ Initializing YOLO tracker ({model_target}) & Violation Detectors...")
 
                 try:
-                    cap = cv2.VideoCapture(selected_video)
-                    total_f = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
+                    cap = cv2.VideoCapture(stream_source)
+                    if not cap.isOpened():
+                        st.error(f"Could not open video stream: {stream_source}")
+                        st.stop()
+
+                    raw_total_f = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
+                    if is_yt_source:
+                        total_f = yt_max_frames if raw_total_f <= 0 else min(raw_total_f, yt_max_frames)
+                    else:
+                        total_f = raw_total_f if raw_total_f > 0 else 500
+                    
                     fps = cap.get(cv2.CAP_PROP_FPS) or 30.0
                     
                     yolo_model = YOLO(model_target)
@@ -152,6 +243,9 @@ def render_vision_studio():
                             break
                         
                         frame_idx += 1
+                        if is_yt_source and frame_idx >= total_f:
+                            break
+
                         if frame_idx % frame_skip != 0:
                             continue
 
