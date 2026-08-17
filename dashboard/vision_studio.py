@@ -127,7 +127,7 @@ def render_vision_studio():
             else:
                 yt_input_url = st.text_input(
                     "YouTube Video / Live Stream URL",
-                    value="https://www.youtube.com/watch?v=1H0iTzv2jiQ",
+                    value="https://www.youtube.com/live/sTF-6_xinUU",
                     help="Paste any public YouTube traffic video or live CCTV stream URL."
                 )
                 selected_video = yt_input_url
@@ -254,12 +254,20 @@ def render_vision_studio():
                         ret, frame = cap.read()
                         
                         if not ret:
-                            if continuous_loop and not is_webcam and not is_yt_source:
-                                # Seamless 24/7 video rewind
-                                cap.set(cv2.CAP_PROP_POS_FRAMES, 0)
-                                continue
-                            else:
-                                break
+                            if is_yt_source:
+                                # Retry for live HLS chunk buffering
+                                for _ in range(4):
+                                    time.sleep(0.2)
+                                    ret, frame = cap.read()
+                                    if ret:
+                                        break
+                            if not ret:
+                                if continuous_loop and not is_webcam and not is_yt_source:
+                                    # Seamless 24/7 video rewind
+                                    cap.set(cv2.CAP_PROP_POS_FRAMES, 0)
+                                    continue
+                                else:
+                                    break
 
                         frame_idx += 1
                         if frame_idx % frame_skip != 0:
