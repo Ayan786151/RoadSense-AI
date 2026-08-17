@@ -49,9 +49,9 @@ def train_ml_risk_model():
     print("#" * 80)
     
     start_t = time.time()
-    from models.train_model import run_model_training_pipeline
     try:
-        run_model_training_pipeline()
+        from models.train_model import main as run_risk_training
+        run_risk_training()
         elapsed = time.time() - start_t
         print(f"✅ Stage 1 Complete in {elapsed:.1f}s -> Exported: models/best_risk_model.pkl")
         return True
@@ -67,9 +67,9 @@ def train_helmet_vision_model(epochs: int = 25, batch: int = 16):
     print("#" * 80)
     
     start_t = time.time()
-    from vision.train_helmet_model import train_helmet_detector
     try:
-        train_helmet_detector(epochs=epochs, batch_size=batch)
+        from vision.train_helmet_model import train_helmet_model
+        train_helmet_model(epochs=epochs, batch_size=batch)
         elapsed = time.time() - start_t
         print(f"✅ Stage 2 Complete in {elapsed:.1f}s -> Exported: models/helmet_yolo.pt")
         return True
@@ -85,14 +85,14 @@ def train_violation_vision_model(epochs: int = 25, batch: int = 16):
     print("#" * 80)
     
     start_t = time.time()
-    from vision.train_violation_model import train_violation_model
     try:
-        train_violation_model(epochs=epochs, batch_size=batch)
+        from vision.train_violation_model import train_violation_detector
+        train_violation_detector(task_type="traffic_light", epochs=epochs, batch_size=batch)
         elapsed = time.time() - start_t
-        print(f"✅ Stage 3 Complete in {elapsed:.1f}s -> Exported: models/violation_detector.pt")
+        print(f"✅ Stage 3 Complete in {elapsed:.1f}s -> Exported: models/violation_models/")
         return True
     except Exception as e:
-        print(f"❌ Stage 3 Error: {e}")
+        print(f"❌ Stage 2 Error: {e}")
         return False
 
 
@@ -103,8 +103,8 @@ def train_iisc_traffic_model(epochs: int = 20, batch: int = 16):
     print("#" * 80)
     
     start_t = time.time()
-    from vision.train_uvh26 import train_yolo_uvh26
     try:
+        from vision.train_uvh26 import train_yolo_uvh26
         train_yolo_uvh26(epochs=epochs, batch_size=batch)
         elapsed = time.time() - start_t
         print(f"✅ Stage 4 Complete in {elapsed:.1f}s -> Exported: models/iisc_finetuned/")
