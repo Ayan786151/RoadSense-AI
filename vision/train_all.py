@@ -15,6 +15,13 @@ import time
 import argparse
 from pathlib import Path
 
+# Safe terminal encoding on Windows
+if hasattr(sys.stdout, "reconfigure"):
+    try:
+        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+    except Exception:
+        pass
+
 # Add workspace root to sys.path
 WORKSPACE_ROOT = Path(__file__).resolve().parent.parent
 if str(WORKSPACE_ROOT) not in sys.path:
@@ -24,12 +31,11 @@ if str(WORKSPACE_ROOT) not in sys.path:
 def check_gpu_environment():
     """Checks and logs hardware acceleration status with cyberpunk aesthetics."""
     banner = r"""
-██████╗  ██████╗  █████╗ ██████╗ ███████╗███████╗███╗   ██╗███████╗███████╗
-██╔══██╗██╔═══██╗██╔══██╗██╔══██╗██╔════╝██╔════╝████╗  ██║██╔════╝██╔════╝
-██████╔╝██║   ██║███████║██║  ██║███████╗█████╗  ██╔██╗ ██║███████╗█████╗  
-██╔══██╗██║   ██║██╔══██║██║  ██║╚════██║██╔══╝  ██║╚██╗██║╚════██║██╔══╝  
-██║  ██║╚██████╔╝██║  ██║██████╔╝███████║███████╗██║ ╚████║███████║███████╗
-╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═╝╚═════╝ ╚══════╝╚══════╝╚═╝  ╚═══╝╚══════╝╚══════╝
+  ____                 _ ____                       _    ___ 
+ |  _ \ ___   __ _  __| / ___|  ___ _ __  ___  ___ / \  |_ _|
+ | |_) / _ \ / _` |/ _` \___ \ / _ \ '_ \/ __|/ _ \ / _ \  | | 
+ |  _ < (_) | (_| | (_| |___) |  __/ | | \__ \  __/ ___ \ | | 
+ |_| \_\___/ \__,_|\__,_|____/ \___|_| |_|___/\___/_/   \_\___|
        [ AI URBAN INTELLIGENCE & VISION NEURAL TRAINING ENGINE ]
 """
     print(banner)
@@ -39,14 +45,14 @@ def check_gpu_environment():
         if torch.cuda.is_available():
             device_name = torch.cuda.get_device_name(0)
             vram_gb = torch.cuda.get_device_properties(0).total_memory / (1024 ** 3)
-            print(f"🔥 HARDWARE ACCELERATION : NVIDIA CUDA GPU DETECTED")
-            print(f"   ⚡ Compute Device     : {device_name}")
-            print(f"   🧠 Dedicated VRAM     : {vram_gb:.2f} GB GDDR")
-            print(f"   🚀 CUDA Capability    : {torch.version.cuda}")
+            print(f"[+] HARDWARE ACCELERATION : NVIDIA CUDA GPU DETECTED")
+            print(f"    - Compute Device     : {device_name}")
+            print(f"    - Dedicated VRAM     : {vram_gb:.2f} GB GDDR")
+            print(f"    - CUDA Capability    : {torch.version.cuda}")
         else:
-            print("ℹ️ HARDWARE STATUS       : CPU Multi-Core Mode (Install CUDA PyTorch for GPU boost)")
+            print("[i] HARDWARE STATUS       : CPU Multi-Core Mode (Install CUDA PyTorch for GPU boost)")
     except Exception as e:
-        print(f"⚠️ Hardware Check Warning: {e}")
+        print(f"[!] Hardware Check Warning: {e}")
     print("=" * 80)
 
 

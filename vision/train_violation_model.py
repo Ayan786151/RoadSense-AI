@@ -46,29 +46,33 @@ TRAFFIC_LIGHT_CLASSES = [
 # SAMPLE DATASET YAML GENERATOR (FOR LOCAL QUICK-START)
 # ==============================================================================
 
-def create_sample_dataset_yaml(output_path: str = "data/helmet_dataset.yaml") -> str:
+def create_sample_dataset_yaml(task_type: str = "helmet", output_path: Optional[str] = None) -> str:
     """
-    Creates a template dataset YAML configuration for helmet fine-tuning.
+    Creates a template dataset YAML configuration for helmet or traffic light fine-tuning.
     """
-    yaml_content = """# RoadSense AI - Helmet & Traffic Light Detection Dataset Config
-path: ./datasets/helmet_violation # dataset root dir
-train: images/train              # train images (relative to 'path')
-val: images/val                  # val images (relative to 'path')
-test: images/test                # test images (optional)
+    if output_path is None:
+        output_path = f"data/{task_type}_dataset.yaml"
 
-# Classes
+    if task_type == "traffic_light":
+        dataset_dir = Path("datasets/traffic_light_dataset").resolve().as_posix()
+        classes_str = "  0: red_light\n  1: yellow_light\n  2: green_light\n  3: off"
+    else:
+        dataset_dir = Path("datasets/helmet_dataset").resolve().as_posix()
+        classes_str = "  0: helmet\n  1: no_helmet\n  2: rider\n  3: motorcycle"
+
+    yaml_content = f"""# RoadSense AI - {task_type.title()} Detection Dataset Config
+path: {dataset_dir}
+train: images/train
+val: images/val
+
 names:
-  0: helmet
-  1: no_helmet
-  2: rider
-  3: motorcycle
+{classes_str}
 """
     p = Path(output_path)
     p.parent.mkdir(parents=True, exist_ok=True)
-    if not p.exists():
-        with open(p, "w") as f:
-            f.write(yaml_content)
-        print(f"[+] Created sample dataset config: {output_path}")
+    with open(p, "w") as f:
+        f.write(yaml_content)
+    print(f"[+] Created {task_type} dataset config: {output_path}")
     return str(p)
 
 
@@ -78,7 +82,7 @@ names:
 
 def train_violation_detector(
     task_type: str = "helmet",
-    data_yaml: str = "data/helmet_dataset.yaml",
+    data_yaml: Optional[str] = None,
     base_model: str = "yolo11n.pt",
     epochs: int = 30,
     batch_size: int = 16,
@@ -89,6 +93,9 @@ def train_violation_detector(
     """
     Fine-tunes a base YOLO model for helmet or traffic light violation detection.
     """
+    if data_yaml is None:
+        data_yaml = f"data/{task_type}_dataset.yaml"
+
     print("=" * 70)
     print(f"ROAD SENSE AI - {task_type.upper()} VIOLATION MODEL TRAINING")
     print("=" * 70)
@@ -105,7 +112,7 @@ def train_violation_detector(
     # 1. Check/create dataset config if needed
     if not Path(data_yaml).exists():
         print(f"[!] Dataset config '{data_yaml}' not found. Generating template...")
-        data_yaml = create_sample_dataset_yaml(data_yaml)
+        data_yaml = create_sample_dataset_yaml(task_type=task_type, output_path=data_yaml)
 
     # 2. Load model
     print(f"\n[+] Loading base model: {base_model}...")
