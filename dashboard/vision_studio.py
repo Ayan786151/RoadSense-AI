@@ -64,7 +64,12 @@ def resolve_youtube_stream_url(url: str):
     ydl_opts = {
         'format': 'best[ext=mp4][height<=720]/best[height<=720]/best',
         'quiet': True,
-        'no_warnings': True
+        'no_warnings': True,
+        'extractor_args': {
+            'youtube': {
+                'player_client': ['android', 'ios', 'mweb', 'web_embedded']
+            }
+        }
     }
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
         info = ydl.extract_info(url, download=False)
@@ -83,6 +88,11 @@ def download_youtube_clip(url: str, output_path: str, max_duration_sec: int = 30
         'outtmpl': output_path,
         'quiet': True,
         'no_warnings': True,
+        'extractor_args': {
+            'youtube': {
+                'player_client': ['android', 'ios', 'mweb', 'web_embedded']
+            }
+        },
         'download_ranges': lambda info_dict, ydl: [{'start_time': 0, 'end_time': max_duration_sec}]
     }
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
