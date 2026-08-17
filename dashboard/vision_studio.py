@@ -183,11 +183,6 @@ def render_vision_studio():
                                 cv2.rectangle(frame, (x1, tag_y1), (x1 + tw + 6, tag_y1 + th + 6), color, -1)
                                 cv2.putText(frame, label_text, (x1 + 3, tag_y1 + th + 2), cv2.FONT_HERSHEY_SIMPLEX, 0.45, (0, 0, 0), 1)
                             
-                            # Draw filled label tag
-                            (tw, th), _ = cv2.getTextSize(label_text, cv2.FONT_HERSHEY_SIMPLEX, 0.45, 1)
-                            tag_y1 = max(y1 - th - 6, 0)
-                            cv2.rectangle(frame, (x1, tag_y1), (x1 + tw + 6, tag_y1 + th + 6), color, -1)
-                            cv2.putText(frame, label_text, (x1 + 3, tag_y1 + th + 2), cv2.FONT_HERSHEY_SIMPLEX, 0.45, (0, 0, 0), 1)
 
                         processed_records.append({
                             "timestamp_seconds": round(frame_idx / fps, 2),
@@ -223,7 +218,8 @@ def render_vision_studio():
 
                     obs_csv = sess_dir / "live_traffic_observations.csv"
                     obs_df = out_df.copy()
-                    obs_df["average_speed_kmh"] = np.random.uniform(24.0, 46.0, size=len(obs_df)).round(1)
+                    obs_df["average_speed_kmh"] = np.nan  # Speed requires homography calibration — not fabricated
+                    obs_df["speed_source"] = "uncalibrated"
                     obs_df.to_csv(obs_csv, index=False)
 
                     status_text.success(f"✅ Video processing complete! Output saved to `{new_session_name}`.")

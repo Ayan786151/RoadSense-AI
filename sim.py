@@ -571,7 +571,7 @@ def validate_and_display_data(df: pd.DataFrame):
             "Corr(Week, Vehicles)": g[["week", "vehicle_density"]].corr().iloc[0, 1],
             "Corr(Week, Congestion)": g[["week", "congestion"]].corr().iloc[0, 1],
             "Avg Incidents / Wk": g["incident_occurred"].mean()
-        })
+        }), include_groups=False
     ).round(3)
     print(trend_audit.to_string())
 

@@ -4,7 +4,10 @@ import os
 import time
 import json
 from typing import Dict, Any, Optional, List
-from openai import OpenAI
+try:
+    from openai import OpenAI
+except ImportError:
+    OpenAI = None
 
 
 def _load_keys_from_env(env_name: str) -> List[str]:
@@ -60,6 +63,8 @@ def _get_next_key(provider: str = "groq") -> Optional[str]:
 
 def _call_llm(prompt: str, provider: str = "groq", max_tokens: int = 300) -> Optional[str]:
     """Call LLM with automatic key rotation and fallback between providers."""
+    if OpenAI is None:
+        return None  # openai package not installed — fall back to template briefings
     providers_to_try = [provider, "gemini" if provider == "groq" else "groq"]
 
     for prov in providers_to_try:

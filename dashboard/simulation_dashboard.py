@@ -398,7 +398,7 @@ def render_simulation_dashboard():
             dens_delta_str = f"{dens_sign}{dens_delta:.0f} veh/km vs W{selected_week-1}"
         else:
             dens_delta_str = "Baseline"
-            delta_class = "text-muted"
+            dens_class = "text-muted"
         render_metric_card("Vehicle Density", f"{dens:.0f} veh/km", dens_delta_str, dens_class, val_color="#da77f2")
 
     st.markdown("<br>", unsafe_allow_html=True)
