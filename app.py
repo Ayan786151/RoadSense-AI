@@ -32,9 +32,11 @@ st.set_page_config(
 try:
     from dashboard.simulation_dashboard import render_simulation_dashboard
     from dashboard.vision_studio import render_vision_studio
+    from dashboard.city_map import render_city_command_map
 except ImportError:
     from simulation_dashboard import render_simulation_dashboard
     from vision_studio import render_vision_studio
+    from city_map import render_city_command_map
 
 from intelligence.signal_co2 import compute_optimal_signal_timing, estimate_co2_impact
 
@@ -51,7 +53,8 @@ def main():
         [
             "🧪 Simulation & Risk Testing Lab (50 Zones, 52 Wks)",
             "📹 Live CCTV Vision & Speed Telemetry",
-            "🚀 Interactive Vision Studio & IISc AI Hub"
+            "🚀 Interactive Vision Studio & AI Violation Hub",
+            "🗺️ Geospatial 3D City Risk Map & Command Room"
         ],
         index=0
     )
@@ -62,8 +65,10 @@ def main():
         render_simulation_dashboard()
     elif app_mode.startswith("📹"):
         render_live_vision_dashboard()
-    else:
+    elif app_mode.startswith("🚀"):
         render_vision_studio()
+    else:
+        render_city_command_map()
 
     # Sidebar footer
     st.sidebar.markdown("---")

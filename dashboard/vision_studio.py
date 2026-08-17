@@ -30,6 +30,8 @@ from vision.enhancement import adaptive_preprocess_frame
 from vision.train_uvh26 import UVH26_CLASSES
 from vision.helmet_detector import HelmetViolationDetector
 from vision.red_light_detector import RedLightViolationDetector
+from vision.triple_riding_detector import TripleRidingDetector
+from intelligence.echallan_generator import create_echallan_record, render_echallan_html, PENAL_CODE_DIRECTORY
 
 try:
     import yt_dlp
@@ -172,13 +174,15 @@ def render_vision_studio():
             enable_night = st.checkbox("🌙 Force Adaptive CLAHE Night Enhancement", value=False)
 
         st.markdown("##### 🚨 Active AI Violation Enforcement Modules:")
-        v_col1, v_col2, v_col3 = st.columns(3)
+        v_col1, v_col2, v_col3, v_col4 = st.columns(4)
         with v_col1:
-            track_helmets = st.checkbox("🪖 Track No-Helmet Violations", value=True, help="Detects two-wheeler riders without protective helmets.")
+            track_helmets = st.checkbox("🪖 No-Helmet Tracking", value=True, help="Detects two-wheeler riders without protective helmets.")
         with v_col2:
-            track_red_lights = st.checkbox("🚦 Enforce Red-Light Breaking", value=True, help="Monitors virtual stop-line intrusion during red signal phases.")
+            track_red_lights = st.checkbox("🚦 Red-Light Breaking", value=True, help="Monitors virtual stop-line intrusion during red signal phases.")
         with v_col3:
-            stop_line_ratio = st.slider("Virtual Stop-Line Position", 0.40, 0.90, 0.65, step=0.05, help="Vertical screen height ratio of the intersection stop line.")
+            track_triple = st.checkbox("👥 Triple-Riding Violations", value=True, help="Detects overloaded two-wheelers carrying >2 persons.")
+        with v_col4:
+            stop_line_ratio = st.slider("Stop-Line Position", 0.40, 0.90, 0.65, step=0.05, help="Vertical screen height ratio of the intersection stop line.")
 
         st.markdown("---")
 
@@ -229,6 +233,7 @@ def render_vision_studio():
                     yolo_model = YOLO(model_target)
                     helmet_detector = HelmetViolationDetector() if track_helmets else None
                     red_light_detector = RedLightViolationDetector(stop_line_y_ratio=stop_line_ratio) if track_red_lights else None
+                    triple_detector = TripleRidingDetector() if track_triple else None
 
                     frame_idx = 0
                     processed_records = []
@@ -321,7 +326,22 @@ def render_vision_studio():
                                             "details": h_eval["reason"]
                                         })
 
-                        # 2. Red-Light Violation Check
+                                # 2. Triple-Riding Verification
+                                if track_triple and triple_detector and vtype == "motorcycle":
+                                    tr_eval = triple_detector.analyze_motorcycle_occupancy(frame, xyxy, t_id, timestamp)
+                                    if tr_eval["is_triple_riding"] and t_id is not None:
+                                        violation_records.append({
+                                            "timestamp_seconds": timestamp,
+                                            "frame_number": frame_idx,
+                                            "track_id": t_id,
+                                            "vehicle_type": "2-Wheeler",
+                                            "violation_type": "TRIPLE_RIDING",
+                                            "severity": "HIGH",
+                                            "confidence": f"{tr_eval['confidence']*100:.0f}%",
+                                            "details": f"Overloaded: {tr_eval['estimated_riders']} persons seated on 2-wheeler"
+                                        })
+
+                        # 3. Red-Light Violation Check
                         if track_red_lights and red_light_detector:
                             active_rl, phase = red_light_detector.process_frame_violations(frame, frame_tracked_vehicles, timestamp)
                             red_light_detector.draw_annotation(frame, phase, active_rl)
@@ -352,7 +372,8 @@ def render_vision_studio():
                         
                         no_helmet_cnt = len(helmet_detector.logged_violations) if helmet_detector else 0
                         red_light_cnt = len(red_light_detector.logged_violations) if red_light_detector else 0
-                        status_text.text(f"Frame {frame_idx}/{total_f} • Vehicles: {total_v} | 🚨 Violations: 🪖 No-Helmet: {no_helmet_cnt}, 🚦 Red-Light: {red_light_cnt}")
+                        triple_cnt = len(triple_detector.logged_violations) if triple_detector else 0
+                        status_text.text(f"Frame {frame_idx}/{total_f} • Vehicles: {total_v} | 🚨 Violations: 🪖 No-Helmet: {no_helmet_cnt}, 🚦 Red-Light: {red_light_cnt}, 👥 Triple-Riding: {triple_cnt}")
 
                         # Live visual preview update
                         if frame_idx % (frame_skip * 3) == 0:
@@ -388,24 +409,49 @@ def render_vision_studio():
                     status_text.success(f"✅ Video processing complete! Metrics & Violation logs saved to `{new_session_name}`.")
                     st.balloons()
 
+                    # Calculate fine recovery
+                    total_fines = 0
+                    for _, vrow in viol_df.iterrows():
+                        vtype = vrow.get("violation_type", "")
+                        fine = PENAL_CODE_DIRECTORY.get(vtype, {}).get("fine_inr", 1000)
+                        total_fines += fine
+
                     # Summary Metrics Cards
                     st.markdown("### 📊 Detection & Violation Summary")
-                    sm1, sm2, sm3, sm4 = st.columns(4)
+                    sm1, sm2, sm3, sm4, sm5 = st.columns(5)
                     sm1.metric("Processed Frames", len(out_df))
                     sm2.metric("Peak Vehicle Density", int(out_df["vehicle_count"].max()))
-                    sm3.metric("🪖 No-Helmet Violations", len(helmet_detector.logged_violations) if helmet_detector else 0)
-                    sm4.metric("🚦 Red-Light Violations", len(red_light_detector.logged_violations) if red_light_detector else 0)
+                    sm3.metric("🪖 No-Helmet", len(helmet_detector.logged_violations) if helmet_detector else 0)
+                    sm4.metric("🚦 Red-Light", len(red_light_detector.logged_violations) if red_light_detector else 0)
+                    sm5.metric("💰 Fine Potential", f"₹{total_fines:,}")
 
-                    # Violation Evidence Log Table
+                    # Violation Evidence Log Table & E-Challan Inspector
                     if not viol_df.empty:
-                        st.markdown("#### 🚨 Detected Traffic Safety Violations")
+                        st.markdown("#### 🚨 Detected Traffic Safety Violations & E-Challan Dispatch")
                         st.dataframe(viol_df, use_container_width=True)
-                        st.download_button(
-                            "📥 Download Violation Evidence CSV",
-                            viol_df.to_csv(index=False),
-                            file_name=f"{new_session_name}_violations.csv",
-                            mime="text/csv"
-                        )
+
+                        c_down1, c_down2 = st.columns([1, 1])
+                        with c_down1:
+                            st.download_button(
+                                "📥 Download Violation Evidence CSV",
+                                viol_df.to_csv(index=False),
+                                file_name=f"{new_session_name}_violations.csv",
+                                mime="text/csv"
+                            )
+                        with c_down2:
+                            st.markdown(f"**Total Legal Citations Pending:** `{len(viol_df)} Citations` (₹{total_fines:,} INR)")
+
+                        # Interactive E-Challan Ticket Viewer
+                        st.markdown("##### 📜 Instant Digital E-Challan Ticket Inspector")
+                        violation_options = [f"#{row['track_id']} - {row['violation_type']} (Frame {row['frame_number']})" for _, row in viol_df.iterrows()]
+                        selected_challan_idx = st.selectbox("Select Violation to Generate Official Digital Citation:", range(len(violation_options)), format_func=lambda i: violation_options[i])
+                        
+                        selected_viol = viol_df.iloc[selected_challan_idx].to_dict()
+                        challan_doc = create_echallan_record(selected_viol)
+                        ticket_html = render_echallan_html(challan_doc)
+                        
+                        st.components.v1.html(ticket_html, height=380, scrolling=True)
+
                     else:
                         st.info("✅ Zero traffic safety violations recorded in this observation session.")
 
