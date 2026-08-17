@@ -1,0 +1,9 @@
+# RoadSense AI - Helmet Detection Dataset Config
+path: C:/Users/asus/Downloads/traffic_sim-main (3)/traffic_sim-main/datasets/helmet_dataset
+train: images/train
+val: images/val
+
+names:
+  0: helmet
+  1: no_helmet
+  2: motorcyclist
