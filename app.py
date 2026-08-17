@@ -14,7 +14,7 @@ import streamlit as st
 
 # Configure global page settings
 st.set_page_config(
-    page_title="RoadSense AI — Traffic Intelligence & Risk Analytics",
+    page_title="RoadSense AI",
     page_icon="🚦",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -28,8 +28,8 @@ except ImportError:
 
 
 def main():
-    st.sidebar.image("https://img.icons8.com/fluency/96/traffic-light.png", width=64)
-    st.sidebar.title("RoadSense AI")
+    st.sidebar.image("assets/eye.png", width=64)
+    st.sidebar.title("RoadSense")
     st.sidebar.caption("Intelligent Traffic Risk & Priority Intelligence")
     st.sidebar.markdown("---")
 
