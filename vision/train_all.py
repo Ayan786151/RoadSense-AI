@@ -22,23 +22,31 @@ if str(WORKSPACE_ROOT) not in sys.path:
 
 
 def check_gpu_environment():
-    """Checks and logs hardware acceleration status."""
-    print("=" * 80)
-    print("🚦 ROADSENSE AI — MASTER UNIFIED MODEL TRAINING SUITE")
+    """Checks and logs hardware acceleration status with cyberpunk aesthetics."""
+    banner = r"""
+██████╗  ██████╗  █████╗ ██████╗ ███████╗███████╗███╗   ██╗███████╗███████╗
+██╔══██╗██╔═══██╗██╔══██╗██╔══██╗██╔════╝██╔════╝████╗  ██║██╔════╝██╔════╝
+██████╔╝██║   ██║███████║██║  ██║███████╗█████╗  ██╔██╗ ██║███████╗█████╗  
+██╔══██╗██║   ██║██╔══██║██║  ██║╚════██║██╔══╝  ██║╚██╗██║╚════██║██╔══╝  
+██║  ██║╚██████╔╝██║  ██║██████╔╝███████║███████╗██║ ╚████║███████║███████╗
+╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═╝╚═════╝ ╚══════╝╚══════╝╚═╝  ╚═══╝╚══════╝╚══════╝
+       [ AI URBAN INTELLIGENCE & VISION NEURAL TRAINING ENGINE ]
+"""
+    print(banner)
     print("=" * 80)
     try:
         import torch
         if torch.cuda.is_available():
             device_name = torch.cuda.get_device_name(0)
             vram_gb = torch.cuda.get_device_properties(0).total_memory / (1024 ** 3)
-            print(f"✅ Hardware Acceleration : NVIDIA GPU DETECTED")
-            print(f"   Device Name           : {device_name}")
-            print(f"   Dedicated VRAM        : {vram_gb:.2f} GB")
-            print(f"   PyTorch CUDA Build    : {torch.version.cuda}")
+            print(f"🔥 HARDWARE ACCELERATION : NVIDIA CUDA GPU DETECTED")
+            print(f"   ⚡ Compute Device     : {device_name}")
+            print(f"   🧠 Dedicated VRAM     : {vram_gb:.2f} GB GDDR")
+            print(f"   🚀 CUDA Capability    : {torch.version.cuda}")
         else:
-            print("ℹ️ Hardware Acceleration : CPU Mode (Install CUDA PyTorch for faster GPU training)")
+            print("ℹ️ HARDWARE STATUS       : CPU Multi-Core Mode (Install CUDA PyTorch for GPU boost)")
     except Exception as e:
-        print(f"⚠️ PyTorch Check Warning : {e}")
+        print(f"⚠️ Hardware Check Warning: {e}")
     print("=" * 80)
 
 
@@ -146,17 +154,23 @@ def main():
     total_time = time.time() - overall_start
 
     print("\n" + "=" * 80)
-    print("🏆 UNIFIED TRAINING SUITE SUMMARY")
+    print("🏆 UNIFIED NEURAL TRAINING SUITE SUMMARY")
     print("=" * 80)
     for model_name, status in results.items():
         symbol = "✅ SUCCESS" if status is True else ("⏩ SKIPPED" if status == "SKIPPED" else "❌ FAILED")
         print(f" • {model_name:<35} : {symbol}")
-    print(f"\nTotal Pipeline Elapsed Time: {total_time/60:.2f} minutes")
+    print(f"\n⏱️ Total Pipeline Elapsed Time: {total_time/60:.2f} minutes")
     print("=" * 80)
-    print("Ready to commit & push weights to GitHub via:")
+    print("📸 INSTAGRAM / DEMO-READY VISUAL ARTIFACTS GENERATED:")
+    print(" • 📈 Training Curves & Loss: runs/detect/models/violation_models/results.png")
+    print(" • 🎯 Detection Collage Grid: runs/detect/models/violation_models/val_batch0_pred.jpg")
+    print(" • 📊 Confusion Matrix Graph: runs/detect/models/violation_models/confusion_matrix.png")
+    print(" • 🏷️ Spatial Class Density: runs/detect/models/violation_models/labels.jpg")
+    print("=" * 80)
+    print("🚀 Ready to commit & push weights to GitHub via:")
     print("   git add -f models/*.pt models/*.pkl")
     print("   git commit -m 'feat: complete unified training suite weights'")
-    print("   git push origin main")
+    print("   git push origin hackathon-enhancements")
     print("=" * 80)
 
 
