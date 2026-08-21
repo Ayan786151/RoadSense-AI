@@ -31,13 +31,13 @@ except ImportError:
     yt_dlp = None
 
 
-# Subtle, high-contrast BGR bounding box palette
+# High-contrast BGR bounding box palette
 CLASS_COLORS = {
-    "motorcycle": (250, 250, 250),   # White
-    "auto_rickshaw": (180, 180, 180), # Silver Gray
-    "car": (220, 220, 220),          # Off White
-    "bus": (160, 160, 160),          # Neutral Gray
-    "truck": (130, 130, 130)         # Dark Gray
+    "motorcycle": (0, 215, 255),    # Golden Yellow
+    "auto_rickshaw": (255, 255, 0), # Cyan
+    "car": (0, 255, 127),           # Emerald Green
+    "bus": (0, 140, 255),           # Vivid Orange
+    "truck": (0, 0, 255)            # Bright Red
 }
 
 CLASS_DISPLAY_LABELS = {
@@ -324,7 +324,7 @@ def render_vision_studio():
                             persist=True,
                             tracker="bytetrack.yaml",
                             conf=conf_thresh,
-                            imgsz=480,
+                            imgsz=640,
                             verbose=False
                         )
                         result = results[0]
@@ -357,17 +357,17 @@ def render_vision_studio():
                                 })
 
                                 # Visual styling
-                                color = CLASS_COLORS.get(vtype, (220, 220, 220))
+                                color = CLASS_COLORS.get(vtype, (0, 255, 0))
                                 label_text = CLASS_DISPLAY_LABELS.get(vtype, vtype)
                                 
-                                # Clean 1px bounding box
-                                cv2.rectangle(frame, (x1, y1), (x2, y2), color, 1)
+                                # Draw bounding box (2px, colored)
+                                cv2.rectangle(frame, (x1, y1), (x2, y2), color, 2)
                                 
-                                # Clean label tag
-                                (tw, th), _ = cv2.getTextSize(label_text, cv2.FONT_HERSHEY_SIMPLEX, 0.40, 1)
-                                tag_y1 = max(y1 - th - 4, 0)
-                                cv2.rectangle(frame, (x1, tag_y1), (x1 + tw + 4, tag_y1 + th + 4), (24, 24, 27), -1)
-                                cv2.putText(frame, label_text, (x1 + 2, tag_y1 + th), cv2.FONT_HERSHEY_SIMPLEX, 0.40, color, 1)
+                                # Draw filled label tag
+                                (tw, th), _ = cv2.getTextSize(label_text, cv2.FONT_HERSHEY_SIMPLEX, 0.45, 1)
+                                tag_y1 = max(y1 - th - 6, 0)
+                                cv2.rectangle(frame, (x1, tag_y1), (x1 + tw + 6, tag_y1 + th + 6), color, -1)
+                                cv2.putText(frame, label_text, (x1 + 3, tag_y1 + th + 2), cv2.FONT_HERSHEY_SIMPLEX, 0.45, (0, 0, 0), 1)
 
                                 # 1. Helmet Compliance Verification
                                 if track_helmets and helmet_detector and vtype == "motorcycle":

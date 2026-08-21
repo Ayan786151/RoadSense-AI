@@ -165,19 +165,19 @@ class HelmetViolationDetector:
         conf = analysis["confidence"]
 
         if status == "NO_HELMET":
-            color = (0, 0, 240)
-            label = f"NO HELMET #{t_id} [{conf*100:.0f}%]"
-            cv2.rectangle(frame, (hx1, hy1), (hx2, hy2), color, 2)
-            (tw, th), _ = cv2.getTextSize(label, cv2.FONT_HERSHEY_SIMPLEX, 0.38, 1)
-            cv2.rectangle(frame, (hx1, max(0, hy1 - th - 6)), (hx1 + tw + 4, hy1), (24, 24, 27), -1)
-            cv2.putText(frame, label, (hx1 + 2, max(12, hy1 - 2)), cv2.FONT_HERSHEY_SIMPLEX, 0.38, color, 1)
+            color = (0, 0, 255)  # Bright Red
+            label = f"NO HELMET VIOLATION! (ID:{t_id}) {conf*100:.0f}%"
+            # Draw pulsing head warning box
+            cv2.rectangle(frame, (hx1, hy1), (hx2, hy2), color, 3)
+            # Tag banner
+            (tw, th), _ = cv2.getTextSize(label, cv2.FONT_HERSHEY_SIMPLEX, 0.5, 2)
+            cv2.rectangle(frame, (hx1, max(0, hy1 - th - 8)), (hx1 + tw + 8, hy1), color, -1)
+            cv2.putText(frame, label, (hx1 + 4, hy1 - 4), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 2)
         else:
-            color = (180, 180, 180)
-            label = f"HELMET #{t_id}"
+            color = (0, 255, 0)  # Green
+            label = f"Helmet OK (ID:{t_id})"
             cv2.rectangle(frame, (hx1, hy1), (hx2, hy2), color, 1)
-            (tw, th), _ = cv2.getTextSize(label, cv2.FONT_HERSHEY_SIMPLEX, 0.35, 1)
-            cv2.rectangle(frame, (hx1, max(0, hy1 - th - 4)), (hx1 + tw + 4, hy1), (24, 24, 27), -1)
-            cv2.putText(frame, label, (hx1 + 2, max(12, hy1 - 2)), cv2.FONT_HERSHEY_SIMPLEX, 0.35, color, 1)
+            cv2.putText(frame, label, (hx1, max(15, hy1 - 5)), cv2.FONT_HERSHEY_SIMPLEX, 0.4, color, 1)
 
     def get_summary_statistics(self) -> Dict[str, Any]:
         """Returns total helmet compliance summary."""

@@ -200,28 +200,24 @@ class RedLightViolationDetector:
         stop_line_y = int(h_frame * self.stop_line_y_ratio)
 
         # Color based on signal phase
-        line_color = (0, 0, 240) if signal_phase == "RED" else (70, 200, 70)
-        thickness = 2
+        line_color = (0, 0, 255) if signal_phase == "RED" else (0, 255, 0)
+        thickness = 3 if signal_phase == "RED" else 2
 
         # Draw stop line
         cv2.line(frame, (0, stop_line_y), (w_frame, stop_line_y), line_color, thickness)
         
         # Stop line label badge
-        badge_text = f"STOP-LINE [SIGNAL: {signal_phase}]"
-        (bw, bh), _ = cv2.getTextSize(badge_text, cv2.FONT_HERSHEY_SIMPLEX, 0.45, 1)
-        cv2.rectangle(frame, (16, stop_line_y - bh - 8), (20 + bw + 4, stop_line_y), (24, 24, 27), -1)
-        cv2.putText(frame, badge_text, (20, stop_line_y - 4), cv2.FONT_HERSHEY_SIMPLEX, 0.45, line_color, 1)
+        badge_text = f"VIRTUAL STOP-LINE [SIGNAL: {signal_phase}]"
+        cv2.putText(frame, badge_text, (20, stop_line_y - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.6, line_color, 2)
 
         # Highlight violating vehicles
         for viol in active_violations:
             bbox = viol.get("bbox", [])
             if len(bbox) == 4:
                 vx1, vy1, vx2, vy2 = map(int, bbox)
-                cv2.rectangle(frame, (vx1, vy1), (vx2, vy2), (0, 0, 240), 2)
-                alert_text = f"RED LIGHT VIOLATION #{viol['track_id']}"
-                (aw, ah), _ = cv2.getTextSize(alert_text, cv2.FONT_HERSHEY_SIMPLEX, 0.40, 1)
-                cv2.rectangle(frame, (vx1, max(0, vy1 - ah - 6)), (vx1 + aw + 4, vy1), (24, 24, 27), -1)
-                cv2.putText(frame, alert_text, (vx1 + 2, max(12, vy1 - 2)), cv2.FONT_HERSHEY_SIMPLEX, 0.40, (0, 0, 240), 1)
+                cv2.rectangle(frame, (vx1, vy1), (vx2, vy2), (0, 0, 255), 4)
+                alert_text = f"RED LIGHT VIOLATION! ID:{viol['track_id']}"
+                cv2.putText(frame, alert_text, (vx1, max(20, vy1 - 10)), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 0, 255), 2)
 
     def get_summary_statistics(self) -> Dict[str, Any]:
         """Returns total red light violation summary."""
