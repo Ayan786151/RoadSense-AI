@@ -189,7 +189,6 @@ from intelligence.signal_co2 import compute_optimal_signal_timing, estimate_co2_
 
 
 def main():
-<<<<<<< HEAD
     # Sidebar Header
     st.sidebar.markdown("""
     <div style="padding: 8px 0 16px 0; border-bottom: 1px solid #27272a; margin-bottom: 16px;">
@@ -204,18 +203,6 @@ def main():
         </div>
     </div>
     """, unsafe_allow_html=True)
-=======
-<<<<<<< HEAD
-    st.sidebar.image("assets/eye.png", width=64)
-    st.sidebar.title("RoadSense")
-    st.sidebar.caption("Intelligent Traffic Risk & Priority Intelligence")
-=======
-    st.sidebar.image("https://img.icons8.com/fluency/96/traffic-light.png", width=64)
-    st.sidebar.title("RoadSense AI")
-    st.sidebar.caption("Intelligent Traffic Risk & Civic Social Service Hub")
->>>>>>> 3fe8d10085f4cb7cce4725237897f1e1eb2e9bdb
-    st.sidebar.markdown("---")
->>>>>>> origin/main
 
     # Navigation Mode Selector
     app_mode = st.sidebar.radio(
