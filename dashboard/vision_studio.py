@@ -22,7 +22,7 @@ from vision.train_uvh26 import UVH26_CLASSES
 from vision.helmet_detector import HelmetViolationDetector
 from vision.red_light_detector import RedLightViolationDetector
 from vision.triple_riding_detector import TripleRidingDetector
-from vision.adaptive_engine import MahoragaAdaptiveEngine
+from vision.adaptive_engine import AutonomousAdaptiveEngine
 from intelligence.echallan_generator import create_echallan_record, render_echallan_html, PENAL_CODE_DIRECTORY
 
 try:
@@ -198,7 +198,7 @@ def render_vision_studio():
         with v_col3:
             track_triple = st.checkbox("Triple-Riding Violations", value=True)
         with v_col4:
-            auto_mode = st.checkbox("Mahoraga Autonomous Scene Engine", value=True)
+            auto_mode = st.checkbox("Autonomous Scene Perception Engine", value=True)
             if not auto_mode:
                 stop_line_ratio = st.slider("Manual Stop-Line", 0.40, 0.90, 0.65, step=0.05)
             else:
@@ -235,7 +235,7 @@ def render_vision_studio():
                 is_live_infinite = is_yt_source
                 if not is_live_infinite:
                     progress = progress_bar.progress(0)
-                status_text.info(f"Initializing YOLO model ({model_target}) and Mahoraga engine...")
+                status_text.info(f"Initializing YOLO model ({model_target}) and Adaptive Perception engine...")
 
                 try:
                     def open_live_capture(url):
@@ -260,7 +260,7 @@ def render_vision_studio():
                     fps = cap.get(cv2.CAP_PROP_FPS) or 30.0
                     
                     yolo_model = YOLO(model_target)
-                    mahoraga = MahoragaAdaptiveEngine() if auto_mode else None
+                    adaptive_engine = AutonomousAdaptiveEngine() if auto_mode else None
                     helmet_detector = HelmetViolationDetector() if track_helmets else None
                     red_light_detector = RedLightViolationDetector(stop_line_y_ratio=stop_line_ratio) if track_red_lights else None
                     triple_detector = TripleRidingDetector() if track_triple else None
@@ -309,9 +309,9 @@ def render_vision_studio():
 
                         timestamp = round(frame_idx / fps, 2)
 
-                        # Environmental Lighting
-                        if mahoraga:
-                            proc_frame, audit = mahoraga.auto_enhance_environment(frame)
+                        # Adaptive lighting enhancement
+                        if adaptive_engine:
+                            proc_frame, audit = adaptive_engine.auto_enhance_environment(frame)
                         else:
                             proc_frame, audit = adaptive_preprocess_frame(frame, force_enhancement=enable_night)
 
@@ -397,12 +397,12 @@ def render_vision_studio():
                                             "details": f"Overloaded: {tr_eval['estimated_riders']} persons seated on 2-wheeler"
                                         })
 
-                        # 3. Autonomous Mahoraga Stop-Line & Signal Phase Adaptation
-                        if mahoraga and track_red_lights and red_light_detector:
-                            auto_y, auto_conf = mahoraga.auto_detect_stop_line(frame, frame_tracked_vehicles)
+                        # 3. Autonomous Adaptive Engine Stop-Line & Signal Phase Adaptation
+                        if adaptive_engine and track_red_lights and red_light_detector:
+                            auto_y, auto_conf = adaptive_engine.auto_detect_stop_line(frame, frame_tracked_vehicles)
                             red_light_detector.stop_line_y_ratio = auto_y / float(frame.shape[0])
                             
-                            auto_phase, auto_p_conf, auto_reason = mahoraga.auto_detect_signal_phase(frame, result, frame_tracked_vehicles, fps)
+                            auto_phase, auto_p_conf, auto_reason = adaptive_engine.auto_detect_signal_phase(frame, result, frame_tracked_vehicles, fps)
                             red_light_detector.signal_state_override = auto_phase
 
                         # 4. Red-Light Violation Check

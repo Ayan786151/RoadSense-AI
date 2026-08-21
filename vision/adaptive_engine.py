@@ -1,14 +1,12 @@
 """
 ================================================================================
-ROAD SENSE AI - MAHORAGA ADAPTIVE SCENE INTELLIGENCE ENGINE
-MODULE: ZERO-HARDCODED AUTONOMOUS PERCEPTION & SCENE ADAPTATION
+ROAD SENSE AI - AUTONOMOUS ADAPTIVE SCENE INTELLIGENCE ENGINE
+MODULE: ADAPTIVE STOP-LINE, HSV OPTICAL SIGNAL TRACKING & LIGHTING CALIBRATION
 ================================================================================
-
-This module provides autonomous, general-purpose adaptation across any video feed:
-1. Autonomous Stop-Line Detection (Road edge morphology + vehicle deceleration zones)
-2. Autonomous Traffic Signal State (Traffic light YOLO ROI + collective vehicle flow dynamics)
-3. Autonomous Road Horizon & Sky Masking (Vanishing point & trajectory bounds)
-4. Autonomous Environmental Lighting Adaptation (Dynamic CLAHE & gamma correction)
+Zero-hardcoding continuous scene adaptation:
+1. Dynamic Stop-Line Discovery (periodic Hough lines + vehicle deceleration clustering)
+2. Optical Traffic Light Signal Phase Perception (HSV color thresholding & flow kinematics)
+3. Environmental Lighting Auto-Calibration (sub-sampled auto-CLAHE)
 ================================================================================
 """
 
@@ -17,10 +15,10 @@ import numpy as np
 from typing import Dict, List, Optional, Tuple, Any
 
 
-class MahoragaAdaptiveEngine:
+class AutonomousAdaptiveEngine:
     """
-    Autonomous scene adaptation engine that eliminates all hardcoded parameters.
-    Adapts on-the-fly to camera angle, lighting, intersection layout, and traffic flow.
+    Autonomous Scene Adaptation Engine.
+    Dynamically self-calibrates to any intersection camera angle without manual configuration.
     """
 
     def __init__(self):
