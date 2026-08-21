@@ -185,24 +185,27 @@ def render_vision_studio():
 
         with col2:
             new_session_name = st.text_input("OUTPUT SESSION ID", value=f"session_{int(time.time()) % 1000:03d}")
-            conf_thresh = st.slider("CONFIDENCE THRESHOLD", 0.20, 0.65, 0.35, step=0.05)
-            frame_skip = st.slider("FRAME SKIP MULTIPLIER", 1, 15, 3)
+            conf_thresh = st.slider("CONFIDENCE THRESHOLD", 0.10, 0.60, 0.25, step=0.05, help="Lower confidence captures distant 2-wheelers and vehicles.")
+            frame_skip = st.slider("FRAME SKIP MULTIPLIER", 1, 10, 2)
             enable_night = st.checkbox("Force CLAHE Low-Light Enhancement", value=False)
 
-        st.markdown("##### Enforcement Modules:")
+        st.markdown("##### Enforcement & Signal Parameters:")
         v_col1, v_col2, v_col3, v_col4 = st.columns(4)
         with v_col1:
             track_helmets = st.checkbox("No-Helmet Tracking", value=True)
+            track_triple = st.checkbox("Triple-Riding Violations", value=True)
         with v_col2:
             track_red_lights = st.checkbox("Red-Light Stop-Line Radar", value=True)
+            auto_stop_line = st.checkbox("Auto-Calibrate Stop-Line", value=False)
         with v_col3:
-            track_triple = st.checkbox("Triple-Riding Violations", value=True)
+            stop_line_ratio = st.slider("STOP-LINE POSITION", 0.30, 0.90, 0.60, step=0.02, help="Vertical position of virtual stop-line.")
         with v_col4:
-            auto_mode = st.checkbox("Autonomous Scene Perception Engine", value=True)
-            if not auto_mode:
-                stop_line_ratio = st.slider("Manual Stop-Line", 0.40, 0.90, 0.65, step=0.05)
-            else:
-                stop_line_ratio = 0.60
+            signal_mode = st.selectbox(
+                "SIGNAL PHASE MODE",
+                ["Cycle: 10s Green / 10s Red", "Force RED (Enforcement Test)", "Auto (Optical Detection)", "Force GREEN (Free Flow)"],
+                index=0,
+                help="Controls whether signal is automatic, simulated cycle, or forced."
+            )
 
         st.markdown("---")
 
@@ -260,7 +263,7 @@ def render_vision_studio():
                     fps = cap.get(cv2.CAP_PROP_FPS) or 30.0
                     
                     yolo_model = YOLO(model_target)
-                    adaptive_engine = AutonomousAdaptiveEngine() if auto_mode else None
+                    adaptive_engine = AutonomousAdaptiveEngine()
                     helmet_detector = HelmetViolationDetector() if track_helmets else None
                     red_light_detector = RedLightViolationDetector(stop_line_y_ratio=stop_line_ratio) if track_red_lights else None
                     triple_detector = TripleRidingDetector() if track_triple else None
@@ -397,17 +400,37 @@ def render_vision_studio():
                                             "details": f"Overloaded: {tr_eval['estimated_riders']} persons seated on 2-wheeler"
                                         })
 
-                        # 3. Autonomous Adaptive Engine Stop-Line & Signal Phase Adaptation
-                        if adaptive_engine and track_red_lights and red_light_detector:
-                            auto_y, auto_conf = adaptive_engine.auto_detect_stop_line(frame, frame_tracked_vehicles)
-                            red_light_detector.stop_line_y_ratio = auto_y / float(frame.shape[0])
-                            
-                            auto_phase, auto_p_conf, auto_reason = adaptive_engine.auto_detect_signal_phase(frame, result, frame_tracked_vehicles, fps)
-                            red_light_detector.signal_state_override = auto_phase
-
-                        # 4. Red-Light Violation Check
+                        # 3. Stop-Line & Signal Phase Adaptation
                         if track_red_lights and red_light_detector:
-                            active_rl, phase = red_light_detector.process_frame_violations(frame, frame_tracked_vehicles, timestamp)
+                            if auto_stop_line and adaptive_engine:
+                                auto_y, auto_conf = adaptive_engine.auto_detect_stop_line(frame, frame_tracked_vehicles)
+                                red_light_detector.stop_line_y_ratio = auto_y / float(frame.shape[0])
+                            else:
+                                red_light_detector.stop_line_y_ratio = stop_line_ratio
+
+                            # Signal Phase Evaluation
+                            if "Force RED" in signal_mode:
+                                phase = "RED"
+                                forced_red = True
+                            elif "Force GREEN" in signal_mode:
+                                phase = "GREEN"
+                                forced_red = False
+                            elif "Cycle" in signal_mode:
+                                # 10s Green / 10s Red dynamic cycle
+                                is_red = (int(timestamp) % 20) >= 10
+                                phase = "RED" if is_red else "GREEN"
+                                forced_red = is_red
+                            else:  # Auto (Optical)
+                                if adaptive_engine:
+                                    auto_phase, auto_p_conf, auto_reason = adaptive_engine.auto_detect_signal_phase(frame, result, frame_tracked_vehicles, fps)
+                                    phase = auto_phase
+                                    forced_red = (auto_phase == "RED")
+                                else:
+                                    phase = "GREEN"
+                                    forced_red = False
+
+                            # 4. Red-Light Violation Check
+                            active_rl, computed_phase = red_light_detector.process_frame_violations(frame, frame_tracked_vehicles, timestamp, forced_red=forced_red)
                             red_light_detector.draw_annotation(frame, phase, active_rl)
                             for viol in active_rl:
                                 violation_records.append({

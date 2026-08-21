@@ -78,30 +78,24 @@ class AutonomousAdaptiveEngine:
                 if horizontal_y_candidates:
                     detected_line_y = int(np.median(horizontal_y_candidates))
 
-        # 2. Vehicle Trajectory Cluster Refinement
-        if tracked_vehicles:
-            y_coords = [v["center_y"] for v in tracked_vehicles if "center_y" in v]
-            if len(y_coords) >= 3:
-                median_vehicle_y = int(np.median(y_coords))
-                if detected_line_y is not None:
-                    target_y = int(0.6 * detected_line_y + 0.4 * median_vehicle_y)
-                elif self.learned_stop_line_y is not None:
-                    target_y = int(0.85 * self.learned_stop_line_y + 0.15 * median_vehicle_y)
-                else:
-                    target_y = median_vehicle_y
-            else:
-                target_y = detected_line_y if detected_line_y is not None else (self.learned_stop_line_y or int(h * 0.60))
+        # 2. Maintain stable stop-line position near junction markings
+        if detected_line_y is not None:
+            # Constrain to plausible road crossing zone (45% to 75% height)
+            clamped_y = max(int(h * 0.45), min(int(h * 0.75), detected_line_y))
+            target_y = clamped_y
+        elif self.learned_stop_line_y is not None:
+            target_y = self.learned_stop_line_y
         else:
-            target_y = detected_line_y if detected_line_y is not None else (self.learned_stop_line_y or int(h * 0.60))
+            target_y = int(h * 0.62)
 
         # Smooth adaptation over time (Exponential Moving Average)
         if self.learned_stop_line_y is None:
             self.learned_stop_line_y = target_y
-            self.stop_line_confidence = 0.70
+            self.stop_line_confidence = 0.85
         else:
-            alpha = 0.05
+            alpha = 0.02
             self.learned_stop_line_y = int((1 - alpha) * self.learned_stop_line_y + alpha * target_y)
-            self.stop_line_confidence = min(0.98, self.stop_line_confidence + 0.005)
+            self.stop_line_confidence = min(0.98, self.stop_line_confidence + 0.002)
 
         return self.learned_stop_line_y, self.stop_line_confidence
 

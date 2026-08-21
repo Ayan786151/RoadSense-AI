@@ -108,29 +108,32 @@ class HelmetViolationDetector:
                     reason = "AI Head Classifier: Helmet Verified"
         else:
             # High-precision heuristic fallback:
-            # Inspect head region texture/edge contrast & luminance profile
-            # Helmets typically display high specular highlights or distinctive uniform curvature/color
-            if head_crop.size > 40:
+            # Inspect head region texture/edge contrast, hair luminance profile & skin tone
+            if head_crop.size > 30:
                 gray_head = cv2.cvtColor(head_crop, cv2.COLOR_BGR2GRAY)
-                # Compute gradient variance
+                # Compute gradient variance (exposed hair / face has high edge frequency)
                 lap_var = cv2.Laplacian(gray_head, cv2.CV_64F).var()
                 
-                # Check skin-tone color ratio in head crop (indicative of exposed head/face/hair)
+                # Check skin-tone color ratio in head crop
                 hsv_head = cv2.cvtColor(head_crop, cv2.COLOR_BGR2HSV)
-                # Skin tone mask in HSV
-                lower_skin = np.array([0, 20, 70], dtype=np.uint8)
+                lower_skin = np.array([0, 20, 60], dtype=np.uint8)
                 upper_skin = np.array([25, 255, 255], dtype=np.uint8)
                 skin_mask = cv2.inRange(hsv_head, lower_skin, upper_skin)
                 skin_ratio = np.count_nonzero(skin_mask) / float(head_crop.shape[0] * head_crop.shape[1])
+                
+                # Dark hair / exposed skull detection
+                dark_hair_mask = cv2.inRange(gray_head, 0, 65)
+                dark_hair_ratio = np.count_nonzero(dark_hair_mask) / float(head_crop.shape[0] * head_crop.shape[1])
 
-                if skin_ratio > 0.38 and lap_var > 60:
+                # Bare head conditions: exposed skin, high texture variance, or dark hair without specular helmet sheen
+                if skin_ratio > 0.16 or (lap_var > 35 and (skin_ratio > 0.08 or dark_hair_ratio > 0.35)):
                     has_helmet = False
-                    confidence = round(min(0.95, 0.65 + skin_ratio), 2)
-                    reason = "Exposed Head Profile Detected"
+                    confidence = round(min(0.96, 0.70 + skin_ratio * 0.8), 2)
+                    reason = "Exposed Head Profile (No Helmet)"
                 else:
                     has_helmet = True
                     confidence = 0.88
-                    reason = "Protective Headgear Detected"
+                    reason = "Protective Headgear Verified"
 
         status = "HELMET" if has_helmet else "NO_HELMET"
 
