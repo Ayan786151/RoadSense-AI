@@ -1,8 +1,129 @@
 {
   "zone_id": "Zone_01",
+  "location_name": "Andheri",
+  "city": "Mumbai",
+  "zone_type": "Commercial_Downtown",
   "week": 46,
-  "predicted_risk_probability": 0.6607896163935283,
-  "metrics": {
+  "latitude": 19.1197,
+  "longitude": 72.8468,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.6608,
+    "predicted_risk_percentage": 66.08,
+    "risk_label": "HIGH RISK",
+    "risk_color": "#f97316",
+    "risk_delta_vs_prev_week": -2.5033,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 55.5462,
+    "priority_rank": 9,
+    "priority_level": "HIGH",
+    "components": {
+      "risk_score": 66.079,
+      "population_exposure_score": 52.9133,
+      "vehicle_exposure_score": 68.2216,
+      "temporal_trend_score": 14.9468
+    },
+    "explanation": {
+      "priority_level": "HIGH",
+      "priority_score": 55.5,
+      "top_contributors": [
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "68/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 68.2216
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "66/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 66.079
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "54/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate congestion at 54",
+          "weight": 38.059
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "53/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 37.0393
+        },
+        {
+          "factor": "Improving Trend",
+          "icon": "\ud83d\udcc9",
+          "value": "15/100",
+          "impact": "POSITIVE",
+          "detail": "Conditions are improving over past 4 weeks",
+          "weight": -14.9468
+        }
+      ],
+      "total_factors": 5,
+      "assessment": "This zone shows significant risk elevation driven by Vehicle Density. Proactive intervention should be scheduled within the current planning cycle."
+    }
+  },
+  "telemetry": {
+    "congestion": 54.37,
+    "congestion_delta": 4.72,
+    "average_speed_kmh": 46.59,
+    "speed_delta": -5.96,
+    "vehicle_density": 54.55,
+    "density_delta": 3.74,
+    "population_density": 8726,
+    "red_light_violations": 7,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 40,
+    "recommended_green_seconds": 57,
+    "change_seconds": 17,
+    "change_percent": 42.5,
+    "urgency": "CRITICAL",
+    "reason": "Severe congestion requires significantly extended green phase",
+    "factors": {
+      "congestion_factor": 1.43,
+      "density_factor": 1.22,
+      "speed_factor": 0.83,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 49770.4,
+    "total_co2_tonnes_per_year": 2588.06,
+    "idle_co2_kg": 16371.7,
+    "moving_co2_kg": 33398.8,
+    "potential_savings_kg_per_week": 4164.5,
+    "potential_savings_tonnes_per_year": 216.55,
+    "trees_equivalent_per_year": 10312,
+    "fuel_saved_liters_per_week": 1802.8,
+    "citizens_impacted": 17452,
+    "optimization_factor_pct": 25.4
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "No specific risk indicators triggered.",
+      "action": "Continue routine monitoring."
+    }
+  ],
+  "executive_briefing": "Andheri is in a critical safety state with 66% incident risk. Continue routine monitoring. Optimizing signals could save 4164 kg CO2/week, equivalent to 10312 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_01",
     "week": 46,
     "zone_type": "Commercial_Downtown",
@@ -51,6 +172,15 @@
     "location_name": "Andheri",
     "city": "Mumbai",
     "latitude": 19.1197,
-    "longitude": 72.8468
+    "longitude": 72.8468,
+    "predicted_risk_probability": 0.6608,
+    "risk_score": 66.079,
+    "population_exposure_score": 52.9133,
+    "vehicle_exposure_score": 68.2216,
+    "temporal_trend_score": 14.9468,
+    "priority_score": 55.5462,
+    "priority_rank": 9,
+    "priority_level": "HIGH",
+    "risk_prob": 0.6608
   }
 }

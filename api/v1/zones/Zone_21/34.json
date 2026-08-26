@@ -1,8 +1,137 @@
 {
   "zone_id": "Zone_21",
+  "location_name": "Janakpuri",
+  "city": "Delhi",
+  "zone_type": "Residential",
   "week": 34,
-  "predicted_risk_probability": 0.594436104038772,
-  "metrics": {
+  "latitude": 28.6219,
+  "longitude": 77.0878,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.5944,
+    "predicted_risk_percentage": 59.44,
+    "risk_label": "HIGH RISK",
+    "risk_color": "#f97316",
+    "risk_delta_vs_prev_week": -33.2474,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 67.2253,
+    "priority_rank": 15,
+    "priority_level": "HIGH",
+    "components": {
+      "risk_score": 59.4436,
+      "population_exposure_score": 73.8846,
+      "vehicle_exposure_score": 62.6754,
+      "temporal_trend_score": 82.9441
+    },
+    "explanation": {
+      "priority_level": "HIGH",
+      "priority_score": 67.2,
+      "top_contributors": [
+        {
+          "factor": "Worsening Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "83/100",
+          "impact": "HIGH",
+          "detail": "4-week congestion trend is actively worsening \u2014 conditions deteriorating",
+          "weight": 82.9441
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "74/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 11645 residents/km\u00b2",
+          "weight": 73.8846
+        },
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "63/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 62.6754
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "59/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 59.4436
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "52/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate congestion at 52",
+          "weight": 36.316
+        }
+      ],
+      "total_factors": 5,
+      "assessment": "This zone shows significant risk elevation driven by Worsening Trend, Population Exposure. Proactive intervention should be scheduled within the current planning cycle."
+    }
+  },
+  "telemetry": {
+    "congestion": 51.88,
+    "congestion_delta": -36.56,
+    "average_speed_kmh": 41.56,
+    "speed_delta": 30.07,
+    "vehicle_density": 47.46,
+    "density_delta": -1.77,
+    "population_density": 11645,
+    "red_light_violations": 3,
+    "weather": "Light Rain",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 30,
+    "recommended_green_seconds": 46,
+    "change_seconds": 16,
+    "change_percent": 53.3,
+    "urgency": "CRITICAL",
+    "reason": "Severe congestion requires significantly extended green phase",
+    "factors": {
+      "congestion_factor": 1.42,
+      "density_factor": 1.19,
+      "speed_factor": 0.84,
+      "event_boost": 1.0,
+      "weather_boost": 1.08
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 40926.6,
+    "total_co2_tonnes_per_year": 2128.18,
+    "idle_co2_kg": 13591.5,
+    "moving_co2_kg": 27335.1,
+    "potential_savings_kg_per_week": 3423.4,
+    "potential_savings_tonnes_per_year": 178.02,
+    "trees_equivalent_per_year": 8477,
+    "fuel_saved_liters_per_week": 1482.0,
+    "citizens_impacted": 23290,
+    "optimization_factor_pct": 25.2
+  },
+  "interventions": [
+    {
+      "id": "PEDESTRIAN_SAFETY",
+      "name": "Pedestrian Crossing Intervention",
+      "icon": "\ud83d\udeb6",
+      "severity": "MEDIUM",
+      "description": "High population density zone with significant traffic congestion creates pedestrian exposure risk.",
+      "action": "Install protected pedestrian crossings, improve sidewalk infrastructure, and add pedestrian countdown signals."
+    },
+    {
+      "id": "ROAD_MAINTENANCE",
+      "name": "Road Maintenance Inspection",
+      "icon": "\ud83d\udee3\ufe0f",
+      "severity": "MEDIUM",
+      "description": "Deteriorated road surface combined with elevated risk indicates infrastructure maintenance need.",
+      "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
+    }
+  ],
+  "executive_briefing": "Janakpuri shows elevated risk at 59%. Continue routine monitoring. Optimizing signals could save 3423 kg CO2/week, equivalent to 8477 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_21",
     "week": 34,
     "zone_type": "Residential",
@@ -51,6 +180,15 @@
     "location_name": "Janakpuri",
     "city": "Delhi",
     "latitude": 28.6219,
-    "longitude": 77.0878
+    "longitude": 77.0878,
+    "predicted_risk_probability": 0.5944,
+    "risk_score": 59.4436,
+    "population_exposure_score": 73.8846,
+    "vehicle_exposure_score": 62.6754,
+    "temporal_trend_score": 82.9441,
+    "priority_score": 67.2253,
+    "priority_rank": 15,
+    "priority_level": "HIGH",
+    "risk_prob": 0.5944
   }
 }

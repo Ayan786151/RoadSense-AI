@@ -1,8 +1,153 @@
 {
   "zone_id": "Zone_29",
+  "location_name": "Indira Nagar",
+  "city": "Lucknow",
+  "zone_type": "Residential",
   "week": 33,
-  "predicted_risk_probability": 0.9719543064549079,
-  "metrics": {
+  "latitude": 26.88,
+  "longitude": 81.0,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.972,
+    "predicted_risk_percentage": 97.2,
+    "risk_label": "CRITICAL RISK",
+    "risk_color": "#ef4444",
+    "risk_delta_vs_prev_week": 45.713,
+    "actual_incident": 1
+  },
+  "priority": {
+    "priority_score": 81.8239,
+    "priority_rank": 5,
+    "priority_level": "CRITICAL",
+    "components": {
+      "risk_score": 97.1954,
+      "population_exposure_score": 86.8525,
+      "vehicle_exposure_score": 71.4645,
+      "temporal_trend_score": 46.2647
+    },
+    "explanation": {
+      "priority_level": "CRITICAL",
+      "priority_score": 81.8,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udd34",
+          "value": "97/100",
+          "impact": "HIGH",
+          "detail": "Model-estimated risk score is in the critical range",
+          "weight": 97.1954
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "87/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 13450 residents/km\u00b2",
+          "weight": 86.8525
+        },
+        {
+          "factor": "Speed Anomaly",
+          "icon": "\ud83d\udc0c",
+          "value": "14 km/h",
+          "impact": "HIGH",
+          "detail": "Average speed of 14 km/h indicates near-gridlock conditions",
+          "weight": 85.8
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "75/100",
+          "impact": "HIGH",
+          "detail": "Congestion index at 75 \u2014 severe traffic flow degradation",
+          "weight": 75.45
+        },
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "71/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 71.4645
+        }
+      ],
+      "total_factors": 5,
+      "assessment": "This zone requires URGENT attention. Primary risk drivers: Risk Score, Population Exposure, Speed Anomaly. Immediate field inspection and intervention planning recommended."
+    }
+  },
+  "telemetry": {
+    "congestion": 75.45,
+    "congestion_delta": 33.4,
+    "average_speed_kmh": 14.2,
+    "speed_delta": -32.32,
+    "vehicle_density": 51.42,
+    "density_delta": -5.48,
+    "population_density": 13450,
+    "red_light_violations": 7,
+    "weather": "Heavy Rain",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 30,
+    "recommended_green_seconds": 64,
+    "change_seconds": 34,
+    "change_percent": 113.3,
+    "urgency": "CRITICAL",
+    "reason": "Severe congestion requires significantly extended green phase",
+    "factors": {
+      "congestion_factor": 1.6,
+      "density_factor": 1.21,
+      "speed_factor": 0.95,
+      "event_boost": 1.0,
+      "weather_boost": 1.18
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 34322.0,
+    "total_co2_tonnes_per_year": 1784.74,
+    "idle_co2_kg": 21415.6,
+    "moving_co2_kg": 12906.4,
+    "potential_savings_kg_per_week": 5898.9,
+    "potential_savings_tonnes_per_year": 306.74,
+    "trees_equivalent_per_year": 14606,
+    "fuel_saved_liters_per_week": 2553.6,
+    "citizens_impacted": 26900,
+    "optimization_factor_pct": 27.5
+  },
+  "interventions": [
+    {
+      "id": "SIGNAL_OPTIMIZATION",
+      "name": "Traffic Signal Optimization",
+      "icon": "\ud83d\udea6",
+      "severity": "HIGH",
+      "description": "High congestion with low throughput speed indicates signal timing inefficiency.",
+      "action": "Review and optimize signal timing at major intersections in this zone."
+    },
+    {
+      "id": "PEDESTRIAN_SAFETY",
+      "name": "Pedestrian Crossing Intervention",
+      "icon": "\ud83d\udeb6",
+      "severity": "MEDIUM",
+      "description": "High population density zone with significant traffic congestion creates pedestrian exposure risk.",
+      "action": "Install protected pedestrian crossings, improve sidewalk infrastructure, and add pedestrian countdown signals."
+    },
+    {
+      "id": "ROAD_MAINTENANCE",
+      "name": "Road Maintenance Inspection",
+      "icon": "\ud83d\udee3\ufe0f",
+      "severity": "MEDIUM",
+      "description": "Deteriorated road surface combined with elevated risk indicates infrastructure maintenance need.",
+      "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
+    },
+    {
+      "id": "MONITORING_UPGRADE",
+      "name": "Enhanced Monitoring & CCTV Coverage",
+      "icon": "\ud83d\udcf9",
+      "severity": "MEDIUM",
+      "description": "High-risk zone with significant population exposure warrants improved surveillance.",
+      "action": "Install additional CCTV cameras and integrate with traffic management center for real-time monitoring."
+    }
+  ],
+  "executive_briefing": "Indira Nagar is in a critical safety state with 97% incident risk. Signal optimization recommended \u2014 congestion at 75/100 with speeds averaging 14 km/h. Optimizing signals could save 5899 kg CO2/week, equivalent to 14606 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_29",
     "week": 33,
     "zone_type": "Residential",
@@ -51,6 +196,15 @@
     "location_name": "Indira Nagar",
     "city": "Lucknow",
     "latitude": 26.88,
-    "longitude": 81.0
+    "longitude": 81.0,
+    "predicted_risk_probability": 0.972,
+    "risk_score": 97.1954,
+    "population_exposure_score": 86.8525,
+    "vehicle_exposure_score": 71.4645,
+    "temporal_trend_score": 46.2647,
+    "priority_score": 81.8239,
+    "priority_rank": 5,
+    "priority_level": "CRITICAL",
+    "risk_prob": 0.972
   }
 }

@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_21",
+  "location_name": "Janakpuri",
+  "city": "Delhi",
+  "zone_type": "Residential",
   "week": 35,
-  "predicted_risk_probability": 0.42159956940927223,
-  "metrics": {
+  "latitude": 28.6219,
+  "longitude": 77.0878,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.4216,
+    "predicted_risk_percentage": 42.16,
+    "risk_label": "MODERATE RISK",
+    "risk_color": "#eab308",
+    "risk_delta_vs_prev_week": -17.2837,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 57.211,
+    "priority_rank": 19,
+    "priority_level": "HIGH",
+    "components": {
+      "risk_score": 42.16,
+      "population_exposure_score": 73.8846,
+      "vehicle_exposure_score": 74.9246,
+      "temporal_trend_score": 45.9397
+    },
+    "explanation": {
+      "priority_level": "HIGH",
+      "priority_score": 57.2,
+      "top_contributors": [
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "75/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 74.9246
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "74/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 11645 residents/km\u00b2",
+          "weight": 73.8846
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "42/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 42.16
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone shows significant risk elevation driven by Vehicle Density, Population Exposure. Proactive intervention should be scheduled within the current planning cycle."
+    }
+  },
+  "telemetry": {
+    "congestion": 37.94,
+    "congestion_delta": -13.94,
+    "average_speed_kmh": 57.34,
+    "speed_delta": 15.78,
+    "vehicle_density": 50.78,
+    "density_delta": 3.32,
+    "population_density": 11645,
+    "red_light_violations": 4,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 30,
+    "recommended_green_seconds": 36,
+    "change_seconds": 6,
+    "change_percent": 20.0,
+    "urgency": "MODERATE",
+    "reason": "Slight adjustment for current conditions",
+    "factors": {
+      "congestion_factor": 1.3,
+      "density_factor": 1.2,
+      "speed_factor": 0.78,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 57472.7,
+    "total_co2_tonnes_per_year": 2988.58,
+    "idle_co2_kg": 10634.8,
+    "moving_co2_kg": 46837.9,
+    "potential_savings_kg_per_week": 2530.4,
+    "potential_savings_tonnes_per_year": 131.58,
+    "trees_equivalent_per_year": 6265,
+    "fuel_saved_liters_per_week": 1095.4,
+    "citizens_impacted": 23290,
+    "optimization_factor_pct": 23.8
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "No specific risk indicators triggered.",
+      "action": "Continue routine monitoring."
+    }
+  ],
+  "executive_briefing": "Janakpuri shows elevated risk at 42%. Continue routine monitoring. Optimizing signals could save 2530 kg CO2/week, equivalent to 6265 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_21",
     "week": 35,
     "zone_type": "Residential",
@@ -51,6 +156,15 @@
     "location_name": "Janakpuri",
     "city": "Delhi",
     "latitude": 28.6219,
-    "longitude": 77.0878
+    "longitude": 77.0878,
+    "predicted_risk_probability": 0.4216,
+    "risk_score": 42.16,
+    "population_exposure_score": 73.8846,
+    "vehicle_exposure_score": 74.9246,
+    "temporal_trend_score": 45.9397,
+    "priority_score": 57.211,
+    "priority_rank": 19,
+    "priority_level": "HIGH",
+    "risk_prob": 0.4216
   }
 }

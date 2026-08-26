@@ -1,8 +1,129 @@
 {
   "zone_id": "Zone_12",
+  "location_name": "Malad",
+  "city": "Mumbai",
+  "zone_type": "Commercial_Downtown",
   "week": 7,
-  "predicted_risk_probability": 0.6213107271770683,
-  "metrics": {
+  "latitude": 19.1874,
+  "longitude": 72.8484,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.6213,
+    "predicted_risk_percentage": 62.13,
+    "risk_label": "HIGH RISK",
+    "risk_color": "#f97316",
+    "risk_delta_vs_prev_week": 23.8091,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 55.544,
+    "priority_rank": 11,
+    "priority_level": "HIGH",
+    "components": {
+      "risk_score": 62.1311,
+      "population_exposure_score": 52.9061,
+      "vehicle_exposure_score": 66.2852,
+      "temporal_trend_score": 28.0536
+    },
+    "explanation": {
+      "priority_level": "HIGH",
+      "priority_score": 55.5,
+      "top_contributors": [
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "66/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 66.2852
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "62/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 62.1311
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "53/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 37.0343
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "43/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate congestion at 43",
+          "weight": 30.079
+        },
+        {
+          "factor": "Improving Trend",
+          "icon": "\ud83d\udcc9",
+          "value": "28/100",
+          "impact": "POSITIVE",
+          "detail": "Conditions are improving over past 4 weeks",
+          "weight": -28.0536
+        }
+      ],
+      "total_factors": 5,
+      "assessment": "This zone shows significant risk elevation driven by Vehicle Density. Proactive intervention should be scheduled within the current planning cycle."
+    }
+  },
+  "telemetry": {
+    "congestion": 42.97,
+    "congestion_delta": 3.11,
+    "average_speed_kmh": 44.8,
+    "speed_delta": -8.68,
+    "vehicle_density": 40.54,
+    "density_delta": -4.27,
+    "population_density": 8725,
+    "red_light_violations": 7,
+    "weather": "Light Rain",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 40,
+    "recommended_green_seconds": 56,
+    "change_seconds": 16,
+    "change_percent": 40.0,
+    "urgency": "HIGH",
+    "reason": "Elevated traffic density needs extended clearance time",
+    "factors": {
+      "congestion_factor": 1.34,
+      "density_factor": 1.16,
+      "speed_factor": 0.83,
+      "event_boost": 1.0,
+      "weather_boost": 1.08
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 39446.2,
+    "total_co2_tonnes_per_year": 2051.2,
+    "idle_co2_kg": 9615.9,
+    "moving_co2_kg": 29830.3,
+    "potential_savings_kg_per_week": 2336.4,
+    "potential_savings_tonnes_per_year": 121.49,
+    "trees_equivalent_per_year": 5785,
+    "fuel_saved_liters_per_week": 1011.4,
+    "citizens_impacted": 17450,
+    "optimization_factor_pct": 24.3
+  },
+  "interventions": [
+    {
+      "id": "ROAD_MAINTENANCE",
+      "name": "Road Maintenance Inspection",
+      "icon": "\ud83d\udee3\ufe0f",
+      "severity": "MEDIUM",
+      "description": "Deteriorated road surface combined with elevated risk indicates infrastructure maintenance need.",
+      "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
+    }
+  ],
+  "executive_briefing": "Malad is in a critical safety state with 62% incident risk. Continue routine monitoring. Optimizing signals could save 2336 kg CO2/week, equivalent to 5785 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_12",
     "week": 7,
     "zone_type": "Commercial_Downtown",
@@ -51,6 +172,15 @@
     "location_name": "Malad",
     "city": "Mumbai",
     "latitude": 19.1874,
-    "longitude": 72.8484
+    "longitude": 72.8484,
+    "predicted_risk_probability": 0.6213,
+    "risk_score": 62.1311,
+    "population_exposure_score": 52.9061,
+    "vehicle_exposure_score": 66.2852,
+    "temporal_trend_score": 28.0536,
+    "priority_score": 55.544,
+    "priority_rank": 11,
+    "priority_level": "HIGH",
+    "risk_prob": 0.6213
   }
 }

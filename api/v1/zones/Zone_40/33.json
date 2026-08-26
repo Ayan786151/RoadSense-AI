@@ -1,8 +1,129 @@
 {
   "zone_id": "Zone_40",
+  "location_name": "Velachery",
+  "city": "Chennai",
+  "zone_type": "University_District",
   "week": 33,
-  "predicted_risk_probability": 0.6259792587037655,
-  "metrics": {
+  "latitude": 12.9815,
+  "longitude": 80.218,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.626,
+    "predicted_risk_percentage": 62.6,
+    "risk_label": "HIGH RISK",
+    "risk_color": "#f97316",
+    "risk_delta_vs_prev_week": -35.6729,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 61.2502,
+    "priority_rank": 21,
+    "priority_level": "HIGH",
+    "components": {
+      "risk_score": 62.5979,
+      "population_exposure_score": 47.1945,
+      "vehicle_exposure_score": 50.5096,
+      "temporal_trend_score": 95.4035
+    },
+    "explanation": {
+      "priority_level": "HIGH",
+      "priority_score": 61.3,
+      "top_contributors": [
+        {
+          "factor": "Worsening Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "95/100",
+          "impact": "HIGH",
+          "detail": "4-week congestion trend is actively worsening \u2014 conditions deteriorating",
+          "weight": 95.4035
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "63/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 62.5979
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "53/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate congestion at 53",
+          "weight": 36.771
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "47/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 33.0361
+        }
+      ],
+      "total_factors": 4,
+      "assessment": "This zone shows significant risk elevation driven by Worsening Trend. Proactive intervention should be scheduled within the current planning cycle."
+    }
+  },
+  "telemetry": {
+    "congestion": 52.53,
+    "congestion_delta": -47.47,
+    "average_speed_kmh": 42.06,
+    "speed_delta": 32.06,
+    "vehicle_density": 36.41,
+    "density_delta": -6.14,
+    "population_density": 7930,
+    "red_light_violations": 2,
+    "weather": "Light Rain",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 51,
+    "change_seconds": 16,
+    "change_percent": 45.7,
+    "urgency": "CRITICAL",
+    "reason": "Severe congestion requires significantly extended green phase",
+    "factors": {
+      "congestion_factor": 1.42,
+      "density_factor": 1.15,
+      "speed_factor": 0.84,
+      "event_boost": 1.0,
+      "weather_boost": 1.08
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 31494.0,
+    "total_co2_tonnes_per_year": 1637.69,
+    "idle_co2_kg": 10557.6,
+    "moving_co2_kg": 20936.4,
+    "potential_savings_kg_per_week": 2666.1,
+    "potential_savings_tonnes_per_year": 138.64,
+    "trees_equivalent_per_year": 6601,
+    "fuel_saved_liters_per_week": 1154.2,
+    "citizens_impacted": 15860,
+    "optimization_factor_pct": 25.3
+  },
+  "interventions": [
+    {
+      "id": "TREND_URGENT_INSPECTION",
+      "name": "Urgent Safety Inspection",
+      "icon": "\u26a0\ufe0f",
+      "severity": "CRITICAL",
+      "description": "Risk is actively worsening (high temporal trend) with already elevated risk score.",
+      "action": "Deploy immediate field inspection team. Identify root cause of deteriorating safety conditions."
+    },
+    {
+      "id": "ROAD_MAINTENANCE",
+      "name": "Road Maintenance Inspection",
+      "icon": "\ud83d\udee3\ufe0f",
+      "severity": "MEDIUM",
+      "description": "Deteriorated road surface combined with elevated risk indicates infrastructure maintenance need.",
+      "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
+    }
+  ],
+  "executive_briefing": "Velachery is in a critical safety state with 63% incident risk. Continue routine monitoring. Optimizing signals could save 2666 kg CO2/week, equivalent to 6601 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_40",
     "week": 33,
     "zone_type": "University_District",
@@ -51,6 +172,15 @@
     "location_name": "Velachery",
     "city": "Chennai",
     "latitude": 12.9815,
-    "longitude": 80.218
+    "longitude": 80.218,
+    "predicted_risk_probability": 0.626,
+    "risk_score": 62.5979,
+    "population_exposure_score": 47.1945,
+    "vehicle_exposure_score": 50.5096,
+    "temporal_trend_score": 95.4035,
+    "priority_score": 61.2502,
+    "priority_rank": 21,
+    "priority_level": "HIGH",
+    "risk_prob": 0.626
   }
 }

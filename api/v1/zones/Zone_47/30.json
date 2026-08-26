@@ -1,8 +1,121 @@
 {
   "zone_id": "Zone_47",
+  "location_name": "Perambur",
+  "city": "Chennai",
+  "zone_type": "University_District",
   "week": 30,
-  "predicted_risk_probability": 0.6504784905918674,
-  "metrics": {
+  "latitude": 13.1167,
+  "longitude": 80.2333,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.6505,
+    "predicted_risk_percentage": 65.05,
+    "risk_label": "HIGH RISK",
+    "risk_color": "#f97316",
+    "risk_delta_vs_prev_week": -13.7966,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 58.1343,
+    "priority_rank": 12,
+    "priority_level": "HIGH",
+    "components": {
+      "risk_score": 65.0478,
+      "population_exposure_score": 48.0997,
+      "vehicle_exposure_score": 73.3702,
+      "temporal_trend_score": 36.1082
+    },
+    "explanation": {
+      "priority_level": "HIGH",
+      "priority_score": 58.1,
+      "top_contributors": [
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "73/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 73.3702
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "65/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 65.0478
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "52/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate congestion at 52",
+          "weight": 36.253
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "48/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 33.6698
+        }
+      ],
+      "total_factors": 4,
+      "assessment": "This zone shows significant risk elevation driven by Vehicle Density. Proactive intervention should be scheduled within the current planning cycle."
+    }
+  },
+  "telemetry": {
+    "congestion": 51.79,
+    "congestion_delta": -13.2,
+    "average_speed_kmh": 48.21,
+    "speed_delta": 2.57,
+    "vehicle_density": 50.42,
+    "density_delta": -8.1,
+    "population_density": 8056,
+    "red_light_violations": 8,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 48,
+    "change_seconds": 13,
+    "change_percent": 37.1,
+    "urgency": "HIGH",
+    "reason": "Elevated traffic density needs extended clearance time",
+    "factors": {
+      "congestion_factor": 1.41,
+      "density_factor": 1.2,
+      "speed_factor": 0.82,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 48163.8,
+    "total_co2_tonnes_per_year": 2504.52,
+    "idle_co2_kg": 14414.1,
+    "moving_co2_kg": 33749.7,
+    "potential_savings_kg_per_week": 3629.3,
+    "potential_savings_tonnes_per_year": 188.73,
+    "trees_equivalent_per_year": 8986,
+    "fuel_saved_liters_per_week": 1571.1,
+    "citizens_impacted": 16112,
+    "optimization_factor_pct": 25.2
+  },
+  "interventions": [
+    {
+      "id": "VIOLATION_ENFORCEMENT",
+      "name": "Red-Light Violation Enforcement",
+      "icon": "\ud83d\udea8",
+      "severity": "HIGH",
+      "description": "Elevated red-light violation count indicates intersection compliance failure.",
+      "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
+    }
+  ],
+  "executive_briefing": "Perambur is in a critical safety state with 65% incident risk. Continue routine monitoring. Optimizing signals could save 3629 kg CO2/week, equivalent to 8986 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_47",
     "week": 30,
     "zone_type": "University_District",
@@ -51,6 +164,15 @@
     "location_name": "Perambur",
     "city": "Chennai",
     "latitude": 13.1167,
-    "longitude": 80.2333
+    "longitude": 80.2333,
+    "predicted_risk_probability": 0.6505,
+    "risk_score": 65.0478,
+    "population_exposure_score": 48.0997,
+    "vehicle_exposure_score": 73.3702,
+    "temporal_trend_score": 36.1082,
+    "priority_score": 58.1343,
+    "priority_rank": 12,
+    "priority_level": "HIGH",
+    "risk_prob": 0.6505
   }
 }

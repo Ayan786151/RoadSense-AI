@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_30",
+  "location_name": "Charbagh",
+  "city": "Lucknow",
+  "zone_type": "Highway_Junction",
   "week": 39,
-  "predicted_risk_probability": 0.5145364019389927,
-  "metrics": {
+  "latitude": 26.8315,
+  "longitude": 80.923,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.5145,
+    "predicted_risk_percentage": 51.45,
+    "risk_label": "MODERATE RISK",
+    "risk_color": "#eab308",
+    "risk_delta_vs_prev_week": 32.7227,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 37.533,
+    "priority_rank": 32,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 51.4536,
+      "population_exposure_score": 7.8095,
+      "vehicle_exposure_score": 39.0354,
+      "temporal_trend_score": 47.9476
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 37.5,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "51/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 51.4536
+        }
+      ],
+      "total_factors": 1,
+      "assessment": "This zone has moderate risk levels with contributing factors: Risk Score. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 39.21,
+    "congestion_delta": 22.97,
+    "average_speed_kmh": 47.89,
+    "speed_delta": -13.79,
+    "vehicle_density": 30.42,
+    "density_delta": 11.1,
+    "population_density": 2448,
+    "red_light_violations": 9,
+    "weather": "Light Rain",
+    "special_event": 1
+  },
+  "signal_optimization": {
+    "base_green_seconds": 50,
+    "recommended_green_seconds": 75,
+    "change_seconds": 25,
+    "change_percent": 50.0,
+    "urgency": "CRITICAL",
+    "reason": "Severe congestion requires significantly extended green phase",
+    "factors": {
+      "congestion_factor": 1.31,
+      "density_factor": 1.12,
+      "speed_factor": 0.82,
+      "event_boost": 1.15,
+      "weather_boost": 1.08
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 32089.3,
+    "total_co2_tonnes_per_year": 1668.64,
+    "idle_co2_kg": 6584.1,
+    "moving_co2_kg": 25505.2,
+    "potential_savings_kg_per_week": 1575.0,
+    "potential_savings_tonnes_per_year": 81.9,
+    "trees_equivalent_per_year": 3899,
+    "fuel_saved_liters_per_week": 681.8,
+    "citizens_impacted": 4896,
+    "optimization_factor_pct": 23.9
+  },
+  "interventions": [
+    {
+      "id": "VIOLATION_ENFORCEMENT",
+      "name": "Red-Light Violation Enforcement",
+      "icon": "\ud83d\udea8",
+      "severity": "HIGH",
+      "description": "Elevated red-light violation count indicates intersection compliance failure.",
+      "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
+    },
+    {
+      "id": "ROAD_MAINTENANCE",
+      "name": "Road Maintenance Inspection",
+      "icon": "\ud83d\udee3\ufe0f",
+      "severity": "MEDIUM",
+      "description": "Deteriorated road surface combined with elevated risk indicates infrastructure maintenance need.",
+      "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
+    },
+    {
+      "id": "EVENT_TRAFFIC_PLAN",
+      "name": "Special Event Traffic Plan",
+      "icon": "\ud83c\udfaa",
+      "severity": "MEDIUM",
+      "description": "Active special event generating additional traffic demand.",
+      "action": "Activate event traffic management plan. Deploy traffic marshals and temporary signage."
+    }
+  ],
+  "executive_briefing": "Charbagh shows elevated risk at 51%. Enforcement focus needed \u2014 9 red-light violations recorded. Optimizing signals could save 1575 kg CO2/week, equivalent to 3899 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_30",
     "week": 39,
     "zone_type": "Highway_Junction",
@@ -51,6 +156,15 @@
     "location_name": "Charbagh",
     "city": "Lucknow",
     "latitude": 26.8315,
-    "longitude": 80.923
+    "longitude": 80.923,
+    "predicted_risk_probability": 0.5145,
+    "risk_score": 51.4536,
+    "population_exposure_score": 7.8095,
+    "vehicle_exposure_score": 39.0354,
+    "temporal_trend_score": 47.9476,
+    "priority_score": 37.533,
+    "priority_rank": 32,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.5145
   }
 }

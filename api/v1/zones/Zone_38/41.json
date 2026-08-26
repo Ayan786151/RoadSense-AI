@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_38",
+  "location_name": "T. Nagar",
+  "city": "Chennai",
+  "zone_type": "Commercial_Downtown",
   "week": 41,
-  "predicted_risk_probability": 0.3225745310085978,
-  "metrics": {
+  "latitude": 13.0418,
+  "longitude": 80.2341,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.3226,
+    "predicted_risk_percentage": 32.26,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": -1.3502,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 47.7454,
+    "priority_rank": 13,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 32.2575,
+      "population_exposure_score": 55.1333,
+      "vehicle_exposure_score": 77.4118,
+      "temporal_trend_score": 37.1784
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 47.7,
+      "top_contributors": [
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "77/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 77.4118
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "55/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 38.5933
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "32/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 32.2575
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone has moderate risk levels with contributing factors: Vehicle Density, Population Exposure. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 28.97,
+    "congestion_delta": -8.29,
+    "average_speed_kmh": 57.62,
+    "speed_delta": 3.73,
+    "vehicle_density": 56.12,
+    "density_delta": -2.83,
+    "population_density": 9035,
+    "red_light_violations": 2,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 40,
+    "recommended_green_seconds": 47,
+    "change_seconds": 7,
+    "change_percent": 17.5,
+    "urgency": "MODERATE",
+    "reason": "Slight adjustment for current conditions",
+    "factors": {
+      "congestion_factor": 1.23,
+      "density_factor": 1.22,
+      "speed_factor": 0.78,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 68508.8,
+    "total_co2_tonnes_per_year": 3562.46,
+    "idle_co2_kg": 8974.4,
+    "moving_co2_kg": 59534.4,
+    "potential_savings_kg_per_week": 2054.9,
+    "potential_savings_tonnes_per_year": 106.85,
+    "trees_equivalent_per_year": 5088,
+    "fuel_saved_liters_per_week": 889.6,
+    "citizens_impacted": 18070,
+    "optimization_factor_pct": 22.9
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "No specific risk indicators triggered.",
+      "action": "Continue routine monitoring."
+    }
+  ],
+  "executive_briefing": "T. Nagar is within safe operating parameters (32% risk). Continue routine monitoring. Optimizing signals could save 2055 kg CO2/week, equivalent to 5088 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_38",
     "week": 41,
     "zone_type": "Commercial_Downtown",
@@ -51,6 +156,15 @@
     "location_name": "T. Nagar",
     "city": "Chennai",
     "latitude": 13.0418,
-    "longitude": 80.2341
+    "longitude": 80.2341,
+    "predicted_risk_probability": 0.3226,
+    "risk_score": 32.2575,
+    "population_exposure_score": 55.1333,
+    "vehicle_exposure_score": 77.4118,
+    "temporal_trend_score": 37.1784,
+    "priority_score": 47.7454,
+    "priority_rank": 13,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.3226
   }
 }

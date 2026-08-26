@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_27",
+  "location_name": "Gomti Nagar",
+  "city": "Lucknow",
+  "zone_type": "Suburban_LowDensity",
   "week": 25,
-  "predicted_risk_probability": 0.21843851593722605,
-  "metrics": {
+  "latitude": 26.8467,
+  "longitude": 81.0078,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.2184,
+    "predicted_risk_percentage": 21.84,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": 8.1523,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 26.467,
+    "priority_rank": 35,
+    "priority_level": "LOW",
+    "components": {
+      "risk_score": 21.8439,
+      "population_exposure_score": 21.5245,
+      "vehicle_exposure_score": 23.4742,
+      "temporal_trend_score": 51.0231
+    },
+    "explanation": {
+      "priority_level": "LOW",
+      "priority_score": 26.5,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "22/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 21.8439
+        }
+      ],
+      "total_factors": 1,
+      "assessment": "This zone is currently within acceptable safety parameters. Routine monitoring is sufficient."
+    }
+  },
+  "telemetry": {
+    "congestion": 9.38,
+    "congestion_delta": -0.81,
+    "average_speed_kmh": 64.01,
+    "speed_delta": 0.3,
+    "vehicle_density": 18.54,
+    "density_delta": 7.43,
+    "population_density": 4357,
+    "red_light_violations": 9,
+    "weather": "Normal",
+    "special_event": 1
+  },
+  "signal_optimization": {
+    "base_green_seconds": 25,
+    "recommended_green_seconds": 25,
+    "change_seconds": 0,
+    "change_percent": 0.0,
+    "urgency": "NOMINAL",
+    "reason": "Current default timing is adequate",
+    "factors": {
+      "congestion_factor": 1.08,
+      "density_factor": 1.07,
+      "speed_factor": 0.76,
+      "event_boost": 1.15,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 28835.1,
+    "total_co2_tonnes_per_year": 1499.42,
+    "idle_co2_kg": 960.0,
+    "moving_co2_kg": 27875.1,
+    "potential_savings_kg_per_week": 201.0,
+    "potential_savings_tonnes_per_year": 10.45,
+    "trees_equivalent_per_year": 497,
+    "fuel_saved_liters_per_week": 87.0,
+    "citizens_impacted": 8714,
+    "optimization_factor_pct": 20.9
+  },
+  "interventions": [
+    {
+      "id": "VIOLATION_ENFORCEMENT",
+      "name": "Red-Light Violation Enforcement",
+      "icon": "\ud83d\udea8",
+      "severity": "HIGH",
+      "description": "Elevated red-light violation count indicates intersection compliance failure.",
+      "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
+    },
+    {
+      "id": "EVENT_TRAFFIC_PLAN",
+      "name": "Special Event Traffic Plan",
+      "icon": "\ud83c\udfaa",
+      "severity": "MEDIUM",
+      "description": "Active special event generating additional traffic demand.",
+      "action": "Activate event traffic management plan. Deploy traffic marshals and temporary signage."
+    },
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "Gomti Nagar is within safe operating parameters (22% risk). Enforcement focus needed \u2014 9 red-light violations recorded. Optimizing signals could save 201 kg CO2/week, equivalent to 497 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_27",
     "week": 25,
     "zone_type": "Suburban_LowDensity",
@@ -51,6 +156,15 @@
     "location_name": "Gomti Nagar",
     "city": "Lucknow",
     "latitude": 26.8467,
-    "longitude": 81.0078
+    "longitude": 81.0078,
+    "predicted_risk_probability": 0.2184,
+    "risk_score": 21.8439,
+    "population_exposure_score": 21.5245,
+    "vehicle_exposure_score": 23.4742,
+    "temporal_trend_score": 51.0231,
+    "priority_score": 26.467,
+    "priority_rank": 35,
+    "priority_level": "LOW",
+    "risk_prob": 0.2184
   }
 }

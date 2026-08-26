@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_09",
+  "location_name": "Vashi",
+  "city": "Mumbai",
+  "zone_type": "Suburban_LowDensity",
   "week": 15,
-  "predicted_risk_probability": 0.18676007715433812,
-  "metrics": {
+  "latitude": 19.0771,
+  "longitude": 72.9986,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.1868,
+    "predicted_risk_percentage": 18.68,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": -0.7107,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 20.8968,
+    "priority_rank": 43,
+    "priority_level": "LOW",
+    "components": {
+      "risk_score": 18.676,
+      "population_exposure_score": 13.5067,
+      "vehicle_exposure_score": 0.247,
+      "temporal_trend_score": 66.6688
+    },
+    "explanation": {
+      "priority_level": "LOW",
+      "priority_score": 20.9,
+      "top_contributors": [
+        {
+          "factor": "Rising Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "67/100",
+          "impact": "MEDIUM",
+          "detail": "Slight upward trend in congestion over past 4 weeks",
+          "weight": 40.0013
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "19/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 18.676
+        }
+      ],
+      "total_factors": 2,
+      "assessment": "This zone is currently within acceptable safety parameters. Routine monitoring is sufficient."
+    }
+  },
+  "telemetry": {
+    "congestion": 7.87,
+    "congestion_delta": 0.46,
+    "average_speed_kmh": 65.61,
+    "speed_delta": 0.82,
+    "vehicle_density": 3.28,
+    "density_delta": 1.36,
+    "population_density": 3241,
+    "red_light_violations": 2,
+    "weather": "Normal",
+    "special_event": 1
+  },
+  "signal_optimization": {
+    "base_green_seconds": 25,
+    "recommended_green_seconds": 23,
+    "change_seconds": -2,
+    "change_percent": -8.0,
+    "urgency": "NOMINAL",
+    "reason": "Current default timing is adequate",
+    "factors": {
+      "congestion_factor": 1.06,
+      "density_factor": 1.01,
+      "speed_factor": 0.75,
+      "event_boost": 1.15,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 5281.5,
+    "total_co2_tonnes_per_year": 274.64,
+    "idle_co2_kg": 142.5,
+    "moving_co2_kg": 5139.0,
+    "potential_savings_kg_per_week": 29.6,
+    "potential_savings_tonnes_per_year": 1.54,
+    "trees_equivalent_per_year": 73,
+    "fuel_saved_liters_per_week": 12.8,
+    "citizens_impacted": 6482,
+    "optimization_factor_pct": 20.8
+  },
+  "interventions": [
+    {
+      "id": "EVENT_TRAFFIC_PLAN",
+      "name": "Special Event Traffic Plan",
+      "icon": "\ud83c\udfaa",
+      "severity": "MEDIUM",
+      "description": "Active special event generating additional traffic demand.",
+      "action": "Activate event traffic management plan. Deploy traffic marshals and temporary signage."
+    },
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "Vashi is within safe operating parameters (19% risk). Continue routine monitoring. Optimizing signals could save 30 kg CO2/week, equivalent to 73 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_09",
     "week": 15,
     "zone_type": "Suburban_LowDensity",
@@ -51,6 +156,15 @@
     "location_name": "Vashi",
     "city": "Mumbai",
     "latitude": 19.0771,
-    "longitude": 72.9986
+    "longitude": 72.9986,
+    "predicted_risk_probability": 0.1868,
+    "risk_score": 18.676,
+    "population_exposure_score": 13.5067,
+    "vehicle_exposure_score": 0.247,
+    "temporal_trend_score": 66.6688,
+    "priority_score": 20.8968,
+    "priority_rank": 43,
+    "priority_level": "LOW",
+    "risk_prob": 0.1868
   }
 }

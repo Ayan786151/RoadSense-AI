@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_30",
+  "location_name": "Charbagh",
+  "city": "Lucknow",
+  "zone_type": "Highway_Junction",
   "week": 37,
-  "predicted_risk_probability": 0.1734857231421119,
-  "metrics": {
+  "latitude": 26.8315,
+  "longitude": 80.923,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.1735,
+    "predicted_risk_percentage": 17.35,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": -55.5648,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 21.3791,
+    "priority_rank": 40,
+    "priority_level": "LOW",
+    "components": {
+      "risk_score": 17.3486,
+      "population_exposure_score": 7.8095,
+      "vehicle_exposure_score": 24.4694,
+      "temporal_trend_score": 50.6228
+    },
+    "explanation": {
+      "priority_level": "LOW",
+      "priority_score": 21.4,
+      "top_contributors": [
+        {
+          "factor": "Violation Count",
+          "icon": "\ud83d\udea8",
+          "value": "11",
+          "impact": "HIGH",
+          "detail": "11 red-light violations recorded \u2014 intersection safety concern",
+          "weight": 55
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "17/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 17.3486
+        }
+      ],
+      "total_factors": 2,
+      "assessment": "This zone is currently within acceptable safety parameters. Routine monitoring is sufficient."
+    }
+  },
+  "telemetry": {
+    "congestion": 14.68,
+    "congestion_delta": -6.43,
+    "average_speed_kmh": 60.64,
+    "speed_delta": 22.08,
+    "vehicle_density": 15.68,
+    "density_delta": 1.04,
+    "population_density": 2448,
+    "red_light_violations": 11,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 50,
+    "recommended_green_seconds": 45,
+    "change_seconds": -5,
+    "change_percent": -10.0,
+    "urgency": "NOMINAL",
+    "reason": "Current default timing is adequate",
+    "factors": {
+      "congestion_factor": 1.12,
+      "density_factor": 1.06,
+      "speed_factor": 0.77,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 22298.3,
+    "total_co2_tonnes_per_year": 1159.51,
+    "idle_co2_kg": 1270.6,
+    "moving_co2_kg": 21027.7,
+    "potential_savings_kg_per_week": 272.8,
+    "potential_savings_tonnes_per_year": 14.18,
+    "trees_equivalent_per_year": 675,
+    "fuel_saved_liters_per_week": 118.1,
+    "citizens_impacted": 4896,
+    "optimization_factor_pct": 21.5
+  },
+  "interventions": [
+    {
+      "id": "VIOLATION_ENFORCEMENT",
+      "name": "Red-Light Violation Enforcement",
+      "icon": "\ud83d\udea8",
+      "severity": "HIGH",
+      "description": "Elevated red-light violation count indicates intersection compliance failure.",
+      "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
+    },
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "Charbagh is within safe operating parameters (17% risk). Enforcement focus needed \u2014 11 red-light violations recorded. Optimizing signals could save 273 kg CO2/week, equivalent to 675 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_30",
     "week": 37,
     "zone_type": "Highway_Junction",
@@ -51,6 +156,15 @@
     "location_name": "Charbagh",
     "city": "Lucknow",
     "latitude": 26.8315,
-    "longitude": 80.923
+    "longitude": 80.923,
+    "predicted_risk_probability": 0.1735,
+    "risk_score": 17.3486,
+    "population_exposure_score": 7.8095,
+    "vehicle_exposure_score": 24.4694,
+    "temporal_trend_score": 50.6228,
+    "priority_score": 21.3791,
+    "priority_rank": 40,
+    "priority_level": "LOW",
+    "risk_prob": 0.1735
   }
 }

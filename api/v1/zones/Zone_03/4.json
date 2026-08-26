@@ -1,8 +1,105 @@
 {
   "zone_id": "Zone_03",
+  "location_name": "Kurla",
+  "city": "Mumbai",
+  "zone_type": "University_District",
   "week": 4,
-  "predicted_risk_probability": null,
-  "metrics": {
+  "latitude": 19.0726,
+  "longitude": 72.8845,
+  "risk_analysis": {
+    "predicted_risk_probability": null,
+    "predicted_risk_percentage": null,
+    "risk_label": "BASELINE WARMUP",
+    "risk_color": "#71717a",
+    "risk_delta_vs_prev_week": null,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 27.8246,
+    "priority_rank": 28,
+    "priority_level": "LOW",
+    "components": {
+      "risk_score": 0.0,
+      "population_exposure_score": 45.4343,
+      "vehicle_exposure_score": 44.8304,
+      "temporal_trend_score": 50.0
+    },
+    "explanation": {
+      "priority_level": "LOW",
+      "priority_score": 27.8,
+      "top_contributors": [
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "45/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 31.804
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "0/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 0.0
+        }
+      ],
+      "total_factors": 2,
+      "assessment": "This zone is currently within acceptable safety parameters. Routine monitoring is sufficient."
+    }
+  },
+  "telemetry": {
+    "congestion": 19.92,
+    "congestion_delta": -12.03,
+    "average_speed_kmh": 60.93,
+    "speed_delta": 4.55,
+    "vehicle_density": 27.88,
+    "density_delta": -12.5,
+    "population_density": 7685,
+    "red_light_violations": 2,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 34,
+    "change_seconds": -1,
+    "change_percent": -2.9,
+    "urgency": "NOMINAL",
+    "reason": "Current default timing is adequate",
+    "factors": {
+      "congestion_factor": 1.16,
+      "density_factor": 1.11,
+      "speed_factor": 0.77,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 38325.7,
+    "total_co2_tonnes_per_year": 1992.94,
+    "idle_co2_kg": 3065.6,
+    "moving_co2_kg": 35260.1,
+    "potential_savings_kg_per_week": 674.2,
+    "potential_savings_tonnes_per_year": 35.06,
+    "trees_equivalent_per_year": 1669,
+    "fuel_saved_liters_per_week": 291.9,
+    "citizens_impacted": 15370,
+    "optimization_factor_pct": 22.0
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "Kurla is within safe operating parameters (0% risk). Continue routine monitoring. Optimizing signals could save 674 kg CO2/week, equivalent to 1669 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_03",
     "week": 4,
     "zone_type": "University_District",
@@ -51,6 +148,15 @@
     "location_name": "Kurla",
     "city": "Mumbai",
     "latitude": 19.0726,
-    "longitude": 72.8845
+    "longitude": 72.8845,
+    "predicted_risk_probability": null,
+    "risk_score": 0.0,
+    "population_exposure_score": 45.4343,
+    "vehicle_exposure_score": 44.8304,
+    "temporal_trend_score": 50.0,
+    "priority_score": 27.8246,
+    "priority_rank": 28,
+    "priority_level": "LOW",
+    "risk_prob": null
   }
 }

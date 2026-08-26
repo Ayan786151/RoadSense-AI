@@ -1,8 +1,129 @@
 {
   "zone_id": "Zone_37",
+  "location_name": "Vrindavan Yojana",
+  "city": "Lucknow",
+  "zone_type": "Residential",
   "week": 20,
-  "predicted_risk_probability": 0.586398951351198,
-  "metrics": {
+  "latitude": 26.79,
+  "longitude": 81.0,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.5864,
+    "predicted_risk_percentage": 58.64,
+    "risk_label": "HIGH RISK",
+    "risk_color": "#f97316",
+    "risk_delta_vs_prev_week": 24.6695,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 61.8514,
+    "priority_rank": 13,
+    "priority_level": "HIGH",
+    "components": {
+      "risk_score": 58.6399,
+      "population_exposure_score": 72.6561,
+      "vehicle_exposure_score": 75.4693,
+      "temporal_trend_score": 34.2503
+    },
+    "explanation": {
+      "priority_level": "HIGH",
+      "priority_score": 61.9,
+      "top_contributors": [
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "75/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 75.4693
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "73/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 11474 residents/km\u00b2",
+          "weight": 72.6561
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "59/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 58.6399
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "50/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate congestion at 50",
+          "weight": 34.895
+        }
+      ],
+      "total_factors": 4,
+      "assessment": "This zone shows significant risk elevation driven by Vehicle Density, Population Exposure. Proactive intervention should be scheduled within the current planning cycle."
+    }
+  },
+  "telemetry": {
+    "congestion": 49.85,
+    "congestion_delta": 24.13,
+    "average_speed_kmh": 40.9,
+    "speed_delta": -19.97,
+    "vehicle_density": 56.04,
+    "density_delta": 5.78,
+    "population_density": 11474,
+    "red_light_violations": 9,
+    "weather": "Light Rain",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 30,
+    "recommended_green_seconds": 46,
+    "change_seconds": 16,
+    "change_percent": 53.3,
+    "urgency": "CRITICAL",
+    "reason": "Severe congestion requires significantly extended green phase",
+    "factors": {
+      "congestion_factor": 1.4,
+      "density_factor": 1.22,
+      "speed_factor": 0.85,
+      "event_boost": 1.0,
+      "weather_boost": 1.08
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 48525.0,
+    "total_co2_tonnes_per_year": 2523.3,
+    "idle_co2_kg": 15420.6,
+    "moving_co2_kg": 33104.3,
+    "potential_savings_kg_per_week": 3852.8,
+    "potential_savings_tonnes_per_year": 200.35,
+    "trees_equivalent_per_year": 9540,
+    "fuel_saved_liters_per_week": 1667.9,
+    "citizens_impacted": 22948,
+    "optimization_factor_pct": 25.0
+  },
+  "interventions": [
+    {
+      "id": "VIOLATION_ENFORCEMENT",
+      "name": "Red-Light Violation Enforcement",
+      "icon": "\ud83d\udea8",
+      "severity": "HIGH",
+      "description": "Elevated red-light violation count indicates intersection compliance failure.",
+      "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
+    },
+    {
+      "id": "ROAD_MAINTENANCE",
+      "name": "Road Maintenance Inspection",
+      "icon": "\ud83d\udee3\ufe0f",
+      "severity": "MEDIUM",
+      "description": "Deteriorated road surface combined with elevated risk indicates infrastructure maintenance need.",
+      "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
+    }
+  ],
+  "executive_briefing": "Vrindavan Yojana shows elevated risk at 59%. Enforcement focus needed \u2014 9 red-light violations recorded. Optimizing signals could save 3853 kg CO2/week, equivalent to 9540 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_37",
     "week": 20,
     "zone_type": "Residential",
@@ -51,6 +172,15 @@
     "location_name": "Vrindavan Yojana",
     "city": "Lucknow",
     "latitude": 26.79,
-    "longitude": 81.0
+    "longitude": 81.0,
+    "predicted_risk_probability": 0.5864,
+    "risk_score": 58.6399,
+    "population_exposure_score": 72.6561,
+    "vehicle_exposure_score": 75.4693,
+    "temporal_trend_score": 34.2503,
+    "priority_score": 61.8514,
+    "priority_rank": 13,
+    "priority_level": "HIGH",
+    "risk_prob": 0.5864
   }
 }

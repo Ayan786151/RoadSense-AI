@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_32",
+  "location_name": "Mahanagar",
+  "city": "Lucknow",
+  "zone_type": "Commercial_Downtown",
   "week": 9,
-  "predicted_risk_probability": 0.6046744540636401,
-  "metrics": {
+  "latitude": 26.8755,
+  "longitude": 80.9595,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.6047,
+    "predicted_risk_percentage": 60.47,
+    "risk_label": "HIGH RISK",
+    "risk_color": "#f97316",
+    "risk_delta_vs_prev_week": 18.655,
+    "actual_incident": 1
+  },
+  "priority": {
+    "priority_score": 54.7257,
+    "priority_rank": 9,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 60.4674,
+      "population_exposure_score": 42.2947,
+      "vehicle_exposure_score": 56.5992,
+      "temporal_trend_score": 57.6345
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 54.7,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "60/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 60.4674
+        },
+        {
+          "factor": "Rising Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "58/100",
+          "impact": "MEDIUM",
+          "detail": "Slight upward trend in congestion over past 4 weeks",
+          "weight": 34.5807
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "42/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 29.6063
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone has moderate risk levels with contributing factors: Risk Score, Rising Trend. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 37.1,
+    "congestion_delta": 12.28,
+    "average_speed_kmh": 50.75,
+    "speed_delta": -5.46,
+    "vehicle_density": 37.64,
+    "density_delta": -3.35,
+    "population_density": 7248,
+    "red_light_violations": 7,
+    "weather": "Light Rain",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 40,
+    "recommended_green_seconds": 52,
+    "change_seconds": 12,
+    "change_percent": 30.0,
+    "urgency": "HIGH",
+    "reason": "Elevated traffic density needs extended clearance time",
+    "factors": {
+      "congestion_factor": 1.3,
+      "density_factor": 1.15,
+      "speed_factor": 0.81,
+      "event_boost": 1.0,
+      "weather_boost": 1.08
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 38852.1,
+    "total_co2_tonnes_per_year": 2020.31,
+    "idle_co2_kg": 7708.4,
+    "moving_co2_kg": 31143.8,
+    "potential_savings_kg_per_week": 1827.7,
+    "potential_savings_tonnes_per_year": 95.04,
+    "trees_equivalent_per_year": 4525,
+    "fuel_saved_liters_per_week": 791.2,
+    "citizens_impacted": 14496,
+    "optimization_factor_pct": 23.7
+  },
+  "interventions": [
+    {
+      "id": "ROAD_MAINTENANCE",
+      "name": "Road Maintenance Inspection",
+      "icon": "\ud83d\udee3\ufe0f",
+      "severity": "MEDIUM",
+      "description": "Deteriorated road surface combined with elevated risk indicates infrastructure maintenance need.",
+      "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
+    }
+  ],
+  "executive_briefing": "Mahanagar is in a critical safety state with 60% incident risk. Continue routine monitoring. Optimizing signals could save 1828 kg CO2/week, equivalent to 4525 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_32",
     "week": 9,
     "zone_type": "Commercial_Downtown",
@@ -51,6 +156,15 @@
     "location_name": "Mahanagar",
     "city": "Lucknow",
     "latitude": 26.8755,
-    "longitude": 80.9595
+    "longitude": 80.9595,
+    "predicted_risk_probability": 0.6047,
+    "risk_score": 60.4674,
+    "population_exposure_score": 42.2947,
+    "vehicle_exposure_score": 56.5992,
+    "temporal_trend_score": 57.6345,
+    "priority_score": 54.7257,
+    "priority_rank": 9,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.6047
   }
 }

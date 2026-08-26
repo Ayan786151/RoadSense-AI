@@ -1,8 +1,105 @@
 {
   "zone_id": "Zone_39",
+  "location_name": "Anna Nagar",
+  "city": "Chennai",
+  "zone_type": "Industrial_Corridor",
   "week": 41,
-  "predicted_risk_probability": 0.54250777528293,
-  "metrics": {
+  "latitude": 13.085,
+  "longitude": 80.2101,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.5425,
+    "predicted_risk_percentage": 54.25,
+    "risk_label": "MODERATE RISK",
+    "risk_color": "#eab308",
+    "risk_delta_vs_prev_week": 24.1506,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 37.4362,
+    "priority_rank": 26,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 54.2508,
+      "population_exposure_score": 8.6572,
+      "vehicle_exposure_score": 40.8731,
+      "temporal_trend_score": 35.9794
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 37.4,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "54/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 54.2508
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "42/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate congestion at 42",
+          "weight": 29.239
+        }
+      ],
+      "total_factors": 2,
+      "assessment": "This zone has moderate risk levels with contributing factors: Risk Score, Congestion. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 41.77,
+    "congestion_delta": 9.48,
+    "average_speed_kmh": 53.22,
+    "speed_delta": -2.32,
+    "vehicle_density": 32.6,
+    "density_delta": 4.29,
+    "population_density": 2566,
+    "red_light_violations": 7,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 45,
+    "recommended_green_seconds": 54,
+    "change_seconds": 9,
+    "change_percent": 20.0,
+    "urgency": "MODERATE",
+    "reason": "Slight adjustment for current conditions",
+    "factors": {
+      "congestion_factor": 1.33,
+      "density_factor": 1.13,
+      "speed_factor": 0.8,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 33702.9,
+    "total_co2_tonnes_per_year": 1752.55,
+    "idle_co2_kg": 7516.6,
+    "moving_co2_kg": 26186.3,
+    "potential_savings_kg_per_week": 1817.3,
+    "potential_savings_tonnes_per_year": 94.5,
+    "trees_equivalent_per_year": 4499,
+    "fuel_saved_liters_per_week": 786.7,
+    "citizens_impacted": 5132,
+    "optimization_factor_pct": 24.2
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "No specific risk indicators triggered.",
+      "action": "Continue routine monitoring."
+    }
+  ],
+  "executive_briefing": "Anna Nagar shows elevated risk at 54%. Continue routine monitoring. Optimizing signals could save 1817 kg CO2/week, equivalent to 4499 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_39",
     "week": 41,
     "zone_type": "Industrial_Corridor",
@@ -51,6 +148,15 @@
     "location_name": "Anna Nagar",
     "city": "Chennai",
     "latitude": 13.085,
-    "longitude": 80.2101
+    "longitude": 80.2101,
+    "predicted_risk_probability": 0.5425,
+    "risk_score": 54.2508,
+    "population_exposure_score": 8.6572,
+    "vehicle_exposure_score": 40.8731,
+    "temporal_trend_score": 35.9794,
+    "priority_score": 37.4362,
+    "priority_rank": 26,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.5425
   }
 }

@@ -1,8 +1,105 @@
 {
   "zone_id": "Zone_30",
+  "location_name": "Charbagh",
+  "city": "Lucknow",
+  "zone_type": "Highway_Junction",
   "week": 31,
-  "predicted_risk_probability": 0.6162391894907958,
-  "metrics": {
+  "latitude": 26.8315,
+  "longitude": 80.923,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.6162,
+    "predicted_risk_percentage": 61.62,
+    "risk_label": "HIGH RISK",
+    "risk_color": "#f97316",
+    "risk_delta_vs_prev_week": 41.4496,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 43.8388,
+    "priority_rank": 35,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 61.6239,
+      "population_exposure_score": 7.8095,
+      "vehicle_exposure_score": 33.1024,
+      "temporal_trend_score": 70.7757
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 43.8,
+      "top_contributors": [
+        {
+          "factor": "Worsening Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "71/100",
+          "impact": "HIGH",
+          "detail": "4-week congestion trend is actively worsening \u2014 conditions deteriorating",
+          "weight": 70.7757
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "62/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 61.6239
+        }
+      ],
+      "total_factors": 2,
+      "assessment": "This zone has moderate risk levels with contributing factors: Worsening Trend, Risk Score. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 36.15,
+    "congestion_delta": 15.89,
+    "average_speed_kmh": 38.36,
+    "speed_delta": -17.3,
+    "vehicle_density": 22.46,
+    "density_delta": 2.16,
+    "population_density": 2448,
+    "red_light_violations": 7,
+    "weather": "Heavy Rain",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 50,
+    "recommended_green_seconds": 70,
+    "change_seconds": 20,
+    "change_percent": 40.0,
+    "urgency": "HIGH",
+    "reason": "Elevated traffic density needs extended clearance time",
+    "factors": {
+      "congestion_factor": 1.29,
+      "density_factor": 1.09,
+      "speed_factor": 0.86,
+      "event_boost": 1.0,
+      "weather_boost": 1.18
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 20325.0,
+    "total_co2_tonnes_per_year": 1056.9,
+    "idle_co2_kg": 4481.8,
+    "moving_co2_kg": 15843.2,
+    "potential_savings_kg_per_week": 1058.4,
+    "potential_savings_tonnes_per_year": 55.04,
+    "trees_equivalent_per_year": 2620,
+    "fuel_saved_liters_per_week": 458.2,
+    "citizens_impacted": 4896,
+    "optimization_factor_pct": 23.6
+  },
+  "interventions": [
+    {
+      "id": "ROAD_MAINTENANCE",
+      "name": "Road Maintenance Inspection",
+      "icon": "\ud83d\udee3\ufe0f",
+      "severity": "MEDIUM",
+      "description": "Deteriorated road surface combined with elevated risk indicates infrastructure maintenance need.",
+      "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
+    }
+  ],
+  "executive_briefing": "Charbagh is in a critical safety state with 62% incident risk. Continue routine monitoring. Optimizing signals could save 1058 kg CO2/week, equivalent to 2620 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_30",
     "week": 31,
     "zone_type": "Highway_Junction",
@@ -51,6 +148,15 @@
     "location_name": "Charbagh",
     "city": "Lucknow",
     "latitude": 26.8315,
-    "longitude": 80.923
+    "longitude": 80.923,
+    "predicted_risk_probability": 0.6162,
+    "risk_score": 61.6239,
+    "population_exposure_score": 7.8095,
+    "vehicle_exposure_score": 33.1024,
+    "temporal_trend_score": 70.7757,
+    "priority_score": 43.8388,
+    "priority_rank": 35,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.6162
   }
 }

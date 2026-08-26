@@ -1,8 +1,121 @@
 {
   "zone_id": "Zone_38",
+  "location_name": "T. Nagar",
+  "city": "Chennai",
+  "zone_type": "Commercial_Downtown",
   "week": 9,
-  "predicted_risk_probability": 0.36376710696754655,
-  "metrics": {
+  "latitude": 13.0418,
+  "longitude": 80.2341,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.3638,
+    "predicted_risk_percentage": 36.38,
+    "risk_label": "MODERATE RISK",
+    "risk_color": "#eab308",
+    "risk_delta_vs_prev_week": 1.96,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 54.7967,
+    "priority_rank": 8,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 36.3767,
+      "population_exposure_score": 55.1333,
+      "vehicle_exposure_score": 88.1457,
+      "temporal_trend_score": 58.8904
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 54.8,
+      "top_contributors": [
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "88/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 88.1457
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "55/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 38.5933
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "36/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 36.3767
+        },
+        {
+          "factor": "Rising Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "59/100",
+          "impact": "MEDIUM",
+          "detail": "Slight upward trend in congestion over past 4 weeks",
+          "weight": 35.3343
+        }
+      ],
+      "total_factors": 4,
+      "assessment": "This zone has moderate risk levels with contributing factors: Vehicle Density, Population Exposure. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 28.98,
+    "congestion_delta": 5.1,
+    "average_speed_kmh": 55.71,
+    "speed_delta": -5.27,
+    "vehicle_density": 57.12,
+    "density_delta": 7.24,
+    "population_density": 9035,
+    "red_light_violations": 4,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 40,
+    "recommended_green_seconds": 47,
+    "change_seconds": 7,
+    "change_percent": 17.5,
+    "urgency": "MODERATE",
+    "reason": "Slight adjustment for current conditions",
+    "factors": {
+      "congestion_factor": 1.23,
+      "density_factor": 1.23,
+      "speed_factor": 0.79,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 67715.8,
+    "total_co2_tonnes_per_year": 3521.22,
+    "idle_co2_kg": 9137.5,
+    "moving_co2_kg": 58578.3,
+    "potential_savings_kg_per_week": 2092.3,
+    "potential_savings_tonnes_per_year": 108.8,
+    "trees_equivalent_per_year": 5180,
+    "fuel_saved_liters_per_week": 905.8,
+    "citizens_impacted": 18070,
+    "optimization_factor_pct": 22.9
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "No specific risk indicators triggered.",
+      "action": "Continue routine monitoring."
+    }
+  ],
+  "executive_briefing": "T. Nagar shows elevated risk at 36%. Continue routine monitoring. Optimizing signals could save 2092 kg CO2/week, equivalent to 5180 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_38",
     "week": 9,
     "zone_type": "Commercial_Downtown",
@@ -51,6 +164,15 @@
     "location_name": "T. Nagar",
     "city": "Chennai",
     "latitude": 13.0418,
-    "longitude": 80.2341
+    "longitude": 80.2341,
+    "predicted_risk_probability": 0.3638,
+    "risk_score": 36.3767,
+    "population_exposure_score": 55.1333,
+    "vehicle_exposure_score": 88.1457,
+    "temporal_trend_score": 58.8904,
+    "priority_score": 54.7967,
+    "priority_rank": 8,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.3638
   }
 }

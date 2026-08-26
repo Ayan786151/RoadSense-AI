@@ -1,8 +1,121 @@
 {
   "zone_id": "Zone_07",
+  "location_name": "Goregaon",
+  "city": "Mumbai",
+  "zone_type": "University_District",
   "week": 12,
-  "predicted_risk_probability": 0.7098983355846739,
-  "metrics": {
+  "latitude": 19.1663,
+  "longitude": 72.8526,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.7099,
+    "predicted_risk_percentage": 70.99,
+    "risk_label": "HIGH RISK",
+    "risk_color": "#f97316",
+    "risk_delta_vs_prev_week": -1.5411,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 51.7731,
+    "priority_rank": 13,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 70.9898,
+      "population_exposure_score": 42.4312,
+      "vehicle_exposure_score": 47.8587,
+      "temporal_trend_score": 21.3178
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 51.8,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udd34",
+          "value": "71/100",
+          "impact": "HIGH",
+          "detail": "Model-estimated risk score is in the critical range",
+          "weight": 70.9898
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "59/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate congestion at 59",
+          "weight": 41.076
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "42/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 29.7018
+        },
+        {
+          "factor": "Improving Trend",
+          "icon": "\ud83d\udcc9",
+          "value": "21/100",
+          "impact": "POSITIVE",
+          "detail": "Conditions are improving over past 4 weeks",
+          "weight": -21.3178
+        }
+      ],
+      "total_factors": 4,
+      "assessment": "This zone has moderate risk levels with contributing factors: Risk Score, Congestion. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 58.68,
+    "congestion_delta": 9.16,
+    "average_speed_kmh": 39.07,
+    "speed_delta": -8.92,
+    "vehicle_density": 30.62,
+    "density_delta": -4.79,
+    "population_density": 7267,
+    "red_light_violations": 3,
+    "weather": "Light Rain",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 53,
+    "change_seconds": 18,
+    "change_percent": 51.4,
+    "urgency": "CRITICAL",
+    "reason": "Severe congestion requires significantly extended green phase",
+    "factors": {
+      "congestion_factor": 1.47,
+      "density_factor": 1.12,
+      "speed_factor": 0.85,
+      "event_boost": 1.0,
+      "weather_boost": 1.08
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 24154.7,
+    "total_co2_tonnes_per_year": 1256.04,
+    "idle_co2_kg": 9918.2,
+    "moving_co2_kg": 14236.4,
+    "potential_savings_kg_per_week": 2565.6,
+    "potential_savings_tonnes_per_year": 133.41,
+    "trees_equivalent_per_year": 6353,
+    "fuel_saved_liters_per_week": 1110.7,
+    "citizens_impacted": 14534,
+    "optimization_factor_pct": 25.9
+  },
+  "interventions": [
+    {
+      "id": "ROAD_MAINTENANCE",
+      "name": "Road Maintenance Inspection",
+      "icon": "\ud83d\udee3\ufe0f",
+      "severity": "MEDIUM",
+      "description": "Deteriorated road surface combined with elevated risk indicates infrastructure maintenance need.",
+      "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
+    }
+  ],
+  "executive_briefing": "Goregaon is in a critical safety state with 71% incident risk. Continue routine monitoring. Optimizing signals could save 2566 kg CO2/week, equivalent to 6353 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_07",
     "week": 12,
     "zone_type": "University_District",
@@ -51,6 +164,15 @@
     "location_name": "Goregaon",
     "city": "Mumbai",
     "latitude": 19.1663,
-    "longitude": 72.8526
+    "longitude": 72.8526,
+    "predicted_risk_probability": 0.7099,
+    "risk_score": 70.9898,
+    "population_exposure_score": 42.4312,
+    "vehicle_exposure_score": 47.8587,
+    "temporal_trend_score": 21.3178,
+    "priority_score": 51.7731,
+    "priority_rank": 13,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.7099
   }
 }

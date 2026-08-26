@@ -1,8 +1,129 @@
 {
   "zone_id": "Zone_37",
+  "location_name": "Vrindavan Yojana",
+  "city": "Lucknow",
+  "zone_type": "Residential",
   "week": 22,
-  "predicted_risk_probability": 0.5991578849817635,
-  "metrics": {
+  "latitude": 26.79,
+  "longitude": 81.0,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.5992,
+    "predicted_risk_percentage": 59.92,
+    "risk_label": "HIGH RISK",
+    "risk_color": "#f97316",
+    "risk_delta_vs_prev_week": 32.8702,
+    "actual_incident": 1
+  },
+  "priority": {
+    "priority_score": 72.8638,
+    "priority_rank": 6,
+    "priority_level": "HIGH",
+    "components": {
+      "risk_score": 59.9158,
+      "population_exposure_score": 72.6561,
+      "vehicle_exposure_score": 87.0278,
+      "temporal_trend_score": 88.8528
+    },
+    "explanation": {
+      "priority_level": "HIGH",
+      "priority_score": 72.9,
+      "top_contributors": [
+        {
+          "factor": "Worsening Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "89/100",
+          "impact": "HIGH",
+          "detail": "4-week congestion trend is actively worsening \u2014 conditions deteriorating",
+          "weight": 88.8528
+        },
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "87/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 87.0278
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "73/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 11474 residents/km\u00b2",
+          "weight": 72.6561
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "60/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 59.9158
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "50/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate congestion at 50",
+          "weight": 35.182
+        }
+      ],
+      "total_factors": 5,
+      "assessment": "This zone shows significant risk elevation driven by Worsening Trend, Vehicle Density. Proactive intervention should be scheduled within the current planning cycle."
+    }
+  },
+  "telemetry": {
+    "congestion": 50.26,
+    "congestion_delta": 18.28,
+    "average_speed_kmh": 48.66,
+    "speed_delta": -5.91,
+    "vehicle_density": 62.59,
+    "density_delta": 13.63,
+    "population_density": 11474,
+    "red_light_violations": 3,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 30,
+    "recommended_green_seconds": 42,
+    "change_seconds": 12,
+    "change_percent": 40.0,
+    "urgency": "HIGH",
+    "reason": "Elevated traffic density needs extended clearance time",
+    "factors": {
+      "congestion_factor": 1.4,
+      "density_factor": 1.25,
+      "speed_factor": 0.82,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 60993.7,
+    "total_co2_tonnes_per_year": 3171.67,
+    "idle_co2_kg": 17364.7,
+    "moving_co2_kg": 43629.0,
+    "potential_savings_kg_per_week": 4345.7,
+    "potential_savings_tonnes_per_year": 225.98,
+    "trees_equivalent_per_year": 10760,
+    "fuel_saved_liters_per_week": 1881.2,
+    "citizens_impacted": 22948,
+    "optimization_factor_pct": 25.0
+  },
+  "interventions": [
+    {
+      "id": "PEDESTRIAN_SAFETY",
+      "name": "Pedestrian Crossing Intervention",
+      "icon": "\ud83d\udeb6",
+      "severity": "MEDIUM",
+      "description": "High population density zone with significant traffic congestion creates pedestrian exposure risk.",
+      "action": "Install protected pedestrian crossings, improve sidewalk infrastructure, and add pedestrian countdown signals."
+    }
+  ],
+  "executive_briefing": "Vrindavan Yojana shows elevated risk at 60%. Continue routine monitoring. Optimizing signals could save 4346 kg CO2/week, equivalent to 10760 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_37",
     "week": 22,
     "zone_type": "Residential",
@@ -51,6 +172,15 @@
     "location_name": "Vrindavan Yojana",
     "city": "Lucknow",
     "latitude": 26.79,
-    "longitude": 81.0
+    "longitude": 81.0,
+    "predicted_risk_probability": 0.5992,
+    "risk_score": 59.9158,
+    "population_exposure_score": 72.6561,
+    "vehicle_exposure_score": 87.0278,
+    "temporal_trend_score": 88.8528,
+    "priority_score": 72.8638,
+    "priority_rank": 6,
+    "priority_level": "HIGH",
+    "risk_prob": 0.5992
   }
 }

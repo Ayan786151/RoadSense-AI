@@ -1,8 +1,145 @@
 {
   "zone_id": "Zone_01",
+  "location_name": "Andheri",
+  "city": "Mumbai",
+  "zone_type": "Commercial_Downtown",
   "week": 24,
-  "predicted_risk_probability": 0.7998126990735435,
-  "metrics": {
+  "latitude": 19.1197,
+  "longitude": 72.8468,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.7998,
+    "predicted_risk_percentage": 79.98,
+    "risk_label": "CRITICAL RISK",
+    "risk_color": "#ef4444",
+    "risk_delta_vs_prev_week": -10.6598,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 74.1019,
+    "priority_rank": 2,
+    "priority_level": "HIGH",
+    "components": {
+      "risk_score": 79.9813,
+      "population_exposure_score": 52.9133,
+      "vehicle_exposure_score": 100.0,
+      "temporal_trend_score": 59.207
+    },
+    "explanation": {
+      "priority_level": "HIGH",
+      "priority_score": 74.1,
+      "top_contributors": [
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "100/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 100.0
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "93/100",
+          "impact": "HIGH",
+          "detail": "Congestion index at 93 \u2014 severe traffic flow degradation",
+          "weight": 93.08
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udd34",
+          "value": "80/100",
+          "impact": "HIGH",
+          "detail": "Model-estimated risk score is in the critical range",
+          "weight": 79.9813
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "53/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 37.0393
+        },
+        {
+          "factor": "Rising Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "59/100",
+          "impact": "MEDIUM",
+          "detail": "Slight upward trend in congestion over past 4 weeks",
+          "weight": 35.5242
+        }
+      ],
+      "total_factors": 5,
+      "assessment": "This zone shows significant risk elevation driven by Vehicle Density, Congestion. Proactive intervention should be scheduled within the current planning cycle."
+    }
+  },
+  "telemetry": {
+    "congestion": 93.08,
+    "congestion_delta": 8.05,
+    "average_speed_kmh": 30.19,
+    "speed_delta": -3.05,
+    "vehicle_density": 75.26,
+    "density_delta": 7.01,
+    "population_density": 8726,
+    "red_light_violations": 9,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 40,
+    "recommended_green_seconds": 80,
+    "change_seconds": 40,
+    "change_percent": 100.0,
+    "urgency": "CRITICAL",
+    "reason": "Severe congestion requires significantly extended green phase",
+    "factors": {
+      "congestion_factor": 1.74,
+      "density_factor": 1.3,
+      "speed_factor": 0.89,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 43196.9,
+    "total_co2_tonnes_per_year": 2246.24,
+    "idle_co2_kg": 38668.7,
+    "moving_co2_kg": 4528.2,
+    "potential_savings_kg_per_week": 11333.0,
+    "potential_savings_tonnes_per_year": 589.32,
+    "trees_equivalent_per_year": 28062,
+    "fuel_saved_liters_per_week": 4906.1,
+    "citizens_impacted": 17452,
+    "optimization_factor_pct": 29.3
+  },
+  "interventions": [
+    {
+      "id": "CONGESTION_MANAGEMENT",
+      "name": "Congestion Management & Diversion",
+      "icon": "\ud83d\ude97",
+      "severity": "CRITICAL",
+      "description": "Severe congestion with high vehicle density requires active demand management.",
+      "action": "Activate dynamic message signs for route diversion. Consider congestion pricing or access restrictions."
+    },
+    {
+      "id": "SIGNAL_OPTIMIZATION",
+      "name": "Traffic Signal Optimization",
+      "icon": "\ud83d\udea6",
+      "severity": "HIGH",
+      "description": "High congestion with low throughput speed indicates signal timing inefficiency.",
+      "action": "Review and optimize signal timing at major intersections in this zone."
+    },
+    {
+      "id": "VIOLATION_ENFORCEMENT",
+      "name": "Red-Light Violation Enforcement",
+      "icon": "\ud83d\udea8",
+      "severity": "HIGH",
+      "description": "Elevated red-light violation count indicates intersection compliance failure.",
+      "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
+    }
+  ],
+  "executive_briefing": "Andheri is in a critical safety state with 80% incident risk. Signal optimization recommended \u2014 congestion at 93/100 with speeds averaging 30 km/h. Optimizing signals could save 11333 kg CO2/week, equivalent to 28062 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_01",
     "week": 24,
     "zone_type": "Commercial_Downtown",
@@ -51,6 +188,15 @@
     "location_name": "Andheri",
     "city": "Mumbai",
     "latitude": 19.1197,
-    "longitude": 72.8468
+    "longitude": 72.8468,
+    "predicted_risk_probability": 0.7998,
+    "risk_score": 79.9813,
+    "population_exposure_score": 52.9133,
+    "vehicle_exposure_score": 100.0,
+    "temporal_trend_score": 59.207,
+    "priority_score": 74.1019,
+    "priority_rank": 2,
+    "priority_level": "HIGH",
+    "risk_prob": 0.7998
   }
 }

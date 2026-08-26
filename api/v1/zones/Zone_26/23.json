@@ -1,8 +1,105 @@
 {
   "zone_id": "Zone_26",
+  "location_name": "Hazratganj",
+  "city": "Lucknow",
+  "zone_type": "University_District",
   "week": 23,
-  "predicted_risk_probability": 0.23103237253600148,
-  "metrics": {
+  "latitude": 26.85,
+  "longitude": 80.949,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.231,
+    "predicted_risk_percentage": 23.1,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": -29.4696,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 36.6154,
+    "priority_rank": 30,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 23.1032,
+      "population_exposure_score": 45.384,
+      "vehicle_exposure_score": 51.5999,
+      "temporal_trend_score": 38.0541
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 36.6,
+      "top_contributors": [
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "45/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 31.7688
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "23/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 23.1032
+        }
+      ],
+      "total_factors": 2,
+      "assessment": "This zone has moderate risk levels with contributing factors: Population Exposure. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 24.95,
+    "congestion_delta": -4.97,
+    "average_speed_kmh": 59.01,
+    "speed_delta": 9.95,
+    "vehicle_density": 37.25,
+    "density_delta": 5.08,
+    "population_density": 7678,
+    "red_light_violations": 2,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 37,
+    "change_seconds": 2,
+    "change_percent": 5.7,
+    "urgency": "MODERATE",
+    "reason": "Slight adjustment for current conditions",
+    "factors": {
+      "congestion_factor": 1.2,
+      "density_factor": 1.15,
+      "speed_factor": 0.78,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 47890.2,
+    "total_co2_tonnes_per_year": 2490.29,
+    "idle_co2_kg": 5130.2,
+    "moving_co2_kg": 42760.0,
+    "potential_savings_kg_per_week": 1154.0,
+    "potential_savings_tonnes_per_year": 60.01,
+    "trees_equivalent_per_year": 2857,
+    "fuel_saved_liters_per_week": 499.6,
+    "citizens_impacted": 15356,
+    "optimization_factor_pct": 22.5
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "Hazratganj is within safe operating parameters (23% risk). Continue routine monitoring. Optimizing signals could save 1154 kg CO2/week, equivalent to 2857 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_26",
     "week": 23,
     "zone_type": "University_District",
@@ -51,6 +148,15 @@
     "location_name": "Hazratganj",
     "city": "Lucknow",
     "latitude": 26.85,
-    "longitude": 80.949
+    "longitude": 80.949,
+    "predicted_risk_probability": 0.231,
+    "risk_score": 23.1032,
+    "population_exposure_score": 45.384,
+    "vehicle_exposure_score": 51.5999,
+    "temporal_trend_score": 38.0541,
+    "priority_score": 36.6154,
+    "priority_rank": 30,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.231
   }
 }

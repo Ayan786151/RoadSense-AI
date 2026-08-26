@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_40",
+  "location_name": "Velachery",
+  "city": "Chennai",
+  "zone_type": "University_District",
   "week": 24,
-  "predicted_risk_probability": 0.49970523460847716,
-  "metrics": {
+  "latitude": 12.9815,
+  "longitude": 80.218,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.4997,
+    "predicted_risk_percentage": 49.97,
+    "risk_label": "MODERATE RISK",
+    "risk_color": "#eab308",
+    "risk_delta_vs_prev_week": -28.5379,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 48.5178,
+    "priority_rank": 20,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 49.9705,
+      "population_exposure_score": 47.1945,
+      "vehicle_exposure_score": 41.6922,
+      "temporal_trend_score": 55.95
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 48.5,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "50/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 49.9705
+        },
+        {
+          "factor": "Rising Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "56/100",
+          "impact": "MEDIUM",
+          "detail": "Slight upward trend in congestion over past 4 weeks",
+          "weight": 33.57
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "47/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 33.0361
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone has moderate risk levels with contributing factors: Risk Score, Rising Trend. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 29.87,
+    "congestion_delta": -23.89,
+    "average_speed_kmh": 53.98,
+    "speed_delta": 11.66,
+    "vehicle_density": 33.36,
+    "density_delta": -3.91,
+    "population_density": 7930,
+    "red_light_violations": 4,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 39,
+    "change_seconds": 4,
+    "change_percent": 11.4,
+    "urgency": "MODERATE",
+    "reason": "Slight adjustment for current conditions",
+    "factors": {
+      "congestion_factor": 1.24,
+      "density_factor": 1.13,
+      "speed_factor": 0.8,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 38234.4,
+    "total_co2_tonnes_per_year": 1988.19,
+    "idle_co2_kg": 5500.5,
+    "moving_co2_kg": 32733.9,
+    "potential_savings_kg_per_week": 1264.4,
+    "potential_savings_tonnes_per_year": 65.75,
+    "trees_equivalent_per_year": 3130,
+    "fuel_saved_liters_per_week": 547.4,
+    "citizens_impacted": 15860,
+    "optimization_factor_pct": 23.0
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "No specific risk indicators triggered.",
+      "action": "Continue routine monitoring."
+    }
+  ],
+  "executive_briefing": "Velachery shows elevated risk at 50%. Continue routine monitoring. Optimizing signals could save 1264 kg CO2/week, equivalent to 3130 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_40",
     "week": 24,
     "zone_type": "University_District",
@@ -51,6 +156,15 @@
     "location_name": "Velachery",
     "city": "Chennai",
     "latitude": 12.9815,
-    "longitude": 80.218
+    "longitude": 80.218,
+    "predicted_risk_probability": 0.4997,
+    "risk_score": 49.9705,
+    "population_exposure_score": 47.1945,
+    "vehicle_exposure_score": 41.6922,
+    "temporal_trend_score": 55.95,
+    "priority_score": 48.5178,
+    "priority_rank": 20,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.4997
   }
 }

@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_15",
+  "location_name": "Dwarka",
+  "city": "Delhi",
+  "zone_type": "Residential",
   "week": 1,
-  "predicted_risk_probability": null,
-  "metrics": {
+  "latitude": 28.5921,
+  "longitude": 77.046,
+  "risk_analysis": {
+    "predicted_risk_probability": null,
+    "predicted_risk_percentage": null,
+    "risk_label": "BASELINE WARMUP",
+    "risk_color": "#71717a",
+    "risk_delta_vs_prev_week": null,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 46.6251,
+    "priority_rank": 2,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 0.0,
+      "population_exposure_score": 97.0041,
+      "vehicle_exposure_score": 74.3705,
+      "temporal_trend_score": 50.0
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 46.6,
+      "top_contributors": [
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "97/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 14863 residents/km\u00b2",
+          "weight": 97.0041
+        },
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "74/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 74.3705
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "0/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 0.0
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone has moderate risk levels with contributing factors: Population Exposure, Vehicle Density. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 36.47,
+    "congestion_delta": null,
+    "average_speed_kmh": 45.18,
+    "speed_delta": null,
+    "vehicle_density": 42.85,
+    "density_delta": null,
+    "population_density": 14863,
+    "red_light_violations": 5,
+    "weather": "Light Rain",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 30,
+    "recommended_green_seconds": 40,
+    "change_seconds": 10,
+    "change_percent": 33.3,
+    "urgency": "HIGH",
+    "reason": "Elevated traffic density needs extended clearance time",
+    "factors": {
+      "congestion_factor": 1.29,
+      "density_factor": 1.17,
+      "speed_factor": 0.83,
+      "event_boost": 1.0,
+      "weather_boost": 1.08
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 44047.9,
+    "total_co2_tonnes_per_year": 2290.49,
+    "idle_co2_kg": 8626.3,
+    "moving_co2_kg": 35421.6,
+    "potential_savings_kg_per_week": 2039.9,
+    "potential_savings_tonnes_per_year": 106.07,
+    "trees_equivalent_per_year": 5051,
+    "fuel_saved_liters_per_week": 883.1,
+    "citizens_impacted": 29726,
+    "optimization_factor_pct": 23.6
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "Dwarka is within safe operating parameters (0% risk). Continue routine monitoring. Optimizing signals could save 2040 kg CO2/week, equivalent to 5051 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_15",
     "week": 1,
     "zone_type": "Residential",
@@ -51,6 +156,15 @@
     "location_name": "Dwarka",
     "city": "Delhi",
     "latitude": 28.5921,
-    "longitude": 77.046
+    "longitude": 77.046,
+    "predicted_risk_probability": null,
+    "risk_score": 0.0,
+    "population_exposure_score": 97.0041,
+    "vehicle_exposure_score": 74.3705,
+    "temporal_trend_score": 50.0,
+    "priority_score": 46.6251,
+    "priority_rank": 2,
+    "priority_level": "MODERATE",
+    "risk_prob": null
   }
 }

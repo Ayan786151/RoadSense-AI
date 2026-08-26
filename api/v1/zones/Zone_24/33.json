@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_24",
+  "location_name": "Nehru Place",
+  "city": "Delhi",
+  "zone_type": "Commercial_Downtown",
   "week": 33,
-  "predicted_risk_probability": 0.32470015190551765,
-  "metrics": {
+  "latitude": 28.5491,
+  "longitude": 77.2519,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.3247,
+    "predicted_risk_percentage": 32.47,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": 15.2506,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 39.7364,
+    "priority_rank": 34,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 32.47,
+      "population_exposure_score": 52.2523,
+      "vehicle_exposure_score": 48.8203,
+      "temporal_trend_score": 26.1418
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 39.7,
+      "top_contributors": [
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "52/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 36.5766
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "32/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 32.47
+        },
+        {
+          "factor": "Improving Trend",
+          "icon": "\ud83d\udcc9",
+          "value": "26/100",
+          "impact": "POSITIVE",
+          "detail": "Conditions are improving over past 4 weeks",
+          "weight": -26.1418
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone has moderate risk levels with contributing factors: Population Exposure. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 22.26,
+    "congestion_delta": 6.18,
+    "average_speed_kmh": 52.17,
+    "speed_delta": -9.85,
+    "vehicle_density": 35.2,
+    "density_delta": 2.3,
+    "population_density": 8634,
+    "red_light_violations": 5,
+    "weather": "Light Rain",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 40,
+    "recommended_green_seconds": 46,
+    "change_seconds": 6,
+    "change_percent": 15.0,
+    "urgency": "MODERATE",
+    "reason": "Slight adjustment for current conditions",
+    "factors": {
+      "congestion_factor": 1.18,
+      "density_factor": 1.14,
+      "speed_factor": 0.8,
+      "event_boost": 1.0,
+      "weather_boost": 1.08
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 41328.7,
+    "total_co2_tonnes_per_year": 2149.09,
+    "idle_co2_kg": 4325.2,
+    "moving_co2_kg": 37003.5,
+    "potential_savings_kg_per_week": 961.3,
+    "potential_savings_tonnes_per_year": 49.99,
+    "trees_equivalent_per_year": 2380,
+    "fuel_saved_liters_per_week": 416.2,
+    "citizens_impacted": 17268,
+    "optimization_factor_pct": 22.2
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "No specific risk indicators triggered.",
+      "action": "Continue routine monitoring."
+    }
+  ],
+  "executive_briefing": "Nehru Place is within safe operating parameters (32% risk). Continue routine monitoring. Optimizing signals could save 961 kg CO2/week, equivalent to 2380 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_24",
     "week": 33,
     "zone_type": "Commercial_Downtown",
@@ -51,6 +156,15 @@
     "location_name": "Nehru Place",
     "city": "Delhi",
     "latitude": 28.5491,
-    "longitude": 77.2519
+    "longitude": 77.2519,
+    "predicted_risk_probability": 0.3247,
+    "risk_score": 32.47,
+    "population_exposure_score": 52.2523,
+    "vehicle_exposure_score": 48.8203,
+    "temporal_trend_score": 26.1418,
+    "priority_score": 39.7364,
+    "priority_rank": 34,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.3247
   }
 }

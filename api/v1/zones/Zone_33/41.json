@@ -1,8 +1,105 @@
 {
   "zone_id": "Zone_33",
+  "location_name": "Aminabad",
+  "city": "Lucknow",
+  "zone_type": "Commercial_Downtown",
   "week": 41,
-  "predicted_risk_probability": 0.4611985924697195,
-  "metrics": {
+  "latitude": 26.8465,
+  "longitude": 80.94,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.4612,
+    "predicted_risk_percentage": 46.12,
+    "risk_label": "MODERATE RISK",
+    "risk_color": "#eab308",
+    "risk_delta_vs_prev_week": -20.195,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 41.7709,
+    "priority_rank": 19,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 46.1199,
+      "population_exposure_score": 40.1178,
+      "vehicle_exposure_score": 42.0071,
+      "temporal_trend_score": 32.6137
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 41.8,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "46/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 46.1199
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "40/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 28.0825
+        }
+      ],
+      "total_factors": 2,
+      "assessment": "This zone has moderate risk levels with contributing factors: Risk Score, Population Exposure. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 25.66,
+    "congestion_delta": -16.66,
+    "average_speed_kmh": 56.34,
+    "speed_delta": 4.77,
+    "vehicle_density": 33.33,
+    "density_delta": -7.81,
+    "population_density": 6945,
+    "red_light_violations": 8,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 40,
+    "recommended_green_seconds": 43,
+    "change_seconds": 3,
+    "change_percent": 7.5,
+    "urgency": "MODERATE",
+    "reason": "Slight adjustment for current conditions",
+    "factors": {
+      "congestion_factor": 1.21,
+      "density_factor": 1.13,
+      "speed_factor": 0.79,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 40904.4,
+    "total_co2_tonnes_per_year": 2127.03,
+    "idle_co2_kg": 4721.0,
+    "moving_co2_kg": 36183.4,
+    "potential_savings_kg_per_week": 1065.3,
+    "potential_savings_tonnes_per_year": 55.4,
+    "trees_equivalent_per_year": 2637,
+    "fuel_saved_liters_per_week": 461.2,
+    "citizens_impacted": 13890,
+    "optimization_factor_pct": 22.6
+  },
+  "interventions": [
+    {
+      "id": "VIOLATION_ENFORCEMENT",
+      "name": "Red-Light Violation Enforcement",
+      "icon": "\ud83d\udea8",
+      "severity": "HIGH",
+      "description": "Elevated red-light violation count indicates intersection compliance failure.",
+      "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
+    }
+  ],
+  "executive_briefing": "Aminabad shows elevated risk at 46%. Continue routine monitoring. Optimizing signals could save 1065 kg CO2/week, equivalent to 2637 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_33",
     "week": 41,
     "zone_type": "Commercial_Downtown",
@@ -51,6 +148,15 @@
     "location_name": "Aminabad",
     "city": "Lucknow",
     "latitude": 26.8465,
-    "longitude": 80.94
+    "longitude": 80.94,
+    "predicted_risk_probability": 0.4612,
+    "risk_score": 46.1199,
+    "population_exposure_score": 40.1178,
+    "vehicle_exposure_score": 42.0071,
+    "temporal_trend_score": 32.6137,
+    "priority_score": 41.7709,
+    "priority_rank": 19,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.4612
   }
 }

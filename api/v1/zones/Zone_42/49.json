@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_42",
+  "location_name": "Guindy",
+  "city": "Chennai",
+  "zone_type": "University_District",
   "week": 49,
-  "predicted_risk_probability": 0.3102214450201853,
-  "metrics": {
+  "latitude": 13.0067,
+  "longitude": 80.2206,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.3102,
+    "predicted_risk_percentage": 31.02,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": -1.0683,
+    "actual_incident": 1
+  },
+  "priority": {
+    "priority_score": 38.137,
+    "priority_rank": 30,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 31.0221,
+      "population_exposure_score": 43.164,
+      "vehicle_exposure_score": 31.5659,
+      "temporal_trend_score": 57.4927
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 38.1,
+      "top_contributors": [
+        {
+          "factor": "Rising Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "57/100",
+          "impact": "MEDIUM",
+          "detail": "Slight upward trend in congestion over past 4 weeks",
+          "weight": 34.4956
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "31/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 31.0221
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "43/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 30.2148
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone has moderate risk levels with contributing factors: Rising Trend, Population Exposure. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 24.21,
+    "congestion_delta": 0.2,
+    "average_speed_kmh": 59.73,
+    "speed_delta": 0.85,
+    "vehicle_density": 28.24,
+    "density_delta": -5.03,
+    "population_density": 7369,
+    "red_light_violations": 2,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 36,
+    "change_seconds": 1,
+    "change_percent": 2.9,
+    "urgency": "NOMINAL",
+    "reason": "Current default timing is adequate",
+    "factors": {
+      "congestion_factor": 1.19,
+      "density_factor": 1.11,
+      "speed_factor": 0.78,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 36910.3,
+    "total_co2_tonnes_per_year": 1919.33,
+    "idle_co2_kg": 3774.0,
+    "moving_co2_kg": 33136.3,
+    "potential_savings_kg_per_week": 846.2,
+    "potential_savings_tonnes_per_year": 44.0,
+    "trees_equivalent_per_year": 2095,
+    "fuel_saved_liters_per_week": 366.3,
+    "citizens_impacted": 14738,
+    "optimization_factor_pct": 22.4
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "No specific risk indicators triggered.",
+      "action": "Continue routine monitoring."
+    }
+  ],
+  "executive_briefing": "Guindy is within safe operating parameters (31% risk). Continue routine monitoring. Optimizing signals could save 846 kg CO2/week, equivalent to 2095 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_42",
     "week": 49,
     "zone_type": "University_District",
@@ -51,6 +156,15 @@
     "location_name": "Guindy",
     "city": "Chennai",
     "latitude": 13.0067,
-    "longitude": 80.2206
+    "longitude": 80.2206,
+    "predicted_risk_probability": 0.3102,
+    "risk_score": 31.0221,
+    "population_exposure_score": 43.164,
+    "vehicle_exposure_score": 31.5659,
+    "temporal_trend_score": 57.4927,
+    "priority_score": 38.137,
+    "priority_rank": 30,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.3102
   }
 }

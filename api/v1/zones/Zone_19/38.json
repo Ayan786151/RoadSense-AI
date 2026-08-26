@@ -1,8 +1,97 @@
 {
   "zone_id": "Zone_19",
+  "location_name": "Lajpat Nagar",
+  "city": "Delhi",
+  "zone_type": "Industrial_Corridor",
   "week": 38,
-  "predicted_risk_probability": 0.15189355510247216,
-  "metrics": {
+  "latitude": 28.5677,
+  "longitude": 77.243,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.1519,
+    "predicted_risk_percentage": 15.19,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": -1.0225,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 24.5104,
+    "priority_rank": 40,
+    "priority_level": "LOW",
+    "components": {
+      "risk_score": 15.1894,
+      "population_exposure_score": 19.9368,
+      "vehicle_exposure_score": 26.5579,
+      "temporal_trend_score": 54.2591
+    },
+    "explanation": {
+      "priority_level": "LOW",
+      "priority_score": 24.5,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "15/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 15.1894
+        }
+      ],
+      "total_factors": 1,
+      "assessment": "This zone is currently within acceptable safety parameters. Routine monitoring is sufficient."
+    }
+  },
+  "telemetry": {
+    "congestion": 14.8,
+    "congestion_delta": 7.2,
+    "average_speed_kmh": 63.67,
+    "speed_delta": -1.24,
+    "vehicle_density": 20.84,
+    "density_delta": 1.92,
+    "population_density": 4136,
+    "red_light_violations": 3,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 45,
+    "recommended_green_seconds": 41,
+    "change_seconds": -4,
+    "change_percent": -8.9,
+    "urgency": "NOMINAL",
+    "reason": "Current default timing is adequate",
+    "factors": {
+      "congestion_factor": 1.12,
+      "density_factor": 1.08,
+      "speed_factor": 0.76,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 31005.2,
+    "total_co2_tonnes_per_year": 1612.27,
+    "idle_co2_kg": 1702.5,
+    "moving_co2_kg": 29302.7,
+    "potential_savings_kg_per_week": 365.7,
+    "potential_savings_tonnes_per_year": 19.02,
+    "trees_equivalent_per_year": 905,
+    "fuel_saved_liters_per_week": 158.3,
+    "citizens_impacted": 8272,
+    "optimization_factor_pct": 21.5
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "Lajpat Nagar is within safe operating parameters (15% risk). Continue routine monitoring. Optimizing signals could save 366 kg CO2/week, equivalent to 905 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_19",
     "week": 38,
     "zone_type": "Industrial_Corridor",
@@ -51,6 +140,15 @@
     "location_name": "Lajpat Nagar",
     "city": "Delhi",
     "latitude": 28.5677,
-    "longitude": 77.243
+    "longitude": 77.243,
+    "predicted_risk_probability": 0.1519,
+    "risk_score": 15.1894,
+    "population_exposure_score": 19.9368,
+    "vehicle_exposure_score": 26.5579,
+    "temporal_trend_score": 54.2591,
+    "priority_score": 24.5104,
+    "priority_rank": 40,
+    "priority_level": "LOW",
+    "risk_prob": 0.1519
   }
 }

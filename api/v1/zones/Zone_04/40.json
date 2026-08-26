@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_04",
+  "location_name": "Dadar",
+  "city": "Mumbai",
+  "zone_type": "Highway_Junction",
   "week": 40,
-  "predicted_risk_probability": 0.5252964004906855,
-  "metrics": {
+  "latitude": 19.0178,
+  "longitude": 72.8478,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.5253,
+    "predicted_risk_percentage": 52.53,
+    "risk_label": "MODERATE RISK",
+    "risk_color": "#eab308",
+    "risk_delta_vs_prev_week": -12.5918,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 41.1493,
+    "priority_rank": 27,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 52.5296,
+      "population_exposure_score": 7.5724,
+      "vehicle_exposure_score": 58.4689,
+      "temporal_trend_score": 43.6702
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 41.1,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "53/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 52.5296
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "48/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate congestion at 48",
+          "weight": 33.306
+        }
+      ],
+      "total_factors": 2,
+      "assessment": "This zone has moderate risk levels with contributing factors: Risk Score, Congestion. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 47.58,
+    "congestion_delta": 7.88,
+    "average_speed_kmh": 50.17,
+    "speed_delta": -2.88,
+    "vehicle_density": 44.33,
+    "density_delta": 2.11,
+    "population_density": 2415,
+    "red_light_violations": 8,
+    "weather": "Normal",
+    "special_event": 1
+  },
+  "signal_optimization": {
+    "base_green_seconds": 50,
+    "recommended_green_seconds": 75,
+    "change_seconds": 25,
+    "change_percent": 50.0,
+    "urgency": "CRITICAL",
+    "reason": "Severe congestion requires significantly extended green phase",
+    "factors": {
+      "congestion_factor": 1.38,
+      "density_factor": 1.18,
+      "speed_factor": 0.81,
+      "event_boost": 1.15,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 41861.5,
+    "total_co2_tonnes_per_year": 2176.8,
+    "idle_co2_kg": 11642.9,
+    "moving_co2_kg": 30218.6,
+    "potential_savings_kg_per_week": 2882.5,
+    "potential_savings_tonnes_per_year": 149.89,
+    "trees_equivalent_per_year": 7137,
+    "fuel_saved_liters_per_week": 1247.9,
+    "citizens_impacted": 4830,
+    "optimization_factor_pct": 24.8
+  },
+  "interventions": [
+    {
+      "id": "VIOLATION_ENFORCEMENT",
+      "name": "Red-Light Violation Enforcement",
+      "icon": "\ud83d\udea8",
+      "severity": "HIGH",
+      "description": "Elevated red-light violation count indicates intersection compliance failure.",
+      "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
+    },
+    {
+      "id": "EVENT_TRAFFIC_PLAN",
+      "name": "Special Event Traffic Plan",
+      "icon": "\ud83c\udfaa",
+      "severity": "MEDIUM",
+      "description": "Active special event generating additional traffic demand.",
+      "action": "Activate event traffic management plan. Deploy traffic marshals and temporary signage."
+    }
+  ],
+  "executive_briefing": "Dadar shows elevated risk at 53%. Continue routine monitoring. Optimizing signals could save 2882 kg CO2/week, equivalent to 7137 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_04",
     "week": 40,
     "zone_type": "Highway_Junction",
@@ -51,6 +156,15 @@
     "location_name": "Dadar",
     "city": "Mumbai",
     "latitude": 19.0178,
-    "longitude": 72.8478
+    "longitude": 72.8478,
+    "predicted_risk_probability": 0.5253,
+    "risk_score": 52.5296,
+    "population_exposure_score": 7.5724,
+    "vehicle_exposure_score": 58.4689,
+    "temporal_trend_score": 43.6702,
+    "priority_score": 41.1493,
+    "priority_rank": 27,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.5253
   }
 }

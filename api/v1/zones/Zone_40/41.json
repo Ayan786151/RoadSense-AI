@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_40",
+  "location_name": "Velachery",
+  "city": "Chennai",
+  "zone_type": "University_District",
   "week": 41,
-  "predicted_risk_probability": 0.5542556918629424,
-  "metrics": {
+  "latitude": 12.9815,
+  "longitude": 80.218,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.5543,
+    "predicted_risk_percentage": 55.43,
+    "risk_label": "HIGH RISK",
+    "risk_color": "#f97316",
+    "risk_delta_vs_prev_week": 6.8896,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 50.4548,
+    "priority_rank": 12,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 55.4256,
+      "population_exposure_score": 47.1945,
+      "vehicle_exposure_score": 55.5228,
+      "temporal_trend_score": 35.8759
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 50.5,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "55/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 55.4256
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "47/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 33.0361
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "43/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate congestion at 43",
+          "weight": 29.848
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone has moderate risk levels with contributing factors: Risk Score, Population Exposure. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 42.64,
+    "congestion_delta": -2.67,
+    "average_speed_kmh": 53.16,
+    "speed_delta": 4.39,
+    "vehicle_density": 42.03,
+    "density_delta": 2.52,
+    "population_density": 7930,
+    "red_light_violations": 8,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 43,
+    "change_seconds": 8,
+    "change_percent": 22.9,
+    "urgency": "HIGH",
+    "reason": "Elevated traffic density needs extended clearance time",
+    "factors": {
+      "congestion_factor": 1.34,
+      "density_factor": 1.17,
+      "speed_factor": 0.8,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 43111.9,
+    "total_co2_tonnes_per_year": 2241.82,
+    "idle_co2_kg": 9892.7,
+    "moving_co2_kg": 33219.1,
+    "potential_savings_kg_per_week": 2400.4,
+    "potential_savings_tonnes_per_year": 124.82,
+    "trees_equivalent_per_year": 5943,
+    "fuel_saved_liters_per_week": 1039.1,
+    "citizens_impacted": 15860,
+    "optimization_factor_pct": 24.3
+  },
+  "interventions": [
+    {
+      "id": "VIOLATION_ENFORCEMENT",
+      "name": "Red-Light Violation Enforcement",
+      "icon": "\ud83d\udea8",
+      "severity": "HIGH",
+      "description": "Elevated red-light violation count indicates intersection compliance failure.",
+      "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
+    }
+  ],
+  "executive_briefing": "Velachery shows elevated risk at 55%. Continue routine monitoring. Optimizing signals could save 2400 kg CO2/week, equivalent to 5943 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_40",
     "week": 41,
     "zone_type": "University_District",
@@ -51,6 +156,15 @@
     "location_name": "Velachery",
     "city": "Chennai",
     "latitude": 12.9815,
-    "longitude": 80.218
+    "longitude": 80.218,
+    "predicted_risk_probability": 0.5543,
+    "risk_score": 55.4256,
+    "population_exposure_score": 47.1945,
+    "vehicle_exposure_score": 55.5228,
+    "temporal_trend_score": 35.8759,
+    "priority_score": 50.4548,
+    "priority_rank": 12,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.5543
   }
 }

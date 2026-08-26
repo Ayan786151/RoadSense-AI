@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_46",
+  "location_name": "Nungambakkam",
+  "city": "Chennai",
+  "zone_type": "University_District",
   "week": 15,
-  "predicted_risk_probability": 0.31785461393304504,
-  "metrics": {
+  "latitude": 13.0569,
+  "longitude": 80.2425,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.3179,
+    "predicted_risk_percentage": 31.79,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": 1.8502,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 42.3534,
+    "priority_rank": 28,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 31.7855,
+      "population_exposure_score": 48.0494,
+      "vehicle_exposure_score": 38.1136,
+      "temporal_trend_score": 66.6945
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 42.4,
+      "top_contributors": [
+        {
+          "factor": "Rising Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "67/100",
+          "impact": "MEDIUM",
+          "detail": "Slight upward trend in congestion over past 4 weeks",
+          "weight": 40.0167
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "48/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 33.6346
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "32/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 31.7855
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone has moderate risk levels with contributing factors: Rising Trend, Population Exposure. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 25.75,
+    "congestion_delta": 0.98,
+    "average_speed_kmh": 61.57,
+    "speed_delta": 1.25,
+    "vehicle_density": 27.81,
+    "density_delta": -0.87,
+    "population_density": 8049,
+    "red_light_violations": 2,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 36,
+    "change_seconds": 1,
+    "change_percent": 2.9,
+    "urgency": "NOMINAL",
+    "reason": "Current default timing is adequate",
+    "factors": {
+      "congestion_factor": 1.21,
+      "density_factor": 1.11,
+      "speed_factor": 0.77,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 36906.4,
+    "total_co2_tonnes_per_year": 1919.13,
+    "idle_co2_kg": 3952.9,
+    "moving_co2_kg": 32953.5,
+    "potential_savings_kg_per_week": 892.4,
+    "potential_savings_tonnes_per_year": 46.4,
+    "trees_equivalent_per_year": 2209,
+    "fuel_saved_liters_per_week": 386.3,
+    "citizens_impacted": 16098,
+    "optimization_factor_pct": 22.6
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "No specific risk indicators triggered.",
+      "action": "Continue routine monitoring."
+    }
+  ],
+  "executive_briefing": "Nungambakkam is within safe operating parameters (32% risk). Continue routine monitoring. Optimizing signals could save 892 kg CO2/week, equivalent to 2209 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_46",
     "week": 15,
     "zone_type": "University_District",
@@ -51,6 +156,15 @@
     "location_name": "Nungambakkam",
     "city": "Chennai",
     "latitude": 13.0569,
-    "longitude": 80.2425
+    "longitude": 80.2425,
+    "predicted_risk_probability": 0.3179,
+    "risk_score": 31.7855,
+    "population_exposure_score": 48.0494,
+    "vehicle_exposure_score": 38.1136,
+    "temporal_trend_score": 66.6945,
+    "priority_score": 42.3534,
+    "priority_rank": 28,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.3179
   }
 }

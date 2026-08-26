@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_15",
+  "location_name": "Dwarka",
+  "city": "Delhi",
+  "zone_type": "Residential",
   "week": 42,
-  "predicted_risk_probability": 0.4031811419572665,
-  "metrics": {
+  "latitude": 28.5921,
+  "longitude": 77.046,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.4032,
+    "predicted_risk_percentage": 40.32,
+    "risk_label": "MODERATE RISK",
+    "risk_color": "#eab308",
+    "risk_delta_vs_prev_week": -2.3573,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 62.4758,
+    "priority_rank": 6,
+    "priority_level": "HIGH",
+    "components": {
+      "risk_score": 40.3181,
+      "population_exposure_score": 97.0041,
+      "vehicle_exposure_score": 77.2894,
+      "temporal_trend_score": 44.2646
+    },
+    "explanation": {
+      "priority_level": "HIGH",
+      "priority_score": 62.5,
+      "top_contributors": [
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "97/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 14863 residents/km\u00b2",
+          "weight": 97.0041
+        },
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "77/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 77.2894
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "40/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 40.3181
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone shows significant risk elevation driven by Population Exposure, Vehicle Density. Proactive intervention should be scheduled within the current planning cycle."
+    }
+  },
+  "telemetry": {
+    "congestion": 38.54,
+    "congestion_delta": 3.25,
+    "average_speed_kmh": 56.71,
+    "speed_delta": 1.87,
+    "vehicle_density": 57.09,
+    "density_delta": -2.57,
+    "population_density": 14863,
+    "red_light_violations": 9,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 30,
+    "recommended_green_seconds": 37,
+    "change_seconds": 7,
+    "change_percent": 23.3,
+    "urgency": "HIGH",
+    "reason": "Elevated traffic density needs extended clearance time",
+    "factors": {
+      "congestion_factor": 1.31,
+      "density_factor": 1.23,
+      "speed_factor": 0.79,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 63721.3,
+    "total_co2_tonnes_per_year": 3313.51,
+    "idle_co2_kg": 12145.4,
+    "moving_co2_kg": 51576.0,
+    "potential_savings_kg_per_week": 2897.2,
+    "potential_savings_tonnes_per_year": 150.65,
+    "trees_equivalent_per_year": 7173,
+    "fuel_saved_liters_per_week": 1254.2,
+    "citizens_impacted": 29726,
+    "optimization_factor_pct": 23.9
+  },
+  "interventions": [
+    {
+      "id": "VIOLATION_ENFORCEMENT",
+      "name": "Red-Light Violation Enforcement",
+      "icon": "\ud83d\udea8",
+      "severity": "HIGH",
+      "description": "Elevated red-light violation count indicates intersection compliance failure.",
+      "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
+    }
+  ],
+  "executive_briefing": "Dwarka shows elevated risk at 40%. Enforcement focus needed \u2014 9 red-light violations recorded. Optimizing signals could save 2897 kg CO2/week, equivalent to 7173 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_15",
     "week": 42,
     "zone_type": "Residential",
@@ -51,6 +156,15 @@
     "location_name": "Dwarka",
     "city": "Delhi",
     "latitude": 28.5921,
-    "longitude": 77.046
+    "longitude": 77.046,
+    "predicted_risk_probability": 0.4032,
+    "risk_score": 40.3181,
+    "population_exposure_score": 97.0041,
+    "vehicle_exposure_score": 77.2894,
+    "temporal_trend_score": 44.2646,
+    "priority_score": 62.4758,
+    "priority_rank": 6,
+    "priority_level": "HIGH",
+    "risk_prob": 0.4032
   }
 }

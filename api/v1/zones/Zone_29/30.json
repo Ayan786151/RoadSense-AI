@@ -1,8 +1,137 @@
 {
   "zone_id": "Zone_29",
+  "location_name": "Indira Nagar",
+  "city": "Lucknow",
+  "zone_type": "Residential",
   "week": 30,
-  "predicted_risk_probability": 0.7353248984559284,
-  "metrics": {
+  "latitude": 26.88,
+  "longitude": 81.0,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.7353,
+    "predicted_risk_percentage": 73.53,
+    "risk_label": "HIGH RISK",
+    "risk_color": "#f97316",
+    "risk_delta_vs_prev_week": 25.5271,
+    "actual_incident": 1
+  },
+  "priority": {
+    "priority_score": 74.7188,
+    "priority_rank": 3,
+    "priority_level": "HIGH",
+    "components": {
+      "risk_score": 73.5325,
+      "population_exposure_score": 86.8525,
+      "vehicle_exposure_score": 85.9721,
+      "temporal_trend_score": 42.6552
+    },
+    "explanation": {
+      "priority_level": "HIGH",
+      "priority_score": 74.7,
+      "top_contributors": [
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "87/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 13450 residents/km\u00b2",
+          "weight": 86.8525
+        },
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "86/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 85.9721
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udd34",
+          "value": "74/100",
+          "impact": "HIGH",
+          "detail": "Model-estimated risk score is in the critical range",
+          "weight": 73.5325
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "46/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate congestion at 46",
+          "weight": 32.284
+        }
+      ],
+      "total_factors": 4,
+      "assessment": "This zone shows significant risk elevation driven by Population Exposure, Vehicle Density. Proactive intervention should be scheduled within the current planning cycle."
+    }
+  },
+  "telemetry": {
+    "congestion": 46.12,
+    "congestion_delta": 14.25,
+    "average_speed_kmh": 42.85,
+    "speed_delta": -15.73,
+    "vehicle_density": 59.08,
+    "density_delta": -2.67,
+    "population_density": 13450,
+    "red_light_violations": 8,
+    "weather": "Light Rain",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 30,
+    "recommended_green_seconds": 46,
+    "change_seconds": 16,
+    "change_percent": 53.3,
+    "urgency": "CRITICAL",
+    "reason": "Severe congestion requires significantly extended green phase",
+    "factors": {
+      "congestion_factor": 1.37,
+      "density_factor": 1.24,
+      "speed_factor": 0.84,
+      "event_boost": 1.0,
+      "weather_boost": 1.08
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 54324.3,
+    "total_co2_tonnes_per_year": 2824.87,
+    "idle_co2_kg": 15040.7,
+    "moving_co2_kg": 39283.6,
+    "potential_savings_kg_per_week": 3701.8,
+    "potential_savings_tonnes_per_year": 192.49,
+    "trees_equivalent_per_year": 9166,
+    "fuel_saved_liters_per_week": 1602.5,
+    "citizens_impacted": 26900,
+    "optimization_factor_pct": 24.6
+  },
+  "interventions": [
+    {
+      "id": "VIOLATION_ENFORCEMENT",
+      "name": "Red-Light Violation Enforcement",
+      "icon": "\ud83d\udea8",
+      "severity": "HIGH",
+      "description": "Elevated red-light violation count indicates intersection compliance failure.",
+      "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
+    },
+    {
+      "id": "ROAD_MAINTENANCE",
+      "name": "Road Maintenance Inspection",
+      "icon": "\ud83d\udee3\ufe0f",
+      "severity": "MEDIUM",
+      "description": "Deteriorated road surface combined with elevated risk indicates infrastructure maintenance need.",
+      "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
+    },
+    {
+      "id": "MONITORING_UPGRADE",
+      "name": "Enhanced Monitoring & CCTV Coverage",
+      "icon": "\ud83d\udcf9",
+      "severity": "MEDIUM",
+      "description": "High-risk zone with significant population exposure warrants improved surveillance.",
+      "action": "Install additional CCTV cameras and integrate with traffic management center for real-time monitoring."
+    }
+  ],
+  "executive_briefing": "Indira Nagar is in a critical safety state with 74% incident risk. Continue routine monitoring. Optimizing signals could save 3702 kg CO2/week, equivalent to 9166 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_29",
     "week": 30,
     "zone_type": "Residential",
@@ -51,6 +180,15 @@
     "location_name": "Indira Nagar",
     "city": "Lucknow",
     "latitude": 26.88,
-    "longitude": 81.0
+    "longitude": 81.0,
+    "predicted_risk_probability": 0.7353,
+    "risk_score": 73.5325,
+    "population_exposure_score": 86.8525,
+    "vehicle_exposure_score": 85.9721,
+    "temporal_trend_score": 42.6552,
+    "priority_score": 74.7188,
+    "priority_rank": 3,
+    "priority_level": "HIGH",
+    "risk_prob": 0.7353
   }
 }

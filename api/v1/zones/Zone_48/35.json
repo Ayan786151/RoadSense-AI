@@ -1,8 +1,105 @@
 {
   "zone_id": "Zone_48",
+  "location_name": "Ambattur",
+  "city": "Chennai",
+  "zone_type": "Industrial_Corridor",
   "week": 35,
-  "predicted_risk_probability": 0.6114227937336588,
-  "metrics": {
+  "latitude": 13.1143,
+  "longitude": 80.1486,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.6114,
+    "predicted_risk_percentage": 61.14,
+    "risk_label": "HIGH RISK",
+    "risk_color": "#f97316",
+    "risk_delta_vs_prev_week": 37.5087,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 35.6502,
+    "priority_rank": 33,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 61.1423,
+      "population_exposure_score": 18.9525,
+      "vehicle_exposure_score": 27.5712,
+      "temporal_trend_score": 6.2731
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 35.7,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "61/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 61.1423
+        },
+        {
+          "factor": "Improving Trend",
+          "icon": "\ud83d\udcc9",
+          "value": "6/100",
+          "impact": "POSITIVE",
+          "detail": "Conditions are improving over past 4 weeks",
+          "weight": -6.2731
+        }
+      ],
+      "total_factors": 2,
+      "assessment": "This zone has moderate risk levels with contributing factors: Risk Score. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 32.55,
+    "congestion_delta": 11.4,
+    "average_speed_kmh": 34.47,
+    "speed_delta": -17.68,
+    "vehicle_density": 22.51,
+    "density_delta": -2.69,
+    "population_density": 3999,
+    "red_light_violations": 4,
+    "weather": "Heavy Rain",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 45,
+    "recommended_green_seconds": 63,
+    "change_seconds": 18,
+    "change_percent": 40.0,
+    "urgency": "HIGH",
+    "reason": "Elevated traffic density needs extended clearance time",
+    "factors": {
+      "congestion_factor": 1.26,
+      "density_factor": 1.09,
+      "speed_factor": 0.87,
+      "event_boost": 1.0,
+      "weather_boost": 1.18
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 19117.2,
+    "total_co2_tonnes_per_year": 994.1,
+    "idle_co2_kg": 4044.5,
+    "moving_co2_kg": 15072.7,
+    "potential_savings_kg_per_week": 940.6,
+    "potential_savings_tonnes_per_year": 48.91,
+    "trees_equivalent_per_year": 2328,
+    "fuel_saved_liters_per_week": 407.2,
+    "citizens_impacted": 7998,
+    "optimization_factor_pct": 23.3
+  },
+  "interventions": [
+    {
+      "id": "ROAD_MAINTENANCE",
+      "name": "Road Maintenance Inspection",
+      "icon": "\ud83d\udee3\ufe0f",
+      "severity": "MEDIUM",
+      "description": "Deteriorated road surface combined with elevated risk indicates infrastructure maintenance need.",
+      "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
+    }
+  ],
+  "executive_briefing": "Ambattur is in a critical safety state with 61% incident risk. Continue routine monitoring. Optimizing signals could save 941 kg CO2/week, equivalent to 2328 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_48",
     "week": 35,
     "zone_type": "Industrial_Corridor",
@@ -51,6 +148,15 @@
     "location_name": "Ambattur",
     "city": "Chennai",
     "latitude": 13.1143,
-    "longitude": 80.1486
+    "longitude": 80.1486,
+    "predicted_risk_probability": 0.6114,
+    "risk_score": 61.1423,
+    "population_exposure_score": 18.9525,
+    "vehicle_exposure_score": 27.5712,
+    "temporal_trend_score": 6.2731,
+    "priority_score": 35.6502,
+    "priority_rank": 33,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.6114
   }
 }

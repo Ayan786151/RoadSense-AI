@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_36",
+  "location_name": "Rajajipuram",
+  "city": "Lucknow",
+  "zone_type": "Residential",
   "week": 13,
-  "predicted_risk_probability": 0.3438956588004077,
-  "metrics": {
+  "latitude": 26.833,
+  "longitude": 80.89,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.3439,
+    "predicted_risk_percentage": 34.39,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": -26.2876,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 53.2075,
+    "priority_rank": 13,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 34.3896,
+      "population_exposure_score": 81.73,
+      "vehicle_exposure_score": 65.9627,
+      "temporal_trend_score": 38.8442
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 53.2,
+      "top_contributors": [
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "82/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 12737 residents/km\u00b2",
+          "weight": 81.73
+        },
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "66/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 65.9627
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "34/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 34.3896
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone has moderate risk levels with contributing factors: Population Exposure, Vehicle Density. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 34.97,
+    "congestion_delta": -6.63,
+    "average_speed_kmh": 55.24,
+    "speed_delta": 11.62,
+    "vehicle_density": 42.48,
+    "density_delta": 7.09,
+    "population_density": 12737,
+    "red_light_violations": 8,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 30,
+    "recommended_green_seconds": 35,
+    "change_seconds": 5,
+    "change_percent": 16.7,
+    "urgency": "MODERATE",
+    "reason": "Slight adjustment for current conditions",
+    "factors": {
+      "congestion_factor": 1.28,
+      "density_factor": 1.17,
+      "speed_factor": 0.79,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 47753.8,
+    "total_co2_tonnes_per_year": 2483.2,
+    "idle_co2_kg": 8200.1,
+    "moving_co2_kg": 39553.7,
+    "potential_savings_kg_per_week": 1926.8,
+    "potential_savings_tonnes_per_year": 100.19,
+    "trees_equivalent_per_year": 4771,
+    "fuel_saved_liters_per_week": 834.1,
+    "citizens_impacted": 25474,
+    "optimization_factor_pct": 23.5
+  },
+  "interventions": [
+    {
+      "id": "VIOLATION_ENFORCEMENT",
+      "name": "Red-Light Violation Enforcement",
+      "icon": "\ud83d\udea8",
+      "severity": "HIGH",
+      "description": "Elevated red-light violation count indicates intersection compliance failure.",
+      "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
+    }
+  ],
+  "executive_briefing": "Rajajipuram is within safe operating parameters (34% risk). Continue routine monitoring. Optimizing signals could save 1927 kg CO2/week, equivalent to 4771 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_36",
     "week": 13,
     "zone_type": "Residential",
@@ -51,6 +156,15 @@
     "location_name": "Rajajipuram",
     "city": "Lucknow",
     "latitude": 26.833,
-    "longitude": 80.89
+    "longitude": 80.89,
+    "predicted_risk_probability": 0.3439,
+    "risk_score": 34.3896,
+    "population_exposure_score": 81.73,
+    "vehicle_exposure_score": 65.9627,
+    "temporal_trend_score": 38.8442,
+    "priority_score": 53.2075,
+    "priority_rank": 13,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.3439
   }
 }

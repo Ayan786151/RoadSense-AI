@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_02",
+  "location_name": "Bandra",
+  "city": "Mumbai",
+  "zone_type": "Residential",
   "week": 16,
-  "predicted_risk_probability": 0.46893222841403553,
-  "metrics": {
+  "latitude": 19.0596,
+  "longitude": 72.8295,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.4689,
+    "predicted_risk_percentage": 46.89,
+    "risk_label": "MODERATE RISK",
+    "risk_color": "#eab308",
+    "risk_delta_vs_prev_week": 5.2402,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 59.5745,
+    "priority_rank": 7,
+    "priority_level": "HIGH",
+    "components": {
+      "risk_score": 46.8932,
+      "population_exposure_score": 79.4957,
+      "vehicle_exposure_score": 69.0581,
+      "temporal_trend_score": 47.5447
+    },
+    "explanation": {
+      "priority_level": "HIGH",
+      "priority_score": 59.6,
+      "top_contributors": [
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "79/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 12426 residents/km\u00b2",
+          "weight": 79.4957
+        },
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "69/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 69.0581
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "47/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 46.8932
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone shows significant risk elevation driven by Population Exposure, Vehicle Density. Proactive intervention should be scheduled within the current planning cycle."
+    }
+  },
+  "telemetry": {
+    "congestion": 33.67,
+    "congestion_delta": 1.76,
+    "average_speed_kmh": 44.71,
+    "speed_delta": -4.29,
+    "vehicle_density": 46.33,
+    "density_delta": 2.77,
+    "population_density": 12426,
+    "red_light_violations": 4,
+    "weather": "Light Rain",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 30,
+    "recommended_green_seconds": 40,
+    "change_seconds": 10,
+    "change_percent": 33.3,
+    "urgency": "HIGH",
+    "reason": "Elevated traffic density needs extended clearance time",
+    "factors": {
+      "congestion_factor": 1.27,
+      "density_factor": 1.19,
+      "speed_factor": 0.83,
+      "event_boost": 1.0,
+      "weather_boost": 1.08
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 48181.1,
+    "total_co2_tonnes_per_year": 2505.42,
+    "idle_co2_kg": 8610.8,
+    "moving_co2_kg": 39570.3,
+    "potential_savings_kg_per_week": 2012.1,
+    "potential_savings_tonnes_per_year": 104.63,
+    "trees_equivalent_per_year": 4982,
+    "fuel_saved_liters_per_week": 871.0,
+    "citizens_impacted": 24852,
+    "optimization_factor_pct": 23.4
+  },
+  "interventions": [
+    {
+      "id": "ROAD_MAINTENANCE",
+      "name": "Road Maintenance Inspection",
+      "icon": "\ud83d\udee3\ufe0f",
+      "severity": "MEDIUM",
+      "description": "Deteriorated road surface combined with elevated risk indicates infrastructure maintenance need.",
+      "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
+    }
+  ],
+  "executive_briefing": "Bandra shows elevated risk at 47%. Continue routine monitoring. Optimizing signals could save 2012 kg CO2/week, equivalent to 4982 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_02",
     "week": 16,
     "zone_type": "Residential",
@@ -51,6 +156,15 @@
     "location_name": "Bandra",
     "city": "Mumbai",
     "latitude": 19.0596,
-    "longitude": 72.8295
+    "longitude": 72.8295,
+    "predicted_risk_probability": 0.4689,
+    "risk_score": 46.8932,
+    "population_exposure_score": 79.4957,
+    "vehicle_exposure_score": 69.0581,
+    "temporal_trend_score": 47.5447,
+    "priority_score": 59.5745,
+    "priority_rank": 7,
+    "priority_level": "HIGH",
+    "risk_prob": 0.4689
   }
 }

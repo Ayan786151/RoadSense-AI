@@ -1,8 +1,161 @@
 {
   "zone_id": "Zone_49",
+  "location_name": "Sholinganallur",
+  "city": "Chennai",
+  "zone_type": "University_District",
   "week": 3,
-  "predicted_risk_probability": null,
-  "metrics": {
+  "latitude": 12.901,
+  "longitude": 80.2279,
+  "risk_analysis": {
+    "predicted_risk_probability": null,
+    "predicted_risk_percentage": null,
+    "risk_label": "BASELINE WARMUP",
+    "risk_color": "#71717a",
+    "risk_delta_vs_prev_week": null,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 45.7808,
+    "priority_rank": 4,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 0.0,
+      "population_exposure_score": 73.1231,
+      "vehicle_exposure_score": 100.0,
+      "temporal_trend_score": 50.0
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 45.8,
+      "top_contributors": [
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "100/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 100.0
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "93/100",
+          "impact": "HIGH",
+          "detail": "Congestion index at 93 \u2014 severe traffic flow degradation",
+          "weight": 92.94
+        },
+        {
+          "factor": "Speed Anomaly",
+          "icon": "\ud83d\udc0c",
+          "value": "20 km/h",
+          "impact": "HIGH",
+          "detail": "Average speed of 20 km/h indicates near-gridlock conditions",
+          "weight": 79.79
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "73/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 11539 residents/km\u00b2",
+          "weight": 73.1231
+        },
+        {
+          "factor": "Violation Count",
+          "icon": "\ud83d\udea8",
+          "value": "11",
+          "impact": "HIGH",
+          "detail": "11 red-light violations recorded \u2014 intersection safety concern",
+          "weight": 55
+        }
+      ],
+      "total_factors": 6,
+      "assessment": "This zone has moderate risk levels with contributing factors: Vehicle Density, Congestion. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 92.94,
+    "congestion_delta": 36.03,
+    "average_speed_kmh": 20.21,
+    "speed_delta": -24.81,
+    "vehicle_density": 60.08,
+    "density_delta": 5.18,
+    "population_density": 11539,
+    "red_light_violations": 11,
+    "weather": "Light Rain",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 75,
+    "change_seconds": 40,
+    "change_percent": 114.3,
+    "urgency": "CRITICAL",
+    "reason": "Severe congestion requires significantly extended green phase",
+    "factors": {
+      "congestion_factor": 1.74,
+      "density_factor": 1.24,
+      "speed_factor": 0.92,
+      "event_boost": 1.0,
+      "weather_boost": 1.08
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 35266.7,
+    "total_co2_tonnes_per_year": 1833.87,
+    "idle_co2_kg": 30822.8,
+    "moving_co2_kg": 4443.9,
+    "potential_savings_kg_per_week": 9029.2,
+    "potential_savings_tonnes_per_year": 469.52,
+    "trees_equivalent_per_year": 22358,
+    "fuel_saved_liters_per_week": 3908.8,
+    "citizens_impacted": 23078,
+    "optimization_factor_pct": 29.3
+  },
+  "interventions": [
+    {
+      "id": "CONGESTION_MANAGEMENT",
+      "name": "Congestion Management & Diversion",
+      "icon": "\ud83d\ude97",
+      "severity": "CRITICAL",
+      "description": "Severe congestion with high vehicle density requires active demand management.",
+      "action": "Activate dynamic message signs for route diversion. Consider congestion pricing or access restrictions."
+    },
+    {
+      "id": "SIGNAL_OPTIMIZATION",
+      "name": "Traffic Signal Optimization",
+      "icon": "\ud83d\udea6",
+      "severity": "HIGH",
+      "description": "High congestion with low throughput speed indicates signal timing inefficiency.",
+      "action": "Review and optimize signal timing at major intersections in this zone."
+    },
+    {
+      "id": "VIOLATION_ENFORCEMENT",
+      "name": "Red-Light Violation Enforcement",
+      "icon": "\ud83d\udea8",
+      "severity": "HIGH",
+      "description": "Elevated red-light violation count indicates intersection compliance failure.",
+      "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
+    },
+    {
+      "id": "PEDESTRIAN_SAFETY",
+      "name": "Pedestrian Crossing Intervention",
+      "icon": "\ud83d\udeb6",
+      "severity": "MEDIUM",
+      "description": "High population density zone with significant traffic congestion creates pedestrian exposure risk.",
+      "action": "Install protected pedestrian crossings, improve sidewalk infrastructure, and add pedestrian countdown signals."
+    },
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "Sholinganallur is within safe operating parameters (0% risk). Signal optimization recommended \u2014 congestion at 93/100 with speeds averaging 20 km/h. Optimizing signals could save 9029 kg CO2/week, equivalent to 22358 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_49",
     "week": 3,
     "zone_type": "University_District",
@@ -51,6 +204,15 @@
     "location_name": "Sholinganallur",
     "city": "Chennai",
     "latitude": 12.901,
-    "longitude": 80.2279
+    "longitude": 80.2279,
+    "predicted_risk_probability": null,
+    "risk_score": 0.0,
+    "population_exposure_score": 73.1231,
+    "vehicle_exposure_score": 100.0,
+    "temporal_trend_score": 50.0,
+    "priority_score": 45.7808,
+    "priority_rank": 4,
+    "priority_level": "MODERATE",
+    "risk_prob": null
   }
 }

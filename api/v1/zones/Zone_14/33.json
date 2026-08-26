@@ -1,8 +1,129 @@
 {
   "zone_id": "Zone_14",
+  "location_name": "Connaught Place",
+  "city": "Delhi",
+  "zone_type": "University_District",
   "week": 33,
-  "predicted_risk_probability": 0.5193205394496894,
-  "metrics": {
+  "latitude": 28.6315,
+  "longitude": 77.2167,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.5193,
+    "predicted_risk_percentage": 51.93,
+    "risk_label": "MODERATE RISK",
+    "risk_color": "#eab308",
+    "risk_delta_vs_prev_week": -43.8195,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 65.8437,
+    "priority_rank": 15,
+    "priority_level": "HIGH",
+    "components": {
+      "risk_score": 51.9321,
+      "population_exposure_score": 66.0249,
+      "vehicle_exposure_score": 76.1413,
+      "temporal_trend_score": 88.9092
+    },
+    "explanation": {
+      "priority_level": "HIGH",
+      "priority_score": 65.8,
+      "top_contributors": [
+        {
+          "factor": "Worsening Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "89/100",
+          "impact": "HIGH",
+          "detail": "4-week congestion trend is actively worsening \u2014 conditions deteriorating",
+          "weight": 88.9092
+        },
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "76/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 76.1413
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "66/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 10551 residents/km\u00b2",
+          "weight": 66.0249
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "52/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 51.9321
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "43/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate congestion at 43",
+          "weight": 29.918
+        }
+      ],
+      "total_factors": 5,
+      "assessment": "This zone shows significant risk elevation driven by Worsening Trend, Vehicle Density. Proactive intervention should be scheduled within the current planning cycle."
+    }
+  },
+  "telemetry": {
+    "congestion": 42.74,
+    "congestion_delta": -43.58,
+    "average_speed_kmh": 45.46,
+    "speed_delta": 32.52,
+    "vehicle_density": 54.77,
+    "density_delta": -4.12,
+    "population_density": 10551,
+    "red_light_violations": 5,
+    "weather": "Light Rain",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 51,
+    "change_seconds": 16,
+    "change_percent": 45.7,
+    "urgency": "CRITICAL",
+    "reason": "Severe congestion requires significantly extended green phase",
+    "factors": {
+      "congestion_factor": 1.34,
+      "density_factor": 1.22,
+      "speed_factor": 0.83,
+      "event_boost": 1.0,
+      "weather_boost": 1.08
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 53981.3,
+    "total_co2_tonnes_per_year": 2807.03,
+    "idle_co2_kg": 12921.6,
+    "moving_co2_kg": 41059.7,
+    "potential_savings_kg_per_week": 3136.6,
+    "potential_savings_tonnes_per_year": 163.1,
+    "trees_equivalent_per_year": 7766,
+    "fuel_saved_liters_per_week": 1357.8,
+    "citizens_impacted": 21102,
+    "optimization_factor_pct": 24.3
+  },
+  "interventions": [
+    {
+      "id": "ROAD_MAINTENANCE",
+      "name": "Road Maintenance Inspection",
+      "icon": "\ud83d\udee3\ufe0f",
+      "severity": "MEDIUM",
+      "description": "Deteriorated road surface combined with elevated risk indicates infrastructure maintenance need.",
+      "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
+    }
+  ],
+  "executive_briefing": "Connaught Place shows elevated risk at 52%. Continue routine monitoring. Optimizing signals could save 3137 kg CO2/week, equivalent to 7766 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_14",
     "week": 33,
     "zone_type": "University_District",
@@ -51,6 +172,15 @@
     "location_name": "Connaught Place",
     "city": "Delhi",
     "latitude": 28.6315,
-    "longitude": 77.2167
+    "longitude": 77.2167,
+    "predicted_risk_probability": 0.5193,
+    "risk_score": 51.9321,
+    "population_exposure_score": 66.0249,
+    "vehicle_exposure_score": 76.1413,
+    "temporal_trend_score": 88.9092,
+    "priority_score": 65.8437,
+    "priority_rank": 15,
+    "priority_level": "HIGH",
+    "risk_prob": 0.5193
   }
 }

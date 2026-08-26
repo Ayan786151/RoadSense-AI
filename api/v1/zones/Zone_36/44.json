@@ -1,8 +1,129 @@
 {
   "zone_id": "Zone_36",
+  "location_name": "Rajajipuram",
+  "city": "Lucknow",
+  "zone_type": "Residential",
   "week": 44,
-  "predicted_risk_probability": 0.5725995755967798,
-  "metrics": {
+  "latitude": 26.833,
+  "longitude": 80.89,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.5726,
+    "predicted_risk_percentage": 57.26,
+    "risk_label": "HIGH RISK",
+    "risk_color": "#f97316",
+    "risk_delta_vs_prev_week": 17.8853,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 66.4119,
+    "priority_rank": 7,
+    "priority_level": "HIGH",
+    "components": {
+      "risk_score": 57.26,
+      "population_exposure_score": 81.73,
+      "vehicle_exposure_score": 68.1413,
+      "temporal_trend_score": 62.9811
+    },
+    "explanation": {
+      "priority_level": "HIGH",
+      "priority_score": 66.4,
+      "top_contributors": [
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "82/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 12737 residents/km\u00b2",
+          "weight": 81.73
+        },
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "68/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 68.1413
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "57/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 57.26
+        },
+        {
+          "factor": "Violation Count",
+          "icon": "\ud83d\udea8",
+          "value": "10",
+          "impact": "HIGH",
+          "detail": "10 red-light violations recorded \u2014 intersection safety concern",
+          "weight": 50
+        },
+        {
+          "factor": "Rising Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "63/100",
+          "impact": "MEDIUM",
+          "detail": "Slight upward trend in congestion over past 4 weeks",
+          "weight": 37.7887
+        }
+      ],
+      "total_factors": 6,
+      "assessment": "This zone shows significant risk elevation driven by Population Exposure, Vehicle Density. Proactive intervention should be scheduled within the current planning cycle."
+    }
+  },
+  "telemetry": {
+    "congestion": 45.8,
+    "congestion_delta": 10.99,
+    "average_speed_kmh": 49.96,
+    "speed_delta": -6.15,
+    "vehicle_density": 48.8,
+    "density_delta": 9.84,
+    "population_density": 12737,
+    "red_light_violations": 10,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 30,
+    "recommended_green_seconds": 39,
+    "change_seconds": 9,
+    "change_percent": 30.0,
+    "urgency": "HIGH",
+    "reason": "Elevated traffic density needs extended clearance time",
+    "factors": {
+      "congestion_factor": 1.37,
+      "density_factor": 1.2,
+      "speed_factor": 0.81,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 50394.4,
+    "total_co2_tonnes_per_year": 2620.51,
+    "idle_co2_kg": 12337.4,
+    "moving_co2_kg": 38057.0,
+    "potential_savings_kg_per_week": 3032.5,
+    "potential_savings_tonnes_per_year": 157.69,
+    "trees_equivalent_per_year": 7509,
+    "fuel_saved_liters_per_week": 1312.8,
+    "citizens_impacted": 25474,
+    "optimization_factor_pct": 24.6
+  },
+  "interventions": [
+    {
+      "id": "VIOLATION_ENFORCEMENT",
+      "name": "Red-Light Violation Enforcement",
+      "icon": "\ud83d\udea8",
+      "severity": "HIGH",
+      "description": "Elevated red-light violation count indicates intersection compliance failure.",
+      "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
+    }
+  ],
+  "executive_briefing": "Rajajipuram shows elevated risk at 57%. Enforcement focus needed \u2014 10 red-light violations recorded. Optimizing signals could save 3032 kg CO2/week, equivalent to 7509 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_36",
     "week": 44,
     "zone_type": "Residential",
@@ -51,6 +172,15 @@
     "location_name": "Rajajipuram",
     "city": "Lucknow",
     "latitude": 26.833,
-    "longitude": 80.89
+    "longitude": 80.89,
+    "predicted_risk_probability": 0.5726,
+    "risk_score": 57.26,
+    "population_exposure_score": 81.73,
+    "vehicle_exposure_score": 68.1413,
+    "temporal_trend_score": 62.9811,
+    "priority_score": 66.4119,
+    "priority_rank": 7,
+    "priority_level": "HIGH",
+    "risk_prob": 0.5726
   }
 }

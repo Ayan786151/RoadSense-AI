@@ -1,8 +1,121 @@
 {
   "zone_id": "Zone_29",
+  "location_name": "Indira Nagar",
+  "city": "Lucknow",
+  "zone_type": "Residential",
   "week": 29,
-  "predicted_risk_probability": 0.4800536634289662,
-  "metrics": {
+  "latitude": 26.88,
+  "longitude": 81.0,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.4801,
+    "predicted_risk_percentage": 48.01,
+    "risk_label": "MODERATE RISK",
+    "risk_color": "#eab308",
+    "risk_delta_vs_prev_week": 10.9121,
+    "actual_incident": 1
+  },
+  "priority": {
+    "priority_score": 69.1836,
+    "priority_rank": 6,
+    "priority_level": "HIGH",
+    "components": {
+      "risk_score": 48.0054,
+      "population_exposure_score": 86.8525,
+      "vehicle_exposure_score": 94.4767,
+      "temporal_trend_score": 62.4865
+    },
+    "explanation": {
+      "priority_level": "HIGH",
+      "priority_score": 69.2,
+      "top_contributors": [
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "94/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 94.4767
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "87/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 13450 residents/km\u00b2",
+          "weight": 86.8525
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "48/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 48.0054
+        },
+        {
+          "factor": "Rising Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "62/100",
+          "impact": "MEDIUM",
+          "detail": "Slight upward trend in congestion over past 4 weeks",
+          "weight": 37.4919
+        }
+      ],
+      "total_factors": 4,
+      "assessment": "This zone shows significant risk elevation driven by Vehicle Density, Population Exposure. Proactive intervention should be scheduled within the current planning cycle."
+    }
+  },
+  "telemetry": {
+    "congestion": 31.87,
+    "congestion_delta": -15.34,
+    "average_speed_kmh": 58.58,
+    "speed_delta": 7.32,
+    "vehicle_density": 61.75,
+    "density_delta": 2.01,
+    "population_density": 13450,
+    "red_light_violations": 4,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 30,
+    "recommended_green_seconds": 36,
+    "change_seconds": 6,
+    "change_percent": 20.0,
+    "urgency": "MODERATE",
+    "reason": "Slight adjustment for current conditions",
+    "factors": {
+      "congestion_factor": 1.25,
+      "density_factor": 1.25,
+      "speed_factor": 0.78,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 74742.4,
+    "total_co2_tonnes_per_year": 3886.61,
+    "idle_co2_kg": 10863.2,
+    "moving_co2_kg": 63879.2,
+    "potential_savings_kg_per_week": 2518.9,
+    "potential_savings_tonnes_per_year": 130.98,
+    "trees_equivalent_per_year": 6237,
+    "fuel_saved_liters_per_week": 1090.4,
+    "citizens_impacted": 26900,
+    "optimization_factor_pct": 23.2
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "No specific risk indicators triggered.",
+      "action": "Continue routine monitoring."
+    }
+  ],
+  "executive_briefing": "Indira Nagar shows elevated risk at 48%. Continue routine monitoring. Optimizing signals could save 2519 kg CO2/week, equivalent to 6237 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_29",
     "week": 29,
     "zone_type": "Residential",
@@ -51,6 +164,15 @@
     "location_name": "Indira Nagar",
     "city": "Lucknow",
     "latitude": 26.88,
-    "longitude": 81.0
+    "longitude": 81.0,
+    "predicted_risk_probability": 0.4801,
+    "risk_score": 48.0054,
+    "population_exposure_score": 86.8525,
+    "vehicle_exposure_score": 94.4767,
+    "temporal_trend_score": 62.4865,
+    "priority_score": 69.1836,
+    "priority_rank": 6,
+    "priority_level": "HIGH",
+    "risk_prob": 0.4801
   }
 }

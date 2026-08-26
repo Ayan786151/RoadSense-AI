@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_47",
+  "location_name": "Perambur",
+  "city": "Chennai",
+  "zone_type": "University_District",
   "week": 7,
-  "predicted_risk_probability": 0.22447467334754245,
-  "metrics": {
+  "latitude": 13.1167,
+  "longitude": 80.2333,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.2245,
+    "predicted_risk_percentage": 22.45,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": -23.7337,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 38.1561,
+    "priority_rank": 28,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 22.4475,
+      "population_exposure_score": 48.0997,
+      "vehicle_exposure_score": 43.1982,
+      "temporal_trend_score": 56.7503
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 38.2,
+      "top_contributors": [
+        {
+          "factor": "Rising Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "57/100",
+          "impact": "MEDIUM",
+          "detail": "Slight upward trend in congestion over past 4 weeks",
+          "weight": 34.0502
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "48/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 33.6698
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "22/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 22.4475
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone has moderate risk levels with contributing factors: Rising Trend, Population Exposure. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 22.15,
+    "congestion_delta": -14.82,
+    "average_speed_kmh": 58.57,
+    "speed_delta": 9.78,
+    "vehicle_density": 26.42,
+    "density_delta": -2.43,
+    "population_density": 8056,
+    "red_light_violations": 2,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 35,
+    "change_seconds": 0,
+    "change_percent": 0.0,
+    "urgency": "NOMINAL",
+    "reason": "Current default timing is adequate",
+    "factors": {
+      "congestion_factor": 1.18,
+      "density_factor": 1.11,
+      "speed_factor": 0.78,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 34455.3,
+    "total_co2_tonnes_per_year": 1791.67,
+    "idle_co2_kg": 3230.3,
+    "moving_co2_kg": 31224.9,
+    "potential_savings_kg_per_week": 717.6,
+    "potential_savings_tonnes_per_year": 37.32,
+    "trees_equivalent_per_year": 1776,
+    "fuel_saved_liters_per_week": 310.7,
+    "citizens_impacted": 16112,
+    "optimization_factor_pct": 22.2
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "Perambur is within safe operating parameters (22% risk). Continue routine monitoring. Optimizing signals could save 718 kg CO2/week, equivalent to 1776 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_47",
     "week": 7,
     "zone_type": "University_District",
@@ -51,6 +156,15 @@
     "location_name": "Perambur",
     "city": "Chennai",
     "latitude": 13.1167,
-    "longitude": 80.2333
+    "longitude": 80.2333,
+    "predicted_risk_probability": 0.2245,
+    "risk_score": 22.4475,
+    "population_exposure_score": 48.0997,
+    "vehicle_exposure_score": 43.1982,
+    "temporal_trend_score": 56.7503,
+    "priority_score": 38.1561,
+    "priority_rank": 28,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.2245
   }
 }

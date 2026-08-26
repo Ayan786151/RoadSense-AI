@@ -1,8 +1,121 @@
 {
   "zone_id": "Zone_38",
+  "location_name": "T. Nagar",
+  "city": "Chennai",
+  "zone_type": "Commercial_Downtown",
   "week": 40,
-  "predicted_risk_probability": 0.3360769933685485,
-  "metrics": {
+  "latitude": 13.0418,
+  "longitude": 80.2341,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.3361,
+    "predicted_risk_percentage": 33.61,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": -6.3393,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 54.2118,
+    "priority_rank": 11,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 33.6077,
+      "population_exposure_score": 55.1333,
+      "vehicle_exposure_score": 80.899,
+      "temporal_trend_score": 72.037
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 54.2,
+      "top_contributors": [
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "81/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 80.899
+        },
+        {
+          "factor": "Worsening Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "72/100",
+          "impact": "HIGH",
+          "detail": "4-week congestion trend is actively worsening \u2014 conditions deteriorating",
+          "weight": 72.037
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "55/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 38.5933
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "34/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 33.6077
+        }
+      ],
+      "total_factors": 4,
+      "assessment": "This zone has moderate risk levels with contributing factors: Vehicle Density, Worsening Trend. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 37.26,
+    "congestion_delta": -3.17,
+    "average_speed_kmh": 53.89,
+    "speed_delta": -2.39,
+    "vehicle_density": 58.95,
+    "density_delta": 0.21,
+    "population_density": 9035,
+    "red_light_violations": 3,
+    "weather": "Normal",
+    "special_event": 1
+  },
+  "signal_optimization": {
+    "base_green_seconds": 40,
+    "recommended_green_seconds": 58,
+    "change_seconds": 18,
+    "change_percent": 45.0,
+    "urgency": "CRITICAL",
+    "reason": "Severe congestion requires significantly extended green phase",
+    "factors": {
+      "congestion_factor": 1.3,
+      "density_factor": 1.24,
+      "speed_factor": 0.8,
+      "event_boost": 1.15,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 63786.6,
+    "total_co2_tonnes_per_year": 3316.9,
+    "idle_co2_kg": 12124.6,
+    "moving_co2_kg": 51662.0,
+    "potential_savings_kg_per_week": 2876.7,
+    "potential_savings_tonnes_per_year": 149.59,
+    "trees_equivalent_per_year": 7123,
+    "fuel_saved_liters_per_week": 1245.3,
+    "citizens_impacted": 18070,
+    "optimization_factor_pct": 23.7
+  },
+  "interventions": [
+    {
+      "id": "EVENT_TRAFFIC_PLAN",
+      "name": "Special Event Traffic Plan",
+      "icon": "\ud83c\udfaa",
+      "severity": "MEDIUM",
+      "description": "Active special event generating additional traffic demand.",
+      "action": "Activate event traffic management plan. Deploy traffic marshals and temporary signage."
+    }
+  ],
+  "executive_briefing": "T. Nagar is within safe operating parameters (34% risk). Continue routine monitoring. Optimizing signals could save 2877 kg CO2/week, equivalent to 7123 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_38",
     "week": 40,
     "zone_type": "Commercial_Downtown",
@@ -51,6 +164,15 @@
     "location_name": "T. Nagar",
     "city": "Chennai",
     "latitude": 13.0418,
-    "longitude": 80.2341
+    "longitude": 80.2341,
+    "predicted_risk_probability": 0.3361,
+    "risk_score": 33.6077,
+    "population_exposure_score": 55.1333,
+    "vehicle_exposure_score": 80.899,
+    "temporal_trend_score": 72.037,
+    "priority_score": 54.2118,
+    "priority_rank": 11,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.3361
   }
 }

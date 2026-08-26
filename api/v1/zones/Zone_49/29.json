@@ -1,8 +1,129 @@
 {
   "zone_id": "Zone_49",
+  "location_name": "Sholinganallur",
+  "city": "Chennai",
+  "zone_type": "University_District",
   "week": 29,
-  "predicted_risk_probability": 0.6188192520371257,
-  "metrics": {
+  "latitude": 12.901,
+  "longitude": 80.2279,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.6188,
+    "predicted_risk_percentage": 61.88,
+    "risk_label": "HIGH RISK",
+    "risk_color": "#f97316",
+    "risk_delta_vs_prev_week": 7.5692,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 68.7001,
+    "priority_rank": 7,
+    "priority_level": "HIGH",
+    "components": {
+      "risk_score": 61.8819,
+      "population_exposure_score": 73.1231,
+      "vehicle_exposure_score": 87.041,
+      "temporal_trend_score": 55.0557
+    },
+    "explanation": {
+      "priority_level": "HIGH",
+      "priority_score": 68.7,
+      "top_contributors": [
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "87/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 87.041
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "73/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 11539 residents/km\u00b2",
+          "weight": 73.1231
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "62/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 61.8819
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "61/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate congestion at 61",
+          "weight": 42.756
+        },
+        {
+          "factor": "Rising Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "55/100",
+          "impact": "MEDIUM",
+          "detail": "Slight upward trend in congestion over past 4 weeks",
+          "weight": 33.0334
+        }
+      ],
+      "total_factors": 5,
+      "assessment": "This zone shows significant risk elevation driven by Vehicle Density, Population Exposure. Proactive intervention should be scheduled within the current planning cycle."
+    }
+  },
+  "telemetry": {
+    "congestion": 61.08,
+    "congestion_delta": 10.55,
+    "average_speed_kmh": 46.47,
+    "speed_delta": -3.75,
+    "vehicle_density": 56.89,
+    "density_delta": 6.05,
+    "population_density": 11539,
+    "red_light_violations": 2,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 52,
+    "change_seconds": 17,
+    "change_percent": 48.6,
+    "urgency": "CRITICAL",
+    "reason": "Severe congestion requires significantly extended green phase",
+    "factors": {
+      "congestion_factor": 1.49,
+      "density_factor": 1.23,
+      "speed_factor": 0.83,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 48814.0,
+    "total_co2_tonnes_per_year": 2538.33,
+    "idle_co2_kg": 19181.1,
+    "moving_co2_kg": 29632.9,
+    "potential_savings_kg_per_week": 5007.8,
+    "potential_savings_tonnes_per_year": 260.41,
+    "trees_equivalent_per_year": 12400,
+    "fuel_saved_liters_per_week": 2167.9,
+    "citizens_impacted": 23078,
+    "optimization_factor_pct": 26.1
+  },
+  "interventions": [
+    {
+      "id": "PEDESTRIAN_SAFETY",
+      "name": "Pedestrian Crossing Intervention",
+      "icon": "\ud83d\udeb6",
+      "severity": "MEDIUM",
+      "description": "High population density zone with significant traffic congestion creates pedestrian exposure risk.",
+      "action": "Install protected pedestrian crossings, improve sidewalk infrastructure, and add pedestrian countdown signals."
+    }
+  ],
+  "executive_briefing": "Sholinganallur is in a critical safety state with 62% incident risk. Signal optimization recommended \u2014 congestion at 61/100 with speeds averaging 46 km/h. Optimizing signals could save 5008 kg CO2/week, equivalent to 12400 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_49",
     "week": 29,
     "zone_type": "University_District",
@@ -51,6 +172,15 @@
     "location_name": "Sholinganallur",
     "city": "Chennai",
     "latitude": 12.901,
-    "longitude": 80.2279
+    "longitude": 80.2279,
+    "predicted_risk_probability": 0.6188,
+    "risk_score": 61.8819,
+    "population_exposure_score": 73.1231,
+    "vehicle_exposure_score": 87.041,
+    "temporal_trend_score": 55.0557,
+    "priority_score": 68.7001,
+    "priority_rank": 7,
+    "priority_level": "HIGH",
+    "risk_prob": 0.6188
   }
 }

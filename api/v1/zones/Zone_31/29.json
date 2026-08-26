@@ -1,8 +1,121 @@
 {
   "zone_id": "Zone_31",
+  "location_name": "Alambagh",
+  "city": "Lucknow",
+  "zone_type": "Commercial_Downtown",
   "week": 29,
-  "predicted_risk_probability": 0.7492953455328696,
-  "metrics": {
+  "latitude": 26.813,
+  "longitude": 80.918,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.7493,
+    "predicted_risk_percentage": 74.93,
+    "risk_label": "HIGH RISK",
+    "risk_color": "#f97316",
+    "risk_delta_vs_prev_week": -13.7837,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 65.2584,
+    "priority_rank": 10,
+    "priority_level": "HIGH",
+    "components": {
+      "risk_score": 74.9295,
+      "population_exposure_score": 57.4969,
+      "vehicle_exposure_score": 72.0012,
+      "temporal_trend_score": 43.414
+    },
+    "explanation": {
+      "priority_level": "HIGH",
+      "priority_score": 65.3,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udd34",
+          "value": "75/100",
+          "impact": "HIGH",
+          "detail": "Model-estimated risk score is in the critical range",
+          "weight": 74.9295
+        },
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "72/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 72.0012
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "66/100",
+          "impact": "HIGH",
+          "detail": "Congestion index at 66 \u2014 severe traffic flow degradation",
+          "weight": 66.25
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "57/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 40.2479
+        }
+      ],
+      "total_factors": 4,
+      "assessment": "This zone shows significant risk elevation driven by Risk Score, Vehicle Density. Proactive intervention should be scheduled within the current planning cycle."
+    }
+  },
+  "telemetry": {
+    "congestion": 66.25,
+    "congestion_delta": -10.65,
+    "average_speed_kmh": 45.39,
+    "speed_delta": 5.35,
+    "vehicle_density": 47.06,
+    "density_delta": -8.66,
+    "population_density": 9364,
+    "red_light_violations": 7,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 40,
+    "recommended_green_seconds": 60,
+    "change_seconds": 20,
+    "change_percent": 50.0,
+    "urgency": "CRITICAL",
+    "reason": "Severe congestion requires significantly extended green phase",
+    "factors": {
+      "congestion_factor": 1.53,
+      "density_factor": 1.19,
+      "speed_factor": 0.83,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 37972.3,
+    "total_co2_tonnes_per_year": 1974.56,
+    "idle_co2_kg": 17209.8,
+    "moving_co2_kg": 20762.4,
+    "potential_savings_kg_per_week": 4582.1,
+    "potential_savings_tonnes_per_year": 238.27,
+    "trees_equivalent_per_year": 11346,
+    "fuel_saved_liters_per_week": 1983.6,
+    "citizens_impacted": 18728,
+    "optimization_factor_pct": 26.6
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "No specific risk indicators triggered.",
+      "action": "Continue routine monitoring."
+    }
+  ],
+  "executive_briefing": "Alambagh is in a critical safety state with 75% incident risk. Signal optimization recommended \u2014 congestion at 66/100 with speeds averaging 45 km/h. Optimizing signals could save 4582 kg CO2/week, equivalent to 11346 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_31",
     "week": 29,
     "zone_type": "Commercial_Downtown",
@@ -51,6 +164,15 @@
     "location_name": "Alambagh",
     "city": "Lucknow",
     "latitude": 26.813,
-    "longitude": 80.918
+    "longitude": 80.918,
+    "predicted_risk_probability": 0.7493,
+    "risk_score": 74.9295,
+    "population_exposure_score": 57.4969,
+    "vehicle_exposure_score": 72.0012,
+    "temporal_trend_score": 43.414,
+    "priority_score": 65.2584,
+    "priority_rank": 10,
+    "priority_level": "HIGH",
+    "risk_prob": 0.7493
   }
 }

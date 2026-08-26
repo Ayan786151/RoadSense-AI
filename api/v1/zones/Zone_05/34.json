@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_05",
+  "location_name": "Powai",
+  "city": "Mumbai",
+  "zone_type": "Commercial_Downtown",
   "week": 34,
-  "predicted_risk_probability": 0.3114475806182108,
-  "metrics": {
+  "latitude": 19.1176,
+  "longitude": 72.906,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.3114,
+    "predicted_risk_percentage": 31.14,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": -51.535,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 42.3065,
+    "priority_rank": 29,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 31.1448,
+      "population_exposure_score": 50.1616,
+      "vehicle_exposure_score": 34.9354,
+      "temporal_trend_score": 68.8075
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 42.3,
+      "top_contributors": [
+        {
+          "factor": "Rising Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "69/100",
+          "impact": "MEDIUM",
+          "detail": "Slight upward trend in congestion over past 4 weeks",
+          "weight": 41.2845
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "50/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 35.1132
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "31/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 31.1448
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone has moderate risk levels with contributing factors: Rising Trend, Population Exposure. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 24.22,
+    "congestion_delta": -29.83,
+    "average_speed_kmh": 49.61,
+    "speed_delta": 26.41,
+    "vehicle_density": 27.49,
+    "density_delta": -3.52,
+    "population_density": 8343,
+    "red_light_violations": 4,
+    "weather": "Light Rain",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 40,
+    "recommended_green_seconds": 46,
+    "change_seconds": 6,
+    "change_percent": 15.0,
+    "urgency": "MODERATE",
+    "reason": "Slight adjustment for current conditions",
+    "factors": {
+      "congestion_factor": 1.19,
+      "density_factor": 1.11,
+      "speed_factor": 0.81,
+      "event_boost": 1.0,
+      "weather_boost": 1.08
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 33439.2,
+    "total_co2_tonnes_per_year": 1738.84,
+    "idle_co2_kg": 3675.3,
+    "moving_co2_kg": 29764.0,
+    "potential_savings_kg_per_week": 824.1,
+    "potential_savings_tonnes_per_year": 42.85,
+    "trees_equivalent_per_year": 2040,
+    "fuel_saved_liters_per_week": 356.7,
+    "citizens_impacted": 16686,
+    "optimization_factor_pct": 22.4
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "No specific risk indicators triggered.",
+      "action": "Continue routine monitoring."
+    }
+  ],
+  "executive_briefing": "Powai is within safe operating parameters (31% risk). Continue routine monitoring. Optimizing signals could save 824 kg CO2/week, equivalent to 2040 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_05",
     "week": 34,
     "zone_type": "Commercial_Downtown",
@@ -51,6 +156,15 @@
     "location_name": "Powai",
     "city": "Mumbai",
     "latitude": 19.1176,
-    "longitude": 72.906
+    "longitude": 72.906,
+    "predicted_risk_probability": 0.3114,
+    "risk_score": 31.1448,
+    "population_exposure_score": 50.1616,
+    "vehicle_exposure_score": 34.9354,
+    "temporal_trend_score": 68.8075,
+    "priority_score": 42.3065,
+    "priority_rank": 29,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.3114
   }
 }

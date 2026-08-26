@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_03",
+  "location_name": "Kurla",
+  "city": "Mumbai",
+  "zone_type": "University_District",
   "week": 5,
-  "predicted_risk_probability": 0.32603345766064123,
-  "metrics": {
+  "latitude": 19.0726,
+  "longitude": 72.8845,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.326,
+    "predicted_risk_percentage": 32.6,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": null,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 40.5618,
+    "priority_rank": 29,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 32.6033,
+      "population_exposure_score": 45.4343,
+      "vehicle_exposure_score": 37.2802,
+      "temporal_trend_score": 58.0388
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 40.6,
+      "top_contributors": [
+        {
+          "factor": "Rising Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "58/100",
+          "impact": "MEDIUM",
+          "detail": "Slight upward trend in congestion over past 4 weeks",
+          "weight": 34.8233
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "33/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 32.6033
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "45/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 31.804
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone has moderate risk levels with contributing factors: Rising Trend, Population Exposure. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 25.43,
+    "congestion_delta": 5.51,
+    "average_speed_kmh": 51.33,
+    "speed_delta": -9.6,
+    "vehicle_density": 23.96,
+    "density_delta": -3.92,
+    "population_density": 7685,
+    "red_light_violations": 0,
+    "weather": "Light Rain",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 40,
+    "change_seconds": 5,
+    "change_percent": 14.3,
+    "urgency": "MODERATE",
+    "reason": "Slight adjustment for current conditions",
+    "factors": {
+      "congestion_factor": 1.2,
+      "density_factor": 1.1,
+      "speed_factor": 0.81,
+      "event_boost": 1.0,
+      "weather_boost": 1.08
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 27134.9,
+    "total_co2_tonnes_per_year": 1411.01,
+    "idle_co2_kg": 3363.4,
+    "moving_co2_kg": 23771.5,
+    "potential_savings_kg_per_week": 758.2,
+    "potential_savings_tonnes_per_year": 39.43,
+    "trees_equivalent_per_year": 1877,
+    "fuel_saved_liters_per_week": 328.2,
+    "citizens_impacted": 15370,
+    "optimization_factor_pct": 22.5
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "No specific risk indicators triggered.",
+      "action": "Continue routine monitoring."
+    }
+  ],
+  "executive_briefing": "Kurla is within safe operating parameters (33% risk). Continue routine monitoring. Optimizing signals could save 758 kg CO2/week, equivalent to 1877 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_03",
     "week": 5,
     "zone_type": "University_District",
@@ -51,6 +156,15 @@
     "location_name": "Kurla",
     "city": "Mumbai",
     "latitude": 19.0726,
-    "longitude": 72.8845
+    "longitude": 72.8845,
+    "predicted_risk_probability": 0.326,
+    "risk_score": 32.6033,
+    "population_exposure_score": 45.4343,
+    "vehicle_exposure_score": 37.2802,
+    "temporal_trend_score": 58.0388,
+    "priority_score": 40.5618,
+    "priority_rank": 29,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.326
   }
 }

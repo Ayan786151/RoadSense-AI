@@ -1,8 +1,129 @@
 {
   "zone_id": "Zone_22",
+  "location_name": "Pitampura",
+  "city": "Delhi",
+  "zone_type": "University_District",
   "week": 49,
-  "predicted_risk_probability": 0.7106665661378885,
-  "metrics": {
+  "latitude": 28.7033,
+  "longitude": 77.1322,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.7107,
+    "predicted_risk_percentage": 71.07,
+    "risk_label": "HIGH RISK",
+    "risk_color": "#f97316",
+    "risk_delta_vs_prev_week": 33.5782,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 65.613,
+    "priority_rank": 9,
+    "priority_level": "HIGH",
+    "components": {
+      "risk_score": 71.0667,
+      "population_exposure_score": 44.6081,
+      "vehicle_exposure_score": 59.5476,
+      "temporal_trend_score": 94.165
+    },
+    "explanation": {
+      "priority_level": "HIGH",
+      "priority_score": 65.6,
+      "top_contributors": [
+        {
+          "factor": "Worsening Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "94/100",
+          "impact": "HIGH",
+          "detail": "4-week congestion trend is actively worsening \u2014 conditions deteriorating",
+          "weight": 94.165
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udd34",
+          "value": "71/100",
+          "impact": "HIGH",
+          "detail": "Model-estimated risk score is in the critical range",
+          "weight": 71.0667
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "52/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate congestion at 52",
+          "weight": 36.533
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "45/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 31.2257
+        }
+      ],
+      "total_factors": 4,
+      "assessment": "This zone shows significant risk elevation driven by Worsening Trend, Risk Score. Proactive intervention should be scheduled within the current planning cycle."
+    }
+  },
+  "telemetry": {
+    "congestion": 52.19,
+    "congestion_delta": 11.14,
+    "average_speed_kmh": 39.93,
+    "speed_delta": -14.32,
+    "vehicle_density": 50.88,
+    "density_delta": -5.19,
+    "population_density": 7570,
+    "red_light_violations": 6,
+    "weather": "Light Rain",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 54,
+    "change_seconds": 19,
+    "change_percent": 54.3,
+    "urgency": "CRITICAL",
+    "reason": "Severe congestion requires significantly extended green phase",
+    "factors": {
+      "congestion_factor": 1.42,
+      "density_factor": 1.2,
+      "speed_factor": 0.85,
+      "event_boost": 1.0,
+      "weather_boost": 1.08
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 42632.2,
+    "total_co2_tonnes_per_year": 2216.87,
+    "idle_co2_kg": 14658.0,
+    "moving_co2_kg": 27974.2,
+    "potential_savings_kg_per_week": 3696.6,
+    "potential_savings_tonnes_per_year": 192.22,
+    "trees_equivalent_per_year": 9153,
+    "fuel_saved_liters_per_week": 1600.3,
+    "citizens_impacted": 15140,
+    "optimization_factor_pct": 25.2
+  },
+  "interventions": [
+    {
+      "id": "TREND_URGENT_INSPECTION",
+      "name": "Urgent Safety Inspection",
+      "icon": "\u26a0\ufe0f",
+      "severity": "CRITICAL",
+      "description": "Risk is actively worsening (high temporal trend) with already elevated risk score.",
+      "action": "Deploy immediate field inspection team. Identify root cause of deteriorating safety conditions."
+    },
+    {
+      "id": "ROAD_MAINTENANCE",
+      "name": "Road Maintenance Inspection",
+      "icon": "\ud83d\udee3\ufe0f",
+      "severity": "MEDIUM",
+      "description": "Deteriorated road surface combined with elevated risk indicates infrastructure maintenance need.",
+      "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
+    }
+  ],
+  "executive_briefing": "Pitampura is in a critical safety state with 71% incident risk. Continue routine monitoring. Optimizing signals could save 3697 kg CO2/week, equivalent to 9153 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_22",
     "week": 49,
     "zone_type": "University_District",
@@ -51,6 +172,15 @@
     "location_name": "Pitampura",
     "city": "Delhi",
     "latitude": 28.7033,
-    "longitude": 77.1322
+    "longitude": 77.1322,
+    "predicted_risk_probability": 0.7107,
+    "risk_score": 71.0667,
+    "population_exposure_score": 44.6081,
+    "vehicle_exposure_score": 59.5476,
+    "temporal_trend_score": 94.165,
+    "priority_score": 65.613,
+    "priority_rank": 9,
+    "priority_level": "HIGH",
+    "risk_prob": 0.7107
   }
 }

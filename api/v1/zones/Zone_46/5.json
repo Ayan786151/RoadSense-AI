@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_46",
+  "location_name": "Nungambakkam",
+  "city": "Chennai",
+  "zone_type": "University_District",
   "week": 5,
-  "predicted_risk_probability": 0.4130429783851572,
-  "metrics": {
+  "latitude": 13.0569,
+  "longitude": 80.2425,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.413,
+    "predicted_risk_percentage": 41.3,
+    "risk_label": "MODERATE RISK",
+    "risk_color": "#eab308",
+    "risk_delta_vs_prev_week": null,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 43.3393,
+    "priority_rank": 22,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 41.3043,
+      "population_exposure_score": 48.0494,
+      "vehicle_exposure_score": 54.2555,
+      "temporal_trend_score": 26.3609
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 43.3,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "41/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 41.3043
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "48/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 33.6346
+        },
+        {
+          "factor": "Improving Trend",
+          "icon": "\ud83d\udcc9",
+          "value": "26/100",
+          "impact": "POSITIVE",
+          "detail": "Conditions are improving over past 4 weeks",
+          "weight": -26.3609
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone has moderate risk levels with contributing factors: Risk Score, Population Exposure. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 34.58,
+    "congestion_delta": -1.69,
+    "average_speed_kmh": 54.38,
+    "speed_delta": -1.9,
+    "vehicle_density": 34.87,
+    "density_delta": -1.68,
+    "population_density": 8049,
+    "red_light_violations": 9,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 40,
+    "change_seconds": 5,
+    "change_percent": 14.3,
+    "urgency": "MODERATE",
+    "reason": "Slight adjustment for current conditions",
+    "factors": {
+      "congestion_factor": 1.28,
+      "density_factor": 1.14,
+      "speed_factor": 0.8,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 38810.2,
+    "total_co2_tonnes_per_year": 2018.13,
+    "idle_co2_kg": 6656.0,
+    "moving_co2_kg": 32154.1,
+    "potential_savings_kg_per_week": 1561.4,
+    "potential_savings_tonnes_per_year": 81.19,
+    "trees_equivalent_per_year": 3866,
+    "fuel_saved_liters_per_week": 675.9,
+    "citizens_impacted": 16098,
+    "optimization_factor_pct": 23.5
+  },
+  "interventions": [
+    {
+      "id": "VIOLATION_ENFORCEMENT",
+      "name": "Red-Light Violation Enforcement",
+      "icon": "\ud83d\udea8",
+      "severity": "HIGH",
+      "description": "Elevated red-light violation count indicates intersection compliance failure.",
+      "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
+    }
+  ],
+  "executive_briefing": "Nungambakkam shows elevated risk at 41%. Enforcement focus needed \u2014 9 red-light violations recorded. Optimizing signals could save 1561 kg CO2/week, equivalent to 3866 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_46",
     "week": 5,
     "zone_type": "University_District",
@@ -51,6 +156,15 @@
     "location_name": "Nungambakkam",
     "city": "Chennai",
     "latitude": 13.0569,
-    "longitude": 80.2425
+    "longitude": 80.2425,
+    "predicted_risk_probability": 0.413,
+    "risk_score": 41.3043,
+    "population_exposure_score": 48.0494,
+    "vehicle_exposure_score": 54.2555,
+    "temporal_trend_score": 26.3609,
+    "priority_score": 43.3393,
+    "priority_rank": 22,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.413
   }
 }

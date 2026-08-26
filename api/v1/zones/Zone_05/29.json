@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_05",
+  "location_name": "Powai",
+  "city": "Mumbai",
+  "zone_type": "Commercial_Downtown",
   "week": 29,
-  "predicted_risk_probability": 0.2645728392171289,
-  "metrics": {
+  "latitude": 19.1176,
+  "longitude": 72.906,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.2646,
+    "predicted_risk_percentage": 26.46,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": 4.6837,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 35.4085,
+    "priority_rank": 29,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 26.4573,
+      "population_exposure_score": 50.1616,
+      "vehicle_exposure_score": 42.9621,
+      "temporal_trend_score": 24.6187
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 35.4,
+      "top_contributors": [
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "50/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 35.1132
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "26/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 26.4573
+        },
+        {
+          "factor": "Improving Trend",
+          "icon": "\ud83d\udcc9",
+          "value": "25/100",
+          "impact": "POSITIVE",
+          "detail": "Conditions are improving over past 4 weeks",
+          "weight": -24.6187
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone has moderate risk levels with contributing factors: Population Exposure. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 18.16,
+    "congestion_delta": -0.91,
+    "average_speed_kmh": 62.61,
+    "speed_delta": 3.25,
+    "vehicle_density": 28.08,
+    "density_delta": -1.85,
+    "population_density": 8343,
+    "red_light_violations": 4,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 40,
+    "recommended_green_seconds": 38,
+    "change_seconds": -2,
+    "change_percent": -5.0,
+    "urgency": "NOMINAL",
+    "reason": "Current default timing is adequate",
+    "factors": {
+      "congestion_factor": 1.15,
+      "density_factor": 1.11,
+      "speed_factor": 0.77,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 40109.0,
+    "total_co2_tonnes_per_year": 2085.67,
+    "idle_co2_kg": 2814.8,
+    "moving_co2_kg": 37294.2,
+    "potential_savings_kg_per_week": 614.1,
+    "potential_savings_tonnes_per_year": 31.93,
+    "trees_equivalent_per_year": 1520,
+    "fuel_saved_liters_per_week": 265.8,
+    "citizens_impacted": 16686,
+    "optimization_factor_pct": 21.8
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "Powai is within safe operating parameters (26% risk). Continue routine monitoring. Optimizing signals could save 614 kg CO2/week, equivalent to 1520 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_05",
     "week": 29,
     "zone_type": "Commercial_Downtown",
@@ -51,6 +156,15 @@
     "location_name": "Powai",
     "city": "Mumbai",
     "latitude": 19.1176,
-    "longitude": 72.906
+    "longitude": 72.906,
+    "predicted_risk_probability": 0.2646,
+    "risk_score": 26.4573,
+    "population_exposure_score": 50.1616,
+    "vehicle_exposure_score": 42.9621,
+    "temporal_trend_score": 24.6187,
+    "priority_score": 35.4085,
+    "priority_rank": 29,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.2646
   }
 }

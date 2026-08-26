@@ -1,8 +1,105 @@
 {
   "zone_id": "Zone_35",
+  "location_name": "Jankipuram",
+  "city": "Lucknow",
+  "zone_type": "Residential",
   "week": 26,
-  "predicted_risk_probability": 0.28509946445733886,
-  "metrics": {
+  "latitude": 26.93,
+  "longitude": 80.94,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.2851,
+    "predicted_risk_percentage": 28.51,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": 5.179,
+    "actual_incident": 1
+  },
+  "priority": {
+    "priority_score": 51.2503,
+    "priority_rank": 18,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 28.5099,
+      "population_exposure_score": 100.0,
+      "vehicle_exposure_score": 41.822,
+      "temporal_trend_score": 43.2125
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 51.3,
+      "top_contributors": [
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "100/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 15280 residents/km\u00b2",
+          "weight": 100.0
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "29/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 28.5099
+        }
+      ],
+      "total_factors": 2,
+      "assessment": "This zone has moderate risk levels with contributing factors: Population Exposure. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 17.25,
+    "congestion_delta": -1.75,
+    "average_speed_kmh": 61.95,
+    "speed_delta": 1.16,
+    "vehicle_density": 32.71,
+    "density_delta": -7.82,
+    "population_density": 15280,
+    "red_light_violations": 1,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 30,
+    "recommended_green_seconds": 29,
+    "change_seconds": -1,
+    "change_percent": -3.3,
+    "urgency": "NOMINAL",
+    "reason": "Current default timing is adequate",
+    "factors": {
+      "congestion_factor": 1.14,
+      "density_factor": 1.13,
+      "speed_factor": 0.77,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 46578.2,
+    "total_co2_tonnes_per_year": 2422.06,
+    "idle_co2_kg": 3114.6,
+    "moving_co2_kg": 43463.5,
+    "potential_savings_kg_per_week": 676.7,
+    "potential_savings_tonnes_per_year": 35.19,
+    "trees_equivalent_per_year": 1675,
+    "fuel_saved_liters_per_week": 292.9,
+    "citizens_impacted": 30560,
+    "optimization_factor_pct": 21.7
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "Jankipuram is within safe operating parameters (29% risk). Continue routine monitoring. Optimizing signals could save 677 kg CO2/week, equivalent to 1675 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_35",
     "week": 26,
     "zone_type": "Residential",
@@ -51,6 +148,15 @@
     "location_name": "Jankipuram",
     "city": "Lucknow",
     "latitude": 26.93,
-    "longitude": 80.94
+    "longitude": 80.94,
+    "predicted_risk_probability": 0.2851,
+    "risk_score": 28.5099,
+    "population_exposure_score": 100.0,
+    "vehicle_exposure_score": 41.822,
+    "temporal_trend_score": 43.2125,
+    "priority_score": 51.2503,
+    "priority_rank": 18,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.2851
   }
 }

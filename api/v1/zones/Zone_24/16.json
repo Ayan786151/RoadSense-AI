@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_24",
+  "location_name": "Nehru Place",
+  "city": "Delhi",
+  "zone_type": "Commercial_Downtown",
   "week": 16,
-  "predicted_risk_probability": 0.28279044924636637,
-  "metrics": {
+  "latitude": 28.5491,
+  "longitude": 77.2519,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.2828,
+    "predicted_risk_percentage": 28.28,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": -0.7766,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 36.2431,
+    "priority_rank": 28,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 28.279,
+      "population_exposure_score": 52.2523,
+      "vehicle_exposure_score": 53.8762,
+      "temporal_trend_score": 7.2878
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 36.2,
+      "top_contributors": [
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "52/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 36.5766
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "28/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 28.279
+        },
+        {
+          "factor": "Improving Trend",
+          "icon": "\ud83d\udcc9",
+          "value": "7/100",
+          "impact": "POSITIVE",
+          "detail": "Conditions are improving over past 4 weeks",
+          "weight": -7.2878
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone has moderate risk levels with contributing factors: Population Exposure. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 19.17,
+    "congestion_delta": -0.63,
+    "average_speed_kmh": 57.92,
+    "speed_delta": -4.96,
+    "vehicle_density": 37.4,
+    "density_delta": 0.19,
+    "population_density": 8634,
+    "red_light_violations": 1,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 40,
+    "recommended_green_seconds": 41,
+    "change_seconds": 1,
+    "change_percent": 2.5,
+    "urgency": "NOMINAL",
+    "reason": "Current default timing is adequate",
+    "factors": {
+      "congestion_factor": 1.15,
+      "density_factor": 1.15,
+      "speed_factor": 0.78,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 49342.1,
+    "total_co2_tonnes_per_year": 2565.79,
+    "idle_co2_kg": 3957.6,
+    "moving_co2_kg": 45384.5,
+    "potential_savings_kg_per_week": 867.4,
+    "potential_savings_tonnes_per_year": 45.1,
+    "trees_equivalent_per_year": 2147,
+    "fuel_saved_liters_per_week": 375.5,
+    "citizens_impacted": 17268,
+    "optimization_factor_pct": 21.9
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "Nehru Place is within safe operating parameters (28% risk). Continue routine monitoring. Optimizing signals could save 867 kg CO2/week, equivalent to 2147 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_24",
     "week": 16,
     "zone_type": "Commercial_Downtown",
@@ -51,6 +156,15 @@
     "location_name": "Nehru Place",
     "city": "Delhi",
     "latitude": 28.5491,
-    "longitude": 77.2519
+    "longitude": 77.2519,
+    "predicted_risk_probability": 0.2828,
+    "risk_score": 28.279,
+    "population_exposure_score": 52.2523,
+    "vehicle_exposure_score": 53.8762,
+    "temporal_trend_score": 7.2878,
+    "priority_score": 36.2431,
+    "priority_rank": 28,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.2828
   }
 }

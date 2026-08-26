@@ -1,8 +1,137 @@
 {
   "zone_id": "Zone_01",
+  "location_name": "Andheri",
+  "city": "Mumbai",
+  "zone_type": "Commercial_Downtown",
   "week": 9,
-  "predicted_risk_probability": 0.661661201978339,
-  "metrics": {
+  "latitude": 19.1197,
+  "longitude": 72.8468,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.6617,
+    "predicted_risk_percentage": 66.17,
+    "risk_label": "HIGH RISK",
+    "risk_color": "#f97316",
+    "risk_delta_vs_prev_week": -6.5278,
+    "actual_incident": 1
+  },
+  "priority": {
+    "priority_score": 52.5984,
+    "priority_rank": 11,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 66.1661,
+      "population_exposure_score": 52.9133,
+      "vehicle_exposure_score": 64.5182,
+      "temporal_trend_score": 0.0
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 52.6,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "66/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 66.1661
+        },
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "65/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 64.5182
+        },
+        {
+          "factor": "Violation Count",
+          "icon": "\ud83d\udea8",
+          "value": "11",
+          "impact": "HIGH",
+          "detail": "11 red-light violations recorded \u2014 intersection safety concern",
+          "weight": 55
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "53/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 37.0393
+        },
+        {
+          "factor": "Improving Trend",
+          "icon": "\ud83d\udcc9",
+          "value": "0/100",
+          "impact": "POSITIVE",
+          "detail": "Conditions are improving over past 4 weeks",
+          "weight": -0.0
+        }
+      ],
+      "total_factors": 5,
+      "assessment": "This zone has moderate risk levels with contributing factors: Vehicle Density, Violation Count. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 36.88,
+    "congestion_delta": -9.26,
+    "average_speed_kmh": 55.68,
+    "speed_delta": 5.91,
+    "vehicle_density": 42.53,
+    "density_delta": -4.34,
+    "population_density": 8726,
+    "red_light_violations": 11,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 40,
+    "recommended_green_seconds": 47,
+    "change_seconds": 7,
+    "change_percent": 17.5,
+    "urgency": "MODERATE",
+    "reason": "Slight adjustment for current conditions",
+    "factors": {
+      "congestion_factor": 1.3,
+      "density_factor": 1.17,
+      "speed_factor": 0.79,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 47401.5,
+    "total_co2_tonnes_per_year": 2464.88,
+    "idle_co2_kg": 8658.2,
+    "moving_co2_kg": 38743.3,
+    "potential_savings_kg_per_week": 2050.9,
+    "potential_savings_tonnes_per_year": 106.65,
+    "trees_equivalent_per_year": 5078,
+    "fuel_saved_liters_per_week": 887.9,
+    "citizens_impacted": 17452,
+    "optimization_factor_pct": 23.7
+  },
+  "interventions": [
+    {
+      "id": "SPEED_CALMING",
+      "name": "Speed Calming & Enforcement",
+      "icon": "\ud83c\udfce\ufe0f",
+      "severity": "HIGH",
+      "description": "High average speed combined with elevated risk score suggests speed-related hazards.",
+      "action": "Deploy speed calming measures (speed bumps, radar signs) and increase enforcement patrols."
+    },
+    {
+      "id": "VIOLATION_ENFORCEMENT",
+      "name": "Red-Light Violation Enforcement",
+      "icon": "\ud83d\udea8",
+      "severity": "HIGH",
+      "description": "Elevated red-light violation count indicates intersection compliance failure.",
+      "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
+    }
+  ],
+  "executive_briefing": "Andheri is in a critical safety state with 66% incident risk. Enforcement focus needed \u2014 11 red-light violations recorded. Optimizing signals could save 2051 kg CO2/week, equivalent to 5078 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_01",
     "week": 9,
     "zone_type": "Commercial_Downtown",
@@ -51,6 +180,15 @@
     "location_name": "Andheri",
     "city": "Mumbai",
     "latitude": 19.1197,
-    "longitude": 72.8468
+    "longitude": 72.8468,
+    "predicted_risk_probability": 0.6617,
+    "risk_score": 66.1661,
+    "population_exposure_score": 52.9133,
+    "vehicle_exposure_score": 64.5182,
+    "temporal_trend_score": 0.0,
+    "priority_score": 52.5984,
+    "priority_rank": 11,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.6617
   }
 }

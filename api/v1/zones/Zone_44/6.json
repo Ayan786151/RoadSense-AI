@@ -1,8 +1,97 @@
 {
   "zone_id": "Zone_44",
+  "location_name": "Porur",
+  "city": "Chennai",
+  "zone_type": "Suburban_LowDensity",
   "week": 6,
-  "predicted_risk_probability": 0.15424528468707405,
-  "metrics": {
+  "latitude": 13.0358,
+  "longitude": 80.156,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.1542,
+    "predicted_risk_percentage": 15.42,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": 1.7461,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 20.6962,
+    "priority_rank": 41,
+    "priority_level": "LOW",
+    "components": {
+      "risk_score": 15.4245,
+      "population_exposure_score": 16.9481,
+      "vehicle_exposure_score": 16.048,
+      "temporal_trend_score": 47.1985
+    },
+    "explanation": {
+      "priority_level": "LOW",
+      "priority_score": 20.7,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "15/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 15.4245
+        }
+      ],
+      "total_factors": 1,
+      "assessment": "This zone is currently within acceptable safety parameters. Routine monitoring is sufficient."
+    }
+  },
+  "telemetry": {
+    "congestion": 9.67,
+    "congestion_delta": 1.88,
+    "average_speed_kmh": 63.75,
+    "speed_delta": 0.36,
+    "vehicle_density": 10.16,
+    "density_delta": -2.65,
+    "population_density": 3720,
+    "red_light_violations": 1,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 25,
+    "recommended_green_seconds": 21,
+    "change_seconds": -4,
+    "change_percent": -16.0,
+    "urgency": "OPTIMIZE",
+    "reason": "Low traffic \u2014 reduce green time to improve cross-traffic flow",
+    "factors": {
+      "congestion_factor": 1.08,
+      "density_factor": 1.04,
+      "speed_factor": 0.76,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 15707.3,
+    "total_co2_tonnes_per_year": 816.78,
+    "idle_co2_kg": 542.3,
+    "moving_co2_kg": 15164.9,
+    "potential_savings_kg_per_week": 113.7,
+    "potential_savings_tonnes_per_year": 5.91,
+    "trees_equivalent_per_year": 281,
+    "fuel_saved_liters_per_week": 49.2,
+    "citizens_impacted": 7440,
+    "optimization_factor_pct": 21.0
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "Porur is within safe operating parameters (15% risk). Continue routine monitoring. Optimizing signals could save 114 kg CO2/week, equivalent to 281 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_44",
     "week": 6,
     "zone_type": "Suburban_LowDensity",
@@ -51,6 +140,15 @@
     "location_name": "Porur",
     "city": "Chennai",
     "latitude": 13.0358,
-    "longitude": 80.156
+    "longitude": 80.156,
+    "predicted_risk_probability": 0.1542,
+    "risk_score": 15.4245,
+    "population_exposure_score": 16.9481,
+    "vehicle_exposure_score": 16.048,
+    "temporal_trend_score": 47.1985,
+    "priority_score": 20.6962,
+    "priority_rank": 41,
+    "priority_level": "LOW",
+    "risk_prob": 0.1542
   }
 }

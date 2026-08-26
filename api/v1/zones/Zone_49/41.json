@@ -1,8 +1,129 @@
 {
   "zone_id": "Zone_49",
+  "location_name": "Sholinganallur",
+  "city": "Chennai",
+  "zone_type": "University_District",
   "week": 41,
-  "predicted_risk_probability": 0.6649425583245682,
-  "metrics": {
+  "latitude": 12.901,
+  "longitude": 80.2279,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.6649,
+    "predicted_risk_percentage": 66.49,
+    "risk_label": "HIGH RISK",
+    "risk_color": "#f97316",
+    "risk_delta_vs_prev_week": -28.4297,
+    "actual_incident": 1
+  },
+  "priority": {
+    "priority_score": 58.2776,
+    "priority_rank": 9,
+    "priority_level": "HIGH",
+    "components": {
+      "risk_score": 66.4943,
+      "population_exposure_score": 73.1231,
+      "vehicle_exposure_score": 62.7,
+      "temporal_trend_score": 5.7277
+    },
+    "explanation": {
+      "priority_level": "HIGH",
+      "priority_score": 58.3,
+      "top_contributors": [
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "73/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 11539 residents/km\u00b2",
+          "weight": 73.1231
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "66/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 66.4943
+        },
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "63/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 62.7
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "47/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate congestion at 47",
+          "weight": 33.173
+        },
+        {
+          "factor": "Improving Trend",
+          "icon": "\ud83d\udcc9",
+          "value": "6/100",
+          "impact": "POSITIVE",
+          "detail": "Conditions are improving over past 4 weeks",
+          "weight": -5.7277
+        }
+      ],
+      "total_factors": 5,
+      "assessment": "This zone shows significant risk elevation driven by Population Exposure, Vehicle Density. Proactive intervention should be scheduled within the current planning cycle."
+    }
+  },
+  "telemetry": {
+    "congestion": 47.39,
+    "congestion_delta": -30.08,
+    "average_speed_kmh": 48.47,
+    "speed_delta": 21.36,
+    "vehicle_density": 46.65,
+    "density_delta": -4.83,
+    "population_density": 11539,
+    "red_light_violations": 5,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 46,
+    "change_seconds": 11,
+    "change_percent": 31.4,
+    "urgency": "HIGH",
+    "reason": "Elevated traffic density needs extended clearance time",
+    "factors": {
+      "congestion_factor": 1.38,
+      "density_factor": 1.19,
+      "speed_factor": 0.82,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 46463.2,
+    "total_co2_tonnes_per_year": 2416.08,
+    "idle_co2_kg": 12203.3,
+    "moving_co2_kg": 34259.9,
+    "potential_savings_kg_per_week": 3019.0,
+    "potential_savings_tonnes_per_year": 156.99,
+    "trees_equivalent_per_year": 7475,
+    "fuel_saved_liters_per_week": 1306.9,
+    "citizens_impacted": 23078,
+    "optimization_factor_pct": 24.7
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "No specific risk indicators triggered.",
+      "action": "Continue routine monitoring."
+    }
+  ],
+  "executive_briefing": "Sholinganallur is in a critical safety state with 66% incident risk. Continue routine monitoring. Optimizing signals could save 3019 kg CO2/week, equivalent to 7475 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_49",
     "week": 41,
     "zone_type": "University_District",
@@ -51,6 +172,15 @@
     "location_name": "Sholinganallur",
     "city": "Chennai",
     "latitude": 12.901,
-    "longitude": 80.2279
+    "longitude": 80.2279,
+    "predicted_risk_probability": 0.6649,
+    "risk_score": 66.4943,
+    "population_exposure_score": 73.1231,
+    "vehicle_exposure_score": 62.7,
+    "temporal_trend_score": 5.7277,
+    "priority_score": 58.2776,
+    "priority_rank": 9,
+    "priority_level": "HIGH",
+    "risk_prob": 0.6649
   }
 }

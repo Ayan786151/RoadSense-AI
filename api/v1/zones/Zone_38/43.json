@@ -1,8 +1,121 @@
 {
   "zone_id": "Zone_38",
+  "location_name": "T. Nagar",
+  "city": "Chennai",
+  "zone_type": "Commercial_Downtown",
   "week": 43,
-  "predicted_risk_probability": 0.3132683653321275,
-  "metrics": {
+  "latitude": 13.0418,
+  "longitude": 80.2341,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.3133,
+    "predicted_risk_percentage": 31.33,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": -31.2005,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 50.5081,
+    "priority_rank": 14,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 31.3268,
+      "population_exposure_score": 55.1333,
+      "vehicle_exposure_score": 74.8015,
+      "temporal_trend_score": 61.5586
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 50.5,
+      "top_contributors": [
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "75/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 74.8015
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "55/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 38.5933
+        },
+        {
+          "factor": "Rising Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "62/100",
+          "impact": "MEDIUM",
+          "detail": "Slight upward trend in congestion over past 4 weeks",
+          "weight": 36.9351
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "31/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 31.3268
+        }
+      ],
+      "total_factors": 4,
+      "assessment": "This zone has moderate risk levels with contributing factors: Vehicle Density, Population Exposure. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 30.99,
+    "congestion_delta": -10.91,
+    "average_speed_kmh": 56.41,
+    "speed_delta": 9.64,
+    "vehicle_density": 54.37,
+    "density_delta": 0.09,
+    "population_density": 9035,
+    "red_light_violations": 8,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 40,
+    "recommended_green_seconds": 47,
+    "change_seconds": 7,
+    "change_percent": 17.5,
+    "urgency": "MODERATE",
+    "reason": "Slight adjustment for current conditions",
+    "factors": {
+      "congestion_factor": 1.25,
+      "density_factor": 1.22,
+      "speed_factor": 0.79,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 64161.6,
+    "total_co2_tonnes_per_year": 3336.4,
+    "idle_co2_kg": 9300.8,
+    "moving_co2_kg": 54860.8,
+    "potential_savings_kg_per_week": 2148.4,
+    "potential_savings_tonnes_per_year": 111.72,
+    "trees_equivalent_per_year": 5319,
+    "fuel_saved_liters_per_week": 930.0,
+    "citizens_impacted": 18070,
+    "optimization_factor_pct": 23.1
+  },
+  "interventions": [
+    {
+      "id": "VIOLATION_ENFORCEMENT",
+      "name": "Red-Light Violation Enforcement",
+      "icon": "\ud83d\udea8",
+      "severity": "HIGH",
+      "description": "Elevated red-light violation count indicates intersection compliance failure.",
+      "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
+    }
+  ],
+  "executive_briefing": "T. Nagar is within safe operating parameters (31% risk). Continue routine monitoring. Optimizing signals could save 2148 kg CO2/week, equivalent to 5319 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_38",
     "week": 43,
     "zone_type": "Commercial_Downtown",
@@ -51,6 +164,15 @@
     "location_name": "T. Nagar",
     "city": "Chennai",
     "latitude": 13.0418,
-    "longitude": 80.2341
+    "longitude": 80.2341,
+    "predicted_risk_probability": 0.3133,
+    "risk_score": 31.3268,
+    "population_exposure_score": 55.1333,
+    "vehicle_exposure_score": 74.8015,
+    "temporal_trend_score": 61.5586,
+    "priority_score": 50.5081,
+    "priority_rank": 14,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.3133
   }
 }

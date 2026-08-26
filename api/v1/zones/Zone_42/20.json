@@ -1,8 +1,121 @@
 {
   "zone_id": "Zone_42",
+  "location_name": "Guindy",
+  "city": "Chennai",
+  "zone_type": "University_District",
   "week": 20,
-  "predicted_risk_probability": 0.5211089798064329,
-  "metrics": {
+  "latitude": 13.0067,
+  "longitude": 80.2206,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.5211,
+    "predicted_risk_percentage": 52.11,
+    "risk_label": "MODERATE RISK",
+    "risk_color": "#eab308",
+    "risk_delta_vs_prev_week": -3.5409,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 53.3362,
+    "priority_rank": 18,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 52.1109,
+      "population_exposure_score": 43.164,
+      "vehicle_exposure_score": 59.4564,
+      "temporal_trend_score": 65.3972
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 53.3,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "52/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 52.1109
+        },
+        {
+          "factor": "Rising Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "65/100",
+          "impact": "MEDIUM",
+          "detail": "Slight upward trend in congestion over past 4 weeks",
+          "weight": 39.2383
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "49/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate congestion at 49",
+          "weight": 34.524
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "43/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 30.2148
+        }
+      ],
+      "total_factors": 4,
+      "assessment": "This zone has moderate risk levels with contributing factors: Risk Score, Rising Trend. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 49.32,
+    "congestion_delta": -2.93,
+    "average_speed_kmh": 51.55,
+    "speed_delta": 6.41,
+    "vehicle_density": 44.61,
+    "density_delta": 1.65,
+    "population_density": 7369,
+    "red_light_violations": 5,
+    "weather": "Normal",
+    "special_event": 1
+  },
+  "signal_optimization": {
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 53,
+    "change_seconds": 18,
+    "change_percent": 51.4,
+    "urgency": "CRITICAL",
+    "reason": "Severe congestion requires significantly extended green phase",
+    "factors": {
+      "congestion_factor": 1.39,
+      "density_factor": 1.18,
+      "speed_factor": 0.81,
+      "event_boost": 1.15,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 42353.6,
+    "total_co2_tonnes_per_year": 2202.39,
+    "idle_co2_kg": 12144.9,
+    "moving_co2_kg": 30208.7,
+    "potential_savings_kg_per_week": 3028.0,
+    "potential_savings_tonnes_per_year": 157.45,
+    "trees_equivalent_per_year": 7497,
+    "fuel_saved_liters_per_week": 1310.8,
+    "citizens_impacted": 14738,
+    "optimization_factor_pct": 24.9
+  },
+  "interventions": [
+    {
+      "id": "EVENT_TRAFFIC_PLAN",
+      "name": "Special Event Traffic Plan",
+      "icon": "\ud83c\udfaa",
+      "severity": "MEDIUM",
+      "description": "Active special event generating additional traffic demand.",
+      "action": "Activate event traffic management plan. Deploy traffic marshals and temporary signage."
+    }
+  ],
+  "executive_briefing": "Guindy shows elevated risk at 52%. Continue routine monitoring. Optimizing signals could save 3028 kg CO2/week, equivalent to 7497 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_42",
     "week": 20,
     "zone_type": "University_District",
@@ -51,6 +164,15 @@
     "location_name": "Guindy",
     "city": "Chennai",
     "latitude": 13.0067,
-    "longitude": 80.2206
+    "longitude": 80.2206,
+    "predicted_risk_probability": 0.5211,
+    "risk_score": 52.1109,
+    "population_exposure_score": 43.164,
+    "vehicle_exposure_score": 59.4564,
+    "temporal_trend_score": 65.3972,
+    "priority_score": 53.3362,
+    "priority_rank": 18,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.5211
   }
 }

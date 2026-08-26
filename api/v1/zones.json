@@ -1,55 +1,459 @@
 {
   "total_zones": 50,
+  "weeks_available": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52
+  ],
   "zones": [
-    "Zone_01",
-    "Zone_02",
-    "Zone_03",
-    "Zone_04",
-    "Zone_05",
-    "Zone_06",
-    "Zone_07",
-    "Zone_08",
-    "Zone_09",
-    "Zone_10",
-    "Zone_11",
-    "Zone_12",
-    "Zone_13",
-    "Zone_14",
-    "Zone_15",
-    "Zone_16",
-    "Zone_17",
-    "Zone_18",
-    "Zone_19",
-    "Zone_20",
-    "Zone_21",
-    "Zone_22",
-    "Zone_23",
-    "Zone_24",
-    "Zone_25",
-    "Zone_26",
-    "Zone_27",
-    "Zone_28",
-    "Zone_29",
-    "Zone_30",
-    "Zone_31",
-    "Zone_32",
-    "Zone_33",
-    "Zone_34",
-    "Zone_35",
-    "Zone_36",
-    "Zone_37",
-    "Zone_38",
-    "Zone_39",
-    "Zone_40",
-    "Zone_41",
-    "Zone_42",
-    "Zone_43",
-    "Zone_44",
-    "Zone_45",
-    "Zone_46",
-    "Zone_47",
-    "Zone_48",
-    "Zone_49",
-    "Zone_50"
+    {
+      "zone_id": "Zone_01",
+      "location_name": "Andheri",
+      "city": "Mumbai",
+      "zone_type": "Commercial_Downtown",
+      "latitude": 19.1197,
+      "longitude": 72.8468
+    },
+    {
+      "zone_id": "Zone_02",
+      "location_name": "Bandra",
+      "city": "Mumbai",
+      "zone_type": "Residential",
+      "latitude": 19.0596,
+      "longitude": 72.8295
+    },
+    {
+      "zone_id": "Zone_03",
+      "location_name": "Kurla",
+      "city": "Mumbai",
+      "zone_type": "University_District",
+      "latitude": 19.0726,
+      "longitude": 72.8845
+    },
+    {
+      "zone_id": "Zone_04",
+      "location_name": "Dadar",
+      "city": "Mumbai",
+      "zone_type": "Highway_Junction",
+      "latitude": 19.0178,
+      "longitude": 72.8478
+    },
+    {
+      "zone_id": "Zone_05",
+      "location_name": "Powai",
+      "city": "Mumbai",
+      "zone_type": "Commercial_Downtown",
+      "latitude": 19.1176,
+      "longitude": 72.906
+    },
+    {
+      "zone_id": "Zone_06",
+      "location_name": "Borivali",
+      "city": "Mumbai",
+      "zone_type": "University_District",
+      "latitude": 19.2307,
+      "longitude": 72.8567
+    },
+    {
+      "zone_id": "Zone_07",
+      "location_name": "Goregaon",
+      "city": "Mumbai",
+      "zone_type": "University_District",
+      "latitude": 19.1663,
+      "longitude": 72.8526
+    },
+    {
+      "zone_id": "Zone_08",
+      "location_name": "Thane",
+      "city": "Mumbai",
+      "zone_type": "Highway_Junction",
+      "latitude": 19.2183,
+      "longitude": 72.9781
+    },
+    {
+      "zone_id": "Zone_09",
+      "location_name": "Vashi",
+      "city": "Mumbai",
+      "zone_type": "Suburban_LowDensity",
+      "latitude": 19.0771,
+      "longitude": 72.9986
+    },
+    {
+      "zone_id": "Zone_10",
+      "location_name": "Colaba",
+      "city": "Mumbai",
+      "zone_type": "Residential",
+      "latitude": 18.922,
+      "longitude": 72.8347
+    },
+    {
+      "zone_id": "Zone_11",
+      "location_name": "Lower Parel",
+      "city": "Mumbai",
+      "zone_type": "Residential",
+      "latitude": 18.9988,
+      "longitude": 72.8258
+    },
+    {
+      "zone_id": "Zone_12",
+      "location_name": "Malad",
+      "city": "Mumbai",
+      "zone_type": "Commercial_Downtown",
+      "latitude": 19.1874,
+      "longitude": 72.8484
+    },
+    {
+      "zone_id": "Zone_13",
+      "location_name": "Chembur",
+      "city": "Mumbai",
+      "zone_type": "Suburban_LowDensity",
+      "latitude": 19.062,
+      "longitude": 72.897
+    },
+    {
+      "zone_id": "Zone_14",
+      "location_name": "Connaught Place",
+      "city": "Delhi",
+      "zone_type": "University_District",
+      "latitude": 28.6315,
+      "longitude": 77.2167
+    },
+    {
+      "zone_id": "Zone_15",
+      "location_name": "Dwarka",
+      "city": "Delhi",
+      "zone_type": "Residential",
+      "latitude": 28.5921,
+      "longitude": 77.046
+    },
+    {
+      "zone_id": "Zone_16",
+      "location_name": "Rohini",
+      "city": "Delhi",
+      "zone_type": "Highway_Junction",
+      "latitude": 28.7495,
+      "longitude": 77.0565
+    },
+    {
+      "zone_id": "Zone_17",
+      "location_name": "Saket",
+      "city": "Delhi",
+      "zone_type": "Residential",
+      "latitude": 28.5244,
+      "longitude": 77.2066
+    },
+    {
+      "zone_id": "Zone_18",
+      "location_name": "Karol Bagh",
+      "city": "Delhi",
+      "zone_type": "Industrial_Corridor",
+      "latitude": 28.6514,
+      "longitude": 77.1907
+    },
+    {
+      "zone_id": "Zone_19",
+      "location_name": "Lajpat Nagar",
+      "city": "Delhi",
+      "zone_type": "Industrial_Corridor",
+      "latitude": 28.5677,
+      "longitude": 77.243
+    },
+    {
+      "zone_id": "Zone_20",
+      "location_name": "Vasant Kunj",
+      "city": "Delhi",
+      "zone_type": "Commercial_Downtown",
+      "latitude": 28.5293,
+      "longitude": 77.1541
+    },
+    {
+      "zone_id": "Zone_21",
+      "location_name": "Janakpuri",
+      "city": "Delhi",
+      "zone_type": "Residential",
+      "latitude": 28.6219,
+      "longitude": 77.0878
+    },
+    {
+      "zone_id": "Zone_22",
+      "location_name": "Pitampura",
+      "city": "Delhi",
+      "zone_type": "University_District",
+      "latitude": 28.7033,
+      "longitude": 77.1322
+    },
+    {
+      "zone_id": "Zone_23",
+      "location_name": "Shahdara",
+      "city": "Delhi",
+      "zone_type": "Suburban_LowDensity",
+      "latitude": 28.673,
+      "longitude": 77.2891
+    },
+    {
+      "zone_id": "Zone_24",
+      "location_name": "Nehru Place",
+      "city": "Delhi",
+      "zone_type": "Commercial_Downtown",
+      "latitude": 28.5491,
+      "longitude": 77.2519
+    },
+    {
+      "zone_id": "Zone_25",
+      "location_name": "Okhla",
+      "city": "Delhi",
+      "zone_type": "Residential",
+      "latitude": 28.5355,
+      "longitude": 77.264
+    },
+    {
+      "zone_id": "Zone_26",
+      "location_name": "Hazratganj",
+      "city": "Lucknow",
+      "zone_type": "University_District",
+      "latitude": 26.85,
+      "longitude": 80.949
+    },
+    {
+      "zone_id": "Zone_27",
+      "location_name": "Gomti Nagar",
+      "city": "Lucknow",
+      "zone_type": "Suburban_LowDensity",
+      "latitude": 26.8467,
+      "longitude": 81.0078
+    },
+    {
+      "zone_id": "Zone_28",
+      "location_name": "Aliganj",
+      "city": "Lucknow",
+      "zone_type": "Highway_Junction",
+      "latitude": 26.886,
+      "longitude": 80.9462
+    },
+    {
+      "zone_id": "Zone_29",
+      "location_name": "Indira Nagar",
+      "city": "Lucknow",
+      "zone_type": "Residential",
+      "latitude": 26.88,
+      "longitude": 81.0
+    },
+    {
+      "zone_id": "Zone_30",
+      "location_name": "Charbagh",
+      "city": "Lucknow",
+      "zone_type": "Highway_Junction",
+      "latitude": 26.8315,
+      "longitude": 80.923
+    },
+    {
+      "zone_id": "Zone_31",
+      "location_name": "Alambagh",
+      "city": "Lucknow",
+      "zone_type": "Commercial_Downtown",
+      "latitude": 26.813,
+      "longitude": 80.918
+    },
+    {
+      "zone_id": "Zone_32",
+      "location_name": "Mahanagar",
+      "city": "Lucknow",
+      "zone_type": "Commercial_Downtown",
+      "latitude": 26.8755,
+      "longitude": 80.9595
+    },
+    {
+      "zone_id": "Zone_33",
+      "location_name": "Aminabad",
+      "city": "Lucknow",
+      "zone_type": "Commercial_Downtown",
+      "latitude": 26.8465,
+      "longitude": 80.94
+    },
+    {
+      "zone_id": "Zone_34",
+      "location_name": "Chinhat",
+      "city": "Lucknow",
+      "zone_type": "Industrial_Corridor",
+      "latitude": 26.884,
+      "longitude": 81.05
+    },
+    {
+      "zone_id": "Zone_35",
+      "location_name": "Jankipuram",
+      "city": "Lucknow",
+      "zone_type": "Residential",
+      "latitude": 26.93,
+      "longitude": 80.94
+    },
+    {
+      "zone_id": "Zone_36",
+      "location_name": "Rajajipuram",
+      "city": "Lucknow",
+      "zone_type": "Residential",
+      "latitude": 26.833,
+      "longitude": 80.89
+    },
+    {
+      "zone_id": "Zone_37",
+      "location_name": "Vrindavan Yojana",
+      "city": "Lucknow",
+      "zone_type": "Residential",
+      "latitude": 26.79,
+      "longitude": 81.0
+    },
+    {
+      "zone_id": "Zone_38",
+      "location_name": "T. Nagar",
+      "city": "Chennai",
+      "zone_type": "Commercial_Downtown",
+      "latitude": 13.0418,
+      "longitude": 80.2341
+    },
+    {
+      "zone_id": "Zone_39",
+      "location_name": "Anna Nagar",
+      "city": "Chennai",
+      "zone_type": "Industrial_Corridor",
+      "latitude": 13.085,
+      "longitude": 80.2101
+    },
+    {
+      "zone_id": "Zone_40",
+      "location_name": "Velachery",
+      "city": "Chennai",
+      "zone_type": "University_District",
+      "latitude": 12.9815,
+      "longitude": 80.218
+    },
+    {
+      "zone_id": "Zone_41",
+      "location_name": "Adyar",
+      "city": "Chennai",
+      "zone_type": "Highway_Junction",
+      "latitude": 13.0063,
+      "longitude": 80.2574
+    },
+    {
+      "zone_id": "Zone_42",
+      "location_name": "Guindy",
+      "city": "Chennai",
+      "zone_type": "University_District",
+      "latitude": 13.0067,
+      "longitude": 80.2206
+    },
+    {
+      "zone_id": "Zone_43",
+      "location_name": "Tambaram",
+      "city": "Chennai",
+      "zone_type": "Commercial_Downtown",
+      "latitude": 12.9249,
+      "longitude": 80.1
+    },
+    {
+      "zone_id": "Zone_44",
+      "location_name": "Porur",
+      "city": "Chennai",
+      "zone_type": "Suburban_LowDensity",
+      "latitude": 13.0358,
+      "longitude": 80.156
+    },
+    {
+      "zone_id": "Zone_45",
+      "location_name": "Mylapore",
+      "city": "Chennai",
+      "zone_type": "Highway_Junction",
+      "latitude": 13.0339,
+      "longitude": 80.2676
+    },
+    {
+      "zone_id": "Zone_46",
+      "location_name": "Nungambakkam",
+      "city": "Chennai",
+      "zone_type": "University_District",
+      "latitude": 13.0569,
+      "longitude": 80.2425
+    },
+    {
+      "zone_id": "Zone_47",
+      "location_name": "Perambur",
+      "city": "Chennai",
+      "zone_type": "University_District",
+      "latitude": 13.1167,
+      "longitude": 80.2333
+    },
+    {
+      "zone_id": "Zone_48",
+      "location_name": "Ambattur",
+      "city": "Chennai",
+      "zone_type": "Industrial_Corridor",
+      "latitude": 13.1143,
+      "longitude": 80.1486
+    },
+    {
+      "zone_id": "Zone_49",
+      "location_name": "Sholinganallur",
+      "city": "Chennai",
+      "zone_type": "University_District",
+      "latitude": 12.901,
+      "longitude": 80.2279
+    },
+    {
+      "zone_id": "Zone_50",
+      "location_name": "Egmore",
+      "city": "Chennai",
+      "zone_type": "University_District",
+      "latitude": 13.0732,
+      "longitude": 80.2609
+    }
   ]
 }

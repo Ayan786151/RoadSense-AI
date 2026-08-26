@@ -1,8 +1,97 @@
 {
   "zone_id": "Zone_28",
+  "location_name": "Aliganj",
+  "city": "Lucknow",
+  "zone_type": "Highway_Junction",
   "week": 49,
-  "predicted_risk_probability": 0.1956070571295583,
-  "metrics": {
+  "latitude": 26.886,
+  "longitude": 80.9462,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.1956,
+    "predicted_risk_percentage": 19.56,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": -2.487,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 16.7859,
+    "priority_rank": 49,
+    "priority_level": "LOW",
+    "components": {
+      "risk_score": 19.5607,
+      "population_exposure_score": 3.4773,
+      "vehicle_exposure_score": 1.4584,
+      "temporal_trend_score": 52.0043
+    },
+    "explanation": {
+      "priority_level": "LOW",
+      "priority_score": 16.8,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "20/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 19.5607
+        }
+      ],
+      "total_factors": 1,
+      "assessment": "This zone is currently within acceptable safety parameters. Routine monitoring is sufficient."
+    }
+  },
+  "telemetry": {
+    "congestion": 7.84,
+    "congestion_delta": 1.77,
+    "average_speed_kmh": 54.78,
+    "speed_delta": -9.21,
+    "vehicle_density": 3.88,
+    "density_delta": 3.88,
+    "population_density": 1845,
+    "red_light_violations": 6,
+    "weather": "Light Rain",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 50,
+    "recommended_green_seconds": 46,
+    "change_seconds": -4,
+    "change_percent": -8.0,
+    "urgency": "NOMINAL",
+    "reason": "Current default timing is adequate",
+    "factors": {
+      "congestion_factor": 1.06,
+      "density_factor": 1.02,
+      "speed_factor": 0.79,
+      "event_boost": 1.0,
+      "weather_boost": 1.08
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 5245.2,
+    "total_co2_tonnes_per_year": 272.75,
+    "idle_co2_kg": 167.9,
+    "moving_co2_kg": 5077.3,
+    "potential_savings_kg_per_week": 34.9,
+    "potential_savings_tonnes_per_year": 1.81,
+    "trees_equivalent_per_year": 86,
+    "fuel_saved_liters_per_week": 15.1,
+    "citizens_impacted": 3690,
+    "optimization_factor_pct": 20.8
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "Aliganj is within safe operating parameters (20% risk). Continue routine monitoring. Optimizing signals could save 35 kg CO2/week, equivalent to 86 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_28",
     "week": 49,
     "zone_type": "Highway_Junction",
@@ -51,6 +140,15 @@
     "location_name": "Aliganj",
     "city": "Lucknow",
     "latitude": 26.886,
-    "longitude": 80.9462
+    "longitude": 80.9462,
+    "predicted_risk_probability": 0.1956,
+    "risk_score": 19.5607,
+    "population_exposure_score": 3.4773,
+    "vehicle_exposure_score": 1.4584,
+    "temporal_trend_score": 52.0043,
+    "priority_score": 16.7859,
+    "priority_rank": 49,
+    "priority_level": "LOW",
+    "risk_prob": 0.1956
   }
 }

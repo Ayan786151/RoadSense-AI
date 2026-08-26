@@ -1,8 +1,121 @@
 {
   "zone_id": "Zone_22",
+  "location_name": "Pitampura",
+  "city": "Delhi",
+  "zone_type": "University_District",
   "week": 20,
-  "predicted_risk_probability": 0.22603811534825766,
-  "metrics": {
+  "latitude": 28.7033,
+  "longitude": 77.1322,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.226,
+    "predicted_risk_percentage": 22.6,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": -21.7152,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 41.9748,
+    "priority_rank": 25,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 22.6038,
+      "population_exposure_score": 44.6081,
+      "vehicle_exposure_score": 63.225,
+      "temporal_trend_score": 60.9085
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 42.0,
+      "top_contributors": [
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "63/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 63.225
+        },
+        {
+          "factor": "Rising Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "61/100",
+          "impact": "MEDIUM",
+          "detail": "Slight upward trend in congestion over past 4 weeks",
+          "weight": 36.5451
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "45/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 31.2257
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "23/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 22.6038
+        }
+      ],
+      "total_factors": 4,
+      "assessment": "This zone has moderate risk levels with contributing factors: Vehicle Density, Rising Trend. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 29.51,
+    "congestion_delta": -16.23,
+    "average_speed_kmh": 58.28,
+    "speed_delta": 8.77,
+    "vehicle_density": 47.3,
+    "density_delta": -3.77,
+    "population_density": 7570,
+    "red_light_violations": 6,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 40,
+    "change_seconds": 5,
+    "change_percent": 14.3,
+    "urgency": "MODERATE",
+    "reason": "Slight adjustment for current conditions",
+    "factors": {
+      "congestion_factor": 1.24,
+      "density_factor": 1.19,
+      "speed_factor": 0.78,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 58071.6,
+    "total_co2_tonnes_per_year": 3019.72,
+    "idle_co2_kg": 7704.9,
+    "moving_co2_kg": 50366.7,
+    "potential_savings_kg_per_week": 1768.4,
+    "potential_savings_tonnes_per_year": 91.95,
+    "trees_equivalent_per_year": 4378,
+    "fuel_saved_liters_per_week": 765.5,
+    "citizens_impacted": 15140,
+    "optimization_factor_pct": 23.0
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "Pitampura is within safe operating parameters (23% risk). Continue routine monitoring. Optimizing signals could save 1768 kg CO2/week, equivalent to 4378 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_22",
     "week": 20,
     "zone_type": "University_District",
@@ -51,6 +164,15 @@
     "location_name": "Pitampura",
     "city": "Delhi",
     "latitude": 28.7033,
-    "longitude": 77.1322
+    "longitude": 77.1322,
+    "predicted_risk_probability": 0.226,
+    "risk_score": 22.6038,
+    "population_exposure_score": 44.6081,
+    "vehicle_exposure_score": 63.225,
+    "temporal_trend_score": 60.9085,
+    "priority_score": 41.9748,
+    "priority_rank": 25,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.226
   }
 }

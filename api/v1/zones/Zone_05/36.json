@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_05",
+  "location_name": "Powai",
+  "city": "Mumbai",
+  "zone_type": "Commercial_Downtown",
   "week": 36,
-  "predicted_risk_probability": 0.9254427552778683,
-  "metrics": {
+  "latitude": 19.1176,
+  "longitude": 72.906,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.9254,
+    "predicted_risk_percentage": 92.54,
+    "risk_label": "CRITICAL RISK",
+    "risk_color": "#ef4444",
+    "risk_delta_vs_prev_week": 58.6946,
+    "actual_incident": 1
+  },
+  "priority": {
+    "priority_score": 64.4804,
+    "priority_rank": 15,
+    "priority_level": "HIGH",
+    "components": {
+      "risk_score": 92.5443,
+      "population_exposure_score": 50.1616,
+      "vehicle_exposure_score": 35.1458,
+      "temporal_trend_score": 52.6207
+    },
+    "explanation": {
+      "priority_level": "HIGH",
+      "priority_score": 64.5,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udd34",
+          "value": "93/100",
+          "impact": "HIGH",
+          "detail": "Model-estimated risk score is in the critical range",
+          "weight": 92.5443
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "55/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate congestion at 55",
+          "weight": 38.395
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "50/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 35.1132
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone shows significant risk elevation driven by Risk Score. Proactive intervention should be scheduled within the current planning cycle."
+    }
+  },
+  "telemetry": {
+    "congestion": 54.85,
+    "congestion_delta": 25.14,
+    "average_speed_kmh": 25.91,
+    "speed_delta": -25.39,
+    "vehicle_density": 28.8,
+    "density_delta": 2.15,
+    "population_density": 8343,
+    "red_light_violations": 7,
+    "weather": "Heavy Rain",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 40,
+    "recommended_green_seconds": 68,
+    "change_seconds": 28,
+    "change_percent": 70.0,
+    "urgency": "CRITICAL",
+    "reason": "Severe congestion requires significantly extended green phase",
+    "factors": {
+      "congestion_factor": 1.44,
+      "density_factor": 1.12,
+      "speed_factor": 0.9,
+      "event_boost": 1.0,
+      "weather_boost": 1.18
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 26185.4,
+    "total_co2_tonnes_per_year": 1361.64,
+    "idle_co2_kg": 8719.8,
+    "moving_co2_kg": 17465.6,
+    "potential_savings_kg_per_week": 2222.2,
+    "potential_savings_tonnes_per_year": 115.56,
+    "trees_equivalent_per_year": 5502,
+    "fuel_saved_liters_per_week": 962.0,
+    "citizens_impacted": 16686,
+    "optimization_factor_pct": 25.5
+  },
+  "interventions": [
+    {
+      "id": "ROAD_MAINTENANCE",
+      "name": "Road Maintenance Inspection",
+      "icon": "\ud83d\udee3\ufe0f",
+      "severity": "MEDIUM",
+      "description": "Deteriorated road surface combined with elevated risk indicates infrastructure maintenance need.",
+      "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
+    }
+  ],
+  "executive_briefing": "Powai is in a critical safety state with 93% incident risk. Continue routine monitoring. Optimizing signals could save 2222 kg CO2/week, equivalent to 5502 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_05",
     "week": 36,
     "zone_type": "Commercial_Downtown",
@@ -51,6 +156,15 @@
     "location_name": "Powai",
     "city": "Mumbai",
     "latitude": 19.1176,
-    "longitude": 72.906
+    "longitude": 72.906,
+    "predicted_risk_probability": 0.9254,
+    "risk_score": 92.5443,
+    "population_exposure_score": 50.1616,
+    "vehicle_exposure_score": 35.1458,
+    "temporal_trend_score": 52.6207,
+    "priority_score": 64.4804,
+    "priority_rank": 15,
+    "priority_level": "HIGH",
+    "risk_prob": 0.9254
   }
 }

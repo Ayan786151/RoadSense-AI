@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_03",
+  "location_name": "Kurla",
+  "city": "Mumbai",
+  "zone_type": "University_District",
   "week": 10,
-  "predicted_risk_probability": 0.39907498697727406,
-  "metrics": {
+  "latitude": 19.0726,
+  "longitude": 72.8845,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.3991,
+    "predicted_risk_percentage": 39.91,
+    "risk_label": "MODERATE RISK",
+    "risk_color": "#eab308",
+    "risk_delta_vs_prev_week": 20.3149,
+    "actual_incident": 1
+  },
+  "priority": {
+    "priority_score": 46.8254,
+    "priority_rank": 21,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 39.9075,
+      "population_exposure_score": 45.4343,
+      "vehicle_exposure_score": 53.392,
+      "temporal_trend_score": 58.8361
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 46.8,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "40/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 39.9075
+        },
+        {
+          "factor": "Rising Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "59/100",
+          "impact": "MEDIUM",
+          "detail": "Slight upward trend in congestion over past 4 weeks",
+          "weight": 35.3017
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "45/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 31.804
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone has moderate risk levels with contributing factors: Rising Trend, Population Exposure. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 25.23,
+    "congestion_delta": 9.2,
+    "average_speed_kmh": 61.35,
+    "speed_delta": -3.92,
+    "vehicle_density": 32.74,
+    "density_delta": 1.31,
+    "population_density": 7685,
+    "red_light_violations": 3,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 36,
+    "change_seconds": 1,
+    "change_percent": 2.9,
+    "urgency": "NOMINAL",
+    "reason": "Current default timing is adequate",
+    "factors": {
+      "congestion_factor": 1.2,
+      "density_factor": 1.13,
+      "speed_factor": 0.77,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 43487.1,
+    "total_co2_tonnes_per_year": 2261.33,
+    "idle_co2_kg": 4559.7,
+    "moving_co2_kg": 38927.4,
+    "potential_savings_kg_per_week": 1027.0,
+    "potential_savings_tonnes_per_year": 53.4,
+    "trees_equivalent_per_year": 2542,
+    "fuel_saved_liters_per_week": 444.6,
+    "citizens_impacted": 15370,
+    "optimization_factor_pct": 22.5
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "No specific risk indicators triggered.",
+      "action": "Continue routine monitoring."
+    }
+  ],
+  "executive_briefing": "Kurla shows elevated risk at 40%. Continue routine monitoring. Optimizing signals could save 1027 kg CO2/week, equivalent to 2542 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_03",
     "week": 10,
     "zone_type": "University_District",
@@ -51,6 +156,15 @@
     "location_name": "Kurla",
     "city": "Mumbai",
     "latitude": 19.0726,
-    "longitude": 72.8845
+    "longitude": 72.8845,
+    "predicted_risk_probability": 0.3991,
+    "risk_score": 39.9075,
+    "population_exposure_score": 45.4343,
+    "vehicle_exposure_score": 53.392,
+    "temporal_trend_score": 58.8361,
+    "priority_score": 46.8254,
+    "priority_rank": 21,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.3991
   }
 }

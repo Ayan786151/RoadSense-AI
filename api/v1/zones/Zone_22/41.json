@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_22",
+  "location_name": "Pitampura",
+  "city": "Delhi",
+  "zone_type": "University_District",
   "week": 41,
-  "predicted_risk_probability": 0.3112788344318333,
-  "metrics": {
+  "latitude": 28.7033,
+  "longitude": 77.1322,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.3113,
+    "predicted_risk_percentage": 31.13,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": 6.1147,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 37.6105,
+    "priority_rank": 24,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 31.1279,
+      "population_exposure_score": 44.6081,
+      "vehicle_exposure_score": 59.4376,
+      "temporal_trend_score": 14.1321
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 37.6,
+      "top_contributors": [
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "45/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 31.2257
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "31/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 31.1279
+        },
+        {
+          "factor": "Improving Trend",
+          "icon": "\ud83d\udcc9",
+          "value": "14/100",
+          "impact": "POSITIVE",
+          "detail": "Conditions are improving over past 4 weeks",
+          "weight": -14.1321
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone has moderate risk levels with contributing factors: Population Exposure. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 29.23,
+    "congestion_delta": 1.51,
+    "average_speed_kmh": 58.72,
+    "speed_delta": -0.35,
+    "vehicle_density": 44.55,
+    "density_delta": -0.81,
+    "population_density": 7570,
+    "red_light_violations": 2,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 39,
+    "change_seconds": 4,
+    "change_percent": 11.4,
+    "urgency": "MODERATE",
+    "reason": "Slight adjustment for current conditions",
+    "factors": {
+      "congestion_factor": 1.23,
+      "density_factor": 1.18,
+      "speed_factor": 0.78,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 55174.5,
+    "total_co2_tonnes_per_year": 2869.07,
+    "idle_co2_kg": 7188.1,
+    "moving_co2_kg": 47986.4,
+    "potential_savings_kg_per_week": 1647.7,
+    "potential_savings_tonnes_per_year": 85.68,
+    "trees_equivalent_per_year": 4080,
+    "fuel_saved_liters_per_week": 713.3,
+    "citizens_impacted": 15140,
+    "optimization_factor_pct": 22.9
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "No specific risk indicators triggered.",
+      "action": "Continue routine monitoring."
+    }
+  ],
+  "executive_briefing": "Pitampura is within safe operating parameters (31% risk). Continue routine monitoring. Optimizing signals could save 1648 kg CO2/week, equivalent to 4080 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_22",
     "week": 41,
     "zone_type": "University_District",
@@ -51,6 +156,15 @@
     "location_name": "Pitampura",
     "city": "Delhi",
     "latitude": 28.7033,
-    "longitude": 77.1322
+    "longitude": 77.1322,
+    "predicted_risk_probability": 0.3113,
+    "risk_score": 31.1279,
+    "population_exposure_score": 44.6081,
+    "vehicle_exposure_score": 59.4376,
+    "temporal_trend_score": 14.1321,
+    "priority_score": 37.6105,
+    "priority_rank": 24,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.3113
   }
 }

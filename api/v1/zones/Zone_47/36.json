@@ -1,8 +1,121 @@
 {
   "zone_id": "Zone_47",
+  "location_name": "Perambur",
+  "city": "Chennai",
+  "zone_type": "University_District",
   "week": 36,
-  "predicted_risk_probability": 0.6979957122599213,
-  "metrics": {
+  "latitude": 13.1167,
+  "longitude": 80.2333,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.698,
+    "predicted_risk_percentage": 69.8,
+    "risk_label": "HIGH RISK",
+    "risk_color": "#f97316",
+    "risk_delta_vs_prev_week": 21.8919,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 50.2458,
+    "priority_rank": 23,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 69.7996,
+      "population_exposure_score": 48.0997,
+      "vehicle_exposure_score": 51.5051,
+      "temporal_trend_score": 0.0
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 50.2,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "70/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 69.7996
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "56/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate congestion at 56",
+          "weight": 39.032
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "48/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 33.6698
+        },
+        {
+          "factor": "Improving Trend",
+          "icon": "\ud83d\udcc9",
+          "value": "0/100",
+          "impact": "POSITIVE",
+          "detail": "Conditions are improving over past 4 weeks",
+          "weight": -0.0
+        }
+      ],
+      "total_factors": 4,
+      "assessment": "This zone has moderate risk levels with contributing factors: Risk Score, Congestion. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 55.76,
+    "congestion_delta": 23.13,
+    "average_speed_kmh": 38.4,
+    "speed_delta": -20.86,
+    "vehicle_density": 39.18,
+    "density_delta": 1.36,
+    "population_density": 8056,
+    "red_light_violations": 4,
+    "weather": "Light Rain",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 54,
+    "change_seconds": 19,
+    "change_percent": 54.3,
+    "urgency": "CRITICAL",
+    "reason": "Severe congestion requires significantly extended green phase",
+    "factors": {
+      "congestion_factor": 1.45,
+      "density_factor": 1.16,
+      "speed_factor": 0.86,
+      "event_boost": 1.0,
+      "weather_boost": 1.08
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 31228.6,
+    "total_co2_tonnes_per_year": 1623.89,
+    "idle_co2_kg": 12059.4,
+    "moving_co2_kg": 19169.2,
+    "potential_savings_kg_per_week": 3084.3,
+    "potential_savings_tonnes_per_year": 160.38,
+    "trees_equivalent_per_year": 7637,
+    "fuel_saved_liters_per_week": 1335.2,
+    "citizens_impacted": 16112,
+    "optimization_factor_pct": 25.6
+  },
+  "interventions": [
+    {
+      "id": "ROAD_MAINTENANCE",
+      "name": "Road Maintenance Inspection",
+      "icon": "\ud83d\udee3\ufe0f",
+      "severity": "MEDIUM",
+      "description": "Deteriorated road surface combined with elevated risk indicates infrastructure maintenance need.",
+      "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
+    }
+  ],
+  "executive_briefing": "Perambur is in a critical safety state with 70% incident risk. Continue routine monitoring. Optimizing signals could save 3084 kg CO2/week, equivalent to 7637 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_47",
     "week": 36,
     "zone_type": "University_District",
@@ -51,6 +164,15 @@
     "location_name": "Perambur",
     "city": "Chennai",
     "latitude": 13.1167,
-    "longitude": 80.2333
+    "longitude": 80.2333,
+    "predicted_risk_probability": 0.698,
+    "risk_score": 69.7996,
+    "population_exposure_score": 48.0997,
+    "vehicle_exposure_score": 51.5051,
+    "temporal_trend_score": 0.0,
+    "priority_score": 50.2458,
+    "priority_rank": 23,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.698
   }
 }

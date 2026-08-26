@@ -1,8 +1,129 @@
 {
   "zone_id": "Zone_36",
+  "location_name": "Rajajipuram",
+  "city": "Lucknow",
+  "zone_type": "Residential",
   "week": 41,
-  "predicted_risk_probability": 0.6675065272056753,
-  "metrics": {
+  "latitude": 26.833,
+  "longitude": 80.89,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.6675,
+    "predicted_risk_percentage": 66.75,
+    "risk_label": "HIGH RISK",
+    "risk_color": "#f97316",
+    "risk_delta_vs_prev_week": 28.8348,
+    "actual_incident": 1
+  },
+  "priority": {
+    "priority_score": 60.8612,
+    "priority_rank": 8,
+    "priority_level": "HIGH",
+    "components": {
+      "risk_score": 66.7507,
+      "population_exposure_score": 81.73,
+      "vehicle_exposure_score": 47.1959,
+      "temporal_trend_score": 28.5948
+    },
+    "explanation": {
+      "priority_level": "HIGH",
+      "priority_score": 60.9,
+      "top_contributors": [
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "82/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 12737 residents/km\u00b2",
+          "weight": 81.73
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "67/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 66.7507
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "43/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate congestion at 43",
+          "weight": 29.995
+        },
+        {
+          "factor": "Improving Trend",
+          "icon": "\ud83d\udcc9",
+          "value": "29/100",
+          "impact": "POSITIVE",
+          "detail": "Conditions are improving over past 4 weeks",
+          "weight": -28.5948
+        }
+      ],
+      "total_factors": 4,
+      "assessment": "This zone shows significant risk elevation driven by Population Exposure. Proactive intervention should be scheduled within the current planning cycle."
+    }
+  },
+  "telemetry": {
+    "congestion": 42.85,
+    "congestion_delta": 7.23,
+    "average_speed_kmh": 44.32,
+    "speed_delta": -9.57,
+    "vehicle_density": 36.67,
+    "density_delta": -1.73,
+    "population_density": 12737,
+    "red_light_violations": 8,
+    "weather": "Light Rain",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 30,
+    "recommended_green_seconds": 41,
+    "change_seconds": 11,
+    "change_percent": 36.7,
+    "urgency": "HIGH",
+    "reason": "Elevated traffic density needs extended clearance time",
+    "factors": {
+      "congestion_factor": 1.34,
+      "density_factor": 1.15,
+      "speed_factor": 0.83,
+      "event_boost": 1.0,
+      "weather_boost": 1.08
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 35423.4,
+    "total_co2_tonnes_per_year": 1842.01,
+    "idle_co2_kg": 8673.6,
+    "moving_co2_kg": 26749.7,
+    "potential_savings_kg_per_week": 2106.4,
+    "potential_savings_tonnes_per_year": 109.53,
+    "trees_equivalent_per_year": 5215,
+    "fuel_saved_liters_per_week": 911.9,
+    "citizens_impacted": 25474,
+    "optimization_factor_pct": 24.3
+  },
+  "interventions": [
+    {
+      "id": "VIOLATION_ENFORCEMENT",
+      "name": "Red-Light Violation Enforcement",
+      "icon": "\ud83d\udea8",
+      "severity": "HIGH",
+      "description": "Elevated red-light violation count indicates intersection compliance failure.",
+      "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
+    },
+    {
+      "id": "ROAD_MAINTENANCE",
+      "name": "Road Maintenance Inspection",
+      "icon": "\ud83d\udee3\ufe0f",
+      "severity": "MEDIUM",
+      "description": "Deteriorated road surface combined with elevated risk indicates infrastructure maintenance need.",
+      "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
+    }
+  ],
+  "executive_briefing": "Rajajipuram is in a critical safety state with 67% incident risk. Continue routine monitoring. Optimizing signals could save 2106 kg CO2/week, equivalent to 5215 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_36",
     "week": 41,
     "zone_type": "Residential",
@@ -51,6 +172,15 @@
     "location_name": "Rajajipuram",
     "city": "Lucknow",
     "latitude": 26.833,
-    "longitude": 80.89
+    "longitude": 80.89,
+    "predicted_risk_probability": 0.6675,
+    "risk_score": 66.7507,
+    "population_exposure_score": 81.73,
+    "vehicle_exposure_score": 47.1959,
+    "temporal_trend_score": 28.5948,
+    "priority_score": 60.8612,
+    "priority_rank": 8,
+    "priority_level": "HIGH",
+    "risk_prob": 0.6675
   }
 }

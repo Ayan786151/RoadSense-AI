@@ -1,8 +1,121 @@
 {
   "zone_id": "Zone_01",
+  "location_name": "Andheri",
+  "city": "Mumbai",
+  "zone_type": "Commercial_Downtown",
   "week": 8,
-  "predicted_risk_probability": 0.7269391067419152,
-  "metrics": {
+  "latitude": 19.1197,
+  "longitude": 72.8468,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.7269,
+    "predicted_risk_percentage": 72.69,
+    "risk_label": "HIGH RISK",
+    "risk_color": "#f97316",
+    "risk_delta_vs_prev_week": -3.5989,
+    "actual_incident": 1
+  },
+  "priority": {
+    "priority_score": 65.9629,
+    "priority_rank": 6,
+    "priority_level": "HIGH",
+    "components": {
+      "risk_score": 72.6939,
+      "population_exposure_score": 52.9133,
+      "vehicle_exposure_score": 82.7276,
+      "temporal_trend_score": 47.4099
+    },
+    "explanation": {
+      "priority_level": "HIGH",
+      "priority_score": 66.0,
+      "top_contributors": [
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "83/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 82.7276
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udd34",
+          "value": "73/100",
+          "impact": "HIGH",
+          "detail": "Model-estimated risk score is in the critical range",
+          "weight": 72.6939
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "53/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 37.0393
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "46/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate congestion at 46",
+          "weight": 32.298
+        }
+      ],
+      "total_factors": 4,
+      "assessment": "This zone shows significant risk elevation driven by Vehicle Density, Risk Score. Proactive intervention should be scheduled within the current planning cycle."
+    }
+  },
+  "telemetry": {
+    "congestion": 46.14,
+    "congestion_delta": -1.16,
+    "average_speed_kmh": 49.77,
+    "speed_delta": 1.75,
+    "vehicle_density": 46.87,
+    "density_delta": -1.62,
+    "population_density": 8726,
+    "red_light_violations": 8,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 40,
+    "recommended_green_seconds": 52,
+    "change_seconds": 12,
+    "change_percent": 30.0,
+    "urgency": "HIGH",
+    "reason": "Elevated traffic density needs extended clearance time",
+    "factors": {
+      "congestion_factor": 1.37,
+      "density_factor": 1.19,
+      "speed_factor": 0.81,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 48121.9,
+    "total_co2_tonnes_per_year": 2502.34,
+    "idle_co2_kg": 11937.5,
+    "moving_co2_kg": 36184.4,
+    "potential_savings_kg_per_week": 2938.3,
+    "potential_savings_tonnes_per_year": 152.79,
+    "trees_equivalent_per_year": 7275,
+    "fuel_saved_liters_per_week": 1272.0,
+    "citizens_impacted": 17452,
+    "optimization_factor_pct": 24.6
+  },
+  "interventions": [
+    {
+      "id": "VIOLATION_ENFORCEMENT",
+      "name": "Red-Light Violation Enforcement",
+      "icon": "\ud83d\udea8",
+      "severity": "HIGH",
+      "description": "Elevated red-light violation count indicates intersection compliance failure.",
+      "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
+    }
+  ],
+  "executive_briefing": "Andheri is in a critical safety state with 73% incident risk. Continue routine monitoring. Optimizing signals could save 2938 kg CO2/week, equivalent to 7275 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_01",
     "week": 8,
     "zone_type": "Commercial_Downtown",
@@ -51,6 +164,15 @@
     "location_name": "Andheri",
     "city": "Mumbai",
     "latitude": 19.1197,
-    "longitude": 72.8468
+    "longitude": 72.8468,
+    "predicted_risk_probability": 0.7269,
+    "risk_score": 72.6939,
+    "population_exposure_score": 52.9133,
+    "vehicle_exposure_score": 82.7276,
+    "temporal_trend_score": 47.4099,
+    "priority_score": 65.9629,
+    "priority_rank": 6,
+    "priority_level": "HIGH",
+    "risk_prob": 0.7269
   }
 }

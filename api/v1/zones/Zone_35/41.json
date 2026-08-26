@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_35",
+  "location_name": "Jankipuram",
+  "city": "Lucknow",
+  "zone_type": "Residential",
   "week": 41,
-  "predicted_risk_probability": 0.2309781478285718,
-  "metrics": {
+  "latitude": 26.93,
+  "longitude": 80.94,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.231,
+    "predicted_risk_percentage": 23.1,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": 3.8443,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 45.4539,
+    "priority_rank": 16,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 23.0978,
+      "population_exposure_score": 100.0,
+      "vehicle_exposure_score": 44.7879,
+      "temporal_trend_score": 15.0482
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 45.5,
+      "top_contributors": [
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "100/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 15280 residents/km\u00b2",
+          "weight": 100.0
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "23/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 23.0978
+        },
+        {
+          "factor": "Improving Trend",
+          "icon": "\ud83d\udcc9",
+          "value": "15/100",
+          "impact": "POSITIVE",
+          "detail": "Conditions are improving over past 4 weeks",
+          "weight": -15.0482
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone has moderate risk levels with contributing factors: Population Exposure. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 16.71,
+    "congestion_delta": 4.4,
+    "average_speed_kmh": 63.0,
+    "speed_delta": -3.47,
+    "vehicle_density": 35.12,
+    "density_delta": 3.11,
+    "population_density": 15280,
+    "red_light_violations": 2,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 30,
+    "recommended_green_seconds": 29,
+    "change_seconds": -1,
+    "change_percent": -3.3,
+    "urgency": "NOMINAL",
+    "reason": "Current default timing is adequate",
+    "factors": {
+      "congestion_factor": 1.13,
+      "density_factor": 1.14,
+      "speed_factor": 0.76,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 51005.9,
+    "total_co2_tonnes_per_year": 2652.31,
+    "idle_co2_kg": 3239.4,
+    "moving_co2_kg": 47766.4,
+    "potential_savings_kg_per_week": 702.0,
+    "potential_savings_tonnes_per_year": 36.5,
+    "trees_equivalent_per_year": 1738,
+    "fuel_saved_liters_per_week": 303.9,
+    "citizens_impacted": 30560,
+    "optimization_factor_pct": 21.7
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "Jankipuram is within safe operating parameters (23% risk). Continue routine monitoring. Optimizing signals could save 702 kg CO2/week, equivalent to 1738 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_35",
     "week": 41,
     "zone_type": "Residential",
@@ -51,6 +156,15 @@
     "location_name": "Jankipuram",
     "city": "Lucknow",
     "latitude": 26.93,
-    "longitude": 80.94
+    "longitude": 80.94,
+    "predicted_risk_probability": 0.231,
+    "risk_score": 23.0978,
+    "population_exposure_score": 100.0,
+    "vehicle_exposure_score": 44.7879,
+    "temporal_trend_score": 15.0482,
+    "priority_score": 45.4539,
+    "priority_rank": 16,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.231
   }
 }

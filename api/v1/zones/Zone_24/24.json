@@ -1,8 +1,105 @@
 {
   "zone_id": "Zone_24",
+  "location_name": "Nehru Place",
+  "city": "Delhi",
+  "zone_type": "Commercial_Downtown",
   "week": 24,
-  "predicted_risk_probability": 0.255536816822633,
-  "metrics": {
+  "latitude": 28.5491,
+  "longitude": 77.2519,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.2555,
+    "predicted_risk_percentage": 25.55,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": -15.3471,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 39.132,
+    "priority_rank": 28,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 25.5537,
+      "population_exposure_score": 52.2523,
+      "vehicle_exposure_score": 45.0598,
+      "temporal_trend_score": 45.57
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 39.1,
+      "top_contributors": [
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "52/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 36.5766
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "26/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 25.5537
+        }
+      ],
+      "total_factors": 2,
+      "assessment": "This zone has moderate risk levels with contributing factors: Population Exposure. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 18.89,
+    "congestion_delta": -3.88,
+    "average_speed_kmh": 64.69,
+    "speed_delta": 4.73,
+    "vehicle_density": 35.78,
+    "density_delta": -8.94,
+    "population_density": 8634,
+    "red_light_violations": 3,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 40,
+    "recommended_green_seconds": 39,
+    "change_seconds": -1,
+    "change_percent": -2.5,
+    "urgency": "NOMINAL",
+    "reason": "Current default timing is adequate",
+    "factors": {
+      "congestion_factor": 1.15,
+      "density_factor": 1.14,
+      "speed_factor": 0.76,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 52392.5,
+    "total_co2_tonnes_per_year": 2724.41,
+    "idle_co2_kg": 3730.9,
+    "moving_co2_kg": 48661.7,
+    "potential_savings_kg_per_week": 816.7,
+    "potential_savings_tonnes_per_year": 42.47,
+    "trees_equivalent_per_year": 2022,
+    "fuel_saved_liters_per_week": 353.5,
+    "citizens_impacted": 17268,
+    "optimization_factor_pct": 21.9
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "Nehru Place is within safe operating parameters (26% risk). Continue routine monitoring. Optimizing signals could save 817 kg CO2/week, equivalent to 2022 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_24",
     "week": 24,
     "zone_type": "Commercial_Downtown",
@@ -51,6 +148,15 @@
     "location_name": "Nehru Place",
     "city": "Delhi",
     "latitude": 28.5491,
-    "longitude": 77.2519
+    "longitude": 77.2519,
+    "predicted_risk_probability": 0.2555,
+    "risk_score": 25.5537,
+    "population_exposure_score": 52.2523,
+    "vehicle_exposure_score": 45.0598,
+    "temporal_trend_score": 45.57,
+    "priority_score": 39.132,
+    "priority_rank": 28,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.2555
   }
 }

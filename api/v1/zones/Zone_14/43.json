@@ -1,8 +1,105 @@
 {
   "zone_id": "Zone_14",
+  "location_name": "Connaught Place",
+  "city": "Delhi",
+  "zone_type": "University_District",
   "week": 43,
-  "predicted_risk_probability": 0.22194419055254494,
-  "metrics": {
+  "latitude": 28.6315,
+  "longitude": 77.2167,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.2219,
+    "predicted_risk_percentage": 22.19,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": -7.7154,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 44.9499,
+    "priority_rank": 20,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 22.1944,
+      "population_exposure_score": 66.0249,
+      "vehicle_exposure_score": 57.2185,
+      "temporal_trend_score": 54.1482
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 44.9,
+      "top_contributors": [
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "66/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 10551 residents/km\u00b2",
+          "weight": 66.0249
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "22/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 22.1944
+        }
+      ],
+      "total_factors": 2,
+      "assessment": "This zone has moderate risk levels with contributing factors: Population Exposure. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 18.39,
+    "congestion_delta": -7.48,
+    "average_speed_kmh": 61.64,
+    "speed_delta": 1.06,
+    "vehicle_density": 42.41,
+    "density_delta": -6.44,
+    "population_density": 10551,
+    "red_light_violations": 2,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 36,
+    "change_seconds": 1,
+    "change_percent": 2.9,
+    "urgency": "NOMINAL",
+    "reason": "Current default timing is adequate",
+    "factors": {
+      "congestion_factor": 1.15,
+      "density_factor": 1.17,
+      "speed_factor": 0.77,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 59603.1,
+    "total_co2_tonnes_per_year": 3099.36,
+    "idle_co2_kg": 4305.2,
+    "moving_co2_kg": 55298.0,
+    "potential_savings_kg_per_week": 940.2,
+    "potential_savings_tonnes_per_year": 48.89,
+    "trees_equivalent_per_year": 2328,
+    "fuel_saved_liters_per_week": 407.0,
+    "citizens_impacted": 21102,
+    "optimization_factor_pct": 21.8
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "Connaught Place is within safe operating parameters (22% risk). Continue routine monitoring. Optimizing signals could save 940 kg CO2/week, equivalent to 2328 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_14",
     "week": 43,
     "zone_type": "University_District",
@@ -51,6 +148,15 @@
     "location_name": "Connaught Place",
     "city": "Delhi",
     "latitude": 28.6315,
-    "longitude": 77.2167
+    "longitude": 77.2167,
+    "predicted_risk_probability": 0.2219,
+    "risk_score": 22.1944,
+    "population_exposure_score": 66.0249,
+    "vehicle_exposure_score": 57.2185,
+    "temporal_trend_score": 54.1482,
+    "priority_score": 44.9499,
+    "priority_rank": 20,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.2219
   }
 }

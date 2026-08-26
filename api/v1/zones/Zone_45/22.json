@@ -1,8 +1,105 @@
 {
   "zone_id": "Zone_45",
+  "location_name": "Mylapore",
+  "city": "Chennai",
+  "zone_type": "Highway_Junction",
   "week": 22,
-  "predicted_risk_probability": 0.17655944858520306,
-  "metrics": {
+  "latitude": 13.0339,
+  "longitude": 80.2676,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.1766,
+    "predicted_risk_percentage": 17.66,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": 6.0141,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 24.8481,
+    "priority_rank": 39,
+    "priority_level": "LOW",
+    "components": {
+      "risk_score": 17.6559,
+      "population_exposure_score": 11.6819,
+      "vehicle_exposure_score": 27.9971,
+      "temporal_trend_score": 61.7725
+    },
+    "explanation": {
+      "priority_level": "LOW",
+      "priority_score": 24.8,
+      "top_contributors": [
+        {
+          "factor": "Rising Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "62/100",
+          "impact": "MEDIUM",
+          "detail": "Slight upward trend in congestion over past 4 weeks",
+          "weight": 37.0635
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "18/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 17.6559
+        }
+      ],
+      "total_factors": 2,
+      "assessment": "This zone is currently within acceptable safety parameters. Routine monitoring is sufficient."
+    }
+  },
+  "telemetry": {
+    "congestion": 14.71,
+    "congestion_delta": 8.68,
+    "average_speed_kmh": 62.99,
+    "speed_delta": -3.73,
+    "vehicle_density": 21.18,
+    "density_delta": 4.14,
+    "population_density": 2987,
+    "red_light_violations": 3,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 50,
+    "recommended_green_seconds": 46,
+    "change_seconds": -4,
+    "change_percent": -8.0,
+    "urgency": "NOMINAL",
+    "reason": "Current default timing is adequate",
+    "factors": {
+      "congestion_factor": 1.12,
+      "density_factor": 1.08,
+      "speed_factor": 0.76,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 31213.6,
+    "total_co2_tonnes_per_year": 1623.11,
+    "idle_co2_kg": 1719.8,
+    "moving_co2_kg": 29493.8,
+    "potential_savings_kg_per_week": 369.3,
+    "potential_savings_tonnes_per_year": 19.2,
+    "trees_equivalent_per_year": 914,
+    "fuel_saved_liters_per_week": 159.9,
+    "citizens_impacted": 5974,
+    "optimization_factor_pct": 21.5
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "Mylapore is within safe operating parameters (18% risk). Continue routine monitoring. Optimizing signals could save 369 kg CO2/week, equivalent to 914 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_45",
     "week": 22,
     "zone_type": "Highway_Junction",
@@ -51,6 +148,15 @@
     "location_name": "Mylapore",
     "city": "Chennai",
     "latitude": 13.0339,
-    "longitude": 80.2676
+    "longitude": 80.2676,
+    "predicted_risk_probability": 0.1766,
+    "risk_score": 17.6559,
+    "population_exposure_score": 11.6819,
+    "vehicle_exposure_score": 27.9971,
+    "temporal_trend_score": 61.7725,
+    "priority_score": 24.8481,
+    "priority_rank": 39,
+    "priority_level": "LOW",
+    "risk_prob": 0.1766
   }
 }

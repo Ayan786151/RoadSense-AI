@@ -1,8 +1,121 @@
 {
   "zone_id": "Zone_32",
+  "location_name": "Mahanagar",
+  "city": "Lucknow",
+  "zone_type": "Commercial_Downtown",
   "week": 44,
-  "predicted_risk_probability": 0.25221459841932853,
-  "metrics": {
+  "latitude": 26.8755,
+  "longitude": 80.9595,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.2522,
+    "predicted_risk_percentage": 25.22,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": -16.0176,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 39.7196,
+    "priority_rank": 29,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 25.2215,
+      "population_exposure_score": 42.2947,
+      "vehicle_exposure_score": 49.6715,
+      "temporal_trend_score": 60.82
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 39.7,
+      "top_contributors": [
+        {
+          "factor": "Rising Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "61/100",
+          "impact": "MEDIUM",
+          "detail": "Slight upward trend in congestion over past 4 weeks",
+          "weight": 36.492
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "42/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 29.6063
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "25/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 25.2215
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone has moderate risk levels with contributing factors: Rising Trend, Population Exposure. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 16.76,
+    "congestion_delta": -8.32,
+    "average_speed_kmh": 60.96,
+    "speed_delta": 9.12,
+    "vehicle_density": 36.15,
+    "density_delta": 4.54,
+    "population_density": 7248,
+    "red_light_violations": 8,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 40,
+    "recommended_green_seconds": 40,
+    "change_seconds": 0,
+    "change_percent": 0.0,
+    "urgency": "NOMINAL",
+    "reason": "Current default timing is adequate",
+    "factors": {
+      "congestion_factor": 1.13,
+      "density_factor": 1.14,
+      "speed_factor": 0.77,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 50891.1,
+    "total_co2_tonnes_per_year": 2646.34,
+    "idle_co2_kg": 3344.4,
+    "moving_co2_kg": 47546.7,
+    "potential_savings_kg_per_week": 724.9,
+    "potential_savings_tonnes_per_year": 37.7,
+    "trees_equivalent_per_year": 1795,
+    "fuel_saved_liters_per_week": 313.8,
+    "citizens_impacted": 14496,
+    "optimization_factor_pct": 21.7
+  },
+  "interventions": [
+    {
+      "id": "VIOLATION_ENFORCEMENT",
+      "name": "Red-Light Violation Enforcement",
+      "icon": "\ud83d\udea8",
+      "severity": "HIGH",
+      "description": "Elevated red-light violation count indicates intersection compliance failure.",
+      "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
+    },
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "Mahanagar is within safe operating parameters (25% risk). Continue routine monitoring. Optimizing signals could save 725 kg CO2/week, equivalent to 1795 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_32",
     "week": 44,
     "zone_type": "Commercial_Downtown",
@@ -51,6 +164,15 @@
     "location_name": "Mahanagar",
     "city": "Lucknow",
     "latitude": 26.8755,
-    "longitude": 80.9595
+    "longitude": 80.9595,
+    "predicted_risk_probability": 0.2522,
+    "risk_score": 25.2215,
+    "population_exposure_score": 42.2947,
+    "vehicle_exposure_score": 49.6715,
+    "temporal_trend_score": 60.82,
+    "priority_score": 39.7196,
+    "priority_rank": 29,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.2522
   }
 }

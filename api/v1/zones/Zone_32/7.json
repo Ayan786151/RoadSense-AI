@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_32",
+  "location_name": "Mahanagar",
+  "city": "Lucknow",
+  "zone_type": "Commercial_Downtown",
   "week": 7,
-  "predicted_risk_probability": 0.32211122035999784,
-  "metrics": {
+  "latitude": 26.8755,
+  "longitude": 80.9595,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.3221,
+    "predicted_risk_percentage": 32.21,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": -1.0951,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 44.7809,
+    "priority_rank": 19,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 32.2111,
+      "population_exposure_score": 42.2947,
+      "vehicle_exposure_score": 66.5141,
+      "temporal_trend_score": 53.4665
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 44.8,
+      "top_contributors": [
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "67/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 66.5141
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "32/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 32.2111
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "42/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 29.6063
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone has moderate risk levels with contributing factors: Vehicle Density, Population Exposure. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 26.66,
+    "congestion_delta": 4.55,
+    "average_speed_kmh": 60.14,
+    "speed_delta": 1.36,
+    "vehicle_density": 40.68,
+    "density_delta": 0.79,
+    "population_density": 7248,
+    "red_light_violations": 1,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 40,
+    "recommended_green_seconds": 43,
+    "change_seconds": 3,
+    "change_percent": 7.5,
+    "urgency": "MODERATE",
+    "reason": "Slight adjustment for current conditions",
+    "factors": {
+      "congestion_factor": 1.21,
+      "density_factor": 1.16,
+      "speed_factor": 0.77,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 52493.8,
+    "total_co2_tonnes_per_year": 2729.68,
+    "idle_co2_kg": 5986.6,
+    "moving_co2_kg": 46507.2,
+    "potential_savings_kg_per_week": 1356.9,
+    "potential_savings_tonnes_per_year": 70.56,
+    "trees_equivalent_per_year": 3359,
+    "fuel_saved_liters_per_week": 587.4,
+    "citizens_impacted": 14496,
+    "optimization_factor_pct": 22.7
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "No specific risk indicators triggered.",
+      "action": "Continue routine monitoring."
+    }
+  ],
+  "executive_briefing": "Mahanagar is within safe operating parameters (32% risk). Continue routine monitoring. Optimizing signals could save 1357 kg CO2/week, equivalent to 3359 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_32",
     "week": 7,
     "zone_type": "Commercial_Downtown",
@@ -51,6 +156,15 @@
     "location_name": "Mahanagar",
     "city": "Lucknow",
     "latitude": 26.8755,
-    "longitude": 80.9595
+    "longitude": 80.9595,
+    "predicted_risk_probability": 0.3221,
+    "risk_score": 32.2111,
+    "population_exposure_score": 42.2947,
+    "vehicle_exposure_score": 66.5141,
+    "temporal_trend_score": 53.4665,
+    "priority_score": 44.7809,
+    "priority_rank": 19,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.3221
   }
 }

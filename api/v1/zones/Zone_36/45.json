@@ -1,8 +1,161 @@
 {
   "zone_id": "Zone_36",
+  "location_name": "Rajajipuram",
+  "city": "Lucknow",
+  "zone_type": "Residential",
   "week": 45,
-  "predicted_risk_probability": 0.8281018213771649,
-  "metrics": {
+  "latitude": 26.833,
+  "longitude": 80.89,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.8281,
+    "predicted_risk_percentage": 82.81,
+    "risk_label": "CRITICAL RISK",
+    "risk_color": "#ef4444",
+    "risk_delta_vs_prev_week": 25.5502,
+    "actual_incident": 1
+  },
+  "priority": {
+    "priority_score": 74.5567,
+    "priority_rank": 5,
+    "priority_level": "HIGH",
+    "components": {
+      "risk_score": 82.8102,
+      "population_exposure_score": 81.73,
+      "vehicle_exposure_score": 66.7496,
+      "temporal_trend_score": 51.0015
+    },
+    "explanation": {
+      "priority_level": "HIGH",
+      "priority_score": 74.6,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udd34",
+          "value": "83/100",
+          "impact": "HIGH",
+          "detail": "Model-estimated risk score is in the critical range",
+          "weight": 82.8102
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "82/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 12737 residents/km\u00b2",
+          "weight": 81.73
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "74/100",
+          "impact": "HIGH",
+          "detail": "Congestion index at 74 \u2014 severe traffic flow degradation",
+          "weight": 74.15
+        },
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "67/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 66.7496
+        }
+      ],
+      "total_factors": 4,
+      "assessment": "This zone shows significant risk elevation driven by Risk Score, Population Exposure. Proactive intervention should be scheduled within the current planning cycle."
+    }
+  },
+  "telemetry": {
+    "congestion": 74.15,
+    "congestion_delta": 28.35,
+    "average_speed_kmh": 32.14,
+    "speed_delta": -17.82,
+    "vehicle_density": 49.75,
+    "density_delta": 0.95,
+    "population_density": 12737,
+    "red_light_violations": 8,
+    "weather": "Light Rain",
+    "special_event": 1
+  },
+  "signal_optimization": {
+    "base_green_seconds": 30,
+    "recommended_green_seconds": 62,
+    "change_seconds": 32,
+    "change_percent": 106.7,
+    "urgency": "CRITICAL",
+    "reason": "Severe congestion requires significantly extended green phase",
+    "factors": {
+      "congestion_factor": 1.59,
+      "density_factor": 1.2,
+      "speed_factor": 0.88,
+      "event_boost": 1.15,
+      "weather_boost": 1.08
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 32267.0,
+    "total_co2_tonnes_per_year": 1677.89,
+    "idle_co2_kg": 20363.1,
+    "moving_co2_kg": 11904.0,
+    "potential_savings_kg_per_week": 5582.5,
+    "potential_savings_tonnes_per_year": 290.29,
+    "trees_equivalent_per_year": 13823,
+    "fuel_saved_liters_per_week": 2416.7,
+    "citizens_impacted": 25474,
+    "optimization_factor_pct": 27.4
+  },
+  "interventions": [
+    {
+      "id": "SIGNAL_OPTIMIZATION",
+      "name": "Traffic Signal Optimization",
+      "icon": "\ud83d\udea6",
+      "severity": "HIGH",
+      "description": "High congestion with low throughput speed indicates signal timing inefficiency.",
+      "action": "Review and optimize signal timing at major intersections in this zone."
+    },
+    {
+      "id": "VIOLATION_ENFORCEMENT",
+      "name": "Red-Light Violation Enforcement",
+      "icon": "\ud83d\udea8",
+      "severity": "HIGH",
+      "description": "Elevated red-light violation count indicates intersection compliance failure.",
+      "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
+    },
+    {
+      "id": "PEDESTRIAN_SAFETY",
+      "name": "Pedestrian Crossing Intervention",
+      "icon": "\ud83d\udeb6",
+      "severity": "MEDIUM",
+      "description": "High population density zone with significant traffic congestion creates pedestrian exposure risk.",
+      "action": "Install protected pedestrian crossings, improve sidewalk infrastructure, and add pedestrian countdown signals."
+    },
+    {
+      "id": "ROAD_MAINTENANCE",
+      "name": "Road Maintenance Inspection",
+      "icon": "\ud83d\udee3\ufe0f",
+      "severity": "MEDIUM",
+      "description": "Deteriorated road surface combined with elevated risk indicates infrastructure maintenance need.",
+      "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
+    },
+    {
+      "id": "EVENT_TRAFFIC_PLAN",
+      "name": "Special Event Traffic Plan",
+      "icon": "\ud83c\udfaa",
+      "severity": "MEDIUM",
+      "description": "Active special event generating additional traffic demand.",
+      "action": "Activate event traffic management plan. Deploy traffic marshals and temporary signage."
+    },
+    {
+      "id": "MONITORING_UPGRADE",
+      "name": "Enhanced Monitoring & CCTV Coverage",
+      "icon": "\ud83d\udcf9",
+      "severity": "MEDIUM",
+      "description": "High-risk zone with significant population exposure warrants improved surveillance.",
+      "action": "Install additional CCTV cameras and integrate with traffic management center for real-time monitoring."
+    }
+  ],
+  "executive_briefing": "Rajajipuram is in a critical safety state with 83% incident risk. Signal optimization recommended \u2014 congestion at 74/100 with speeds averaging 32 km/h. Optimizing signals could save 5582 kg CO2/week, equivalent to 13823 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_36",
     "week": 45,
     "zone_type": "Residential",
@@ -51,6 +204,15 @@
     "location_name": "Rajajipuram",
     "city": "Lucknow",
     "latitude": 26.833,
-    "longitude": 80.89
+    "longitude": 80.89,
+    "predicted_risk_probability": 0.8281,
+    "risk_score": 82.8102,
+    "population_exposure_score": 81.73,
+    "vehicle_exposure_score": 66.7496,
+    "temporal_trend_score": 51.0015,
+    "priority_score": 74.5567,
+    "priority_rank": 5,
+    "priority_level": "HIGH",
+    "risk_prob": 0.8281
   }
 }

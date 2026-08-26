@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_12",
+  "location_name": "Malad",
+  "city": "Mumbai",
+  "zone_type": "Commercial_Downtown",
   "week": 49,
-  "predicted_risk_probability": 0.30253442004192893,
-  "metrics": {
+  "latitude": 19.1874,
+  "longitude": 72.8484,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.3025,
+    "predicted_risk_percentage": 30.25,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": -0.5173,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 39.8175,
+    "priority_rank": 28,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 30.2534,
+      "population_exposure_score": 52.9061,
+      "vehicle_exposure_score": 24.3975,
+      "temporal_trend_score": 64.0676
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 39.8,
+      "top_contributors": [
+        {
+          "factor": "Rising Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "64/100",
+          "impact": "MEDIUM",
+          "detail": "Slight upward trend in congestion over past 4 weeks",
+          "weight": 38.4406
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "53/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 37.0343
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "30/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 30.2534
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone has moderate risk levels with contributing factors: Rising Trend, Population Exposure. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 21.45,
+    "congestion_delta": 1.08,
+    "average_speed_kmh": 50.65,
+    "speed_delta": 1.96,
+    "vehicle_density": 22.44,
+    "density_delta": -0.3,
+    "population_density": 8725,
+    "red_light_violations": 7,
+    "weather": "Light Rain",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 40,
+    "recommended_green_seconds": 44,
+    "change_seconds": 4,
+    "change_percent": 10.0,
+    "urgency": "MODERATE",
+    "reason": "Slight adjustment for current conditions",
+    "factors": {
+      "congestion_factor": 1.17,
+      "density_factor": 1.09,
+      "speed_factor": 0.81,
+      "event_boost": 1.0,
+      "weather_boost": 1.08
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 25798.1,
+    "total_co2_tonnes_per_year": 1341.5,
+    "idle_co2_kg": 2657.0,
+    "moving_co2_kg": 23141.1,
+    "potential_savings_kg_per_week": 588.4,
+    "potential_savings_tonnes_per_year": 30.6,
+    "trees_equivalent_per_year": 1456,
+    "fuel_saved_liters_per_week": 254.7,
+    "citizens_impacted": 17450,
+    "optimization_factor_pct": 22.1
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "No specific risk indicators triggered.",
+      "action": "Continue routine monitoring."
+    }
+  ],
+  "executive_briefing": "Malad is within safe operating parameters (30% risk). Continue routine monitoring. Optimizing signals could save 588 kg CO2/week, equivalent to 1456 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_12",
     "week": 49,
     "zone_type": "Commercial_Downtown",
@@ -51,6 +156,15 @@
     "location_name": "Malad",
     "city": "Mumbai",
     "latitude": 19.1874,
-    "longitude": 72.8484
+    "longitude": 72.8484,
+    "predicted_risk_probability": 0.3025,
+    "risk_score": 30.2534,
+    "population_exposure_score": 52.9061,
+    "vehicle_exposure_score": 24.3975,
+    "temporal_trend_score": 64.0676,
+    "priority_score": 39.8175,
+    "priority_rank": 28,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.3025
   }
 }

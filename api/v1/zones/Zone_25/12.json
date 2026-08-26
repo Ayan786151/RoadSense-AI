@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_25",
+  "location_name": "Okhla",
+  "city": "Delhi",
+  "zone_type": "Residential",
   "week": 12,
-  "predicted_risk_probability": 0.3981440901250898,
-  "metrics": {
+  "latitude": 28.5355,
+  "longitude": 77.264,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.3981,
+    "predicted_risk_percentage": 39.81,
+    "risk_label": "MODERATE RISK",
+    "risk_color": "#eab308",
+    "risk_delta_vs_prev_week": 12.2144,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 46.15,
+    "priority_rank": 21,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 39.8144,
+      "population_exposure_score": 67.7419,
+      "vehicle_exposure_score": 53.9231,
+      "temporal_trend_score": 16.6943
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 46.2,
+      "top_contributors": [
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "68/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 10790 residents/km\u00b2",
+          "weight": 67.7419
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "40/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 39.8144
+        },
+        {
+          "factor": "Improving Trend",
+          "icon": "\ud83d\udcc9",
+          "value": "17/100",
+          "impact": "POSITIVE",
+          "detail": "Conditions are improving over past 4 weeks",
+          "weight": -16.6943
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone has moderate risk levels with contributing factors: Population Exposure. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 31.17,
+    "congestion_delta": 7.82,
+    "average_speed_kmh": 50.12,
+    "speed_delta": -7.93,
+    "vehicle_density": 34.5,
+    "density_delta": 0.26,
+    "population_density": 10790,
+    "red_light_violations": 4,
+    "weather": "Light Rain",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 30,
+    "recommended_green_seconds": 37,
+    "change_seconds": 7,
+    "change_percent": 23.3,
+    "urgency": "HIGH",
+    "reason": "Elevated traffic density needs extended clearance time",
+    "factors": {
+      "congestion_factor": 1.25,
+      "density_factor": 1.14,
+      "speed_factor": 0.81,
+      "event_boost": 1.0,
+      "weather_boost": 1.08
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 36785.1,
+    "total_co2_tonnes_per_year": 1912.83,
+    "idle_co2_kg": 5936.0,
+    "moving_co2_kg": 30849.1,
+    "potential_savings_kg_per_week": 1372.2,
+    "potential_savings_tonnes_per_year": 71.36,
+    "trees_equivalent_per_year": 3397,
+    "fuel_saved_liters_per_week": 594.0,
+    "citizens_impacted": 21580,
+    "optimization_factor_pct": 23.1
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "No specific risk indicators triggered.",
+      "action": "Continue routine monitoring."
+    }
+  ],
+  "executive_briefing": "Okhla shows elevated risk at 40%. Continue routine monitoring. Optimizing signals could save 1372 kg CO2/week, equivalent to 3397 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_25",
     "week": 12,
     "zone_type": "Residential",
@@ -51,6 +156,15 @@
     "location_name": "Okhla",
     "city": "Delhi",
     "latitude": 28.5355,
-    "longitude": 77.264
+    "longitude": 77.264,
+    "predicted_risk_probability": 0.3981,
+    "risk_score": 39.8144,
+    "population_exposure_score": 67.7419,
+    "vehicle_exposure_score": 53.9231,
+    "temporal_trend_score": 16.6943,
+    "priority_score": 46.15,
+    "priority_rank": 21,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.3981
   }
 }

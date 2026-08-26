@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_21",
+  "location_name": "Janakpuri",
+  "city": "Delhi",
+  "zone_type": "Residential",
   "week": 2,
-  "predicted_risk_probability": null,
-  "metrics": {
+  "latitude": 28.6219,
+  "longitude": 77.0878,
+  "risk_analysis": {
+    "predicted_risk_probability": null,
+    "predicted_risk_percentage": null,
+    "risk_label": "BASELINE WARMUP",
+    "risk_color": "#71717a",
+    "risk_delta_vs_prev_week": null,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 40.3792,
+    "priority_rank": 9,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 0.0,
+      "population_exposure_score": 73.8846,
+      "vehicle_exposure_score": 72.0401,
+      "temporal_trend_score": 50.0
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 40.4,
+      "top_contributors": [
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "74/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 11645 residents/km\u00b2",
+          "weight": 73.8846
+        },
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "72/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 72.0401
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "0/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 0.0
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone has moderate risk levels with contributing factors: Population Exposure, Vehicle Density. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 27.35,
+    "congestion_delta": 1.69,
+    "average_speed_kmh": 55.53,
+    "speed_delta": -2.84,
+    "vehicle_density": 39.55,
+    "density_delta": 0.48,
+    "population_density": 11645,
+    "red_light_violations": 2,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 30,
+    "recommended_green_seconds": 33,
+    "change_seconds": 3,
+    "change_percent": 10.0,
+    "urgency": "MODERATE",
+    "reason": "Slight adjustment for current conditions",
+    "factors": {
+      "congestion_factor": 1.22,
+      "density_factor": 1.16,
+      "speed_factor": 0.79,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 47327.5,
+    "total_co2_tonnes_per_year": 2461.03,
+    "idle_co2_kg": 5970.9,
+    "moving_co2_kg": 41356.6,
+    "potential_savings_kg_per_week": 1357.5,
+    "potential_savings_tonnes_per_year": 70.59,
+    "trees_equivalent_per_year": 3361,
+    "fuel_saved_liters_per_week": 587.7,
+    "citizens_impacted": 23290,
+    "optimization_factor_pct": 22.7
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "Janakpuri is within safe operating parameters (0% risk). Continue routine monitoring. Optimizing signals could save 1358 kg CO2/week, equivalent to 3361 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_21",
     "week": 2,
     "zone_type": "Residential",
@@ -51,6 +156,15 @@
     "location_name": "Janakpuri",
     "city": "Delhi",
     "latitude": 28.6219,
-    "longitude": 77.0878
+    "longitude": 77.0878,
+    "predicted_risk_probability": null,
+    "risk_score": 0.0,
+    "population_exposure_score": 73.8846,
+    "vehicle_exposure_score": 72.0401,
+    "temporal_trend_score": 50.0,
+    "priority_score": 40.3792,
+    "priority_rank": 9,
+    "priority_level": "MODERATE",
+    "risk_prob": null
   }
 }

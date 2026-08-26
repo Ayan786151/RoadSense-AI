@@ -1,8 +1,137 @@
 {
   "zone_id": "Zone_14",
+  "location_name": "Connaught Place",
+  "city": "Delhi",
+  "zone_type": "University_District",
   "week": 19,
-  "predicted_risk_probability": 0.5195983768140012,
-  "metrics": {
+  "latitude": 28.6315,
+  "longitude": 77.2167,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.5196,
+    "predicted_risk_percentage": 51.96,
+    "risk_label": "MODERATE RISK",
+    "risk_color": "#eab308",
+    "risk_delta_vs_prev_week": -2.248,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 62.1157,
+    "priority_rank": 10,
+    "priority_level": "HIGH",
+    "components": {
+      "risk_score": 51.9598,
+      "population_exposure_score": 66.0249,
+      "vehicle_exposure_score": 92.4131,
+      "temporal_trend_score": 42.286
+    },
+    "explanation": {
+      "priority_level": "HIGH",
+      "priority_score": 62.1,
+      "top_contributors": [
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "92/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 92.4131
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "66/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 10551 residents/km\u00b2",
+          "weight": 66.0249
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "52/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 51.9598
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "52/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate congestion at 52",
+          "weight": 36.596
+        }
+      ],
+      "total_factors": 4,
+      "assessment": "This zone shows significant risk elevation driven by Vehicle Density, Population Exposure. Proactive intervention should be scheduled within the current planning cycle."
+    }
+  },
+  "telemetry": {
+    "congestion": 52.28,
+    "congestion_delta": 6.55,
+    "average_speed_kmh": 48.47,
+    "speed_delta": -1.39,
+    "vehicle_density": 74.18,
+    "density_delta": 6.07,
+    "population_density": 10551,
+    "red_light_violations": 8,
+    "weather": "Normal",
+    "special_event": 1
+  },
+  "signal_optimization": {
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 60,
+    "change_seconds": 25,
+    "change_percent": 71.4,
+    "urgency": "CRITICAL",
+    "reason": "Severe congestion requires significantly extended green phase",
+    "factors": {
+      "congestion_factor": 1.42,
+      "density_factor": 1.3,
+      "speed_factor": 0.82,
+      "event_boost": 1.15,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 70821.6,
+    "total_co2_tonnes_per_year": 3682.72,
+    "idle_co2_kg": 21407.3,
+    "moving_co2_kg": 49414.3,
+    "potential_savings_kg_per_week": 5400.6,
+    "potential_savings_tonnes_per_year": 280.83,
+    "trees_equivalent_per_year": 13372,
+    "fuel_saved_liters_per_week": 2337.9,
+    "citizens_impacted": 21102,
+    "optimization_factor_pct": 25.2
+  },
+  "interventions": [
+    {
+      "id": "VIOLATION_ENFORCEMENT",
+      "name": "Red-Light Violation Enforcement",
+      "icon": "\ud83d\udea8",
+      "severity": "HIGH",
+      "description": "Elevated red-light violation count indicates intersection compliance failure.",
+      "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
+    },
+    {
+      "id": "PEDESTRIAN_SAFETY",
+      "name": "Pedestrian Crossing Intervention",
+      "icon": "\ud83d\udeb6",
+      "severity": "MEDIUM",
+      "description": "High population density zone with significant traffic congestion creates pedestrian exposure risk.",
+      "action": "Install protected pedestrian crossings, improve sidewalk infrastructure, and add pedestrian countdown signals."
+    },
+    {
+      "id": "EVENT_TRAFFIC_PLAN",
+      "name": "Special Event Traffic Plan",
+      "icon": "\ud83c\udfaa",
+      "severity": "MEDIUM",
+      "description": "Active special event generating additional traffic demand.",
+      "action": "Activate event traffic management plan. Deploy traffic marshals and temporary signage."
+    }
+  ],
+  "executive_briefing": "Connaught Place shows elevated risk at 52%. Continue routine monitoring. Optimizing signals could save 5401 kg CO2/week, equivalent to 13372 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_14",
     "week": 19,
     "zone_type": "University_District",
@@ -51,6 +180,15 @@
     "location_name": "Connaught Place",
     "city": "Delhi",
     "latitude": 28.6315,
-    "longitude": 77.2167
+    "longitude": 77.2167,
+    "predicted_risk_probability": 0.5196,
+    "risk_score": 51.9598,
+    "population_exposure_score": 66.0249,
+    "vehicle_exposure_score": 92.4131,
+    "temporal_trend_score": 42.286,
+    "priority_score": 62.1157,
+    "priority_rank": 10,
+    "priority_level": "HIGH",
+    "risk_prob": 0.5196
   }
 }

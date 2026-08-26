@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_46",
+  "location_name": "Nungambakkam",
+  "city": "Chennai",
+  "zone_type": "University_District",
   "week": 17,
-  "predicted_risk_probability": 0.4334008576983029,
-  "metrics": {
+  "latitude": 13.0569,
+  "longitude": 80.2425,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.4334,
+    "predicted_risk_percentage": 43.34,
+    "risk_label": "MODERATE RISK",
+    "risk_color": "#eab308",
+    "risk_delta_vs_prev_week": 6.7743,
+    "actual_incident": 1
+  },
+  "priority": {
+    "priority_score": 41.2631,
+    "priority_rank": 26,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 43.3401,
+      "population_exposure_score": 48.0494,
+      "vehicle_exposure_score": 46.7046,
+      "temporal_trend_score": 17.1587
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 41.3,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "43/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 43.3401
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "48/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 33.6346
+        },
+        {
+          "factor": "Improving Trend",
+          "icon": "\ud83d\udcc9",
+          "value": "17/100",
+          "impact": "POSITIVE",
+          "detail": "Conditions are improving over past 4 weeks",
+          "weight": -17.1587
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone has moderate risk levels with contributing factors: Risk Score, Population Exposure. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 33.97,
+    "congestion_delta": 8.99,
+    "average_speed_kmh": 58.86,
+    "speed_delta": -1.26,
+    "vehicle_density": 32.8,
+    "density_delta": 3.12,
+    "population_density": 8049,
+    "red_light_violations": 3,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 39,
+    "change_seconds": 4,
+    "change_percent": 11.4,
+    "urgency": "MODERATE",
+    "reason": "Slight adjustment for current conditions",
+    "factors": {
+      "congestion_factor": 1.27,
+      "density_factor": 1.13,
+      "speed_factor": 0.78,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 39192.8,
+    "total_co2_tonnes_per_year": 2038.02,
+    "idle_co2_kg": 6150.5,
+    "moving_co2_kg": 33042.3,
+    "potential_savings_kg_per_week": 1439.0,
+    "potential_savings_tonnes_per_year": 74.83,
+    "trees_equivalent_per_year": 3563,
+    "fuel_saved_liters_per_week": 623.0,
+    "citizens_impacted": 16098,
+    "optimization_factor_pct": 23.4
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "No specific risk indicators triggered.",
+      "action": "Continue routine monitoring."
+    }
+  ],
+  "executive_briefing": "Nungambakkam shows elevated risk at 43%. Continue routine monitoring. Optimizing signals could save 1439 kg CO2/week, equivalent to 3563 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_46",
     "week": 17,
     "zone_type": "University_District",
@@ -51,6 +156,15 @@
     "location_name": "Nungambakkam",
     "city": "Chennai",
     "latitude": 13.0569,
-    "longitude": 80.2425
+    "longitude": 80.2425,
+    "predicted_risk_probability": 0.4334,
+    "risk_score": 43.3401,
+    "population_exposure_score": 48.0494,
+    "vehicle_exposure_score": 46.7046,
+    "temporal_trend_score": 17.1587,
+    "priority_score": 41.2631,
+    "priority_rank": 26,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.4334
   }
 }

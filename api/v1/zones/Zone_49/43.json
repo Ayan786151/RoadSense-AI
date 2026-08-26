@@ -1,8 +1,129 @@
 {
   "zone_id": "Zone_49",
+  "location_name": "Sholinganallur",
+  "city": "Chennai",
+  "zone_type": "University_District",
   "week": 43,
-  "predicted_risk_probability": 0.664686232660897,
-  "metrics": {
+  "latitude": 12.901,
+  "longitude": 80.2279,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.6647,
+    "predicted_risk_percentage": 66.47,
+    "risk_label": "HIGH RISK",
+    "risk_color": "#f97316",
+    "risk_delta_vs_prev_week": -2.4541,
+    "actual_incident": 1
+  },
+  "priority": {
+    "priority_score": 65.5655,
+    "priority_rank": 7,
+    "priority_level": "HIGH",
+    "components": {
+      "risk_score": 66.4686,
+      "population_exposure_score": 73.1231,
+      "vehicle_exposure_score": 67.8036,
+      "temporal_trend_score": 47.5773
+    },
+    "explanation": {
+      "priority_level": "HIGH",
+      "priority_score": 65.6,
+      "top_contributors": [
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "73/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 11539 residents/km\u00b2",
+          "weight": 73.1231
+        },
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "68/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 67.8036
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "66/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 66.4686
+        },
+        {
+          "factor": "Violation Count",
+          "icon": "\ud83d\udea8",
+          "value": "10",
+          "impact": "HIGH",
+          "detail": "10 red-light violations recorded \u2014 intersection safety concern",
+          "weight": 50
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "46/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate congestion at 46",
+          "weight": 31.969
+        }
+      ],
+      "total_factors": 5,
+      "assessment": "This zone shows significant risk elevation driven by Population Exposure, Vehicle Density. Proactive intervention should be scheduled within the current planning cycle."
+    }
+  },
+  "telemetry": {
+    "congestion": 45.67,
+    "congestion_delta": -6.94,
+    "average_speed_kmh": 52.55,
+    "speed_delta": 4.58,
+    "vehicle_density": 49.61,
+    "density_delta": 0.2,
+    "population_density": 11539,
+    "red_light_violations": 10,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 45,
+    "change_seconds": 10,
+    "change_percent": 28.6,
+    "urgency": "HIGH",
+    "reason": "Elevated traffic density needs extended clearance time",
+    "factors": {
+      "congestion_factor": 1.37,
+      "density_factor": 1.2,
+      "speed_factor": 0.8,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 49219.3,
+    "total_co2_tonnes_per_year": 2559.41,
+    "idle_co2_kg": 12506.6,
+    "moving_co2_kg": 36712.7,
+    "potential_savings_kg_per_week": 3072.5,
+    "potential_savings_tonnes_per_year": 159.77,
+    "trees_equivalent_per_year": 7608,
+    "fuel_saved_liters_per_week": 1330.1,
+    "citizens_impacted": 23078,
+    "optimization_factor_pct": 24.6
+  },
+  "interventions": [
+    {
+      "id": "VIOLATION_ENFORCEMENT",
+      "name": "Red-Light Violation Enforcement",
+      "icon": "\ud83d\udea8",
+      "severity": "HIGH",
+      "description": "Elevated red-light violation count indicates intersection compliance failure.",
+      "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
+    }
+  ],
+  "executive_briefing": "Sholinganallur is in a critical safety state with 66% incident risk. Enforcement focus needed \u2014 10 red-light violations recorded. Optimizing signals could save 3072 kg CO2/week, equivalent to 7608 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_49",
     "week": 43,
     "zone_type": "University_District",
@@ -51,6 +172,15 @@
     "location_name": "Sholinganallur",
     "city": "Chennai",
     "latitude": 12.901,
-    "longitude": 80.2279
+    "longitude": 80.2279,
+    "predicted_risk_probability": 0.6647,
+    "risk_score": 66.4686,
+    "population_exposure_score": 73.1231,
+    "vehicle_exposure_score": 67.8036,
+    "temporal_trend_score": 47.5773,
+    "priority_score": 65.5655,
+    "priority_rank": 7,
+    "priority_level": "HIGH",
+    "risk_prob": 0.6647
   }
 }

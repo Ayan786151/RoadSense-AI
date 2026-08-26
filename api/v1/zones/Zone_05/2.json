@@ -1,8 +1,121 @@
 {
   "zone_id": "Zone_05",
+  "location_name": "Powai",
+  "city": "Mumbai",
+  "zone_type": "Commercial_Downtown",
   "week": 2,
-  "predicted_risk_probability": null,
-  "metrics": {
+  "latitude": 19.1176,
+  "longitude": 72.906,
+  "risk_analysis": {
+    "predicted_risk_probability": null,
+    "predicted_risk_percentage": null,
+    "risk_label": "BASELINE WARMUP",
+    "risk_color": "#71717a",
+    "risk_delta_vs_prev_week": null,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 31.0022,
+    "priority_rank": 24,
+    "priority_level": "LOW",
+    "components": {
+      "risk_score": 0.0,
+      "population_exposure_score": 50.1616,
+      "vehicle_exposure_score": 54.8087,
+      "temporal_trend_score": 50.0
+    },
+    "explanation": {
+      "priority_level": "LOW",
+      "priority_score": 31.0,
+      "top_contributors": [
+        {
+          "factor": "Violation Count",
+          "icon": "\ud83d\udea8",
+          "value": "10",
+          "impact": "HIGH",
+          "detail": "10 red-light violations recorded \u2014 intersection safety concern",
+          "weight": 50
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "50/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 35.1132
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "0/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 0.0
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone is currently within acceptable safety parameters. Routine monitoring is sufficient."
+    }
+  },
+  "telemetry": {
+    "congestion": 21.35,
+    "congestion_delta": 2.68,
+    "average_speed_kmh": 59.25,
+    "speed_delta": -3.78,
+    "vehicle_density": 30.09,
+    "density_delta": 1.71,
+    "population_density": 8343,
+    "red_light_violations": 10,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 40,
+    "recommended_green_seconds": 40,
+    "change_seconds": 0,
+    "change_percent": 0.0,
+    "urgency": "NOMINAL",
+    "reason": "Current default timing is adequate",
+    "factors": {
+      "congestion_factor": 1.17,
+      "density_factor": 1.12,
+      "speed_factor": 0.78,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 39891.1,
+    "total_co2_tonnes_per_year": 2074.34,
+    "idle_co2_kg": 3546.2,
+    "moving_co2_kg": 36345.0,
+    "potential_savings_kg_per_week": 784.9,
+    "potential_savings_tonnes_per_year": 40.82,
+    "trees_equivalent_per_year": 1943,
+    "fuel_saved_liters_per_week": 339.8,
+    "citizens_impacted": 16686,
+    "optimization_factor_pct": 22.1
+  },
+  "interventions": [
+    {
+      "id": "VIOLATION_ENFORCEMENT",
+      "name": "Red-Light Violation Enforcement",
+      "icon": "\ud83d\udea8",
+      "severity": "HIGH",
+      "description": "Elevated red-light violation count indicates intersection compliance failure.",
+      "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
+    },
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "Powai is within safe operating parameters (0% risk). Enforcement focus needed \u2014 10 red-light violations recorded. Optimizing signals could save 785 kg CO2/week, equivalent to 1943 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_05",
     "week": 2,
     "zone_type": "Commercial_Downtown",
@@ -51,6 +164,15 @@
     "location_name": "Powai",
     "city": "Mumbai",
     "latitude": 19.1176,
-    "longitude": 72.906
+    "longitude": 72.906,
+    "predicted_risk_probability": null,
+    "risk_score": 0.0,
+    "population_exposure_score": 50.1616,
+    "vehicle_exposure_score": 54.8087,
+    "temporal_trend_score": 50.0,
+    "priority_score": 31.0022,
+    "priority_rank": 24,
+    "priority_level": "LOW",
+    "risk_prob": null
   }
 }

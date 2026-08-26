@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_21",
+  "location_name": "Janakpuri",
+  "city": "Delhi",
+  "zone_type": "Residential",
   "week": 6,
-  "predicted_risk_probability": 0.3051842929810203,
-  "metrics": {
+  "latitude": 28.6219,
+  "longitude": 77.0878,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.3052,
+    "predicted_risk_percentage": 30.52,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": -1.046,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 49.7141,
+    "priority_rank": 13,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 30.5184,
+      "population_exposure_score": 73.8846,
+      "vehicle_exposure_score": 61.8544,
+      "temporal_trend_score": 44.4314
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 49.7,
+      "top_contributors": [
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "74/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 11645 residents/km\u00b2",
+          "weight": 73.8846
+        },
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "62/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 61.8544
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "31/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 30.5184
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone has moderate risk levels with contributing factors: Population Exposure, Vehicle Density. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 22.55,
+    "congestion_delta": -2.3,
+    "average_speed_kmh": 59.94,
+    "speed_delta": -1.25,
+    "vehicle_density": 39.16,
+    "density_delta": -0.12,
+    "population_density": 11645,
+    "red_light_violations": 5,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 30,
+    "recommended_green_seconds": 31,
+    "change_seconds": 1,
+    "change_percent": 3.3,
+    "urgency": "NOMINAL",
+    "reason": "Current default timing is adequate",
+    "factors": {
+      "congestion_factor": 1.18,
+      "density_factor": 1.16,
+      "speed_factor": 0.78,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 51995.6,
+    "total_co2_tonnes_per_year": 2703.77,
+    "idle_co2_kg": 4874.5,
+    "moving_co2_kg": 47121.1,
+    "potential_savings_kg_per_week": 1084.8,
+    "potential_savings_tonnes_per_year": 56.41,
+    "trees_equivalent_per_year": 2686,
+    "fuel_saved_liters_per_week": 469.6,
+    "citizens_impacted": 23290,
+    "optimization_factor_pct": 22.3
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "No specific risk indicators triggered.",
+      "action": "Continue routine monitoring."
+    }
+  ],
+  "executive_briefing": "Janakpuri is within safe operating parameters (31% risk). Continue routine monitoring. Optimizing signals could save 1085 kg CO2/week, equivalent to 2686 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_21",
     "week": 6,
     "zone_type": "Residential",
@@ -51,6 +156,15 @@
     "location_name": "Janakpuri",
     "city": "Delhi",
     "latitude": 28.6219,
-    "longitude": 77.0878
+    "longitude": 77.0878,
+    "predicted_risk_probability": 0.3052,
+    "risk_score": 30.5184,
+    "population_exposure_score": 73.8846,
+    "vehicle_exposure_score": 61.8544,
+    "temporal_trend_score": 44.4314,
+    "priority_score": 49.7141,
+    "priority_rank": 13,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.3052
   }
 }

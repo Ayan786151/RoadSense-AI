@@ -1,8 +1,129 @@
 {
   "zone_id": "Zone_34",
+  "location_name": "Chinhat",
+  "city": "Lucknow",
+  "zone_type": "Industrial_Corridor",
   "week": 50,
-  "predicted_risk_probability": 0.8609507439294778,
-  "metrics": {
+  "latitude": 26.884,
+  "longitude": 81.05,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.861,
+    "predicted_risk_percentage": 86.1,
+    "risk_label": "CRITICAL RISK",
+    "risk_color": "#ef4444",
+    "risk_delta_vs_prev_week": 5.769,
+    "actual_incident": 1
+  },
+  "priority": {
+    "priority_score": 60.9626,
+    "priority_rank": 9,
+    "priority_level": "HIGH",
+    "components": {
+      "risk_score": 86.0951,
+      "population_exposure_score": 14.0743,
+      "vehicle_exposure_score": 55.826,
+      "temporal_trend_score": 78.9386
+    },
+    "explanation": {
+      "priority_level": "HIGH",
+      "priority_score": 61.0,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udd34",
+          "value": "86/100",
+          "impact": "HIGH",
+          "detail": "Model-estimated risk score is in the critical range",
+          "weight": 86.0951
+        },
+        {
+          "factor": "Worsening Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "79/100",
+          "impact": "HIGH",
+          "detail": "4-week congestion trend is actively worsening \u2014 conditions deteriorating",
+          "weight": 78.9386
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "68/100",
+          "impact": "HIGH",
+          "detail": "Congestion index at 68 \u2014 severe traffic flow degradation",
+          "weight": 67.57
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone shows significant risk elevation driven by Risk Score, Worsening Trend. Proactive intervention should be scheduled within the current planning cycle."
+    }
+  },
+  "telemetry": {
+    "congestion": 67.57,
+    "congestion_delta": -1.14,
+    "average_speed_kmh": 34.58,
+    "speed_delta": 0.12,
+    "vehicle_density": 41.97,
+    "density_delta": 1.09,
+    "population_density": 3320,
+    "red_light_violations": 7,
+    "weather": "Light Rain",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 45,
+    "recommended_green_seconds": 76,
+    "change_seconds": 31,
+    "change_percent": 68.9,
+    "urgency": "CRITICAL",
+    "reason": "Severe congestion requires significantly extended green phase",
+    "factors": {
+      "congestion_factor": 1.54,
+      "density_factor": 1.17,
+      "speed_factor": 0.87,
+      "event_boost": 1.0,
+      "weather_boost": 1.08
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 29209.4,
+    "total_co2_tonnes_per_year": 1518.89,
+    "idle_co2_kg": 15654.2,
+    "moving_co2_kg": 13555.1,
+    "potential_savings_kg_per_week": 4188.6,
+    "potential_savings_tonnes_per_year": 217.81,
+    "trees_equivalent_per_year": 10371,
+    "fuel_saved_liters_per_week": 1813.2,
+    "citizens_impacted": 6640,
+    "optimization_factor_pct": 26.8
+  },
+  "interventions": [
+    {
+      "id": "TREND_URGENT_INSPECTION",
+      "name": "Urgent Safety Inspection",
+      "icon": "\u26a0\ufe0f",
+      "severity": "CRITICAL",
+      "description": "Risk is actively worsening (high temporal trend) with already elevated risk score.",
+      "action": "Deploy immediate field inspection team. Identify root cause of deteriorating safety conditions."
+    },
+    {
+      "id": "SIGNAL_OPTIMIZATION",
+      "name": "Traffic Signal Optimization",
+      "icon": "\ud83d\udea6",
+      "severity": "HIGH",
+      "description": "High congestion with low throughput speed indicates signal timing inefficiency.",
+      "action": "Review and optimize signal timing at major intersections in this zone."
+    },
+    {
+      "id": "ROAD_MAINTENANCE",
+      "name": "Road Maintenance Inspection",
+      "icon": "\ud83d\udee3\ufe0f",
+      "severity": "MEDIUM",
+      "description": "Deteriorated road surface combined with elevated risk indicates infrastructure maintenance need.",
+      "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
+    }
+  ],
+  "executive_briefing": "Chinhat is in a critical safety state with 86% incident risk. Signal optimization recommended \u2014 congestion at 68/100 with speeds averaging 35 km/h. Optimizing signals could save 4189 kg CO2/week, equivalent to 10371 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_34",
     "week": 50,
     "zone_type": "Industrial_Corridor",
@@ -51,6 +172,15 @@
     "location_name": "Chinhat",
     "city": "Lucknow",
     "latitude": 26.884,
-    "longitude": 81.05
+    "longitude": 81.05,
+    "predicted_risk_probability": 0.861,
+    "risk_score": 86.0951,
+    "population_exposure_score": 14.0743,
+    "vehicle_exposure_score": 55.826,
+    "temporal_trend_score": 78.9386,
+    "priority_score": 60.9626,
+    "priority_rank": 9,
+    "priority_level": "HIGH",
+    "risk_prob": 0.861
   }
 }

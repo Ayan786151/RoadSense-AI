@@ -1,8 +1,121 @@
 {
   "zone_id": "Zone_46",
+  "location_name": "Nungambakkam",
+  "city": "Chennai",
+  "zone_type": "University_District",
   "week": 39,
-  "predicted_risk_probability": 0.7648839188234612,
-  "metrics": {
+  "latitude": 13.0569,
+  "longitude": 80.2425,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.7649,
+    "predicted_risk_percentage": 76.49,
+    "risk_label": "CRITICAL RISK",
+    "risk_color": "#ef4444",
+    "risk_delta_vs_prev_week": 18.7355,
+    "actual_incident": 1
+  },
+  "priority": {
+    "priority_score": 57.1152,
+    "priority_rank": 12,
+    "priority_level": "HIGH",
+    "components": {
+      "risk_score": 76.4884,
+      "population_exposure_score": 48.0494,
+      "vehicle_exposure_score": 40.3376,
+      "temporal_trend_score": 42.9333
+    },
+    "explanation": {
+      "priority_level": "HIGH",
+      "priority_score": 57.1,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udd34",
+          "value": "76/100",
+          "impact": "HIGH",
+          "detail": "Model-estimated risk score is in the critical range",
+          "weight": 76.4884
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "48/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 33.6346
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "42/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate congestion at 42",
+          "weight": 29.743
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone shows significant risk elevation driven by Risk Score. Proactive intervention should be scheduled within the current planning cycle."
+    }
+  },
+  "telemetry": {
+    "congestion": 42.49,
+    "congestion_delta": -6.08,
+    "average_speed_kmh": 44.1,
+    "speed_delta": 0.13,
+    "vehicle_density": 31.23,
+    "density_delta": 0.33,
+    "population_density": 8049,
+    "red_light_violations": 8,
+    "weather": "Light Rain",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 47,
+    "change_seconds": 12,
+    "change_percent": 34.3,
+    "urgency": "HIGH",
+    "reason": "Elevated traffic density needs extended clearance time",
+    "factors": {
+      "congestion_factor": 1.34,
+      "density_factor": 1.12,
+      "speed_factor": 0.83,
+      "event_boost": 1.0,
+      "weather_boost": 1.08
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 30135.9,
+    "total_co2_tonnes_per_year": 1567.07,
+    "idle_co2_kg": 7324.8,
+    "moving_co2_kg": 22811.1,
+    "potential_savings_kg_per_week": 1776.2,
+    "potential_savings_tonnes_per_year": 92.36,
+    "trees_equivalent_per_year": 4398,
+    "fuel_saved_liters_per_week": 768.9,
+    "citizens_impacted": 16098,
+    "optimization_factor_pct": 24.2
+  },
+  "interventions": [
+    {
+      "id": "VIOLATION_ENFORCEMENT",
+      "name": "Red-Light Violation Enforcement",
+      "icon": "\ud83d\udea8",
+      "severity": "HIGH",
+      "description": "Elevated red-light violation count indicates intersection compliance failure.",
+      "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
+    },
+    {
+      "id": "ROAD_MAINTENANCE",
+      "name": "Road Maintenance Inspection",
+      "icon": "\ud83d\udee3\ufe0f",
+      "severity": "MEDIUM",
+      "description": "Deteriorated road surface combined with elevated risk indicates infrastructure maintenance need.",
+      "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
+    }
+  ],
+  "executive_briefing": "Nungambakkam is in a critical safety state with 76% incident risk. Continue routine monitoring. Optimizing signals could save 1776 kg CO2/week, equivalent to 4398 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_46",
     "week": 39,
     "zone_type": "University_District",
@@ -51,6 +164,15 @@
     "location_name": "Nungambakkam",
     "city": "Chennai",
     "latitude": 13.0569,
-    "longitude": 80.2425
+    "longitude": 80.2425,
+    "predicted_risk_probability": 0.7649,
+    "risk_score": 76.4884,
+    "population_exposure_score": 48.0494,
+    "vehicle_exposure_score": 40.3376,
+    "temporal_trend_score": 42.9333,
+    "priority_score": 57.1152,
+    "priority_rank": 12,
+    "priority_level": "HIGH",
+    "risk_prob": 0.7649
   }
 }

@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_41",
+  "location_name": "Adyar",
+  "city": "Chennai",
+  "zone_type": "Highway_Junction",
   "week": 48,
-  "predicted_risk_probability": 0.7755745642637929,
-  "metrics": {
+  "latitude": 13.0063,
+  "longitude": 80.2574,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.7756,
+    "predicted_risk_percentage": 77.56,
+    "risk_label": "CRITICAL RISK",
+    "risk_color": "#ef4444",
+    "risk_delta_vs_prev_week": 3.6899,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 51.3276,
+    "priority_rank": 19,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 77.5575,
+      "population_exposure_score": 8.5351,
+      "vehicle_exposure_score": 36.408,
+      "temporal_trend_score": 72.5952
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 51.3,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udd34",
+          "value": "78/100",
+          "impact": "HIGH",
+          "detail": "Model-estimated risk score is in the critical range",
+          "weight": 77.5575
+        },
+        {
+          "factor": "Worsening Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "73/100",
+          "impact": "HIGH",
+          "detail": "4-week congestion trend is actively worsening \u2014 conditions deteriorating",
+          "weight": 72.5952
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "50/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate congestion at 50",
+          "weight": 35.329
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone has moderate risk levels with contributing factors: Risk Score, Worsening Trend. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 50.47,
+    "congestion_delta": -1.13,
+    "average_speed_kmh": 39.77,
+    "speed_delta": -1.32,
+    "vehicle_density": 28.34,
+    "density_delta": 1.88,
+    "population_density": 2549,
+    "red_light_violations": 7,
+    "weather": "Light Rain",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 50,
+    "recommended_green_seconds": 71,
+    "change_seconds": 21,
+    "change_percent": 42.0,
+    "urgency": "CRITICAL",
+    "reason": "Severe congestion requires significantly extended green phase",
+    "factors": {
+      "congestion_factor": 1.4,
+      "density_factor": 1.11,
+      "speed_factor": 0.85,
+      "event_boost": 1.0,
+      "weather_boost": 1.08
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 23972.8,
+    "total_co2_tonnes_per_year": 1246.58,
+    "idle_co2_kg": 7895.4,
+    "moving_co2_kg": 16077.4,
+    "potential_savings_kg_per_week": 1977.6,
+    "potential_savings_tonnes_per_year": 102.83,
+    "trees_equivalent_per_year": 4896,
+    "fuel_saved_liters_per_week": 856.1,
+    "citizens_impacted": 5098,
+    "optimization_factor_pct": 25.0
+  },
+  "interventions": [
+    {
+      "id": "ROAD_MAINTENANCE",
+      "name": "Road Maintenance Inspection",
+      "icon": "\ud83d\udee3\ufe0f",
+      "severity": "MEDIUM",
+      "description": "Deteriorated road surface combined with elevated risk indicates infrastructure maintenance need.",
+      "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
+    }
+  ],
+  "executive_briefing": "Adyar is in a critical safety state with 78% incident risk. Continue routine monitoring. Optimizing signals could save 1978 kg CO2/week, equivalent to 4896 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_41",
     "week": 48,
     "zone_type": "Highway_Junction",
@@ -51,6 +156,15 @@
     "location_name": "Adyar",
     "city": "Chennai",
     "latitude": 13.0063,
-    "longitude": 80.2574
+    "longitude": 80.2574,
+    "predicted_risk_probability": 0.7756,
+    "risk_score": 77.5575,
+    "population_exposure_score": 8.5351,
+    "vehicle_exposure_score": 36.408,
+    "temporal_trend_score": 72.5952,
+    "priority_score": 51.3276,
+    "priority_rank": 19,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.7756
   }
 }

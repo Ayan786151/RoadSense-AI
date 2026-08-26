@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_26",
+  "location_name": "Hazratganj",
+  "city": "Lucknow",
+  "zone_type": "University_District",
   "week": 44,
-  "predicted_risk_probability": 0.2866617256066367,
-  "metrics": {
+  "latitude": 26.85,
+  "longitude": 80.949,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.2867,
+    "predicted_risk_percentage": 28.67,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": -4.7405,
+    "actual_incident": 1
+  },
+  "priority": {
+    "priority_score": 45.2204,
+    "priority_rank": 22,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 28.6662,
+      "population_exposure_score": 45.384,
+      "vehicle_exposure_score": 55.2927,
+      "temporal_trend_score": 75.6628
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 45.2,
+      "top_contributors": [
+        {
+          "factor": "Worsening Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "76/100",
+          "impact": "HIGH",
+          "detail": "4-week congestion trend is actively worsening \u2014 conditions deteriorating",
+          "weight": 75.6628
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "45/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 31.7688
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "29/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 28.6662
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone has moderate risk levels with contributing factors: Worsening Trend, Population Exposure. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 28.27,
+    "congestion_delta": 0.84,
+    "average_speed_kmh": 58.9,
+    "speed_delta": 2.92,
+    "vehicle_density": 40.0,
+    "density_delta": -2.28,
+    "population_density": 7678,
+    "red_light_violations": 5,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 38,
+    "change_seconds": 3,
+    "change_percent": 8.6,
+    "urgency": "MODERATE",
+    "reason": "Slight adjustment for current conditions",
+    "factors": {
+      "congestion_factor": 1.23,
+      "density_factor": 1.16,
+      "speed_factor": 0.78,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 50045.7,
+    "total_co2_tonnes_per_year": 2602.38,
+    "idle_co2_kg": 6242.0,
+    "moving_co2_kg": 43803.7,
+    "potential_savings_kg_per_week": 1424.9,
+    "potential_savings_tonnes_per_year": 74.09,
+    "trees_equivalent_per_year": 3528,
+    "fuel_saved_liters_per_week": 616.8,
+    "citizens_impacted": 15356,
+    "optimization_factor_pct": 22.8
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "Hazratganj is within safe operating parameters (29% risk). Continue routine monitoring. Optimizing signals could save 1425 kg CO2/week, equivalent to 3528 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_26",
     "week": 44,
     "zone_type": "University_District",
@@ -51,6 +156,15 @@
     "location_name": "Hazratganj",
     "city": "Lucknow",
     "latitude": 26.85,
-    "longitude": 80.949
+    "longitude": 80.949,
+    "predicted_risk_probability": 0.2867,
+    "risk_score": 28.6662,
+    "population_exposure_score": 45.384,
+    "vehicle_exposure_score": 55.2927,
+    "temporal_trend_score": 75.6628,
+    "priority_score": 45.2204,
+    "priority_rank": 22,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.2867
   }
 }

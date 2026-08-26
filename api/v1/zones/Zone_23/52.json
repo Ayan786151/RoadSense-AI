@@ -1,8 +1,97 @@
 {
   "zone_id": "Zone_23",
+  "location_name": "Shahdara",
+  "city": "Delhi",
+  "zone_type": "Suburban_LowDensity",
   "week": 52,
-  "predicted_risk_probability": 0.14413488731120816,
-  "metrics": {
+  "latitude": 28.673,
+  "longitude": 77.2891,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.1441,
+    "predicted_risk_percentage": 14.41,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": 0.4936,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 18.1124,
+    "priority_rank": 47,
+    "priority_level": "LOW",
+    "components": {
+      "risk_score": 14.4135,
+      "population_exposure_score": 6.2289,
+      "vehicle_exposure_score": 16.4199,
+      "temporal_trend_score": 50.0385
+    },
+    "explanation": {
+      "priority_level": "LOW",
+      "priority_score": 18.1,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "14/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 14.4135
+        }
+      ],
+      "total_factors": 1,
+      "assessment": "This zone is currently within acceptable safety parameters. Routine monitoring is sufficient."
+    }
+  },
+  "telemetry": {
+    "congestion": 7.77,
+    "congestion_delta": 0.84,
+    "average_speed_kmh": 65.31,
+    "speed_delta": 4.6,
+    "vehicle_density": 12.53,
+    "density_delta": 3.02,
+    "population_density": 2228,
+    "red_light_violations": 3,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 25,
+    "recommended_green_seconds": 21,
+    "change_seconds": -4,
+    "change_percent": -16.0,
+    "urgency": "OPTIMIZE",
+    "reason": "Low traffic \u2014 reduce green time to improve cross-traffic flow",
+    "factors": {
+      "congestion_factor": 1.06,
+      "density_factor": 1.05,
+      "speed_factor": 0.76,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 20100.5,
+    "total_co2_tonnes_per_year": 1045.23,
+    "idle_co2_kg": 537.4,
+    "moving_co2_kg": 19563.1,
+    "potential_savings_kg_per_week": 111.7,
+    "potential_savings_tonnes_per_year": 5.81,
+    "trees_equivalent_per_year": 276,
+    "fuel_saved_liters_per_week": 48.3,
+    "citizens_impacted": 4456,
+    "optimization_factor_pct": 20.8
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "Shahdara is within safe operating parameters (14% risk). Continue routine monitoring. Optimizing signals could save 112 kg CO2/week, equivalent to 276 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_23",
     "week": 52,
     "zone_type": "Suburban_LowDensity",
@@ -51,6 +140,15 @@
     "location_name": "Shahdara",
     "city": "Delhi",
     "latitude": 28.673,
-    "longitude": 77.2891
+    "longitude": 77.2891,
+    "predicted_risk_probability": 0.1441,
+    "risk_score": 14.4135,
+    "population_exposure_score": 6.2289,
+    "vehicle_exposure_score": 16.4199,
+    "temporal_trend_score": 50.0385,
+    "priority_score": 18.1124,
+    "priority_rank": 47,
+    "priority_level": "LOW",
+    "risk_prob": 0.1441
   }
 }

@@ -1,8 +1,121 @@
 {
   "zone_id": "Zone_40",
+  "location_name": "Velachery",
+  "city": "Chennai",
+  "zone_type": "University_District",
   "week": 26,
-  "predicted_risk_probability": 0.5225226272615463,
-  "metrics": {
+  "latitude": 12.9815,
+  "longitude": 80.218,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.5225,
+    "predicted_risk_percentage": 52.25,
+    "risk_label": "MODERATE RISK",
+    "risk_color": "#eab308",
+    "risk_delta_vs_prev_week": -27.2735,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 53.9489,
+    "priority_rank": 16,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 52.2523,
+      "population_exposure_score": 47.1945,
+      "vehicle_exposure_score": 52.9164,
+      "temporal_trend_score": 71.1072
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 53.9,
+      "top_contributors": [
+        {
+          "factor": "Worsening Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "71/100",
+          "impact": "HIGH",
+          "detail": "4-week congestion trend is actively worsening \u2014 conditions deteriorating",
+          "weight": 71.1072
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "52/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 52.2523
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "47/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 33.0361
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "42/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate congestion at 42",
+          "weight": 29.337
+        }
+      ],
+      "total_factors": 4,
+      "assessment": "This zone has moderate risk levels with contributing factors: Worsening Trend, Risk Score. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 41.91,
+    "congestion_delta": -33.1,
+    "average_speed_kmh": 56.0,
+    "speed_delta": 26.12,
+    "vehicle_density": 40.09,
+    "density_delta": -2.97,
+    "population_density": 7930,
+    "red_light_violations": 1,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 42,
+    "change_seconds": 7,
+    "change_percent": 20.0,
+    "urgency": "MODERATE",
+    "reason": "Slight adjustment for current conditions",
+    "factors": {
+      "congestion_factor": 1.34,
+      "density_factor": 1.16,
+      "speed_factor": 0.79,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 43078.0,
+    "total_co2_tonnes_per_year": 2240.05,
+    "idle_co2_kg": 9274.5,
+    "moving_co2_kg": 33803.4,
+    "potential_savings_kg_per_week": 2243.6,
+    "potential_savings_tonnes_per_year": 116.67,
+    "trees_equivalent_per_year": 5555,
+    "fuel_saved_liters_per_week": 971.3,
+    "citizens_impacted": 15860,
+    "optimization_factor_pct": 24.2
+  },
+  "interventions": [
+    {
+      "id": "SPEED_CALMING",
+      "name": "Speed Calming & Enforcement",
+      "icon": "\ud83c\udfce\ufe0f",
+      "severity": "HIGH",
+      "description": "High average speed combined with elevated risk score suggests speed-related hazards.",
+      "action": "Deploy speed calming measures (speed bumps, radar signs) and increase enforcement patrols."
+    }
+  ],
+  "executive_briefing": "Velachery shows elevated risk at 52%. Continue routine monitoring. Optimizing signals could save 2244 kg CO2/week, equivalent to 5555 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_40",
     "week": 26,
     "zone_type": "University_District",
@@ -51,6 +164,15 @@
     "location_name": "Velachery",
     "city": "Chennai",
     "latitude": 12.9815,
-    "longitude": 80.218
+    "longitude": 80.218,
+    "predicted_risk_probability": 0.5225,
+    "risk_score": 52.2523,
+    "population_exposure_score": 47.1945,
+    "vehicle_exposure_score": 52.9164,
+    "temporal_trend_score": 71.1072,
+    "priority_score": 53.9489,
+    "priority_rank": 16,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.5225
   }
 }

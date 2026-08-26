@@ -1,8 +1,121 @@
 {
   "zone_id": "Zone_14",
+  "location_name": "Connaught Place",
+  "city": "Delhi",
+  "zone_type": "University_District",
   "week": 6,
-  "predicted_risk_probability": 0.24520691904647104,
-  "metrics": {
+  "latitude": 28.6315,
+  "longitude": 77.2167,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.2452,
+    "predicted_risk_percentage": 24.52,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": -16.6287,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 52.3136,
+    "priority_rank": 12,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 24.5207,
+      "population_exposure_score": 66.0249,
+      "vehicle_exposure_score": 78.7553,
+      "temporal_trend_score": 68.3205
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 52.3,
+      "top_contributors": [
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "79/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 78.7553
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "66/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 10551 residents/km\u00b2",
+          "weight": 66.0249
+        },
+        {
+          "factor": "Rising Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "68/100",
+          "impact": "MEDIUM",
+          "detail": "Slight upward trend in congestion over past 4 weeks",
+          "weight": 40.9923
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "25/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 24.5207
+        }
+      ],
+      "total_factors": 4,
+      "assessment": "This zone has moderate risk levels with contributing factors: Vehicle Density, Population Exposure. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 20.38,
+    "congestion_delta": -6.01,
+    "average_speed_kmh": 63.99,
+    "speed_delta": 10.5,
+    "vehicle_density": 49.86,
+    "density_delta": -2.07,
+    "population_density": 10551,
+    "red_light_violations": 7,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 37,
+    "change_seconds": 2,
+    "change_percent": 5.7,
+    "urgency": "MODERATE",
+    "reason": "Slight adjustment for current conditions",
+    "factors": {
+      "congestion_factor": 1.16,
+      "density_factor": 1.2,
+      "speed_factor": 0.76,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 71453.9,
+    "total_co2_tonnes_per_year": 3715.6,
+    "idle_co2_kg": 5609.1,
+    "moving_co2_kg": 65844.8,
+    "potential_savings_kg_per_week": 1236.1,
+    "potential_savings_tonnes_per_year": 64.28,
+    "trees_equivalent_per_year": 3060,
+    "fuel_saved_liters_per_week": 535.1,
+    "citizens_impacted": 21102,
+    "optimization_factor_pct": 22.0
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "Connaught Place is within safe operating parameters (25% risk). Continue routine monitoring. Optimizing signals could save 1236 kg CO2/week, equivalent to 3060 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_14",
     "week": 6,
     "zone_type": "University_District",
@@ -51,6 +164,15 @@
     "location_name": "Connaught Place",
     "city": "Delhi",
     "latitude": 28.6315,
-    "longitude": 77.2167
+    "longitude": 77.2167,
+    "predicted_risk_probability": 0.2452,
+    "risk_score": 24.5207,
+    "population_exposure_score": 66.0249,
+    "vehicle_exposure_score": 78.7553,
+    "temporal_trend_score": 68.3205,
+    "priority_score": 52.3136,
+    "priority_rank": 12,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.2452
   }
 }

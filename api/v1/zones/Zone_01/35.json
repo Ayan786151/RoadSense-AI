@@ -1,8 +1,129 @@
 {
   "zone_id": "Zone_01",
+  "location_name": "Andheri",
+  "city": "Mumbai",
+  "zone_type": "Commercial_Downtown",
   "week": 35,
-  "predicted_risk_probability": 0.6755727753428271,
-  "metrics": {
+  "latitude": 19.1197,
+  "longitude": 72.8468,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.6756,
+    "predicted_risk_percentage": 67.56,
+    "risk_label": "HIGH RISK",
+    "risk_color": "#f97316",
+    "risk_delta_vs_prev_week": -18.6278,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 58.5294,
+    "priority_rank": 18,
+    "priority_level": "HIGH",
+    "components": {
+      "risk_score": 67.5573,
+      "population_exposure_score": 52.9133,
+      "vehicle_exposure_score": 77.7889,
+      "temporal_trend_score": 18.1361
+    },
+    "explanation": {
+      "priority_level": "HIGH",
+      "priority_score": 58.5,
+      "top_contributors": [
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "78/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 77.7889
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "68/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 67.5573
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "53/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 37.0393
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "49/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate congestion at 49",
+          "weight": 34.601
+        },
+        {
+          "factor": "Improving Trend",
+          "icon": "\ud83d\udcc9",
+          "value": "18/100",
+          "impact": "POSITIVE",
+          "detail": "Conditions are improving over past 4 weeks",
+          "weight": -18.1361
+        }
+      ],
+      "total_factors": 5,
+      "assessment": "This zone shows significant risk elevation driven by Vehicle Density. Proactive intervention should be scheduled within the current planning cycle."
+    }
+  },
+  "telemetry": {
+    "congestion": 49.43,
+    "congestion_delta": -32.32,
+    "average_speed_kmh": 51.99,
+    "speed_delta": 22.21,
+    "vehicle_density": 52.49,
+    "density_delta": -4.41,
+    "population_density": 8726,
+    "red_light_violations": 8,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 40,
+    "recommended_green_seconds": 54,
+    "change_seconds": 14,
+    "change_percent": 35.0,
+    "urgency": "HIGH",
+    "reason": "Elevated traffic density needs extended clearance time",
+    "factors": {
+      "congestion_factor": 1.4,
+      "density_factor": 1.21,
+      "speed_factor": 0.81,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 50092.5,
+    "total_co2_tonnes_per_year": 2604.81,
+    "idle_co2_kg": 14322.1,
+    "moving_co2_kg": 35770.4,
+    "potential_savings_kg_per_week": 3572.4,
+    "potential_savings_tonnes_per_year": 185.76,
+    "trees_equivalent_per_year": 8845,
+    "fuel_saved_liters_per_week": 1546.5,
+    "citizens_impacted": 17452,
+    "optimization_factor_pct": 24.9
+  },
+  "interventions": [
+    {
+      "id": "VIOLATION_ENFORCEMENT",
+      "name": "Red-Light Violation Enforcement",
+      "icon": "\ud83d\udea8",
+      "severity": "HIGH",
+      "description": "Elevated red-light violation count indicates intersection compliance failure.",
+      "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
+    }
+  ],
+  "executive_briefing": "Andheri is in a critical safety state with 68% incident risk. Continue routine monitoring. Optimizing signals could save 3572 kg CO2/week, equivalent to 8845 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_01",
     "week": 35,
     "zone_type": "Commercial_Downtown",
@@ -51,6 +172,15 @@
     "location_name": "Andheri",
     "city": "Mumbai",
     "latitude": 19.1197,
-    "longitude": 72.8468
+    "longitude": 72.8468,
+    "predicted_risk_probability": 0.6756,
+    "risk_score": 67.5573,
+    "population_exposure_score": 52.9133,
+    "vehicle_exposure_score": 77.7889,
+    "temporal_trend_score": 18.1361,
+    "priority_score": 58.5294,
+    "priority_rank": 18,
+    "priority_level": "HIGH",
+    "risk_prob": 0.6756
   }
 }

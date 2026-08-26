@@ -1,8 +1,121 @@
 {
   "zone_id": "Zone_37",
+  "location_name": "Vrindavan Yojana",
+  "city": "Lucknow",
+  "zone_type": "Residential",
   "week": 17,
-  "predicted_risk_probability": 0.27768658233886306,
-  "metrics": {
+  "latitude": 26.79,
+  "longitude": 81.0,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.2777,
+    "predicted_risk_percentage": 27.77,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": 4.1837,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 54.1763,
+    "priority_rank": 12,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 27.7687,
+      "population_exposure_score": 72.6561,
+      "vehicle_exposure_score": 73.1126,
+      "temporal_trend_score": 68.5489
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 54.2,
+      "top_contributors": [
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "73/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 73.1126
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "73/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 11474 residents/km\u00b2",
+          "weight": 72.6561
+        },
+        {
+          "factor": "Rising Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "69/100",
+          "impact": "MEDIUM",
+          "detail": "Slight upward trend in congestion over past 4 weeks",
+          "weight": 41.1293
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "28/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 27.7687
+        }
+      ],
+      "total_factors": 4,
+      "assessment": "This zone has moderate risk levels with contributing factors: Vehicle Density, Population Exposure. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 23.89,
+    "congestion_delta": 1.85,
+    "average_speed_kmh": 59.47,
+    "speed_delta": 0.33,
+    "vehicle_density": 50.43,
+    "density_delta": 5.75,
+    "population_density": 11474,
+    "red_light_violations": 4,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 30,
+    "recommended_green_seconds": 33,
+    "change_seconds": 3,
+    "change_percent": 10.0,
+    "urgency": "MODERATE",
+    "reason": "Slight adjustment for current conditions",
+    "factors": {
+      "congestion_factor": 1.19,
+      "density_factor": 1.2,
+      "speed_factor": 0.78,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 65815.2,
+    "total_co2_tonnes_per_year": 3422.39,
+    "idle_co2_kg": 6650.3,
+    "moving_co2_kg": 59164.8,
+    "potential_savings_kg_per_week": 1488.9,
+    "potential_savings_tonnes_per_year": 77.43,
+    "trees_equivalent_per_year": 3686,
+    "fuel_saved_liters_per_week": 644.6,
+    "citizens_impacted": 22948,
+    "optimization_factor_pct": 22.4
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "Vrindavan Yojana is within safe operating parameters (28% risk). Continue routine monitoring. Optimizing signals could save 1489 kg CO2/week, equivalent to 3686 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_37",
     "week": 17,
     "zone_type": "Residential",
@@ -51,6 +164,15 @@
     "location_name": "Vrindavan Yojana",
     "city": "Lucknow",
     "latitude": 26.79,
-    "longitude": 81.0
+    "longitude": 81.0,
+    "predicted_risk_probability": 0.2777,
+    "risk_score": 27.7687,
+    "population_exposure_score": 72.6561,
+    "vehicle_exposure_score": 73.1126,
+    "temporal_trend_score": 68.5489,
+    "priority_score": 54.1763,
+    "priority_rank": 12,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.2777
   }
 }

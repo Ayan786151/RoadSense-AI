@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_24",
+  "location_name": "Nehru Place",
+  "city": "Delhi",
+  "zone_type": "Commercial_Downtown",
   "week": 22,
-  "predicted_risk_probability": 0.4403221539040684,
-  "metrics": {
+  "latitude": 28.5491,
+  "longitude": 77.2519,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.4403,
+    "predicted_risk_percentage": 44.03,
+    "risk_label": "MODERATE RISK",
+    "risk_color": "#eab308",
+    "risk_delta_vs_prev_week": 24.0482,
+    "actual_incident": 1
+  },
+  "priority": {
+    "priority_score": 50.3892,
+    "priority_rank": 19,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 44.0322,
+      "population_exposure_score": 52.2523,
+      "vehicle_exposure_score": 65.3457,
+      "temporal_trend_score": 44.2941
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 50.4,
+      "top_contributors": [
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "65/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 65.3457
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "44/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 44.0322
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "52/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 36.5766
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone has moderate risk levels with contributing factors: Vehicle Density, Risk Score. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 27.65,
+    "congestion_delta": 7.47,
+    "average_speed_kmh": 61.37,
+    "speed_delta": -3.02,
+    "vehicle_density": 47.38,
+    "density_delta": -0.3,
+    "population_density": 8634,
+    "red_light_violations": 4,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 40,
+    "recommended_green_seconds": 44,
+    "change_seconds": 4,
+    "change_percent": 10.0,
+    "urgency": "MODERATE",
+    "reason": "Slight adjustment for current conditions",
+    "factors": {
+      "congestion_factor": 1.22,
+      "density_factor": 1.19,
+      "speed_factor": 0.77,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 61760.2,
+    "total_co2_tonnes_per_year": 3211.53,
+    "idle_co2_kg": 7231.5,
+    "moving_co2_kg": 54528.6,
+    "potential_savings_kg_per_week": 1646.3,
+    "potential_savings_tonnes_per_year": 85.61,
+    "trees_equivalent_per_year": 4076,
+    "fuel_saved_liters_per_week": 712.7,
+    "citizens_impacted": 17268,
+    "optimization_factor_pct": 22.8
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "No specific risk indicators triggered.",
+      "action": "Continue routine monitoring."
+    }
+  ],
+  "executive_briefing": "Nehru Place shows elevated risk at 44%. Continue routine monitoring. Optimizing signals could save 1646 kg CO2/week, equivalent to 4076 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_24",
     "week": 22,
     "zone_type": "Commercial_Downtown",
@@ -51,6 +156,15 @@
     "location_name": "Nehru Place",
     "city": "Delhi",
     "latitude": 28.5491,
-    "longitude": 77.2519
+    "longitude": 77.2519,
+    "predicted_risk_probability": 0.4403,
+    "risk_score": 44.0322,
+    "population_exposure_score": 52.2523,
+    "vehicle_exposure_score": 65.3457,
+    "temporal_trend_score": 44.2941,
+    "priority_score": 50.3892,
+    "priority_rank": 19,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.4403
   }
 }

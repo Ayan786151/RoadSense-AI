@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_06",
+  "location_name": "Borivali",
+  "city": "Mumbai",
+  "zone_type": "University_District",
   "week": 38,
-  "predicted_risk_probability": 0.16361548929608605,
-  "metrics": {
+  "latitude": 19.2307,
+  "longitude": 72.8567,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.1636,
+    "predicted_risk_percentage": 16.36,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": -7.1035,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 39.129,
+    "priority_rank": 27,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 16.3615,
+      "population_exposure_score": 53.0642,
+      "vehicle_exposure_score": 45.4976,
+      "temporal_trend_score": 68.1258
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 39.1,
+      "top_contributors": [
+        {
+          "factor": "Rising Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "68/100",
+          "impact": "MEDIUM",
+          "detail": "Slight upward trend in congestion over past 4 weeks",
+          "weight": 40.8755
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "53/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 37.1449
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "16/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 16.3615
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone has moderate risk levels with contributing factors: Rising Trend, Population Exposure. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 20.03,
+    "congestion_delta": -5.9,
+    "average_speed_kmh": 63.56,
+    "speed_delta": 12.25,
+    "vehicle_density": 32.45,
+    "density_delta": -4.24,
+    "population_density": 8747,
+    "red_light_violations": 2,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 34,
+    "change_seconds": -1,
+    "change_percent": -2.9,
+    "urgency": "NOMINAL",
+    "reason": "Current default timing is adequate",
+    "factors": {
+      "congestion_factor": 1.16,
+      "density_factor": 1.13,
+      "speed_factor": 0.76,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 46340.3,
+    "total_co2_tonnes_per_year": 2409.69,
+    "idle_co2_kg": 3587.9,
+    "moving_co2_kg": 42752.4,
+    "potential_savings_kg_per_week": 789.4,
+    "potential_savings_tonnes_per_year": 41.05,
+    "trees_equivalent_per_year": 1954,
+    "fuel_saved_liters_per_week": 341.7,
+    "citizens_impacted": 17494,
+    "optimization_factor_pct": 22.0
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "Borivali is within safe operating parameters (16% risk). Continue routine monitoring. Optimizing signals could save 789 kg CO2/week, equivalent to 1954 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_06",
     "week": 38,
     "zone_type": "University_District",
@@ -51,6 +156,15 @@
     "location_name": "Borivali",
     "city": "Mumbai",
     "latitude": 19.2307,
-    "longitude": 72.8567
+    "longitude": 72.8567,
+    "predicted_risk_probability": 0.1636,
+    "risk_score": 16.3615,
+    "population_exposure_score": 53.0642,
+    "vehicle_exposure_score": 45.4976,
+    "temporal_trend_score": 68.1258,
+    "priority_score": 39.129,
+    "priority_rank": 27,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.1636
   }
 }

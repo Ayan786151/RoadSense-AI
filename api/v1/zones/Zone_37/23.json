@@ -1,8 +1,121 @@
 {
   "zone_id": "Zone_37",
+  "location_name": "Vrindavan Yojana",
+  "city": "Lucknow",
+  "zone_type": "Residential",
   "week": 23,
-  "predicted_risk_probability": 0.5090732704969742,
-  "metrics": {
+  "latitude": 26.79,
+  "longitude": 81.0,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.5091,
+    "predicted_risk_percentage": 50.91,
+    "risk_label": "MODERATE RISK",
+    "risk_color": "#eab308",
+    "risk_delta_vs_prev_week": -9.0085,
+    "actual_incident": 1
+  },
+  "priority": {
+    "priority_score": 66.7993,
+    "priority_rank": 8,
+    "priority_level": "HIGH",
+    "components": {
+      "risk_score": 50.9073,
+      "population_exposure_score": 72.6561,
+      "vehicle_exposure_score": 76.8112,
+      "temporal_trend_score": 86.0671
+    },
+    "explanation": {
+      "priority_level": "HIGH",
+      "priority_score": 66.8,
+      "top_contributors": [
+        {
+          "factor": "Worsening Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "86/100",
+          "impact": "HIGH",
+          "detail": "4-week congestion trend is actively worsening \u2014 conditions deteriorating",
+          "weight": 86.0671
+        },
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "77/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 76.8112
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "73/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 11474 residents/km\u00b2",
+          "weight": 72.6561
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "51/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 50.9073
+        }
+      ],
+      "total_factors": 4,
+      "assessment": "This zone shows significant risk elevation driven by Worsening Trend, Vehicle Density. Proactive intervention should be scheduled within the current planning cycle."
+    }
+  },
+  "telemetry": {
+    "congestion": 36.31,
+    "congestion_delta": -13.95,
+    "average_speed_kmh": 55.69,
+    "speed_delta": 7.03,
+    "vehicle_density": 55.45,
+    "density_delta": -7.14,
+    "population_density": 11474,
+    "red_light_violations": 7,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 30,
+    "recommended_green_seconds": 37,
+    "change_seconds": 7,
+    "change_percent": 23.3,
+    "urgency": "HIGH",
+    "reason": "Elevated traffic density needs extended clearance time",
+    "factors": {
+      "congestion_factor": 1.29,
+      "density_factor": 1.22,
+      "speed_factor": 0.79,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 62092.2,
+    "total_co2_tonnes_per_year": 3228.79,
+    "idle_co2_kg": 11113.9,
+    "moving_co2_kg": 50978.3,
+    "potential_savings_kg_per_week": 2626.3,
+    "potential_savings_tonnes_per_year": 136.57,
+    "trees_equivalent_per_year": 6503,
+    "fuel_saved_liters_per_week": 1136.9,
+    "citizens_impacted": 22948,
+    "optimization_factor_pct": 23.6
+  },
+  "interventions": [
+    {
+      "id": "SPEED_CALMING",
+      "name": "Speed Calming & Enforcement",
+      "icon": "\ud83c\udfce\ufe0f",
+      "severity": "HIGH",
+      "description": "High average speed combined with elevated risk score suggests speed-related hazards.",
+      "action": "Deploy speed calming measures (speed bumps, radar signs) and increase enforcement patrols."
+    }
+  ],
+  "executive_briefing": "Vrindavan Yojana shows elevated risk at 51%. Continue routine monitoring. Optimizing signals could save 2626 kg CO2/week, equivalent to 6503 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_37",
     "week": 23,
     "zone_type": "Residential",
@@ -51,6 +164,15 @@
     "location_name": "Vrindavan Yojana",
     "city": "Lucknow",
     "latitude": 26.79,
-    "longitude": 81.0
+    "longitude": 81.0,
+    "predicted_risk_probability": 0.5091,
+    "risk_score": 50.9073,
+    "population_exposure_score": 72.6561,
+    "vehicle_exposure_score": 76.8112,
+    "temporal_trend_score": 86.0671,
+    "priority_score": 66.7993,
+    "priority_rank": 8,
+    "priority_level": "HIGH",
+    "risk_prob": 0.5091
   }
 }

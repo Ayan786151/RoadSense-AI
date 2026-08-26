@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_30",
+  "location_name": "Charbagh",
+  "city": "Lucknow",
+  "zone_type": "Highway_Junction",
   "week": 32,
-  "predicted_risk_probability": 0.7143245423535866,
-  "metrics": {
+  "latitude": 26.8315,
+  "longitude": 80.923,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.7143,
+    "predicted_risk_percentage": 71.43,
+    "risk_label": "HIGH RISK",
+    "risk_color": "#f97316",
+    "risk_delta_vs_prev_week": 9.8085,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 47.3712,
+    "priority_rank": 27,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 71.4325,
+      "population_exposure_score": 7.8095,
+      "vehicle_exposure_score": 35.8857,
+      "temporal_trend_score": 64.4578
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 47.4,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udd34",
+          "value": "71/100",
+          "impact": "HIGH",
+          "detail": "Model-estimated risk score is in the critical range",
+          "weight": 71.4325
+        },
+        {
+          "factor": "Rising Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "64/100",
+          "impact": "MEDIUM",
+          "detail": "Slight upward trend in congestion over past 4 weeks",
+          "weight": 38.6747
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "41/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate congestion at 41",
+          "weight": 28.791
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone has moderate risk levels with contributing factors: Risk Score, Rising Trend. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 41.13,
+    "congestion_delta": 4.98,
+    "average_speed_kmh": 31.71,
+    "speed_delta": -6.65,
+    "vehicle_density": 24.23,
+    "density_delta": 1.77,
+    "population_density": 2448,
+    "red_light_violations": 5,
+    "weather": "Heavy Rain",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 50,
+    "recommended_green_seconds": 75,
+    "change_seconds": 25,
+    "change_percent": 50.0,
+    "urgency": "CRITICAL",
+    "reason": "Severe congestion requires significantly extended green phase",
+    "factors": {
+      "congestion_factor": 1.33,
+      "density_factor": 1.1,
+      "speed_factor": 0.88,
+      "event_boost": 1.0,
+      "weather_boost": 1.18
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 18527.9,
+    "total_co2_tonnes_per_year": 963.45,
+    "idle_co2_kg": 5501.1,
+    "moving_co2_kg": 13026.8,
+    "potential_savings_kg_per_week": 1326.5,
+    "potential_savings_tonnes_per_year": 68.98,
+    "trees_equivalent_per_year": 3284,
+    "fuel_saved_liters_per_week": 574.2,
+    "citizens_impacted": 4896,
+    "optimization_factor_pct": 24.1
+  },
+  "interventions": [
+    {
+      "id": "ROAD_MAINTENANCE",
+      "name": "Road Maintenance Inspection",
+      "icon": "\ud83d\udee3\ufe0f",
+      "severity": "MEDIUM",
+      "description": "Deteriorated road surface combined with elevated risk indicates infrastructure maintenance need.",
+      "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
+    }
+  ],
+  "executive_briefing": "Charbagh is in a critical safety state with 71% incident risk. Continue routine monitoring. Optimizing signals could save 1326 kg CO2/week, equivalent to 3284 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_30",
     "week": 32,
     "zone_type": "Highway_Junction",
@@ -51,6 +156,15 @@
     "location_name": "Charbagh",
     "city": "Lucknow",
     "latitude": 26.8315,
-    "longitude": 80.923
+    "longitude": 80.923,
+    "predicted_risk_probability": 0.7143,
+    "risk_score": 71.4325,
+    "population_exposure_score": 7.8095,
+    "vehicle_exposure_score": 35.8857,
+    "temporal_trend_score": 64.4578,
+    "priority_score": 47.3712,
+    "priority_rank": 27,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.7143
   }
 }

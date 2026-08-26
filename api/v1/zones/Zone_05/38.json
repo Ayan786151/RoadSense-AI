@@ -1,8 +1,121 @@
 {
   "zone_id": "Zone_05",
+  "location_name": "Powai",
+  "city": "Mumbai",
+  "zone_type": "Commercial_Downtown",
   "week": 38,
-  "predicted_risk_probability": 0.3851255106405069,
-  "metrics": {
+  "latitude": 19.1176,
+  "longitude": 72.906,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.3851,
+    "predicted_risk_percentage": 38.51,
+    "risk_label": "MODERATE RISK",
+    "risk_color": "#eab308",
+    "risk_delta_vs_prev_week": 19.7765,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 44.3129,
+    "priority_rank": 24,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 38.5126,
+      "population_exposure_score": 50.1616,
+      "vehicle_exposure_score": 37.2757,
+      "temporal_trend_score": 59.4158
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 44.3,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "39/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 38.5126
+        },
+        {
+          "factor": "Rising Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "59/100",
+          "impact": "MEDIUM",
+          "detail": "Slight upward trend in congestion over past 4 weeks",
+          "weight": 35.6495
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "50/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 35.1132
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone has moderate risk levels with contributing factors: Rising Trend, Population Exposure. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 23.81,
+    "congestion_delta": 16.79,
+    "average_speed_kmh": 60.47,
+    "speed_delta": -2.12,
+    "vehicle_density": 27.41,
+    "density_delta": 9.75,
+    "population_density": 8343,
+    "red_light_violations": 9,
+    "weather": "Normal",
+    "special_event": 1
+  },
+  "signal_optimization": {
+    "base_green_seconds": 40,
+    "recommended_green_seconds": 46,
+    "change_seconds": 6,
+    "change_percent": 15.0,
+    "urgency": "MODERATE",
+    "reason": "Slight adjustment for current conditions",
+    "factors": {
+      "congestion_factor": 1.19,
+      "density_factor": 1.11,
+      "speed_factor": 0.77,
+      "event_boost": 1.15,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 36335.2,
+    "total_co2_tonnes_per_year": 1889.43,
+    "idle_co2_kg": 3602.5,
+    "moving_co2_kg": 32732.7,
+    "potential_savings_kg_per_week": 806.3,
+    "potential_savings_tonnes_per_year": 41.93,
+    "trees_equivalent_per_year": 1996,
+    "fuel_saved_liters_per_week": 349.0,
+    "citizens_impacted": 16686,
+    "optimization_factor_pct": 22.4
+  },
+  "interventions": [
+    {
+      "id": "VIOLATION_ENFORCEMENT",
+      "name": "Red-Light Violation Enforcement",
+      "icon": "\ud83d\udea8",
+      "severity": "HIGH",
+      "description": "Elevated red-light violation count indicates intersection compliance failure.",
+      "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
+    },
+    {
+      "id": "EVENT_TRAFFIC_PLAN",
+      "name": "Special Event Traffic Plan",
+      "icon": "\ud83c\udfaa",
+      "severity": "MEDIUM",
+      "description": "Active special event generating additional traffic demand.",
+      "action": "Activate event traffic management plan. Deploy traffic marshals and temporary signage."
+    }
+  ],
+  "executive_briefing": "Powai shows elevated risk at 39%. Enforcement focus needed \u2014 9 red-light violations recorded. Optimizing signals could save 806 kg CO2/week, equivalent to 1996 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_05",
     "week": 38,
     "zone_type": "Commercial_Downtown",
@@ -51,6 +164,15 @@
     "location_name": "Powai",
     "city": "Mumbai",
     "latitude": 19.1176,
-    "longitude": 72.906
+    "longitude": 72.906,
+    "predicted_risk_probability": 0.3851,
+    "risk_score": 38.5126,
+    "population_exposure_score": 50.1616,
+    "vehicle_exposure_score": 37.2757,
+    "temporal_trend_score": 59.4158,
+    "priority_score": 44.3129,
+    "priority_rank": 24,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.3851
   }
 }

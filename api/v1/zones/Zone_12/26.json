@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_12",
+  "location_name": "Malad",
+  "city": "Mumbai",
+  "zone_type": "Commercial_Downtown",
   "week": 26,
-  "predicted_risk_probability": 0.21035146887124445,
-  "metrics": {
+  "latitude": 19.1874,
+  "longitude": 72.8484,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.2104,
+    "predicted_risk_percentage": 21.04,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": -27.0544,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 38.145,
+    "priority_rank": 24,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 21.0351,
+      "population_exposure_score": 52.9061,
+      "vehicle_exposure_score": 36.8761,
+      "temporal_trend_score": 60.8611
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 38.1,
+      "top_contributors": [
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "53/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 37.0343
+        },
+        {
+          "factor": "Rising Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "61/100",
+          "impact": "MEDIUM",
+          "detail": "Slight upward trend in congestion over past 4 weeks",
+          "weight": 36.5167
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "21/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 21.0351
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone has moderate risk levels with contributing factors: Population Exposure, Rising Trend. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 21.62,
+    "congestion_delta": -7.75,
+    "average_speed_kmh": 59.13,
+    "speed_delta": 7.32,
+    "vehicle_density": 29.42,
+    "density_delta": -1.82,
+    "population_density": 8725,
+    "red_light_violations": 3,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 40,
+    "recommended_green_seconds": 40,
+    "change_seconds": 0,
+    "change_percent": 0.0,
+    "urgency": "NOMINAL",
+    "reason": "Current default timing is adequate",
+    "factors": {
+      "congestion_factor": 1.17,
+      "density_factor": 1.12,
+      "speed_factor": 0.78,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 38853.0,
+    "total_co2_tonnes_per_year": 2020.36,
+    "idle_co2_kg": 3511.1,
+    "moving_co2_kg": 35342.0,
+    "potential_savings_kg_per_week": 778.1,
+    "potential_savings_tonnes_per_year": 40.46,
+    "trees_equivalent_per_year": 1926,
+    "fuel_saved_liters_per_week": 336.8,
+    "citizens_impacted": 17450,
+    "optimization_factor_pct": 22.2
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "Malad is within safe operating parameters (21% risk). Continue routine monitoring. Optimizing signals could save 778 kg CO2/week, equivalent to 1926 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_12",
     "week": 26,
     "zone_type": "Commercial_Downtown",
@@ -51,6 +156,15 @@
     "location_name": "Malad",
     "city": "Mumbai",
     "latitude": 19.1874,
-    "longitude": 72.8484
+    "longitude": 72.8484,
+    "predicted_risk_probability": 0.2104,
+    "risk_score": 21.0351,
+    "population_exposure_score": 52.9061,
+    "vehicle_exposure_score": 36.8761,
+    "temporal_trend_score": 60.8611,
+    "priority_score": 38.145,
+    "priority_rank": 24,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.2104
   }
 }

@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_42",
+  "location_name": "Guindy",
+  "city": "Chennai",
+  "zone_type": "University_District",
   "week": 16,
-  "predicted_risk_probability": 0.6057769839283055,
-  "metrics": {
+  "latitude": 13.0067,
+  "longitude": 80.2206,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.6058,
+    "predicted_risk_percentage": 60.58,
+    "risk_label": "HIGH RISK",
+    "risk_color": "#f97316",
+    "risk_delta_vs_prev_week": 21.1606,
+    "actual_incident": 1
+  },
+  "priority": {
+    "priority_score": 54.8754,
+    "priority_rank": 10,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 60.5777,
+      "population_exposure_score": 43.164,
+      "vehicle_exposure_score": 60.0646,
+      "temporal_trend_score": 52.2692
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 54.9,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "61/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 60.5777
+        },
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "60/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 60.0646
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "43/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 30.2148
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone has moderate risk levels with contributing factors: Vehicle Density, Risk Score. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 38.83,
+    "congestion_delta": 5.53,
+    "average_speed_kmh": 54.89,
+    "speed_delta": -4.2,
+    "vehicle_density": 41.04,
+    "density_delta": 5.36,
+    "population_density": 7369,
+    "red_light_violations": 8,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 42,
+    "change_seconds": 7,
+    "change_percent": 20.0,
+    "urgency": "MODERATE",
+    "reason": "Slight adjustment for current conditions",
+    "factors": {
+      "congestion_factor": 1.31,
+      "density_factor": 1.16,
+      "speed_factor": 0.79,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 44513.5,
+    "total_co2_tonnes_per_year": 2314.7,
+    "idle_co2_kg": 8796.6,
+    "moving_co2_kg": 35716.9,
+    "potential_savings_kg_per_week": 2100.9,
+    "potential_savings_tonnes_per_year": 109.25,
+    "trees_equivalent_per_year": 5202,
+    "fuel_saved_liters_per_week": 909.5,
+    "citizens_impacted": 14738,
+    "optimization_factor_pct": 23.9
+  },
+  "interventions": [
+    {
+      "id": "VIOLATION_ENFORCEMENT",
+      "name": "Red-Light Violation Enforcement",
+      "icon": "\ud83d\udea8",
+      "severity": "HIGH",
+      "description": "Elevated red-light violation count indicates intersection compliance failure.",
+      "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
+    }
+  ],
+  "executive_briefing": "Guindy is in a critical safety state with 61% incident risk. Continue routine monitoring. Optimizing signals could save 2101 kg CO2/week, equivalent to 5202 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_42",
     "week": 16,
     "zone_type": "University_District",
@@ -51,6 +156,15 @@
     "location_name": "Guindy",
     "city": "Chennai",
     "latitude": 13.0067,
-    "longitude": 80.2206
+    "longitude": 80.2206,
+    "predicted_risk_probability": 0.6058,
+    "risk_score": 60.5777,
+    "population_exposure_score": 43.164,
+    "vehicle_exposure_score": 60.0646,
+    "temporal_trend_score": 52.2692,
+    "priority_score": 54.8754,
+    "priority_rank": 10,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.6058
   }
 }

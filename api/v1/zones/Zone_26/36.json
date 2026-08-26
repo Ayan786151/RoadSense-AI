@@ -1,8 +1,129 @@
 {
   "zone_id": "Zone_26",
+  "location_name": "Hazratganj",
+  "city": "Lucknow",
+  "zone_type": "University_District",
   "week": 36,
-  "predicted_risk_probability": 0.9013633227179163,
-  "metrics": {
+  "latitude": 26.85,
+  "longitude": 80.949,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.9014,
+    "predicted_risk_percentage": 90.14,
+    "risk_label": "CRITICAL RISK",
+    "risk_color": "#ef4444",
+    "risk_delta_vs_prev_week": -3.5552,
+    "actual_incident": 1
+  },
+  "priority": {
+    "priority_score": 70.6685,
+    "priority_rank": 10,
+    "priority_level": "HIGH",
+    "components": {
+      "risk_score": 90.1363,
+      "population_exposure_score": 45.384,
+      "vehicle_exposure_score": 41.3396,
+      "temporal_trend_score": 100.0
+    },
+    "explanation": {
+      "priority_level": "HIGH",
+      "priority_score": 70.7,
+      "top_contributors": [
+        {
+          "factor": "Worsening Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "100/100",
+          "impact": "HIGH",
+          "detail": "4-week congestion trend is actively worsening \u2014 conditions deteriorating",
+          "weight": 100.0
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udd34",
+          "value": "90/100",
+          "impact": "HIGH",
+          "detail": "Model-estimated risk score is in the critical range",
+          "weight": 90.1363
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "54/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate congestion at 54",
+          "weight": 38.094
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "45/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 31.7688
+        }
+      ],
+      "total_factors": 4,
+      "assessment": "This zone shows significant risk elevation driven by Worsening Trend, Risk Score. Proactive intervention should be scheduled within the current planning cycle."
+    }
+  },
+  "telemetry": {
+    "congestion": 54.42,
+    "congestion_delta": -10.03,
+    "average_speed_kmh": 28.44,
+    "speed_delta": 5.02,
+    "vehicle_density": 32.73,
+    "density_delta": -5.18,
+    "population_density": 7678,
+    "red_light_violations": 6,
+    "weather": "Heavy Rain",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 59,
+    "change_seconds": 24,
+    "change_percent": 68.6,
+    "urgency": "CRITICAL",
+    "reason": "Severe congestion requires significantly extended green phase",
+    "factors": {
+      "congestion_factor": 1.44,
+      "density_factor": 1.13,
+      "speed_factor": 0.89,
+      "event_boost": 1.0,
+      "weather_boost": 1.18
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 31826.6,
+    "total_co2_tonnes_per_year": 1654.98,
+    "idle_co2_kg": 9832.0,
+    "moving_co2_kg": 21994.5,
+    "potential_savings_kg_per_week": 2501.5,
+    "potential_savings_tonnes_per_year": 130.08,
+    "trees_equivalent_per_year": 6194,
+    "fuel_saved_liters_per_week": 1082.9,
+    "citizens_impacted": 15356,
+    "optimization_factor_pct": 25.4
+  },
+  "interventions": [
+    {
+      "id": "TREND_URGENT_INSPECTION",
+      "name": "Urgent Safety Inspection",
+      "icon": "\u26a0\ufe0f",
+      "severity": "CRITICAL",
+      "description": "Risk is actively worsening (high temporal trend) with already elevated risk score.",
+      "action": "Deploy immediate field inspection team. Identify root cause of deteriorating safety conditions."
+    },
+    {
+      "id": "ROAD_MAINTENANCE",
+      "name": "Road Maintenance Inspection",
+      "icon": "\ud83d\udee3\ufe0f",
+      "severity": "MEDIUM",
+      "description": "Deteriorated road surface combined with elevated risk indicates infrastructure maintenance need.",
+      "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
+    }
+  ],
+  "executive_briefing": "Hazratganj is in a critical safety state with 90% incident risk. Continue routine monitoring. Optimizing signals could save 2502 kg CO2/week, equivalent to 6194 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_26",
     "week": 36,
     "zone_type": "University_District",
@@ -51,6 +172,15 @@
     "location_name": "Hazratganj",
     "city": "Lucknow",
     "latitude": 26.85,
-    "longitude": 80.949
+    "longitude": 80.949,
+    "predicted_risk_probability": 0.9014,
+    "risk_score": 90.1363,
+    "population_exposure_score": 45.384,
+    "vehicle_exposure_score": 41.3396,
+    "temporal_trend_score": 100.0,
+    "priority_score": 70.6685,
+    "priority_rank": 10,
+    "priority_level": "HIGH",
+    "risk_prob": 0.9014
   }
 }

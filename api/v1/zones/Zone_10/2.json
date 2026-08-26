@@ -1,8 +1,121 @@
 {
   "zone_id": "Zone_10",
+  "location_name": "Colaba",
+  "city": "Mumbai",
+  "zone_type": "Residential",
   "week": 2,
-  "predicted_risk_probability": null,
-  "metrics": {
+  "latitude": 18.922,
+  "longitude": 72.8347,
+  "risk_analysis": {
+    "predicted_risk_probability": null,
+    "predicted_risk_percentage": null,
+    "risk_label": "BASELINE WARMUP",
+    "risk_color": "#71717a",
+    "risk_delta_vs_prev_week": null,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 46.5246,
+    "priority_rank": 3,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 0.0,
+      "population_exposure_score": 98.6996,
+      "vehicle_exposure_score": 71.7486,
+      "temporal_trend_score": 50.0
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 46.5,
+      "top_contributors": [
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "99/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 15099 residents/km\u00b2",
+          "weight": 98.6996
+        },
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "72/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 71.7486
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "48/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate congestion at 48",
+          "weight": 33.901
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "0/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 0.0
+        }
+      ],
+      "total_factors": 4,
+      "assessment": "This zone has moderate risk levels with contributing factors: Population Exposure, Vehicle Density. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 48.43,
+    "congestion_delta": -7.28,
+    "average_speed_kmh": 51.26,
+    "speed_delta": 3.72,
+    "vehicle_density": 39.39,
+    "density_delta": -3.51,
+    "population_density": 15099,
+    "red_light_violations": 6,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 30,
+    "recommended_green_seconds": 38,
+    "change_seconds": 8,
+    "change_percent": 26.7,
+    "urgency": "HIGH",
+    "reason": "Elevated traffic density needs extended clearance time",
+    "factors": {
+      "congestion_factor": 1.39,
+      "density_factor": 1.16,
+      "speed_factor": 0.81,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 37519.9,
+    "total_co2_tonnes_per_year": 1951.03,
+    "idle_co2_kg": 10530.3,
+    "moving_co2_kg": 26989.6,
+    "potential_savings_kg_per_week": 2616.0,
+    "potential_savings_tonnes_per_year": 136.03,
+    "trees_equivalent_per_year": 6477,
+    "fuel_saved_liters_per_week": 1132.5,
+    "citizens_impacted": 30198,
+    "optimization_factor_pct": 24.8
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "Colaba is within safe operating parameters (0% risk). Continue routine monitoring. Optimizing signals could save 2616 kg CO2/week, equivalent to 6477 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_10",
     "week": 2,
     "zone_type": "Residential",
@@ -51,6 +164,15 @@
     "location_name": "Colaba",
     "city": "Mumbai",
     "latitude": 18.922,
-    "longitude": 72.8347
+    "longitude": 72.8347,
+    "predicted_risk_probability": null,
+    "risk_score": 0.0,
+    "population_exposure_score": 98.6996,
+    "vehicle_exposure_score": 71.7486,
+    "temporal_trend_score": 50.0,
+    "priority_score": 46.5246,
+    "priority_rank": 3,
+    "priority_level": "MODERATE",
+    "risk_prob": null
   }
 }

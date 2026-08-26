@@ -1,8 +1,121 @@
 {
   "zone_id": "Zone_25",
+  "location_name": "Okhla",
+  "city": "Delhi",
+  "zone_type": "Residential",
   "week": 49,
-  "predicted_risk_probability": 0.6504004970457792,
-  "metrics": {
+  "latitude": 28.5355,
+  "longitude": 77.264,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.6504,
+    "predicted_risk_percentage": 65.04,
+    "risk_label": "HIGH RISK",
+    "risk_color": "#f97316",
+    "risk_delta_vs_prev_week": 37.4137,
+    "actual_incident": 1
+  },
+  "priority": {
+    "priority_score": 63.1457,
+    "priority_rank": 10,
+    "priority_level": "HIGH",
+    "components": {
+      "risk_score": 65.04,
+      "population_exposure_score": 67.7419,
+      "vehicle_exposure_score": 48.2141,
+      "temporal_trend_score": 70.3428
+    },
+    "explanation": {
+      "priority_level": "HIGH",
+      "priority_score": 63.1,
+      "top_contributors": [
+        {
+          "factor": "Worsening Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "70/100",
+          "impact": "HIGH",
+          "detail": "4-week congestion trend is actively worsening \u2014 conditions deteriorating",
+          "weight": 70.3428
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "68/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 10790 residents/km\u00b2",
+          "weight": 67.7419
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "65/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 65.04
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "47/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate congestion at 47",
+          "weight": 32.634
+        }
+      ],
+      "total_factors": 4,
+      "assessment": "This zone shows significant risk elevation driven by Worsening Trend, Population Exposure. Proactive intervention should be scheduled within the current planning cycle."
+    }
+  },
+  "telemetry": {
+    "congestion": 46.62,
+    "congestion_delta": 18.69,
+    "average_speed_kmh": 45.85,
+    "speed_delta": -11.81,
+    "vehicle_density": 41.71,
+    "density_delta": 1.11,
+    "population_density": 10790,
+    "red_light_violations": 5,
+    "weather": "Light Rain",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 30,
+    "recommended_green_seconds": 42,
+    "change_seconds": 12,
+    "change_percent": 40.0,
+    "urgency": "HIGH",
+    "reason": "Elevated traffic density needs extended clearance time",
+    "factors": {
+      "congestion_factor": 1.37,
+      "density_factor": 1.17,
+      "speed_factor": 0.83,
+      "event_boost": 1.0,
+      "weather_boost": 1.08
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 40134.0,
+    "total_co2_tonnes_per_year": 2086.97,
+    "idle_co2_kg": 10733.8,
+    "moving_co2_kg": 29400.2,
+    "potential_savings_kg_per_week": 2647.2,
+    "potential_savings_tonnes_per_year": 137.65,
+    "trees_equivalent_per_year": 6554,
+    "fuel_saved_liters_per_week": 1146.0,
+    "citizens_impacted": 21580,
+    "optimization_factor_pct": 24.7
+  },
+  "interventions": [
+    {
+      "id": "ROAD_MAINTENANCE",
+      "name": "Road Maintenance Inspection",
+      "icon": "\ud83d\udee3\ufe0f",
+      "severity": "MEDIUM",
+      "description": "Deteriorated road surface combined with elevated risk indicates infrastructure maintenance need.",
+      "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
+    }
+  ],
+  "executive_briefing": "Okhla is in a critical safety state with 65% incident risk. Continue routine monitoring. Optimizing signals could save 2647 kg CO2/week, equivalent to 6554 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_25",
     "week": 49,
     "zone_type": "Residential",
@@ -51,6 +164,15 @@
     "location_name": "Okhla",
     "city": "Delhi",
     "latitude": 28.5355,
-    "longitude": 77.264
+    "longitude": 77.264,
+    "predicted_risk_probability": 0.6504,
+    "risk_score": 65.04,
+    "population_exposure_score": 67.7419,
+    "vehicle_exposure_score": 48.2141,
+    "temporal_trend_score": 70.3428,
+    "priority_score": 63.1457,
+    "priority_rank": 10,
+    "priority_level": "HIGH",
+    "risk_prob": 0.6504
   }
 }

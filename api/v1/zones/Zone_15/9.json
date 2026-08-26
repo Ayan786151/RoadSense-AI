@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_15",
+  "location_name": "Dwarka",
+  "city": "Delhi",
+  "zone_type": "Residential",
   "week": 9,
-  "predicted_risk_probability": 0.3051518747376186,
-  "metrics": {
+  "latitude": 28.5921,
+  "longitude": 77.046,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.3052,
+    "predicted_risk_percentage": 30.52,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": 1.9131,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 60.1423,
+    "priority_rank": 5,
+    "priority_level": "HIGH",
+    "components": {
+      "risk_score": 30.5152,
+      "population_exposure_score": 97.0041,
+      "vehicle_exposure_score": 85.9433,
+      "temporal_trend_score": 43.3099
+    },
+    "explanation": {
+      "priority_level": "HIGH",
+      "priority_score": 60.1,
+      "top_contributors": [
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "97/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 14863 residents/km\u00b2",
+          "weight": 97.0041
+        },
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "86/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 85.9433
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "31/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 30.5152
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone shows significant risk elevation driven by Population Exposure, Vehicle Density. Proactive intervention should be scheduled within the current planning cycle."
+    }
+  },
+  "telemetry": {
+    "congestion": 34.59,
+    "congestion_delta": 0.59,
+    "average_speed_kmh": 59.45,
+    "speed_delta": 1.75,
+    "vehicle_density": 55.76,
+    "density_delta": -0.71,
+    "population_density": 14863,
+    "red_light_violations": 3,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 30,
+    "recommended_green_seconds": 36,
+    "change_seconds": 6,
+    "change_percent": 20.0,
+    "urgency": "MODERATE",
+    "reason": "Slight adjustment for current conditions",
+    "factors": {
+      "congestion_factor": 1.28,
+      "density_factor": 1.22,
+      "speed_factor": 0.78,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 66848.9,
+    "total_co2_tonnes_per_year": 3476.14,
+    "idle_co2_kg": 10646.6,
+    "moving_co2_kg": 56202.3,
+    "potential_savings_kg_per_week": 2497.6,
+    "potential_savings_tonnes_per_year": 129.87,
+    "trees_equivalent_per_year": 6184,
+    "fuel_saved_liters_per_week": 1081.2,
+    "citizens_impacted": 29726,
+    "optimization_factor_pct": 23.5
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "No specific risk indicators triggered.",
+      "action": "Continue routine monitoring."
+    }
+  ],
+  "executive_briefing": "Dwarka is within safe operating parameters (31% risk). Continue routine monitoring. Optimizing signals could save 2498 kg CO2/week, equivalent to 6184 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_15",
     "week": 9,
     "zone_type": "Residential",
@@ -51,6 +156,15 @@
     "location_name": "Dwarka",
     "city": "Delhi",
     "latitude": 28.5921,
-    "longitude": 77.046
+    "longitude": 77.046,
+    "predicted_risk_probability": 0.3052,
+    "risk_score": 30.5152,
+    "population_exposure_score": 97.0041,
+    "vehicle_exposure_score": 85.9433,
+    "temporal_trend_score": 43.3099,
+    "priority_score": 60.1423,
+    "priority_rank": 5,
+    "priority_level": "HIGH",
+    "risk_prob": 0.3052
   }
 }

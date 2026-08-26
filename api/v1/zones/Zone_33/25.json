@@ -1,8 +1,137 @@
 {
   "zone_id": "Zone_33",
+  "location_name": "Aminabad",
+  "city": "Lucknow",
+  "zone_type": "Commercial_Downtown",
   "week": 25,
-  "predicted_risk_probability": 0.7821560370499949,
-  "metrics": {
+  "latitude": 26.8465,
+  "longitude": 80.94,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.7822,
+    "predicted_risk_percentage": 78.22,
+    "risk_label": "CRITICAL RISK",
+    "risk_color": "#ef4444",
+    "risk_delta_vs_prev_week": 4.8706,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 64.1865,
+    "priority_rank": 7,
+    "priority_level": "HIGH",
+    "components": {
+      "risk_score": 78.2156,
+      "population_exposure_score": 40.1178,
+      "vehicle_exposure_score": 84.0245,
+      "temporal_trend_score": 40.4395
+    },
+    "explanation": {
+      "priority_level": "HIGH",
+      "priority_score": 64.2,
+      "top_contributors": [
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "84/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 84.0245
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udd34",
+          "value": "78/100",
+          "impact": "HIGH",
+          "detail": "Model-estimated risk score is in the critical range",
+          "weight": 78.2156
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "78/100",
+          "impact": "HIGH",
+          "detail": "Congestion index at 78 \u2014 severe traffic flow degradation",
+          "weight": 77.83
+        },
+        {
+          "factor": "Violation Count",
+          "icon": "\ud83d\udea8",
+          "value": "11",
+          "impact": "HIGH",
+          "detail": "11 red-light violations recorded \u2014 intersection safety concern",
+          "weight": 55
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "40/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 28.0825
+        }
+      ],
+      "total_factors": 5,
+      "assessment": "This zone shows significant risk elevation driven by Vehicle Density, Risk Score. Proactive intervention should be scheduled within the current planning cycle."
+    }
+  },
+  "telemetry": {
+    "congestion": 77.83,
+    "congestion_delta": 10.41,
+    "average_speed_kmh": 37.01,
+    "speed_delta": -5.96,
+    "vehicle_density": 64.97,
+    "density_delta": 7.66,
+    "population_density": 6945,
+    "red_light_violations": 11,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 40,
+    "recommended_green_seconds": 70,
+    "change_seconds": 30,
+    "change_percent": 75.0,
+    "urgency": "CRITICAL",
+    "reason": "Severe congestion requires significantly extended green phase",
+    "factors": {
+      "congestion_factor": 1.62,
+      "density_factor": 1.26,
+      "speed_factor": 0.86,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 43265.4,
+    "total_co2_tonnes_per_year": 2249.8,
+    "idle_co2_kg": 27912.5,
+    "moving_co2_kg": 15352.9,
+    "potential_savings_kg_per_week": 7754.9,
+    "potential_savings_tonnes_per_year": 403.26,
+    "trees_equivalent_per_year": 19202,
+    "fuel_saved_liters_per_week": 3357.1,
+    "citizens_impacted": 13890,
+    "optimization_factor_pct": 27.8
+  },
+  "interventions": [
+    {
+      "id": "CONGESTION_MANAGEMENT",
+      "name": "Congestion Management & Diversion",
+      "icon": "\ud83d\ude97",
+      "severity": "CRITICAL",
+      "description": "Severe congestion with high vehicle density requires active demand management.",
+      "action": "Activate dynamic message signs for route diversion. Consider congestion pricing or access restrictions."
+    },
+    {
+      "id": "VIOLATION_ENFORCEMENT",
+      "name": "Red-Light Violation Enforcement",
+      "icon": "\ud83d\udea8",
+      "severity": "HIGH",
+      "description": "Elevated red-light violation count indicates intersection compliance failure.",
+      "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
+    }
+  ],
+  "executive_briefing": "Aminabad is in a critical safety state with 78% incident risk. Signal optimization recommended \u2014 congestion at 78/100 with speeds averaging 37 km/h. Optimizing signals could save 7755 kg CO2/week, equivalent to 19202 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_33",
     "week": 25,
     "zone_type": "Commercial_Downtown",
@@ -51,6 +180,15 @@
     "location_name": "Aminabad",
     "city": "Lucknow",
     "latitude": 26.8465,
-    "longitude": 80.94
+    "longitude": 80.94,
+    "predicted_risk_probability": 0.7822,
+    "risk_score": 78.2156,
+    "population_exposure_score": 40.1178,
+    "vehicle_exposure_score": 84.0245,
+    "temporal_trend_score": 40.4395,
+    "priority_score": 64.1865,
+    "priority_rank": 7,
+    "priority_level": "HIGH",
+    "risk_prob": 0.7822
   }
 }

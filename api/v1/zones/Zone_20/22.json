@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_20",
+  "location_name": "Vasant Kunj",
+  "city": "Delhi",
+  "zone_type": "Commercial_Downtown",
   "week": 22,
-  "predicted_risk_probability": 0.16744403017205708,
-  "metrics": {
+  "latitude": 28.5293,
+  "longitude": 77.1541,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.1674,
+    "predicted_risk_percentage": 16.74,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": 1.0247,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 27.9702,
+    "priority_rank": 36,
+    "priority_level": "LOW",
+    "components": {
+      "risk_score": 16.7444,
+      "population_exposure_score": 16.8044,
+      "vehicle_exposure_score": 31.005,
+      "temporal_trend_score": 72.4687
+    },
+    "explanation": {
+      "priority_level": "LOW",
+      "priority_score": 28.0,
+      "top_contributors": [
+        {
+          "factor": "Worsening Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "72/100",
+          "impact": "HIGH",
+          "detail": "4-week congestion trend is actively worsening \u2014 conditions deteriorating",
+          "weight": 72.4687
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "17/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 16.7444
+        }
+      ],
+      "total_factors": 2,
+      "assessment": "This zone is currently within acceptable safety parameters. Routine monitoring is sufficient."
+    }
+  },
+  "telemetry": {
+    "congestion": 14.94,
+    "congestion_delta": 0.73,
+    "average_speed_kmh": 59.35,
+    "speed_delta": -2.53,
+    "vehicle_density": 23.29,
+    "density_delta": -0.97,
+    "population_density": 3700,
+    "red_light_violations": 9,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 40,
+    "recommended_green_seconds": 38,
+    "change_seconds": -2,
+    "change_percent": -5.0,
+    "urgency": "NOMINAL",
+    "reason": "Current default timing is adequate",
+    "factors": {
+      "congestion_factor": 1.12,
+      "density_factor": 1.09,
+      "speed_factor": 0.78,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 32396.2,
+    "total_co2_tonnes_per_year": 1684.6,
+    "idle_co2_kg": 1920.7,
+    "moving_co2_kg": 30475.5,
+    "potential_savings_kg_per_week": 412.8,
+    "potential_savings_tonnes_per_year": 21.47,
+    "trees_equivalent_per_year": 1022,
+    "fuel_saved_liters_per_week": 178.7,
+    "citizens_impacted": 7400,
+    "optimization_factor_pct": 21.5
+  },
+  "interventions": [
+    {
+      "id": "VIOLATION_ENFORCEMENT",
+      "name": "Red-Light Violation Enforcement",
+      "icon": "\ud83d\udea8",
+      "severity": "HIGH",
+      "description": "Elevated red-light violation count indicates intersection compliance failure.",
+      "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
+    },
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "Vasant Kunj is within safe operating parameters (17% risk). Enforcement focus needed \u2014 9 red-light violations recorded. Optimizing signals could save 413 kg CO2/week, equivalent to 1022 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_20",
     "week": 22,
     "zone_type": "Commercial_Downtown",
@@ -51,6 +156,15 @@
     "location_name": "Vasant Kunj",
     "city": "Delhi",
     "latitude": 28.5293,
-    "longitude": 77.1541
+    "longitude": 77.1541,
+    "predicted_risk_probability": 0.1674,
+    "risk_score": 16.7444,
+    "population_exposure_score": 16.8044,
+    "vehicle_exposure_score": 31.005,
+    "temporal_trend_score": 72.4687,
+    "priority_score": 27.9702,
+    "priority_rank": 36,
+    "priority_level": "LOW",
+    "risk_prob": 0.1674
   }
 }

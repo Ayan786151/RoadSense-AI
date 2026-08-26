@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_06",
+  "location_name": "Borivali",
+  "city": "Mumbai",
+  "zone_type": "University_District",
   "week": 2,
-  "predicted_risk_probability": null,
-  "metrics": {
+  "latitude": 19.2307,
+  "longitude": 72.8567,
+  "risk_analysis": {
+    "predicted_risk_probability": null,
+    "predicted_risk_percentage": null,
+    "risk_label": "BASELINE WARMUP",
+    "risk_color": "#71717a",
+    "risk_delta_vs_prev_week": null,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 30.7078,
+    "priority_rank": 26,
+    "priority_level": "LOW",
+    "components": {
+      "risk_score": 0.0,
+      "population_exposure_score": 53.0642,
+      "vehicle_exposure_score": 49.7086,
+      "temporal_trend_score": 50.0
+    },
+    "explanation": {
+      "priority_level": "LOW",
+      "priority_score": 30.7,
+      "top_contributors": [
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "53/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 37.1449
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "0/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 0.0
+        }
+      ],
+      "total_factors": 2,
+      "assessment": "This zone is currently within acceptable safety parameters. Routine monitoring is sufficient."
+    }
+  },
+  "telemetry": {
+    "congestion": 16.58,
+    "congestion_delta": 2.71,
+    "average_speed_kmh": 63.37,
+    "speed_delta": 0.2,
+    "vehicle_density": 27.29,
+    "density_delta": -5.4,
+    "population_density": 8747,
+    "red_light_violations": 8,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 33,
+    "change_seconds": -2,
+    "change_percent": -5.7,
+    "urgency": "NOMINAL",
+    "reason": "Current default timing is adequate",
+    "factors": {
+      "congestion_factor": 1.13,
+      "density_factor": 1.11,
+      "speed_factor": 0.76,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 39890.8,
+    "total_co2_tonnes_per_year": 2074.32,
+    "idle_co2_kg": 2497.6,
+    "moving_co2_kg": 37393.2,
+    "potential_savings_kg_per_week": 540.9,
+    "potential_savings_tonnes_per_year": 28.13,
+    "trees_equivalent_per_year": 1339,
+    "fuel_saved_liters_per_week": 234.2,
+    "citizens_impacted": 17494,
+    "optimization_factor_pct": 21.7
+  },
+  "interventions": [
+    {
+      "id": "VIOLATION_ENFORCEMENT",
+      "name": "Red-Light Violation Enforcement",
+      "icon": "\ud83d\udea8",
+      "severity": "HIGH",
+      "description": "Elevated red-light violation count indicates intersection compliance failure.",
+      "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
+    },
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "Borivali is within safe operating parameters (0% risk). Continue routine monitoring. Optimizing signals could save 541 kg CO2/week, equivalent to 1339 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_06",
     "week": 2,
     "zone_type": "University_District",
@@ -51,6 +156,15 @@
     "location_name": "Borivali",
     "city": "Mumbai",
     "latitude": 19.2307,
-    "longitude": 72.8567
+    "longitude": 72.8567,
+    "predicted_risk_probability": null,
+    "risk_score": 0.0,
+    "population_exposure_score": 53.0642,
+    "vehicle_exposure_score": 49.7086,
+    "temporal_trend_score": 50.0,
+    "priority_score": 30.7078,
+    "priority_rank": 26,
+    "priority_level": "LOW",
+    "risk_prob": null
   }
 }

@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_12",
+  "location_name": "Malad",
+  "city": "Mumbai",
+  "zone_type": "Commercial_Downtown",
   "week": 36,
-  "predicted_risk_probability": 0.5400601254591919,
-  "metrics": {
+  "latitude": 19.1874,
+  "longitude": 72.8484,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.5401,
+    "predicted_risk_percentage": 54.01,
+    "risk_label": "MODERATE RISK",
+    "risk_color": "#eab308",
+    "risk_delta_vs_prev_week": -4.1478,
+    "actual_incident": 1
+  },
+  "priority": {
+    "priority_score": 46.0902,
+    "priority_rank": 27,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 54.006,
+      "population_exposure_score": 52.9061,
+      "vehicle_exposure_score": 44.4602,
+      "temporal_trend_score": 15.7949
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 46.1,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "54/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 54.006
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "53/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 37.0343
+        },
+        {
+          "factor": "Improving Trend",
+          "icon": "\ud83d\udcc9",
+          "value": "16/100",
+          "impact": "POSITIVE",
+          "detail": "Conditions are improving over past 4 weeks",
+          "weight": -15.7949
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone has moderate risk levels with contributing factors: Risk Score, Population Exposure. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 22.24,
+    "congestion_delta": -19.13,
+    "average_speed_kmh": 56.44,
+    "speed_delta": 9.86,
+    "vehicle_density": 34.71,
+    "density_delta": -4.02,
+    "population_density": 8725,
+    "red_light_violations": 4,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 40,
+    "recommended_green_seconds": 42,
+    "change_seconds": 2,
+    "change_percent": 5.0,
+    "urgency": "NOMINAL",
+    "reason": "Current default timing is adequate",
+    "factors": {
+      "congestion_factor": 1.18,
+      "density_factor": 1.14,
+      "speed_factor": 0.79,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 43746.2,
+    "total_co2_tonnes_per_year": 2274.8,
+    "idle_co2_kg": 4261.2,
+    "moving_co2_kg": 39485.1,
+    "potential_savings_kg_per_week": 947.0,
+    "potential_savings_tonnes_per_year": 49.24,
+    "trees_equivalent_per_year": 2344,
+    "fuel_saved_liters_per_week": 410.0,
+    "citizens_impacted": 17450,
+    "optimization_factor_pct": 22.2
+  },
+  "interventions": [
+    {
+      "id": "SPEED_CALMING",
+      "name": "Speed Calming & Enforcement",
+      "icon": "\ud83c\udfce\ufe0f",
+      "severity": "HIGH",
+      "description": "High average speed combined with elevated risk score suggests speed-related hazards.",
+      "action": "Deploy speed calming measures (speed bumps, radar signs) and increase enforcement patrols."
+    }
+  ],
+  "executive_briefing": "Malad shows elevated risk at 54%. Continue routine monitoring. Optimizing signals could save 947 kg CO2/week, equivalent to 2344 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_12",
     "week": 36,
     "zone_type": "Commercial_Downtown",
@@ -51,6 +156,15 @@
     "location_name": "Malad",
     "city": "Mumbai",
     "latitude": 19.1874,
-    "longitude": 72.8484
+    "longitude": 72.8484,
+    "predicted_risk_probability": 0.5401,
+    "risk_score": 54.006,
+    "population_exposure_score": 52.9061,
+    "vehicle_exposure_score": 44.4602,
+    "temporal_trend_score": 15.7949,
+    "priority_score": 46.0902,
+    "priority_rank": 27,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.5401
   }
 }

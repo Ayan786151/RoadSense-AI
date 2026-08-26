@@ -1,8 +1,97 @@
 {
   "zone_id": "Zone_13",
+  "location_name": "Chembur",
+  "city": "Mumbai",
+  "zone_type": "Suburban_LowDensity",
   "week": 4,
-  "predicted_risk_probability": null,
-  "metrics": {
+  "latitude": 19.062,
+  "longitude": 72.897,
+  "risk_analysis": {
+    "predicted_risk_probability": null,
+    "predicted_risk_percentage": null,
+    "risk_label": "BASELINE WARMUP",
+    "risk_color": "#71717a",
+    "risk_delta_vs_prev_week": null,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 7.9084,
+    "priority_rank": 50,
+    "priority_level": "LOW",
+    "components": {
+      "risk_score": 0.0,
+      "population_exposure_score": 0.0,
+      "vehicle_exposure_score": 2.0421,
+      "temporal_trend_score": 50.0
+    },
+    "explanation": {
+      "priority_level": "LOW",
+      "priority_score": 7.9,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "0/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 0.0
+        }
+      ],
+      "total_factors": 1,
+      "assessment": "This zone is currently within acceptable safety parameters. Routine monitoring is sufficient."
+    }
+  },
+  "telemetry": {
+    "congestion": 8.16,
+    "congestion_delta": -1.06,
+    "average_speed_kmh": 55.03,
+    "speed_delta": -5.86,
+    "vehicle_density": 1.27,
+    "density_delta": 1.27,
+    "population_density": 1361,
+    "red_light_violations": 1,
+    "weather": "Light Rain",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 25,
+    "recommended_green_seconds": 22,
+    "change_seconds": -3,
+    "change_percent": -12.0,
+    "urgency": "OPTIMIZE",
+    "reason": "Low traffic \u2014 reduce green time to improve cross-traffic flow",
+    "factors": {
+      "congestion_factor": 1.07,
+      "density_factor": 1.01,
+      "speed_factor": 0.79,
+      "event_boost": 1.0,
+      "weather_boost": 1.08
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 1720.9,
+    "total_co2_tonnes_per_year": 89.49,
+    "idle_co2_kg": 57.2,
+    "moving_co2_kg": 1663.7,
+    "potential_savings_kg_per_week": 11.9,
+    "potential_savings_tonnes_per_year": 0.62,
+    "trees_equivalent_per_year": 29,
+    "fuel_saved_liters_per_week": 5.2,
+    "citizens_impacted": 2722,
+    "optimization_factor_pct": 20.8
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "Chembur is within safe operating parameters (0% risk). Continue routine monitoring. Optimizing signals could save 12 kg CO2/week, equivalent to 29 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_13",
     "week": 4,
     "zone_type": "Suburban_LowDensity",
@@ -51,6 +140,15 @@
     "location_name": "Chembur",
     "city": "Mumbai",
     "latitude": 19.062,
-    "longitude": 72.897
+    "longitude": 72.897,
+    "predicted_risk_probability": null,
+    "risk_score": 0.0,
+    "population_exposure_score": 0.0,
+    "vehicle_exposure_score": 2.0421,
+    "temporal_trend_score": 50.0,
+    "priority_score": 7.9084,
+    "priority_rank": 50,
+    "priority_level": "LOW",
+    "risk_prob": null
   }
 }

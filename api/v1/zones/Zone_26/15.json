@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_26",
+  "location_name": "Hazratganj",
+  "city": "Lucknow",
+  "zone_type": "University_District",
   "week": 15,
-  "predicted_risk_probability": 0.4326649712255976,
-  "metrics": {
+  "latitude": 26.85,
+  "longitude": 80.949,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.4327,
+    "predicted_risk_percentage": 43.27,
+    "risk_label": "MODERATE RISK",
+    "risk_color": "#eab308",
+    "risk_delta_vs_prev_week": 27.372,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 48.8859,
+    "priority_rank": 19,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 43.2665,
+      "population_exposure_score": 45.384,
+      "vehicle_exposure_score": 50.2933,
+      "temporal_trend_score": 67.8308
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 48.9,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "43/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 43.2665
+        },
+        {
+          "factor": "Rising Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "68/100",
+          "impact": "MEDIUM",
+          "detail": "Slight upward trend in congestion over past 4 weeks",
+          "weight": 40.6985
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "45/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 31.7688
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone has moderate risk levels with contributing factors: Risk Score, Rising Trend. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 35.83,
+    "congestion_delta": 21.88,
+    "average_speed_kmh": 46.58,
+    "speed_delta": -18.84,
+    "vehicle_density": 35.7,
+    "density_delta": 7.33,
+    "population_density": 7678,
+    "red_light_violations": 5,
+    "weather": "Light Rain",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 45,
+    "change_seconds": 10,
+    "change_percent": 28.6,
+    "urgency": "HIGH",
+    "reason": "Elevated traffic density needs extended clearance time",
+    "factors": {
+      "congestion_factor": 1.29,
+      "density_factor": 1.14,
+      "speed_factor": 0.83,
+      "event_boost": 1.0,
+      "weather_boost": 1.08
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 37792.9,
+    "total_co2_tonnes_per_year": 1965.23,
+    "idle_co2_kg": 7060.8,
+    "moving_co2_kg": 30732.1,
+    "potential_savings_kg_per_week": 1665.1,
+    "potential_savings_tonnes_per_year": 86.59,
+    "trees_equivalent_per_year": 4123,
+    "fuel_saved_liters_per_week": 720.8,
+    "citizens_impacted": 15356,
+    "optimization_factor_pct": 23.6
+  },
+  "interventions": [
+    {
+      "id": "ROAD_MAINTENANCE",
+      "name": "Road Maintenance Inspection",
+      "icon": "\ud83d\udee3\ufe0f",
+      "severity": "MEDIUM",
+      "description": "Deteriorated road surface combined with elevated risk indicates infrastructure maintenance need.",
+      "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
+    }
+  ],
+  "executive_briefing": "Hazratganj shows elevated risk at 43%. Continue routine monitoring. Optimizing signals could save 1665 kg CO2/week, equivalent to 4123 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_26",
     "week": 15,
     "zone_type": "University_District",
@@ -51,6 +156,15 @@
     "location_name": "Hazratganj",
     "city": "Lucknow",
     "latitude": 26.85,
-    "longitude": 80.949
+    "longitude": 80.949,
+    "predicted_risk_probability": 0.4327,
+    "risk_score": 43.2665,
+    "population_exposure_score": 45.384,
+    "vehicle_exposure_score": 50.2933,
+    "temporal_trend_score": 67.8308,
+    "priority_score": 48.8859,
+    "priority_rank": 19,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.4327
   }
 }

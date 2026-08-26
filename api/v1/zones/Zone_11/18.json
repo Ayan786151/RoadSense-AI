@@ -1,8 +1,121 @@
 {
   "zone_id": "Zone_11",
+  "location_name": "Lower Parel",
+  "city": "Mumbai",
+  "zone_type": "Residential",
   "week": 18,
-  "predicted_risk_probability": 0.4611806992860633,
-  "metrics": {
+  "latitude": 18.9988,
+  "longitude": 72.8258,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.4612,
+    "predicted_risk_percentage": 46.12,
+    "risk_label": "MODERATE RISK",
+    "risk_color": "#eab308",
+    "risk_delta_vs_prev_week": -42.1739,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 54.0538,
+    "priority_rank": 20,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 46.1181,
+      "population_exposure_score": 61.7429,
+      "vehicle_exposure_score": 47.8231,
+      "temporal_trend_score": 70.7082
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 54.1,
+      "top_contributors": [
+        {
+          "factor": "Worsening Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "71/100",
+          "impact": "HIGH",
+          "detail": "4-week congestion trend is actively worsening \u2014 conditions deteriorating",
+          "weight": 70.7082
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "62/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 9955 residents/km\u00b2",
+          "weight": 61.7429
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "46/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 46.1181
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "47/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate congestion at 47",
+          "weight": 32.725
+        }
+      ],
+      "total_factors": 4,
+      "assessment": "This zone has moderate risk levels with contributing factors: Worsening Trend, Population Exposure. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 46.75,
+    "congestion_delta": -16.95,
+    "average_speed_kmh": 49.75,
+    "speed_delta": 12.48,
+    "vehicle_density": 35.26,
+    "density_delta": 3.82,
+    "population_density": 9955,
+    "red_light_violations": 4,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 30,
+    "recommended_green_seconds": 38,
+    "change_seconds": 8,
+    "change_percent": 26.7,
+    "urgency": "HIGH",
+    "reason": "Elevated traffic density needs extended clearance time",
+    "factors": {
+      "congestion_factor": 1.37,
+      "density_factor": 1.14,
+      "speed_factor": 0.81,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 36001.4,
+    "total_co2_tonnes_per_year": 1872.07,
+    "idle_co2_kg": 9099.2,
+    "moving_co2_kg": 26902.2,
+    "potential_savings_kg_per_week": 2245.2,
+    "potential_savings_tonnes_per_year": 116.75,
+    "trees_equivalent_per_year": 5559,
+    "fuel_saved_liters_per_week": 972.0,
+    "citizens_impacted": 19910,
+    "optimization_factor_pct": 24.7
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "No specific risk indicators triggered.",
+      "action": "Continue routine monitoring."
+    }
+  ],
+  "executive_briefing": "Lower Parel shows elevated risk at 46%. Continue routine monitoring. Optimizing signals could save 2245 kg CO2/week, equivalent to 5559 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_11",
     "week": 18,
     "zone_type": "Residential",
@@ -51,6 +164,15 @@
     "location_name": "Lower Parel",
     "city": "Mumbai",
     "latitude": 18.9988,
-    "longitude": 72.8258
+    "longitude": 72.8258,
+    "predicted_risk_probability": 0.4612,
+    "risk_score": 46.1181,
+    "population_exposure_score": 61.7429,
+    "vehicle_exposure_score": 47.8231,
+    "temporal_trend_score": 70.7082,
+    "priority_score": 54.0538,
+    "priority_rank": 20,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.4612
   }
 }

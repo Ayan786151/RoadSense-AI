@@ -1,8 +1,97 @@
 {
   "zone_id": "Zone_18",
+  "location_name": "Karol Bagh",
+  "city": "Delhi",
+  "zone_type": "Industrial_Corridor",
   "week": 51,
-  "predicted_risk_probability": 0.1941141729302723,
-  "metrics": {
+  "latitude": 28.6514,
+  "longitude": 77.1907,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.1941,
+    "predicted_risk_percentage": 19.41,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": 1.9227,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 21.9976,
+    "priority_rank": 40,
+    "priority_level": "LOW",
+    "components": {
+      "risk_score": 19.4114,
+      "population_exposure_score": 13.8947,
+      "vehicle_exposure_score": 21.4141,
+      "temporal_trend_score": 43.1767
+    },
+    "explanation": {
+      "priority_level": "LOW",
+      "priority_score": 22.0,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "19/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 19.4114
+        }
+      ],
+      "total_factors": 1,
+      "assessment": "This zone is currently within acceptable safety parameters. Routine monitoring is sufficient."
+    }
+  },
+  "telemetry": {
+    "congestion": 11.39,
+    "congestion_delta": 3.31,
+    "average_speed_kmh": 59.46,
+    "speed_delta": -3.2,
+    "vehicle_density": 16.93,
+    "density_delta": 8.54,
+    "population_density": 3295,
+    "red_light_violations": 0,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 45,
+    "recommended_green_seconds": 40,
+    "change_seconds": -5,
+    "change_percent": -11.1,
+    "urgency": "OPTIMIZE",
+    "reason": "Low traffic \u2014 reduce green time to improve cross-traffic flow",
+    "factors": {
+      "congestion_factor": 1.09,
+      "density_factor": 1.07,
+      "speed_factor": 0.78,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 24185.1,
+    "total_co2_tonnes_per_year": 1257.62,
+    "idle_co2_kg": 1064.4,
+    "moving_co2_kg": 23120.6,
+    "potential_savings_kg_per_week": 225.0,
+    "potential_savings_tonnes_per_year": 11.7,
+    "trees_equivalent_per_year": 557,
+    "fuel_saved_liters_per_week": 97.4,
+    "citizens_impacted": 6590,
+    "optimization_factor_pct": 21.1
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "Karol Bagh is within safe operating parameters (19% risk). Continue routine monitoring. Optimizing signals could save 225 kg CO2/week, equivalent to 557 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_18",
     "week": 51,
     "zone_type": "Industrial_Corridor",
@@ -51,6 +140,15 @@
     "location_name": "Karol Bagh",
     "city": "Delhi",
     "latitude": 28.6514,
-    "longitude": 77.1907
+    "longitude": 77.1907,
+    "predicted_risk_probability": 0.1941,
+    "risk_score": 19.4114,
+    "population_exposure_score": 13.8947,
+    "vehicle_exposure_score": 21.4141,
+    "temporal_trend_score": 43.1767,
+    "priority_score": 21.9976,
+    "priority_rank": 40,
+    "priority_level": "LOW",
+    "risk_prob": 0.1941
   }
 }

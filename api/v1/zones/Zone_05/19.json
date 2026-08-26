@@ -1,8 +1,129 @@
 {
   "zone_id": "Zone_05",
+  "location_name": "Powai",
+  "city": "Mumbai",
+  "zone_type": "Commercial_Downtown",
   "week": 19,
-  "predicted_risk_probability": 0.7308859612364148,
-  "metrics": {
+  "latitude": 19.1176,
+  "longitude": 72.906,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.7309,
+    "predicted_risk_percentage": 73.09,
+    "risk_label": "HIGH RISK",
+    "risk_color": "#f97316",
+    "risk_delta_vs_prev_week": 27.5649,
+    "actual_incident": 1
+  },
+  "priority": {
+    "priority_score": 57.6483,
+    "priority_rank": 12,
+    "priority_level": "HIGH",
+    "components": {
+      "risk_score": 73.0886,
+      "population_exposure_score": 50.1616,
+      "vehicle_exposure_score": 56.3349,
+      "temporal_trend_score": 30.7035
+    },
+    "explanation": {
+      "priority_level": "HIGH",
+      "priority_score": 57.6,
+      "top_contributors": [
+        {
+          "factor": "Violation Count",
+          "icon": "\ud83d\udea8",
+          "value": "19",
+          "impact": "HIGH",
+          "detail": "19 red-light violations recorded \u2014 intersection safety concern",
+          "weight": 95
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udd34",
+          "value": "73/100",
+          "impact": "HIGH",
+          "detail": "Model-estimated risk score is in the critical range",
+          "weight": 73.0886
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "50/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 35.1132
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "49/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate congestion at 49",
+          "weight": 34.342
+        }
+      ],
+      "total_factors": 4,
+      "assessment": "This zone shows significant risk elevation driven by Violation Count, Risk Score. Proactive intervention should be scheduled within the current planning cycle."
+    }
+  },
+  "telemetry": {
+    "congestion": 49.06,
+    "congestion_delta": 14.77,
+    "average_speed_kmh": 49.79,
+    "speed_delta": -6.95,
+    "vehicle_density": 45.22,
+    "density_delta": 8.47,
+    "population_density": 8343,
+    "red_light_violations": 19,
+    "weather": "Normal",
+    "special_event": 1
+  },
+  "signal_optimization": {
+    "base_green_seconds": 40,
+    "recommended_green_seconds": 61,
+    "change_seconds": 21,
+    "change_percent": 52.5,
+    "urgency": "CRITICAL",
+    "reason": "Severe congestion requires significantly extended green phase",
+    "factors": {
+      "congestion_factor": 1.39,
+      "density_factor": 1.18,
+      "speed_factor": 0.81,
+      "event_boost": 1.15,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 45277.3,
+    "total_co2_tonnes_per_year": 2354.42,
+    "idle_co2_kg": 12246.1,
+    "moving_co2_kg": 33031.2,
+    "potential_savings_kg_per_week": 3050.0,
+    "potential_savings_tonnes_per_year": 158.6,
+    "trees_equivalent_per_year": 7552,
+    "fuel_saved_liters_per_week": 1320.4,
+    "citizens_impacted": 16686,
+    "optimization_factor_pct": 24.9
+  },
+  "interventions": [
+    {
+      "id": "VIOLATION_ENFORCEMENT",
+      "name": "Red-Light Violation Enforcement",
+      "icon": "\ud83d\udea8",
+      "severity": "HIGH",
+      "description": "Elevated red-light violation count indicates intersection compliance failure.",
+      "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
+    },
+    {
+      "id": "EVENT_TRAFFIC_PLAN",
+      "name": "Special Event Traffic Plan",
+      "icon": "\ud83c\udfaa",
+      "severity": "MEDIUM",
+      "description": "Active special event generating additional traffic demand.",
+      "action": "Activate event traffic management plan. Deploy traffic marshals and temporary signage."
+    }
+  ],
+  "executive_briefing": "Powai is in a critical safety state with 73% incident risk. Enforcement focus needed \u2014 19 red-light violations recorded. Optimizing signals could save 3050 kg CO2/week, equivalent to 7552 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_05",
     "week": 19,
     "zone_type": "Commercial_Downtown",
@@ -51,6 +172,15 @@
     "location_name": "Powai",
     "city": "Mumbai",
     "latitude": 19.1176,
-    "longitude": 72.906
+    "longitude": 72.906,
+    "predicted_risk_probability": 0.7309,
+    "risk_score": 73.0886,
+    "population_exposure_score": 50.1616,
+    "vehicle_exposure_score": 56.3349,
+    "temporal_trend_score": 30.7035,
+    "priority_score": 57.6483,
+    "priority_rank": 12,
+    "priority_level": "HIGH",
+    "risk_prob": 0.7309
   }
 }

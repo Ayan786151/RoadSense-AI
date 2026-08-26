@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_32",
+  "location_name": "Mahanagar",
+  "city": "Lucknow",
+  "zone_type": "Commercial_Downtown",
   "week": 30,
-  "predicted_risk_probability": 0.26552224764626936,
-  "metrics": {
+  "latitude": 26.8755,
+  "longitude": 80.9595,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.2655,
+    "predicted_risk_percentage": 26.55,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": 4.2966,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 39.2442,
+    "priority_rank": 29,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 26.5522,
+      "population_exposure_score": 42.2947,
+      "vehicle_exposure_score": 42.404,
+      "temporal_trend_score": 63.7921
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 39.2,
+      "top_contributors": [
+        {
+          "factor": "Rising Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "64/100",
+          "impact": "MEDIUM",
+          "detail": "Slight upward trend in congestion over past 4 weeks",
+          "weight": 38.2753
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "42/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 29.6063
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "27/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 26.5522
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone has moderate risk levels with contributing factors: Rising Trend, Population Exposure. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 16.71,
+    "congestion_delta": 0.84,
+    "average_speed_kmh": 61.94,
+    "speed_delta": -4.18,
+    "vehicle_density": 29.14,
+    "density_delta": -2.87,
+    "population_density": 7248,
+    "red_light_violations": 2,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 40,
+    "recommended_green_seconds": 38,
+    "change_seconds": -2,
+    "change_percent": -5.0,
+    "urgency": "NOMINAL",
+    "reason": "Current default timing is adequate",
+    "factors": {
+      "congestion_factor": 1.13,
+      "density_factor": 1.12,
+      "speed_factor": 0.77,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 41654.1,
+    "total_co2_tonnes_per_year": 2166.01,
+    "idle_co2_kg": 2687.9,
+    "moving_co2_kg": 38966.2,
+    "potential_savings_kg_per_week": 582.5,
+    "potential_savings_tonnes_per_year": 30.29,
+    "trees_equivalent_per_year": 1442,
+    "fuel_saved_liters_per_week": 252.2,
+    "citizens_impacted": 14496,
+    "optimization_factor_pct": 21.7
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "Mahanagar is within safe operating parameters (27% risk). Continue routine monitoring. Optimizing signals could save 582 kg CO2/week, equivalent to 1442 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_32",
     "week": 30,
     "zone_type": "Commercial_Downtown",
@@ -51,6 +156,15 @@
     "location_name": "Mahanagar",
     "city": "Lucknow",
     "latitude": 26.8755,
-    "longitude": 80.9595
+    "longitude": 80.9595,
+    "predicted_risk_probability": 0.2655,
+    "risk_score": 26.5522,
+    "population_exposure_score": 42.2947,
+    "vehicle_exposure_score": 42.404,
+    "temporal_trend_score": 63.7921,
+    "priority_score": 39.2442,
+    "priority_rank": 29,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.2655
   }
 }

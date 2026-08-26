@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_14",
+  "location_name": "Connaught Place",
+  "city": "Delhi",
+  "zone_type": "University_District",
   "week": 9,
-  "predicted_risk_probability": 0.24157268949782662,
-  "metrics": {
+  "latitude": 28.6315,
+  "longitude": 77.2167,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.2416,
+    "predicted_risk_percentage": 24.16,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": -10.3472,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 48.1434,
+    "priority_rank": 13,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 24.1573,
+      "population_exposure_score": 66.0249,
+      "vehicle_exposure_score": 69.004,
+      "temporal_trend_score": 54.4897
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 48.1,
+      "top_contributors": [
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "69/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 69.004
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "66/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 10551 residents/km\u00b2",
+          "weight": 66.0249
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "24/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 24.1573
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone has moderate risk levels with contributing factors: Vehicle Density, Population Exposure. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 24.18,
+    "congestion_delta": -5.39,
+    "average_speed_kmh": 62.69,
+    "speed_delta": 3.77,
+    "vehicle_density": 45.3,
+    "density_delta": -3.59,
+    "population_density": 10551,
+    "red_light_violations": 2,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 37,
+    "change_seconds": 2,
+    "change_percent": 5.7,
+    "urgency": "MODERATE",
+    "reason": "Slight adjustment for current conditions",
+    "factors": {
+      "congestion_factor": 1.19,
+      "density_factor": 1.18,
+      "speed_factor": 0.76,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 61856.8,
+    "total_co2_tonnes_per_year": 3216.55,
+    "idle_co2_kg": 6046.4,
+    "moving_co2_kg": 55810.4,
+    "potential_savings_kg_per_week": 1355.5,
+    "potential_savings_tonnes_per_year": 70.48,
+    "trees_equivalent_per_year": 3356,
+    "fuel_saved_liters_per_week": 586.8,
+    "citizens_impacted": 21102,
+    "optimization_factor_pct": 22.4
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "Connaught Place is within safe operating parameters (24% risk). Continue routine monitoring. Optimizing signals could save 1356 kg CO2/week, equivalent to 3356 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_14",
     "week": 9,
     "zone_type": "University_District",
@@ -51,6 +156,15 @@
     "location_name": "Connaught Place",
     "city": "Delhi",
     "latitude": 28.6315,
-    "longitude": 77.2167
+    "longitude": 77.2167,
+    "predicted_risk_probability": 0.2416,
+    "risk_score": 24.1573,
+    "population_exposure_score": 66.0249,
+    "vehicle_exposure_score": 69.004,
+    "temporal_trend_score": 54.4897,
+    "priority_score": 48.1434,
+    "priority_rank": 13,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.2416
   }
 }

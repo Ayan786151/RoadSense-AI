@@ -1,8 +1,129 @@
 {
   "zone_id": "Zone_03",
+  "location_name": "Kurla",
+  "city": "Mumbai",
+  "zone_type": "University_District",
   "week": 35,
-  "predicted_risk_probability": 0.9238839988361516,
-  "metrics": {
+  "latitude": 19.0726,
+  "longitude": 72.8845,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.9239,
+    "predicted_risk_percentage": 92.39,
+    "risk_label": "CRITICAL RISK",
+    "risk_color": "#ef4444",
+    "risk_delta_vs_prev_week": 50.7164,
+    "actual_incident": 1
+  },
+  "priority": {
+    "priority_score": 61.6495,
+    "priority_rank": 16,
+    "priority_level": "HIGH",
+    "components": {
+      "risk_score": 92.3884,
+      "population_exposure_score": 45.4343,
+      "vehicle_exposure_score": 40.1173,
+      "temporal_trend_score": 35.4139
+    },
+    "explanation": {
+      "priority_level": "HIGH",
+      "priority_score": 61.6,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udd34",
+          "value": "92/100",
+          "impact": "HIGH",
+          "detail": "Model-estimated risk score is in the critical range",
+          "weight": 92.3884
+        },
+        {
+          "factor": "Speed Anomaly",
+          "icon": "\ud83d\udc0c",
+          "value": "23 km/h",
+          "impact": "HIGH",
+          "detail": "Average speed of 23 km/h indicates near-gridlock conditions",
+          "weight": 76.76
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "62/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate congestion at 62",
+          "weight": 43.589
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "45/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 31.804
+        }
+      ],
+      "total_factors": 4,
+      "assessment": "This zone shows significant risk elevation driven by Risk Score, Speed Anomaly. Proactive intervention should be scheduled within the current planning cycle."
+    }
+  },
+  "telemetry": {
+    "congestion": 62.27,
+    "congestion_delta": 29.57,
+    "average_speed_kmh": 23.24,
+    "speed_delta": -26.41,
+    "vehicle_density": 30.0,
+    "density_delta": -1.39,
+    "population_density": 7685,
+    "red_light_violations": 6,
+    "weather": "Heavy Rain",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 63,
+    "change_seconds": 28,
+    "change_percent": 80.0,
+    "urgency": "CRITICAL",
+    "reason": "Severe congestion requires significantly extended green phase",
+    "factors": {
+      "congestion_factor": 1.5,
+      "density_factor": 1.12,
+      "speed_factor": 0.91,
+      "event_boost": 1.0,
+      "weather_boost": 1.18
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 23948.6,
+    "total_co2_tonnes_per_year": 1245.33,
+    "idle_co2_kg": 10311.9,
+    "moving_co2_kg": 13636.7,
+    "potential_savings_kg_per_week": 2704.5,
+    "potential_savings_tonnes_per_year": 140.63,
+    "trees_equivalent_per_year": 6696,
+    "fuel_saved_liters_per_week": 1170.8,
+    "citizens_impacted": 15370,
+    "optimization_factor_pct": 26.2
+  },
+  "interventions": [
+    {
+      "id": "SIGNAL_OPTIMIZATION",
+      "name": "Traffic Signal Optimization",
+      "icon": "\ud83d\udea6",
+      "severity": "HIGH",
+      "description": "High congestion with low throughput speed indicates signal timing inefficiency.",
+      "action": "Review and optimize signal timing at major intersections in this zone."
+    },
+    {
+      "id": "ROAD_MAINTENANCE",
+      "name": "Road Maintenance Inspection",
+      "icon": "\ud83d\udee3\ufe0f",
+      "severity": "MEDIUM",
+      "description": "Deteriorated road surface combined with elevated risk indicates infrastructure maintenance need.",
+      "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
+    }
+  ],
+  "executive_briefing": "Kurla is in a critical safety state with 92% incident risk. Signal optimization recommended \u2014 congestion at 62/100 with speeds averaging 23 km/h. Optimizing signals could save 2704 kg CO2/week, equivalent to 6696 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_03",
     "week": 35,
     "zone_type": "University_District",
@@ -51,6 +172,15 @@
     "location_name": "Kurla",
     "city": "Mumbai",
     "latitude": 19.0726,
-    "longitude": 72.8845
+    "longitude": 72.8845,
+    "predicted_risk_probability": 0.9239,
+    "risk_score": 92.3884,
+    "population_exposure_score": 45.4343,
+    "vehicle_exposure_score": 40.1173,
+    "temporal_trend_score": 35.4139,
+    "priority_score": 61.6495,
+    "priority_rank": 16,
+    "priority_level": "HIGH",
+    "risk_prob": 0.9239
   }
 }

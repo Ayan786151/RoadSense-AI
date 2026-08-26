@@ -1,8 +1,105 @@
 {
   "zone_id": "Zone_37",
+  "location_name": "Vrindavan Yojana",
+  "city": "Lucknow",
+  "zone_type": "Residential",
   "week": 7,
-  "predicted_risk_probability": 0.15719813889684078,
-  "metrics": {
+  "latitude": 26.79,
+  "longitude": 81.0,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.1572,
+    "predicted_risk_percentage": 15.72,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": -10.0386,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 42.559,
+    "priority_rank": 21,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 15.7198,
+      "population_exposure_score": 72.6561,
+      "vehicle_exposure_score": 50.8993,
+      "temporal_trend_score": 52.8477
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 42.6,
+      "top_contributors": [
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "73/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 11474 residents/km\u00b2",
+          "weight": 72.6561
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "16/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 15.7198
+        }
+      ],
+      "total_factors": 2,
+      "assessment": "This zone has moderate risk levels with contributing factors: Population Exposure. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 14.13,
+    "congestion_delta": -9.35,
+    "average_speed_kmh": 57.52,
+    "speed_delta": 7.23,
+    "vehicle_density": 31.13,
+    "density_delta": -0.49,
+    "population_density": 11474,
+    "red_light_violations": 2,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 30,
+    "recommended_green_seconds": 29,
+    "change_seconds": -1,
+    "change_percent": -3.3,
+    "urgency": "NOMINAL",
+    "reason": "Current default timing is adequate",
+    "factors": {
+      "congestion_factor": 1.11,
+      "density_factor": 1.12,
+      "speed_factor": 0.78,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 42282.3,
+    "total_co2_tonnes_per_year": 2198.68,
+    "idle_co2_kg": 2428.1,
+    "moving_co2_kg": 39854.2,
+    "potential_savings_kg_per_week": 519.9,
+    "potential_savings_tonnes_per_year": 27.04,
+    "trees_equivalent_per_year": 1287,
+    "fuel_saved_liters_per_week": 225.1,
+    "citizens_impacted": 22948,
+    "optimization_factor_pct": 21.4
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "Vrindavan Yojana is within safe operating parameters (16% risk). Continue routine monitoring. Optimizing signals could save 520 kg CO2/week, equivalent to 1287 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_37",
     "week": 7,
     "zone_type": "Residential",
@@ -51,6 +148,15 @@
     "location_name": "Vrindavan Yojana",
     "city": "Lucknow",
     "latitude": 26.79,
-    "longitude": 81.0
+    "longitude": 81.0,
+    "predicted_risk_probability": 0.1572,
+    "risk_score": 15.7198,
+    "population_exposure_score": 72.6561,
+    "vehicle_exposure_score": 50.8993,
+    "temporal_trend_score": 52.8477,
+    "priority_score": 42.559,
+    "priority_rank": 21,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.1572
   }
 }

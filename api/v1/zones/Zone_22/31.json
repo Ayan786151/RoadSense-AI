@@ -1,8 +1,137 @@
 {
   "zone_id": "Zone_22",
+  "location_name": "Pitampura",
+  "city": "Delhi",
+  "zone_type": "University_District",
   "week": 31,
-  "predicted_risk_probability": 0.9079262631246386,
-  "metrics": {
+  "latitude": 28.7033,
+  "longitude": 77.1322,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.9079,
+    "predicted_risk_percentage": 90.79,
+    "risk_label": "CRITICAL RISK",
+    "risk_color": "#ef4444",
+    "risk_delta_vs_prev_week": 59.7895,
+    "actual_incident": 1
+  },
+  "priority": {
+    "priority_score": 68.3444,
+    "priority_rank": 12,
+    "priority_level": "HIGH",
+    "components": {
+      "risk_score": 90.7926,
+      "population_exposure_score": 44.6081,
+      "vehicle_exposure_score": 64.0825,
+      "temporal_trend_score": 53.7254
+    },
+    "explanation": {
+      "priority_level": "HIGH",
+      "priority_score": 68.3,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udd34",
+          "value": "91/100",
+          "impact": "HIGH",
+          "detail": "Model-estimated risk score is in the critical range",
+          "weight": 90.7926
+        },
+        {
+          "factor": "Speed Anomaly",
+          "icon": "\ud83d\udc0c",
+          "value": "15 km/h",
+          "impact": "HIGH",
+          "detail": "Average speed of 15 km/h indicates near-gridlock conditions",
+          "weight": 85.27
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "77/100",
+          "impact": "HIGH",
+          "detail": "Congestion index at 77 \u2014 severe traffic flow degradation",
+          "weight": 77.19
+        },
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "64/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 64.0825
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "45/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 31.2257
+        }
+      ],
+      "total_factors": 5,
+      "assessment": "This zone shows significant risk elevation driven by Risk Score, Speed Anomaly. Proactive intervention should be scheduled within the current planning cycle."
+    }
+  },
+  "telemetry": {
+    "congestion": 77.19,
+    "congestion_delta": 46.5,
+    "average_speed_kmh": 14.73,
+    "speed_delta": -42.52,
+    "vehicle_density": 43.48,
+    "density_delta": -5.73,
+    "population_density": 7570,
+    "red_light_violations": 7,
+    "weather": "Heavy Rain",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 74,
+    "change_seconds": 39,
+    "change_percent": 111.4,
+    "urgency": "CRITICAL",
+    "reason": "Severe congestion requires significantly extended green phase",
+    "factors": {
+      "congestion_factor": 1.62,
+      "density_factor": 1.17,
+      "speed_factor": 0.94,
+      "event_boost": 1.0,
+      "weather_boost": 1.18
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 29044.8,
+    "total_co2_tonnes_per_year": 1510.33,
+    "idle_co2_kg": 18526.3,
+    "moving_co2_kg": 10518.4,
+    "potential_savings_kg_per_week": 5135.3,
+    "potential_savings_tonnes_per_year": 267.04,
+    "trees_equivalent_per_year": 12716,
+    "fuel_saved_liters_per_week": 2223.1,
+    "citizens_impacted": 15140,
+    "optimization_factor_pct": 27.7
+  },
+  "interventions": [
+    {
+      "id": "SIGNAL_OPTIMIZATION",
+      "name": "Traffic Signal Optimization",
+      "icon": "\ud83d\udea6",
+      "severity": "HIGH",
+      "description": "High congestion with low throughput speed indicates signal timing inefficiency.",
+      "action": "Review and optimize signal timing at major intersections in this zone."
+    },
+    {
+      "id": "ROAD_MAINTENANCE",
+      "name": "Road Maintenance Inspection",
+      "icon": "\ud83d\udee3\ufe0f",
+      "severity": "MEDIUM",
+      "description": "Deteriorated road surface combined with elevated risk indicates infrastructure maintenance need.",
+      "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
+    }
+  ],
+  "executive_briefing": "Pitampura is in a critical safety state with 91% incident risk. Signal optimization recommended \u2014 congestion at 77/100 with speeds averaging 15 km/h. Optimizing signals could save 5135 kg CO2/week, equivalent to 12716 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_22",
     "week": 31,
     "zone_type": "University_District",
@@ -51,6 +180,15 @@
     "location_name": "Pitampura",
     "city": "Delhi",
     "latitude": 28.7033,
-    "longitude": 77.1322
+    "longitude": 77.1322,
+    "predicted_risk_probability": 0.9079,
+    "risk_score": 90.7926,
+    "population_exposure_score": 44.6081,
+    "vehicle_exposure_score": 64.0825,
+    "temporal_trend_score": 53.7254,
+    "priority_score": 68.3444,
+    "priority_rank": 12,
+    "priority_level": "HIGH",
+    "risk_prob": 0.9079
   }
 }

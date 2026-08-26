@@ -1,8 +1,145 @@
 {
   "zone_id": "Zone_49",
+  "location_name": "Sholinganallur",
+  "city": "Chennai",
+  "zone_type": "University_District",
   "week": 15,
-  "predicted_risk_probability": 0.8148603561837839,
-  "metrics": {
+  "latitude": 12.901,
+  "longitude": 80.2279,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.8149,
+    "predicted_risk_percentage": 81.49,
+    "risk_label": "CRITICAL RISK",
+    "risk_color": "#ef4444",
+    "risk_delta_vs_prev_week": -4.5762,
+    "actual_incident": 1
+  },
+  "priority": {
+    "priority_score": 81.1845,
+    "priority_rank": 2,
+    "priority_level": "CRITICAL",
+    "components": {
+      "risk_score": 81.486,
+      "population_exposure_score": 73.1231,
+      "vehicle_exposure_score": 95.5696,
+      "temporal_trend_score": 74.6357
+    },
+    "explanation": {
+      "priority_level": "CRITICAL",
+      "priority_score": 81.2,
+      "top_contributors": [
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "96/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 95.5696
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udd34",
+          "value": "81/100",
+          "impact": "HIGH",
+          "detail": "Model-estimated risk score is in the critical range",
+          "weight": 81.486
+        },
+        {
+          "factor": "Worsening Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "75/100",
+          "impact": "HIGH",
+          "detail": "4-week congestion trend is actively worsening \u2014 conditions deteriorating",
+          "weight": 74.6357
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "73/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 11539 residents/km\u00b2",
+          "weight": 73.1231
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "67/100",
+          "impact": "HIGH",
+          "detail": "Congestion index at 67 \u2014 severe traffic flow degradation",
+          "weight": 67.02
+        }
+      ],
+      "total_factors": 5,
+      "assessment": "This zone requires URGENT attention. Primary risk drivers: Vehicle Density, Risk Score, Worsening Trend. Immediate field inspection and intervention planning recommended."
+    }
+  },
+  "telemetry": {
+    "congestion": 67.02,
+    "congestion_delta": -4.92,
+    "average_speed_kmh": 41.25,
+    "speed_delta": 1.09,
+    "vehicle_density": 65.03,
+    "density_delta": 0.38,
+    "population_density": 11539,
+    "red_light_violations": 8,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 57,
+    "change_seconds": 22,
+    "change_percent": 62.9,
+    "urgency": "CRITICAL",
+    "reason": "Severe congestion requires significantly extended green phase",
+    "factors": {
+      "congestion_factor": 1.54,
+      "density_factor": 1.26,
+      "speed_factor": 0.85,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 49536.8,
+    "total_co2_tonnes_per_year": 2575.91,
+    "idle_co2_kg": 24057.9,
+    "moving_co2_kg": 25478.9,
+    "potential_savings_kg_per_week": 6423.9,
+    "potential_savings_tonnes_per_year": 334.04,
+    "trees_equivalent_per_year": 15906,
+    "fuel_saved_liters_per_week": 2780.9,
+    "citizens_impacted": 23078,
+    "optimization_factor_pct": 26.7
+  },
+  "interventions": [
+    {
+      "id": "VIOLATION_ENFORCEMENT",
+      "name": "Red-Light Violation Enforcement",
+      "icon": "\ud83d\udea8",
+      "severity": "HIGH",
+      "description": "Elevated red-light violation count indicates intersection compliance failure.",
+      "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
+    },
+    {
+      "id": "PEDESTRIAN_SAFETY",
+      "name": "Pedestrian Crossing Intervention",
+      "icon": "\ud83d\udeb6",
+      "severity": "MEDIUM",
+      "description": "High population density zone with significant traffic congestion creates pedestrian exposure risk.",
+      "action": "Install protected pedestrian crossings, improve sidewalk infrastructure, and add pedestrian countdown signals."
+    },
+    {
+      "id": "MONITORING_UPGRADE",
+      "name": "Enhanced Monitoring & CCTV Coverage",
+      "icon": "\ud83d\udcf9",
+      "severity": "MEDIUM",
+      "description": "High-risk zone with significant population exposure warrants improved surveillance.",
+      "action": "Install additional CCTV cameras and integrate with traffic management center for real-time monitoring."
+    }
+  ],
+  "executive_briefing": "Sholinganallur is in a critical safety state with 81% incident risk. Signal optimization recommended \u2014 congestion at 67/100 with speeds averaging 41 km/h. Optimizing signals could save 6424 kg CO2/week, equivalent to 15906 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_49",
     "week": 15,
     "zone_type": "University_District",
@@ -51,6 +188,15 @@
     "location_name": "Sholinganallur",
     "city": "Chennai",
     "latitude": 12.901,
-    "longitude": 80.2279
+    "longitude": 80.2279,
+    "predicted_risk_probability": 0.8149,
+    "risk_score": 81.486,
+    "population_exposure_score": 73.1231,
+    "vehicle_exposure_score": 95.5696,
+    "temporal_trend_score": 74.6357,
+    "priority_score": 81.1845,
+    "priority_rank": 2,
+    "priority_level": "CRITICAL",
+    "risk_prob": 0.8149
   }
 }

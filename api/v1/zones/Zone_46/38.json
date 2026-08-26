@@ -1,8 +1,121 @@
 {
   "zone_id": "Zone_46",
+  "location_name": "Nungambakkam",
+  "city": "Chennai",
+  "zone_type": "University_District",
   "week": 38,
-  "predicted_risk_probability": 0.5775286177175755,
-  "metrics": {
+  "latitude": 13.0569,
+  "longitude": 80.2425,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.5775,
+    "predicted_risk_percentage": 57.75,
+    "risk_label": "HIGH RISK",
+    "risk_color": "#f97316",
+    "risk_delta_vs_prev_week": 1.1645,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 43.7073,
+    "priority_rank": 25,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 57.7529,
+      "population_exposure_score": 48.0494,
+      "vehicle_exposure_score": 42.969,
+      "temporal_trend_score": 0.0
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 43.7,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "58/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 57.7529
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "49/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate congestion at 49",
+          "weight": 33.999
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "48/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 33.6346
+        },
+        {
+          "factor": "Improving Trend",
+          "icon": "\ud83d\udcc9",
+          "value": "0/100",
+          "impact": "POSITIVE",
+          "detail": "Conditions are improving over past 4 weeks",
+          "weight": -0.0
+        }
+      ],
+      "total_factors": 4,
+      "assessment": "This zone has moderate risk levels with contributing factors: Risk Score, Congestion. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 48.57,
+    "congestion_delta": 22.94,
+    "average_speed_kmh": 43.97,
+    "speed_delta": -13.01,
+    "vehicle_density": 30.9,
+    "density_delta": 1.76,
+    "population_density": 8049,
+    "red_light_violations": 5,
+    "weather": "Light Rain",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 49,
+    "change_seconds": 14,
+    "change_percent": 40.0,
+    "urgency": "HIGH",
+    "reason": "Elevated traffic density needs extended clearance time",
+    "factors": {
+      "congestion_factor": 1.39,
+      "density_factor": 1.12,
+      "speed_factor": 0.84,
+      "event_boost": 1.0,
+      "weather_boost": 1.08
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 28408.9,
+    "total_co2_tonnes_per_year": 1477.26,
+    "idle_co2_kg": 8284.5,
+    "moving_co2_kg": 20124.4,
+    "potential_savings_kg_per_week": 2059.3,
+    "potential_savings_tonnes_per_year": 107.08,
+    "trees_equivalent_per_year": 5099,
+    "fuel_saved_liters_per_week": 891.5,
+    "citizens_impacted": 16098,
+    "optimization_factor_pct": 24.9
+  },
+  "interventions": [
+    {
+      "id": "ROAD_MAINTENANCE",
+      "name": "Road Maintenance Inspection",
+      "icon": "\ud83d\udee3\ufe0f",
+      "severity": "MEDIUM",
+      "description": "Deteriorated road surface combined with elevated risk indicates infrastructure maintenance need.",
+      "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
+    }
+  ],
+  "executive_briefing": "Nungambakkam shows elevated risk at 58%. Continue routine monitoring. Optimizing signals could save 2059 kg CO2/week, equivalent to 5099 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_46",
     "week": 38,
     "zone_type": "University_District",
@@ -51,6 +164,15 @@
     "location_name": "Nungambakkam",
     "city": "Chennai",
     "latitude": 13.0569,
-    "longitude": 80.2425
+    "longitude": 80.2425,
+    "predicted_risk_probability": 0.5775,
+    "risk_score": 57.7529,
+    "population_exposure_score": 48.0494,
+    "vehicle_exposure_score": 42.969,
+    "temporal_trend_score": 0.0,
+    "priority_score": 43.7073,
+    "priority_rank": 25,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.5775
   }
 }

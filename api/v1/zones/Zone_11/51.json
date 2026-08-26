@@ -1,8 +1,121 @@
 {
   "zone_id": "Zone_11",
+  "location_name": "Lower Parel",
+  "city": "Mumbai",
+  "zone_type": "Residential",
   "week": 51,
-  "predicted_risk_probability": 0.6707397149083957,
-  "metrics": {
+  "latitude": 18.9988,
+  "longitude": 72.8258,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.6707,
+    "predicted_risk_percentage": 67.07,
+    "risk_label": "HIGH RISK",
+    "risk_color": "#f97316",
+    "risk_delta_vs_prev_week": 35.2542,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 52.7041,
+    "priority_rank": 10,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 67.074,
+      "population_exposure_score": 61.7429,
+      "vehicle_exposure_score": 35.3276,
+      "temporal_trend_score": 22.4885
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 52.7,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "67/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 67.074
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "62/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 9955 residents/km\u00b2",
+          "weight": 61.7429
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "46/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate congestion at 46",
+          "weight": 32.487
+        },
+        {
+          "factor": "Improving Trend",
+          "icon": "\ud83d\udcc9",
+          "value": "22/100",
+          "impact": "POSITIVE",
+          "detail": "Conditions are improving over past 4 weeks",
+          "weight": -22.4885
+        }
+      ],
+      "total_factors": 4,
+      "assessment": "This zone has moderate risk levels with contributing factors: Population Exposure, Risk Score. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 46.41,
+    "congestion_delta": 19.54,
+    "average_speed_kmh": 42.96,
+    "speed_delta": -16.96,
+    "vehicle_density": 27.93,
+    "density_delta": 6.42,
+    "population_density": 9955,
+    "red_light_violations": 5,
+    "weather": "Light Rain",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 30,
+    "recommended_green_seconds": 41,
+    "change_seconds": 11,
+    "change_percent": 36.7,
+    "urgency": "HIGH",
+    "reason": "Elevated traffic density needs extended clearance time",
+    "factors": {
+      "congestion_factor": 1.37,
+      "density_factor": 1.11,
+      "speed_factor": 0.84,
+      "event_boost": 1.0,
+      "weather_boost": 1.08
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 25673.9,
+    "total_co2_tonnes_per_year": 1335.04,
+    "idle_co2_kg": 7155.2,
+    "moving_co2_kg": 18518.7,
+    "potential_savings_kg_per_week": 1763.1,
+    "potential_savings_tonnes_per_year": 91.68,
+    "trees_equivalent_per_year": 4365,
+    "fuel_saved_liters_per_week": 763.3,
+    "citizens_impacted": 19910,
+    "optimization_factor_pct": 24.6
+  },
+  "interventions": [
+    {
+      "id": "ROAD_MAINTENANCE",
+      "name": "Road Maintenance Inspection",
+      "icon": "\ud83d\udee3\ufe0f",
+      "severity": "MEDIUM",
+      "description": "Deteriorated road surface combined with elevated risk indicates infrastructure maintenance need.",
+      "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
+    }
+  ],
+  "executive_briefing": "Lower Parel is in a critical safety state with 67% incident risk. Continue routine monitoring. Optimizing signals could save 1763 kg CO2/week, equivalent to 4365 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_11",
     "week": 51,
     "zone_type": "Residential",
@@ -51,6 +164,15 @@
     "location_name": "Lower Parel",
     "city": "Mumbai",
     "latitude": 18.9988,
-    "longitude": 72.8258
+    "longitude": 72.8258,
+    "predicted_risk_probability": 0.6707,
+    "risk_score": 67.074,
+    "population_exposure_score": 61.7429,
+    "vehicle_exposure_score": 35.3276,
+    "temporal_trend_score": 22.4885,
+    "priority_score": 52.7041,
+    "priority_rank": 10,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.6707
   }
 }

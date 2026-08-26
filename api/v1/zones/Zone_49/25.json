@@ -1,8 +1,129 @@
 {
   "zone_id": "Zone_49",
+  "location_name": "Sholinganallur",
+  "city": "Chennai",
+  "zone_type": "University_District",
   "week": 25,
-  "predicted_risk_probability": 0.571116593869509,
-  "metrics": {
+  "latitude": 12.901,
+  "longitude": 80.2279,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.5711,
+    "predicted_risk_percentage": 57.11,
+    "risk_label": "HIGH RISK",
+    "risk_color": "#f97316",
+    "risk_delta_vs_prev_week": -11.0616,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 59.0644,
+    "priority_rank": 11,
+    "priority_level": "HIGH",
+    "components": {
+      "risk_score": 57.1117,
+      "population_exposure_score": 73.1231,
+      "vehicle_exposure_score": 68.1012,
+      "temporal_trend_score": 28.7918
+    },
+    "explanation": {
+      "priority_level": "HIGH",
+      "priority_score": 59.1,
+      "top_contributors": [
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "73/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 11539 residents/km\u00b2",
+          "weight": 73.1231
+        },
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "68/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 68.1012
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "57/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 57.1117
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "50/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate congestion at 50",
+          "weight": 35.329
+        },
+        {
+          "factor": "Improving Trend",
+          "icon": "\ud83d\udcc9",
+          "value": "29/100",
+          "impact": "POSITIVE",
+          "detail": "Conditions are improving over past 4 weeks",
+          "weight": -28.7918
+        }
+      ],
+      "total_factors": 5,
+      "assessment": "This zone shows significant risk elevation driven by Population Exposure, Vehicle Density. Proactive intervention should be scheduled within the current planning cycle."
+    }
+  },
+  "telemetry": {
+    "congestion": 50.47,
+    "congestion_delta": -11.81,
+    "average_speed_kmh": 45.1,
+    "speed_delta": 0.4,
+    "vehicle_density": 52.76,
+    "density_delta": -3.06,
+    "population_density": 11539,
+    "red_light_violations": 4,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 49,
+    "change_seconds": 14,
+    "change_percent": 40.0,
+    "urgency": "HIGH",
+    "reason": "Elevated traffic density needs extended clearance time",
+    "factors": {
+      "congestion_factor": 1.4,
+      "density_factor": 1.21,
+      "speed_factor": 0.83,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 48641.0,
+    "total_co2_tonnes_per_year": 2529.33,
+    "idle_co2_kg": 14698.6,
+    "moving_co2_kg": 33942.4,
+    "potential_savings_kg_per_week": 3681.6,
+    "potential_savings_tonnes_per_year": 191.44,
+    "trees_equivalent_per_year": 9116,
+    "fuel_saved_liters_per_week": 1593.8,
+    "citizens_impacted": 23078,
+    "optimization_factor_pct": 25.0
+  },
+  "interventions": [
+    {
+      "id": "PEDESTRIAN_SAFETY",
+      "name": "Pedestrian Crossing Intervention",
+      "icon": "\ud83d\udeb6",
+      "severity": "MEDIUM",
+      "description": "High population density zone with significant traffic congestion creates pedestrian exposure risk.",
+      "action": "Install protected pedestrian crossings, improve sidewalk infrastructure, and add pedestrian countdown signals."
+    }
+  ],
+  "executive_briefing": "Sholinganallur shows elevated risk at 57%. Continue routine monitoring. Optimizing signals could save 3682 kg CO2/week, equivalent to 9116 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_49",
     "week": 25,
     "zone_type": "University_District",
@@ -51,6 +172,15 @@
     "location_name": "Sholinganallur",
     "city": "Chennai",
     "latitude": 12.901,
-    "longitude": 80.2279
+    "longitude": 80.2279,
+    "predicted_risk_probability": 0.5711,
+    "risk_score": 57.1117,
+    "population_exposure_score": 73.1231,
+    "vehicle_exposure_score": 68.1012,
+    "temporal_trend_score": 28.7918,
+    "priority_score": 59.0644,
+    "priority_rank": 11,
+    "priority_level": "HIGH",
+    "risk_prob": 0.5711
   }
 }

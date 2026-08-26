@@ -1,8 +1,129 @@
 {
   "zone_id": "Zone_31",
+  "location_name": "Alambagh",
+  "city": "Lucknow",
+  "zone_type": "Commercial_Downtown",
   "week": 14,
-  "predicted_risk_probability": 0.6967979145621404,
-  "metrics": {
+  "latitude": 26.813,
+  "longitude": 80.918,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.6968,
+    "predicted_risk_percentage": 69.68,
+    "risk_label": "HIGH RISK",
+    "risk_color": "#f97316",
+    "risk_delta_vs_prev_week": -4.6314,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 66.3105,
+    "priority_rank": 5,
+    "priority_level": "HIGH",
+    "components": {
+      "risk_score": 69.6798,
+      "population_exposure_score": 57.4969,
+      "vehicle_exposure_score": 78.082,
+      "temporal_trend_score": 56.3194
+    },
+    "explanation": {
+      "priority_level": "HIGH",
+      "priority_score": 66.3,
+      "top_contributors": [
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "78/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 78.082
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "70/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 69.6798
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "69/100",
+          "impact": "HIGH",
+          "detail": "Congestion index at 69 \u2014 severe traffic flow degradation",
+          "weight": 69.02
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "57/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 40.2479
+        },
+        {
+          "factor": "Rising Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "56/100",
+          "impact": "MEDIUM",
+          "detail": "Slight upward trend in congestion over past 4 weeks",
+          "weight": 33.7916
+        }
+      ],
+      "total_factors": 5,
+      "assessment": "This zone shows significant risk elevation driven by Vehicle Density, Congestion. Proactive intervention should be scheduled within the current planning cycle."
+    }
+  },
+  "telemetry": {
+    "congestion": 69.02,
+    "congestion_delta": 0.61,
+    "average_speed_kmh": 42.09,
+    "speed_delta": -2.39,
+    "vehicle_density": 50.48,
+    "density_delta": 1.07,
+    "population_density": 9364,
+    "red_light_violations": 6,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 40,
+    "recommended_green_seconds": 62,
+    "change_seconds": 22,
+    "change_percent": 55.0,
+    "urgency": "CRITICAL",
+    "reason": "Severe congestion requires significantly extended green phase",
+    "factors": {
+      "congestion_factor": 1.55,
+      "density_factor": 1.2,
+      "speed_factor": 0.84,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 38189.5,
+    "total_co2_tonnes_per_year": 1985.85,
+    "idle_co2_kg": 19232.4,
+    "moving_co2_kg": 18957.1,
+    "potential_savings_kg_per_week": 5173.9,
+    "potential_savings_tonnes_per_year": 269.04,
+    "trees_equivalent_per_year": 12811,
+    "fuel_saved_liters_per_week": 2239.8,
+    "citizens_impacted": 18728,
+    "optimization_factor_pct": 26.9
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "No specific risk indicators triggered.",
+      "action": "Continue routine monitoring."
+    }
+  ],
+  "executive_briefing": "Alambagh is in a critical safety state with 70% incident risk. Signal optimization recommended \u2014 congestion at 69/100 with speeds averaging 42 km/h. Optimizing signals could save 5174 kg CO2/week, equivalent to 12811 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_31",
     "week": 14,
     "zone_type": "Commercial_Downtown",
@@ -51,6 +172,15 @@
     "location_name": "Alambagh",
     "city": "Lucknow",
     "latitude": 26.813,
-    "longitude": 80.918
+    "longitude": 80.918,
+    "predicted_risk_probability": 0.6968,
+    "risk_score": 69.6798,
+    "population_exposure_score": 57.4969,
+    "vehicle_exposure_score": 78.082,
+    "temporal_trend_score": 56.3194,
+    "priority_score": 66.3105,
+    "priority_rank": 5,
+    "priority_level": "HIGH",
+    "risk_prob": 0.6968
   }
 }

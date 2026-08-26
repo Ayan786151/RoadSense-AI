@@ -1,8 +1,145 @@
 {
   "zone_id": "Zone_50",
+  "location_name": "Egmore",
+  "city": "Chennai",
+  "zone_type": "University_District",
   "week": 20,
-  "predicted_risk_probability": 0.7398378849872947,
-  "metrics": {
+  "latitude": 13.0732,
+  "longitude": 80.2609,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.7398,
+    "predicted_risk_percentage": 73.98,
+    "risk_label": "HIGH RISK",
+    "risk_color": "#f97316",
+    "risk_delta_vs_prev_week": -0.7801,
+    "actual_incident": 1
+  },
+  "priority": {
+    "priority_score": 75.7192,
+    "priority_rank": 5,
+    "priority_level": "CRITICAL",
+    "components": {
+      "risk_score": 73.9838,
+      "population_exposure_score": 73.5038,
+      "vehicle_exposure_score": 85.9484,
+      "temporal_trend_score": 70.3999
+    },
+    "explanation": {
+      "priority_level": "CRITICAL",
+      "priority_score": 75.7,
+      "top_contributors": [
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "86/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 85.9484
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udd34",
+          "value": "74/100",
+          "impact": "HIGH",
+          "detail": "Model-estimated risk score is in the critical range",
+          "weight": 73.9838
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "74/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 11592 residents/km\u00b2",
+          "weight": 73.5038
+        },
+        {
+          "factor": "Worsening Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "70/100",
+          "impact": "HIGH",
+          "detail": "4-week congestion trend is actively worsening \u2014 conditions deteriorating",
+          "weight": 70.3999
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "54/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate congestion at 54",
+          "weight": 38.038
+        }
+      ],
+      "total_factors": 5,
+      "assessment": "This zone requires URGENT attention. Primary risk drivers: Vehicle Density, Risk Score, Population Exposure. Immediate field inspection and intervention planning recommended."
+    }
+  },
+  "telemetry": {
+    "congestion": 54.34,
+    "congestion_delta": -20.93,
+    "average_speed_kmh": 47.4,
+    "speed_delta": 8.54,
+    "vehicle_density": 63.52,
+    "density_delta": -4.37,
+    "population_density": 11592,
+    "red_light_violations": 8,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 51,
+    "change_seconds": 16,
+    "change_percent": 45.7,
+    "urgency": "CRITICAL",
+    "reason": "Severe congestion requires significantly extended green phase",
+    "factors": {
+      "congestion_factor": 1.43,
+      "density_factor": 1.25,
+      "speed_factor": 0.82,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 58646.1,
+    "total_co2_tonnes_per_year": 3049.6,
+    "idle_co2_kg": 19053.3,
+    "moving_co2_kg": 39592.9,
+    "potential_savings_kg_per_week": 4846.0,
+    "potential_savings_tonnes_per_year": 251.99,
+    "trees_equivalent_per_year": 11999,
+    "fuel_saved_liters_per_week": 2097.8,
+    "citizens_impacted": 23184,
+    "optimization_factor_pct": 25.4
+  },
+  "interventions": [
+    {
+      "id": "VIOLATION_ENFORCEMENT",
+      "name": "Red-Light Violation Enforcement",
+      "icon": "\ud83d\udea8",
+      "severity": "HIGH",
+      "description": "Elevated red-light violation count indicates intersection compliance failure.",
+      "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
+    },
+    {
+      "id": "PEDESTRIAN_SAFETY",
+      "name": "Pedestrian Crossing Intervention",
+      "icon": "\ud83d\udeb6",
+      "severity": "MEDIUM",
+      "description": "High population density zone with significant traffic congestion creates pedestrian exposure risk.",
+      "action": "Install protected pedestrian crossings, improve sidewalk infrastructure, and add pedestrian countdown signals."
+    },
+    {
+      "id": "MONITORING_UPGRADE",
+      "name": "Enhanced Monitoring & CCTV Coverage",
+      "icon": "\ud83d\udcf9",
+      "severity": "MEDIUM",
+      "description": "High-risk zone with significant population exposure warrants improved surveillance.",
+      "action": "Install additional CCTV cameras and integrate with traffic management center for real-time monitoring."
+    }
+  ],
+  "executive_briefing": "Egmore is in a critical safety state with 74% incident risk. Continue routine monitoring. Optimizing signals could save 4846 kg CO2/week, equivalent to 11999 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_50",
     "week": 20,
     "zone_type": "University_District",
@@ -51,6 +188,15 @@
     "location_name": "Egmore",
     "city": "Chennai",
     "latitude": 13.0732,
-    "longitude": 80.2609
+    "longitude": 80.2609,
+    "predicted_risk_probability": 0.7398,
+    "risk_score": 73.9838,
+    "population_exposure_score": 73.5038,
+    "vehicle_exposure_score": 85.9484,
+    "temporal_trend_score": 70.3999,
+    "priority_score": 75.7192,
+    "priority_rank": 5,
+    "priority_level": "CRITICAL",
+    "risk_prob": 0.7398
   }
 }

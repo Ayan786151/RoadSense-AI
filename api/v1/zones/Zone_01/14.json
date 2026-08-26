@@ -1,8 +1,129 @@
 {
   "zone_id": "Zone_01",
+  "location_name": "Andheri",
+  "city": "Mumbai",
+  "zone_type": "Commercial_Downtown",
   "week": 14,
-  "predicted_risk_probability": 0.738513922964017,
-  "metrics": {
+  "latitude": 19.1197,
+  "longitude": 72.8468,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.7385,
+    "predicted_risk_percentage": 73.85,
+    "risk_label": "HIGH RISK",
+    "risk_color": "#f97316",
+    "risk_delta_vs_prev_week": 1.3828,
+    "actual_incident": 1
+  },
+  "priority": {
+    "priority_score": 66.2156,
+    "priority_rank": 6,
+    "priority_level": "HIGH",
+    "components": {
+      "risk_score": 73.8514,
+      "population_exposure_score": 52.9133,
+      "vehicle_exposure_score": 76.5816,
+      "temporal_trend_score": 54.203
+    },
+    "explanation": {
+      "priority_level": "HIGH",
+      "priority_score": 66.2,
+      "top_contributors": [
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "77/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 76.5816
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udd34",
+          "value": "74/100",
+          "impact": "HIGH",
+          "detail": "Model-estimated risk score is in the critical range",
+          "weight": 73.8514
+        },
+        {
+          "factor": "Violation Count",
+          "icon": "\ud83d\udea8",
+          "value": "12",
+          "impact": "HIGH",
+          "detail": "12 red-light violations recorded \u2014 intersection safety concern",
+          "weight": 60
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "53/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 37.0393
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "47/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate congestion at 47",
+          "weight": 32.921
+        }
+      ],
+      "total_factors": 5,
+      "assessment": "This zone shows significant risk elevation driven by Vehicle Density, Risk Score. Proactive intervention should be scheduled within the current planning cycle."
+    }
+  },
+  "telemetry": {
+    "congestion": 47.03,
+    "congestion_delta": -1.22,
+    "average_speed_kmh": 53.9,
+    "speed_delta": 3.04,
+    "vehicle_density": 49.51,
+    "density_delta": 0.33,
+    "population_density": 8726,
+    "red_light_violations": 12,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 40,
+    "recommended_green_seconds": 52,
+    "change_seconds": 12,
+    "change_percent": 30.0,
+    "urgency": "HIGH",
+    "reason": "Elevated traffic density needs extended clearance time",
+    "factors": {
+      "congestion_factor": 1.38,
+      "density_factor": 1.2,
+      "speed_factor": 0.8,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 49492.3,
+    "total_co2_tonnes_per_year": 2573.6,
+    "idle_co2_kg": 12853.1,
+    "moving_co2_kg": 36639.3,
+    "potential_savings_kg_per_week": 3175.1,
+    "potential_savings_tonnes_per_year": 165.1,
+    "trees_equivalent_per_year": 7862,
+    "fuel_saved_liters_per_week": 1374.5,
+    "citizens_impacted": 17452,
+    "optimization_factor_pct": 24.7
+  },
+  "interventions": [
+    {
+      "id": "VIOLATION_ENFORCEMENT",
+      "name": "Red-Light Violation Enforcement",
+      "icon": "\ud83d\udea8",
+      "severity": "HIGH",
+      "description": "Elevated red-light violation count indicates intersection compliance failure.",
+      "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
+    }
+  ],
+  "executive_briefing": "Andheri is in a critical safety state with 74% incident risk. Enforcement focus needed \u2014 12 red-light violations recorded. Optimizing signals could save 3175 kg CO2/week, equivalent to 7862 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_01",
     "week": 14,
     "zone_type": "Commercial_Downtown",
@@ -51,6 +172,15 @@
     "location_name": "Andheri",
     "city": "Mumbai",
     "latitude": 19.1197,
-    "longitude": 72.8468
+    "longitude": 72.8468,
+    "predicted_risk_probability": 0.7385,
+    "risk_score": 73.8514,
+    "population_exposure_score": 52.9133,
+    "vehicle_exposure_score": 76.5816,
+    "temporal_trend_score": 54.203,
+    "priority_score": 66.2156,
+    "priority_rank": 6,
+    "priority_level": "HIGH",
+    "risk_prob": 0.7385
   }
 }

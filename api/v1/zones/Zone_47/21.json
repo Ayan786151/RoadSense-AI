@@ -1,8 +1,129 @@
 {
   "zone_id": "Zone_47",
+  "location_name": "Perambur",
+  "city": "Chennai",
+  "zone_type": "University_District",
   "week": 21,
-  "predicted_risk_probability": 0.7543930727700064,
-  "metrics": {
+  "latitude": 13.1167,
+  "longitude": 80.2333,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.7544,
+    "predicted_risk_percentage": 75.44,
+    "risk_label": "CRITICAL RISK",
+    "risk_color": "#ef4444",
+    "risk_delta_vs_prev_week": 3.2701,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 58.5416,
+    "priority_rank": 11,
+    "priority_level": "HIGH",
+    "components": {
+      "risk_score": 75.4393,
+      "population_exposure_score": 48.0997,
+      "vehicle_exposure_score": 73.5572,
+      "temporal_trend_score": 10.8636
+    },
+    "explanation": {
+      "priority_level": "HIGH",
+      "priority_score": 58.5,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udd34",
+          "value": "75/100",
+          "impact": "HIGH",
+          "detail": "Model-estimated risk score is in the critical range",
+          "weight": 75.4393
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "75/100",
+          "impact": "HIGH",
+          "detail": "Congestion index at 75 \u2014 severe traffic flow degradation",
+          "weight": 74.91
+        },
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "74/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 73.5572
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "48/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 33.6698
+        },
+        {
+          "factor": "Improving Trend",
+          "icon": "\ud83d\udcc9",
+          "value": "11/100",
+          "impact": "POSITIVE",
+          "detail": "Conditions are improving over past 4 weeks",
+          "weight": -10.8636
+        }
+      ],
+      "total_factors": 5,
+      "assessment": "This zone shows significant risk elevation driven by Risk Score, Congestion. Proactive intervention should be scheduled within the current planning cycle."
+    }
+  },
+  "telemetry": {
+    "congestion": 74.91,
+    "congestion_delta": 22.42,
+    "average_speed_kmh": 37.87,
+    "speed_delta": -10.65,
+    "vehicle_density": 55.09,
+    "density_delta": 3.22,
+    "population_density": 8056,
+    "red_light_violations": 4,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 58,
+    "change_seconds": 23,
+    "change_percent": 65.7,
+    "urgency": "CRITICAL",
+    "reason": "Severe congestion requires significantly extended green phase",
+    "factors": {
+      "congestion_factor": 1.6,
+      "density_factor": 1.22,
+      "speed_factor": 0.86,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 37855.0,
+    "total_co2_tonnes_per_year": 1968.46,
+    "idle_co2_kg": 22779.9,
+    "moving_co2_kg": 15075.1,
+    "potential_savings_kg_per_week": 6262.4,
+    "potential_savings_tonnes_per_year": 325.65,
+    "trees_equivalent_per_year": 15506,
+    "fuel_saved_liters_per_week": 2711.0,
+    "citizens_impacted": 16112,
+    "optimization_factor_pct": 27.5
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "No specific risk indicators triggered.",
+      "action": "Continue routine monitoring."
+    }
+  ],
+  "executive_briefing": "Perambur is in a critical safety state with 75% incident risk. Signal optimization recommended \u2014 congestion at 75/100 with speeds averaging 38 km/h. Optimizing signals could save 6262 kg CO2/week, equivalent to 15506 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_47",
     "week": 21,
     "zone_type": "University_District",
@@ -51,6 +172,15 @@
     "location_name": "Perambur",
     "city": "Chennai",
     "latitude": 13.1167,
-    "longitude": 80.2333
+    "longitude": 80.2333,
+    "predicted_risk_probability": 0.7544,
+    "risk_score": 75.4393,
+    "population_exposure_score": 48.0997,
+    "vehicle_exposure_score": 73.5572,
+    "temporal_trend_score": 10.8636,
+    "priority_score": 58.5416,
+    "priority_rank": 11,
+    "priority_level": "HIGH",
+    "risk_prob": 0.7544
   }
 }

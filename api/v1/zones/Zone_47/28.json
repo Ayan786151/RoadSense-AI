@@ -1,8 +1,129 @@
 {
   "zone_id": "Zone_47",
+  "location_name": "Perambur",
+  "city": "Chennai",
+  "zone_type": "University_District",
   "week": 28,
-  "predicted_risk_probability": 0.9197160569731346,
-  "metrics": {
+  "latitude": 13.1167,
+  "longitude": 80.2333,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.9197,
+    "predicted_risk_percentage": 91.97,
+    "risk_label": "CRITICAL RISK",
+    "risk_color": "#ef4444",
+    "risk_delta_vs_prev_week": -5.2069,
+    "actual_incident": 1
+  },
+  "priority": {
+    "priority_score": 78.0899,
+    "priority_rank": 2,
+    "priority_level": "CRITICAL",
+    "components": {
+      "risk_score": 91.9716,
+      "population_exposure_score": 48.0997,
+      "vehicle_exposure_score": 77.5011,
+      "temporal_trend_score": 91.8407
+    },
+    "explanation": {
+      "priority_level": "CRITICAL",
+      "priority_score": 78.1,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udd34",
+          "value": "92/100",
+          "impact": "HIGH",
+          "detail": "Model-estimated risk score is in the critical range",
+          "weight": 91.9716
+        },
+        {
+          "factor": "Worsening Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "92/100",
+          "impact": "HIGH",
+          "detail": "4-week congestion trend is actively worsening \u2014 conditions deteriorating",
+          "weight": 91.8407
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "78/100",
+          "impact": "HIGH",
+          "detail": "Congestion index at 78 \u2014 severe traffic flow degradation",
+          "weight": 77.65
+        },
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "78/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 77.5011
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "48/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 33.6698
+        }
+      ],
+      "total_factors": 5,
+      "assessment": "This zone requires URGENT attention. Primary risk drivers: Risk Score, Worsening Trend, Congestion. Immediate field inspection and intervention planning recommended."
+    }
+  },
+  "telemetry": {
+    "congestion": 77.65,
+    "congestion_delta": -20.66,
+    "average_speed_kmh": 37.14,
+    "speed_delta": 15.67,
+    "vehicle_density": 55.31,
+    "density_delta": 0.28,
+    "population_density": 8056,
+    "red_light_violations": 6,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 59,
+    "change_seconds": 24,
+    "change_percent": 68.6,
+    "urgency": "CRITICAL",
+    "reason": "Severe congestion requires significantly extended green phase",
+    "factors": {
+      "congestion_factor": 1.62,
+      "density_factor": 1.22,
+      "speed_factor": 0.86,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 36930.0,
+    "total_co2_tonnes_per_year": 1920.36,
+    "idle_co2_kg": 23707.4,
+    "moving_co2_kg": 13222.6,
+    "potential_savings_kg_per_week": 6582.4,
+    "potential_savings_tonnes_per_year": 342.28,
+    "trees_equivalent_per_year": 16299,
+    "fuel_saved_liters_per_week": 2849.5,
+    "citizens_impacted": 16112,
+    "optimization_factor_pct": 27.8
+  },
+  "interventions": [
+    {
+      "id": "TREND_URGENT_INSPECTION",
+      "name": "Urgent Safety Inspection",
+      "icon": "\u26a0\ufe0f",
+      "severity": "CRITICAL",
+      "description": "Risk is actively worsening (high temporal trend) with already elevated risk score.",
+      "action": "Deploy immediate field inspection team. Identify root cause of deteriorating safety conditions."
+    }
+  ],
+  "executive_briefing": "Perambur is in a critical safety state with 92% incident risk. Signal optimization recommended \u2014 congestion at 78/100 with speeds averaging 37 km/h. Optimizing signals could save 6582 kg CO2/week, equivalent to 16299 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_47",
     "week": 28,
     "zone_type": "University_District",
@@ -51,6 +172,15 @@
     "location_name": "Perambur",
     "city": "Chennai",
     "latitude": 13.1167,
-    "longitude": 80.2333
+    "longitude": 80.2333,
+    "predicted_risk_probability": 0.9197,
+    "risk_score": 91.9716,
+    "population_exposure_score": 48.0997,
+    "vehicle_exposure_score": 77.5011,
+    "temporal_trend_score": 91.8407,
+    "priority_score": 78.0899,
+    "priority_rank": 2,
+    "priority_level": "CRITICAL",
+    "risk_prob": 0.9197
   }
 }

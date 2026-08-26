@@ -1,8 +1,129 @@
 {
   "zone_id": "Zone_15",
+  "location_name": "Dwarka",
+  "city": "Delhi",
+  "zone_type": "Residential",
   "week": 14,
-  "predicted_risk_probability": 0.5917329699722541,
-  "metrics": {
+  "latitude": 28.5921,
+  "longitude": 77.046,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.5917,
+    "predicted_risk_percentage": 59.17,
+    "risk_label": "HIGH RISK",
+    "risk_color": "#f97316",
+    "risk_delta_vs_prev_week": 31.0296,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 77.6849,
+    "priority_rank": 3,
+    "priority_level": "CRITICAL",
+    "components": {
+      "risk_score": 59.1733,
+      "population_exposure_score": 97.0041,
+      "vehicle_exposure_score": 84.5321,
+      "temporal_trend_score": 85.7212
+    },
+    "explanation": {
+      "priority_level": "CRITICAL",
+      "priority_score": 77.7,
+      "top_contributors": [
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "97/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 14863 residents/km\u00b2",
+          "weight": 97.0041
+        },
+        {
+          "factor": "Worsening Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "86/100",
+          "impact": "HIGH",
+          "detail": "4-week congestion trend is actively worsening \u2014 conditions deteriorating",
+          "weight": 85.7212
+        },
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "85/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 84.5321
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "59/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 59.1733
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "48/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate congestion at 48",
+          "weight": 33.852
+        }
+      ],
+      "total_factors": 5,
+      "assessment": "This zone requires URGENT attention. Primary risk drivers: Population Exposure, Worsening Trend, Vehicle Density. Immediate field inspection and intervention planning recommended."
+    }
+  },
+  "telemetry": {
+    "congestion": 48.36,
+    "congestion_delta": 13.11,
+    "average_speed_kmh": 41.0,
+    "speed_delta": -15.08,
+    "vehicle_density": 54.65,
+    "density_delta": 0.49,
+    "population_density": 14863,
+    "red_light_violations": 2,
+    "weather": "Light Rain",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 30,
+    "recommended_green_seconds": 46,
+    "change_seconds": 16,
+    "change_percent": 53.3,
+    "urgency": "CRITICAL",
+    "reason": "Severe congestion requires significantly extended green phase",
+    "factors": {
+      "congestion_factor": 1.39,
+      "density_factor": 1.22,
+      "speed_factor": 0.85,
+      "event_boost": 1.0,
+      "weather_boost": 1.08
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 47912.3,
+    "total_co2_tonnes_per_year": 2491.44,
+    "idle_co2_kg": 14588.7,
+    "moving_co2_kg": 33323.7,
+    "potential_savings_kg_per_week": 3623.2,
+    "potential_savings_tonnes_per_year": 188.41,
+    "trees_equivalent_per_year": 8971,
+    "fuel_saved_liters_per_week": 1568.5,
+    "citizens_impacted": 29726,
+    "optimization_factor_pct": 24.8
+  },
+  "interventions": [
+    {
+      "id": "ROAD_MAINTENANCE",
+      "name": "Road Maintenance Inspection",
+      "icon": "\ud83d\udee3\ufe0f",
+      "severity": "MEDIUM",
+      "description": "Deteriorated road surface combined with elevated risk indicates infrastructure maintenance need.",
+      "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
+    }
+  ],
+  "executive_briefing": "Dwarka shows elevated risk at 59%. Continue routine monitoring. Optimizing signals could save 3623 kg CO2/week, equivalent to 8971 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_15",
     "week": 14,
     "zone_type": "Residential",
@@ -51,6 +172,15 @@
     "location_name": "Dwarka",
     "city": "Delhi",
     "latitude": 28.5921,
-    "longitude": 77.046
+    "longitude": 77.046,
+    "predicted_risk_probability": 0.5917,
+    "risk_score": 59.1733,
+    "population_exposure_score": 97.0041,
+    "vehicle_exposure_score": 84.5321,
+    "temporal_trend_score": 85.7212,
+    "priority_score": 77.6849,
+    "priority_rank": 3,
+    "priority_level": "CRITICAL",
+    "risk_prob": 0.5917
   }
 }

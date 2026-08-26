@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_25",
+  "location_name": "Okhla",
+  "city": "Delhi",
+  "zone_type": "Residential",
   "week": 43,
-  "predicted_risk_probability": 0.32405515681962543,
-  "metrics": {
+  "latitude": 28.5355,
+  "longitude": 77.264,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.3241,
+    "predicted_risk_percentage": 32.41,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": 10.2227,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 46.7029,
+    "priority_rank": 18,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 32.4055,
+      "population_exposure_score": 67.7419,
+      "vehicle_exposure_score": 39.6795,
+      "temporal_trend_score": 59.1289
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 46.7,
+      "top_contributors": [
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "68/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 10790 residents/km\u00b2",
+          "weight": 67.7419
+        },
+        {
+          "factor": "Rising Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "59/100",
+          "impact": "MEDIUM",
+          "detail": "Slight upward trend in congestion over past 4 weeks",
+          "weight": 35.4773
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "32/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 32.4055
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone has moderate risk levels with contributing factors: Population Exposure, Rising Trend. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 22.65,
+    "congestion_delta": 2.22,
+    "average_speed_kmh": 51.88,
+    "speed_delta": -9.51,
+    "vehicle_density": 30.48,
+    "density_delta": -1.08,
+    "population_density": 10790,
+    "red_light_violations": 4,
+    "weather": "Light Rain",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 30,
+    "recommended_green_seconds": 34,
+    "change_seconds": 4,
+    "change_percent": 13.3,
+    "urgency": "MODERATE",
+    "reason": "Slight adjustment for current conditions",
+    "factors": {
+      "congestion_factor": 1.18,
+      "density_factor": 1.12,
+      "speed_factor": 0.81,
+      "event_boost": 1.0,
+      "weather_boost": 1.08
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 35514.6,
+    "total_co2_tonnes_per_year": 1846.76,
+    "idle_co2_kg": 3810.9,
+    "moving_co2_kg": 31703.7,
+    "potential_savings_kg_per_week": 848.5,
+    "potential_savings_tonnes_per_year": 44.12,
+    "trees_equivalent_per_year": 2101,
+    "fuel_saved_liters_per_week": 367.3,
+    "citizens_impacted": 21580,
+    "optimization_factor_pct": 22.3
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "No specific risk indicators triggered.",
+      "action": "Continue routine monitoring."
+    }
+  ],
+  "executive_briefing": "Okhla is within safe operating parameters (32% risk). Continue routine monitoring. Optimizing signals could save 848 kg CO2/week, equivalent to 2101 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_25",
     "week": 43,
     "zone_type": "Residential",
@@ -51,6 +156,15 @@
     "location_name": "Okhla",
     "city": "Delhi",
     "latitude": 28.5355,
-    "longitude": 77.264
+    "longitude": 77.264,
+    "predicted_risk_probability": 0.3241,
+    "risk_score": 32.4055,
+    "population_exposure_score": 67.7419,
+    "vehicle_exposure_score": 39.6795,
+    "temporal_trend_score": 59.1289,
+    "priority_score": 46.7029,
+    "priority_rank": 18,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.3241
   }
 }

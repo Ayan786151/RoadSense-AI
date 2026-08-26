@@ -1,8 +1,129 @@
 {
   "zone_id": "Zone_26",
+  "location_name": "Hazratganj",
+  "city": "Lucknow",
+  "zone_type": "University_District",
   "week": 34,
-  "predicted_risk_probability": 0.870456498848722,
-  "metrics": {
+  "latitude": 26.85,
+  "longitude": 80.949,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.8705,
+    "predicted_risk_percentage": 87.05,
+    "risk_label": "CRITICAL RISK",
+    "risk_color": "#ef4444",
+    "risk_delta_vs_prev_week": 45.3934,
+    "actual_incident": 1
+  },
+  "priority": {
+    "priority_score": 60.7008,
+    "priority_rank": 17,
+    "priority_level": "HIGH",
+    "components": {
+      "risk_score": 87.0456,
+      "population_exposure_score": 45.384,
+      "vehicle_exposure_score": 46.5898,
+      "temporal_trend_score": 34.7905
+    },
+    "explanation": {
+      "priority_level": "HIGH",
+      "priority_score": 60.7,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udd34",
+          "value": "87/100",
+          "impact": "HIGH",
+          "detail": "Model-estimated risk score is in the critical range",
+          "weight": 87.0456
+        },
+        {
+          "factor": "Speed Anomaly",
+          "icon": "\ud83d\udc0c",
+          "value": "24 km/h",
+          "impact": "HIGH",
+          "detail": "Average speed of 24 km/h indicates near-gridlock conditions",
+          "weight": 76.07
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "64/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate congestion at 64",
+          "weight": 44.849
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "45/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 31.7688
+        }
+      ],
+      "total_factors": 4,
+      "assessment": "This zone shows significant risk elevation driven by Risk Score, Speed Anomaly. Proactive intervention should be scheduled within the current planning cycle."
+    }
+  },
+  "telemetry": {
+    "congestion": 64.07,
+    "congestion_delta": 39.36,
+    "average_speed_kmh": 23.93,
+    "speed_delta": -24.98,
+    "vehicle_density": 35.88,
+    "density_delta": 0.63,
+    "population_density": 7678,
+    "red_light_violations": 3,
+    "weather": "Heavy Rain",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 65,
+    "change_seconds": 30,
+    "change_percent": 85.7,
+    "urgency": "CRITICAL",
+    "reason": "Severe congestion requires significantly extended green phase",
+    "factors": {
+      "congestion_factor": 1.51,
+      "density_factor": 1.14,
+      "speed_factor": 0.91,
+      "event_boost": 1.0,
+      "weather_boost": 1.18
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 28682.1,
+    "total_co2_tonnes_per_year": 1491.47,
+    "idle_co2_kg": 12689.6,
+    "moving_co2_kg": 15992.5,
+    "potential_savings_kg_per_week": 3350.9,
+    "potential_savings_tonnes_per_year": 174.25,
+    "trees_equivalent_per_year": 8297,
+    "fuel_saved_liters_per_week": 1450.6,
+    "citizens_impacted": 15356,
+    "optimization_factor_pct": 26.4
+  },
+  "interventions": [
+    {
+      "id": "SIGNAL_OPTIMIZATION",
+      "name": "Traffic Signal Optimization",
+      "icon": "\ud83d\udea6",
+      "severity": "HIGH",
+      "description": "High congestion with low throughput speed indicates signal timing inefficiency.",
+      "action": "Review and optimize signal timing at major intersections in this zone."
+    },
+    {
+      "id": "ROAD_MAINTENANCE",
+      "name": "Road Maintenance Inspection",
+      "icon": "\ud83d\udee3\ufe0f",
+      "severity": "MEDIUM",
+      "description": "Deteriorated road surface combined with elevated risk indicates infrastructure maintenance need.",
+      "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
+    }
+  ],
+  "executive_briefing": "Hazratganj is in a critical safety state with 87% incident risk. Signal optimization recommended \u2014 congestion at 64/100 with speeds averaging 24 km/h. Optimizing signals could save 3351 kg CO2/week, equivalent to 8297 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_26",
     "week": 34,
     "zone_type": "University_District",
@@ -51,6 +172,15 @@
     "location_name": "Hazratganj",
     "city": "Lucknow",
     "latitude": 26.85,
-    "longitude": 80.949
+    "longitude": 80.949,
+    "predicted_risk_probability": 0.8705,
+    "risk_score": 87.0456,
+    "population_exposure_score": 45.384,
+    "vehicle_exposure_score": 46.5898,
+    "temporal_trend_score": 34.7905,
+    "priority_score": 60.7008,
+    "priority_rank": 17,
+    "priority_level": "HIGH",
+    "risk_prob": 0.8705
   }
 }

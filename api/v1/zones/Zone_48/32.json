@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_48",
+  "location_name": "Ambattur",
+  "city": "Chennai",
+  "zone_type": "Industrial_Corridor",
   "week": 32,
-  "predicted_risk_probability": 0.8655112221330156,
-  "metrics": {
+  "latitude": 13.1143,
+  "longitude": 80.1486,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.8655,
+    "predicted_risk_percentage": 86.55,
+    "risk_label": "CRITICAL RISK",
+    "risk_color": "#ef4444",
+    "risk_delta_vs_prev_week": 9.8736,
+    "actual_incident": 1
+  },
+  "priority": {
+    "priority_score": 57.5027,
+    "priority_rank": 21,
+    "priority_level": "HIGH",
+    "components": {
+      "risk_score": 86.5511,
+      "population_exposure_score": 18.9525,
+      "vehicle_exposure_score": 40.862,
+      "temporal_trend_score": 66.4784
+    },
+    "explanation": {
+      "priority_level": "HIGH",
+      "priority_score": 57.5,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udd34",
+          "value": "87/100",
+          "impact": "HIGH",
+          "detail": "Model-estimated risk score is in the critical range",
+          "weight": 86.5511
+        },
+        {
+          "factor": "Rising Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "66/100",
+          "impact": "MEDIUM",
+          "detail": "Slight upward trend in congestion over past 4 weeks",
+          "weight": 39.887
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "47/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate congestion at 47",
+          "weight": 32.578
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone shows significant risk elevation driven by Risk Score. Proactive intervention should be scheduled within the current planning cycle."
+    }
+  },
+  "telemetry": {
+    "congestion": 46.54,
+    "congestion_delta": -7.63,
+    "average_speed_kmh": 27.97,
+    "speed_delta": 0.89,
+    "vehicle_density": 27.59,
+    "density_delta": -4.65,
+    "population_density": 3999,
+    "red_light_violations": 5,
+    "weather": "Heavy Rain",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 45,
+    "recommended_green_seconds": 72,
+    "change_seconds": 27,
+    "change_percent": 60.0,
+    "urgency": "CRITICAL",
+    "reason": "Severe congestion requires significantly extended green phase",
+    "factors": {
+      "congestion_factor": 1.37,
+      "density_factor": 1.11,
+      "speed_factor": 0.9,
+      "event_boost": 1.0,
+      "weather_boost": 1.18
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 28474.3,
+    "total_co2_tonnes_per_year": 1480.66,
+    "idle_co2_kg": 7087.9,
+    "moving_co2_kg": 21386.4,
+    "potential_savings_kg_per_week": 1747.4,
+    "potential_savings_tonnes_per_year": 90.87,
+    "trees_equivalent_per_year": 4327,
+    "fuel_saved_liters_per_week": 756.5,
+    "citizens_impacted": 7998,
+    "optimization_factor_pct": 24.7
+  },
+  "interventions": [
+    {
+      "id": "ROAD_MAINTENANCE",
+      "name": "Road Maintenance Inspection",
+      "icon": "\ud83d\udee3\ufe0f",
+      "severity": "MEDIUM",
+      "description": "Deteriorated road surface combined with elevated risk indicates infrastructure maintenance need.",
+      "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
+    }
+  ],
+  "executive_briefing": "Ambattur is in a critical safety state with 87% incident risk. Continue routine monitoring. Optimizing signals could save 1747 kg CO2/week, equivalent to 4327 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_48",
     "week": 32,
     "zone_type": "Industrial_Corridor",
@@ -51,6 +156,15 @@
     "location_name": "Ambattur",
     "city": "Chennai",
     "latitude": 13.1143,
-    "longitude": 80.1486
+    "longitude": 80.1486,
+    "predicted_risk_probability": 0.8655,
+    "risk_score": 86.5511,
+    "population_exposure_score": 18.9525,
+    "vehicle_exposure_score": 40.862,
+    "temporal_trend_score": 66.4784,
+    "priority_score": 57.5027,
+    "priority_rank": 21,
+    "priority_level": "HIGH",
+    "risk_prob": 0.8655
   }
 }

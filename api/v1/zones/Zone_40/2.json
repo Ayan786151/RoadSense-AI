@@ -1,8 +1,137 @@
 {
   "zone_id": "Zone_40",
+  "location_name": "Velachery",
+  "city": "Chennai",
+  "zone_type": "University_District",
   "week": 2,
-  "predicted_risk_probability": null,
-  "metrics": {
+  "latitude": 12.9815,
+  "longitude": 80.218,
+  "risk_analysis": {
+    "predicted_risk_probability": null,
+    "predicted_risk_percentage": null,
+    "risk_label": "BASELINE WARMUP",
+    "risk_color": "#71717a",
+    "risk_delta_vs_prev_week": null,
+    "actual_incident": 1
+  },
+  "priority": {
+    "priority_score": 35.5718,
+    "priority_rank": 17,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 0.0,
+      "population_exposure_score": 47.1945,
+      "vehicle_exposure_score": 81.3661,
+      "temporal_trend_score": 50.0
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 35.6,
+      "top_contributors": [
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "81/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 81.3661
+        },
+        {
+          "factor": "Violation Count",
+          "icon": "\ud83d\udea8",
+          "value": "10",
+          "impact": "HIGH",
+          "detail": "10 red-light violations recorded \u2014 intersection safety concern",
+          "weight": 50
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "51/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate congestion at 51",
+          "weight": 35.42
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "47/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 33.0361
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "0/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 0.0
+        }
+      ],
+      "total_factors": 5,
+      "assessment": "This zone has moderate risk levels with contributing factors: Vehicle Density, Violation Count. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 50.6,
+    "congestion_delta": 9.6,
+    "average_speed_kmh": 50.52,
+    "speed_delta": -3.59,
+    "vehicle_density": 44.67,
+    "density_delta": 4.76,
+    "population_density": 7930,
+    "red_light_violations": 10,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 46,
+    "change_seconds": 11,
+    "change_percent": 31.4,
+    "urgency": "HIGH",
+    "reason": "Elevated traffic density needs extended clearance time",
+    "factors": {
+      "congestion_factor": 1.4,
+      "density_factor": 1.18,
+      "speed_factor": 0.81,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 41373.1,
+    "total_co2_tonnes_per_year": 2151.4,
+    "idle_co2_kg": 12476.9,
+    "moving_co2_kg": 28896.2,
+    "potential_savings_kg_per_week": 3126.7,
+    "potential_savings_tonnes_per_year": 162.59,
+    "trees_equivalent_per_year": 7742,
+    "fuel_saved_liters_per_week": 1353.6,
+    "citizens_impacted": 15860,
+    "optimization_factor_pct": 25.1
+  },
+  "interventions": [
+    {
+      "id": "VIOLATION_ENFORCEMENT",
+      "name": "Red-Light Violation Enforcement",
+      "icon": "\ud83d\udea8",
+      "severity": "HIGH",
+      "description": "Elevated red-light violation count indicates intersection compliance failure.",
+      "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
+    },
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "Velachery is within safe operating parameters (0% risk). Enforcement focus needed \u2014 10 red-light violations recorded. Optimizing signals could save 3127 kg CO2/week, equivalent to 7742 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_40",
     "week": 2,
     "zone_type": "University_District",
@@ -51,6 +180,15 @@
     "location_name": "Velachery",
     "city": "Chennai",
     "latitude": 12.9815,
-    "longitude": 80.218
+    "longitude": 80.218,
+    "predicted_risk_probability": null,
+    "risk_score": 0.0,
+    "population_exposure_score": 47.1945,
+    "vehicle_exposure_score": 81.3661,
+    "temporal_trend_score": 50.0,
+    "priority_score": 35.5718,
+    "priority_rank": 17,
+    "priority_level": "MODERATE",
+    "risk_prob": null
   }
 }

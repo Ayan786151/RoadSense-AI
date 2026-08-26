@@ -1,8 +1,121 @@
 {
   "zone_id": "Zone_07",
+  "location_name": "Goregaon",
+  "city": "Mumbai",
+  "zone_type": "University_District",
   "week": 25,
-  "predicted_risk_probability": 0.5655724967587358,
-  "metrics": {
+  "latitude": 19.1663,
+  "longitude": 72.8526,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.5656,
+    "predicted_risk_percentage": 56.56,
+    "risk_label": "HIGH RISK",
+    "risk_color": "#f97316",
+    "risk_delta_vs_prev_week": -3.3881,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 45.9565,
+    "priority_rank": 22,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 56.5572,
+      "population_exposure_score": 42.4312,
+      "vehicle_exposure_score": 42.5926,
+      "temporal_trend_score": 28.0489
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 46.0,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "57/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 56.5572
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "50/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate congestion at 50",
+          "weight": 35.182
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "42/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 29.7018
+        },
+        {
+          "factor": "Improving Trend",
+          "icon": "\ud83d\udcc9",
+          "value": "28/100",
+          "impact": "POSITIVE",
+          "detail": "Conditions are improving over past 4 weeks",
+          "weight": -28.0489
+        }
+      ],
+      "total_factors": 4,
+      "assessment": "This zone has moderate risk levels with contributing factors: Risk Score, Congestion. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 50.26,
+    "congestion_delta": 2.83,
+    "average_speed_kmh": 50.41,
+    "speed_delta": 0.47,
+    "vehicle_density": 33.2,
+    "density_delta": -0.28,
+    "population_density": 7267,
+    "red_light_violations": 6,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 45,
+    "change_seconds": 10,
+    "change_percent": 28.6,
+    "urgency": "HIGH",
+    "reason": "Elevated traffic density needs extended clearance time",
+    "factors": {
+      "congestion_factor": 1.4,
+      "density_factor": 1.13,
+      "speed_factor": 0.81,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 30788.1,
+    "total_co2_tonnes_per_year": 1600.98,
+    "idle_co2_kg": 9210.8,
+    "moving_co2_kg": 21577.2,
+    "potential_savings_kg_per_week": 2305.1,
+    "potential_savings_tonnes_per_year": 119.87,
+    "trees_equivalent_per_year": 5707,
+    "fuel_saved_liters_per_week": 997.9,
+    "citizens_impacted": 14534,
+    "optimization_factor_pct": 25.0
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "No specific risk indicators triggered.",
+      "action": "Continue routine monitoring."
+    }
+  ],
+  "executive_briefing": "Goregaon shows elevated risk at 57%. Continue routine monitoring. Optimizing signals could save 2305 kg CO2/week, equivalent to 5707 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_07",
     "week": 25,
     "zone_type": "University_District",
@@ -51,6 +164,15 @@
     "location_name": "Goregaon",
     "city": "Mumbai",
     "latitude": 19.1663,
-    "longitude": 72.8526
+    "longitude": 72.8526,
+    "predicted_risk_probability": 0.5656,
+    "risk_score": 56.5572,
+    "population_exposure_score": 42.4312,
+    "vehicle_exposure_score": 42.5926,
+    "temporal_trend_score": 28.0489,
+    "priority_score": 45.9565,
+    "priority_rank": 22,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.5656
   }
 }

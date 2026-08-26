@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_41",
+  "location_name": "Adyar",
+  "city": "Chennai",
+  "zone_type": "Highway_Junction",
   "week": 45,
-  "predicted_risk_probability": 0.6596472396418268,
-  "metrics": {
+  "latitude": 13.0063,
+  "longitude": 80.2574,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.6596,
+    "predicted_risk_percentage": 65.96,
+    "risk_label": "HIGH RISK",
+    "risk_color": "#f97316",
+    "risk_delta_vs_prev_week": 11.6307,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 40.2061,
+    "priority_rank": 21,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 65.9647,
+      "population_exposure_score": 8.5351,
+      "vehicle_exposure_score": 48.9838,
+      "temporal_trend_score": 12.5978
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 40.2,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "66/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 65.9647
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "53/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate congestion at 53",
+          "weight": 36.862
+        },
+        {
+          "factor": "Improving Trend",
+          "icon": "\ud83d\udcc9",
+          "value": "13/100",
+          "impact": "POSITIVE",
+          "detail": "Conditions are improving over past 4 weeks",
+          "weight": -12.5978
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone has moderate risk levels with contributing factors: Risk Score, Congestion. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 52.66,
+    "congestion_delta": 10.52,
+    "average_speed_kmh": 47.95,
+    "speed_delta": -2.0,
+    "vehicle_density": 36.9,
+    "density_delta": 5.55,
+    "population_density": 2549,
+    "red_light_violations": 9,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 50,
+    "recommended_green_seconds": 66,
+    "change_seconds": 16,
+    "change_percent": 32.0,
+    "urgency": "HIGH",
+    "reason": "Elevated traffic density needs extended clearance time",
+    "factors": {
+      "congestion_factor": 1.42,
+      "density_factor": 1.15,
+      "speed_factor": 0.82,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 34849.5,
+    "total_co2_tonnes_per_year": 1812.17,
+    "idle_co2_kg": 10726.2,
+    "moving_co2_kg": 24123.2,
+    "potential_savings_kg_per_week": 2710.1,
+    "potential_savings_tonnes_per_year": 140.92,
+    "trees_equivalent_per_year": 6710,
+    "fuel_saved_liters_per_week": 1173.2,
+    "citizens_impacted": 5098,
+    "optimization_factor_pct": 25.3
+  },
+  "interventions": [
+    {
+      "id": "VIOLATION_ENFORCEMENT",
+      "name": "Red-Light Violation Enforcement",
+      "icon": "\ud83d\udea8",
+      "severity": "HIGH",
+      "description": "Elevated red-light violation count indicates intersection compliance failure.",
+      "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
+    }
+  ],
+  "executive_briefing": "Adyar is in a critical safety state with 66% incident risk. Enforcement focus needed \u2014 9 red-light violations recorded. Optimizing signals could save 2710 kg CO2/week, equivalent to 6710 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_41",
     "week": 45,
     "zone_type": "Highway_Junction",
@@ -51,6 +156,15 @@
     "location_name": "Adyar",
     "city": "Chennai",
     "latitude": 13.0063,
-    "longitude": 80.2574
+    "longitude": 80.2574,
+    "predicted_risk_probability": 0.6596,
+    "risk_score": 65.9647,
+    "population_exposure_score": 8.5351,
+    "vehicle_exposure_score": 48.9838,
+    "temporal_trend_score": 12.5978,
+    "priority_score": 40.2061,
+    "priority_rank": 21,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.6596
   }
 }

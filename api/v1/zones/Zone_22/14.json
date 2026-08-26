@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_22",
+  "location_name": "Pitampura",
+  "city": "Delhi",
+  "zone_type": "University_District",
   "week": 14,
-  "predicted_risk_probability": 0.25474927435689415,
-  "metrics": {
+  "latitude": 28.7033,
+  "longitude": 77.1322,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.2547,
+    "predicted_risk_percentage": 25.47,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": -3.5104,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 41.9429,
+    "priority_rank": 25,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 25.4749,
+      "population_exposure_score": 44.6081,
+      "vehicle_exposure_score": 56.4578,
+      "temporal_trend_score": 62.0622
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 41.9,
+      "top_contributors": [
+        {
+          "factor": "Rising Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "62/100",
+          "impact": "MEDIUM",
+          "detail": "Slight upward trend in congestion over past 4 weeks",
+          "weight": 37.2373
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "45/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 31.2257
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "25/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 25.4749
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone has moderate risk levels with contributing factors: Rising Trend, Population Exposure. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 23.77,
+    "congestion_delta": 2.59,
+    "average_speed_kmh": 58.72,
+    "speed_delta": 7.86,
+    "vehicle_density": 36.5,
+    "density_delta": 7.05,
+    "population_density": 7570,
+    "red_light_violations": 2,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 37,
+    "change_seconds": 2,
+    "change_percent": 5.7,
+    "urgency": "MODERATE",
+    "reason": "Slight adjustment for current conditions",
+    "factors": {
+      "congestion_factor": 1.19,
+      "density_factor": 1.15,
+      "speed_factor": 0.78,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 47137.9,
+    "total_co2_tonnes_per_year": 2451.17,
+    "idle_co2_kg": 4789.2,
+    "moving_co2_kg": 42348.7,
+    "potential_savings_kg_per_week": 1071.7,
+    "potential_savings_tonnes_per_year": 55.73,
+    "trees_equivalent_per_year": 2653,
+    "fuel_saved_liters_per_week": 463.9,
+    "citizens_impacted": 15140,
+    "optimization_factor_pct": 22.4
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "Pitampura is within safe operating parameters (25% risk). Continue routine monitoring. Optimizing signals could save 1072 kg CO2/week, equivalent to 2653 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_22",
     "week": 14,
     "zone_type": "University_District",
@@ -51,6 +156,15 @@
     "location_name": "Pitampura",
     "city": "Delhi",
     "latitude": 28.7033,
-    "longitude": 77.1322
+    "longitude": 77.1322,
+    "predicted_risk_probability": 0.2547,
+    "risk_score": 25.4749,
+    "population_exposure_score": 44.6081,
+    "vehicle_exposure_score": 56.4578,
+    "temporal_trend_score": 62.0622,
+    "priority_score": 41.9429,
+    "priority_rank": 25,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.2547
   }
 }

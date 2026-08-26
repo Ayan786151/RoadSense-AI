@@ -1,8 +1,121 @@
 {
   "zone_id": "Zone_11",
+  "location_name": "Lower Parel",
+  "city": "Mumbai",
+  "zone_type": "Residential",
   "week": 20,
-  "predicted_risk_probability": 0.771505129941462,
-  "metrics": {
+  "latitude": 18.9988,
+  "longitude": 72.8258,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.7715,
+    "predicted_risk_percentage": 77.15,
+    "risk_label": "CRITICAL RISK",
+    "risk_color": "#ef4444",
+    "risk_delta_vs_prev_week": -14.8488,
+    "actual_incident": 1
+  },
+  "priority": {
+    "priority_score": 68.8938,
+    "priority_rank": 8,
+    "priority_level": "HIGH",
+    "components": {
+      "risk_score": 77.1505,
+      "population_exposure_score": 61.7429,
+      "vehicle_exposure_score": 57.5792,
+      "temporal_trend_score": 73.8803
+    },
+    "explanation": {
+      "priority_level": "HIGH",
+      "priority_score": 68.9,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udd34",
+          "value": "77/100",
+          "impact": "HIGH",
+          "detail": "Model-estimated risk score is in the critical range",
+          "weight": 77.1505
+        },
+        {
+          "factor": "Worsening Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "74/100",
+          "impact": "HIGH",
+          "detail": "4-week congestion trend is actively worsening \u2014 conditions deteriorating",
+          "weight": 73.8803
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "62/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 9955 residents/km\u00b2",
+          "weight": 61.7429
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "60/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate congestion at 60",
+          "weight": 41.86
+        }
+      ],
+      "total_factors": 4,
+      "assessment": "This zone shows significant risk elevation driven by Risk Score, Worsening Trend. Proactive intervention should be scheduled within the current planning cycle."
+    }
+  },
+  "telemetry": {
+    "congestion": 59.8,
+    "congestion_delta": -21.44,
+    "average_speed_kmh": 45.5,
+    "speed_delta": 17.02,
+    "vehicle_density": 43.27,
+    "density_delta": 0.72,
+    "population_density": 9955,
+    "red_light_violations": 6,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 30,
+    "recommended_green_seconds": 43,
+    "change_seconds": 13,
+    "change_percent": 43.3,
+    "urgency": "CRITICAL",
+    "reason": "Severe congestion requires significantly extended green phase",
+    "factors": {
+      "congestion_factor": 1.48,
+      "density_factor": 1.17,
+      "speed_factor": 0.83,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 37077.1,
+    "total_co2_tonnes_per_year": 1928.01,
+    "idle_co2_kg": 14283.3,
+    "moving_co2_kg": 22793.8,
+    "potential_savings_kg_per_week": 3710.8,
+    "potential_savings_tonnes_per_year": 192.96,
+    "trees_equivalent_per_year": 9188,
+    "fuel_saved_liters_per_week": 1606.4,
+    "citizens_impacted": 19910,
+    "optimization_factor_pct": 26.0
+  },
+  "interventions": [
+    {
+      "id": "MONITORING_UPGRADE",
+      "name": "Enhanced Monitoring & CCTV Coverage",
+      "icon": "\ud83d\udcf9",
+      "severity": "MEDIUM",
+      "description": "High-risk zone with significant population exposure warrants improved surveillance.",
+      "action": "Install additional CCTV cameras and integrate with traffic management center for real-time monitoring."
+    }
+  ],
+  "executive_briefing": "Lower Parel is in a critical safety state with 77% incident risk. Continue routine monitoring. Optimizing signals could save 3711 kg CO2/week, equivalent to 9188 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_11",
     "week": 20,
     "zone_type": "Residential",
@@ -51,6 +164,15 @@
     "location_name": "Lower Parel",
     "city": "Mumbai",
     "latitude": 18.9988,
-    "longitude": 72.8258
+    "longitude": 72.8258,
+    "predicted_risk_probability": 0.7715,
+    "risk_score": 77.1505,
+    "population_exposure_score": 61.7429,
+    "vehicle_exposure_score": 57.5792,
+    "temporal_trend_score": 73.8803,
+    "priority_score": 68.8938,
+    "priority_rank": 8,
+    "priority_level": "HIGH",
+    "risk_prob": 0.7715
   }
 }

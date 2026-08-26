@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_28",
+  "location_name": "Aliganj",
+  "city": "Lucknow",
+  "zone_type": "Highway_Junction",
   "week": 50,
-  "predicted_risk_probability": 0.14618824165793728,
-  "metrics": {
+  "latitude": 26.886,
+  "longitude": 80.9462,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.1462,
+    "predicted_risk_percentage": 14.62,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": -4.9419,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 15.8845,
+    "priority_rank": 48,
+    "priority_level": "LOW",
+    "components": {
+      "risk_score": 14.6188,
+      "population_exposure_score": 3.4773,
+      "vehicle_exposure_score": 15.4695,
+      "temporal_trend_score": 40.4918
+    },
+    "explanation": {
+      "priority_level": "LOW",
+      "priority_score": 15.9,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "15/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 14.6188
+        }
+      ],
+      "total_factors": 1,
+      "assessment": "This zone is currently within acceptable safety parameters. Routine monitoring is sufficient."
+    }
+  },
+  "telemetry": {
+    "congestion": 4.24,
+    "congestion_delta": -3.6,
+    "average_speed_kmh": 63.33,
+    "speed_delta": 8.55,
+    "vehicle_density": 11.63,
+    "density_delta": 7.75,
+    "population_density": 1845,
+    "red_light_violations": 9,
+    "weather": "Normal",
+    "special_event": 1
+  },
+  "signal_optimization": {
+    "base_green_seconds": 50,
+    "recommended_green_seconds": 47,
+    "change_seconds": -3,
+    "change_percent": -6.0,
+    "urgency": "NOMINAL",
+    "reason": "Current default timing is adequate",
+    "factors": {
+      "congestion_factor": 1.03,
+      "density_factor": 1.05,
+      "speed_factor": 0.76,
+      "event_boost": 1.15,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 18553.6,
+    "total_co2_tonnes_per_year": 964.78,
+    "idle_co2_kg": 272.2,
+    "moving_co2_kg": 18281.4,
+    "potential_savings_kg_per_week": 55.6,
+    "potential_savings_tonnes_per_year": 2.89,
+    "trees_equivalent_per_year": 137,
+    "fuel_saved_liters_per_week": 24.1,
+    "citizens_impacted": 3690,
+    "optimization_factor_pct": 20.4
+  },
+  "interventions": [
+    {
+      "id": "VIOLATION_ENFORCEMENT",
+      "name": "Red-Light Violation Enforcement",
+      "icon": "\ud83d\udea8",
+      "severity": "HIGH",
+      "description": "Elevated red-light violation count indicates intersection compliance failure.",
+      "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
+    },
+    {
+      "id": "EVENT_TRAFFIC_PLAN",
+      "name": "Special Event Traffic Plan",
+      "icon": "\ud83c\udfaa",
+      "severity": "MEDIUM",
+      "description": "Active special event generating additional traffic demand.",
+      "action": "Activate event traffic management plan. Deploy traffic marshals and temporary signage."
+    },
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "Aliganj is within safe operating parameters (15% risk). Enforcement focus needed \u2014 9 red-light violations recorded. Optimizing signals could save 56 kg CO2/week, equivalent to 137 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_28",
     "week": 50,
     "zone_type": "Highway_Junction",
@@ -51,6 +156,15 @@
     "location_name": "Aliganj",
     "city": "Lucknow",
     "latitude": 26.886,
-    "longitude": 80.9462
+    "longitude": 80.9462,
+    "predicted_risk_probability": 0.1462,
+    "risk_score": 14.6188,
+    "population_exposure_score": 3.4773,
+    "vehicle_exposure_score": 15.4695,
+    "temporal_trend_score": 40.4918,
+    "priority_score": 15.8845,
+    "priority_rank": 48,
+    "priority_level": "LOW",
+    "risk_prob": 0.1462
   }
 }

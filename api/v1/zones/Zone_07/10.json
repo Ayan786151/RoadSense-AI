@@ -1,8 +1,137 @@
 {
   "zone_id": "Zone_07",
+  "location_name": "Goregaon",
+  "city": "Mumbai",
+  "zone_type": "University_District",
   "week": 10,
-  "predicted_risk_probability": 0.9002483200871643,
-  "metrics": {
+  "latitude": 19.1663,
+  "longitude": 72.8526,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.9002,
+    "predicted_risk_percentage": 90.02,
+    "risk_label": "CRITICAL RISK",
+    "risk_color": "#ef4444",
+    "risk_delta_vs_prev_week": 32.6828,
+    "actual_incident": 1
+  },
+  "priority": {
+    "priority_score": 67.82,
+    "priority_rank": 6,
+    "priority_level": "HIGH",
+    "components": {
+      "risk_score": 90.0248,
+      "population_exposure_score": 42.4312,
+      "vehicle_exposure_score": 55.2348,
+      "temporal_trend_score": 67.702
+    },
+    "explanation": {
+      "priority_level": "HIGH",
+      "priority_score": 67.8,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udd34",
+          "value": "90/100",
+          "impact": "HIGH",
+          "detail": "Model-estimated risk score is in the critical range",
+          "weight": 90.0248
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "68/100",
+          "impact": "HIGH",
+          "detail": "Congestion index at 68 \u2014 severe traffic flow degradation",
+          "weight": 67.97
+        },
+        {
+          "factor": "Rising Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "68/100",
+          "impact": "MEDIUM",
+          "detail": "Slight upward trend in congestion over past 4 weeks",
+          "weight": 40.6212
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "42/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 29.7018
+        }
+      ],
+      "total_factors": 4,
+      "assessment": "This zone shows significant risk elevation driven by Risk Score, Congestion. Proactive intervention should be scheduled within the current planning cycle."
+    }
+  },
+  "telemetry": {
+    "congestion": 67.97,
+    "congestion_delta": 24.9,
+    "average_speed_kmh": 32.68,
+    "speed_delta": -22.22,
+    "vehicle_density": 33.87,
+    "density_delta": 3.0,
+    "population_density": 7267,
+    "red_light_violations": 8,
+    "weather": "Light Rain",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 58,
+    "change_seconds": 23,
+    "change_percent": 65.7,
+    "urgency": "CRITICAL",
+    "reason": "Severe congestion requires significantly extended green phase",
+    "factors": {
+      "congestion_factor": 1.54,
+      "density_factor": 1.14,
+      "speed_factor": 0.88,
+      "event_boost": 1.0,
+      "weather_boost": 1.08
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 22918.3,
+    "total_co2_tonnes_per_year": 1191.75,
+    "idle_co2_kg": 12707.8,
+    "moving_co2_kg": 10210.5,
+    "potential_savings_kg_per_week": 3405.3,
+    "potential_savings_tonnes_per_year": 177.08,
+    "trees_equivalent_per_year": 8432,
+    "fuel_saved_liters_per_week": 1474.2,
+    "citizens_impacted": 14534,
+    "optimization_factor_pct": 26.8
+  },
+  "interventions": [
+    {
+      "id": "SIGNAL_OPTIMIZATION",
+      "name": "Traffic Signal Optimization",
+      "icon": "\ud83d\udea6",
+      "severity": "HIGH",
+      "description": "High congestion with low throughput speed indicates signal timing inefficiency.",
+      "action": "Review and optimize signal timing at major intersections in this zone."
+    },
+    {
+      "id": "VIOLATION_ENFORCEMENT",
+      "name": "Red-Light Violation Enforcement",
+      "icon": "\ud83d\udea8",
+      "severity": "HIGH",
+      "description": "Elevated red-light violation count indicates intersection compliance failure.",
+      "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
+    },
+    {
+      "id": "ROAD_MAINTENANCE",
+      "name": "Road Maintenance Inspection",
+      "icon": "\ud83d\udee3\ufe0f",
+      "severity": "MEDIUM",
+      "description": "Deteriorated road surface combined with elevated risk indicates infrastructure maintenance need.",
+      "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
+    }
+  ],
+  "executive_briefing": "Goregaon is in a critical safety state with 90% incident risk. Signal optimization recommended \u2014 congestion at 68/100 with speeds averaging 33 km/h. Optimizing signals could save 3405 kg CO2/week, equivalent to 8432 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_07",
     "week": 10,
     "zone_type": "University_District",
@@ -51,6 +180,15 @@
     "location_name": "Goregaon",
     "city": "Mumbai",
     "latitude": 19.1663,
-    "longitude": 72.8526
+    "longitude": 72.8526,
+    "predicted_risk_probability": 0.9002,
+    "risk_score": 90.0248,
+    "population_exposure_score": 42.4312,
+    "vehicle_exposure_score": 55.2348,
+    "temporal_trend_score": 67.702,
+    "priority_score": 67.82,
+    "priority_rank": 6,
+    "priority_level": "HIGH",
+    "risk_prob": 0.9002
   }
 }

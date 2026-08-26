@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_02",
+  "location_name": "Bandra",
+  "city": "Mumbai",
+  "zone_type": "Residential",
   "week": 25,
-  "predicted_risk_probability": 0.15911371409096117,
-  "metrics": {
+  "latitude": 19.0596,
+  "longitude": 72.8295,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.1591,
+    "predicted_risk_percentage": 15.91,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": -8.9753,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 45.0129,
+    "priority_rank": 24,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 15.9114,
+      "population_exposure_score": 79.4957,
+      "vehicle_exposure_score": 42.723,
+      "temporal_trend_score": 68.1987
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 45.0,
+      "top_contributors": [
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "79/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 12426 residents/km\u00b2",
+          "weight": 79.4957
+        },
+        {
+          "factor": "Rising Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "68/100",
+          "impact": "MEDIUM",
+          "detail": "Slight upward trend in congestion over past 4 weeks",
+          "weight": 40.9192
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "16/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 15.9114
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone has moderate risk levels with contributing factors: Population Exposure, Rising Trend. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 16.19,
+    "congestion_delta": -10.91,
+    "average_speed_kmh": 60.63,
+    "speed_delta": 9.13,
+    "vehicle_density": 33.3,
+    "density_delta": -2.79,
+    "population_density": 12426,
+    "red_light_violations": 4,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 30,
+    "recommended_green_seconds": 29,
+    "change_seconds": -1,
+    "change_percent": -3.3,
+    "urgency": "NOMINAL",
+    "reason": "Current default timing is adequate",
+    "factors": {
+      "congestion_factor": 1.13,
+      "density_factor": 1.13,
+      "speed_factor": 0.77,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 46835.4,
+    "total_co2_tonnes_per_year": 2435.44,
+    "idle_co2_kg": 2976.0,
+    "moving_co2_kg": 43859.4,
+    "potential_savings_kg_per_week": 643.4,
+    "potential_savings_tonnes_per_year": 33.46,
+    "trees_equivalent_per_year": 1593,
+    "fuel_saved_liters_per_week": 278.5,
+    "citizens_impacted": 24852,
+    "optimization_factor_pct": 21.6
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "Bandra is within safe operating parameters (16% risk). Continue routine monitoring. Optimizing signals could save 643 kg CO2/week, equivalent to 1593 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_02",
     "week": 25,
     "zone_type": "Residential",
@@ -51,6 +156,15 @@
     "location_name": "Bandra",
     "city": "Mumbai",
     "latitude": 19.0596,
-    "longitude": 72.8295
+    "longitude": 72.8295,
+    "predicted_risk_probability": 0.1591,
+    "risk_score": 15.9114,
+    "population_exposure_score": 79.4957,
+    "vehicle_exposure_score": 42.723,
+    "temporal_trend_score": 68.1987,
+    "priority_score": 45.0129,
+    "priority_rank": 24,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.1591
   }
 }

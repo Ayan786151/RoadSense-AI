@@ -1,8 +1,129 @@
 {
   "zone_id": "Zone_36",
+  "location_name": "Rajajipuram",
+  "city": "Lucknow",
+  "zone_type": "Residential",
   "week": 26,
-  "predicted_risk_probability": 0.561922452846608,
-  "metrics": {
+  "latitude": 26.833,
+  "longitude": 80.89,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.5619,
+    "predicted_risk_percentage": 56.19,
+    "risk_label": "HIGH RISK",
+    "risk_color": "#f97316",
+    "risk_delta_vs_prev_week": -2.4943,
+    "actual_incident": 1
+  },
+  "priority": {
+    "priority_score": 65.2215,
+    "priority_rank": 10,
+    "priority_level": "HIGH",
+    "components": {
+      "risk_score": 56.1922,
+      "population_exposure_score": 81.73,
+      "vehicle_exposure_score": 66.1455,
+      "temporal_trend_score": 60.5536
+    },
+    "explanation": {
+      "priority_level": "HIGH",
+      "priority_score": 65.2,
+      "top_contributors": [
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "82/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 12737 residents/km\u00b2",
+          "weight": 81.73
+        },
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "66/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 66.1455
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "56/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 56.1922
+        },
+        {
+          "factor": "Rising Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "61/100",
+          "impact": "MEDIUM",
+          "detail": "Slight upward trend in congestion over past 4 weeks",
+          "weight": 36.3321
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "44/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate congestion at 44",
+          "weight": 30.968
+        }
+      ],
+      "total_factors": 5,
+      "assessment": "This zone shows significant risk elevation driven by Population Exposure, Vehicle Density. Proactive intervention should be scheduled within the current planning cycle."
+    }
+  },
+  "telemetry": {
+    "congestion": 44.24,
+    "congestion_delta": -1.18,
+    "average_speed_kmh": 55.58,
+    "speed_delta": 5.52,
+    "vehicle_density": 48.89,
+    "density_delta": 4.5,
+    "population_density": 12737,
+    "red_light_violations": 6,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 30,
+    "recommended_green_seconds": 38,
+    "change_seconds": 8,
+    "change_percent": 26.7,
+    "urgency": "HIGH",
+    "reason": "Elevated traffic density needs extended clearance time",
+    "factors": {
+      "congestion_factor": 1.35,
+      "density_factor": 1.2,
+      "speed_factor": 0.79,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 51212.4,
+    "total_co2_tonnes_per_year": 2663.04,
+    "idle_co2_kg": 11939.2,
+    "moving_co2_kg": 39273.2,
+    "potential_savings_kg_per_week": 2916.0,
+    "potential_savings_tonnes_per_year": 151.63,
+    "trees_equivalent_per_year": 7220,
+    "fuel_saved_liters_per_week": 1262.3,
+    "citizens_impacted": 25474,
+    "optimization_factor_pct": 24.4
+  },
+  "interventions": [
+    {
+      "id": "SPEED_CALMING",
+      "name": "Speed Calming & Enforcement",
+      "icon": "\ud83c\udfce\ufe0f",
+      "severity": "HIGH",
+      "description": "High average speed combined with elevated risk score suggests speed-related hazards.",
+      "action": "Deploy speed calming measures (speed bumps, radar signs) and increase enforcement patrols."
+    }
+  ],
+  "executive_briefing": "Rajajipuram shows elevated risk at 56%. Continue routine monitoring. Optimizing signals could save 2916 kg CO2/week, equivalent to 7220 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_36",
     "week": 26,
     "zone_type": "Residential",
@@ -51,6 +172,15 @@
     "location_name": "Rajajipuram",
     "city": "Lucknow",
     "latitude": 26.833,
-    "longitude": 80.89
+    "longitude": 80.89,
+    "predicted_risk_probability": 0.5619,
+    "risk_score": 56.1922,
+    "population_exposure_score": 81.73,
+    "vehicle_exposure_score": 66.1455,
+    "temporal_trend_score": 60.5536,
+    "priority_score": 65.2215,
+    "priority_rank": 10,
+    "priority_level": "HIGH",
+    "risk_prob": 0.5619
   }
 }

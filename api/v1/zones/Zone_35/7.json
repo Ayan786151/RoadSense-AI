@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_35",
+  "location_name": "Jankipuram",
+  "city": "Lucknow",
+  "zone_type": "Residential",
   "week": 7,
-  "predicted_risk_probability": 0.5599932323844619,
-  "metrics": {
+  "latitude": 26.93,
+  "longitude": 80.94,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.56,
+    "predicted_risk_percentage": 56.0,
+    "risk_label": "HIGH RISK",
+    "risk_color": "#f97316",
+    "risk_delta_vs_prev_week": 37.008,
+    "actual_incident": 1
+  },
+  "priority": {
+    "priority_score": 68.3221,
+    "priority_rank": 7,
+    "priority_level": "HIGH",
+    "components": {
+      "risk_score": 55.9993,
+      "population_exposure_score": 100.0,
+      "vehicle_exposure_score": 74.7874,
+      "temporal_trend_score": 39.7661
+    },
+    "explanation": {
+      "priority_level": "HIGH",
+      "priority_score": 68.3,
+      "top_contributors": [
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "100/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 15280 residents/km\u00b2",
+          "weight": 100.0
+        },
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "75/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 74.7874
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "56/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 55.9993
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone shows significant risk elevation driven by Population Exposure, Vehicle Density. Proactive intervention should be scheduled within the current planning cycle."
+    }
+  },
+  "telemetry": {
+    "congestion": 33.14,
+    "congestion_delta": 12.25,
+    "average_speed_kmh": 47.2,
+    "speed_delta": -16.22,
+    "vehicle_density": 45.74,
+    "density_delta": 0.85,
+    "population_density": 15280,
+    "red_light_violations": 4,
+    "weather": "Light Rain",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 30,
+    "recommended_green_seconds": 39,
+    "change_seconds": 9,
+    "change_percent": 30.0,
+    "urgency": "HIGH",
+    "reason": "Elevated traffic density needs extended clearance time",
+    "factors": {
+      "congestion_factor": 1.27,
+      "density_factor": 1.18,
+      "speed_factor": 0.82,
+      "event_boost": 1.0,
+      "weather_boost": 1.08
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 49939.0,
+    "total_co2_tonnes_per_year": 2596.83,
+    "idle_co2_kg": 8367.3,
+    "moving_co2_kg": 41571.6,
+    "potential_savings_kg_per_week": 1950.8,
+    "potential_savings_tonnes_per_year": 101.44,
+    "trees_equivalent_per_year": 4830,
+    "fuel_saved_liters_per_week": 844.5,
+    "citizens_impacted": 30560,
+    "optimization_factor_pct": 23.3
+  },
+  "interventions": [
+    {
+      "id": "ROAD_MAINTENANCE",
+      "name": "Road Maintenance Inspection",
+      "icon": "\ud83d\udee3\ufe0f",
+      "severity": "MEDIUM",
+      "description": "Deteriorated road surface combined with elevated risk indicates infrastructure maintenance need.",
+      "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
+    }
+  ],
+  "executive_briefing": "Jankipuram shows elevated risk at 56%. Continue routine monitoring. Optimizing signals could save 1951 kg CO2/week, equivalent to 4830 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_35",
     "week": 7,
     "zone_type": "Residential",
@@ -51,6 +156,15 @@
     "location_name": "Jankipuram",
     "city": "Lucknow",
     "latitude": 26.93,
-    "longitude": 80.94
+    "longitude": 80.94,
+    "predicted_risk_probability": 0.56,
+    "risk_score": 55.9993,
+    "population_exposure_score": 100.0,
+    "vehicle_exposure_score": 74.7874,
+    "temporal_trend_score": 39.7661,
+    "priority_score": 68.3221,
+    "priority_rank": 7,
+    "priority_level": "HIGH",
+    "risk_prob": 0.56
   }
 }

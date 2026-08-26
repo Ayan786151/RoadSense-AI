@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_45",
+  "location_name": "Mylapore",
+  "city": "Chennai",
+  "zone_type": "Highway_Junction",
   "week": 30,
-  "predicted_risk_probability": 0.1389468318324308,
-  "metrics": {
+  "latitude": 13.0339,
+  "longitude": 80.2676,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.1389,
+    "predicted_risk_percentage": 13.89,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": -3.3295,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 29.1729,
+    "priority_rank": 34,
+    "priority_level": "LOW",
+    "components": {
+      "risk_score": 13.8947,
+      "population_exposure_score": 11.6819,
+      "vehicle_exposure_score": 35.099,
+      "temporal_trend_score": 91.1651
+    },
+    "explanation": {
+      "priority_level": "LOW",
+      "priority_score": 29.2,
+      "top_contributors": [
+        {
+          "factor": "Worsening Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "91/100",
+          "impact": "HIGH",
+          "detail": "4-week congestion trend is actively worsening \u2014 conditions deteriorating",
+          "weight": 91.1651
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "14/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 13.8947
+        }
+      ],
+      "total_factors": 2,
+      "assessment": "This zone is currently within acceptable safety parameters. Routine monitoring is sufficient."
+    }
+  },
+  "telemetry": {
+    "congestion": 11.74,
+    "congestion_delta": -8.98,
+    "average_speed_kmh": 62.72,
+    "speed_delta": 10.01,
+    "vehicle_density": 24.12,
+    "density_delta": 1.67,
+    "population_density": 2987,
+    "red_light_violations": 9,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 50,
+    "recommended_green_seconds": 45,
+    "change_seconds": -5,
+    "change_percent": -10.0,
+    "urgency": "NOMINAL",
+    "reason": "Current default timing is adequate",
+    "factors": {
+      "congestion_factor": 1.09,
+      "density_factor": 1.1,
+      "speed_factor": 0.76,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 36171.6,
+    "total_co2_tonnes_per_year": 1880.92,
+    "idle_co2_kg": 1563.1,
+    "moving_co2_kg": 34608.5,
+    "potential_savings_kg_per_week": 331.0,
+    "potential_savings_tonnes_per_year": 17.21,
+    "trees_equivalent_per_year": 819,
+    "fuel_saved_liters_per_week": 143.3,
+    "citizens_impacted": 5974,
+    "optimization_factor_pct": 21.2
+  },
+  "interventions": [
+    {
+      "id": "VIOLATION_ENFORCEMENT",
+      "name": "Red-Light Violation Enforcement",
+      "icon": "\ud83d\udea8",
+      "severity": "HIGH",
+      "description": "Elevated red-light violation count indicates intersection compliance failure.",
+      "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
+    },
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "Mylapore is within safe operating parameters (14% risk). Enforcement focus needed \u2014 9 red-light violations recorded. Optimizing signals could save 331 kg CO2/week, equivalent to 819 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_45",
     "week": 30,
     "zone_type": "Highway_Junction",
@@ -51,6 +156,15 @@
     "location_name": "Mylapore",
     "city": "Chennai",
     "latitude": 13.0339,
-    "longitude": 80.2676
+    "longitude": 80.2676,
+    "predicted_risk_probability": 0.1389,
+    "risk_score": 13.8947,
+    "population_exposure_score": 11.6819,
+    "vehicle_exposure_score": 35.099,
+    "temporal_trend_score": 91.1651,
+    "priority_score": 29.1729,
+    "priority_rank": 34,
+    "priority_level": "LOW",
+    "risk_prob": 0.1389
   }
 }

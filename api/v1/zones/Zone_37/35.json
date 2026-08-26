@@ -1,8 +1,129 @@
 {
   "zone_id": "Zone_37",
+  "location_name": "Vrindavan Yojana",
+  "city": "Lucknow",
+  "zone_type": "Residential",
   "week": 35,
-  "predicted_risk_probability": 0.8625141458588412,
-  "metrics": {
+  "latitude": 26.79,
+  "longitude": 81.0,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.8625,
+    "predicted_risk_percentage": 86.25,
+    "risk_label": "CRITICAL RISK",
+    "risk_color": "#ef4444",
+    "risk_delta_vs_prev_week": 46.3802,
+    "actual_incident": 1
+  },
+  "priority": {
+    "priority_score": 68.4038,
+    "priority_rank": 8,
+    "priority_level": "HIGH",
+    "components": {
+      "risk_score": 86.2514,
+      "population_exposure_score": 72.6561,
+      "vehicle_exposure_score": 57.6214,
+      "temporal_trend_score": 28.0992
+    },
+    "explanation": {
+      "priority_level": "HIGH",
+      "priority_score": 68.4,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udd34",
+          "value": "86/100",
+          "impact": "HIGH",
+          "detail": "Model-estimated risk score is in the critical range",
+          "weight": 86.2514
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "73/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 11474 residents/km\u00b2",
+          "weight": 72.6561
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "49/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate congestion at 49",
+          "weight": 34.286
+        },
+        {
+          "factor": "Improving Trend",
+          "icon": "\ud83d\udcc9",
+          "value": "28/100",
+          "impact": "POSITIVE",
+          "detail": "Conditions are improving over past 4 weeks",
+          "weight": -28.0992
+        }
+      ],
+      "total_factors": 4,
+      "assessment": "This zone shows significant risk elevation driven by Risk Score, Population Exposure. Proactive intervention should be scheduled within the current planning cycle."
+    }
+  },
+  "telemetry": {
+    "congestion": 48.98,
+    "congestion_delta": 14.2,
+    "average_speed_kmh": 30.27,
+    "speed_delta": -19.56,
+    "vehicle_density": 40.45,
+    "density_delta": -4.4,
+    "population_density": 11474,
+    "red_light_violations": 7,
+    "weather": "Heavy Rain",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 30,
+    "recommended_green_seconds": 50,
+    "change_seconds": 20,
+    "change_percent": 66.7,
+    "urgency": "CRITICAL",
+    "reason": "Severe congestion requires significantly extended green phase",
+    "factors": {
+      "congestion_factor": 1.39,
+      "density_factor": 1.16,
+      "speed_factor": 0.89,
+      "event_boost": 1.0,
+      "weather_boost": 1.18
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 28927.8,
+    "total_co2_tonnes_per_year": 1504.25,
+    "idle_co2_kg": 10936.5,
+    "moving_co2_kg": 17991.4,
+    "potential_savings_kg_per_week": 2723.0,
+    "potential_savings_tonnes_per_year": 141.59,
+    "trees_equivalent_per_year": 6742,
+    "fuel_saved_liters_per_week": 1178.8,
+    "citizens_impacted": 22948,
+    "optimization_factor_pct": 24.9
+  },
+  "interventions": [
+    {
+      "id": "ROAD_MAINTENANCE",
+      "name": "Road Maintenance Inspection",
+      "icon": "\ud83d\udee3\ufe0f",
+      "severity": "MEDIUM",
+      "description": "Deteriorated road surface combined with elevated risk indicates infrastructure maintenance need.",
+      "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
+    },
+    {
+      "id": "MONITORING_UPGRADE",
+      "name": "Enhanced Monitoring & CCTV Coverage",
+      "icon": "\ud83d\udcf9",
+      "severity": "MEDIUM",
+      "description": "High-risk zone with significant population exposure warrants improved surveillance.",
+      "action": "Install additional CCTV cameras and integrate with traffic management center for real-time monitoring."
+    }
+  ],
+  "executive_briefing": "Vrindavan Yojana is in a critical safety state with 86% incident risk. Continue routine monitoring. Optimizing signals could save 2723 kg CO2/week, equivalent to 6742 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_37",
     "week": 35,
     "zone_type": "Residential",
@@ -51,6 +172,15 @@
     "location_name": "Vrindavan Yojana",
     "city": "Lucknow",
     "latitude": 26.79,
-    "longitude": 81.0
+    "longitude": 81.0,
+    "predicted_risk_probability": 0.8625,
+    "risk_score": 86.2514,
+    "population_exposure_score": 72.6561,
+    "vehicle_exposure_score": 57.6214,
+    "temporal_trend_score": 28.0992,
+    "priority_score": 68.4038,
+    "priority_rank": 8,
+    "priority_level": "HIGH",
+    "risk_prob": 0.8625
   }
 }

@@ -1,8 +1,105 @@
 {
   "zone_id": "Zone_04",
+  "location_name": "Dadar",
+  "city": "Mumbai",
+  "zone_type": "Highway_Junction",
   "week": 38,
-  "predicted_risk_probability": 0.37113914379435764,
-  "metrics": {
+  "latitude": 19.0178,
+  "longitude": 72.8478,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.3711,
+    "predicted_risk_percentage": 37.11,
+    "risk_label": "MODERATE RISK",
+    "risk_color": "#eab308",
+    "risk_delta_vs_prev_week": 20.2241,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 36.0568,
+    "priority_rank": 33,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 37.1139,
+      "population_exposure_score": 7.5724,
+      "vehicle_exposure_score": 43.6052,
+      "temporal_trend_score": 70.647
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 36.1,
+      "top_contributors": [
+        {
+          "factor": "Worsening Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "71/100",
+          "impact": "HIGH",
+          "detail": "4-week congestion trend is actively worsening \u2014 conditions deteriorating",
+          "weight": 70.647
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "37/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 37.1139
+        }
+      ],
+      "total_factors": 2,
+      "assessment": "This zone has moderate risk levels with contributing factors: Worsening Trend. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 25.62,
+    "congestion_delta": 11.9,
+    "average_speed_kmh": 63.38,
+    "speed_delta": 1.2,
+    "vehicle_density": 31.29,
+    "density_delta": 4.84,
+    "population_density": 2415,
+    "red_light_violations": 7,
+    "weather": "Normal",
+    "special_event": 1
+  },
+  "signal_optimization": {
+    "base_green_seconds": 50,
+    "recommended_green_seconds": 59,
+    "change_seconds": 9,
+    "change_percent": 18.0,
+    "urgency": "MODERATE",
+    "reason": "Slight adjustment for current conditions",
+    "factors": {
+      "congestion_factor": 1.2,
+      "density_factor": 1.13,
+      "speed_factor": 0.76,
+      "event_boost": 1.15,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 42659.0,
+    "total_co2_tonnes_per_year": 2218.27,
+    "idle_co2_kg": 4425.1,
+    "moving_co2_kg": 38233.9,
+    "potential_savings_kg_per_week": 998.4,
+    "potential_savings_tonnes_per_year": 51.92,
+    "trees_equivalent_per_year": 2472,
+    "fuel_saved_liters_per_week": 432.2,
+    "citizens_impacted": 4830,
+    "optimization_factor_pct": 22.6
+  },
+  "interventions": [
+    {
+      "id": "EVENT_TRAFFIC_PLAN",
+      "name": "Special Event Traffic Plan",
+      "icon": "\ud83c\udfaa",
+      "severity": "MEDIUM",
+      "description": "Active special event generating additional traffic demand.",
+      "action": "Activate event traffic management plan. Deploy traffic marshals and temporary signage."
+    }
+  ],
+  "executive_briefing": "Dadar shows elevated risk at 37%. Continue routine monitoring. Optimizing signals could save 998 kg CO2/week, equivalent to 2472 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_04",
     "week": 38,
     "zone_type": "Highway_Junction",
@@ -51,6 +148,15 @@
     "location_name": "Dadar",
     "city": "Mumbai",
     "latitude": 19.0178,
-    "longitude": 72.8478
+    "longitude": 72.8478,
+    "predicted_risk_probability": 0.3711,
+    "risk_score": 37.1139,
+    "population_exposure_score": 7.5724,
+    "vehicle_exposure_score": 43.6052,
+    "temporal_trend_score": 70.647,
+    "priority_score": 36.0568,
+    "priority_rank": 33,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.3711
   }
 }

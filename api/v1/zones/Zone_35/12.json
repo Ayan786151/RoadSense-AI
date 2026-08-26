@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_35",
+  "location_name": "Jankipuram",
+  "city": "Lucknow",
+  "zone_type": "Residential",
   "week": 12,
-  "predicted_risk_probability": 0.20603155042790597,
-  "metrics": {
+  "latitude": 26.93,
+  "longitude": 80.94,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.206,
+    "predicted_risk_percentage": 20.6,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": -6.0184,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 54.5573,
+    "priority_rank": 11,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 20.6032,
+      "population_exposure_score": 100.0,
+      "vehicle_exposure_score": 70.6783,
+      "temporal_trend_score": 47.869
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 54.6,
+      "top_contributors": [
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "100/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 15280 residents/km\u00b2",
+          "weight": 100.0
+        },
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "71/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 70.6783
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "21/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 20.6032
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone has moderate risk levels with contributing factors: Population Exposure, Vehicle Density. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 21.1,
+    "congestion_delta": -6.08,
+    "average_speed_kmh": 61.78,
+    "speed_delta": 1.59,
+    "vehicle_density": 45.22,
+    "density_delta": -2.02,
+    "population_density": 15280,
+    "red_light_violations": 2,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 30,
+    "recommended_green_seconds": 31,
+    "change_seconds": 1,
+    "change_percent": 3.3,
+    "urgency": "NOMINAL",
+    "reason": "Current default timing is adequate",
+    "factors": {
+      "congestion_factor": 1.17,
+      "density_factor": 1.18,
+      "speed_factor": 0.77,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 62400.3,
+    "total_co2_tonnes_per_year": 3244.82,
+    "idle_co2_kg": 5266.9,
+    "moving_co2_kg": 57133.5,
+    "potential_savings_kg_per_week": 1164.5,
+    "potential_savings_tonnes_per_year": 60.55,
+    "trees_equivalent_per_year": 2883,
+    "fuel_saved_liters_per_week": 504.1,
+    "citizens_impacted": 30560,
+    "optimization_factor_pct": 22.1
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "Jankipuram is within safe operating parameters (21% risk). Continue routine monitoring. Optimizing signals could save 1164 kg CO2/week, equivalent to 2883 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_35",
     "week": 12,
     "zone_type": "Residential",
@@ -51,6 +156,15 @@
     "location_name": "Jankipuram",
     "city": "Lucknow",
     "latitude": 26.93,
-    "longitude": 80.94
+    "longitude": 80.94,
+    "predicted_risk_probability": 0.206,
+    "risk_score": 20.6032,
+    "population_exposure_score": 100.0,
+    "vehicle_exposure_score": 70.6783,
+    "temporal_trend_score": 47.869,
+    "priority_score": 54.5573,
+    "priority_rank": 11,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.206
   }
 }

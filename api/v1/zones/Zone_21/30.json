@@ -1,8 +1,121 @@
 {
   "zone_id": "Zone_21",
+  "location_name": "Janakpuri",
+  "city": "Delhi",
+  "zone_type": "Residential",
   "week": 30,
-  "predicted_risk_probability": 0.33944772125153677,
-  "metrics": {
+  "latitude": 28.6219,
+  "longitude": 77.0878,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.3394,
+    "predicted_risk_percentage": 33.94,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": 6.3326,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 55.6946,
+    "priority_rank": 14,
+    "priority_level": "HIGH",
+    "components": {
+      "risk_score": 33.9448,
+      "population_exposure_score": 73.8846,
+      "vehicle_exposure_score": 72.7154,
+      "temporal_trend_score": 60.6829
+    },
+    "explanation": {
+      "priority_level": "HIGH",
+      "priority_score": 55.7,
+      "top_contributors": [
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "74/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 11645 residents/km\u00b2",
+          "weight": 73.8846
+        },
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "73/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 72.7154
+        },
+        {
+          "factor": "Rising Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "61/100",
+          "impact": "MEDIUM",
+          "detail": "Slight upward trend in congestion over past 4 weeks",
+          "weight": 36.4097
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "34/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 33.9448
+        }
+      ],
+      "total_factors": 4,
+      "assessment": "This zone shows significant risk elevation driven by Population Exposure, Vehicle Density. Proactive intervention should be scheduled within the current planning cycle."
+    }
+  },
+  "telemetry": {
+    "congestion": 36.66,
+    "congestion_delta": 9.04,
+    "average_speed_kmh": 53.02,
+    "speed_delta": -6.61,
+    "vehicle_density": 49.97,
+    "density_delta": 8.05,
+    "population_density": 11645,
+    "red_light_violations": 3,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 30,
+    "recommended_green_seconds": 37,
+    "change_seconds": 7,
+    "change_percent": 23.3,
+    "urgency": "HIGH",
+    "reason": "Elevated traffic density needs extended clearance time",
+    "factors": {
+      "congestion_factor": 1.29,
+      "density_factor": 1.2,
+      "speed_factor": 0.8,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 53609.4,
+    "total_co2_tonnes_per_year": 2787.69,
+    "idle_co2_kg": 10112.1,
+    "moving_co2_kg": 43497.3,
+    "potential_savings_kg_per_week": 2393.1,
+    "potential_savings_tonnes_per_year": 124.44,
+    "trees_equivalent_per_year": 5925,
+    "fuel_saved_liters_per_week": 1036.0,
+    "citizens_impacted": 23290,
+    "optimization_factor_pct": 23.7
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "No specific risk indicators triggered.",
+      "action": "Continue routine monitoring."
+    }
+  ],
+  "executive_briefing": "Janakpuri is within safe operating parameters (34% risk). Continue routine monitoring. Optimizing signals could save 2393 kg CO2/week, equivalent to 5925 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_21",
     "week": 30,
     "zone_type": "Residential",
@@ -51,6 +164,15 @@
     "location_name": "Janakpuri",
     "city": "Delhi",
     "latitude": 28.6219,
-    "longitude": 77.0878
+    "longitude": 77.0878,
+    "predicted_risk_probability": 0.3394,
+    "risk_score": 33.9448,
+    "population_exposure_score": 73.8846,
+    "vehicle_exposure_score": 72.7154,
+    "temporal_trend_score": 60.6829,
+    "priority_score": 55.6946,
+    "priority_rank": 14,
+    "priority_level": "HIGH",
+    "risk_prob": 0.3394
   }
 }

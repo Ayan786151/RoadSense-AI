@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_32",
+  "location_name": "Mahanagar",
+  "city": "Lucknow",
+  "zone_type": "Commercial_Downtown",
   "week": 26,
-  "predicted_risk_probability": 0.2114431308063292,
-  "metrics": {
+  "latitude": 26.8755,
+  "longitude": 80.9595,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.2114,
+    "predicted_risk_percentage": 21.14,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": -7.7089,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 32.1879,
+    "priority_rank": 31,
+    "priority_level": "LOW",
+    "components": {
+      "risk_score": 21.1443,
+      "population_exposure_score": 42.2947,
+      "vehicle_exposure_score": 43.5057,
+      "temporal_trend_score": 29.7022
+    },
+    "explanation": {
+      "priority_level": "LOW",
+      "priority_score": 32.2,
+      "top_contributors": [
+        {
+          "factor": "Improving Trend",
+          "icon": "\ud83d\udcc9",
+          "value": "30/100",
+          "impact": "POSITIVE",
+          "detail": "Conditions are improving over past 4 weeks",
+          "weight": -29.7022
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "42/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 29.6063
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "21/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 21.1443
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone is currently within acceptable safety parameters. Routine monitoring is sufficient."
+    }
+  },
+  "telemetry": {
+    "congestion": 17.67,
+    "congestion_delta": -3.18,
+    "average_speed_kmh": 63.6,
+    "speed_delta": 5.85,
+    "vehicle_density": 33.83,
+    "density_delta": -3.47,
+    "population_density": 7248,
+    "red_light_violations": 3,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 40,
+    "recommended_green_seconds": 39,
+    "change_seconds": -1,
+    "change_percent": -2.5,
+    "urgency": "NOMINAL",
+    "reason": "Current default timing is adequate",
+    "factors": {
+      "congestion_factor": 1.14,
+      "density_factor": 1.14,
+      "speed_factor": 0.76,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 49214.5,
+    "total_co2_tonnes_per_year": 2559.15,
+    "idle_co2_kg": 3299.7,
+    "moving_co2_kg": 45914.8,
+    "potential_savings_kg_per_week": 718.3,
+    "potential_savings_tonnes_per_year": 37.35,
+    "trees_equivalent_per_year": 1778,
+    "fuel_saved_liters_per_week": 310.9,
+    "citizens_impacted": 14496,
+    "optimization_factor_pct": 21.8
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "Mahanagar is within safe operating parameters (21% risk). Continue routine monitoring. Optimizing signals could save 718 kg CO2/week, equivalent to 1778 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_32",
     "week": 26,
     "zone_type": "Commercial_Downtown",
@@ -51,6 +156,15 @@
     "location_name": "Mahanagar",
     "city": "Lucknow",
     "latitude": 26.8755,
-    "longitude": 80.9595
+    "longitude": 80.9595,
+    "predicted_risk_probability": 0.2114,
+    "risk_score": 21.1443,
+    "population_exposure_score": 42.2947,
+    "vehicle_exposure_score": 43.5057,
+    "temporal_trend_score": 29.7022,
+    "priority_score": 32.1879,
+    "priority_rank": 31,
+    "priority_level": "LOW",
+    "risk_prob": 0.2114
   }
 }

@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_16",
+  "location_name": "Rohini",
+  "city": "Delhi",
+  "zone_type": "Highway_Junction",
   "week": 48,
-  "predicted_risk_probability": 0.13628455199609943,
-  "metrics": {
+  "latitude": 28.7495,
+  "longitude": 77.0565,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.1363,
+    "predicted_risk_percentage": 13.63,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": -2.2771,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 22.5869,
+    "priority_rank": 43,
+    "priority_level": "LOW",
+    "components": {
+      "risk_score": 13.6285,
+      "population_exposure_score": 4.325,
+      "vehicle_exposure_score": 29.4579,
+      "temporal_trend_score": 67.7514
+    },
+    "explanation": {
+      "priority_level": "LOW",
+      "priority_score": 22.6,
+      "top_contributors": [
+        {
+          "factor": "Rising Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "68/100",
+          "impact": "MEDIUM",
+          "detail": "Slight upward trend in congestion over past 4 weeks",
+          "weight": 40.6508
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "14/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 13.6285
+        }
+      ],
+      "total_factors": 2,
+      "assessment": "This zone is currently within acceptable safety parameters. Routine monitoring is sufficient."
+    }
+  },
+  "telemetry": {
+    "congestion": 8.46,
+    "congestion_delta": -6.55,
+    "average_speed_kmh": 64.86,
+    "speed_delta": 3.05,
+    "vehicle_density": 22.93,
+    "density_delta": -1.54,
+    "population_density": 1963,
+    "red_light_violations": 8,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 50,
+    "recommended_green_seconds": 44,
+    "change_seconds": -6,
+    "change_percent": -12.0,
+    "urgency": "OPTIMIZE",
+    "reason": "Low traffic \u2014 reduce green time to improve cross-traffic flow",
+    "factors": {
+      "congestion_factor": 1.07,
+      "density_factor": 1.09,
+      "speed_factor": 0.76,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 36358.8,
+    "total_co2_tonnes_per_year": 1890.66,
+    "idle_co2_kg": 1070.8,
+    "moving_co2_kg": 35288.0,
+    "potential_savings_kg_per_week": 223.2,
+    "potential_savings_tonnes_per_year": 11.61,
+    "trees_equivalent_per_year": 552,
+    "fuel_saved_liters_per_week": 96.6,
+    "citizens_impacted": 3926,
+    "optimization_factor_pct": 20.8
+  },
+  "interventions": [
+    {
+      "id": "VIOLATION_ENFORCEMENT",
+      "name": "Red-Light Violation Enforcement",
+      "icon": "\ud83d\udea8",
+      "severity": "HIGH",
+      "description": "Elevated red-light violation count indicates intersection compliance failure.",
+      "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
+    },
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "Rohini is within safe operating parameters (14% risk). Continue routine monitoring. Optimizing signals could save 223 kg CO2/week, equivalent to 552 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_16",
     "week": 48,
     "zone_type": "Highway_Junction",
@@ -51,6 +156,15 @@
     "location_name": "Rohini",
     "city": "Delhi",
     "latitude": 28.7495,
-    "longitude": 77.0565
+    "longitude": 77.0565,
+    "predicted_risk_probability": 0.1363,
+    "risk_score": 13.6285,
+    "population_exposure_score": 4.325,
+    "vehicle_exposure_score": 29.4579,
+    "temporal_trend_score": 67.7514,
+    "priority_score": 22.5869,
+    "priority_rank": 43,
+    "priority_level": "LOW",
+    "risk_prob": 0.1363
   }
 }

@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_47",
+  "location_name": "Perambur",
+  "city": "Chennai",
+  "zone_type": "University_District",
   "week": 35,
-  "predicted_risk_probability": 0.4790768040534138,
-  "metrics": {
+  "latitude": 13.1167,
+  "longitude": 80.2333,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.4791,
+    "predicted_risk_percentage": 47.91,
+    "risk_label": "MODERATE RISK",
+    "risk_color": "#eab308",
+    "risk_delta_vs_prev_week": -29.7954,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 43.5702,
+    "priority_rank": 28,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 47.9077,
+      "population_exposure_score": 48.0997,
+      "vehicle_exposure_score": 53.2161,
+      "temporal_trend_score": 11.5935
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 43.6,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "48/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 47.9077
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "48/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 33.6698
+        },
+        {
+          "factor": "Improving Trend",
+          "icon": "\ud83d\udcc9",
+          "value": "12/100",
+          "impact": "POSITIVE",
+          "detail": "Conditions are improving over past 4 weeks",
+          "weight": -11.5935
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone has moderate risk levels with contributing factors: Risk Score, Population Exposure. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 32.63,
+    "congestion_delta": -31.58,
+    "average_speed_kmh": 59.26,
+    "speed_delta": 24.64,
+    "vehicle_density": 37.82,
+    "density_delta": -8.0,
+    "population_density": 8056,
+    "red_light_violations": 3,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 39,
+    "change_seconds": 4,
+    "change_percent": 11.4,
+    "urgency": "MODERATE",
+    "reason": "Slight adjustment for current conditions",
+    "factors": {
+      "congestion_factor": 1.26,
+      "density_factor": 1.15,
+      "speed_factor": 0.78,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 45948.8,
+    "total_co2_tonnes_per_year": 2389.34,
+    "idle_co2_kg": 6812.0,
+    "moving_co2_kg": 39136.7,
+    "potential_savings_kg_per_week": 1584.7,
+    "potential_savings_tonnes_per_year": 82.4,
+    "trees_equivalent_per_year": 3923,
+    "fuel_saved_liters_per_week": 686.0,
+    "citizens_impacted": 16112,
+    "optimization_factor_pct": 23.3
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "No specific risk indicators triggered.",
+      "action": "Continue routine monitoring."
+    }
+  ],
+  "executive_briefing": "Perambur shows elevated risk at 48%. Continue routine monitoring. Optimizing signals could save 1585 kg CO2/week, equivalent to 3923 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_47",
     "week": 35,
     "zone_type": "University_District",
@@ -51,6 +156,15 @@
     "location_name": "Perambur",
     "city": "Chennai",
     "latitude": 13.1167,
-    "longitude": 80.2333
+    "longitude": 80.2333,
+    "predicted_risk_probability": 0.4791,
+    "risk_score": 47.9077,
+    "population_exposure_score": 48.0997,
+    "vehicle_exposure_score": 53.2161,
+    "temporal_trend_score": 11.5935,
+    "priority_score": 43.5702,
+    "priority_rank": 28,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.4791
   }
 }

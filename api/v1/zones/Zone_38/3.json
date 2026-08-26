@@ -1,8 +1,129 @@
 {
   "zone_id": "Zone_38",
+  "location_name": "T. Nagar",
+  "city": "Chennai",
+  "zone_type": "Commercial_Downtown",
   "week": 3,
-  "predicted_risk_probability": null,
-  "metrics": {
+  "latitude": 13.0418,
+  "longitude": 80.2341,
+  "risk_analysis": {
+    "predicted_risk_probability": null,
+    "predicted_risk_percentage": null,
+    "risk_label": "BASELINE WARMUP",
+    "risk_color": "#71717a",
+    "risk_delta_vs_prev_week": null,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 37.6315,
+    "priority_rank": 11,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 0.0,
+      "population_exposure_score": 55.1333,
+      "vehicle_exposure_score": 81.741,
+      "temporal_trend_score": 50.0
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 37.6,
+      "top_contributors": [
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "82/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 81.741
+        },
+        {
+          "factor": "Violation Count",
+          "icon": "\ud83d\udea8",
+          "value": "10",
+          "impact": "HIGH",
+          "detail": "10 red-light violations recorded \u2014 intersection safety concern",
+          "weight": 50
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "55/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 38.5933
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "0/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 0.0
+        }
+      ],
+      "total_factors": 4,
+      "assessment": "This zone has moderate risk levels with contributing factors: Vehicle Density, Violation Count. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 36.58,
+    "congestion_delta": 6.33,
+    "average_speed_kmh": 45.08,
+    "speed_delta": -1.71,
+    "vehicle_density": 49.11,
+    "density_delta": 5.84,
+    "population_density": 9035,
+    "red_light_violations": 10,
+    "weather": "Light Rain",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 40,
+    "recommended_green_seconds": 55,
+    "change_seconds": 15,
+    "change_percent": 37.5,
+    "urgency": "HIGH",
+    "reason": "Elevated traffic density needs extended clearance time",
+    "factors": {
+      "congestion_factor": 1.29,
+      "density_factor": 1.2,
+      "speed_factor": 0.83,
+      "event_boost": 1.0,
+      "weather_boost": 1.08
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 50352.8,
+    "total_co2_tonnes_per_year": 2618.34,
+    "idle_co2_kg": 9916.4,
+    "moving_co2_kg": 40436.4,
+    "potential_savings_kg_per_week": 2346.0,
+    "potential_savings_tonnes_per_year": 121.99,
+    "trees_equivalent_per_year": 5809,
+    "fuel_saved_liters_per_week": 1015.6,
+    "citizens_impacted": 18070,
+    "optimization_factor_pct": 23.7
+  },
+  "interventions": [
+    {
+      "id": "VIOLATION_ENFORCEMENT",
+      "name": "Red-Light Violation Enforcement",
+      "icon": "\ud83d\udea8",
+      "severity": "HIGH",
+      "description": "Elevated red-light violation count indicates intersection compliance failure.",
+      "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
+    },
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "T. Nagar is within safe operating parameters (0% risk). Enforcement focus needed \u2014 10 red-light violations recorded. Optimizing signals could save 2346 kg CO2/week, equivalent to 5809 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_38",
     "week": 3,
     "zone_type": "Commercial_Downtown",
@@ -51,6 +172,15 @@
     "location_name": "T. Nagar",
     "city": "Chennai",
     "latitude": 13.0418,
-    "longitude": 80.2341
+    "longitude": 80.2341,
+    "predicted_risk_probability": null,
+    "risk_score": 0.0,
+    "population_exposure_score": 55.1333,
+    "vehicle_exposure_score": 81.741,
+    "temporal_trend_score": 50.0,
+    "priority_score": 37.6315,
+    "priority_rank": 11,
+    "priority_level": "MODERATE",
+    "risk_prob": null
   }
 }

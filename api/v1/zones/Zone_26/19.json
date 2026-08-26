@@ -1,8 +1,145 @@
 {
   "zone_id": "Zone_26",
+  "location_name": "Hazratganj",
+  "city": "Lucknow",
+  "zone_type": "University_District",
   "week": 19,
-  "predicted_risk_probability": 0.5866725558997028,
-  "metrics": {
+  "latitude": 26.85,
+  "longitude": 80.949,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.5867,
+    "predicted_risk_percentage": 58.67,
+    "risk_label": "HIGH RISK",
+    "risk_color": "#f97316",
+    "risk_delta_vs_prev_week": 0.8787,
+    "actual_incident": 1
+  },
+  "priority": {
+    "priority_score": 49.5806,
+    "priority_rank": 21,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 58.6673,
+      "population_exposure_score": 45.384,
+      "vehicle_exposure_score": 60.7699,
+      "temporal_trend_score": 17.4247
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 49.6,
+      "top_contributors": [
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "61/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 60.7699
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "59/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 58.6673
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "45/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 31.7688
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "45/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate congestion at 45",
+          "weight": 31.584
+        },
+        {
+          "factor": "Improving Trend",
+          "icon": "\ud83d\udcc9",
+          "value": "17/100",
+          "impact": "POSITIVE",
+          "detail": "Conditions are improving over past 4 weeks",
+          "weight": -17.4247
+        }
+      ],
+      "total_factors": 5,
+      "assessment": "This zone has moderate risk levels with contributing factors: Vehicle Density, Risk Score. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 45.12,
+    "congestion_delta": 8.26,
+    "average_speed_kmh": 55.58,
+    "speed_delta": 0.68,
+    "vehicle_density": 48.78,
+    "density_delta": 4.39,
+    "population_density": 7678,
+    "red_light_violations": 9,
+    "weather": "Normal",
+    "special_event": 1
+  },
+  "signal_optimization": {
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 51,
+    "change_seconds": 16,
+    "change_percent": 45.7,
+    "urgency": "CRITICAL",
+    "reason": "Severe congestion requires significantly extended green phase",
+    "factors": {
+      "congestion_factor": 1.36,
+      "density_factor": 1.2,
+      "speed_factor": 0.79,
+      "event_boost": 1.15,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 50715.7,
+    "total_co2_tonnes_per_year": 2637.22,
+    "idle_co2_kg": 12149.3,
+    "moving_co2_kg": 38566.4,
+    "potential_savings_kg_per_week": 2978.0,
+    "potential_savings_tonnes_per_year": 154.86,
+    "trees_equivalent_per_year": 7374,
+    "fuel_saved_liters_per_week": 1289.2,
+    "citizens_impacted": 15356,
+    "optimization_factor_pct": 24.5
+  },
+  "interventions": [
+    {
+      "id": "SPEED_CALMING",
+      "name": "Speed Calming & Enforcement",
+      "icon": "\ud83c\udfce\ufe0f",
+      "severity": "HIGH",
+      "description": "High average speed combined with elevated risk score suggests speed-related hazards.",
+      "action": "Deploy speed calming measures (speed bumps, radar signs) and increase enforcement patrols."
+    },
+    {
+      "id": "VIOLATION_ENFORCEMENT",
+      "name": "Red-Light Violation Enforcement",
+      "icon": "\ud83d\udea8",
+      "severity": "HIGH",
+      "description": "Elevated red-light violation count indicates intersection compliance failure.",
+      "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
+    },
+    {
+      "id": "EVENT_TRAFFIC_PLAN",
+      "name": "Special Event Traffic Plan",
+      "icon": "\ud83c\udfaa",
+      "severity": "MEDIUM",
+      "description": "Active special event generating additional traffic demand.",
+      "action": "Activate event traffic management plan. Deploy traffic marshals and temporary signage."
+    }
+  ],
+  "executive_briefing": "Hazratganj shows elevated risk at 59%. Enforcement focus needed \u2014 9 red-light violations recorded. Optimizing signals could save 2978 kg CO2/week, equivalent to 7374 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_26",
     "week": 19,
     "zone_type": "University_District",
@@ -51,6 +188,15 @@
     "location_name": "Hazratganj",
     "city": "Lucknow",
     "latitude": 26.85,
-    "longitude": 80.949
+    "longitude": 80.949,
+    "predicted_risk_probability": 0.5867,
+    "risk_score": 58.6673,
+    "population_exposure_score": 45.384,
+    "vehicle_exposure_score": 60.7699,
+    "temporal_trend_score": 17.4247,
+    "priority_score": 49.5806,
+    "priority_rank": 21,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.5867
   }
 }

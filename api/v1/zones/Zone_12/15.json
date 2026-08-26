@@ -1,8 +1,121 @@
 {
   "zone_id": "Zone_12",
+  "location_name": "Malad",
+  "city": "Mumbai",
+  "zone_type": "Commercial_Downtown",
   "week": 15,
-  "predicted_risk_probability": 0.29039611578732905,
-  "metrics": {
+  "latitude": 19.1874,
+  "longitude": 72.8484,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.2904,
+    "predicted_risk_percentage": 29.04,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": 3.9513,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 49.2229,
+    "priority_rank": 18,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 29.0396,
+      "population_exposure_score": 52.9061,
+      "vehicle_exposure_score": 61.2072,
+      "temporal_trend_score": 80.927
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 49.2,
+      "top_contributors": [
+        {
+          "factor": "Worsening Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "81/100",
+          "impact": "HIGH",
+          "detail": "4-week congestion trend is actively worsening \u2014 conditions deteriorating",
+          "weight": 80.927
+        },
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "61/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 61.2072
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "53/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 37.0343
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "29/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 29.0396
+        }
+      ],
+      "total_factors": 4,
+      "assessment": "This zone has moderate risk levels with contributing factors: Worsening Trend, Vehicle Density. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 27.84,
+    "congestion_delta": -1.93,
+    "average_speed_kmh": 59.81,
+    "speed_delta": 3.67,
+    "vehicle_density": 42.77,
+    "density_delta": 3.51,
+    "population_density": 8725,
+    "red_light_violations": 6,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 40,
+    "recommended_green_seconds": 44,
+    "change_seconds": 4,
+    "change_percent": 10.0,
+    "urgency": "MODERATE",
+    "reason": "Slight adjustment for current conditions",
+    "factors": {
+      "congestion_factor": 1.22,
+      "density_factor": 1.17,
+      "speed_factor": 0.78,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 54418.6,
+    "total_co2_tonnes_per_year": 2829.77,
+    "idle_co2_kg": 6572.8,
+    "moving_co2_kg": 47845.9,
+    "potential_savings_kg_per_week": 1497.5,
+    "potential_savings_tonnes_per_year": 77.87,
+    "trees_equivalent_per_year": 3708,
+    "fuel_saved_liters_per_week": 648.3,
+    "citizens_impacted": 17450,
+    "optimization_factor_pct": 22.8
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "Malad is within safe operating parameters (29% risk). Continue routine monitoring. Optimizing signals could save 1498 kg CO2/week, equivalent to 3708 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_12",
     "week": 15,
     "zone_type": "Commercial_Downtown",
@@ -51,6 +164,15 @@
     "location_name": "Malad",
     "city": "Mumbai",
     "latitude": 19.1874,
-    "longitude": 72.8484
+    "longitude": 72.8484,
+    "predicted_risk_probability": 0.2904,
+    "risk_score": 29.0396,
+    "population_exposure_score": 52.9061,
+    "vehicle_exposure_score": 61.2072,
+    "temporal_trend_score": 80.927,
+    "priority_score": 49.2229,
+    "priority_rank": 18,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.2904
   }
 }

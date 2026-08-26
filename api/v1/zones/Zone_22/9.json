@@ -1,8 +1,105 @@
 {
   "zone_id": "Zone_22",
+  "location_name": "Pitampura",
+  "city": "Delhi",
+  "zone_type": "University_District",
   "week": 9,
-  "predicted_risk_probability": 0.22282928083440698,
-  "metrics": {
+  "latitude": 28.7033,
+  "longitude": 77.1322,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.2228,
+    "predicted_risk_percentage": 22.28,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": 1.6496,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 37.2194,
+    "priority_rank": 30,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 22.2829,
+      "population_exposure_score": 44.6081,
+      "vehicle_exposure_score": 50.6073,
+      "temporal_trend_score": 46.8849
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 37.2,
+      "top_contributors": [
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "45/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 31.2257
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "22/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 22.2829
+        }
+      ],
+      "total_factors": 2,
+      "assessment": "This zone has moderate risk levels with contributing factors: Population Exposure. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 20.43,
+    "congestion_delta": 2.24,
+    "average_speed_kmh": 64.53,
+    "speed_delta": 4.76,
+    "vehicle_density": 33.94,
+    "density_delta": 10.32,
+    "population_density": 7570,
+    "red_light_violations": 2,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 35,
+    "change_seconds": 0,
+    "change_percent": 0.0,
+    "urgency": "NOMINAL",
+    "reason": "Current default timing is adequate",
+    "factors": {
+      "congestion_factor": 1.16,
+      "density_factor": 1.14,
+      "speed_factor": 0.76,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 48998.3,
+    "total_co2_tonnes_per_year": 2547.91,
+    "idle_co2_kg": 3827.5,
+    "moving_co2_kg": 45170.8,
+    "potential_savings_kg_per_week": 843.7,
+    "potential_savings_tonnes_per_year": 43.87,
+    "trees_equivalent_per_year": 2089,
+    "fuel_saved_liters_per_week": 365.2,
+    "citizens_impacted": 15140,
+    "optimization_factor_pct": 22.0
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "Pitampura is within safe operating parameters (22% risk). Continue routine monitoring. Optimizing signals could save 844 kg CO2/week, equivalent to 2089 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_22",
     "week": 9,
     "zone_type": "University_District",
@@ -51,6 +148,15 @@
     "location_name": "Pitampura",
     "city": "Delhi",
     "latitude": 28.7033,
-    "longitude": 77.1322
+    "longitude": 77.1322,
+    "predicted_risk_probability": 0.2228,
+    "risk_score": 22.2829,
+    "population_exposure_score": 44.6081,
+    "vehicle_exposure_score": 50.6073,
+    "temporal_trend_score": 46.8849,
+    "priority_score": 37.2194,
+    "priority_rank": 30,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.2228
   }
 }

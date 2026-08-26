@@ -1,8 +1,97 @@
 {
   "zone_id": "Zone_19",
+  "location_name": "Lajpat Nagar",
+  "city": "Delhi",
+  "zone_type": "Industrial_Corridor",
   "week": 32,
-  "predicted_risk_probability": 0.5877241716251027,
-  "metrics": {
+  "latitude": 28.5677,
+  "longitude": 77.243,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.5877,
+    "predicted_risk_percentage": 58.77,
+    "risk_label": "HIGH RISK",
+    "risk_color": "#f97316",
+    "risk_delta_vs_prev_week": 44.4981,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 39.2295,
+    "priority_rank": 31,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 58.7724,
+      "population_exposure_score": 19.9368,
+      "vehicle_exposure_score": 30.2725,
+      "temporal_trend_score": 31.2123
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 39.2,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "59/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 58.7724
+        }
+      ],
+      "total_factors": 1,
+      "assessment": "This zone has moderate risk levels with contributing factors: Risk Score. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 23.54,
+    "congestion_delta": 15.94,
+    "average_speed_kmh": 39.1,
+    "speed_delta": -21.35,
+    "vehicle_density": 20.44,
+    "density_delta": 7.94,
+    "population_density": 4136,
+    "red_light_violations": 5,
+    "weather": "Heavy Rain",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 45,
+    "recommended_green_seconds": 58,
+    "change_seconds": 13,
+    "change_percent": 28.9,
+    "urgency": "HIGH",
+    "reason": "Elevated traffic density needs extended clearance time",
+    "factors": {
+      "congestion_factor": 1.19,
+      "density_factor": 1.08,
+      "speed_factor": 0.85,
+      "event_boost": 1.0,
+      "weather_boost": 1.18
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 20254.8,
+    "total_co2_tonnes_per_year": 1053.25,
+    "idle_co2_kg": 2656.0,
+    "moving_co2_kg": 17598.9,
+    "potential_savings_kg_per_week": 593.7,
+    "potential_savings_tonnes_per_year": 30.87,
+    "trees_equivalent_per_year": 1470,
+    "fuel_saved_liters_per_week": 257.0,
+    "citizens_impacted": 8272,
+    "optimization_factor_pct": 22.4
+  },
+  "interventions": [
+    {
+      "id": "ROAD_MAINTENANCE",
+      "name": "Road Maintenance Inspection",
+      "icon": "\ud83d\udee3\ufe0f",
+      "severity": "MEDIUM",
+      "description": "Deteriorated road surface combined with elevated risk indicates infrastructure maintenance need.",
+      "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
+    }
+  ],
+  "executive_briefing": "Lajpat Nagar shows elevated risk at 59%. Continue routine monitoring. Optimizing signals could save 594 kg CO2/week, equivalent to 1470 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_19",
     "week": 32,
     "zone_type": "Industrial_Corridor",
@@ -51,6 +140,15 @@
     "location_name": "Lajpat Nagar",
     "city": "Delhi",
     "latitude": 28.5677,
-    "longitude": 77.243
+    "longitude": 77.243,
+    "predicted_risk_probability": 0.5877,
+    "risk_score": 58.7724,
+    "population_exposure_score": 19.9368,
+    "vehicle_exposure_score": 30.2725,
+    "temporal_trend_score": 31.2123,
+    "priority_score": 39.2295,
+    "priority_rank": 31,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.5877
   }
 }

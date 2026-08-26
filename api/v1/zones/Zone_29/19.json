@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_29",
+  "location_name": "Indira Nagar",
+  "city": "Lucknow",
+  "zone_type": "Residential",
   "week": 19,
-  "predicted_risk_probability": 0.3714402028180007,
-  "metrics": {
+  "latitude": 26.88,
+  "longitude": 81.0,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.3714,
+    "predicted_risk_percentage": 37.14,
+    "risk_label": "MODERATE RISK",
+    "risk_color": "#eab308",
+    "risk_delta_vs_prev_week": 14.3651,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 56.069,
+    "priority_rank": 16,
+    "priority_level": "HIGH",
+    "components": {
+      "risk_score": 37.144,
+      "population_exposure_score": 86.8525,
+      "vehicle_exposure_score": 68.0578,
+      "temporal_trend_score": 39.2448
+    },
+    "explanation": {
+      "priority_level": "HIGH",
+      "priority_score": 56.1,
+      "top_contributors": [
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "87/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 13450 residents/km\u00b2",
+          "weight": 86.8525
+        },
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "68/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 68.0578
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "37/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 37.144
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone shows significant risk elevation driven by Population Exposure, Vehicle Density. Proactive intervention should be scheduled within the current planning cycle."
+    }
+  },
+  "telemetry": {
+    "congestion": 30.89,
+    "congestion_delta": 3.4,
+    "average_speed_kmh": 55.0,
+    "speed_delta": -3.35,
+    "vehicle_density": 54.63,
+    "density_delta": 2.14,
+    "population_density": 13450,
+    "red_light_violations": 7,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 30,
+    "recommended_green_seconds": 36,
+    "change_seconds": 6,
+    "change_percent": 20.0,
+    "urgency": "MODERATE",
+    "reason": "Slight adjustment for current conditions",
+    "factors": {
+      "congestion_factor": 1.25,
+      "density_factor": 1.22,
+      "speed_factor": 0.79,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 63138.3,
+    "total_co2_tonnes_per_year": 3283.19,
+    "idle_co2_kg": 9315.1,
+    "moving_co2_kg": 53823.2,
+    "potential_savings_kg_per_week": 2150.8,
+    "potential_savings_tonnes_per_year": 111.84,
+    "trees_equivalent_per_year": 5325,
+    "fuel_saved_liters_per_week": 931.1,
+    "citizens_impacted": 26900,
+    "optimization_factor_pct": 23.1
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "No specific risk indicators triggered.",
+      "action": "Continue routine monitoring."
+    }
+  ],
+  "executive_briefing": "Indira Nagar shows elevated risk at 37%. Continue routine monitoring. Optimizing signals could save 2151 kg CO2/week, equivalent to 5325 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_29",
     "week": 19,
     "zone_type": "Residential",
@@ -51,6 +156,15 @@
     "location_name": "Indira Nagar",
     "city": "Lucknow",
     "latitude": 26.88,
-    "longitude": 81.0
+    "longitude": 81.0,
+    "predicted_risk_probability": 0.3714,
+    "risk_score": 37.144,
+    "population_exposure_score": 86.8525,
+    "vehicle_exposure_score": 68.0578,
+    "temporal_trend_score": 39.2448,
+    "priority_score": 56.069,
+    "priority_rank": 16,
+    "priority_level": "HIGH",
+    "risk_prob": 0.3714
   }
 }

@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_27",
+  "location_name": "Gomti Nagar",
+  "city": "Lucknow",
+  "zone_type": "Suburban_LowDensity",
   "week": 5,
-  "predicted_risk_probability": 0.22749846403934082,
-  "metrics": {
+  "latitude": 26.8467,
+  "longitude": 81.0078,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.2275,
+    "predicted_risk_percentage": 22.75,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": null,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 30.0393,
+    "priority_rank": 34,
+    "priority_level": "LOW",
+    "components": {
+      "risk_score": 22.7498,
+      "population_exposure_score": 21.5245,
+      "vehicle_exposure_score": 32.3635,
+      "temporal_trend_score": 60.5704
+    },
+    "explanation": {
+      "priority_level": "LOW",
+      "priority_score": 30.0,
+      "top_contributors": [
+        {
+          "factor": "Rising Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "61/100",
+          "impact": "MEDIUM",
+          "detail": "Slight upward trend in congestion over past 4 weeks",
+          "weight": 36.3422
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "23/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 22.7498
+        }
+      ],
+      "total_factors": 2,
+      "assessment": "This zone is currently within acceptable safety parameters. Routine monitoring is sufficient."
+    }
+  },
+  "telemetry": {
+    "congestion": 15.91,
+    "congestion_delta": 9.61,
+    "average_speed_kmh": 61.92,
+    "speed_delta": -2.55,
+    "vehicle_density": 20.8,
+    "density_delta": 7.1,
+    "population_density": 4357,
+    "red_light_violations": 6,
+    "weather": "Normal",
+    "special_event": 1
+  },
+  "signal_optimization": {
+    "base_green_seconds": 25,
+    "recommended_green_seconds": 26,
+    "change_seconds": 1,
+    "change_percent": 4.0,
+    "urgency": "NOMINAL",
+    "reason": "Current default timing is adequate",
+    "factors": {
+      "congestion_factor": 1.13,
+      "density_factor": 1.08,
+      "speed_factor": 0.77,
+      "event_boost": 1.15,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 29898.7,
+    "total_co2_tonnes_per_year": 1554.73,
+    "idle_co2_kg": 1826.7,
+    "moving_co2_kg": 28072.0,
+    "potential_savings_kg_per_week": 394.4,
+    "potential_savings_tonnes_per_year": 20.51,
+    "trees_equivalent_per_year": 976,
+    "fuel_saved_liters_per_week": 170.7,
+    "citizens_impacted": 8714,
+    "optimization_factor_pct": 21.6
+  },
+  "interventions": [
+    {
+      "id": "EVENT_TRAFFIC_PLAN",
+      "name": "Special Event Traffic Plan",
+      "icon": "\ud83c\udfaa",
+      "severity": "MEDIUM",
+      "description": "Active special event generating additional traffic demand.",
+      "action": "Activate event traffic management plan. Deploy traffic marshals and temporary signage."
+    },
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "Gomti Nagar is within safe operating parameters (23% risk). Continue routine monitoring. Optimizing signals could save 394 kg CO2/week, equivalent to 976 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_27",
     "week": 5,
     "zone_type": "Suburban_LowDensity",
@@ -51,6 +156,15 @@
     "location_name": "Gomti Nagar",
     "city": "Lucknow",
     "latitude": 26.8467,
-    "longitude": 81.0078
+    "longitude": 81.0078,
+    "predicted_risk_probability": 0.2275,
+    "risk_score": 22.7498,
+    "population_exposure_score": 21.5245,
+    "vehicle_exposure_score": 32.3635,
+    "temporal_trend_score": 60.5704,
+    "priority_score": 30.0393,
+    "priority_rank": 34,
+    "priority_level": "LOW",
+    "risk_prob": 0.2275
   }
 }

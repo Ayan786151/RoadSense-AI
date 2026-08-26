@@ -1,8 +1,121 @@
 {
   "zone_id": "Zone_42",
+  "location_name": "Guindy",
+  "city": "Chennai",
+  "zone_type": "University_District",
   "week": 3,
-  "predicted_risk_probability": null,
-  "metrics": {
+  "latitude": 13.0067,
+  "longitude": 80.2206,
+  "risk_analysis": {
+    "predicted_risk_probability": null,
+    "predicted_risk_percentage": null,
+    "risk_label": "BASELINE WARMUP",
+    "risk_color": "#71717a",
+    "risk_delta_vs_prev_week": null,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 30.5447,
+    "priority_rank": 22,
+    "priority_level": "LOW",
+    "components": {
+      "risk_score": 0.0,
+      "population_exposure_score": 43.164,
+      "vehicle_exposure_score": 61.2683,
+      "temporal_trend_score": 50.0
+    },
+    "explanation": {
+      "priority_level": "LOW",
+      "priority_score": 30.5,
+      "top_contributors": [
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "61/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 61.2683
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "47/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate congestion at 47",
+          "weight": 33.082
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "43/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 30.2148
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "0/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 0.0
+        }
+      ],
+      "total_factors": 4,
+      "assessment": "This zone is currently within acceptable safety parameters. Routine monitoring is sufficient."
+    }
+  },
+  "telemetry": {
+    "congestion": 47.26,
+    "congestion_delta": 17.58,
+    "average_speed_kmh": 42.63,
+    "speed_delta": -6.12,
+    "vehicle_density": 36.81,
+    "density_delta": 12.41,
+    "population_density": 7369,
+    "red_light_violations": 6,
+    "weather": "Light Rain",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 50,
+    "change_seconds": 15,
+    "change_percent": 42.9,
+    "urgency": "CRITICAL",
+    "reason": "Severe congestion requires significantly extended green phase",
+    "factors": {
+      "congestion_factor": 1.38,
+      "density_factor": 1.15,
+      "speed_factor": 0.84,
+      "event_boost": 1.0,
+      "weather_boost": 1.08
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 33437.7,
+    "total_co2_tonnes_per_year": 1738.76,
+    "idle_co2_kg": 9602.8,
+    "moving_co2_kg": 23834.9,
+    "potential_savings_kg_per_week": 2374.4,
+    "potential_savings_tonnes_per_year": 123.47,
+    "trees_equivalent_per_year": 5879,
+    "fuel_saved_liters_per_week": 1027.9,
+    "citizens_impacted": 14738,
+    "optimization_factor_pct": 24.7
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "Guindy is within safe operating parameters (0% risk). Continue routine monitoring. Optimizing signals could save 2374 kg CO2/week, equivalent to 5879 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_42",
     "week": 3,
     "zone_type": "University_District",
@@ -51,6 +164,15 @@
     "location_name": "Guindy",
     "city": "Chennai",
     "latitude": 13.0067,
-    "longitude": 80.2206
+    "longitude": 80.2206,
+    "predicted_risk_probability": null,
+    "risk_score": 0.0,
+    "population_exposure_score": 43.164,
+    "vehicle_exposure_score": 61.2683,
+    "temporal_trend_score": 50.0,
+    "priority_score": 30.5447,
+    "priority_rank": 22,
+    "priority_level": "LOW",
+    "risk_prob": null
   }
 }

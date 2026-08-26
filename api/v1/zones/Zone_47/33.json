@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_47",
+  "location_name": "Perambur",
+  "city": "Chennai",
+  "zone_type": "University_District",
   "week": 33,
-  "predicted_risk_probability": 0.5475034204299488,
-  "metrics": {
+  "latitude": 13.1167,
+  "longitude": 80.2333,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.5475,
+    "predicted_risk_percentage": 54.75,
+    "risk_label": "MODERATE RISK",
+    "risk_color": "#eab308",
+    "risk_delta_vs_prev_week": -43.5706,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 55.4531,
+    "priority_rank": 24,
+    "priority_level": "HIGH",
+    "components": {
+      "risk_score": 54.7503,
+      "population_exposure_score": 48.0997,
+      "vehicle_exposure_score": 56.736,
+      "temporal_trend_score": 67.8722
+    },
+    "explanation": {
+      "priority_level": "HIGH",
+      "priority_score": 55.5,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "55/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 54.7503
+        },
+        {
+          "factor": "Rising Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "68/100",
+          "impact": "MEDIUM",
+          "detail": "Slight upward trend in congestion over past 4 weeks",
+          "weight": 40.7233
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "48/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 33.6698
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone shows significant risk elevation driven by elevated risk indicators. Proactive intervention should be scheduled within the current planning cycle."
+    }
+  },
+  "telemetry": {
+    "congestion": 35.46,
+    "congestion_delta": -64.54,
+    "average_speed_kmh": 57.09,
+    "speed_delta": 47.09,
+    "vehicle_density": 40.87,
+    "density_delta": -2.54,
+    "population_density": 8056,
+    "red_light_violations": 4,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 41,
+    "change_seconds": 6,
+    "change_percent": 17.1,
+    "urgency": "MODERATE",
+    "reason": "Slight adjustment for current conditions",
+    "factors": {
+      "congestion_factor": 1.28,
+      "density_factor": 1.16,
+      "speed_factor": 0.79,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 47032.6,
+    "total_co2_tonnes_per_year": 2445.69,
+    "idle_co2_kg": 7999.9,
+    "moving_co2_kg": 39032.7,
+    "potential_savings_kg_per_week": 1883.6,
+    "potential_savings_tonnes_per_year": 97.95,
+    "trees_equivalent_per_year": 4664,
+    "fuel_saved_liters_per_week": 815.4,
+    "citizens_impacted": 16112,
+    "optimization_factor_pct": 23.5
+  },
+  "interventions": [
+    {
+      "id": "SPEED_CALMING",
+      "name": "Speed Calming & Enforcement",
+      "icon": "\ud83c\udfce\ufe0f",
+      "severity": "HIGH",
+      "description": "High average speed combined with elevated risk score suggests speed-related hazards.",
+      "action": "Deploy speed calming measures (speed bumps, radar signs) and increase enforcement patrols."
+    }
+  ],
+  "executive_briefing": "Perambur shows elevated risk at 55%. Continue routine monitoring. Optimizing signals could save 1884 kg CO2/week, equivalent to 4664 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_47",
     "week": 33,
     "zone_type": "University_District",
@@ -51,6 +156,15 @@
     "location_name": "Perambur",
     "city": "Chennai",
     "latitude": 13.1167,
-    "longitude": 80.2333
+    "longitude": 80.2333,
+    "predicted_risk_probability": 0.5475,
+    "risk_score": 54.7503,
+    "population_exposure_score": 48.0997,
+    "vehicle_exposure_score": 56.736,
+    "temporal_trend_score": 67.8722,
+    "priority_score": 55.4531,
+    "priority_rank": 24,
+    "priority_level": "HIGH",
+    "risk_prob": 0.5475
   }
 }

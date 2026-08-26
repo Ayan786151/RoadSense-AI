@@ -1,8 +1,145 @@
 {
   "zone_id": "Zone_31",
+  "location_name": "Alambagh",
+  "city": "Lucknow",
+  "zone_type": "Commercial_Downtown",
   "week": 43,
-  "predicted_risk_probability": 0.9007698280936371,
-  "metrics": {
+  "latitude": 26.813,
+  "longitude": 80.918,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.9008,
+    "predicted_risk_percentage": 90.08,
+    "risk_label": "CRITICAL RISK",
+    "risk_color": "#ef4444",
+    "risk_delta_vs_prev_week": -0.1023,
+    "actual_incident": 1
+  },
+  "priority": {
+    "priority_score": 76.0552,
+    "priority_rank": 4,
+    "priority_level": "CRITICAL",
+    "components": {
+      "risk_score": 90.077,
+      "population_exposure_score": 57.4969,
+      "vehicle_exposure_score": 89.5178,
+      "temporal_trend_score": 51.6439
+    },
+    "explanation": {
+      "priority_level": "CRITICAL",
+      "priority_score": 76.1,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udd34",
+          "value": "90/100",
+          "impact": "HIGH",
+          "detail": "Model-estimated risk score is in the critical range",
+          "weight": 90.077
+        },
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "90/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 89.5178
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "85/100",
+          "impact": "HIGH",
+          "detail": "Congestion index at 85 \u2014 severe traffic flow degradation",
+          "weight": 84.8
+        },
+        {
+          "factor": "Violation Count",
+          "icon": "\ud83d\udea8",
+          "value": "13",
+          "impact": "HIGH",
+          "detail": "13 red-light violations recorded \u2014 intersection safety concern",
+          "weight": 65
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "57/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 40.2479
+        }
+      ],
+      "total_factors": 5,
+      "assessment": "This zone requires URGENT attention. Primary risk drivers: Risk Score, Vehicle Density, Congestion. Immediate field inspection and intervention planning recommended."
+    }
+  },
+  "telemetry": {
+    "congestion": 84.8,
+    "congestion_delta": -10.89,
+    "average_speed_kmh": 33.04,
+    "speed_delta": 6.06,
+    "vehicle_density": 64.38,
+    "density_delta": 0.14,
+    "population_density": 9364,
+    "red_light_violations": 13,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 40,
+    "recommended_green_seconds": 73,
+    "change_seconds": 33,
+    "change_percent": 82.5,
+    "urgency": "CRITICAL",
+    "reason": "Severe congestion requires significantly extended green phase",
+    "factors": {
+      "congestion_factor": 1.68,
+      "density_factor": 1.26,
+      "speed_factor": 0.88,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 39447.7,
+    "total_co2_tonnes_per_year": 2051.28,
+    "idle_co2_kg": 30136.0,
+    "moving_co2_kg": 9311.7,
+    "potential_savings_kg_per_week": 8582.7,
+    "potential_savings_tonnes_per_year": 446.3,
+    "trees_equivalent_per_year": 21252,
+    "fuel_saved_liters_per_week": 3715.5,
+    "citizens_impacted": 18728,
+    "optimization_factor_pct": 28.5
+  },
+  "interventions": [
+    {
+      "id": "CONGESTION_MANAGEMENT",
+      "name": "Congestion Management & Diversion",
+      "icon": "\ud83d\ude97",
+      "severity": "CRITICAL",
+      "description": "Severe congestion with high vehicle density requires active demand management.",
+      "action": "Activate dynamic message signs for route diversion. Consider congestion pricing or access restrictions."
+    },
+    {
+      "id": "SIGNAL_OPTIMIZATION",
+      "name": "Traffic Signal Optimization",
+      "icon": "\ud83d\udea6",
+      "severity": "HIGH",
+      "description": "High congestion with low throughput speed indicates signal timing inefficiency.",
+      "action": "Review and optimize signal timing at major intersections in this zone."
+    },
+    {
+      "id": "VIOLATION_ENFORCEMENT",
+      "name": "Red-Light Violation Enforcement",
+      "icon": "\ud83d\udea8",
+      "severity": "HIGH",
+      "description": "Elevated red-light violation count indicates intersection compliance failure.",
+      "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
+    }
+  ],
+  "executive_briefing": "Alambagh is in a critical safety state with 90% incident risk. Signal optimization recommended \u2014 congestion at 85/100 with speeds averaging 33 km/h. Optimizing signals could save 8583 kg CO2/week, equivalent to 21252 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_31",
     "week": 43,
     "zone_type": "Commercial_Downtown",
@@ -51,6 +188,15 @@
     "location_name": "Alambagh",
     "city": "Lucknow",
     "latitude": 26.813,
-    "longitude": 80.918
+    "longitude": 80.918,
+    "predicted_risk_probability": 0.9008,
+    "risk_score": 90.077,
+    "population_exposure_score": 57.4969,
+    "vehicle_exposure_score": 89.5178,
+    "temporal_trend_score": 51.6439,
+    "priority_score": 76.0552,
+    "priority_rank": 4,
+    "priority_level": "CRITICAL",
+    "risk_prob": 0.9008
   }
 }

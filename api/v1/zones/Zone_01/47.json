@@ -1,8 +1,121 @@
 {
   "zone_id": "Zone_01",
+  "location_name": "Andheri",
+  "city": "Mumbai",
+  "zone_type": "Commercial_Downtown",
   "week": 47,
-  "predicted_risk_probability": 0.6357925478140934,
-  "metrics": {
+  "latitude": 19.1197,
+  "longitude": 72.8468,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.6358,
+    "predicted_risk_percentage": 63.58,
+    "risk_label": "HIGH RISK",
+    "risk_color": "#f97316",
+    "risk_delta_vs_prev_week": -2.4997,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 55.981,
+    "priority_rank": 8,
+    "priority_level": "HIGH",
+    "components": {
+      "risk_score": 63.5793,
+      "population_exposure_score": 52.9133,
+      "vehicle_exposure_score": 60.4179,
+      "temporal_trend_score": 34.9162
+    },
+    "explanation": {
+      "priority_level": "HIGH",
+      "priority_score": 56.0,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "64/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 63.5793
+        },
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "60/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 60.4179
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "53/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 37.0393
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "48/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate congestion at 48",
+          "weight": 33.873
+        }
+      ],
+      "total_factors": 4,
+      "assessment": "This zone shows significant risk elevation driven by Vehicle Density. Proactive intervention should be scheduled within the current planning cycle."
+    }
+  },
+  "telemetry": {
+    "congestion": 48.39,
+    "congestion_delta": -5.98,
+    "average_speed_kmh": 50.76,
+    "speed_delta": 4.17,
+    "vehicle_density": 51.47,
+    "density_delta": -3.08,
+    "population_density": 8726,
+    "red_light_violations": 6,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 40,
+    "recommended_green_seconds": 54,
+    "change_seconds": 14,
+    "change_percent": 35.0,
+    "urgency": "HIGH",
+    "reason": "Elevated traffic density needs extended clearance time",
+    "factors": {
+      "congestion_factor": 1.39,
+      "density_factor": 1.21,
+      "speed_factor": 0.81,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 48698.1,
+    "total_co2_tonnes_per_year": 2532.3,
+    "idle_co2_kg": 13748.3,
+    "moving_co2_kg": 34949.8,
+    "potential_savings_kg_per_week": 3414.9,
+    "potential_savings_tonnes_per_year": 177.58,
+    "trees_equivalent_per_year": 8456,
+    "fuel_saved_liters_per_week": 1478.3,
+    "citizens_impacted": 17452,
+    "optimization_factor_pct": 24.8
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "No specific risk indicators triggered.",
+      "action": "Continue routine monitoring."
+    }
+  ],
+  "executive_briefing": "Andheri is in a critical safety state with 64% incident risk. Continue routine monitoring. Optimizing signals could save 3415 kg CO2/week, equivalent to 8456 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_01",
     "week": 47,
     "zone_type": "Commercial_Downtown",
@@ -51,6 +164,15 @@
     "location_name": "Andheri",
     "city": "Mumbai",
     "latitude": 19.1197,
-    "longitude": 72.8468
+    "longitude": 72.8468,
+    "predicted_risk_probability": 0.6358,
+    "risk_score": 63.5793,
+    "population_exposure_score": 52.9133,
+    "vehicle_exposure_score": 60.4179,
+    "temporal_trend_score": 34.9162,
+    "priority_score": 55.981,
+    "priority_rank": 8,
+    "priority_level": "HIGH",
+    "risk_prob": 0.6358
   }
 }

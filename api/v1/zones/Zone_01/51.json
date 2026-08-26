@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_01",
+  "location_name": "Andheri",
+  "city": "Mumbai",
+  "zone_type": "Commercial_Downtown",
   "week": 51,
-  "predicted_risk_probability": 0.5904038032998693,
-  "metrics": {
+  "latitude": 19.1197,
+  "longitude": 72.8468,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.5904,
+    "predicted_risk_percentage": 59.04,
+    "risk_label": "HIGH RISK",
+    "risk_color": "#f97316",
+    "risk_delta_vs_prev_week": -7.1503,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 51.8487,
+    "priority_rank": 12,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 59.0404,
+      "population_exposure_score": 52.9133,
+      "vehicle_exposure_score": 55.4263,
+      "temporal_trend_score": 26.1266
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 51.8,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "59/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 59.0404
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "53/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 37.0393
+        },
+        {
+          "factor": "Improving Trend",
+          "icon": "\ud83d\udcc9",
+          "value": "26/100",
+          "impact": "POSITIVE",
+          "detail": "Conditions are improving over past 4 weeks",
+          "weight": -26.1266
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone has moderate risk levels with contributing factors: Risk Score, Population Exposure. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 39.49,
+    "congestion_delta": -1.39,
+    "average_speed_kmh": 51.05,
+    "speed_delta": 0.96,
+    "vehicle_density": 43.82,
+    "density_delta": -3.22,
+    "population_density": 8726,
+    "red_light_violations": 7,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 40,
+    "recommended_green_seconds": 50,
+    "change_seconds": 10,
+    "change_percent": 25.0,
+    "urgency": "HIGH",
+    "reason": "Elevated traffic density needs extended clearance time",
+    "factors": {
+      "congestion_factor": 1.32,
+      "density_factor": 1.18,
+      "speed_factor": 0.81,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 44637.8,
+    "total_co2_tonnes_per_year": 2321.17,
+    "idle_co2_kg": 9552.1,
+    "moving_co2_kg": 35085.7,
+    "potential_savings_kg_per_week": 2287.6,
+    "potential_savings_tonnes_per_year": 118.96,
+    "trees_equivalent_per_year": 5664,
+    "fuel_saved_liters_per_week": 990.3,
+    "citizens_impacted": 17452,
+    "optimization_factor_pct": 23.9
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "No specific risk indicators triggered.",
+      "action": "Continue routine monitoring."
+    }
+  ],
+  "executive_briefing": "Andheri shows elevated risk at 59%. Continue routine monitoring. Optimizing signals could save 2288 kg CO2/week, equivalent to 5664 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_01",
     "week": 51,
     "zone_type": "Commercial_Downtown",
@@ -51,6 +156,15 @@
     "location_name": "Andheri",
     "city": "Mumbai",
     "latitude": 19.1197,
-    "longitude": 72.8468
+    "longitude": 72.8468,
+    "predicted_risk_probability": 0.5904,
+    "risk_score": 59.0404,
+    "population_exposure_score": 52.9133,
+    "vehicle_exposure_score": 55.4263,
+    "temporal_trend_score": 26.1266,
+    "priority_score": 51.8487,
+    "priority_rank": 12,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.5904
   }
 }

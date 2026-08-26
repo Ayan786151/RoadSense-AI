@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_05",
+  "location_name": "Powai",
+  "city": "Mumbai",
+  "zone_type": "Commercial_Downtown",
   "week": 41,
-  "predicted_risk_probability": 0.18954332053651102,
-  "metrics": {
+  "latitude": 19.1176,
+  "longitude": 72.906,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.1895,
+    "predicted_risk_percentage": 18.95,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": -49.0457,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 39.1523,
+    "priority_rank": 22,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 18.9543,
+      "population_exposure_score": 50.1616,
+      "vehicle_exposure_score": 39.1176,
+      "temporal_trend_score": 74.7112
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 39.2,
+      "top_contributors": [
+        {
+          "factor": "Worsening Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "75/100",
+          "impact": "HIGH",
+          "detail": "4-week congestion trend is actively worsening \u2014 conditions deteriorating",
+          "weight": 74.7112
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "50/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 35.1132
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "19/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 18.9543
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone has moderate risk levels with contributing factors: Worsening Trend, Population Exposure. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 19.73,
+    "congestion_delta": -27.0,
+    "average_speed_kmh": 60.63,
+    "speed_delta": 8.32,
+    "vehicle_density": 31.47,
+    "density_delta": -10.85,
+    "population_density": 8343,
+    "red_light_violations": 7,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 40,
+    "recommended_green_seconds": 40,
+    "change_seconds": 0,
+    "change_percent": 0.0,
+    "urgency": "NOMINAL",
+    "reason": "Current default timing is adequate",
+    "factors": {
+      "congestion_factor": 1.16,
+      "density_factor": 1.13,
+      "speed_factor": 0.77,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 43125.7,
+    "total_co2_tonnes_per_year": 2242.54,
+    "idle_co2_kg": 3427.4,
+    "moving_co2_kg": 39698.4,
+    "potential_savings_kg_per_week": 753.1,
+    "potential_savings_tonnes_per_year": 39.16,
+    "trees_equivalent_per_year": 1864,
+    "fuel_saved_liters_per_week": 326.0,
+    "citizens_impacted": 16686,
+    "optimization_factor_pct": 22.0
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "Powai is within safe operating parameters (19% risk). Continue routine monitoring. Optimizing signals could save 753 kg CO2/week, equivalent to 1864 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_05",
     "week": 41,
     "zone_type": "Commercial_Downtown",
@@ -51,6 +156,15 @@
     "location_name": "Powai",
     "city": "Mumbai",
     "latitude": 19.1176,
-    "longitude": 72.906
+    "longitude": 72.906,
+    "predicted_risk_probability": 0.1895,
+    "risk_score": 18.9543,
+    "population_exposure_score": 50.1616,
+    "vehicle_exposure_score": 39.1176,
+    "temporal_trend_score": 74.7112,
+    "priority_score": 39.1523,
+    "priority_rank": 22,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.1895
   }
 }

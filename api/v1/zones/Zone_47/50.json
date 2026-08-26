@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_47",
+  "location_name": "Perambur",
+  "city": "Chennai",
+  "zone_type": "University_District",
   "week": 50,
-  "predicted_risk_probability": 0.34242113670691765,
-  "metrics": {
+  "latitude": 13.1167,
+  "longitude": 80.2333,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.3424,
+    "predicted_risk_percentage": 34.24,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": -23.667,
+    "actual_incident": 1
+  },
+  "priority": {
+    "priority_score": 46.3209,
+    "priority_rank": 19,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 34.2421,
+      "population_exposure_score": 48.0997,
+      "vehicle_exposure_score": 52.1814,
+      "temporal_trend_score": 67.7524
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 46.3,
+      "top_contributors": [
+        {
+          "factor": "Rising Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "68/100",
+          "impact": "MEDIUM",
+          "detail": "Slight upward trend in congestion over past 4 weeks",
+          "weight": 40.6515
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "34/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 34.2421
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "48/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 33.6698
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone has moderate risk levels with contributing factors: Rising Trend, Population Exposure. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 33.86,
+    "congestion_delta": -7.58,
+    "average_speed_kmh": 57.24,
+    "speed_delta": 9.47,
+    "vehicle_density": 39.23,
+    "density_delta": 4.14,
+    "population_density": 8056,
+    "red_light_violations": 2,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 40,
+    "change_seconds": 5,
+    "change_percent": 14.3,
+    "urgency": "MODERATE",
+    "reason": "Slight adjustment for current conditions",
+    "factors": {
+      "congestion_factor": 1.27,
+      "density_factor": 1.16,
+      "speed_factor": 0.79,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 45828.5,
+    "total_co2_tonnes_per_year": 2383.08,
+    "idle_co2_kg": 7332.4,
+    "moving_co2_kg": 38496.1,
+    "potential_savings_kg_per_week": 1714.7,
+    "potential_savings_tonnes_per_year": 89.17,
+    "trees_equivalent_per_year": 4246,
+    "fuel_saved_liters_per_week": 742.3,
+    "citizens_impacted": 16112,
+    "optimization_factor_pct": 23.4
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "No specific risk indicators triggered.",
+      "action": "Continue routine monitoring."
+    }
+  ],
+  "executive_briefing": "Perambur is within safe operating parameters (34% risk). Continue routine monitoring. Optimizing signals could save 1715 kg CO2/week, equivalent to 4246 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_47",
     "week": 50,
     "zone_type": "University_District",
@@ -51,6 +156,15 @@
     "location_name": "Perambur",
     "city": "Chennai",
     "latitude": 13.1167,
-    "longitude": 80.2333
+    "longitude": 80.2333,
+    "predicted_risk_probability": 0.3424,
+    "risk_score": 34.2421,
+    "population_exposure_score": 48.0997,
+    "vehicle_exposure_score": 52.1814,
+    "temporal_trend_score": 67.7524,
+    "priority_score": 46.3209,
+    "priority_rank": 19,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.3424
   }
 }

@@ -1,8 +1,121 @@
 {
   "zone_id": "Zone_33",
+  "location_name": "Aminabad",
+  "city": "Lucknow",
+  "zone_type": "Commercial_Downtown",
   "week": 10,
-  "predicted_risk_probability": 0.4024242186390115,
-  "metrics": {
+  "latitude": 26.8465,
+  "longitude": 80.94,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.4024,
+    "predicted_risk_percentage": 40.24,
+    "risk_label": "MODERATE RISK",
+    "risk_color": "#eab308",
+    "risk_delta_vs_prev_week": 8.4249,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 49.529,
+    "priority_rank": 20,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 40.2424,
+      "population_exposure_score": 40.1178,
+      "vehicle_exposure_score": 65.3457,
+      "temporal_trend_score": 68.8898
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 49.5,
+      "top_contributors": [
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "65/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 65.3457
+        },
+        {
+          "factor": "Rising Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "69/100",
+          "impact": "MEDIUM",
+          "detail": "Slight upward trend in congestion over past 4 weeks",
+          "weight": 41.3339
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "40/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 40.2424
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "40/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 28.0825
+        }
+      ],
+      "total_factors": 4,
+      "assessment": "This zone has moderate risk levels with contributing factors: Vehicle Density, Rising Trend. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 30.28,
+    "congestion_delta": 3.95,
+    "average_speed_kmh": 56.59,
+    "speed_delta": -2.97,
+    "vehicle_density": 40.07,
+    "density_delta": 3.3,
+    "population_density": 6945,
+    "red_light_violations": 3,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 40,
+    "recommended_green_seconds": 45,
+    "change_seconds": 5,
+    "change_percent": 12.5,
+    "urgency": "MODERATE",
+    "reason": "Slight adjustment for current conditions",
+    "factors": {
+      "congestion_factor": 1.24,
+      "density_factor": 1.16,
+      "speed_factor": 0.79,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 47675.6,
+    "total_co2_tonnes_per_year": 2479.13,
+    "idle_co2_kg": 6697.5,
+    "moving_co2_kg": 40978.1,
+    "potential_savings_kg_per_week": 1542.3,
+    "potential_savings_tonnes_per_year": 80.2,
+    "trees_equivalent_per_year": 3819,
+    "fuel_saved_liters_per_week": 667.7,
+    "citizens_impacted": 13890,
+    "optimization_factor_pct": 23.0
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "No specific risk indicators triggered.",
+      "action": "Continue routine monitoring."
+    }
+  ],
+  "executive_briefing": "Aminabad shows elevated risk at 40%. Continue routine monitoring. Optimizing signals could save 1542 kg CO2/week, equivalent to 3819 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_33",
     "week": 10,
     "zone_type": "Commercial_Downtown",
@@ -51,6 +164,15 @@
     "location_name": "Aminabad",
     "city": "Lucknow",
     "latitude": 26.8465,
-    "longitude": 80.94
+    "longitude": 80.94,
+    "predicted_risk_probability": 0.4024,
+    "risk_score": 40.2424,
+    "population_exposure_score": 40.1178,
+    "vehicle_exposure_score": 65.3457,
+    "temporal_trend_score": 68.8898,
+    "priority_score": 49.529,
+    "priority_rank": 20,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.4024
   }
 }

@@ -1,8 +1,121 @@
 {
   "zone_id": "Zone_25",
+  "location_name": "Okhla",
+  "city": "Delhi",
+  "zone_type": "Residential",
   "week": 33,
-  "predicted_risk_probability": 0.8693664920001906,
-  "metrics": {
+  "latitude": 28.5355,
+  "longitude": 77.264,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.8694,
+    "predicted_risk_percentage": 86.94,
+    "risk_label": "CRITICAL RISK",
+    "risk_color": "#ef4444",
+    "risk_delta_vs_prev_week": 5.5934,
+    "actual_incident": 1
+  },
+  "priority": {
+    "priority_score": 66.2147,
+    "priority_rank": 14,
+    "priority_level": "HIGH",
+    "components": {
+      "risk_score": 86.9366,
+      "population_exposure_score": 67.7419,
+      "vehicle_exposure_score": 39.9414,
+      "temporal_trend_score": 43.4417
+    },
+    "explanation": {
+      "priority_level": "HIGH",
+      "priority_score": 66.2,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udd34",
+          "value": "87/100",
+          "impact": "HIGH",
+          "detail": "Model-estimated risk score is in the critical range",
+          "weight": 86.9366
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "68/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 10790 residents/km\u00b2",
+          "weight": 67.7419
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "47/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate congestion at 47",
+          "weight": 33.089
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone shows significant risk elevation driven by Risk Score, Population Exposure. Proactive intervention should be scheduled within the current planning cycle."
+    }
+  },
+  "telemetry": {
+    "congestion": 47.27,
+    "congestion_delta": 2.89,
+    "average_speed_kmh": 33.45,
+    "speed_delta": 1.09,
+    "vehicle_density": 28.84,
+    "density_delta": 3.55,
+    "population_density": 10790,
+    "red_light_violations": 6,
+    "weather": "Heavy Rain",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 30,
+    "recommended_green_seconds": 47,
+    "change_seconds": 17,
+    "change_percent": 56.7,
+    "urgency": "CRITICAL",
+    "reason": "Severe congestion requires significantly extended green phase",
+    "factors": {
+      "congestion_factor": 1.38,
+      "density_factor": 1.12,
+      "speed_factor": 0.87,
+      "event_boost": 1.0,
+      "weather_boost": 1.18
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 22175.4,
+    "total_co2_tonnes_per_year": 1153.12,
+    "idle_co2_kg": 7525.2,
+    "moving_co2_kg": 14650.1,
+    "potential_savings_kg_per_week": 1860.8,
+    "potential_savings_tonnes_per_year": 96.76,
+    "trees_equivalent_per_year": 4607,
+    "fuel_saved_liters_per_week": 805.5,
+    "citizens_impacted": 21580,
+    "optimization_factor_pct": 24.7
+  },
+  "interventions": [
+    {
+      "id": "ROAD_MAINTENANCE",
+      "name": "Road Maintenance Inspection",
+      "icon": "\ud83d\udee3\ufe0f",
+      "severity": "MEDIUM",
+      "description": "Deteriorated road surface combined with elevated risk indicates infrastructure maintenance need.",
+      "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
+    },
+    {
+      "id": "MONITORING_UPGRADE",
+      "name": "Enhanced Monitoring & CCTV Coverage",
+      "icon": "\ud83d\udcf9",
+      "severity": "MEDIUM",
+      "description": "High-risk zone with significant population exposure warrants improved surveillance.",
+      "action": "Install additional CCTV cameras and integrate with traffic management center for real-time monitoring."
+    }
+  ],
+  "executive_briefing": "Okhla is in a critical safety state with 87% incident risk. Continue routine monitoring. Optimizing signals could save 1861 kg CO2/week, equivalent to 4607 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_25",
     "week": 33,
     "zone_type": "Residential",
@@ -51,6 +164,15 @@
     "location_name": "Okhla",
     "city": "Delhi",
     "latitude": 28.5355,
-    "longitude": 77.264
+    "longitude": 77.264,
+    "predicted_risk_probability": 0.8694,
+    "risk_score": 86.9366,
+    "population_exposure_score": 67.7419,
+    "vehicle_exposure_score": 39.9414,
+    "temporal_trend_score": 43.4417,
+    "priority_score": 66.2147,
+    "priority_rank": 14,
+    "priority_level": "HIGH",
+    "risk_prob": 0.8694
   }
 }

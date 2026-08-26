@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_42",
+  "location_name": "Guindy",
+  "city": "Chennai",
+  "zone_type": "University_District",
   "week": 17,
-  "predicted_risk_probability": 0.26520016221479015,
-  "metrics": {
+  "latitude": 13.0067,
+  "longitude": 80.2206,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.2652,
+    "predicted_risk_percentage": 26.52,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": -34.0577,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 45.1233,
+    "priority_rank": 20,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 26.52,
+      "population_exposure_score": 43.164,
+      "vehicle_exposure_score": 45.8358,
+      "temporal_trend_score": 97.0478
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 45.1,
+      "top_contributors": [
+        {
+          "factor": "Worsening Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "97/100",
+          "impact": "HIGH",
+          "detail": "4-week congestion trend is actively worsening \u2014 conditions deteriorating",
+          "weight": 97.0478
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "43/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 30.2148
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "27/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 26.52
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone has moderate risk levels with contributing factors: Worsening Trend, Population Exposure. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 25.5,
+    "congestion_delta": -13.33,
+    "average_speed_kmh": 58.15,
+    "speed_delta": 3.26,
+    "vehicle_density": 32.22,
+    "density_delta": -8.82,
+    "population_density": 7369,
+    "red_light_violations": 2,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 37,
+    "change_seconds": 2,
+    "change_percent": 5.7,
+    "urgency": "MODERATE",
+    "reason": "Slight adjustment for current conditions",
+    "factors": {
+      "congestion_factor": 1.2,
+      "density_factor": 1.13,
+      "speed_factor": 0.78,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 40715.1,
+    "total_co2_tonnes_per_year": 2117.19,
+    "idle_co2_kg": 4535.3,
+    "moving_co2_kg": 36179.8,
+    "potential_savings_kg_per_week": 1022.7,
+    "potential_savings_tonnes_per_year": 53.18,
+    "trees_equivalent_per_year": 2532,
+    "fuel_saved_liters_per_week": 442.7,
+    "citizens_impacted": 14738,
+    "optimization_factor_pct": 22.6
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "Guindy is within safe operating parameters (27% risk). Continue routine monitoring. Optimizing signals could save 1023 kg CO2/week, equivalent to 2532 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_42",
     "week": 17,
     "zone_type": "University_District",
@@ -51,6 +156,15 @@
     "location_name": "Guindy",
     "city": "Chennai",
     "latitude": 13.0067,
-    "longitude": 80.2206
+    "longitude": 80.2206,
+    "predicted_risk_probability": 0.2652,
+    "risk_score": 26.52,
+    "population_exposure_score": 43.164,
+    "vehicle_exposure_score": 45.8358,
+    "temporal_trend_score": 97.0478,
+    "priority_score": 45.1233,
+    "priority_rank": 20,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.2652
   }
 }

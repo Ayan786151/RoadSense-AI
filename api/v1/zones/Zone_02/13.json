@@ -1,8 +1,121 @@
 {
   "zone_id": "Zone_02",
+  "location_name": "Bandra",
+  "city": "Mumbai",
+  "zone_type": "Residential",
   "week": 13,
-  "predicted_risk_probability": 0.3445917196278875,
-  "metrics": {
+  "latitude": 19.0596,
+  "longitude": 72.8295,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.3446,
+    "predicted_risk_percentage": 34.46,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": -0.0702,
+    "actual_incident": 1
+  },
+  "priority": {
+    "priority_score": 55.4412,
+    "priority_rank": 12,
+    "priority_level": "HIGH",
+    "components": {
+      "risk_score": 34.4592,
+      "population_exposure_score": 79.4957,
+      "vehicle_exposure_score": 66.0093,
+      "temporal_trend_score": 57.2116
+    },
+    "explanation": {
+      "priority_level": "HIGH",
+      "priority_score": 55.4,
+      "top_contributors": [
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "79/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 12426 residents/km\u00b2",
+          "weight": 79.4957
+        },
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "66/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 66.0093
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "34/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 34.4592
+        },
+        {
+          "factor": "Rising Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "57/100",
+          "impact": "MEDIUM",
+          "detail": "Slight upward trend in congestion over past 4 weeks",
+          "weight": 34.3269
+        }
+      ],
+      "total_factors": 4,
+      "assessment": "This zone shows significant risk elevation driven by Population Exposure, Vehicle Density. Proactive intervention should be scheduled within the current planning cycle."
+    }
+  },
+  "telemetry": {
+    "congestion": 22.27,
+    "congestion_delta": 0.14,
+    "average_speed_kmh": 58.17,
+    "speed_delta": 0.1,
+    "vehicle_density": 42.51,
+    "density_delta": 7.43,
+    "population_density": 12426,
+    "red_light_violations": 5,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 30,
+    "recommended_green_seconds": 32,
+    "change_seconds": 2,
+    "change_percent": 6.7,
+    "urgency": "MODERATE",
+    "reason": "Slight adjustment for current conditions",
+    "factors": {
+      "congestion_factor": 1.18,
+      "density_factor": 1.17,
+      "speed_factor": 0.78,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 55046.9,
+    "total_co2_tonnes_per_year": 2862.44,
+    "idle_co2_kg": 5225.8,
+    "moving_co2_kg": 49821.2,
+    "potential_savings_kg_per_week": 1161.5,
+    "potential_savings_tonnes_per_year": 60.4,
+    "trees_equivalent_per_year": 2876,
+    "fuel_saved_liters_per_week": 502.8,
+    "citizens_impacted": 24852,
+    "optimization_factor_pct": 22.2
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "No specific risk indicators triggered.",
+      "action": "Continue routine monitoring."
+    }
+  ],
+  "executive_briefing": "Bandra is within safe operating parameters (34% risk). Continue routine monitoring. Optimizing signals could save 1162 kg CO2/week, equivalent to 2876 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_02",
     "week": 13,
     "zone_type": "Residential",
@@ -51,6 +164,15 @@
     "location_name": "Bandra",
     "city": "Mumbai",
     "latitude": 19.0596,
-    "longitude": 72.8295
+    "longitude": 72.8295,
+    "predicted_risk_probability": 0.3446,
+    "risk_score": 34.4592,
+    "population_exposure_score": 79.4957,
+    "vehicle_exposure_score": 66.0093,
+    "temporal_trend_score": 57.2116,
+    "priority_score": 55.4412,
+    "priority_rank": 12,
+    "priority_level": "HIGH",
+    "risk_prob": 0.3446
   }
 }

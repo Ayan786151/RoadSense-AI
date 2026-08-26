@@ -1,8 +1,121 @@
 {
   "zone_id": "Zone_15",
+  "location_name": "Dwarka",
+  "city": "Delhi",
+  "zone_type": "Residential",
   "week": 19,
-  "predicted_risk_probability": 0.23993594399844934,
-  "metrics": {
+  "latitude": 28.5921,
+  "longitude": 77.046,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.2399,
+    "predicted_risk_percentage": 23.99,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": -4.3465,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 47.1212,
+    "priority_rank": 24,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 23.9936,
+      "population_exposure_score": 97.0041,
+      "vehicle_exposure_score": 66.3635,
+      "temporal_trend_score": 0.0
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 47.1,
+      "top_contributors": [
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "97/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 14863 residents/km\u00b2",
+          "weight": 97.0041
+        },
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "66/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 66.3635
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "24/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 23.9936
+        },
+        {
+          "factor": "Improving Trend",
+          "icon": "\ud83d\udcc9",
+          "value": "0/100",
+          "impact": "POSITIVE",
+          "detail": "Conditions are improving over past 4 weeks",
+          "weight": -0.0
+        }
+      ],
+      "total_factors": 4,
+      "assessment": "This zone has moderate risk levels with contributing factors: Population Exposure, Vehicle Density. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 29.85,
+    "congestion_delta": -3.97,
+    "average_speed_kmh": 57.2,
+    "speed_delta": -0.51,
+    "vehicle_density": 53.27,
+    "density_delta": -5.72,
+    "population_density": 14863,
+    "red_light_violations": 4,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 30,
+    "recommended_green_seconds": 35,
+    "change_seconds": 5,
+    "change_percent": 16.7,
+    "urgency": "MODERATE",
+    "reason": "Slight adjustment for current conditions",
+    "factors": {
+      "congestion_factor": 1.24,
+      "density_factor": 1.21,
+      "speed_factor": 0.79,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 64181.4,
+    "total_co2_tonnes_per_year": 3337.43,
+    "idle_co2_kg": 8777.4,
+    "moving_co2_kg": 55404.0,
+    "potential_savings_kg_per_week": 2017.5,
+    "potential_savings_tonnes_per_year": 104.91,
+    "trees_equivalent_per_year": 4995,
+    "fuel_saved_liters_per_week": 873.4,
+    "citizens_impacted": 29726,
+    "optimization_factor_pct": 23.0
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "Dwarka is within safe operating parameters (24% risk). Continue routine monitoring. Optimizing signals could save 2018 kg CO2/week, equivalent to 4995 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_15",
     "week": 19,
     "zone_type": "Residential",
@@ -51,6 +164,15 @@
     "location_name": "Dwarka",
     "city": "Delhi",
     "latitude": 28.5921,
-    "longitude": 77.046
+    "longitude": 77.046,
+    "predicted_risk_probability": 0.2399,
+    "risk_score": 23.9936,
+    "population_exposure_score": 97.0041,
+    "vehicle_exposure_score": 66.3635,
+    "temporal_trend_score": 0.0,
+    "priority_score": 47.1212,
+    "priority_rank": 24,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.2399
   }
 }

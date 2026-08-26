@@ -1,8 +1,97 @@
 {
   "zone_id": "Zone_30",
+  "location_name": "Charbagh",
+  "city": "Lucknow",
+  "zone_type": "Highway_Junction",
   "week": 21,
-  "predicted_risk_probability": 0.11621799744297012,
-  "metrics": {
+  "latitude": 26.8315,
+  "longitude": 80.923,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.1162,
+    "predicted_risk_percentage": 11.62,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": -0.1808,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 18.0323,
+    "priority_rank": 43,
+    "priority_level": "LOW",
+    "components": {
+      "risk_score": 11.6218,
+      "population_exposure_score": 7.8095,
+      "vehicle_exposure_score": 24.0705,
+      "temporal_trend_score": 44.1139
+    },
+    "explanation": {
+      "priority_level": "LOW",
+      "priority_score": 18.0,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "12/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 11.6218
+        }
+      ],
+      "total_factors": 1,
+      "assessment": "This zone is currently within acceptable safety parameters. Routine monitoring is sufficient."
+    }
+  },
+  "telemetry": {
+    "congestion": 14.75,
+    "congestion_delta": -0.12,
+    "average_speed_kmh": 64.01,
+    "speed_delta": 2.53,
+    "vehicle_density": 19.42,
+    "density_delta": 2.05,
+    "population_density": 2448,
+    "red_light_violations": 2,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 50,
+    "recommended_green_seconds": 45,
+    "change_seconds": -5,
+    "change_percent": -10.0,
+    "urgency": "NOMINAL",
+    "reason": "Current default timing is adequate",
+    "factors": {
+      "congestion_factor": 1.12,
+      "density_factor": 1.08,
+      "speed_factor": 0.76,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 29049.1,
+    "total_co2_tonnes_per_year": 1510.56,
+    "idle_co2_kg": 1581.2,
+    "moving_co2_kg": 27468.0,
+    "potential_savings_kg_per_week": 339.6,
+    "potential_savings_tonnes_per_year": 17.66,
+    "trees_equivalent_per_year": 840,
+    "fuel_saved_liters_per_week": 147.0,
+    "citizens_impacted": 4896,
+    "optimization_factor_pct": 21.5
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "Charbagh is within safe operating parameters (12% risk). Continue routine monitoring. Optimizing signals could save 340 kg CO2/week, equivalent to 840 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_30",
     "week": 21,
     "zone_type": "Highway_Junction",
@@ -51,6 +140,15 @@
     "location_name": "Charbagh",
     "city": "Lucknow",
     "latitude": 26.8315,
-    "longitude": 80.923
+    "longitude": 80.923,
+    "predicted_risk_probability": 0.1162,
+    "risk_score": 11.6218,
+    "population_exposure_score": 7.8095,
+    "vehicle_exposure_score": 24.0705,
+    "temporal_trend_score": 44.1139,
+    "priority_score": 18.0323,
+    "priority_rank": 43,
+    "priority_level": "LOW",
+    "risk_prob": 0.1162
   }
 }

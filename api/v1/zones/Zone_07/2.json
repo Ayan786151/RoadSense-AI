@@ -1,8 +1,105 @@
 {
   "zone_id": "Zone_07",
+  "location_name": "Goregaon",
+  "city": "Mumbai",
+  "zone_type": "University_District",
   "week": 2,
-  "predicted_risk_probability": null,
-  "metrics": {
+  "latitude": 19.1663,
+  "longitude": 72.8526,
+  "risk_analysis": {
+    "predicted_risk_probability": null,
+    "predicted_risk_percentage": null,
+    "risk_label": "BASELINE WARMUP",
+    "risk_color": "#71717a",
+    "risk_delta_vs_prev_week": null,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 29.5796,
+    "priority_rank": 28,
+    "priority_level": "LOW",
+    "components": {
+      "risk_score": 0.0,
+      "population_exposure_score": 42.4312,
+      "vehicle_exposure_score": 57.3588,
+      "temporal_trend_score": 50.0
+    },
+    "explanation": {
+      "priority_level": "LOW",
+      "priority_score": 29.6,
+      "top_contributors": [
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "42/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 29.7018
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "0/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 0.0
+        }
+      ],
+      "total_factors": 2,
+      "assessment": "This zone is currently within acceptable safety parameters. Routine monitoring is sufficient."
+    }
+  },
+  "telemetry": {
+    "congestion": 39.77,
+    "congestion_delta": -16.12,
+    "average_speed_kmh": 55.3,
+    "speed_delta": 18.43,
+    "vehicle_density": 31.49,
+    "density_delta": 1.85,
+    "population_density": 7267,
+    "red_light_violations": 6,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 41,
+    "change_seconds": 6,
+    "change_percent": 17.1,
+    "urgency": "MODERATE",
+    "reason": "Slight adjustment for current conditions",
+    "factors": {
+      "congestion_factor": 1.32,
+      "density_factor": 1.13,
+      "speed_factor": 0.79,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 34099.0,
+    "total_co2_tonnes_per_year": 1773.15,
+    "idle_co2_kg": 6913.0,
+    "moving_co2_kg": 27186.0,
+    "potential_savings_kg_per_week": 1657.5,
+    "potential_savings_tonnes_per_year": 86.19,
+    "trees_equivalent_per_year": 4104,
+    "fuel_saved_liters_per_week": 717.5,
+    "citizens_impacted": 14534,
+    "optimization_factor_pct": 24.0
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "Goregaon is within safe operating parameters (0% risk). Continue routine monitoring. Optimizing signals could save 1658 kg CO2/week, equivalent to 4104 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_07",
     "week": 2,
     "zone_type": "University_District",
@@ -51,6 +148,15 @@
     "location_name": "Goregaon",
     "city": "Mumbai",
     "latitude": 19.1663,
-    "longitude": 72.8526
+    "longitude": 72.8526,
+    "predicted_risk_probability": null,
+    "risk_score": 0.0,
+    "population_exposure_score": 42.4312,
+    "vehicle_exposure_score": 57.3588,
+    "temporal_trend_score": 50.0,
+    "priority_score": 29.5796,
+    "priority_rank": 28,
+    "priority_level": "LOW",
+    "risk_prob": null
   }
 }

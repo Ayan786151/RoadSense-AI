@@ -1,8 +1,129 @@
 {
   "zone_id": "Zone_07",
+  "location_name": "Goregaon",
+  "city": "Mumbai",
+  "zone_type": "University_District",
   "week": 36,
-  "predicted_risk_probability": 0.7848174406505063,
-  "metrics": {
+  "latitude": 19.1663,
+  "longitude": 72.8526,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.7848,
+    "predicted_risk_percentage": 78.48,
+    "risk_label": "CRITICAL RISK",
+    "risk_color": "#ef4444",
+    "risk_delta_vs_prev_week": -17.5407,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 64.4793,
+    "priority_rank": 16,
+    "priority_level": "HIGH",
+    "components": {
+      "risk_score": 78.4817,
+      "population_exposure_score": 42.4312,
+      "vehicle_exposure_score": 77.6517,
+      "temporal_trend_score": 46.3229
+    },
+    "explanation": {
+      "priority_level": "HIGH",
+      "priority_score": 64.5,
+      "top_contributors": [
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "86/100",
+          "impact": "HIGH",
+          "detail": "Congestion index at 86 \u2014 severe traffic flow degradation",
+          "weight": 86.23
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udd34",
+          "value": "78/100",
+          "impact": "HIGH",
+          "detail": "Model-estimated risk score is in the critical range",
+          "weight": 78.4817
+        },
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "78/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 77.6517
+        },
+        {
+          "factor": "Violation Count",
+          "icon": "\ud83d\udea8",
+          "value": "12",
+          "impact": "HIGH",
+          "detail": "12 red-light violations recorded \u2014 intersection safety concern",
+          "weight": 60
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "42/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 29.7018
+        }
+      ],
+      "total_factors": 5,
+      "assessment": "This zone shows significant risk elevation driven by Congestion, Risk Score. Proactive intervention should be scheduled within the current planning cycle."
+    }
+  },
+  "telemetry": {
+    "congestion": 86.23,
+    "congestion_delta": -7.59,
+    "average_speed_kmh": 37.28,
+    "speed_delta": 14.12,
+    "vehicle_density": 55.77,
+    "density_delta": 10.39,
+    "population_density": 7267,
+    "red_light_violations": 12,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 62,
+    "change_seconds": 27,
+    "change_percent": 77.1,
+    "urgency": "CRITICAL",
+    "reason": "Severe congestion requires significantly extended green phase",
+    "factors": {
+      "congestion_factor": 1.69,
+      "density_factor": 1.22,
+      "speed_factor": 0.86,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 34791.2,
+    "total_co2_tonnes_per_year": 1809.14,
+    "idle_co2_kg": 26545.9,
+    "moving_co2_kg": 8245.2,
+    "potential_savings_kg_per_week": 7598.2,
+    "potential_savings_tonnes_per_year": 395.11,
+    "trees_equivalent_per_year": 18814,
+    "fuel_saved_liters_per_week": 3289.3,
+    "citizens_impacted": 14534,
+    "optimization_factor_pct": 28.6
+  },
+  "interventions": [
+    {
+      "id": "VIOLATION_ENFORCEMENT",
+      "name": "Red-Light Violation Enforcement",
+      "icon": "\ud83d\udea8",
+      "severity": "HIGH",
+      "description": "Elevated red-light violation count indicates intersection compliance failure.",
+      "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
+    }
+  ],
+  "executive_briefing": "Goregaon is in a critical safety state with 78% incident risk. Signal optimization recommended \u2014 congestion at 86/100 with speeds averaging 37 km/h. Optimizing signals could save 7598 kg CO2/week, equivalent to 18814 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_07",
     "week": 36,
     "zone_type": "University_District",
@@ -51,6 +172,15 @@
     "location_name": "Goregaon",
     "city": "Mumbai",
     "latitude": 19.1663,
-    "longitude": 72.8526
+    "longitude": 72.8526,
+    "predicted_risk_probability": 0.7848,
+    "risk_score": 78.4817,
+    "population_exposure_score": 42.4312,
+    "vehicle_exposure_score": 77.6517,
+    "temporal_trend_score": 46.3229,
+    "priority_score": 64.4793,
+    "priority_rank": 16,
+    "priority_level": "HIGH",
+    "risk_prob": 0.7848
   }
 }

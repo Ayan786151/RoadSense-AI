@@ -1,8 +1,105 @@
 {
   "zone_id": "Zone_41",
+  "location_name": "Adyar",
+  "city": "Chennai",
+  "zone_type": "Highway_Junction",
   "week": 50,
-  "predicted_risk_probability": 0.3918143354862884,
-  "metrics": {
+  "latitude": 13.0063,
+  "longitude": 80.2574,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.3918,
+    "predicted_risk_percentage": 39.18,
+    "risk_label": "MODERATE RISK",
+    "risk_color": "#eab308",
+    "risk_delta_vs_prev_week": -33.1034,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 34.68,
+    "priority_rank": 30,
+    "priority_level": "LOW",
+    "components": {
+      "risk_score": 39.1814,
+      "population_exposure_score": 8.5351,
+      "vehicle_exposure_score": 34.7699,
+      "temporal_trend_score": 66.1312
+    },
+    "explanation": {
+      "priority_level": "LOW",
+      "priority_score": 34.7,
+      "top_contributors": [
+        {
+          "factor": "Rising Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "66/100",
+          "impact": "MEDIUM",
+          "detail": "Slight upward trend in congestion over past 4 weeks",
+          "weight": 39.6787
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "39/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 39.1814
+        }
+      ],
+      "total_factors": 2,
+      "assessment": "This zone is currently within acceptable safety parameters. Routine monitoring is sufficient."
+    }
+  },
+  "telemetry": {
+    "congestion": 28.67,
+    "congestion_delta": -22.49,
+    "average_speed_kmh": 58.92,
+    "speed_delta": 16.01,
+    "vehicle_density": 26.14,
+    "density_delta": -1.72,
+    "population_density": 2549,
+    "red_light_violations": 7,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 50,
+    "recommended_green_seconds": 52,
+    "change_seconds": 2,
+    "change_percent": 4.0,
+    "urgency": "NOMINAL",
+    "reason": "Current default timing is adequate",
+    "factors": {
+      "congestion_factor": 1.23,
+      "density_factor": 1.1,
+      "speed_factor": 0.78,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 32612.6,
+    "total_co2_tonnes_per_year": 1695.86,
+    "idle_co2_kg": 4136.9,
+    "moving_co2_kg": 28475.8,
+    "potential_savings_kg_per_week": 946.0,
+    "potential_savings_tonnes_per_year": 49.19,
+    "trees_equivalent_per_year": 2342,
+    "fuel_saved_liters_per_week": 409.5,
+    "citizens_impacted": 5098,
+    "optimization_factor_pct": 22.9
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "No specific risk indicators triggered.",
+      "action": "Continue routine monitoring."
+    }
+  ],
+  "executive_briefing": "Adyar shows elevated risk at 39%. Continue routine monitoring. Optimizing signals could save 946 kg CO2/week, equivalent to 2342 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_41",
     "week": 50,
     "zone_type": "Highway_Junction",
@@ -51,6 +148,15 @@
     "location_name": "Adyar",
     "city": "Chennai",
     "latitude": 13.0063,
-    "longitude": 80.2574
+    "longitude": 80.2574,
+    "predicted_risk_probability": 0.3918,
+    "risk_score": 39.1814,
+    "population_exposure_score": 8.5351,
+    "vehicle_exposure_score": 34.7699,
+    "temporal_trend_score": 66.1312,
+    "priority_score": 34.68,
+    "priority_rank": 30,
+    "priority_level": "LOW",
+    "risk_prob": 0.3918
   }
 }

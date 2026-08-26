@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_05",
+  "location_name": "Powai",
+  "city": "Mumbai",
+  "zone_type": "Commercial_Downtown",
   "week": 49,
-  "predicted_risk_probability": 0.20205772605183692,
-  "metrics": {
+  "latitude": 19.1176,
+  "longitude": 72.906,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.2021,
+    "predicted_risk_percentage": 20.21,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": -7.0242,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 33.5266,
+    "priority_rank": 33,
+    "priority_level": "LOW",
+    "components": {
+      "risk_score": 20.2058,
+      "population_exposure_score": 50.1616,
+      "vehicle_exposure_score": 14.9796,
+      "temporal_trend_score": 66.0532
+    },
+    "explanation": {
+      "priority_level": "LOW",
+      "priority_score": 33.5,
+      "top_contributors": [
+        {
+          "factor": "Rising Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "66/100",
+          "impact": "MEDIUM",
+          "detail": "Slight upward trend in congestion over past 4 weeks",
+          "weight": 39.6319
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "50/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 35.1132
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "20/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 20.2058
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone is currently within acceptable safety parameters. Routine monitoring is sufficient."
+    }
+  },
+  "telemetry": {
+    "congestion": 11.93,
+    "congestion_delta": -8.16,
+    "average_speed_kmh": 53.14,
+    "speed_delta": 2.86,
+    "vehicle_density": 14.82,
+    "density_delta": -3.42,
+    "population_density": 8343,
+    "red_light_violations": 4,
+    "weather": "Light Rain",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 40,
+    "recommended_green_seconds": 40,
+    "change_seconds": 0,
+    "change_percent": 0.0,
+    "urgency": "NOMINAL",
+    "reason": "Current default timing is adequate",
+    "factors": {
+      "congestion_factor": 1.1,
+      "density_factor": 1.06,
+      "speed_factor": 0.8,
+      "event_boost": 1.0,
+      "weather_boost": 1.08
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 18953.6,
+    "total_co2_tonnes_per_year": 985.59,
+    "idle_co2_kg": 976.0,
+    "moving_co2_kg": 17977.6,
+    "potential_savings_kg_per_week": 206.8,
+    "potential_savings_tonnes_per_year": 10.76,
+    "trees_equivalent_per_year": 512,
+    "fuel_saved_liters_per_week": 89.5,
+    "citizens_impacted": 16686,
+    "optimization_factor_pct": 21.2
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "Powai is within safe operating parameters (20% risk). Continue routine monitoring. Optimizing signals could save 207 kg CO2/week, equivalent to 512 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_05",
     "week": 49,
     "zone_type": "Commercial_Downtown",
@@ -51,6 +156,15 @@
     "location_name": "Powai",
     "city": "Mumbai",
     "latitude": 19.1176,
-    "longitude": 72.906
+    "longitude": 72.906,
+    "predicted_risk_probability": 0.2021,
+    "risk_score": 20.2058,
+    "population_exposure_score": 50.1616,
+    "vehicle_exposure_score": 14.9796,
+    "temporal_trend_score": 66.0532,
+    "priority_score": 33.5266,
+    "priority_rank": 33,
+    "priority_level": "LOW",
+    "risk_prob": 0.2021
   }
 }

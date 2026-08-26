@@ -1,8 +1,97 @@
 {
   "zone_id": "Zone_20",
+  "location_name": "Vasant Kunj",
+  "city": "Delhi",
+  "zone_type": "Commercial_Downtown",
   "week": 35,
-  "predicted_risk_probability": 0.5923688088426148,
-  "metrics": {
+  "latitude": 28.5293,
+  "longitude": 77.1541,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.5924,
+    "predicted_risk_percentage": 59.24,
+    "risk_label": "HIGH RISK",
+    "risk_color": "#f97316",
+    "risk_delta_vs_prev_week": 9.7641,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 36.4919,
+    "priority_rank": 32,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 59.2369,
+      "population_exposure_score": 16.8044,
+      "vehicle_exposure_score": 12.9146,
+      "temporal_trend_score": 40.0879
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 36.5,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "59/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 59.2369
+        }
+      ],
+      "total_factors": 1,
+      "assessment": "This zone has moderate risk levels with contributing factors: Risk Score. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 21.34,
+    "congestion_delta": 2.51,
+    "average_speed_kmh": 39.12,
+    "speed_delta": -3.42,
+    "vehicle_density": 13.76,
+    "density_delta": -0.23,
+    "population_density": 3700,
+    "red_light_violations": 6,
+    "weather": "Heavy Rain",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 40,
+    "recommended_green_seconds": 49,
+    "change_seconds": 9,
+    "change_percent": 22.5,
+    "urgency": "HIGH",
+    "reason": "Elevated traffic density needs extended clearance time",
+    "factors": {
+      "congestion_factor": 1.17,
+      "density_factor": 1.06,
+      "speed_factor": 0.85,
+      "event_boost": 1.0,
+      "weather_boost": 1.18
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 13815.4,
+    "total_co2_tonnes_per_year": 718.4,
+    "idle_co2_kg": 1620.9,
+    "moving_co2_kg": 12194.5,
+    "potential_savings_kg_per_week": 358.8,
+    "potential_savings_tonnes_per_year": 18.66,
+    "trees_equivalent_per_year": 888,
+    "fuel_saved_liters_per_week": 155.3,
+    "citizens_impacted": 7400,
+    "optimization_factor_pct": 22.1
+  },
+  "interventions": [
+    {
+      "id": "ROAD_MAINTENANCE",
+      "name": "Road Maintenance Inspection",
+      "icon": "\ud83d\udee3\ufe0f",
+      "severity": "MEDIUM",
+      "description": "Deteriorated road surface combined with elevated risk indicates infrastructure maintenance need.",
+      "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
+    }
+  ],
+  "executive_briefing": "Vasant Kunj shows elevated risk at 59%. Continue routine monitoring. Optimizing signals could save 359 kg CO2/week, equivalent to 888 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_20",
     "week": 35,
     "zone_type": "Commercial_Downtown",
@@ -51,6 +140,15 @@
     "location_name": "Vasant Kunj",
     "city": "Delhi",
     "latitude": 28.5293,
-    "longitude": 77.1541
+    "longitude": 77.1541,
+    "predicted_risk_probability": 0.5924,
+    "risk_score": 59.2369,
+    "population_exposure_score": 16.8044,
+    "vehicle_exposure_score": 12.9146,
+    "temporal_trend_score": 40.0879,
+    "priority_score": 36.4919,
+    "priority_rank": 32,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.5924
   }
 }

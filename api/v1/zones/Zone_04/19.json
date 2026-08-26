@@ -1,8 +1,105 @@
 {
   "zone_id": "Zone_04",
+  "location_name": "Dadar",
+  "city": "Mumbai",
+  "zone_type": "Highway_Junction",
   "week": 19,
-  "predicted_risk_probability": 0.13803361835019112,
-  "metrics": {
+  "latitude": 19.0178,
+  "longitude": 72.8478,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.138,
+    "predicted_risk_percentage": 13.8,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": 0.07,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 14.5317,
+    "priority_rank": 43,
+    "priority_level": "LOW",
+    "components": {
+      "risk_score": 13.8034,
+      "population_exposure_score": 7.5724,
+      "vehicle_exposure_score": 19.1728,
+      "temporal_trend_score": 21.8848
+    },
+    "explanation": {
+      "priority_level": "LOW",
+      "priority_score": 14.5,
+      "top_contributors": [
+        {
+          "factor": "Improving Trend",
+          "icon": "\ud83d\udcc9",
+          "value": "22/100",
+          "impact": "POSITIVE",
+          "detail": "Conditions are improving over past 4 weeks",
+          "weight": -21.8848
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "14/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 13.8034
+        }
+      ],
+      "total_factors": 2,
+      "assessment": "This zone is currently within acceptable safety parameters. Routine monitoring is sufficient."
+    }
+  },
+  "telemetry": {
+    "congestion": 10.78,
+    "congestion_delta": -0.38,
+    "average_speed_kmh": 60.3,
+    "speed_delta": -5.22,
+    "vehicle_density": 15.39,
+    "density_delta": -4.74,
+    "population_density": 2415,
+    "red_light_violations": 4,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 50,
+    "recommended_green_seconds": 44,
+    "change_seconds": -6,
+    "change_percent": -12.0,
+    "urgency": "OPTIMIZE",
+    "reason": "Low traffic \u2014 reduce green time to improve cross-traffic flow",
+    "factors": {
+      "congestion_factor": 1.09,
+      "density_factor": 1.06,
+      "speed_factor": 0.77,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 22376.9,
+    "total_co2_tonnes_per_year": 1163.6,
+    "idle_co2_kg": 915.8,
+    "moving_co2_kg": 21461.2,
+    "potential_savings_kg_per_week": 193.0,
+    "potential_savings_tonnes_per_year": 10.04,
+    "trees_equivalent_per_year": 477,
+    "fuel_saved_liters_per_week": 83.6,
+    "citizens_impacted": 4830,
+    "optimization_factor_pct": 21.1
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "Dadar is within safe operating parameters (14% risk). Continue routine monitoring. Optimizing signals could save 193 kg CO2/week, equivalent to 477 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_04",
     "week": 19,
     "zone_type": "Highway_Junction",
@@ -51,6 +148,15 @@
     "location_name": "Dadar",
     "city": "Mumbai",
     "latitude": 19.0178,
-    "longitude": 72.8478
+    "longitude": 72.8478,
+    "predicted_risk_probability": 0.138,
+    "risk_score": 13.8034,
+    "population_exposure_score": 7.5724,
+    "vehicle_exposure_score": 19.1728,
+    "temporal_trend_score": 21.8848,
+    "priority_score": 14.5317,
+    "priority_rank": 43,
+    "priority_level": "LOW",
+    "risk_prob": 0.138
   }
 }

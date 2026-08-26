@@ -1,8 +1,129 @@
 {
   "zone_id": "Zone_24",
+  "location_name": "Nehru Place",
+  "city": "Delhi",
+  "zone_type": "Commercial_Downtown",
   "week": 13,
-  "predicted_risk_probability": 0.2597517995733408,
-  "metrics": {
+  "latitude": 28.5491,
+  "longitude": 77.2519,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.2598,
+    "predicted_risk_percentage": 25.98,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": -14.5375,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 50.1131,
+    "priority_rank": 16,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 25.9752,
+      "population_exposure_score": 52.2523,
+      "vehicle_exposure_score": 68.4627,
+      "temporal_trend_score": 86.4495
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 50.1,
+      "top_contributors": [
+        {
+          "factor": "Worsening Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "86/100",
+          "impact": "HIGH",
+          "detail": "4-week congestion trend is actively worsening \u2014 conditions deteriorating",
+          "weight": 86.4495
+        },
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "68/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 68.4627
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "52/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 36.5766
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "26/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 25.9752
+        }
+      ],
+      "total_factors": 4,
+      "assessment": "This zone has moderate risk levels with contributing factors: Worsening Trend, Vehicle Density. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 22.95,
+    "congestion_delta": -6.15,
+    "average_speed_kmh": 57.95,
+    "speed_delta": 9.81,
+    "vehicle_density": 44.09,
+    "density_delta": -0.24,
+    "population_density": 8634,
+    "red_light_violations": 8,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 40,
+    "recommended_green_seconds": 43,
+    "change_seconds": 3,
+    "change_percent": 7.5,
+    "urgency": "MODERATE",
+    "reason": "Slight adjustment for current conditions",
+    "factors": {
+      "congestion_factor": 1.18,
+      "density_factor": 1.18,
+      "speed_factor": 0.78,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 56612.6,
+    "total_co2_tonnes_per_year": 2943.86,
+    "idle_co2_kg": 5585.5,
+    "moving_co2_kg": 51027.1,
+    "potential_savings_kg_per_week": 1245.3,
+    "potential_savings_tonnes_per_year": 64.75,
+    "trees_equivalent_per_year": 3083,
+    "fuel_saved_liters_per_week": 539.1,
+    "citizens_impacted": 17268,
+    "optimization_factor_pct": 22.3
+  },
+  "interventions": [
+    {
+      "id": "VIOLATION_ENFORCEMENT",
+      "name": "Red-Light Violation Enforcement",
+      "icon": "\ud83d\udea8",
+      "severity": "HIGH",
+      "description": "Elevated red-light violation count indicates intersection compliance failure.",
+      "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
+    },
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "Nehru Place is within safe operating parameters (26% risk). Continue routine monitoring. Optimizing signals could save 1245 kg CO2/week, equivalent to 3083 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_24",
     "week": 13,
     "zone_type": "Commercial_Downtown",
@@ -51,6 +172,15 @@
     "location_name": "Nehru Place",
     "city": "Delhi",
     "latitude": 28.5491,
-    "longitude": 77.2519
+    "longitude": 77.2519,
+    "predicted_risk_probability": 0.2598,
+    "risk_score": 25.9752,
+    "population_exposure_score": 52.2523,
+    "vehicle_exposure_score": 68.4627,
+    "temporal_trend_score": 86.4495,
+    "priority_score": 50.1131,
+    "priority_rank": 16,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.2598
   }
 }

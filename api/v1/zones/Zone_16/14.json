@@ -1,8 +1,105 @@
 {
   "zone_id": "Zone_16",
+  "location_name": "Rohini",
+  "city": "Delhi",
+  "zone_type": "Highway_Junction",
   "week": 14,
-  "predicted_risk_probability": 0.1302994355161945,
-  "metrics": {
+  "latitude": 28.7495,
+  "longitude": 77.0565,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.1303,
+    "predicted_risk_percentage": 13.03,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": 1.4942,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 20.0021,
+    "priority_rank": 47,
+    "priority_level": "LOW",
+    "components": {
+      "risk_score": 13.0299,
+      "population_exposure_score": 4.325,
+      "vehicle_exposure_score": 24.3155,
+      "temporal_trend_score": 58.9716
+    },
+    "explanation": {
+      "priority_level": "LOW",
+      "priority_score": 20.0,
+      "top_contributors": [
+        {
+          "factor": "Rising Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "59/100",
+          "impact": "MEDIUM",
+          "detail": "Slight upward trend in congestion over past 4 weeks",
+          "weight": 35.3829
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "13/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 13.0299
+        }
+      ],
+      "total_factors": 2,
+      "assessment": "This zone is currently within acceptable safety parameters. Routine monitoring is sufficient."
+    }
+  },
+  "telemetry": {
+    "congestion": 9.94,
+    "congestion_delta": 2.23,
+    "average_speed_kmh": 65.57,
+    "speed_delta": 1.24,
+    "vehicle_density": 15.72,
+    "density_delta": 1.93,
+    "population_density": 1963,
+    "red_light_violations": 6,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 50,
+    "recommended_green_seconds": 43,
+    "change_seconds": -7,
+    "change_percent": -14.0,
+    "urgency": "OPTIMIZE",
+    "reason": "Low traffic \u2014 reduce green time to improve cross-traffic flow",
+    "factors": {
+      "congestion_factor": 1.08,
+      "density_factor": 1.06,
+      "speed_factor": 0.75,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 24924.1,
+    "total_co2_tonnes_per_year": 1296.06,
+    "idle_co2_kg": 862.5,
+    "moving_co2_kg": 24061.6,
+    "potential_savings_kg_per_week": 181.1,
+    "potential_savings_tonnes_per_year": 9.42,
+    "trees_equivalent_per_year": 448,
+    "fuel_saved_liters_per_week": 78.4,
+    "citizens_impacted": 3926,
+    "optimization_factor_pct": 21.0
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "Rohini is within safe operating parameters (13% risk). Continue routine monitoring. Optimizing signals could save 181 kg CO2/week, equivalent to 448 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_16",
     "week": 14,
     "zone_type": "Highway_Junction",
@@ -51,6 +148,15 @@
     "location_name": "Rohini",
     "city": "Delhi",
     "latitude": 28.7495,
-    "longitude": 77.0565
+    "longitude": 77.0565,
+    "predicted_risk_probability": 0.1303,
+    "risk_score": 13.0299,
+    "population_exposure_score": 4.325,
+    "vehicle_exposure_score": 24.3155,
+    "temporal_trend_score": 58.9716,
+    "priority_score": 20.0021,
+    "priority_rank": 47,
+    "priority_level": "LOW",
+    "risk_prob": 0.1303
   }
 }

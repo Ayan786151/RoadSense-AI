@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_47",
+  "location_name": "Perambur",
+  "city": "Chennai",
+  "zone_type": "University_District",
   "week": 52,
-  "predicted_risk_probability": 0.37588572861143565,
-  "metrics": {
+  "latitude": 13.1167,
+  "longitude": 80.2333,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.3759,
+    "predicted_risk_percentage": 37.59,
+    "risk_label": "MODERATE RISK",
+    "risk_color": "#eab308",
+    "risk_delta_vs_prev_week": 0.0577,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 45.528,
+    "priority_rank": 21,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 37.5886,
+      "population_exposure_score": 48.0997,
+      "vehicle_exposure_score": 49.4037,
+      "temporal_trend_score": 57.2458
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 45.5,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "38/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 37.5886
+        },
+        {
+          "factor": "Rising Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "57/100",
+          "impact": "MEDIUM",
+          "detail": "Slight upward trend in congestion over past 4 weeks",
+          "weight": 34.3475
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "48/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 33.6698
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone has moderate risk levels with contributing factors: Rising Trend, Population Exposure. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 32.44,
+    "congestion_delta": -0.55,
+    "average_speed_kmh": 56.53,
+    "speed_delta": -1.52,
+    "vehicle_density": 37.7,
+    "density_delta": 1.92,
+    "population_density": 8056,
+    "red_light_violations": 1,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 39,
+    "change_seconds": 4,
+    "change_percent": 11.4,
+    "urgency": "MODERATE",
+    "reason": "Slight adjustment for current conditions",
+    "factors": {
+      "congestion_factor": 1.26,
+      "density_factor": 1.15,
+      "speed_factor": 0.79,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 44071.2,
+    "total_co2_tonnes_per_year": 2291.7,
+    "idle_co2_kg": 6750.9,
+    "moving_co2_kg": 37320.3,
+    "potential_savings_kg_per_week": 1569.2,
+    "potential_savings_tonnes_per_year": 81.6,
+    "trees_equivalent_per_year": 3885,
+    "fuel_saved_liters_per_week": 679.3,
+    "citizens_impacted": 16112,
+    "optimization_factor_pct": 23.2
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "No specific risk indicators triggered.",
+      "action": "Continue routine monitoring."
+    }
+  ],
+  "executive_briefing": "Perambur shows elevated risk at 38%. Continue routine monitoring. Optimizing signals could save 1569 kg CO2/week, equivalent to 3885 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_47",
     "week": 52,
     "zone_type": "University_District",
@@ -51,6 +156,15 @@
     "location_name": "Perambur",
     "city": "Chennai",
     "latitude": 13.1167,
-    "longitude": 80.2333
+    "longitude": 80.2333,
+    "predicted_risk_probability": 0.3759,
+    "risk_score": 37.5886,
+    "population_exposure_score": 48.0997,
+    "vehicle_exposure_score": 49.4037,
+    "temporal_trend_score": 57.2458,
+    "priority_score": 45.528,
+    "priority_rank": 21,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.3759
   }
 }

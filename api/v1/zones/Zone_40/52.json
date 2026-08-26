@@ -1,8 +1,121 @@
 {
   "zone_id": "Zone_40",
+  "location_name": "Velachery",
+  "city": "Chennai",
+  "zone_type": "University_District",
   "week": 52,
-  "predicted_risk_probability": 0.870290300345471,
-  "metrics": {
+  "latitude": 12.9815,
+  "longitude": 80.218,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.8703,
+    "predicted_risk_percentage": 87.03,
+    "risk_label": "CRITICAL RISK",
+    "risk_color": "#ef4444",
+    "risk_delta_vs_prev_week": 28.717,
+    "actual_incident": 1
+  },
+  "priority": {
+    "priority_score": 57.7674,
+    "priority_rank": 11,
+    "priority_level": "HIGH",
+    "components": {
+      "risk_score": 87.029,
+      "population_exposure_score": 47.1945,
+      "vehicle_exposure_score": 55.7856,
+      "temporal_trend_score": 0.0
+    },
+    "explanation": {
+      "priority_level": "HIGH",
+      "priority_score": 57.8,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udd34",
+          "value": "87/100",
+          "impact": "HIGH",
+          "detail": "Model-estimated risk score is in the critical range",
+          "weight": 87.029
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "67/100",
+          "impact": "HIGH",
+          "detail": "Congestion index at 67 \u2014 severe traffic flow degradation",
+          "weight": 67.03
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "47/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 33.0361
+        },
+        {
+          "factor": "Improving Trend",
+          "icon": "\ud83d\udcc9",
+          "value": "0/100",
+          "impact": "POSITIVE",
+          "detail": "Conditions are improving over past 4 weeks",
+          "weight": -0.0
+        }
+      ],
+      "total_factors": 4,
+      "assessment": "This zone shows significant risk elevation driven by Risk Score, Congestion. Proactive intervention should be scheduled within the current planning cycle."
+    }
+  },
+  "telemetry": {
+    "congestion": 67.03,
+    "congestion_delta": 25.31,
+    "average_speed_kmh": 35.51,
+    "speed_delta": -20.52,
+    "vehicle_density": 42.57,
+    "density_delta": 2.51,
+    "population_density": 7930,
+    "red_light_violations": 7,
+    "weather": "Light Rain",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 58,
+    "change_seconds": 23,
+    "change_percent": 65.7,
+    "urgency": "CRITICAL",
+    "reason": "Severe congestion requires significantly extended green phase",
+    "factors": {
+      "congestion_factor": 1.54,
+      "density_factor": 1.17,
+      "speed_factor": 0.87,
+      "event_boost": 1.0,
+      "weather_boost": 1.08
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 30104.9,
+    "total_co2_tonnes_per_year": 1565.45,
+    "idle_co2_kg": 15751.1,
+    "moving_co2_kg": 14353.8,
+    "potential_savings_kg_per_week": 4206.0,
+    "potential_savings_tonnes_per_year": 218.71,
+    "trees_equivalent_per_year": 10414,
+    "fuel_saved_liters_per_week": 1820.8,
+    "citizens_impacted": 15860,
+    "optimization_factor_pct": 26.7
+  },
+  "interventions": [
+    {
+      "id": "ROAD_MAINTENANCE",
+      "name": "Road Maintenance Inspection",
+      "icon": "\ud83d\udee3\ufe0f",
+      "severity": "MEDIUM",
+      "description": "Deteriorated road surface combined with elevated risk indicates infrastructure maintenance need.",
+      "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
+    }
+  ],
+  "executive_briefing": "Velachery is in a critical safety state with 87% incident risk. Signal optimization recommended \u2014 congestion at 67/100 with speeds averaging 36 km/h. Optimizing signals could save 4206 kg CO2/week, equivalent to 10414 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_40",
     "week": 52,
     "zone_type": "University_District",
@@ -51,6 +164,15 @@
     "location_name": "Velachery",
     "city": "Chennai",
     "latitude": 12.9815,
-    "longitude": 80.218
+    "longitude": 80.218,
+    "predicted_risk_probability": 0.8703,
+    "risk_score": 87.029,
+    "population_exposure_score": 47.1945,
+    "vehicle_exposure_score": 55.7856,
+    "temporal_trend_score": 0.0,
+    "priority_score": 57.7674,
+    "priority_rank": 11,
+    "priority_level": "HIGH",
+    "risk_prob": 0.8703
   }
 }

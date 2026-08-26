@@ -1,8 +1,105 @@
 {
   "zone_id": "Zone_20",
+  "location_name": "Vasant Kunj",
+  "city": "Delhi",
+  "zone_type": "Commercial_Downtown",
   "week": 52,
-  "predicted_risk_probability": 0.15896936792406932,
-  "metrics": {
+  "latitude": 28.5293,
+  "longitude": 77.1541,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.159,
+    "predicted_risk_percentage": 15.9,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": -16.4083,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 26.0404,
+    "priority_rank": 39,
+    "priority_level": "LOW",
+    "components": {
+      "risk_score": 15.8969,
+      "population_exposure_score": 16.8044,
+      "vehicle_exposure_score": 31.1231,
+      "temporal_trend_score": 61.7062
+    },
+    "explanation": {
+      "priority_level": "LOW",
+      "priority_score": 26.0,
+      "top_contributors": [
+        {
+          "factor": "Rising Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "62/100",
+          "impact": "MEDIUM",
+          "detail": "Slight upward trend in congestion over past 4 weeks",
+          "weight": 37.0237
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "16/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 15.8969
+        }
+      ],
+      "total_factors": 2,
+      "assessment": "This zone is currently within acceptable safety parameters. Routine monitoring is sufficient."
+    }
+  },
+  "telemetry": {
+    "congestion": 15.84,
+    "congestion_delta": 0.24,
+    "average_speed_kmh": 59.99,
+    "speed_delta": 3.82,
+    "vehicle_density": 23.75,
+    "density_delta": 1.36,
+    "population_density": 3700,
+    "red_light_violations": 4,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 40,
+    "recommended_green_seconds": 38,
+    "change_seconds": -2,
+    "change_percent": -5.0,
+    "urgency": "NOMINAL",
+    "reason": "Current default timing is adequate",
+    "factors": {
+      "congestion_factor": 1.13,
+      "density_factor": 1.09,
+      "speed_factor": 0.78,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 33156.8,
+    "total_co2_tonnes_per_year": 1724.15,
+    "idle_co2_kg": 2076.6,
+    "moving_co2_kg": 31080.2,
+    "potential_savings_kg_per_week": 448.2,
+    "potential_savings_tonnes_per_year": 23.31,
+    "trees_equivalent_per_year": 1109,
+    "fuel_saved_liters_per_week": 194.0,
+    "citizens_impacted": 7400,
+    "optimization_factor_pct": 21.6
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "Vasant Kunj is within safe operating parameters (16% risk). Continue routine monitoring. Optimizing signals could save 448 kg CO2/week, equivalent to 1109 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_20",
     "week": 52,
     "zone_type": "Commercial_Downtown",
@@ -51,6 +148,15 @@
     "location_name": "Vasant Kunj",
     "city": "Delhi",
     "latitude": 28.5293,
-    "longitude": 77.1541
+    "longitude": 77.1541,
+    "predicted_risk_probability": 0.159,
+    "risk_score": 15.8969,
+    "population_exposure_score": 16.8044,
+    "vehicle_exposure_score": 31.1231,
+    "temporal_trend_score": 61.7062,
+    "priority_score": 26.0404,
+    "priority_rank": 39,
+    "priority_level": "LOW",
+    "risk_prob": 0.159
   }
 }

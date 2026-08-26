@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_11",
+  "location_name": "Lower Parel",
+  "city": "Mumbai",
+  "zone_type": "Residential",
   "week": 38,
-  "predicted_risk_probability": 0.5491132402003176,
-  "metrics": {
+  "latitude": 18.9988,
+  "longitude": 72.8258,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.5491,
+    "predicted_risk_percentage": 54.91,
+    "risk_label": "MODERATE RISK",
+    "risk_color": "#eab308",
+    "risk_delta_vs_prev_week": -8.8655,
+    "actual_incident": 1
+  },
+  "priority": {
+    "priority_score": 54.5812,
+    "priority_rank": 11,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 54.9113,
+      "population_exposure_score": 61.7429,
+      "vehicle_exposure_score": 35.416,
+      "temporal_trend_score": 67.318
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 54.6,
+      "top_contributors": [
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "62/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 9955 residents/km\u00b2",
+          "weight": 61.7429
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "55/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 54.9113
+        },
+        {
+          "factor": "Rising Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "67/100",
+          "impact": "MEDIUM",
+          "detail": "Slight upward trend in congestion over past 4 weeks",
+          "weight": 40.3908
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone has moderate risk levels with contributing factors: Population Exposure, Risk Score. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 32.09,
+    "congestion_delta": -6.42,
+    "average_speed_kmh": 56.81,
+    "speed_delta": -1.39,
+    "vehicle_density": 26.27,
+    "density_delta": -5.04,
+    "population_density": 9955,
+    "red_light_violations": 3,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 30,
+    "recommended_green_seconds": 32,
+    "change_seconds": 2,
+    "change_percent": 6.7,
+    "urgency": "MODERATE",
+    "reason": "Slight adjustment for current conditions",
+    "factors": {
+      "congestion_factor": 1.26,
+      "density_factor": 1.11,
+      "speed_factor": 0.79,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 30923.0,
+    "total_co2_tonnes_per_year": 1608.0,
+    "idle_co2_kg": 4653.4,
+    "moving_co2_kg": 26269.6,
+    "potential_savings_kg_per_week": 1080.0,
+    "potential_savings_tonnes_per_year": 56.16,
+    "trees_equivalent_per_year": 2674,
+    "fuel_saved_liters_per_week": 467.5,
+    "citizens_impacted": 19910,
+    "optimization_factor_pct": 23.2
+  },
+  "interventions": [
+    {
+      "id": "SPEED_CALMING",
+      "name": "Speed Calming & Enforcement",
+      "icon": "\ud83c\udfce\ufe0f",
+      "severity": "HIGH",
+      "description": "High average speed combined with elevated risk score suggests speed-related hazards.",
+      "action": "Deploy speed calming measures (speed bumps, radar signs) and increase enforcement patrols."
+    }
+  ],
+  "executive_briefing": "Lower Parel shows elevated risk at 55%. Continue routine monitoring. Optimizing signals could save 1080 kg CO2/week, equivalent to 2674 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_11",
     "week": 38,
     "zone_type": "Residential",
@@ -51,6 +156,15 @@
     "location_name": "Lower Parel",
     "city": "Mumbai",
     "latitude": 18.9988,
-    "longitude": 72.8258
+    "longitude": 72.8258,
+    "predicted_risk_probability": 0.5491,
+    "risk_score": 54.9113,
+    "population_exposure_score": 61.7429,
+    "vehicle_exposure_score": 35.416,
+    "temporal_trend_score": 67.318,
+    "priority_score": 54.5812,
+    "priority_rank": 11,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.5491
   }
 }

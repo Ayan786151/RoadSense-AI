@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_28",
+  "location_name": "Aliganj",
+  "city": "Lucknow",
+  "zone_type": "Highway_Junction",
   "week": 38,
-  "predicted_risk_probability": 0.12173370697546905,
-  "metrics": {
+  "latitude": 26.886,
+  "longitude": 80.9462,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.1217,
+    "predicted_risk_percentage": 12.17,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": -1.2543,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 18.6628,
+    "priority_rank": 48,
+    "priority_level": "LOW",
+    "components": {
+      "risk_score": 12.1734,
+      "population_exposure_score": 3.4773,
+      "vehicle_exposure_score": 14.3556,
+      "temporal_trend_score": 67.0202
+    },
+    "explanation": {
+      "priority_level": "LOW",
+      "priority_score": 18.7,
+      "top_contributors": [
+        {
+          "factor": "Rising Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "67/100",
+          "impact": "MEDIUM",
+          "detail": "Slight upward trend in congestion over past 4 weeks",
+          "weight": 40.2121
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "12/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 12.1734
+        }
+      ],
+      "total_factors": 2,
+      "assessment": "This zone is currently within acceptable safety parameters. Routine monitoring is sufficient."
+    }
+  },
+  "telemetry": {
+    "congestion": 12.84,
+    "congestion_delta": 5.7,
+    "average_speed_kmh": 59.54,
+    "speed_delta": -4.86,
+    "vehicle_density": 13.36,
+    "density_delta": 0.1,
+    "population_density": 1845,
+    "red_light_violations": 6,
+    "weather": "Normal",
+    "special_event": 1
+  },
+  "signal_optimization": {
+    "base_green_seconds": 50,
+    "recommended_green_seconds": 51,
+    "change_seconds": 1,
+    "change_percent": 2.0,
+    "urgency": "NOMINAL",
+    "reason": "Current default timing is adequate",
+    "factors": {
+      "congestion_factor": 1.1,
+      "density_factor": 1.05,
+      "speed_factor": 0.78,
+      "event_boost": 1.15,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 18917.7,
+    "total_co2_tonnes_per_year": 983.72,
+    "idle_co2_kg": 946.9,
+    "moving_co2_kg": 17970.8,
+    "potential_savings_kg_per_week": 201.5,
+    "potential_savings_tonnes_per_year": 10.48,
+    "trees_equivalent_per_year": 499,
+    "fuel_saved_liters_per_week": 87.2,
+    "citizens_impacted": 3690,
+    "optimization_factor_pct": 21.3
+  },
+  "interventions": [
+    {
+      "id": "EVENT_TRAFFIC_PLAN",
+      "name": "Special Event Traffic Plan",
+      "icon": "\ud83c\udfaa",
+      "severity": "MEDIUM",
+      "description": "Active special event generating additional traffic demand.",
+      "action": "Activate event traffic management plan. Deploy traffic marshals and temporary signage."
+    },
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "Aliganj is within safe operating parameters (12% risk). Continue routine monitoring. Optimizing signals could save 202 kg CO2/week, equivalent to 499 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_28",
     "week": 38,
     "zone_type": "Highway_Junction",
@@ -51,6 +156,15 @@
     "location_name": "Aliganj",
     "city": "Lucknow",
     "latitude": 26.886,
-    "longitude": 80.9462
+    "longitude": 80.9462,
+    "predicted_risk_probability": 0.1217,
+    "risk_score": 12.1734,
+    "population_exposure_score": 3.4773,
+    "vehicle_exposure_score": 14.3556,
+    "temporal_trend_score": 67.0202,
+    "priority_score": 18.6628,
+    "priority_rank": 48,
+    "priority_level": "LOW",
+    "risk_prob": 0.1217
   }
 }

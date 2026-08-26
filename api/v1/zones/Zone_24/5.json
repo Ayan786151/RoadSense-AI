@@ -1,8 +1,121 @@
 {
   "zone_id": "Zone_24",
+  "location_name": "Nehru Place",
+  "city": "Delhi",
+  "zone_type": "Commercial_Downtown",
   "week": 5,
-  "predicted_risk_probability": 0.21216274138868219,
-  "metrics": {
+  "latitude": 28.5491,
+  "longitude": 77.2519,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.2122,
+    "predicted_risk_percentage": 21.22,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": null,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 45.1082,
+    "priority_rank": 19,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 21.2163,
+      "population_exposure_score": 52.2523,
+      "vehicle_exposure_score": 63.8867,
+      "temporal_trend_score": 71.8748
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 45.1,
+      "top_contributors": [
+        {
+          "factor": "Worsening Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "72/100",
+          "impact": "HIGH",
+          "detail": "4-week congestion trend is actively worsening \u2014 conditions deteriorating",
+          "weight": 71.8748
+        },
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "64/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 63.8867
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "52/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 36.5766
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "21/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 21.2163
+        }
+      ],
+      "total_factors": 4,
+      "assessment": "This zone has moderate risk levels with contributing factors: Worsening Trend, Vehicle Density. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 20.95,
+    "congestion_delta": -2.41,
+    "average_speed_kmh": 58.22,
+    "speed_delta": 7.22,
+    "vehicle_density": 41.06,
+    "density_delta": 3.25,
+    "population_density": 8634,
+    "red_light_violations": 3,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 40,
+    "recommended_green_seconds": 42,
+    "change_seconds": 2,
+    "change_percent": 5.0,
+    "urgency": "NOMINAL",
+    "reason": "Current default timing is adequate",
+    "factors": {
+      "congestion_factor": 1.17,
+      "density_factor": 1.16,
+      "speed_factor": 0.78,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 53729.4,
+    "total_co2_tonnes_per_year": 2793.93,
+    "idle_co2_kg": 4748.3,
+    "moving_co2_kg": 48981.0,
+    "potential_savings_kg_per_week": 1049.1,
+    "potential_savings_tonnes_per_year": 54.56,
+    "trees_equivalent_per_year": 2597,
+    "fuel_saved_liters_per_week": 454.2,
+    "citizens_impacted": 17268,
+    "optimization_factor_pct": 22.1
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "Nehru Place is within safe operating parameters (21% risk). Continue routine monitoring. Optimizing signals could save 1049 kg CO2/week, equivalent to 2597 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_24",
     "week": 5,
     "zone_type": "Commercial_Downtown",
@@ -51,6 +164,15 @@
     "location_name": "Nehru Place",
     "city": "Delhi",
     "latitude": 28.5491,
-    "longitude": 77.2519
+    "longitude": 77.2519,
+    "predicted_risk_probability": 0.2122,
+    "risk_score": 21.2163,
+    "population_exposure_score": 52.2523,
+    "vehicle_exposure_score": 63.8867,
+    "temporal_trend_score": 71.8748,
+    "priority_score": 45.1082,
+    "priority_rank": 19,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.2122
   }
 }

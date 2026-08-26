@@ -1,8 +1,129 @@
 {
   "zone_id": "Zone_43",
+  "location_name": "Tambaram",
+  "city": "Chennai",
+  "zone_type": "Commercial_Downtown",
   "week": 18,
-  "predicted_risk_probability": 0.23497930406394307,
-  "metrics": {
+  "latitude": 12.9249,
+  "longitude": 80.1,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.235,
+    "predicted_risk_percentage": 23.5,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": 11.0812,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 31.1039,
+    "priority_rank": 32,
+    "priority_level": "LOW",
+    "components": {
+      "risk_score": 23.4979,
+      "population_exposure_score": 18.8735,
+      "vehicle_exposure_score": 39.5361,
+      "temporal_trend_score": 60.5274
+    },
+    "explanation": {
+      "priority_level": "LOW",
+      "priority_score": 31.1,
+      "top_contributors": [
+        {
+          "factor": "Violation Count",
+          "icon": "\ud83d\udea8",
+          "value": "13",
+          "impact": "HIGH",
+          "detail": "13 red-light violations recorded \u2014 intersection safety concern",
+          "weight": 65
+        },
+        {
+          "factor": "Rising Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "61/100",
+          "impact": "MEDIUM",
+          "detail": "Slight upward trend in congestion over past 4 weeks",
+          "weight": 36.3164
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "23/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 23.4979
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone is currently within acceptable safety parameters. Routine monitoring is sufficient."
+    }
+  },
+  "telemetry": {
+    "congestion": 18.45,
+    "congestion_delta": 5.52,
+    "average_speed_kmh": 62.7,
+    "speed_delta": -1.84,
+    "vehicle_density": 29.15,
+    "density_delta": 6.12,
+    "population_density": 3988,
+    "red_light_violations": 13,
+    "weather": "Normal",
+    "special_event": 1
+  },
+  "signal_optimization": {
+    "base_green_seconds": 40,
+    "recommended_green_seconds": 45,
+    "change_seconds": 5,
+    "change_percent": 12.5,
+    "urgency": "MODERATE",
+    "reason": "Slight adjustment for current conditions",
+    "factors": {
+      "congestion_factor": 1.15,
+      "density_factor": 1.12,
+      "speed_factor": 0.76,
+      "event_boost": 1.15,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 41602.3,
+    "total_co2_tonnes_per_year": 2163.32,
+    "idle_co2_kg": 2968.8,
+    "moving_co2_kg": 38633.6,
+    "potential_savings_kg_per_week": 648.5,
+    "potential_savings_tonnes_per_year": 33.72,
+    "trees_equivalent_per_year": 1605,
+    "fuel_saved_liters_per_week": 280.7,
+    "citizens_impacted": 7976,
+    "optimization_factor_pct": 21.8
+  },
+  "interventions": [
+    {
+      "id": "VIOLATION_ENFORCEMENT",
+      "name": "Red-Light Violation Enforcement",
+      "icon": "\ud83d\udea8",
+      "severity": "HIGH",
+      "description": "Elevated red-light violation count indicates intersection compliance failure.",
+      "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
+    },
+    {
+      "id": "EVENT_TRAFFIC_PLAN",
+      "name": "Special Event Traffic Plan",
+      "icon": "\ud83c\udfaa",
+      "severity": "MEDIUM",
+      "description": "Active special event generating additional traffic demand.",
+      "action": "Activate event traffic management plan. Deploy traffic marshals and temporary signage."
+    },
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "Tambaram is within safe operating parameters (23% risk). Enforcement focus needed \u2014 13 red-light violations recorded. Optimizing signals could save 648 kg CO2/week, equivalent to 1605 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_43",
     "week": 18,
     "zone_type": "Commercial_Downtown",
@@ -51,6 +172,15 @@
     "location_name": "Tambaram",
     "city": "Chennai",
     "latitude": 12.9249,
-    "longitude": 80.1
+    "longitude": 80.1,
+    "predicted_risk_probability": 0.235,
+    "risk_score": 23.4979,
+    "population_exposure_score": 18.8735,
+    "vehicle_exposure_score": 39.5361,
+    "temporal_trend_score": 60.5274,
+    "priority_score": 31.1039,
+    "priority_rank": 32,
+    "priority_level": "LOW",
+    "risk_prob": 0.235
   }
 }

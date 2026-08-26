@@ -1,8 +1,121 @@
 {
   "zone_id": "Zone_22",
+  "location_name": "Pitampura",
+  "city": "Delhi",
+  "zone_type": "University_District",
   "week": 39,
-  "predicted_risk_probability": 0.34968055653066393,
-  "metrics": {
+  "latitude": 28.7033,
+  "longitude": 77.1322,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.3497,
+    "predicted_risk_percentage": 34.97,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": 10.2591,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 46.8288,
+    "priority_rank": 19,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 34.9681,
+      "population_exposure_score": 44.6081,
+      "vehicle_exposure_score": 64.373,
+      "temporal_trend_score": 58.7667
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 46.8,
+      "top_contributors": [
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "64/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 64.373
+        },
+        {
+          "factor": "Rising Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "59/100",
+          "impact": "MEDIUM",
+          "detail": "Slight upward trend in congestion over past 4 weeks",
+          "weight": 35.26
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "35/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 34.9681
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "45/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 31.2257
+        }
+      ],
+      "total_factors": 4,
+      "assessment": "This zone has moderate risk levels with contributing factors: Vehicle Density, Rising Trend. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 30.22,
+    "congestion_delta": 0.53,
+    "average_speed_kmh": 58.52,
+    "speed_delta": 0.12,
+    "vehicle_density": 46.18,
+    "density_delta": 2.95,
+    "population_density": 7570,
+    "red_light_violations": 9,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 40,
+    "change_seconds": 5,
+    "change_percent": 14.3,
+    "urgency": "MODERATE",
+    "reason": "Slight adjustment for current conditions",
+    "factors": {
+      "congestion_factor": 1.24,
+      "density_factor": 1.18,
+      "speed_factor": 0.78,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 56582.7,
+    "total_co2_tonnes_per_year": 2942.3,
+    "idle_co2_kg": 7703.5,
+    "moving_co2_kg": 48879.2,
+    "potential_savings_kg_per_week": 1773.5,
+    "potential_savings_tonnes_per_year": 92.22,
+    "trees_equivalent_per_year": 4391,
+    "fuel_saved_liters_per_week": 767.7,
+    "citizens_impacted": 15140,
+    "optimization_factor_pct": 23.0
+  },
+  "interventions": [
+    {
+      "id": "VIOLATION_ENFORCEMENT",
+      "name": "Red-Light Violation Enforcement",
+      "icon": "\ud83d\udea8",
+      "severity": "HIGH",
+      "description": "Elevated red-light violation count indicates intersection compliance failure.",
+      "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
+    }
+  ],
+  "executive_briefing": "Pitampura is within safe operating parameters (35% risk). Enforcement focus needed \u2014 9 red-light violations recorded. Optimizing signals could save 1774 kg CO2/week, equivalent to 4391 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_22",
     "week": 39,
     "zone_type": "University_District",
@@ -51,6 +164,15 @@
     "location_name": "Pitampura",
     "city": "Delhi",
     "latitude": 28.7033,
-    "longitude": 77.1322
+    "longitude": 77.1322,
+    "predicted_risk_probability": 0.3497,
+    "risk_score": 34.9681,
+    "population_exposure_score": 44.6081,
+    "vehicle_exposure_score": 64.373,
+    "temporal_trend_score": 58.7667,
+    "priority_score": 46.8288,
+    "priority_rank": 19,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.3497
   }
 }

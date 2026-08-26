@@ -1,8 +1,153 @@
 {
   "zone_id": "Zone_42",
+  "location_name": "Guindy",
+  "city": "Chennai",
+  "zone_type": "University_District",
   "week": 35,
-  "predicted_risk_probability": 0.8442831294608252,
-  "metrics": {
+  "latitude": 13.0067,
+  "longitude": 80.2206,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.8443,
+    "predicted_risk_percentage": 84.43,
+    "risk_label": "CRITICAL RISK",
+    "risk_color": "#ef4444",
+    "risk_delta_vs_prev_week": 20.3989,
+    "actual_incident": 1
+  },
+  "priority": {
+    "priority_score": 64.352,
+    "priority_rank": 11,
+    "priority_level": "HIGH",
+    "components": {
+      "risk_score": 84.4283,
+      "population_exposure_score": 43.164,
+      "vehicle_exposure_score": 67.3869,
+      "temporal_trend_score": 42.0821
+    },
+    "explanation": {
+      "priority_level": "HIGH",
+      "priority_score": 64.4,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udd34",
+          "value": "84/100",
+          "impact": "HIGH",
+          "detail": "Model-estimated risk score is in the critical range",
+          "weight": 84.4283
+        },
+        {
+          "factor": "Violation Count",
+          "icon": "\ud83d\udea8",
+          "value": "16",
+          "impact": "HIGH",
+          "detail": "16 red-light violations recorded \u2014 intersection safety concern",
+          "weight": 80
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "74/100",
+          "impact": "HIGH",
+          "detail": "Congestion index at 74 \u2014 severe traffic flow degradation",
+          "weight": 74.33
+        },
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "67/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 67.3869
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "43/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 30.2148
+        }
+      ],
+      "total_factors": 5,
+      "assessment": "This zone shows significant risk elevation driven by Risk Score, Violation Count. Proactive intervention should be scheduled within the current planning cycle."
+    }
+  },
+  "telemetry": {
+    "congestion": 74.33,
+    "congestion_delta": 25.29,
+    "average_speed_kmh": 30.09,
+    "speed_delta": -15.66,
+    "vehicle_density": 46.28,
+    "density_delta": 10.63,
+    "population_density": 7369,
+    "red_light_violations": 16,
+    "weather": "Light Rain",
+    "special_event": 1
+  },
+  "signal_optimization": {
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 72,
+    "change_seconds": 37,
+    "change_percent": 105.7,
+    "urgency": "CRITICAL",
+    "reason": "Severe congestion requires significantly extended green phase",
+    "factors": {
+      "congestion_factor": 1.59,
+      "density_factor": 1.19,
+      "speed_factor": 0.89,
+      "event_boost": 1.15,
+      "weather_boost": 1.08
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 29283.9,
+    "total_co2_tonnes_per_year": 1522.76,
+    "idle_co2_kg": 18988.8,
+    "moving_co2_kg": 10295.2,
+    "potential_savings_kg_per_week": 5209.2,
+    "potential_savings_tonnes_per_year": 270.88,
+    "trees_equivalent_per_year": 12898,
+    "fuel_saved_liters_per_week": 2255.1,
+    "citizens_impacted": 14738,
+    "optimization_factor_pct": 27.4
+  },
+  "interventions": [
+    {
+      "id": "SIGNAL_OPTIMIZATION",
+      "name": "Traffic Signal Optimization",
+      "icon": "\ud83d\udea6",
+      "severity": "HIGH",
+      "description": "High congestion with low throughput speed indicates signal timing inefficiency.",
+      "action": "Review and optimize signal timing at major intersections in this zone."
+    },
+    {
+      "id": "VIOLATION_ENFORCEMENT",
+      "name": "Red-Light Violation Enforcement",
+      "icon": "\ud83d\udea8",
+      "severity": "HIGH",
+      "description": "Elevated red-light violation count indicates intersection compliance failure.",
+      "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
+    },
+    {
+      "id": "ROAD_MAINTENANCE",
+      "name": "Road Maintenance Inspection",
+      "icon": "\ud83d\udee3\ufe0f",
+      "severity": "MEDIUM",
+      "description": "Deteriorated road surface combined with elevated risk indicates infrastructure maintenance need.",
+      "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
+    },
+    {
+      "id": "EVENT_TRAFFIC_PLAN",
+      "name": "Special Event Traffic Plan",
+      "icon": "\ud83c\udfaa",
+      "severity": "MEDIUM",
+      "description": "Active special event generating additional traffic demand.",
+      "action": "Activate event traffic management plan. Deploy traffic marshals and temporary signage."
+    }
+  ],
+  "executive_briefing": "Guindy is in a critical safety state with 84% incident risk. Signal optimization recommended \u2014 congestion at 74/100 with speeds averaging 30 km/h. Optimizing signals could save 5209 kg CO2/week, equivalent to 12898 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_42",
     "week": 35,
     "zone_type": "University_District",
@@ -51,6 +196,15 @@
     "location_name": "Guindy",
     "city": "Chennai",
     "latitude": 13.0067,
-    "longitude": 80.2206
+    "longitude": 80.2206,
+    "predicted_risk_probability": 0.8443,
+    "risk_score": 84.4283,
+    "population_exposure_score": 43.164,
+    "vehicle_exposure_score": 67.3869,
+    "temporal_trend_score": 42.0821,
+    "priority_score": 64.352,
+    "priority_rank": 11,
+    "priority_level": "HIGH",
+    "risk_prob": 0.8443
   }
 }

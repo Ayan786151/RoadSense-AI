@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_14",
+  "location_name": "Connaught Place",
+  "city": "Delhi",
+  "zone_type": "University_District",
   "week": 7,
-  "predicted_risk_probability": 0.35249813882686215,
-  "metrics": {
+  "latitude": 28.6315,
+  "longitude": 77.2167,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.3525,
+    "predicted_risk_percentage": 35.25,
+    "risk_label": "MODERATE RISK",
+    "risk_color": "#eab308",
+    "risk_delta_vs_prev_week": 10.7291,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 55.9791,
+    "priority_rank": 9,
+    "priority_level": "HIGH",
+    "components": {
+      "risk_score": 35.2498,
+      "population_exposure_score": 66.0249,
+      "vehicle_exposure_score": 88.7018,
+      "temporal_trend_score": 50.8843
+    },
+    "explanation": {
+      "priority_level": "HIGH",
+      "priority_score": 56.0,
+      "top_contributors": [
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "89/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 88.7018
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "66/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 10551 residents/km\u00b2",
+          "weight": 66.0249
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "35/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 35.2498
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone shows significant risk elevation driven by Vehicle Density, Population Exposure. Proactive intervention should be scheduled within the current planning cycle."
+    }
+  },
+  "telemetry": {
+    "congestion": 25.32,
+    "congestion_delta": 4.94,
+    "average_speed_kmh": 56.95,
+    "speed_delta": -7.04,
+    "vehicle_density": 54.25,
+    "density_delta": 4.39,
+    "population_density": 10551,
+    "red_light_violations": 0,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 40,
+    "change_seconds": 5,
+    "change_percent": 14.3,
+    "urgency": "MODERATE",
+    "reason": "Slight adjustment for current conditions",
+    "factors": {
+      "congestion_factor": 1.2,
+      "density_factor": 1.22,
+      "speed_factor": 0.79,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 67386.7,
+    "total_co2_tonnes_per_year": 3504.11,
+    "idle_co2_kg": 7582.3,
+    "moving_co2_kg": 59804.4,
+    "potential_savings_kg_per_week": 1708.4,
+    "potential_savings_tonnes_per_year": 88.84,
+    "trees_equivalent_per_year": 4230,
+    "fuel_saved_liters_per_week": 739.6,
+    "citizens_impacted": 21102,
+    "optimization_factor_pct": 22.5
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "No specific risk indicators triggered.",
+      "action": "Continue routine monitoring."
+    }
+  ],
+  "executive_briefing": "Connaught Place shows elevated risk at 35%. Continue routine monitoring. Optimizing signals could save 1708 kg CO2/week, equivalent to 4230 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_14",
     "week": 7,
     "zone_type": "University_District",
@@ -51,6 +156,15 @@
     "location_name": "Connaught Place",
     "city": "Delhi",
     "latitude": 28.6315,
-    "longitude": 77.2167
+    "longitude": 77.2167,
+    "predicted_risk_probability": 0.3525,
+    "risk_score": 35.2498,
+    "population_exposure_score": 66.0249,
+    "vehicle_exposure_score": 88.7018,
+    "temporal_trend_score": 50.8843,
+    "priority_score": 55.9791,
+    "priority_rank": 9,
+    "priority_level": "HIGH",
+    "risk_prob": 0.3525
   }
 }

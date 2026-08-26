@@ -1,8 +1,97 @@
 {
   "zone_id": "Zone_43",
+  "location_name": "Tambaram",
+  "city": "Chennai",
+  "zone_type": "Commercial_Downtown",
   "week": 35,
-  "predicted_risk_probability": 0.17336193822271032,
-  "metrics": {
+  "latitude": 12.9249,
+  "longitude": 80.1,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.1734,
+    "predicted_risk_percentage": 17.34,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": 3.3683,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 19.1426,
+    "priority_rank": 44,
+    "priority_level": "LOW",
+    "components": {
+      "risk_score": 17.3362,
+      "population_exposure_score": 18.8735,
+      "vehicle_exposure_score": 14.7571,
+      "temporal_trend_score": 30.2557
+    },
+    "explanation": {
+      "priority_level": "LOW",
+      "priority_score": 19.1,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "17/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 17.3362
+        }
+      ],
+      "total_factors": 1,
+      "assessment": "This zone is currently within acceptable safety parameters. Routine monitoring is sufficient."
+    }
+  },
+  "telemetry": {
+    "congestion": 10.97,
+    "congestion_delta": 5.65,
+    "average_speed_kmh": 52.68,
+    "speed_delta": -12.24,
+    "vehicle_density": 14.86,
+    "density_delta": 0.8,
+    "population_density": 3988,
+    "red_light_violations": 3,
+    "weather": "Light Rain",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 40,
+    "recommended_green_seconds": 39,
+    "change_seconds": -1,
+    "change_percent": -2.5,
+    "urgency": "NOMINAL",
+    "reason": "Current default timing is adequate",
+    "factors": {
+      "congestion_factor": 1.09,
+      "density_factor": 1.06,
+      "speed_factor": 0.8,
+      "event_boost": 1.0,
+      "weather_boost": 1.08
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 18964.8,
+    "total_co2_tonnes_per_year": 986.17,
+    "idle_co2_kg": 899.8,
+    "moving_co2_kg": 18064.9,
+    "potential_savings_kg_per_week": 189.8,
+    "potential_savings_tonnes_per_year": 9.87,
+    "trees_equivalent_per_year": 470,
+    "fuel_saved_liters_per_week": 82.2,
+    "citizens_impacted": 7976,
+    "optimization_factor_pct": 21.1
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "Tambaram is within safe operating parameters (17% risk). Continue routine monitoring. Optimizing signals could save 190 kg CO2/week, equivalent to 470 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_43",
     "week": 35,
     "zone_type": "Commercial_Downtown",
@@ -51,6 +140,15 @@
     "location_name": "Tambaram",
     "city": "Chennai",
     "latitude": 12.9249,
-    "longitude": 80.1
+    "longitude": 80.1,
+    "predicted_risk_probability": 0.1734,
+    "risk_score": 17.3362,
+    "population_exposure_score": 18.8735,
+    "vehicle_exposure_score": 14.7571,
+    "temporal_trend_score": 30.2557,
+    "priority_score": 19.1426,
+    "priority_rank": 44,
+    "priority_level": "LOW",
+    "risk_prob": 0.1734
   }
 }

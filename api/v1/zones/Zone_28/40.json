@@ -1,8 +1,121 @@
 {
   "zone_id": "Zone_28",
+  "location_name": "Aliganj",
+  "city": "Lucknow",
+  "zone_type": "Highway_Junction",
   "week": 40,
-  "predicted_risk_probability": 0.1268591638196157,
-  "metrics": {
+  "latitude": 26.886,
+  "longitude": 80.9462,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.1269,
+    "predicted_risk_percentage": 12.69,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": -0.8445,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 19.1323,
+    "priority_rank": 46,
+    "priority_level": "LOW",
+    "components": {
+      "risk_score": 12.6859,
+      "population_exposure_score": 3.4773,
+      "vehicle_exposure_score": 24.1945,
+      "temporal_trend_score": 55.6647
+    },
+    "explanation": {
+      "priority_level": "LOW",
+      "priority_score": 19.1,
+      "top_contributors": [
+        {
+          "factor": "Rising Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "56/100",
+          "impact": "MEDIUM",
+          "detail": "Slight upward trend in congestion over past 4 weeks",
+          "weight": 33.3988
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "13/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 12.6859
+        }
+      ],
+      "total_factors": 2,
+      "assessment": "This zone is currently within acceptable safety parameters. Routine monitoring is sufficient."
+    }
+  },
+  "telemetry": {
+    "congestion": 9.22,
+    "congestion_delta": -3.05,
+    "average_speed_kmh": 65.02,
+    "speed_delta": 1.83,
+    "vehicle_density": 21.99,
+    "density_delta": 1.98,
+    "population_density": 1845,
+    "red_light_violations": 9,
+    "weather": "Normal",
+    "special_event": 1
+  },
+  "signal_optimization": {
+    "base_green_seconds": 50,
+    "recommended_green_seconds": 50,
+    "change_seconds": 0,
+    "change_percent": 0.0,
+    "urgency": "NOMINAL",
+    "reason": "Current default timing is adequate",
+    "factors": {
+      "congestion_factor": 1.07,
+      "density_factor": 1.09,
+      "speed_factor": 0.76,
+      "event_boost": 1.15,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 34762.4,
+    "total_co2_tonnes_per_year": 1807.64,
+    "idle_co2_kg": 1119.2,
+    "moving_co2_kg": 33643.2,
+    "potential_savings_kg_per_week": 234.2,
+    "potential_savings_tonnes_per_year": 12.18,
+    "trees_equivalent_per_year": 579,
+    "fuel_saved_liters_per_week": 101.4,
+    "citizens_impacted": 3690,
+    "optimization_factor_pct": 20.9
+  },
+  "interventions": [
+    {
+      "id": "VIOLATION_ENFORCEMENT",
+      "name": "Red-Light Violation Enforcement",
+      "icon": "\ud83d\udea8",
+      "severity": "HIGH",
+      "description": "Elevated red-light violation count indicates intersection compliance failure.",
+      "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
+    },
+    {
+      "id": "EVENT_TRAFFIC_PLAN",
+      "name": "Special Event Traffic Plan",
+      "icon": "\ud83c\udfaa",
+      "severity": "MEDIUM",
+      "description": "Active special event generating additional traffic demand.",
+      "action": "Activate event traffic management plan. Deploy traffic marshals and temporary signage."
+    },
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "Aliganj is within safe operating parameters (13% risk). Enforcement focus needed \u2014 9 red-light violations recorded. Optimizing signals could save 234 kg CO2/week, equivalent to 579 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_28",
     "week": 40,
     "zone_type": "Highway_Junction",
@@ -51,6 +164,15 @@
     "location_name": "Aliganj",
     "city": "Lucknow",
     "latitude": 26.886,
-    "longitude": 80.9462
+    "longitude": 80.9462,
+    "predicted_risk_probability": 0.1269,
+    "risk_score": 12.6859,
+    "population_exposure_score": 3.4773,
+    "vehicle_exposure_score": 24.1945,
+    "temporal_trend_score": 55.6647,
+    "priority_score": 19.1323,
+    "priority_rank": 46,
+    "priority_level": "LOW",
+    "risk_prob": 0.1269
   }
 }

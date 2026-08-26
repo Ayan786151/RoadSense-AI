@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_08",
+  "location_name": "Thane",
+  "city": "Mumbai",
+  "zone_type": "Highway_Junction",
   "week": 38,
-  "predicted_risk_probability": 0.370101021035024,
-  "metrics": {
+  "latitude": 19.2183,
+  "longitude": 72.9781,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.3701,
+    "predicted_risk_percentage": 37.01,
+    "risk_label": "MODERATE RISK",
+    "risk_color": "#eab308",
+    "risk_delta_vs_prev_week": 21.7973,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 33.0002,
+    "priority_rank": 35,
+    "priority_level": "LOW",
+    "components": {
+      "risk_score": 37.0101,
+      "population_exposure_score": 4.8782,
+      "vehicle_exposure_score": 24.1599,
+      "temporal_trend_score": 80.9644
+    },
+    "explanation": {
+      "priority_level": "LOW",
+      "priority_score": 33.0,
+      "top_contributors": [
+        {
+          "factor": "Worsening Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "81/100",
+          "impact": "HIGH",
+          "detail": "4-week congestion trend is actively worsening \u2014 conditions deteriorating",
+          "weight": 80.9644
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "37/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 37.0101
+        }
+      ],
+      "total_factors": 2,
+      "assessment": "This zone is currently within acceptable safety parameters. Routine monitoring is sufficient."
+    }
+  },
+  "telemetry": {
+    "congestion": 28.69,
+    "congestion_delta": 14.86,
+    "average_speed_kmh": 59.79,
+    "speed_delta": -3.27,
+    "vehicle_density": 19.37,
+    "density_delta": 7.45,
+    "population_density": 2040,
+    "red_light_violations": 8,
+    "weather": "Normal",
+    "special_event": 1
+  },
+  "signal_optimization": {
+    "base_green_seconds": 50,
+    "recommended_green_seconds": 59,
+    "change_seconds": 9,
+    "change_percent": 18.0,
+    "urgency": "MODERATE",
+    "reason": "Slight adjustment for current conditions",
+    "factors": {
+      "congestion_factor": 1.23,
+      "density_factor": 1.08,
+      "speed_factor": 0.78,
+      "event_boost": 1.15,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 24474.0,
+    "total_co2_tonnes_per_year": 1272.65,
+    "idle_co2_kg": 3067.6,
+    "moving_co2_kg": 21406.4,
+    "potential_savings_kg_per_week": 701.5,
+    "potential_savings_tonnes_per_year": 36.48,
+    "trees_equivalent_per_year": 1737,
+    "fuel_saved_liters_per_week": 303.7,
+    "citizens_impacted": 4080,
+    "optimization_factor_pct": 22.9
+  },
+  "interventions": [
+    {
+      "id": "VIOLATION_ENFORCEMENT",
+      "name": "Red-Light Violation Enforcement",
+      "icon": "\ud83d\udea8",
+      "severity": "HIGH",
+      "description": "Elevated red-light violation count indicates intersection compliance failure.",
+      "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
+    },
+    {
+      "id": "EVENT_TRAFFIC_PLAN",
+      "name": "Special Event Traffic Plan",
+      "icon": "\ud83c\udfaa",
+      "severity": "MEDIUM",
+      "description": "Active special event generating additional traffic demand.",
+      "action": "Activate event traffic management plan. Deploy traffic marshals and temporary signage."
+    }
+  ],
+  "executive_briefing": "Thane shows elevated risk at 37%. Continue routine monitoring. Optimizing signals could save 702 kg CO2/week, equivalent to 1737 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_08",
     "week": 38,
     "zone_type": "Highway_Junction",
@@ -51,6 +156,15 @@
     "location_name": "Thane",
     "city": "Mumbai",
     "latitude": 19.2183,
-    "longitude": 72.9781
+    "longitude": 72.9781,
+    "predicted_risk_probability": 0.3701,
+    "risk_score": 37.0101,
+    "population_exposure_score": 4.8782,
+    "vehicle_exposure_score": 24.1599,
+    "temporal_trend_score": 80.9644,
+    "priority_score": 33.0002,
+    "priority_rank": 35,
+    "priority_level": "LOW",
+    "risk_prob": 0.3701
   }
 }

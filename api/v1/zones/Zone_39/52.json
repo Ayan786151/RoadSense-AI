@@ -1,8 +1,121 @@
 {
   "zone_id": "Zone_39",
+  "location_name": "Anna Nagar",
+  "city": "Chennai",
+  "zone_type": "Industrial_Corridor",
   "week": 52,
-  "predicted_risk_probability": 0.7402173098882345,
-  "metrics": {
+  "latitude": 13.085,
+  "longitude": 80.2101,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.7402,
+    "predicted_risk_percentage": 74.02,
+    "risk_label": "HIGH RISK",
+    "risk_color": "#f97316",
+    "risk_delta_vs_prev_week": 19.0835,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 50.6566,
+    "priority_rank": 14,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 74.0217,
+      "population_exposure_score": 8.6572,
+      "vehicle_exposure_score": 44.3716,
+      "temporal_trend_score": 66.7286
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 50.7,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udd34",
+          "value": "74/100",
+          "impact": "HIGH",
+          "detail": "Model-estimated risk score is in the critical range",
+          "weight": 74.0217
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "64/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate congestion at 64",
+          "weight": 44.8
+        },
+        {
+          "factor": "Rising Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "67/100",
+          "impact": "MEDIUM",
+          "detail": "Slight upward trend in congestion over past 4 weeks",
+          "weight": 40.0372
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone has moderate risk levels with contributing factors: Risk Score, Congestion. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 64.0,
+    "congestion_delta": 6.54,
+    "average_speed_kmh": 34.44,
+    "speed_delta": -14.48,
+    "vehicle_density": 33.86,
+    "density_delta": -5.99,
+    "population_density": 2566,
+    "red_light_violations": 1,
+    "weather": "Light Rain",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 45,
+    "recommended_green_seconds": 72,
+    "change_seconds": 27,
+    "change_percent": 60.0,
+    "urgency": "CRITICAL",
+    "reason": "Severe congestion requires significantly extended green phase",
+    "factors": {
+      "congestion_factor": 1.51,
+      "density_factor": 1.14,
+      "speed_factor": 0.87,
+      "event_boost": 1.0,
+      "weather_boost": 1.08
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 24052.6,
+    "total_co2_tonnes_per_year": 1250.73,
+    "idle_co2_kg": 11962.1,
+    "moving_co2_kg": 12090.5,
+    "potential_savings_kg_per_week": 3158.0,
+    "potential_savings_tonnes_per_year": 164.22,
+    "trees_equivalent_per_year": 7819,
+    "fuel_saved_liters_per_week": 1367.1,
+    "citizens_impacted": 5132,
+    "optimization_factor_pct": 26.4
+  },
+  "interventions": [
+    {
+      "id": "SIGNAL_OPTIMIZATION",
+      "name": "Traffic Signal Optimization",
+      "icon": "\ud83d\udea6",
+      "severity": "HIGH",
+      "description": "High congestion with low throughput speed indicates signal timing inefficiency.",
+      "action": "Review and optimize signal timing at major intersections in this zone."
+    },
+    {
+      "id": "ROAD_MAINTENANCE",
+      "name": "Road Maintenance Inspection",
+      "icon": "\ud83d\udee3\ufe0f",
+      "severity": "MEDIUM",
+      "description": "Deteriorated road surface combined with elevated risk indicates infrastructure maintenance need.",
+      "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
+    }
+  ],
+  "executive_briefing": "Anna Nagar is in a critical safety state with 74% incident risk. Signal optimization recommended \u2014 congestion at 64/100 with speeds averaging 34 km/h. Optimizing signals could save 3158 kg CO2/week, equivalent to 7819 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_39",
     "week": 52,
     "zone_type": "Industrial_Corridor",
@@ -51,6 +164,15 @@
     "location_name": "Anna Nagar",
     "city": "Chennai",
     "latitude": 13.085,
-    "longitude": 80.2101
+    "longitude": 80.2101,
+    "predicted_risk_probability": 0.7402,
+    "risk_score": 74.0217,
+    "population_exposure_score": 8.6572,
+    "vehicle_exposure_score": 44.3716,
+    "temporal_trend_score": 66.7286,
+    "priority_score": 50.6566,
+    "priority_rank": 14,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.7402
   }
 }

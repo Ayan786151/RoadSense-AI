@@ -1,8 +1,121 @@
 {
   "zone_id": "Zone_05",
+  "location_name": "Powai",
+  "city": "Mumbai",
+  "zone_type": "Commercial_Downtown",
   "week": 22,
-  "predicted_risk_probability": 0.38476387818685215,
-  "metrics": {
+  "latitude": 19.1176,
+  "longitude": 72.906,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.3848,
+    "predicted_risk_percentage": 38.48,
+    "risk_label": "MODERATE RISK",
+    "risk_color": "#eab308",
+    "risk_delta_vs_prev_week": 10.1033,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 51.0797,
+    "priority_rank": 18,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 38.4764,
+      "population_exposure_score": 50.1616,
+      "vehicle_exposure_score": 67.6693,
+      "temporal_trend_score": 64.0993
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 51.1,
+      "top_contributors": [
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "68/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 67.6693
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "38/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 38.4764
+        },
+        {
+          "factor": "Rising Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "64/100",
+          "impact": "MEDIUM",
+          "detail": "Slight upward trend in congestion over past 4 weeks",
+          "weight": 38.4596
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "50/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 35.1132
+        }
+      ],
+      "total_factors": 4,
+      "assessment": "This zone has moderate risk levels with contributing factors: Vehicle Density, Rising Trend. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 37.36,
+    "congestion_delta": 3.96,
+    "average_speed_kmh": 56.82,
+    "speed_delta": 1.85,
+    "vehicle_density": 49.01,
+    "density_delta": 4.69,
+    "population_density": 8343,
+    "red_light_violations": 7,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 40,
+    "recommended_green_seconds": 48,
+    "change_seconds": 8,
+    "change_percent": 20.0,
+    "urgency": "MODERATE",
+    "reason": "Slight adjustment for current conditions",
+    "factors": {
+      "congestion_factor": 1.3,
+      "density_factor": 1.2,
+      "speed_factor": 0.79,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 55321.2,
+    "total_co2_tonnes_per_year": 2876.7,
+    "idle_co2_kg": 10107.2,
+    "moving_co2_kg": 45214.0,
+    "potential_savings_kg_per_week": 2399.0,
+    "potential_savings_tonnes_per_year": 124.75,
+    "trees_equivalent_per_year": 5940,
+    "fuel_saved_liters_per_week": 1038.5,
+    "citizens_impacted": 16686,
+    "optimization_factor_pct": 23.7
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "No specific risk indicators triggered.",
+      "action": "Continue routine monitoring."
+    }
+  ],
+  "executive_briefing": "Powai shows elevated risk at 38%. Continue routine monitoring. Optimizing signals could save 2399 kg CO2/week, equivalent to 5940 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_05",
     "week": 22,
     "zone_type": "Commercial_Downtown",
@@ -51,6 +164,15 @@
     "location_name": "Powai",
     "city": "Mumbai",
     "latitude": 19.1176,
-    "longitude": 72.906
+    "longitude": 72.906,
+    "predicted_risk_probability": 0.3848,
+    "risk_score": 38.4764,
+    "population_exposure_score": 50.1616,
+    "vehicle_exposure_score": 67.6693,
+    "temporal_trend_score": 64.0993,
+    "priority_score": 51.0797,
+    "priority_rank": 18,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.3848
   }
 }

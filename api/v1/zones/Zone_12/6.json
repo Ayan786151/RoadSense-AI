@@ -1,8 +1,121 @@
 {
   "zone_id": "Zone_12",
+  "location_name": "Malad",
+  "city": "Mumbai",
+  "zone_type": "Commercial_Downtown",
   "week": 6,
-  "predicted_risk_probability": 0.383219661441787,
-  "metrics": {
+  "latitude": 19.1874,
+  "longitude": 72.8484,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.3832,
+    "predicted_risk_percentage": 38.32,
+    "risk_label": "MODERATE RISK",
+    "risk_color": "#eab308",
+    "risk_delta_vs_prev_week": -1.6249,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 49.6977,
+    "priority_rank": 14,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 38.322,
+      "population_exposure_score": 52.9061,
+      "vehicle_exposure_score": 70.7787,
+      "temporal_trend_score": 46.5774
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 49.7,
+      "top_contributors": [
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "71/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 70.7787
+        },
+        {
+          "factor": "Violation Count",
+          "icon": "\ud83d\udea8",
+          "value": "11",
+          "impact": "HIGH",
+          "detail": "11 red-light violations recorded \u2014 intersection safety concern",
+          "weight": 55
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "38/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 38.322
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "53/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 37.0343
+        }
+      ],
+      "total_factors": 4,
+      "assessment": "This zone has moderate risk levels with contributing factors: Vehicle Density, Violation Count. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 39.86,
+    "congestion_delta": 4.16,
+    "average_speed_kmh": 53.48,
+    "speed_delta": -3.01,
+    "vehicle_density": 44.81,
+    "density_delta": -3.36,
+    "population_density": 8725,
+    "red_light_violations": 11,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 40,
+    "recommended_green_seconds": 49,
+    "change_seconds": 9,
+    "change_percent": 22.5,
+    "urgency": "HIGH",
+    "reason": "Elevated traffic density needs extended clearance time",
+    "factors": {
+      "congestion_factor": 1.32,
+      "density_factor": 1.18,
+      "speed_factor": 0.8,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 47215.8,
+    "total_co2_tonnes_per_year": 2455.22,
+    "idle_co2_kg": 9859.4,
+    "moving_co2_kg": 37356.4,
+    "potential_savings_kg_per_week": 2364.9,
+    "potential_savings_tonnes_per_year": 122.97,
+    "trees_equivalent_per_year": 5855,
+    "fuel_saved_liters_per_week": 1023.8,
+    "citizens_impacted": 17450,
+    "optimization_factor_pct": 24.0
+  },
+  "interventions": [
+    {
+      "id": "VIOLATION_ENFORCEMENT",
+      "name": "Red-Light Violation Enforcement",
+      "icon": "\ud83d\udea8",
+      "severity": "HIGH",
+      "description": "Elevated red-light violation count indicates intersection compliance failure.",
+      "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
+    }
+  ],
+  "executive_briefing": "Malad shows elevated risk at 38%. Enforcement focus needed \u2014 11 red-light violations recorded. Optimizing signals could save 2365 kg CO2/week, equivalent to 5855 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_12",
     "week": 6,
     "zone_type": "Commercial_Downtown",
@@ -51,6 +164,15 @@
     "location_name": "Malad",
     "city": "Mumbai",
     "latitude": 19.1874,
-    "longitude": 72.8484
+    "longitude": 72.8484,
+    "predicted_risk_probability": 0.3832,
+    "risk_score": 38.322,
+    "population_exposure_score": 52.9061,
+    "vehicle_exposure_score": 70.7787,
+    "temporal_trend_score": 46.5774,
+    "priority_score": 49.6977,
+    "priority_rank": 14,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.3832
   }
 }

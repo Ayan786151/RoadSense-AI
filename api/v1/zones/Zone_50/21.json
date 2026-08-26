@@ -1,8 +1,129 @@
 {
   "zone_id": "Zone_50",
+  "location_name": "Egmore",
+  "city": "Chennai",
+  "zone_type": "University_District",
   "week": 21,
-  "predicted_risk_probability": 0.5649511372748932,
-  "metrics": {
+  "latitude": 13.0732,
+  "longitude": 80.2609,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.565,
+    "predicted_risk_percentage": 56.5,
+    "risk_label": "HIGH RISK",
+    "risk_color": "#f97316",
+    "risk_delta_vs_prev_week": -17.4887,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 65.9735,
+    "priority_rank": 7,
+    "priority_level": "HIGH",
+    "components": {
+      "risk_score": 56.4951,
+      "population_exposure_score": 73.5038,
+      "vehicle_exposure_score": 79.3979,
+      "temporal_trend_score": 60.7996
+    },
+    "explanation": {
+      "priority_level": "HIGH",
+      "priority_score": 66.0,
+      "top_contributors": [
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "79/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 79.3979
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "74/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 11592 residents/km\u00b2",
+          "weight": 73.5038
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "56/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 56.4951
+        },
+        {
+          "factor": "Rising Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "61/100",
+          "impact": "MEDIUM",
+          "detail": "Slight upward trend in congestion over past 4 weeks",
+          "weight": 36.4798
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "50/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate congestion at 50",
+          "weight": 34.881
+        }
+      ],
+      "total_factors": 5,
+      "assessment": "This zone shows significant risk elevation driven by Vehicle Density, Population Exposure. Proactive intervention should be scheduled within the current planning cycle."
+    }
+  },
+  "telemetry": {
+    "congestion": 49.83,
+    "congestion_delta": -4.51,
+    "average_speed_kmh": 49.15,
+    "speed_delta": 1.75,
+    "vehicle_density": 59.3,
+    "density_delta": -4.22,
+    "population_density": 11592,
+    "red_light_violations": 8,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 49,
+    "change_seconds": 14,
+    "change_percent": 40.0,
+    "urgency": "HIGH",
+    "reason": "Elevated traffic density needs extended clearance time",
+    "factors": {
+      "congestion_factor": 1.4,
+      "density_factor": 1.24,
+      "speed_factor": 0.82,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 58424.0,
+    "total_co2_tonnes_per_year": 3038.05,
+    "idle_co2_kg": 16311.2,
+    "moving_co2_kg": 42112.9,
+    "potential_savings_kg_per_week": 4075.0,
+    "potential_savings_tonnes_per_year": 211.9,
+    "trees_equivalent_per_year": 10090,
+    "fuel_saved_liters_per_week": 1764.1,
+    "citizens_impacted": 23184,
+    "optimization_factor_pct": 25.0
+  },
+  "interventions": [
+    {
+      "id": "VIOLATION_ENFORCEMENT",
+      "name": "Red-Light Violation Enforcement",
+      "icon": "\ud83d\udea8",
+      "severity": "HIGH",
+      "description": "Elevated red-light violation count indicates intersection compliance failure.",
+      "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
+    }
+  ],
+  "executive_briefing": "Egmore shows elevated risk at 56%. Continue routine monitoring. Optimizing signals could save 4075 kg CO2/week, equivalent to 10090 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_50",
     "week": 21,
     "zone_type": "University_District",
@@ -51,6 +172,15 @@
     "location_name": "Egmore",
     "city": "Chennai",
     "latitude": 13.0732,
-    "longitude": 80.2609
+    "longitude": 80.2609,
+    "predicted_risk_probability": 0.565,
+    "risk_score": 56.4951,
+    "population_exposure_score": 73.5038,
+    "vehicle_exposure_score": 79.3979,
+    "temporal_trend_score": 60.7996,
+    "priority_score": 65.9735,
+    "priority_rank": 7,
+    "priority_level": "HIGH",
+    "risk_prob": 0.565
   }
 }

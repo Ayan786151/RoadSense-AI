@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_34",
+  "location_name": "Chinhat",
+  "city": "Lucknow",
+  "zone_type": "Industrial_Corridor",
   "week": 48,
-  "predicted_risk_probability": 0.5856382919027732,
-  "metrics": {
+  "latitude": 26.884,
+  "longitude": 81.05,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.5856,
+    "predicted_risk_percentage": 58.56,
+    "risk_label": "HIGH RISK",
+    "risk_color": "#f97316",
+    "risk_delta_vs_prev_week": 5.6943,
+    "actual_incident": 1
+  },
+  "priority": {
+    "priority_score": 49.7725,
+    "priority_rank": 20,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 58.5638,
+      "population_exposure_score": 14.0743,
+      "vehicle_exposure_score": 58.8258,
+      "temporal_trend_score": 73.7549
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 49.8,
+      "top_contributors": [
+        {
+          "factor": "Worsening Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "74/100",
+          "impact": "HIGH",
+          "detail": "4-week congestion trend is actively worsening \u2014 conditions deteriorating",
+          "weight": 73.7549
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "59/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 58.5638
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "53/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate congestion at 53",
+          "weight": 37.205
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone has moderate risk levels with contributing factors: Worsening Trend, Risk Score. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 53.15,
+    "congestion_delta": 6.71,
+    "average_speed_kmh": 48.61,
+    "speed_delta": -4.88,
+    "vehicle_density": 45.79,
+    "density_delta": 1.98,
+    "population_density": 3320,
+    "red_light_violations": 2,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 45,
+    "recommended_green_seconds": 62,
+    "change_seconds": 17,
+    "change_percent": 37.8,
+    "urgency": "HIGH",
+    "reason": "Elevated traffic density needs extended clearance time",
+    "factors": {
+      "congestion_factor": 1.43,
+      "density_factor": 1.18,
+      "speed_factor": 0.82,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 43467.2,
+    "total_co2_tonnes_per_year": 2260.29,
+    "idle_co2_kg": 13434.2,
+    "moving_co2_kg": 30033.0,
+    "potential_savings_kg_per_week": 3400.9,
+    "potential_savings_tonnes_per_year": 176.85,
+    "trees_equivalent_per_year": 8421,
+    "fuel_saved_liters_per_week": 1472.2,
+    "citizens_impacted": 6640,
+    "optimization_factor_pct": 25.3
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "No specific risk indicators triggered.",
+      "action": "Continue routine monitoring."
+    }
+  ],
+  "executive_briefing": "Chinhat shows elevated risk at 59%. Continue routine monitoring. Optimizing signals could save 3401 kg CO2/week, equivalent to 8421 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_34",
     "week": 48,
     "zone_type": "Industrial_Corridor",
@@ -51,6 +156,15 @@
     "location_name": "Chinhat",
     "city": "Lucknow",
     "latitude": 26.884,
-    "longitude": 81.05
+    "longitude": 81.05,
+    "predicted_risk_probability": 0.5856,
+    "risk_score": 58.5638,
+    "population_exposure_score": 14.0743,
+    "vehicle_exposure_score": 58.8258,
+    "temporal_trend_score": 73.7549,
+    "priority_score": 49.7725,
+    "priority_rank": 20,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.5856
   }
 }

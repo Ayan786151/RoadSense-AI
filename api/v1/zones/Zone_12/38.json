@@ -1,8 +1,161 @@
 {
   "zone_id": "Zone_12",
+  "location_name": "Malad",
+  "city": "Mumbai",
+  "zone_type": "Commercial_Downtown",
   "week": 38,
-  "predicted_risk_probability": 0.8385486466006379,
-  "metrics": {
+  "latitude": 19.1874,
+  "longitude": 72.8484,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.8385,
+    "predicted_risk_percentage": 83.85,
+    "risk_label": "CRITICAL RISK",
+    "risk_color": "#ef4444",
+    "risk_delta_vs_prev_week": 56.2926,
+    "actual_incident": 1
+  },
+  "priority": {
+    "priority_score": 68.1901,
+    "priority_rank": 8,
+    "priority_level": "HIGH",
+    "components": {
+      "risk_score": 83.8549,
+      "population_exposure_score": 52.9061,
+      "vehicle_exposure_score": 93.1648,
+      "temporal_trend_score": 18.5909
+    },
+    "explanation": {
+      "priority_level": "HIGH",
+      "priority_score": 68.2,
+      "top_contributors": [
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "94/100",
+          "impact": "HIGH",
+          "detail": "Congestion index at 94 \u2014 severe traffic flow degradation",
+          "weight": 93.58
+        },
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "93/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 93.1648
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udd34",
+          "value": "84/100",
+          "impact": "HIGH",
+          "detail": "Model-estimated risk score is in the critical range",
+          "weight": 83.8549
+        },
+        {
+          "factor": "Speed Anomaly",
+          "icon": "\ud83d\udc0c",
+          "value": "22 km/h",
+          "impact": "HIGH",
+          "detail": "Average speed of 22 km/h indicates near-gridlock conditions",
+          "weight": 78.0
+        },
+        {
+          "factor": "Violation Count",
+          "icon": "\ud83d\udea8",
+          "value": "14",
+          "impact": "HIGH",
+          "detail": "14 red-light violations recorded \u2014 intersection safety concern",
+          "weight": 70
+        }
+      ],
+      "total_factors": 7,
+      "assessment": "This zone shows significant risk elevation driven by Congestion, Vehicle Density. Proactive intervention should be scheduled within the current planning cycle."
+    }
+  },
+  "telemetry": {
+    "congestion": 93.58,
+    "congestion_delta": 69.63,
+    "average_speed_kmh": 22.0,
+    "speed_delta": -38.78,
+    "vehicle_density": 61.67,
+    "density_delta": 22.78,
+    "population_density": 8725,
+    "red_light_violations": 14,
+    "weather": "Light Rain",
+    "special_event": 1
+  },
+  "signal_optimization": {
+    "base_green_seconds": 40,
+    "recommended_green_seconds": 99,
+    "change_seconds": 59,
+    "change_percent": 147.5,
+    "urgency": "CRITICAL",
+    "reason": "Severe congestion requires significantly extended green phase",
+    "factors": {
+      "congestion_factor": 1.75,
+      "density_factor": 1.25,
+      "speed_factor": 0.92,
+      "event_boost": 1.15,
+      "weather_boost": 1.08
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 36371.8,
+    "total_co2_tonnes_per_year": 1891.33,
+    "idle_co2_kg": 31856.4,
+    "moving_co2_kg": 4515.4,
+    "potential_savings_kg_per_week": 9352.4,
+    "potential_savings_tonnes_per_year": 486.32,
+    "trees_equivalent_per_year": 23158,
+    "fuel_saved_liters_per_week": 4048.7,
+    "citizens_impacted": 17450,
+    "optimization_factor_pct": 29.4
+  },
+  "interventions": [
+    {
+      "id": "CONGESTION_MANAGEMENT",
+      "name": "Congestion Management & Diversion",
+      "icon": "\ud83d\ude97",
+      "severity": "CRITICAL",
+      "description": "Severe congestion with high vehicle density requires active demand management.",
+      "action": "Activate dynamic message signs for route diversion. Consider congestion pricing or access restrictions."
+    },
+    {
+      "id": "SIGNAL_OPTIMIZATION",
+      "name": "Traffic Signal Optimization",
+      "icon": "\ud83d\udea6",
+      "severity": "HIGH",
+      "description": "High congestion with low throughput speed indicates signal timing inefficiency.",
+      "action": "Review and optimize signal timing at major intersections in this zone."
+    },
+    {
+      "id": "VIOLATION_ENFORCEMENT",
+      "name": "Red-Light Violation Enforcement",
+      "icon": "\ud83d\udea8",
+      "severity": "HIGH",
+      "description": "Elevated red-light violation count indicates intersection compliance failure.",
+      "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
+    },
+    {
+      "id": "ROAD_MAINTENANCE",
+      "name": "Road Maintenance Inspection",
+      "icon": "\ud83d\udee3\ufe0f",
+      "severity": "MEDIUM",
+      "description": "Deteriorated road surface combined with elevated risk indicates infrastructure maintenance need.",
+      "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
+    },
+    {
+      "id": "EVENT_TRAFFIC_PLAN",
+      "name": "Special Event Traffic Plan",
+      "icon": "\ud83c\udfaa",
+      "severity": "MEDIUM",
+      "description": "Active special event generating additional traffic demand.",
+      "action": "Activate event traffic management plan. Deploy traffic marshals and temporary signage."
+    }
+  ],
+  "executive_briefing": "Malad is in a critical safety state with 84% incident risk. Signal optimization recommended \u2014 congestion at 94/100 with speeds averaging 22 km/h. Optimizing signals could save 9352 kg CO2/week, equivalent to 23158 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_12",
     "week": 38,
     "zone_type": "Commercial_Downtown",
@@ -51,6 +204,15 @@
     "location_name": "Malad",
     "city": "Mumbai",
     "latitude": 19.1874,
-    "longitude": 72.8484
+    "longitude": 72.8484,
+    "predicted_risk_probability": 0.8385,
+    "risk_score": 83.8549,
+    "population_exposure_score": 52.9061,
+    "vehicle_exposure_score": 93.1648,
+    "temporal_trend_score": 18.5909,
+    "priority_score": 68.1901,
+    "priority_rank": 8,
+    "priority_level": "HIGH",
+    "risk_prob": 0.8385
   }
 }

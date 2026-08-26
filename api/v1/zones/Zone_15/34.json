@@ -1,8 +1,137 @@
 {
   "zone_id": "Zone_15",
+  "location_name": "Dwarka",
+  "city": "Delhi",
+  "zone_type": "Residential",
   "week": 34,
-  "predicted_risk_probability": 0.6832741715154917,
-  "metrics": {
+  "latitude": 28.5921,
+  "longitude": 77.046,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.6833,
+    "predicted_risk_percentage": 68.33,
+    "risk_label": "HIGH RISK",
+    "risk_color": "#f97316",
+    "risk_delta_vs_prev_week": -27.5636,
+    "actual_incident": 1
+  },
+  "priority": {
+    "priority_score": 85.8347,
+    "priority_rank": 4,
+    "priority_level": "CRITICAL",
+    "components": {
+      "risk_score": 68.3274,
+      "population_exposure_score": 97.0041,
+      "vehicle_exposure_score": 96.2634,
+      "temporal_trend_score": 100.0
+    },
+    "explanation": {
+      "priority_level": "CRITICAL",
+      "priority_score": 85.8,
+      "top_contributors": [
+        {
+          "factor": "Worsening Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "100/100",
+          "impact": "HIGH",
+          "detail": "4-week congestion trend is actively worsening \u2014 conditions deteriorating",
+          "weight": 100.0
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "97/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 14863 residents/km\u00b2",
+          "weight": 97.0041
+        },
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "96/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 96.2634
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "68/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 68.3274
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "43/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate congestion at 43",
+          "weight": 30.205
+        }
+      ],
+      "total_factors": 5,
+      "assessment": "This zone requires URGENT attention. Primary risk drivers: Worsening Trend, Population Exposure, Vehicle Density. Immediate field inspection and intervention planning recommended."
+    }
+  },
+  "telemetry": {
+    "congestion": 43.15,
+    "congestion_delta": -56.85,
+    "average_speed_kmh": 51.57,
+    "speed_delta": 41.57,
+    "vehicle_density": 71.64,
+    "density_delta": 8.66,
+    "population_density": 14863,
+    "red_light_violations": 8,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 30,
+    "recommended_green_seconds": 41,
+    "change_seconds": 11,
+    "change_percent": 36.7,
+    "urgency": "HIGH",
+    "reason": "Elevated traffic density needs extended clearance time",
+    "factors": {
+      "congestion_factor": 1.35,
+      "density_factor": 1.29,
+      "speed_factor": 0.81,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 71503.8,
+    "total_co2_tonnes_per_year": 3718.2,
+    "idle_co2_kg": 17063.8,
+    "moving_co2_kg": 54440.0,
+    "potential_savings_kg_per_week": 4149.1,
+    "potential_savings_tonnes_per_year": 215.75,
+    "trees_equivalent_per_year": 10273,
+    "fuel_saved_liters_per_week": 1796.1,
+    "citizens_impacted": 29726,
+    "optimization_factor_pct": 24.3
+  },
+  "interventions": [
+    {
+      "id": "TREND_URGENT_INSPECTION",
+      "name": "Urgent Safety Inspection",
+      "icon": "\u26a0\ufe0f",
+      "severity": "CRITICAL",
+      "description": "Risk is actively worsening (high temporal trend) with already elevated risk score.",
+      "action": "Deploy immediate field inspection team. Identify root cause of deteriorating safety conditions."
+    },
+    {
+      "id": "VIOLATION_ENFORCEMENT",
+      "name": "Red-Light Violation Enforcement",
+      "icon": "\ud83d\udea8",
+      "severity": "HIGH",
+      "description": "Elevated red-light violation count indicates intersection compliance failure.",
+      "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
+    }
+  ],
+  "executive_briefing": "Dwarka is in a critical safety state with 68% incident risk. Continue routine monitoring. Optimizing signals could save 4149 kg CO2/week, equivalent to 10273 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_15",
     "week": 34,
     "zone_type": "Residential",
@@ -51,6 +180,15 @@
     "location_name": "Dwarka",
     "city": "Delhi",
     "latitude": 28.5921,
-    "longitude": 77.046
+    "longitude": 77.046,
+    "predicted_risk_probability": 0.6833,
+    "risk_score": 68.3274,
+    "population_exposure_score": 97.0041,
+    "vehicle_exposure_score": 96.2634,
+    "temporal_trend_score": 100.0,
+    "priority_score": 85.8347,
+    "priority_rank": 4,
+    "priority_level": "CRITICAL",
+    "risk_prob": 0.6833
   }
 }

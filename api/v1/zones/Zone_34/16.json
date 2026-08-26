@@ -1,8 +1,105 @@
 {
   "zone_id": "Zone_34",
+  "location_name": "Chinhat",
+  "city": "Lucknow",
+  "zone_type": "Industrial_Corridor",
   "week": 16,
-  "predicted_risk_probability": 0.14497001925102596,
-  "metrics": {
+  "latitude": 26.884,
+  "longitude": 81.05,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.145,
+    "predicted_risk_percentage": 14.5,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": -0.4586,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 15.5162,
+    "priority_rank": 40,
+    "priority_level": "LOW",
+    "components": {
+      "risk_score": 14.497,
+      "population_exposure_score": 14.0743,
+      "vehicle_exposure_score": 9.4866,
+      "temporal_trend_score": 28.6769
+    },
+    "explanation": {
+      "priority_level": "LOW",
+      "priority_score": 15.5,
+      "top_contributors": [
+        {
+          "factor": "Improving Trend",
+          "icon": "\ud83d\udcc9",
+          "value": "29/100",
+          "impact": "POSITIVE",
+          "detail": "Conditions are improving over past 4 weeks",
+          "weight": -28.6769
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "14/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 14.497
+        }
+      ],
+      "total_factors": 2,
+      "assessment": "This zone is currently within acceptable safety parameters. Routine monitoring is sufficient."
+    }
+  },
+  "telemetry": {
+    "congestion": 7.4,
+    "congestion_delta": -1.47,
+    "average_speed_kmh": 66.07,
+    "speed_delta": 2.39,
+    "vehicle_density": 11.29,
+    "density_delta": -3.07,
+    "population_density": 3320,
+    "red_light_violations": 4,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 45,
+    "recommended_green_seconds": 37,
+    "change_seconds": -8,
+    "change_percent": -17.8,
+    "urgency": "OPTIMIZE",
+    "reason": "Low traffic \u2014 reduce green time to improve cross-traffic flow",
+    "factors": {
+      "congestion_factor": 1.06,
+      "density_factor": 1.05,
+      "speed_factor": 0.75,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 18364.9,
+    "total_co2_tonnes_per_year": 954.98,
+    "idle_co2_kg": 461.2,
+    "moving_co2_kg": 17903.8,
+    "potential_savings_kg_per_week": 95.6,
+    "potential_savings_tonnes_per_year": 4.97,
+    "trees_equivalent_per_year": 236,
+    "fuel_saved_liters_per_week": 41.4,
+    "citizens_impacted": 6640,
+    "optimization_factor_pct": 20.7
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "Chinhat is within safe operating parameters (14% risk). Continue routine monitoring. Optimizing signals could save 96 kg CO2/week, equivalent to 236 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_34",
     "week": 16,
     "zone_type": "Industrial_Corridor",
@@ -51,6 +148,15 @@
     "location_name": "Chinhat",
     "city": "Lucknow",
     "latitude": 26.884,
-    "longitude": 81.05
+    "longitude": 81.05,
+    "predicted_risk_probability": 0.145,
+    "risk_score": 14.497,
+    "population_exposure_score": 14.0743,
+    "vehicle_exposure_score": 9.4866,
+    "temporal_trend_score": 28.6769,
+    "priority_score": 15.5162,
+    "priority_rank": 40,
+    "priority_level": "LOW",
+    "risk_prob": 0.145
   }
 }

@@ -1,8 +1,137 @@
 {
   "zone_id": "Zone_38",
+  "location_name": "T. Nagar",
+  "city": "Chennai",
+  "zone_type": "Commercial_Downtown",
   "week": 34,
-  "predicted_risk_probability": 0.9514890434699007,
-  "metrics": {
+  "latitude": 13.0418,
+  "longitude": 80.2341,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.9515,
+    "predicted_risk_percentage": 95.15,
+    "risk_label": "CRITICAL RISK",
+    "risk_color": "#ef4444",
+    "risk_delta_vs_prev_week": 37.5324,
+    "actual_incident": 1
+  },
+  "priority": {
+    "priority_score": 69.4406,
+    "priority_rank": 9,
+    "priority_level": "HIGH",
+    "components": {
+      "risk_score": 95.1489,
+      "population_exposure_score": 55.1333,
+      "vehicle_exposure_score": 69.8569,
+      "temporal_trend_score": 24.1753
+    },
+    "explanation": {
+      "priority_level": "HIGH",
+      "priority_score": 69.4,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udd34",
+          "value": "95/100",
+          "impact": "HIGH",
+          "detail": "Model-estimated risk score is in the critical range",
+          "weight": 95.1489
+        },
+        {
+          "factor": "Speed Anomaly",
+          "icon": "\ud83d\udc0c",
+          "value": "20 km/h",
+          "impact": "HIGH",
+          "detail": "Average speed of 20 km/h indicates near-gridlock conditions",
+          "weight": 80.32
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "75/100",
+          "impact": "HIGH",
+          "detail": "Congestion index at 75 \u2014 severe traffic flow degradation",
+          "weight": 75.22
+        },
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "70/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 69.8569
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "55/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 38.5933
+        }
+      ],
+      "total_factors": 6,
+      "assessment": "This zone shows significant risk elevation driven by Risk Score, Speed Anomaly. Proactive intervention should be scheduled within the current planning cycle."
+    }
+  },
+  "telemetry": {
+    "congestion": 75.22,
+    "congestion_delta": 38.52,
+    "average_speed_kmh": 19.68,
+    "speed_delta": -26.24,
+    "vehicle_density": 52.63,
+    "density_delta": 0.75,
+    "population_density": 9035,
+    "red_light_violations": 7,
+    "weather": "Heavy Rain",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 40,
+    "recommended_green_seconds": 84,
+    "change_seconds": 44,
+    "change_percent": 110.0,
+    "urgency": "CRITICAL",
+    "reason": "Severe congestion requires significantly extended green phase",
+    "factors": {
+      "congestion_factor": 1.6,
+      "density_factor": 1.21,
+      "speed_factor": 0.93,
+      "event_boost": 1.0,
+      "weather_boost": 1.18
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 35158.0,
+    "total_co2_tonnes_per_year": 1828.22,
+    "idle_co2_kg": 21852.7,
+    "moving_co2_kg": 13305.3,
+    "potential_savings_kg_per_week": 6014.3,
+    "potential_savings_tonnes_per_year": 312.74,
+    "trees_equivalent_per_year": 14892,
+    "fuel_saved_liters_per_week": 2603.6,
+    "citizens_impacted": 18070,
+    "optimization_factor_pct": 27.5
+  },
+  "interventions": [
+    {
+      "id": "SIGNAL_OPTIMIZATION",
+      "name": "Traffic Signal Optimization",
+      "icon": "\ud83d\udea6",
+      "severity": "HIGH",
+      "description": "High congestion with low throughput speed indicates signal timing inefficiency.",
+      "action": "Review and optimize signal timing at major intersections in this zone."
+    },
+    {
+      "id": "ROAD_MAINTENANCE",
+      "name": "Road Maintenance Inspection",
+      "icon": "\ud83d\udee3\ufe0f",
+      "severity": "MEDIUM",
+      "description": "Deteriorated road surface combined with elevated risk indicates infrastructure maintenance need.",
+      "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
+    }
+  ],
+  "executive_briefing": "T. Nagar is in a critical safety state with 95% incident risk. Signal optimization recommended \u2014 congestion at 75/100 with speeds averaging 20 km/h. Optimizing signals could save 6014 kg CO2/week, equivalent to 14892 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_38",
     "week": 34,
     "zone_type": "Commercial_Downtown",
@@ -51,6 +180,15 @@
     "location_name": "T. Nagar",
     "city": "Chennai",
     "latitude": 13.0418,
-    "longitude": 80.2341
+    "longitude": 80.2341,
+    "predicted_risk_probability": 0.9515,
+    "risk_score": 95.1489,
+    "population_exposure_score": 55.1333,
+    "vehicle_exposure_score": 69.8569,
+    "temporal_trend_score": 24.1753,
+    "priority_score": 69.4406,
+    "priority_rank": 9,
+    "priority_level": "HIGH",
+    "risk_prob": 0.9515
   }
 }

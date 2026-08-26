@@ -1,8 +1,121 @@
 {
   "zone_id": "Zone_40",
+  "location_name": "Velachery",
+  "city": "Chennai",
+  "zone_type": "University_District",
   "week": 8,
-  "predicted_risk_probability": 0.44779085759888915,
-  "metrics": {
+  "latitude": 12.9815,
+  "longitude": 80.218,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.4478,
+    "predicted_risk_percentage": 44.78,
+    "risk_label": "MODERATE RISK",
+    "risk_color": "#eab308",
+    "risk_delta_vs_prev_week": -40.9601,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 59.0284,
+    "priority_rank": 9,
+    "priority_level": "HIGH",
+    "components": {
+      "risk_score": 44.7791,
+      "population_exposure_score": 47.1945,
+      "vehicle_exposure_score": 71.5905,
+      "temporal_trend_score": 100.0
+    },
+    "explanation": {
+      "priority_level": "HIGH",
+      "priority_score": 59.0,
+      "top_contributors": [
+        {
+          "factor": "Worsening Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "100/100",
+          "impact": "HIGH",
+          "detail": "4-week congestion trend is actively worsening \u2014 conditions deteriorating",
+          "weight": 100.0
+        },
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "72/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 71.5905
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "45/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 44.7791
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "47/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 33.0361
+        }
+      ],
+      "total_factors": 4,
+      "assessment": "This zone shows significant risk elevation driven by Worsening Trend, Vehicle Density. Proactive intervention should be scheduled within the current planning cycle."
+    }
+  },
+  "telemetry": {
+    "congestion": 38.49,
+    "congestion_delta": -26.45,
+    "average_speed_kmh": 55.57,
+    "speed_delta": 22.1,
+    "vehicle_density": 40.68,
+    "density_delta": -1.74,
+    "population_density": 7930,
+    "red_light_violations": 2,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 42,
+    "change_seconds": 7,
+    "change_percent": 20.0,
+    "urgency": "MODERATE",
+    "reason": "Slight adjustment for current conditions",
+    "factors": {
+      "congestion_factor": 1.31,
+      "density_factor": 1.16,
+      "speed_factor": 0.79,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 44684.5,
+    "total_co2_tonnes_per_year": 2323.59,
+    "idle_co2_kg": 8643.1,
+    "moving_co2_kg": 36041.4,
+    "potential_savings_kg_per_week": 2061.3,
+    "potential_savings_tonnes_per_year": 107.19,
+    "trees_equivalent_per_year": 5104,
+    "fuel_saved_liters_per_week": 892.3,
+    "citizens_impacted": 15860,
+    "optimization_factor_pct": 23.8
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "No specific risk indicators triggered.",
+      "action": "Continue routine monitoring."
+    }
+  ],
+  "executive_briefing": "Velachery shows elevated risk at 45%. Continue routine monitoring. Optimizing signals could save 2061 kg CO2/week, equivalent to 5104 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_40",
     "week": 8,
     "zone_type": "University_District",
@@ -51,6 +164,15 @@
     "location_name": "Velachery",
     "city": "Chennai",
     "latitude": 12.9815,
-    "longitude": 80.218
+    "longitude": 80.218,
+    "predicted_risk_probability": 0.4478,
+    "risk_score": 44.7791,
+    "population_exposure_score": 47.1945,
+    "vehicle_exposure_score": 71.5905,
+    "temporal_trend_score": 100.0,
+    "priority_score": 59.0284,
+    "priority_rank": 9,
+    "priority_level": "HIGH",
+    "risk_prob": 0.4478
   }
 }

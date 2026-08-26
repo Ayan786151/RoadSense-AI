@@ -1,8 +1,105 @@
 {
   "zone_id": "Zone_27",
+  "location_name": "Gomti Nagar",
+  "city": "Lucknow",
+  "zone_type": "Suburban_LowDensity",
   "week": 15,
-  "predicted_risk_probability": 0.4162853353063923,
-  "metrics": {
+  "latitude": 26.8467,
+  "longitude": 81.0078,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.4163,
+    "predicted_risk_percentage": 41.63,
+    "risk_label": "MODERATE RISK",
+    "risk_color": "#eab308",
+    "risk_delta_vs_prev_week": 25.1535,
+    "actual_incident": 1
+  },
+  "priority": {
+    "priority_score": 40.7822,
+    "priority_rank": 31,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 41.6285,
+      "population_exposure_score": 21.5245,
+      "vehicle_exposure_score": 43.5783,
+      "temporal_trend_score": 66.8935
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 40.8,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "42/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 41.6285
+        },
+        {
+          "factor": "Rising Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "67/100",
+          "impact": "MEDIUM",
+          "detail": "Slight upward trend in congestion over past 4 weeks",
+          "weight": 40.1361
+        }
+      ],
+      "total_factors": 2,
+      "assessment": "This zone has moderate risk levels with contributing factors: Risk Score, Rising Trend. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 19.96,
+    "congestion_delta": 11.74,
+    "average_speed_kmh": 57.75,
+    "speed_delta": -7.85,
+    "vehicle_density": 31.35,
+    "density_delta": 20.31,
+    "population_density": 4357,
+    "red_light_violations": 3,
+    "weather": "Normal",
+    "special_event": 1
+  },
+  "signal_optimization": {
+    "base_green_seconds": 25,
+    "recommended_green_seconds": 29,
+    "change_seconds": 4,
+    "change_percent": 16.0,
+    "urgency": "MODERATE",
+    "reason": "Slight adjustment for current conditions",
+    "factors": {
+      "congestion_factor": 1.16,
+      "density_factor": 1.13,
+      "speed_factor": 0.78,
+      "event_boost": 1.15,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 41014.6,
+    "total_co2_tonnes_per_year": 2132.76,
+    "idle_co2_kg": 3454.1,
+    "moving_co2_kg": 37560.5,
+    "potential_savings_kg_per_week": 759.8,
+    "potential_savings_tonnes_per_year": 39.51,
+    "trees_equivalent_per_year": 1881,
+    "fuel_saved_liters_per_week": 328.9,
+    "citizens_impacted": 8714,
+    "optimization_factor_pct": 22.0
+  },
+  "interventions": [
+    {
+      "id": "EVENT_TRAFFIC_PLAN",
+      "name": "Special Event Traffic Plan",
+      "icon": "\ud83c\udfaa",
+      "severity": "MEDIUM",
+      "description": "Active special event generating additional traffic demand.",
+      "action": "Activate event traffic management plan. Deploy traffic marshals and temporary signage."
+    }
+  ],
+  "executive_briefing": "Gomti Nagar shows elevated risk at 42%. Continue routine monitoring. Optimizing signals could save 760 kg CO2/week, equivalent to 1881 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_27",
     "week": 15,
     "zone_type": "Suburban_LowDensity",
@@ -51,6 +148,15 @@
     "location_name": "Gomti Nagar",
     "city": "Lucknow",
     "latitude": 26.8467,
-    "longitude": 81.0078
+    "longitude": 81.0078,
+    "predicted_risk_probability": 0.4163,
+    "risk_score": 41.6285,
+    "population_exposure_score": 21.5245,
+    "vehicle_exposure_score": 43.5783,
+    "temporal_trend_score": 66.8935,
+    "priority_score": 40.7822,
+    "priority_rank": 31,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.4163
   }
 }

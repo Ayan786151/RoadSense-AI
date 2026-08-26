@@ -1,8 +1,97 @@
 {
   "zone_id": "Zone_08",
+  "location_name": "Thane",
+  "city": "Mumbai",
+  "zone_type": "Highway_Junction",
   "week": 12,
-  "predicted_risk_probability": 0.14447543266523005,
-  "metrics": {
+  "latitude": 19.2183,
+  "longitude": 72.9781,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.1445,
+    "predicted_risk_percentage": 14.45,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": -0.9556,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 15.5705,
+    "priority_rank": 50,
+    "priority_level": "LOW",
+    "components": {
+      "risk_score": 14.4475,
+      "population_exposure_score": 4.8782,
+      "vehicle_exposure_score": 17.2085,
+      "temporal_trend_score": 34.2018
+    },
+    "explanation": {
+      "priority_level": "LOW",
+      "priority_score": 15.6,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "14/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 14.4475
+        }
+      ],
+      "total_factors": 1,
+      "assessment": "This zone is currently within acceptable safety parameters. Routine monitoring is sufficient."
+    }
+  },
+  "telemetry": {
+    "congestion": 14.66,
+    "congestion_delta": 7.39,
+    "average_speed_kmh": 66.73,
+    "speed_delta": 1.49,
+    "vehicle_density": 11.01,
+    "density_delta": 1.04,
+    "population_density": 2040,
+    "red_light_violations": 4,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 50,
+    "recommended_green_seconds": 43,
+    "change_seconds": -7,
+    "change_percent": -14.0,
+    "urgency": "OPTIMIZE",
+    "reason": "Low traffic \u2014 reduce green time to improve cross-traffic flow",
+    "factors": {
+      "congestion_factor": 1.12,
+      "density_factor": 1.04,
+      "speed_factor": 0.75,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 17142.6,
+    "total_co2_tonnes_per_year": 891.41,
+    "idle_co2_kg": 891.0,
+    "moving_co2_kg": 16251.6,
+    "potential_savings_kg_per_week": 191.3,
+    "potential_savings_tonnes_per_year": 9.95,
+    "trees_equivalent_per_year": 473,
+    "fuel_saved_liters_per_week": 82.8,
+    "citizens_impacted": 4080,
+    "optimization_factor_pct": 21.5
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "Thane is within safe operating parameters (14% risk). Continue routine monitoring. Optimizing signals could save 191 kg CO2/week, equivalent to 473 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_08",
     "week": 12,
     "zone_type": "Highway_Junction",
@@ -51,6 +140,15 @@
     "location_name": "Thane",
     "city": "Mumbai",
     "latitude": 19.2183,
-    "longitude": 72.9781
+    "longitude": 72.9781,
+    "predicted_risk_probability": 0.1445,
+    "risk_score": 14.4475,
+    "population_exposure_score": 4.8782,
+    "vehicle_exposure_score": 17.2085,
+    "temporal_trend_score": 34.2018,
+    "priority_score": 15.5705,
+    "priority_rank": 50,
+    "priority_level": "LOW",
+    "risk_prob": 0.1445
   }
 }

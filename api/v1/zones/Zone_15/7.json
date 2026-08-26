@@ -1,8 +1,121 @@
 {
   "zone_id": "Zone_15",
+  "location_name": "Dwarka",
+  "city": "Delhi",
+  "zone_type": "Residential",
   "week": 7,
-  "predicted_risk_probability": 0.35623395558031357,
-  "metrics": {
+  "latitude": 28.5921,
+  "longitude": 77.046,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.3562,
+    "predicted_risk_percentage": 35.62,
+    "risk_label": "MODERATE RISK",
+    "risk_color": "#eab308",
+    "risk_delta_vs_prev_week": -40.3548,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 71.5677,
+    "priority_rank": 3,
+    "priority_level": "HIGH",
+    "components": {
+      "risk_score": 35.6234,
+      "population_exposure_score": 97.0041,
+      "vehicle_exposure_score": 97.1223,
+      "temporal_trend_score": 90.9525
+    },
+    "explanation": {
+      "priority_level": "HIGH",
+      "priority_score": 71.6,
+      "top_contributors": [
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "97/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 97.1223
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "97/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 14863 residents/km\u00b2",
+          "weight": 97.0041
+        },
+        {
+          "factor": "Worsening Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "91/100",
+          "impact": "HIGH",
+          "detail": "4-week congestion trend is actively worsening \u2014 conditions deteriorating",
+          "weight": 90.9525
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "36/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 35.6234
+        }
+      ],
+      "total_factors": 4,
+      "assessment": "This zone shows significant risk elevation driven by Vehicle Density, Population Exposure. Proactive intervention should be scheduled within the current planning cycle."
+    }
+  },
+  "telemetry": {
+    "congestion": 37.56,
+    "congestion_delta": -21.36,
+    "average_speed_kmh": 55.11,
+    "speed_delta": 16.34,
+    "vehicle_density": 59.4,
+    "density_delta": -1.9,
+    "population_density": 14863,
+    "red_light_violations": 9,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 30,
+    "recommended_green_seconds": 38,
+    "change_seconds": 8,
+    "change_percent": 26.7,
+    "urgency": "HIGH",
+    "reason": "Elevated traffic density needs extended clearance time",
+    "factors": {
+      "congestion_factor": 1.3,
+      "density_factor": 1.24,
+      "speed_factor": 0.79,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 65295.8,
+    "total_co2_tonnes_per_year": 3395.38,
+    "idle_co2_kg": 12315.5,
+    "moving_co2_kg": 52980.3,
+    "potential_savings_kg_per_week": 2925.7,
+    "potential_savings_tonnes_per_year": 152.13,
+    "trees_equivalent_per_year": 7244,
+    "fuel_saved_liters_per_week": 1266.5,
+    "citizens_impacted": 29726,
+    "optimization_factor_pct": 23.8
+  },
+  "interventions": [
+    {
+      "id": "VIOLATION_ENFORCEMENT",
+      "name": "Red-Light Violation Enforcement",
+      "icon": "\ud83d\udea8",
+      "severity": "HIGH",
+      "description": "Elevated red-light violation count indicates intersection compliance failure.",
+      "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
+    }
+  ],
+  "executive_briefing": "Dwarka shows elevated risk at 36%. Enforcement focus needed \u2014 9 red-light violations recorded. Optimizing signals could save 2926 kg CO2/week, equivalent to 7244 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_15",
     "week": 7,
     "zone_type": "Residential",
@@ -51,6 +164,15 @@
     "location_name": "Dwarka",
     "city": "Delhi",
     "latitude": 28.5921,
-    "longitude": 77.046
+    "longitude": 77.046,
+    "predicted_risk_probability": 0.3562,
+    "risk_score": 35.6234,
+    "population_exposure_score": 97.0041,
+    "vehicle_exposure_score": 97.1223,
+    "temporal_trend_score": 90.9525,
+    "priority_score": 71.5677,
+    "priority_rank": 3,
+    "priority_level": "HIGH",
+    "risk_prob": 0.3562
   }
 }

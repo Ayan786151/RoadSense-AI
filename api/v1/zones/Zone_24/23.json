@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_24",
+  "location_name": "Nehru Place",
+  "city": "Delhi",
+  "zone_type": "Commercial_Downtown",
   "week": 23,
-  "predicted_risk_probability": 0.4090077701226881,
-  "metrics": {
+  "latitude": 28.5491,
+  "longitude": 77.2519,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.409,
+    "predicted_risk_percentage": 40.9,
+    "risk_label": "MODERATE RISK",
+    "risk_color": "#eab308",
+    "risk_delta_vs_prev_week": -3.1314,
+    "actual_incident": 1
+  },
+  "priority": {
+    "priority_score": 48.8541,
+    "priority_rank": 20,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 40.9008,
+      "population_exposure_score": 52.2523,
+      "vehicle_exposure_score": 61.9476,
+      "temporal_trend_score": 46.9413
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 48.9,
+      "top_contributors": [
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "62/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 61.9476
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "41/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 40.9008
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "52/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 36.5766
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone has moderate risk levels with contributing factors: Vehicle Density, Risk Score. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 22.77,
+    "congestion_delta": -4.88,
+    "average_speed_kmh": 59.96,
+    "speed_delta": -1.41,
+    "vehicle_density": 44.72,
+    "density_delta": -2.66,
+    "population_density": 8634,
+    "red_light_violations": 5,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 40,
+    "recommended_green_seconds": 43,
+    "change_seconds": 3,
+    "change_percent": 7.5,
+    "urgency": "MODERATE",
+    "reason": "Slight adjustment for current conditions",
+    "factors": {
+      "congestion_factor": 1.18,
+      "density_factor": 1.18,
+      "speed_factor": 0.78,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 59297.4,
+    "total_co2_tonnes_per_year": 3083.47,
+    "idle_co2_kg": 5620.9,
+    "moving_co2_kg": 53676.5,
+    "potential_savings_kg_per_week": 1252.2,
+    "potential_savings_tonnes_per_year": 65.11,
+    "trees_equivalent_per_year": 3100,
+    "fuel_saved_liters_per_week": 542.1,
+    "citizens_impacted": 17268,
+    "optimization_factor_pct": 22.3
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "No specific risk indicators triggered.",
+      "action": "Continue routine monitoring."
+    }
+  ],
+  "executive_briefing": "Nehru Place shows elevated risk at 41%. Continue routine monitoring. Optimizing signals could save 1252 kg CO2/week, equivalent to 3100 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_24",
     "week": 23,
     "zone_type": "Commercial_Downtown",
@@ -51,6 +156,15 @@
     "location_name": "Nehru Place",
     "city": "Delhi",
     "latitude": 28.5491,
-    "longitude": 77.2519
+    "longitude": 77.2519,
+    "predicted_risk_probability": 0.409,
+    "risk_score": 40.9008,
+    "population_exposure_score": 52.2523,
+    "vehicle_exposure_score": 61.9476,
+    "temporal_trend_score": 46.9413,
+    "priority_score": 48.8541,
+    "priority_rank": 20,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.409
   }
 }

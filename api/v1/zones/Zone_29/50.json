@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_29",
+  "location_name": "Indira Nagar",
+  "city": "Lucknow",
+  "zone_type": "Residential",
   "week": 50,
-  "predicted_risk_probability": 0.3720932338844356,
-  "metrics": {
+  "latitude": 26.88,
+  "longitude": 81.0,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.3721,
+    "predicted_risk_percentage": 37.21,
+    "risk_label": "MODERATE RISK",
+    "risk_color": "#eab308",
+    "risk_delta_vs_prev_week": -2.5801,
+    "actual_incident": 1
+  },
+  "priority": {
+    "priority_score": 55.6773,
+    "priority_rank": 11,
+    "priority_level": "HIGH",
+    "components": {
+      "risk_score": 37.2093,
+      "population_exposure_score": 86.8525,
+      "vehicle_exposure_score": 51.9686,
+      "temporal_trend_score": 57.9116
+    },
+    "explanation": {
+      "priority_level": "HIGH",
+      "priority_score": 55.7,
+      "top_contributors": [
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "87/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 13450 residents/km\u00b2",
+          "weight": 86.8525
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "37/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 37.2093
+        },
+        {
+          "factor": "Rising Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "58/100",
+          "impact": "MEDIUM",
+          "detail": "Slight upward trend in congestion over past 4 weeks",
+          "weight": 34.747
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone shows significant risk elevation driven by Population Exposure. Proactive intervention should be scheduled within the current planning cycle."
+    }
+  },
+  "telemetry": {
+    "congestion": 27.69,
+    "congestion_delta": -1.25,
+    "average_speed_kmh": 49.32,
+    "speed_delta": 0.79,
+    "vehicle_density": 39.07,
+    "density_delta": 1.34,
+    "population_density": 13450,
+    "red_light_violations": 4,
+    "weather": "Light Rain",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 30,
+    "recommended_green_seconds": 37,
+    "change_seconds": 7,
+    "change_percent": 23.3,
+    "urgency": "HIGH",
+    "reason": "Elevated traffic density needs extended clearance time",
+    "factors": {
+      "congestion_factor": 1.22,
+      "density_factor": 1.16,
+      "speed_factor": 0.82,
+      "event_boost": 1.0,
+      "weather_boost": 1.08
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 46100.7,
+    "total_co2_tonnes_per_year": 2397.24,
+    "idle_co2_kg": 5971.8,
+    "moving_co2_kg": 40128.9,
+    "potential_savings_kg_per_week": 1359.7,
+    "potential_savings_tonnes_per_year": 70.71,
+    "trees_equivalent_per_year": 3366,
+    "fuel_saved_liters_per_week": 588.6,
+    "citizens_impacted": 26900,
+    "optimization_factor_pct": 22.8
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "No specific risk indicators triggered.",
+      "action": "Continue routine monitoring."
+    }
+  ],
+  "executive_briefing": "Indira Nagar shows elevated risk at 37%. Continue routine monitoring. Optimizing signals could save 1360 kg CO2/week, equivalent to 3366 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_29",
     "week": 50,
     "zone_type": "Residential",
@@ -51,6 +156,15 @@
     "location_name": "Indira Nagar",
     "city": "Lucknow",
     "latitude": 26.88,
-    "longitude": 81.0
+    "longitude": 81.0,
+    "predicted_risk_probability": 0.3721,
+    "risk_score": 37.2093,
+    "population_exposure_score": 86.8525,
+    "vehicle_exposure_score": 51.9686,
+    "temporal_trend_score": 57.9116,
+    "priority_score": 55.6773,
+    "priority_rank": 11,
+    "priority_level": "HIGH",
+    "risk_prob": 0.3721
   }
 }

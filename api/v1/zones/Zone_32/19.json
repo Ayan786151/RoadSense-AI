@@ -1,8 +1,129 @@
 {
   "zone_id": "Zone_32",
+  "location_name": "Mahanagar",
+  "city": "Lucknow",
+  "zone_type": "Commercial_Downtown",
   "week": 19,
-  "predicted_risk_probability": 0.22022032644205847,
-  "metrics": {
+  "latitude": 26.8755,
+  "longitude": 80.9595,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.2202,
+    "predicted_risk_percentage": 22.02,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": -41.3067,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 34.0357,
+    "priority_rank": 31,
+    "priority_level": "LOW",
+    "components": {
+      "risk_score": 22.022,
+      "population_exposure_score": 42.2947,
+      "vehicle_exposure_score": 40.7126,
+      "temporal_trend_score": 43.4045
+    },
+    "explanation": {
+      "priority_level": "LOW",
+      "priority_score": 34.0,
+      "top_contributors": [
+        {
+          "factor": "Violation Count",
+          "icon": "\ud83d\udea8",
+          "value": "11",
+          "impact": "HIGH",
+          "detail": "11 red-light violations recorded \u2014 intersection safety concern",
+          "weight": 55
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "42/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 29.6063
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "22/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 22.022
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone is currently within acceptable safety parameters. Routine monitoring is sufficient."
+    }
+  },
+  "telemetry": {
+    "congestion": 17.59,
+    "congestion_delta": -18.05,
+    "average_speed_kmh": 57.39,
+    "speed_delta": 6.94,
+    "vehicle_density": 32.68,
+    "density_delta": -2.19,
+    "population_density": 7248,
+    "red_light_violations": 11,
+    "weather": "Normal",
+    "special_event": 1
+  },
+  "signal_optimization": {
+    "base_green_seconds": 40,
+    "recommended_green_seconds": 46,
+    "change_seconds": 6,
+    "change_percent": 15.0,
+    "urgency": "MODERATE",
+    "reason": "Slight adjustment for current conditions",
+    "factors": {
+      "congestion_factor": 1.14,
+      "density_factor": 1.13,
+      "speed_factor": 0.78,
+      "event_boost": 1.15,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 43235.2,
+    "total_co2_tonnes_per_year": 2248.23,
+    "idle_co2_kg": 3173.1,
+    "moving_co2_kg": 40062.1,
+    "potential_savings_kg_per_week": 690.4,
+    "potential_savings_tonnes_per_year": 35.9,
+    "trees_equivalent_per_year": 1709,
+    "fuel_saved_liters_per_week": 298.9,
+    "citizens_impacted": 14496,
+    "optimization_factor_pct": 21.8
+  },
+  "interventions": [
+    {
+      "id": "VIOLATION_ENFORCEMENT",
+      "name": "Red-Light Violation Enforcement",
+      "icon": "\ud83d\udea8",
+      "severity": "HIGH",
+      "description": "Elevated red-light violation count indicates intersection compliance failure.",
+      "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
+    },
+    {
+      "id": "EVENT_TRAFFIC_PLAN",
+      "name": "Special Event Traffic Plan",
+      "icon": "\ud83c\udfaa",
+      "severity": "MEDIUM",
+      "description": "Active special event generating additional traffic demand.",
+      "action": "Activate event traffic management plan. Deploy traffic marshals and temporary signage."
+    },
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "Mahanagar is within safe operating parameters (22% risk). Enforcement focus needed \u2014 11 red-light violations recorded. Optimizing signals could save 690 kg CO2/week, equivalent to 1709 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_32",
     "week": 19,
     "zone_type": "Commercial_Downtown",
@@ -51,6 +172,15 @@
     "location_name": "Mahanagar",
     "city": "Lucknow",
     "latitude": 26.8755,
-    "longitude": 80.9595
+    "longitude": 80.9595,
+    "predicted_risk_probability": 0.2202,
+    "risk_score": 22.022,
+    "population_exposure_score": 42.2947,
+    "vehicle_exposure_score": 40.7126,
+    "temporal_trend_score": 43.4045,
+    "priority_score": 34.0357,
+    "priority_rank": 31,
+    "priority_level": "LOW",
+    "risk_prob": 0.2202
   }
 }

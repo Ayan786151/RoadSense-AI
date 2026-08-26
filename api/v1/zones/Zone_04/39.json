@@ -1,8 +1,121 @@
 {
   "zone_id": "Zone_04",
+  "location_name": "Dadar",
+  "city": "Mumbai",
+  "zone_type": "Highway_Junction",
   "week": 39,
-  "predicted_risk_probability": 0.6512139639817639,
-  "metrics": {
+  "latitude": 19.0178,
+  "longitude": 72.8478,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.6512,
+    "predicted_risk_percentage": 65.12,
+    "risk_label": "HIGH RISK",
+    "risk_color": "#f97316",
+    "risk_delta_vs_prev_week": 28.0075,
+    "actual_incident": 1
+  },
+  "priority": {
+    "priority_score": 44.0287,
+    "priority_rank": 25,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 65.1214,
+      "population_exposure_score": 7.5724,
+      "vehicle_exposure_score": 58.0064,
+      "temporal_trend_score": 29.9048
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 44.0,
+      "top_contributors": [
+        {
+          "factor": "Violation Count",
+          "icon": "\ud83d\udea8",
+          "value": "14",
+          "impact": "HIGH",
+          "detail": "14 red-light violations recorded \u2014 intersection safety concern",
+          "weight": 70
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "65/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 65.1214
+        },
+        {
+          "factor": "Improving Trend",
+          "icon": "\ud83d\udcc9",
+          "value": "30/100",
+          "impact": "POSITIVE",
+          "detail": "Conditions are improving over past 4 weeks",
+          "weight": -29.9048
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone has moderate risk levels with contributing factors: Violation Count, Risk Score. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 39.7,
+    "congestion_delta": 14.08,
+    "average_speed_kmh": 53.05,
+    "speed_delta": -10.33,
+    "vehicle_density": 42.22,
+    "density_delta": 10.93,
+    "population_density": 2415,
+    "red_light_violations": 14,
+    "weather": "Normal",
+    "special_event": 1
+  },
+  "signal_optimization": {
+    "base_green_seconds": 50,
+    "recommended_green_seconds": 70,
+    "change_seconds": 20,
+    "change_percent": 40.0,
+    "urgency": "HIGH",
+    "reason": "Elevated traffic density needs extended clearance time",
+    "factors": {
+      "congestion_factor": 1.32,
+      "density_factor": 1.17,
+      "speed_factor": 0.8,
+      "event_boost": 1.15,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 44259.3,
+    "total_co2_tonnes_per_year": 2301.49,
+    "idle_co2_kg": 9252.3,
+    "moving_co2_kg": 35007.1,
+    "potential_savings_kg_per_week": 2217.8,
+    "potential_savings_tonnes_per_year": 115.32,
+    "trees_equivalent_per_year": 5491,
+    "fuel_saved_liters_per_week": 960.1,
+    "citizens_impacted": 4830,
+    "optimization_factor_pct": 24.0
+  },
+  "interventions": [
+    {
+      "id": "VIOLATION_ENFORCEMENT",
+      "name": "Red-Light Violation Enforcement",
+      "icon": "\ud83d\udea8",
+      "severity": "HIGH",
+      "description": "Elevated red-light violation count indicates intersection compliance failure.",
+      "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
+    },
+    {
+      "id": "EVENT_TRAFFIC_PLAN",
+      "name": "Special Event Traffic Plan",
+      "icon": "\ud83c\udfaa",
+      "severity": "MEDIUM",
+      "description": "Active special event generating additional traffic demand.",
+      "action": "Activate event traffic management plan. Deploy traffic marshals and temporary signage."
+    }
+  ],
+  "executive_briefing": "Dadar is in a critical safety state with 65% incident risk. Enforcement focus needed \u2014 14 red-light violations recorded. Optimizing signals could save 2218 kg CO2/week, equivalent to 5491 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_04",
     "week": 39,
     "zone_type": "Highway_Junction",
@@ -51,6 +164,15 @@
     "location_name": "Dadar",
     "city": "Mumbai",
     "latitude": 19.0178,
-    "longitude": 72.8478
+    "longitude": 72.8478,
+    "predicted_risk_probability": 0.6512,
+    "risk_score": 65.1214,
+    "population_exposure_score": 7.5724,
+    "vehicle_exposure_score": 58.0064,
+    "temporal_trend_score": 29.9048,
+    "priority_score": 44.0287,
+    "priority_rank": 25,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.6512
   }
 }

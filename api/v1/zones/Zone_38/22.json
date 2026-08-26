@@ -1,8 +1,153 @@
 {
   "zone_id": "Zone_38",
+  "location_name": "T. Nagar",
+  "city": "Chennai",
+  "zone_type": "Commercial_Downtown",
   "week": 22,
-  "predicted_risk_probability": 0.9429086011952116,
-  "metrics": {
+  "latitude": 13.0418,
+  "longitude": 80.2341,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.9429,
+    "predicted_risk_percentage": 94.29,
+    "risk_label": "CRITICAL RISK",
+    "risk_color": "#ef4444",
+    "risk_delta_vs_prev_week": 40.3086,
+    "actual_incident": 1
+  },
+  "priority": {
+    "priority_score": 82.0137,
+    "priority_rank": 2,
+    "priority_level": "CRITICAL",
+    "components": {
+      "risk_score": 94.2909,
+      "population_exposure_score": 55.1333,
+      "vehicle_exposure_score": 100.0,
+      "temporal_trend_score": 70.0938
+    },
+    "explanation": {
+      "priority_level": "CRITICAL",
+      "priority_score": 82.0,
+      "top_contributors": [
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "100/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 100.0
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udd34",
+          "value": "94/100",
+          "impact": "HIGH",
+          "detail": "Model-estimated risk score is in the critical range",
+          "weight": 94.2909
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "82/100",
+          "impact": "HIGH",
+          "detail": "Congestion index at 82 \u2014 severe traffic flow degradation",
+          "weight": 81.62
+        },
+        {
+          "factor": "Worsening Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "70/100",
+          "impact": "HIGH",
+          "detail": "4-week congestion trend is actively worsening \u2014 conditions deteriorating",
+          "weight": 70.0938
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "55/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 38.5933
+        }
+      ],
+      "total_factors": 5,
+      "assessment": "This zone requires URGENT attention. Primary risk drivers: Vehicle Density, Risk Score, Congestion. Immediate field inspection and intervention planning recommended."
+    }
+  },
+  "telemetry": {
+    "congestion": 81.62,
+    "congestion_delta": 32.75,
+    "average_speed_kmh": 27.01,
+    "speed_delta": -23.0,
+    "vehicle_density": 71.69,
+    "density_delta": 3.05,
+    "population_density": 9035,
+    "red_light_violations": 9,
+    "weather": "Light Rain",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 40,
+    "recommended_green_seconds": 82,
+    "change_seconds": 42,
+    "change_percent": 105.0,
+    "urgency": "CRITICAL",
+    "reason": "Severe congestion requires significantly extended green phase",
+    "factors": {
+      "congestion_factor": 1.65,
+      "density_factor": 1.29,
+      "speed_factor": 0.9,
+      "event_boost": 1.0,
+      "weather_boost": 1.08
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 50749.3,
+    "total_co2_tonnes_per_year": 2638.96,
+    "idle_co2_kg": 32299.4,
+    "moving_co2_kg": 18449.9,
+    "potential_savings_kg_per_week": 9096.2,
+    "potential_savings_tonnes_per_year": 473.0,
+    "trees_equivalent_per_year": 22523,
+    "fuel_saved_liters_per_week": 3937.7,
+    "citizens_impacted": 18070,
+    "optimization_factor_pct": 28.2
+  },
+  "interventions": [
+    {
+      "id": "CONGESTION_MANAGEMENT",
+      "name": "Congestion Management & Diversion",
+      "icon": "\ud83d\ude97",
+      "severity": "CRITICAL",
+      "description": "Severe congestion with high vehicle density requires active demand management.",
+      "action": "Activate dynamic message signs for route diversion. Consider congestion pricing or access restrictions."
+    },
+    {
+      "id": "SIGNAL_OPTIMIZATION",
+      "name": "Traffic Signal Optimization",
+      "icon": "\ud83d\udea6",
+      "severity": "HIGH",
+      "description": "High congestion with low throughput speed indicates signal timing inefficiency.",
+      "action": "Review and optimize signal timing at major intersections in this zone."
+    },
+    {
+      "id": "VIOLATION_ENFORCEMENT",
+      "name": "Red-Light Violation Enforcement",
+      "icon": "\ud83d\udea8",
+      "severity": "HIGH",
+      "description": "Elevated red-light violation count indicates intersection compliance failure.",
+      "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
+    },
+    {
+      "id": "ROAD_MAINTENANCE",
+      "name": "Road Maintenance Inspection",
+      "icon": "\ud83d\udee3\ufe0f",
+      "severity": "MEDIUM",
+      "description": "Deteriorated road surface combined with elevated risk indicates infrastructure maintenance need.",
+      "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
+    }
+  ],
+  "executive_briefing": "T. Nagar is in a critical safety state with 94% incident risk. Signal optimization recommended \u2014 congestion at 82/100 with speeds averaging 27 km/h. Optimizing signals could save 9096 kg CO2/week, equivalent to 22523 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_38",
     "week": 22,
     "zone_type": "Commercial_Downtown",
@@ -51,6 +196,15 @@
     "location_name": "T. Nagar",
     "city": "Chennai",
     "latitude": 13.0418,
-    "longitude": 80.2341
+    "longitude": 80.2341,
+    "predicted_risk_probability": 0.9429,
+    "risk_score": 94.2909,
+    "population_exposure_score": 55.1333,
+    "vehicle_exposure_score": 100.0,
+    "temporal_trend_score": 70.0938,
+    "priority_score": 82.0137,
+    "priority_rank": 2,
+    "priority_level": "CRITICAL",
+    "risk_prob": 0.9429
   }
 }

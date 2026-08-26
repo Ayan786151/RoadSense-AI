@@ -1,8 +1,121 @@
 {
   "zone_id": "Zone_32",
+  "location_name": "Mahanagar",
+  "city": "Lucknow",
+  "zone_type": "Commercial_Downtown",
   "week": 23,
-  "predicted_risk_probability": 0.48329931224558637,
-  "metrics": {
+  "latitude": 26.8755,
+  "longitude": 80.9595,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.4833,
+    "predicted_risk_percentage": 48.33,
+    "risk_label": "MODERATE RISK",
+    "risk_color": "#eab308",
+    "risk_delta_vs_prev_week": 8.4355,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 51.3414,
+    "priority_rank": 19,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 48.3299,
+      "population_exposure_score": 42.2947,
+      "vehicle_exposure_score": 47.5274,
+      "temporal_trend_score": 79.5351
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 51.3,
+      "top_contributors": [
+        {
+          "factor": "Worsening Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "80/100",
+          "impact": "HIGH",
+          "detail": "4-week congestion trend is actively worsening \u2014 conditions deteriorating",
+          "weight": 79.5351
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "48/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 48.3299
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "42/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 29.6063
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone has moderate risk levels with contributing factors: Worsening Trend, Risk Score. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 30.58,
+    "congestion_delta": 0.35,
+    "average_speed_kmh": 46.87,
+    "speed_delta": -1.95,
+    "vehicle_density": 34.31,
+    "density_delta": -3.12,
+    "population_density": 7248,
+    "red_light_violations": 8,
+    "weather": "Light Rain",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 40,
+    "recommended_green_seconds": 50,
+    "change_seconds": 10,
+    "change_percent": 25.0,
+    "urgency": "HIGH",
+    "reason": "Elevated traffic density needs extended clearance time",
+    "factors": {
+      "congestion_factor": 1.24,
+      "density_factor": 1.14,
+      "speed_factor": 0.82,
+      "event_boost": 1.0,
+      "weather_boost": 1.08
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 37942.5,
+    "total_co2_tonnes_per_year": 1973.01,
+    "idle_co2_kg": 5791.6,
+    "moving_co2_kg": 32150.9,
+    "potential_savings_kg_per_week": 1335.4,
+    "potential_savings_tonnes_per_year": 69.44,
+    "trees_equivalent_per_year": 3306,
+    "fuel_saved_liters_per_week": 578.1,
+    "citizens_impacted": 14496,
+    "optimization_factor_pct": 23.1
+  },
+  "interventions": [
+    {
+      "id": "VIOLATION_ENFORCEMENT",
+      "name": "Red-Light Violation Enforcement",
+      "icon": "\ud83d\udea8",
+      "severity": "HIGH",
+      "description": "Elevated red-light violation count indicates intersection compliance failure.",
+      "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
+    },
+    {
+      "id": "ROAD_MAINTENANCE",
+      "name": "Road Maintenance Inspection",
+      "icon": "\ud83d\udee3\ufe0f",
+      "severity": "MEDIUM",
+      "description": "Deteriorated road surface combined with elevated risk indicates infrastructure maintenance need.",
+      "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
+    }
+  ],
+  "executive_briefing": "Mahanagar shows elevated risk at 48%. Continue routine monitoring. Optimizing signals could save 1335 kg CO2/week, equivalent to 3306 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_32",
     "week": 23,
     "zone_type": "Commercial_Downtown",
@@ -51,6 +164,15 @@
     "location_name": "Mahanagar",
     "city": "Lucknow",
     "latitude": 26.8755,
-    "longitude": 80.9595
+    "longitude": 80.9595,
+    "predicted_risk_probability": 0.4833,
+    "risk_score": 48.3299,
+    "population_exposure_score": 42.2947,
+    "vehicle_exposure_score": 47.5274,
+    "temporal_trend_score": 79.5351,
+    "priority_score": 51.3414,
+    "priority_rank": 19,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.4833
   }
 }

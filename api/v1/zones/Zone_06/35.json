@@ -1,8 +1,105 @@
 {
   "zone_id": "Zone_06",
+  "location_name": "Borivali",
+  "city": "Mumbai",
+  "zone_type": "University_District",
   "week": 35,
-  "predicted_risk_probability": 0.15971648602078242,
-  "metrics": {
+  "latitude": 19.2307,
+  "longitude": 72.8567,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.1597,
+    "predicted_risk_percentage": 15.97,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": -45.8136,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 32.6553,
+    "priority_rank": 36,
+    "priority_level": "LOW",
+    "components": {
+      "risk_score": 15.9716,
+      "population_exposure_score": 53.0642,
+      "vehicle_exposure_score": 40.9548,
+      "temporal_trend_score": 32.0641
+    },
+    "explanation": {
+      "priority_level": "LOW",
+      "priority_score": 32.7,
+      "top_contributors": [
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "53/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 37.1449
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "16/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 15.9716
+        }
+      ],
+      "total_factors": 2,
+      "assessment": "This zone is currently within acceptable safety parameters. Routine monitoring is sufficient."
+    }
+  },
+  "telemetry": {
+    "congestion": 15.03,
+    "congestion_delta": -17.37,
+    "average_speed_kmh": 65.6,
+    "speed_delta": 30.62,
+    "vehicle_density": 30.5,
+    "density_delta": 2.71,
+    "population_density": 8747,
+    "red_light_violations": 0,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 33,
+    "change_seconds": -2,
+    "change_percent": -5.7,
+    "urgency": "NOMINAL",
+    "reason": "Current default timing is adequate",
+    "factors": {
+      "congestion_factor": 1.12,
+      "density_factor": 1.12,
+      "speed_factor": 0.75,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 46596.5,
+    "total_co2_tonnes_per_year": 2423.02,
+    "idle_co2_kg": 2530.5,
+    "moving_co2_kg": 44066.1,
+    "potential_savings_kg_per_week": 544.1,
+    "potential_savings_tonnes_per_year": 28.29,
+    "trees_equivalent_per_year": 1347,
+    "fuel_saved_liters_per_week": 235.6,
+    "citizens_impacted": 17494,
+    "optimization_factor_pct": 21.5
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "Borivali is within safe operating parameters (16% risk). Continue routine monitoring. Optimizing signals could save 544 kg CO2/week, equivalent to 1347 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_06",
     "week": 35,
     "zone_type": "University_District",
@@ -51,6 +148,15 @@
     "location_name": "Borivali",
     "city": "Mumbai",
     "latitude": 19.2307,
-    "longitude": 72.8567
+    "longitude": 72.8567,
+    "predicted_risk_probability": 0.1597,
+    "risk_score": 15.9716,
+    "population_exposure_score": 53.0642,
+    "vehicle_exposure_score": 40.9548,
+    "temporal_trend_score": 32.0641,
+    "priority_score": 32.6553,
+    "priority_rank": 36,
+    "priority_level": "LOW",
+    "risk_prob": 0.1597
   }
 }

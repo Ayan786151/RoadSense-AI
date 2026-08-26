@@ -1,8 +1,137 @@
 {
   "zone_id": "Zone_17",
+  "location_name": "Saket",
+  "city": "Delhi",
+  "zone_type": "Residential",
   "week": 31,
-  "predicted_risk_probability": 0.8780524381471457,
-  "metrics": {
+  "latitude": 28.5244,
+  "longitude": 77.2066,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.8781,
+    "predicted_risk_percentage": 87.81,
+    "risk_label": "CRITICAL RISK",
+    "risk_color": "#ef4444",
+    "risk_delta_vs_prev_week": 59.4549,
+    "actual_incident": 1
+  },
+  "priority": {
+    "priority_score": 65.2195,
+    "priority_rank": 18,
+    "priority_level": "HIGH",
+    "components": {
+      "risk_score": 87.8052,
+      "population_exposure_score": 48.1572,
+      "vehicle_exposure_score": 35.9912,
+      "temporal_trend_score": 72.3989
+    },
+    "explanation": {
+      "priority_level": "HIGH",
+      "priority_score": 65.2,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udd34",
+          "value": "88/100",
+          "impact": "HIGH",
+          "detail": "Model-estimated risk score is in the critical range",
+          "weight": 87.8052
+        },
+        {
+          "factor": "Speed Anomaly",
+          "icon": "\ud83d\udc0c",
+          "value": "24 km/h",
+          "impact": "HIGH",
+          "detail": "Average speed of 24 km/h indicates near-gridlock conditions",
+          "weight": 76.36
+        },
+        {
+          "factor": "Worsening Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "72/100",
+          "impact": "HIGH",
+          "detail": "4-week congestion trend is actively worsening \u2014 conditions deteriorating",
+          "weight": 72.3989
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "65/100",
+          "impact": "HIGH",
+          "detail": "Congestion index at 65 \u2014 severe traffic flow degradation",
+          "weight": 65.22
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "48/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 33.71
+        }
+      ],
+      "total_factors": 5,
+      "assessment": "This zone shows significant risk elevation driven by Risk Score, Speed Anomaly. Proactive intervention should be scheduled within the current planning cycle."
+    }
+  },
+  "telemetry": {
+    "congestion": 65.22,
+    "congestion_delta": 35.76,
+    "average_speed_kmh": 23.64,
+    "speed_delta": -35.73,
+    "vehicle_density": 24.42,
+    "density_delta": -1.95,
+    "population_density": 8064,
+    "red_light_violations": 5,
+    "weather": "Heavy Rain",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 30,
+    "recommended_green_seconds": 53,
+    "change_seconds": 23,
+    "change_percent": 76.7,
+    "urgency": "CRITICAL",
+    "reason": "Severe congestion requires significantly extended green phase",
+    "factors": {
+      "congestion_factor": 1.52,
+      "density_factor": 1.1,
+      "speed_factor": 0.91,
+      "event_boost": 1.0,
+      "weather_boost": 1.18
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 19200.0,
+    "total_co2_tonnes_per_year": 998.4,
+    "idle_co2_kg": 8791.6,
+    "moving_co2_kg": 10408.5,
+    "potential_savings_kg_per_week": 2331.7,
+    "potential_savings_tonnes_per_year": 121.25,
+    "trees_equivalent_per_year": 5773,
+    "fuel_saved_liters_per_week": 1009.4,
+    "citizens_impacted": 16128,
+    "optimization_factor_pct": 26.5
+  },
+  "interventions": [
+    {
+      "id": "SIGNAL_OPTIMIZATION",
+      "name": "Traffic Signal Optimization",
+      "icon": "\ud83d\udea6",
+      "severity": "HIGH",
+      "description": "High congestion with low throughput speed indicates signal timing inefficiency.",
+      "action": "Review and optimize signal timing at major intersections in this zone."
+    },
+    {
+      "id": "ROAD_MAINTENANCE",
+      "name": "Road Maintenance Inspection",
+      "icon": "\ud83d\udee3\ufe0f",
+      "severity": "MEDIUM",
+      "description": "Deteriorated road surface combined with elevated risk indicates infrastructure maintenance need.",
+      "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
+    }
+  ],
+  "executive_briefing": "Saket is in a critical safety state with 88% incident risk. Signal optimization recommended \u2014 congestion at 65/100 with speeds averaging 24 km/h. Optimizing signals could save 2332 kg CO2/week, equivalent to 5773 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_17",
     "week": 31,
     "zone_type": "Residential",
@@ -51,6 +180,15 @@
     "location_name": "Saket",
     "city": "Delhi",
     "latitude": 28.5244,
-    "longitude": 77.2066
+    "longitude": 77.2066,
+    "predicted_risk_probability": 0.8781,
+    "risk_score": 87.8052,
+    "population_exposure_score": 48.1572,
+    "vehicle_exposure_score": 35.9912,
+    "temporal_trend_score": 72.3989,
+    "priority_score": 65.2195,
+    "priority_rank": 18,
+    "priority_level": "HIGH",
+    "risk_prob": 0.8781
   }
 }

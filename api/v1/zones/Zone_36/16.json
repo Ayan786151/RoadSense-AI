@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_36",
+  "location_name": "Rajajipuram",
+  "city": "Lucknow",
+  "zone_type": "Residential",
   "week": 16,
-  "predicted_risk_probability": 0.31676236581254413,
-  "metrics": {
+  "latitude": 26.833,
+  "longitude": 80.89,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.3168,
+    "predicted_risk_percentage": 31.68,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": -26.3327,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 47.1963,
+    "priority_rank": 21,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 31.6762,
+      "population_exposure_score": 81.73,
+      "vehicle_exposure_score": 59.4356,
+      "temporal_trend_score": 14.7076
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 47.2,
+      "top_contributors": [
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "82/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 12737 residents/km\u00b2",
+          "weight": 81.73
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "32/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 31.6762
+        },
+        {
+          "factor": "Improving Trend",
+          "icon": "\ud83d\udcc9",
+          "value": "15/100",
+          "impact": "POSITIVE",
+          "detail": "Conditions are improving over past 4 weeks",
+          "weight": -14.7076
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone has moderate risk levels with contributing factors: Population Exposure. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 32.15,
+    "congestion_delta": -3.95,
+    "average_speed_kmh": 56.75,
+    "speed_delta": -1.05,
+    "vehicle_density": 40.67,
+    "density_delta": -0.23,
+    "population_density": 12737,
+    "red_light_violations": 5,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 30,
+    "recommended_green_seconds": 34,
+    "change_seconds": 4,
+    "change_percent": 13.3,
+    "urgency": "MODERATE",
+    "reason": "Slight adjustment for current conditions",
+    "factors": {
+      "congestion_factor": 1.26,
+      "density_factor": 1.16,
+      "speed_factor": 0.79,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 47808.2,
+    "total_co2_tonnes_per_year": 2486.02,
+    "idle_co2_kg": 7217.6,
+    "moving_co2_kg": 40590.5,
+    "potential_savings_kg_per_week": 1675.6,
+    "potential_savings_tonnes_per_year": 87.13,
+    "trees_equivalent_per_year": 4149,
+    "fuel_saved_liters_per_week": 725.4,
+    "citizens_impacted": 25474,
+    "optimization_factor_pct": 23.2
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "No specific risk indicators triggered.",
+      "action": "Continue routine monitoring."
+    }
+  ],
+  "executive_briefing": "Rajajipuram is within safe operating parameters (32% risk). Continue routine monitoring. Optimizing signals could save 1676 kg CO2/week, equivalent to 4149 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_36",
     "week": 16,
     "zone_type": "Residential",
@@ -51,6 +156,15 @@
     "location_name": "Rajajipuram",
     "city": "Lucknow",
     "latitude": 26.833,
-    "longitude": 80.89
+    "longitude": 80.89,
+    "predicted_risk_probability": 0.3168,
+    "risk_score": 31.6762,
+    "population_exposure_score": 81.73,
+    "vehicle_exposure_score": 59.4356,
+    "temporal_trend_score": 14.7076,
+    "priority_score": 47.1963,
+    "priority_rank": 21,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.3168
   }
 }

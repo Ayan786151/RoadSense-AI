@@ -1,8 +1,121 @@
 {
   "zone_id": "Zone_32",
+  "location_name": "Mahanagar",
+  "city": "Lucknow",
+  "zone_type": "Commercial_Downtown",
   "week": 18,
-  "predicted_risk_probability": 0.6332872711725176,
-  "metrics": {
+  "latitude": 26.8755,
+  "longitude": 80.9595,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.6333,
+    "predicted_risk_percentage": 63.33,
+    "risk_label": "HIGH RISK",
+    "risk_color": "#f97316",
+    "risk_delta_vs_prev_week": 17.266,
+    "actual_incident": 1
+  },
+  "priority": {
+    "priority_score": 52.8283,
+    "priority_rank": 21,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 63.3287,
+      "population_exposure_score": 42.2947,
+      "vehicle_exposure_score": 47.2942,
+      "temporal_trend_score": 49.7621
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 52.8,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "63/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 63.3287
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "42/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 29.6063
+        }
+      ],
+      "total_factors": 2,
+      "assessment": "This zone has moderate risk levels with contributing factors: Risk Score, Population Exposure. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 35.64,
+    "congestion_delta": 9.43,
+    "average_speed_kmh": 50.45,
+    "speed_delta": -5.06,
+    "vehicle_density": 34.87,
+    "density_delta": 1.27,
+    "population_density": 7248,
+    "red_light_violations": 9,
+    "weather": "Light Rain",
+    "special_event": 1
+  },
+  "signal_optimization": {
+    "base_green_seconds": 40,
+    "recommended_green_seconds": 58,
+    "change_seconds": 18,
+    "change_percent": 45.0,
+    "urgency": "CRITICAL",
+    "reason": "Severe congestion requires significantly extended green phase",
+    "factors": {
+      "congestion_factor": 1.29,
+      "density_factor": 1.14,
+      "speed_factor": 0.81,
+      "event_boost": 1.15,
+      "weather_boost": 1.08
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 36207.1,
+    "total_co2_tonnes_per_year": 1882.77,
+    "idle_co2_kg": 6860.1,
+    "moving_co2_kg": 29347.0,
+    "potential_savings_kg_per_week": 1616.5,
+    "potential_savings_tonnes_per_year": 84.06,
+    "trees_equivalent_per_year": 4002,
+    "fuel_saved_liters_per_week": 699.8,
+    "citizens_impacted": 14496,
+    "optimization_factor_pct": 23.6
+  },
+  "interventions": [
+    {
+      "id": "VIOLATION_ENFORCEMENT",
+      "name": "Red-Light Violation Enforcement",
+      "icon": "\ud83d\udea8",
+      "severity": "HIGH",
+      "description": "Elevated red-light violation count indicates intersection compliance failure.",
+      "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
+    },
+    {
+      "id": "ROAD_MAINTENANCE",
+      "name": "Road Maintenance Inspection",
+      "icon": "\ud83d\udee3\ufe0f",
+      "severity": "MEDIUM",
+      "description": "Deteriorated road surface combined with elevated risk indicates infrastructure maintenance need.",
+      "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
+    },
+    {
+      "id": "EVENT_TRAFFIC_PLAN",
+      "name": "Special Event Traffic Plan",
+      "icon": "\ud83c\udfaa",
+      "severity": "MEDIUM",
+      "description": "Active special event generating additional traffic demand.",
+      "action": "Activate event traffic management plan. Deploy traffic marshals and temporary signage."
+    }
+  ],
+  "executive_briefing": "Mahanagar is in a critical safety state with 63% incident risk. Enforcement focus needed \u2014 9 red-light violations recorded. Optimizing signals could save 1616 kg CO2/week, equivalent to 4002 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_32",
     "week": 18,
     "zone_type": "Commercial_Downtown",
@@ -51,6 +164,15 @@
     "location_name": "Mahanagar",
     "city": "Lucknow",
     "latitude": 26.8755,
-    "longitude": 80.9595
+    "longitude": 80.9595,
+    "predicted_risk_probability": 0.6333,
+    "risk_score": 63.3287,
+    "population_exposure_score": 42.2947,
+    "vehicle_exposure_score": 47.2942,
+    "temporal_trend_score": 49.7621,
+    "priority_score": 52.8283,
+    "priority_rank": 21,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.6333
   }
 }

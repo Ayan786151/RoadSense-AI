@@ -1,8 +1,129 @@
 {
   "zone_id": "Zone_46",
+  "location_name": "Nungambakkam",
+  "city": "Chennai",
+  "zone_type": "University_District",
   "week": 19,
-  "predicted_risk_probability": 0.5485015822028958,
-  "metrics": {
+  "latitude": 13.0569,
+  "longitude": 80.2425,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.5485,
+    "predicted_risk_percentage": 54.85,
+    "risk_label": "MODERATE RISK",
+    "risk_color": "#eab308",
+    "risk_delta_vs_prev_week": -20.0974,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 58.1281,
+    "priority_rank": 11,
+    "priority_level": "HIGH",
+    "components": {
+      "risk_score": 54.8502,
+      "population_exposure_score": 48.0494,
+      "vehicle_exposure_score": 56.8083,
+      "temporal_trend_score": 85.4271
+    },
+    "explanation": {
+      "priority_level": "HIGH",
+      "priority_score": 58.1,
+      "top_contributors": [
+        {
+          "factor": "Worsening Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "85/100",
+          "impact": "HIGH",
+          "detail": "4-week congestion trend is actively worsening \u2014 conditions deteriorating",
+          "weight": 85.4271
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "55/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 54.8502
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "64/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate congestion at 64",
+          "weight": 44.793
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "48/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 33.6346
+        }
+      ],
+      "total_factors": 4,
+      "assessment": "This zone shows significant risk elevation driven by Worsening Trend. Proactive intervention should be scheduled within the current planning cycle."
+    }
+  },
+  "telemetry": {
+    "congestion": 63.99,
+    "congestion_delta": -3.42,
+    "average_speed_kmh": 46.04,
+    "speed_delta": 12.84,
+    "vehicle_density": 45.6,
+    "density_delta": 10.54,
+    "population_density": 8049,
+    "red_light_violations": 8,
+    "weather": "Normal",
+    "special_event": 1
+  },
+  "signal_optimization": {
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 59,
+    "change_seconds": 24,
+    "change_percent": 68.6,
+    "urgency": "CRITICAL",
+    "reason": "Severe congestion requires significantly extended green phase",
+    "factors": {
+      "congestion_factor": 1.51,
+      "density_factor": 1.18,
+      "speed_factor": 0.83,
+      "event_boost": 1.15,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 37879.9,
+    "total_co2_tonnes_per_year": 1969.76,
+    "idle_co2_kg": 16107.1,
+    "moving_co2_kg": 21772.9,
+    "potential_savings_kg_per_week": 4252.1,
+    "potential_savings_tonnes_per_year": 221.11,
+    "trees_equivalent_per_year": 10529,
+    "fuel_saved_liters_per_week": 1840.7,
+    "citizens_impacted": 16098,
+    "optimization_factor_pct": 26.4
+  },
+  "interventions": [
+    {
+      "id": "VIOLATION_ENFORCEMENT",
+      "name": "Red-Light Violation Enforcement",
+      "icon": "\ud83d\udea8",
+      "severity": "HIGH",
+      "description": "Elevated red-light violation count indicates intersection compliance failure.",
+      "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
+    },
+    {
+      "id": "EVENT_TRAFFIC_PLAN",
+      "name": "Special Event Traffic Plan",
+      "icon": "\ud83c\udfaa",
+      "severity": "MEDIUM",
+      "description": "Active special event generating additional traffic demand.",
+      "action": "Activate event traffic management plan. Deploy traffic marshals and temporary signage."
+    }
+  ],
+  "executive_briefing": "Nungambakkam shows elevated risk at 55%. Signal optimization recommended \u2014 congestion at 64/100 with speeds averaging 46 km/h. Optimizing signals could save 4252 kg CO2/week, equivalent to 10529 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_46",
     "week": 19,
     "zone_type": "University_District",
@@ -51,6 +172,15 @@
     "location_name": "Nungambakkam",
     "city": "Chennai",
     "latitude": 13.0569,
-    "longitude": 80.2425
+    "longitude": 80.2425,
+    "predicted_risk_probability": 0.5485,
+    "risk_score": 54.8502,
+    "population_exposure_score": 48.0494,
+    "vehicle_exposure_score": 56.8083,
+    "temporal_trend_score": 85.4271,
+    "priority_score": 58.1281,
+    "priority_rank": 11,
+    "priority_level": "HIGH",
+    "risk_prob": 0.5485
   }
 }

@@ -1,8 +1,153 @@
 {
   "zone_id": "Zone_14",
+  "location_name": "Connaught Place",
+  "city": "Delhi",
+  "zone_type": "University_District",
   "week": 32,
-  "predicted_risk_probability": 0.9575159846287774,
-  "metrics": {
+  "latitude": 28.6315,
+  "longitude": 77.2167,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.9575,
+    "predicted_risk_percentage": 95.75,
+    "risk_label": "CRITICAL RISK",
+    "risk_color": "#ef4444",
+    "risk_delta_vs_prev_week": 35.842,
+    "actual_incident": 1
+  },
+  "priority": {
+    "priority_score": 79.7355,
+    "priority_rank": 7,
+    "priority_level": "CRITICAL",
+    "components": {
+      "risk_score": 95.7516,
+      "population_exposure_score": 66.0249,
+      "vehicle_exposure_score": 87.2186,
+      "temporal_trend_score": 49.8996
+    },
+    "explanation": {
+      "priority_level": "CRITICAL",
+      "priority_score": 79.7,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udd34",
+          "value": "96/100",
+          "impact": "HIGH",
+          "detail": "Model-estimated risk score is in the critical range",
+          "weight": 95.7516
+        },
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "87/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 87.2186
+        },
+        {
+          "factor": "Speed Anomaly",
+          "icon": "\ud83d\udc0c",
+          "value": "13 km/h",
+          "impact": "HIGH",
+          "detail": "Average speed of 13 km/h indicates near-gridlock conditions",
+          "weight": 87.06
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "86/100",
+          "impact": "HIGH",
+          "detail": "Congestion index at 86 \u2014 severe traffic flow degradation",
+          "weight": 86.32
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "66/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 10551 residents/km\u00b2",
+          "weight": 66.0249
+        }
+      ],
+      "total_factors": 5,
+      "assessment": "This zone requires URGENT attention. Primary risk drivers: Risk Score, Vehicle Density, Speed Anomaly. Immediate field inspection and intervention planning recommended."
+    }
+  },
+  "telemetry": {
+    "congestion": 86.32,
+    "congestion_delta": 35.74,
+    "average_speed_kmh": 12.94,
+    "speed_delta": -26.68,
+    "vehicle_density": 58.89,
+    "density_delta": -3.13,
+    "population_density": 10551,
+    "red_light_violations": 7,
+    "weather": "Heavy Rain",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 82,
+    "change_seconds": 47,
+    "change_percent": 134.3,
+    "urgency": "CRITICAL",
+    "reason": "Severe congestion requires significantly extended green phase",
+    "factors": {
+      "congestion_factor": 1.69,
+      "density_factor": 1.24,
+      "speed_factor": 0.95,
+      "event_boost": 1.0,
+      "weather_boost": 1.18
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 35566.0,
+    "total_co2_tonnes_per_year": 1849.43,
+    "idle_co2_kg": 28060.3,
+    "moving_co2_kg": 7505.8,
+    "potential_savings_kg_per_week": 8034.2,
+    "potential_savings_tonnes_per_year": 417.78,
+    "trees_equivalent_per_year": 19894,
+    "fuel_saved_liters_per_week": 3478.0,
+    "citizens_impacted": 21102,
+    "optimization_factor_pct": 28.6
+  },
+  "interventions": [
+    {
+      "id": "SIGNAL_OPTIMIZATION",
+      "name": "Traffic Signal Optimization",
+      "icon": "\ud83d\udea6",
+      "severity": "HIGH",
+      "description": "High congestion with low throughput speed indicates signal timing inefficiency.",
+      "action": "Review and optimize signal timing at major intersections in this zone."
+    },
+    {
+      "id": "PEDESTRIAN_SAFETY",
+      "name": "Pedestrian Crossing Intervention",
+      "icon": "\ud83d\udeb6",
+      "severity": "MEDIUM",
+      "description": "High population density zone with significant traffic congestion creates pedestrian exposure risk.",
+      "action": "Install protected pedestrian crossings, improve sidewalk infrastructure, and add pedestrian countdown signals."
+    },
+    {
+      "id": "ROAD_MAINTENANCE",
+      "name": "Road Maintenance Inspection",
+      "icon": "\ud83d\udee3\ufe0f",
+      "severity": "MEDIUM",
+      "description": "Deteriorated road surface combined with elevated risk indicates infrastructure maintenance need.",
+      "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
+    },
+    {
+      "id": "MONITORING_UPGRADE",
+      "name": "Enhanced Monitoring & CCTV Coverage",
+      "icon": "\ud83d\udcf9",
+      "severity": "MEDIUM",
+      "description": "High-risk zone with significant population exposure warrants improved surveillance.",
+      "action": "Install additional CCTV cameras and integrate with traffic management center for real-time monitoring."
+    }
+  ],
+  "executive_briefing": "Connaught Place is in a critical safety state with 96% incident risk. Signal optimization recommended \u2014 congestion at 86/100 with speeds averaging 13 km/h. Optimizing signals could save 8034 kg CO2/week, equivalent to 19894 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_14",
     "week": 32,
     "zone_type": "University_District",
@@ -51,6 +196,15 @@
     "location_name": "Connaught Place",
     "city": "Delhi",
     "latitude": 28.6315,
-    "longitude": 77.2167
+    "longitude": 77.2167,
+    "predicted_risk_probability": 0.9575,
+    "risk_score": 95.7516,
+    "population_exposure_score": 66.0249,
+    "vehicle_exposure_score": 87.2186,
+    "temporal_trend_score": 49.8996,
+    "priority_score": 79.7355,
+    "priority_rank": 7,
+    "priority_level": "CRITICAL",
+    "risk_prob": 0.9575
   }
 }

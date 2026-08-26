@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_21",
+  "location_name": "Janakpuri",
+  "city": "Delhi",
+  "zone_type": "Residential",
   "week": 25,
-  "predicted_risk_probability": 0.3035861295748974,
-  "metrics": {
+  "latitude": 28.6219,
+  "longitude": 77.0878,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.3036,
+    "predicted_risk_percentage": 30.36,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": 12.3607,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 42.5186,
+    "priority_rank": 26,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 30.3586,
+      "population_exposure_score": 73.8846,
+      "vehicle_exposure_score": 59.5201,
+      "temporal_trend_score": 0.0
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 42.5,
+      "top_contributors": [
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "74/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 11645 residents/km\u00b2",
+          "weight": 73.8846
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "30/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 30.3586
+        },
+        {
+          "factor": "Improving Trend",
+          "icon": "\ud83d\udcc9",
+          "value": "0/100",
+          "impact": "POSITIVE",
+          "detail": "Conditions are improving over past 4 weeks",
+          "weight": -0.0
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone has moderate risk levels with contributing factors: Population Exposure. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 35.75,
+    "congestion_delta": 9.8,
+    "average_speed_kmh": 59.29,
+    "speed_delta": -0.46,
+    "vehicle_density": 46.18,
+    "density_delta": 4.28,
+    "population_density": 11645,
+    "red_light_violations": 5,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 30,
+    "recommended_green_seconds": 35,
+    "change_seconds": 5,
+    "change_percent": 16.7,
+    "urgency": "MODERATE",
+    "reason": "Slight adjustment for current conditions",
+    "factors": {
+      "congestion_factor": 1.29,
+      "density_factor": 1.18,
+      "speed_factor": 0.78,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 54710.9,
+    "total_co2_tonnes_per_year": 2844.97,
+    "idle_co2_kg": 9113.2,
+    "moving_co2_kg": 45597.8,
+    "potential_savings_kg_per_week": 2148.4,
+    "potential_savings_tonnes_per_year": 111.72,
+    "trees_equivalent_per_year": 5319,
+    "fuel_saved_liters_per_week": 930.1,
+    "citizens_impacted": 23290,
+    "optimization_factor_pct": 23.6
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "No specific risk indicators triggered.",
+      "action": "Continue routine monitoring."
+    }
+  ],
+  "executive_briefing": "Janakpuri is within safe operating parameters (30% risk). Continue routine monitoring. Optimizing signals could save 2148 kg CO2/week, equivalent to 5319 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_21",
     "week": 25,
     "zone_type": "Residential",
@@ -51,6 +156,15 @@
     "location_name": "Janakpuri",
     "city": "Delhi",
     "latitude": 28.6219,
-    "longitude": 77.0878
+    "longitude": 77.0878,
+    "predicted_risk_probability": 0.3036,
+    "risk_score": 30.3586,
+    "population_exposure_score": 73.8846,
+    "vehicle_exposure_score": 59.5201,
+    "temporal_trend_score": 0.0,
+    "priority_score": 42.5186,
+    "priority_rank": 26,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.3036
   }
 }

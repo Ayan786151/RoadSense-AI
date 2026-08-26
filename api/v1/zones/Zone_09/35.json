@@ -1,8 +1,105 @@
 {
   "zone_id": "Zone_09",
+  "location_name": "Vashi",
+  "city": "Mumbai",
+  "zone_type": "Suburban_LowDensity",
   "week": 35,
-  "predicted_risk_probability": 0.15737849588080774,
-  "metrics": {
+  "latitude": 19.0771,
+  "longitude": 72.9986,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.1574,
+    "predicted_risk_percentage": 15.74,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": -25.4032,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 18.059,
+    "priority_rank": 45,
+    "priority_level": "LOW",
+    "components": {
+      "risk_score": 15.7378,
+      "population_exposure_score": 13.5067,
+      "vehicle_exposure_score": 12.2781,
+      "temporal_trend_score": 39.5436
+    },
+    "explanation": {
+      "priority_level": "LOW",
+      "priority_score": 18.1,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "16/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 15.7378
+        }
+      ],
+      "total_factors": 1,
+      "assessment": "This zone is currently within acceptable safety parameters. Routine monitoring is sufficient."
+    }
+  },
+  "telemetry": {
+    "congestion": 13.48,
+    "congestion_delta": -0.37,
+    "average_speed_kmh": 55.65,
+    "speed_delta": 15.0,
+    "vehicle_density": 13.38,
+    "density_delta": 2.62,
+    "population_density": 3241,
+    "red_light_violations": 6,
+    "weather": "Light Rain",
+    "special_event": 1
+  },
+  "signal_optimization": {
+    "base_green_seconds": 25,
+    "recommended_green_seconds": 28,
+    "change_seconds": 3,
+    "change_percent": 12.0,
+    "urgency": "MODERATE",
+    "reason": "Slight adjustment for current conditions",
+    "factors": {
+      "congestion_factor": 1.11,
+      "density_factor": 1.05,
+      "speed_factor": 0.79,
+      "event_boost": 1.15,
+      "weather_boost": 1.08
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 17693.9,
+    "total_co2_tonnes_per_year": 920.08,
+    "idle_co2_kg": 995.6,
+    "moving_co2_kg": 16698.3,
+    "potential_savings_kg_per_week": 212.5,
+    "potential_savings_tonnes_per_year": 11.05,
+    "trees_equivalent_per_year": 526,
+    "fuel_saved_liters_per_week": 92.0,
+    "citizens_impacted": 6482,
+    "optimization_factor_pct": 21.3
+  },
+  "interventions": [
+    {
+      "id": "EVENT_TRAFFIC_PLAN",
+      "name": "Special Event Traffic Plan",
+      "icon": "\ud83c\udfaa",
+      "severity": "MEDIUM",
+      "description": "Active special event generating additional traffic demand.",
+      "action": "Activate event traffic management plan. Deploy traffic marshals and temporary signage."
+    },
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "Vashi is within safe operating parameters (16% risk). Continue routine monitoring. Optimizing signals could save 212 kg CO2/week, equivalent to 526 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_09",
     "week": 35,
     "zone_type": "Suburban_LowDensity",
@@ -51,6 +148,15 @@
     "location_name": "Vashi",
     "city": "Mumbai",
     "latitude": 19.0771,
-    "longitude": 72.9986
+    "longitude": 72.9986,
+    "predicted_risk_probability": 0.1574,
+    "risk_score": 15.7378,
+    "population_exposure_score": 13.5067,
+    "vehicle_exposure_score": 12.2781,
+    "temporal_trend_score": 39.5436,
+    "priority_score": 18.059,
+    "priority_rank": 45,
+    "priority_level": "LOW",
+    "risk_prob": 0.1574
   }
 }

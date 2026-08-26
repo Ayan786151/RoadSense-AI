@@ -1,8 +1,137 @@
 {
   "zone_id": "Zone_36",
+  "location_name": "Rajajipuram",
+  "city": "Lucknow",
+  "zone_type": "Residential",
   "week": 29,
-  "predicted_risk_probability": 0.7085763358837291,
-  "metrics": {
+  "latitude": 26.833,
+  "longitude": 80.89,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.7086,
+    "predicted_risk_percentage": 70.86,
+    "risk_label": "HIGH RISK",
+    "risk_color": "#f97316",
+    "risk_delta_vs_prev_week": -4.7045,
+    "actual_incident": 1
+  },
+  "priority": {
+    "priority_score": 78.1102,
+    "priority_rank": 3,
+    "priority_level": "CRITICAL",
+    "components": {
+      "risk_score": 70.8576,
+      "population_exposure_score": 81.73,
+      "vehicle_exposure_score": 73.7454,
+      "temporal_trend_score": 97.2372
+    },
+    "explanation": {
+      "priority_level": "CRITICAL",
+      "priority_score": 78.1,
+      "top_contributors": [
+        {
+          "factor": "Worsening Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "97/100",
+          "impact": "HIGH",
+          "detail": "4-week congestion trend is actively worsening \u2014 conditions deteriorating",
+          "weight": 97.2372
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "82/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 12737 residents/km\u00b2",
+          "weight": 81.73
+        },
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "74/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 73.7454
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udd34",
+          "value": "71/100",
+          "impact": "HIGH",
+          "detail": "Model-estimated risk score is in the critical range",
+          "weight": 70.8576
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "41/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate congestion at 41",
+          "weight": 28.826
+        }
+      ],
+      "total_factors": 5,
+      "assessment": "This zone requires URGENT attention. Primary risk drivers: Worsening Trend, Population Exposure, Vehicle Density. Immediate field inspection and intervention planning recommended."
+    }
+  },
+  "telemetry": {
+    "congestion": 41.18,
+    "congestion_delta": -32.93,
+    "average_speed_kmh": 54.45,
+    "speed_delta": 24.9,
+    "vehicle_density": 48.2,
+    "density_delta": -5.85,
+    "population_density": 12737,
+    "red_light_violations": 6,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 30,
+    "recommended_green_seconds": 37,
+    "change_seconds": 7,
+    "change_percent": 23.3,
+    "urgency": "HIGH",
+    "reason": "Elevated traffic density needs extended clearance time",
+    "factors": {
+      "congestion_factor": 1.33,
+      "density_factor": 1.19,
+      "speed_factor": 0.8,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 50969.9,
+    "total_co2_tonnes_per_year": 2650.43,
+    "idle_co2_kg": 10956.5,
+    "moving_co2_kg": 40013.4,
+    "potential_savings_kg_per_week": 2642.5,
+    "potential_savings_tonnes_per_year": 137.41,
+    "trees_equivalent_per_year": 6543,
+    "fuel_saved_liters_per_week": 1143.9,
+    "citizens_impacted": 25474,
+    "optimization_factor_pct": 24.1
+  },
+  "interventions": [
+    {
+      "id": "TREND_URGENT_INSPECTION",
+      "name": "Urgent Safety Inspection",
+      "icon": "\u26a0\ufe0f",
+      "severity": "CRITICAL",
+      "description": "Risk is actively worsening (high temporal trend) with already elevated risk score.",
+      "action": "Deploy immediate field inspection team. Identify root cause of deteriorating safety conditions."
+    },
+    {
+      "id": "MONITORING_UPGRADE",
+      "name": "Enhanced Monitoring & CCTV Coverage",
+      "icon": "\ud83d\udcf9",
+      "severity": "MEDIUM",
+      "description": "High-risk zone with significant population exposure warrants improved surveillance.",
+      "action": "Install additional CCTV cameras and integrate with traffic management center for real-time monitoring."
+    }
+  ],
+  "executive_briefing": "Rajajipuram is in a critical safety state with 71% incident risk. Continue routine monitoring. Optimizing signals could save 2642 kg CO2/week, equivalent to 6543 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_36",
     "week": 29,
     "zone_type": "Residential",
@@ -51,6 +180,15 @@
     "location_name": "Rajajipuram",
     "city": "Lucknow",
     "latitude": 26.833,
-    "longitude": 80.89
+    "longitude": 80.89,
+    "predicted_risk_probability": 0.7086,
+    "risk_score": 70.8576,
+    "population_exposure_score": 81.73,
+    "vehicle_exposure_score": 73.7454,
+    "temporal_trend_score": 97.2372,
+    "priority_score": 78.1102,
+    "priority_rank": 3,
+    "priority_level": "CRITICAL",
+    "risk_prob": 0.7086
   }
 }

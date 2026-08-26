@@ -1,8 +1,121 @@
 {
   "zone_id": "Zone_32",
+  "location_name": "Mahanagar",
+  "city": "Lucknow",
+  "zone_type": "Commercial_Downtown",
   "week": 40,
-  "predicted_risk_probability": 0.311442991833145,
-  "metrics": {
+  "latitude": 26.8755,
+  "longitude": 80.9595,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.3114,
+    "predicted_risk_percentage": 31.14,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": -5.0067,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 43.8913,
+    "priority_rank": 22,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 31.1443,
+      "population_exposure_score": 42.2947,
+      "vehicle_exposure_score": 62.0436,
+      "temporal_trend_score": 56.3414
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 43.9,
+      "top_contributors": [
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "62/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 62.0436
+        },
+        {
+          "factor": "Rising Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "56/100",
+          "impact": "MEDIUM",
+          "detail": "Slight upward trend in congestion over past 4 weeks",
+          "weight": 33.8049
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "31/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 31.1443
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "42/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 29.6063
+        }
+      ],
+      "total_factors": 4,
+      "assessment": "This zone has moderate risk levels with contributing factors: Vehicle Density, Rising Trend. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 27.94,
+    "congestion_delta": -2.76,
+    "average_speed_kmh": 58.53,
+    "speed_delta": 1.62,
+    "vehicle_density": 46.66,
+    "density_delta": 4.77,
+    "population_density": 7248,
+    "red_light_violations": 4,
+    "weather": "Normal",
+    "special_event": 1
+  },
+  "signal_optimization": {
+    "base_green_seconds": 40,
+    "recommended_green_seconds": 52,
+    "change_seconds": 12,
+    "change_percent": 30.0,
+    "urgency": "HIGH",
+    "reason": "Elevated traffic density needs extended clearance time",
+    "factors": {
+      "congestion_factor": 1.22,
+      "density_factor": 1.19,
+      "speed_factor": 0.78,
+      "event_boost": 1.15,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 58206.0,
+    "total_co2_tonnes_per_year": 3026.71,
+    "idle_co2_kg": 7196.3,
+    "moving_co2_kg": 51009.7,
+    "potential_savings_kg_per_week": 1640.3,
+    "potential_savings_tonnes_per_year": 85.3,
+    "trees_equivalent_per_year": 4061,
+    "fuel_saved_liters_per_week": 710.1,
+    "citizens_impacted": 14496,
+    "optimization_factor_pct": 22.8
+  },
+  "interventions": [
+    {
+      "id": "EVENT_TRAFFIC_PLAN",
+      "name": "Special Event Traffic Plan",
+      "icon": "\ud83c\udfaa",
+      "severity": "MEDIUM",
+      "description": "Active special event generating additional traffic demand.",
+      "action": "Activate event traffic management plan. Deploy traffic marshals and temporary signage."
+    }
+  ],
+  "executive_briefing": "Mahanagar is within safe operating parameters (31% risk). Continue routine monitoring. Optimizing signals could save 1640 kg CO2/week, equivalent to 4061 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_32",
     "week": 40,
     "zone_type": "Commercial_Downtown",
@@ -51,6 +164,15 @@
     "location_name": "Mahanagar",
     "city": "Lucknow",
     "latitude": 26.8755,
-    "longitude": 80.9595
+    "longitude": 80.9595,
+    "predicted_risk_probability": 0.3114,
+    "risk_score": 31.1443,
+    "population_exposure_score": 42.2947,
+    "vehicle_exposure_score": 62.0436,
+    "temporal_trend_score": 56.3414,
+    "priority_score": 43.8913,
+    "priority_rank": 22,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.3114
   }
 }

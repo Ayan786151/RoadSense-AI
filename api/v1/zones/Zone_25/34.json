@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_25",
+  "location_name": "Okhla",
+  "city": "Delhi",
+  "zone_type": "Residential",
   "week": 34,
-  "predicted_risk_probability": 0.29488623898491517,
-  "metrics": {
+  "latitude": 28.5355,
+  "longitude": 77.264,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.2949,
+    "predicted_risk_percentage": 29.49,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": -57.448,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 45.8782,
+    "priority_rank": 25,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 29.4886,
+      "population_exposure_score": 67.7419,
+      "vehicle_exposure_score": 36.2134,
+      "temporal_trend_score": 66.0305
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 45.9,
+      "top_contributors": [
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "68/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 10790 residents/km\u00b2",
+          "weight": 67.7419
+        },
+        {
+          "factor": "Rising Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "66/100",
+          "impact": "MEDIUM",
+          "detail": "Slight upward trend in congestion over past 4 weeks",
+          "weight": 39.6183
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "29/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 29.4886
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone has moderate risk levels with contributing factors: Population Exposure, Rising Trend. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 26.77,
+    "congestion_delta": -20.5,
+    "average_speed_kmh": 50.45,
+    "speed_delta": 17.0,
+    "vehicle_density": 28.41,
+    "density_delta": -0.43,
+    "population_density": 10790,
+    "red_light_violations": 2,
+    "weather": "Light Rain",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 30,
+    "recommended_green_seconds": 35,
+    "change_seconds": 5,
+    "change_percent": 16.7,
+    "urgency": "MODERATE",
+    "reason": "Slight adjustment for current conditions",
+    "factors": {
+      "congestion_factor": 1.21,
+      "density_factor": 1.11,
+      "speed_factor": 0.81,
+      "event_boost": 1.0,
+      "weather_boost": 1.08
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 31403.6,
+    "total_co2_tonnes_per_year": 1632.99,
+    "idle_co2_kg": 4198.2,
+    "moving_co2_kg": 27205.5,
+    "potential_savings_kg_per_week": 952.0,
+    "potential_savings_tonnes_per_year": 49.5,
+    "trees_equivalent_per_year": 2357,
+    "fuel_saved_liters_per_week": 412.1,
+    "citizens_impacted": 21580,
+    "optimization_factor_pct": 22.7
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "Okhla is within safe operating parameters (29% risk). Continue routine monitoring. Optimizing signals could save 952 kg CO2/week, equivalent to 2357 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_25",
     "week": 34,
     "zone_type": "Residential",
@@ -51,6 +156,15 @@
     "location_name": "Okhla",
     "city": "Delhi",
     "latitude": 28.5355,
-    "longitude": 77.264
+    "longitude": 77.264,
+    "predicted_risk_probability": 0.2949,
+    "risk_score": 29.4886,
+    "population_exposure_score": 67.7419,
+    "vehicle_exposure_score": 36.2134,
+    "temporal_trend_score": 66.0305,
+    "priority_score": 45.8782,
+    "priority_rank": 25,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.2949
   }
 }

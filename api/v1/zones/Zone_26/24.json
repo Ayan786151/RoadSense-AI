@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_26",
+  "location_name": "Hazratganj",
+  "city": "Lucknow",
+  "zone_type": "University_District",
   "week": 24,
-  "predicted_risk_probability": 0.336440564131269,
-  "metrics": {
+  "latitude": 26.85,
+  "longitude": 80.949,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.3364,
+    "predicted_risk_percentage": 33.64,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": 10.5408,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 45.7294,
+    "priority_rank": 22,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 33.6441,
+      "population_exposure_score": 45.384,
+      "vehicle_exposure_score": 58.8923,
+      "temporal_trend_score": 60.9818
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 45.7,
+      "top_contributors": [
+        {
+          "factor": "Rising Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "61/100",
+          "impact": "MEDIUM",
+          "detail": "Slight upward trend in congestion over past 4 weeks",
+          "weight": 36.5891
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "34/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 33.6441
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "45/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 31.7688
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone has moderate risk levels with contributing factors: Rising Trend, Population Exposure. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 31.15,
+    "congestion_delta": 6.2,
+    "average_speed_kmh": 54.04,
+    "speed_delta": -4.97,
+    "vehicle_density": 45.72,
+    "density_delta": 8.47,
+    "population_density": 7678,
+    "red_light_violations": 1,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 41,
+    "change_seconds": 6,
+    "change_percent": 17.1,
+    "urgency": "MODERATE",
+    "reason": "Slight adjustment for current conditions",
+    "factors": {
+      "congestion_factor": 1.25,
+      "density_factor": 1.18,
+      "speed_factor": 0.8,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 51953.5,
+    "total_co2_tonnes_per_year": 2701.58,
+    "idle_co2_kg": 7861.5,
+    "moving_co2_kg": 44092.1,
+    "potential_savings_kg_per_week": 1817.2,
+    "potential_savings_tonnes_per_year": 94.49,
+    "trees_equivalent_per_year": 4499,
+    "fuel_saved_liters_per_week": 786.7,
+    "citizens_impacted": 15356,
+    "optimization_factor_pct": 23.1
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "No specific risk indicators triggered.",
+      "action": "Continue routine monitoring."
+    }
+  ],
+  "executive_briefing": "Hazratganj is within safe operating parameters (34% risk). Continue routine monitoring. Optimizing signals could save 1817 kg CO2/week, equivalent to 4499 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_26",
     "week": 24,
     "zone_type": "University_District",
@@ -51,6 +156,15 @@
     "location_name": "Hazratganj",
     "city": "Lucknow",
     "latitude": 26.85,
-    "longitude": 80.949
+    "longitude": 80.949,
+    "predicted_risk_probability": 0.3364,
+    "risk_score": 33.6441,
+    "population_exposure_score": 45.384,
+    "vehicle_exposure_score": 58.8923,
+    "temporal_trend_score": 60.9818,
+    "priority_score": 45.7294,
+    "priority_rank": 22,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.3364
   }
 }

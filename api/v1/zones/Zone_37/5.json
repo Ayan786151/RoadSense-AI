@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_37",
+  "location_name": "Vrindavan Yojana",
+  "city": "Lucknow",
+  "zone_type": "Residential",
   "week": 5,
-  "predicted_risk_probability": 0.19234251318849752,
-  "metrics": {
+  "latitude": 26.79,
+  "longitude": 81.0,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.1923,
+    "predicted_risk_percentage": 19.23,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": null,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 43.9123,
+    "priority_rank": 21,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 19.2343,
+      "population_exposure_score": 72.6561,
+      "vehicle_exposure_score": 44.7954,
+      "temporal_trend_score": 60.6368
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 43.9,
+      "top_contributors": [
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "73/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 11474 residents/km\u00b2",
+          "weight": 72.6561
+        },
+        {
+          "factor": "Rising Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "61/100",
+          "impact": "MEDIUM",
+          "detail": "Slight upward trend in congestion over past 4 weeks",
+          "weight": 36.3821
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "19/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 19.2343
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone has moderate risk levels with contributing factors: Population Exposure, Rising Trend. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 14.04,
+    "congestion_delta": 4.48,
+    "average_speed_kmh": 55.14,
+    "speed_delta": -7.04,
+    "vehicle_density": 28.79,
+    "density_delta": -2.06,
+    "population_density": 11474,
+    "red_light_violations": 2,
+    "weather": "Light Rain",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 30,
+    "recommended_green_seconds": 31,
+    "change_seconds": 1,
+    "change_percent": 3.3,
+    "urgency": "NOMINAL",
+    "reason": "Current default timing is adequate",
+    "factors": {
+      "congestion_factor": 1.11,
+      "density_factor": 1.12,
+      "speed_factor": 0.79,
+      "event_boost": 1.0,
+      "weather_boost": 1.08
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 37601.6,
+    "total_co2_tonnes_per_year": 1955.29,
+    "idle_co2_kg": 2231.2,
+    "moving_co2_kg": 35370.4,
+    "potential_savings_kg_per_week": 477.6,
+    "potential_savings_tonnes_per_year": 24.83,
+    "trees_equivalent_per_year": 1182,
+    "fuel_saved_liters_per_week": 206.7,
+    "citizens_impacted": 22948,
+    "optimization_factor_pct": 21.4
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "Vrindavan Yojana is within safe operating parameters (19% risk). Continue routine monitoring. Optimizing signals could save 478 kg CO2/week, equivalent to 1182 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_37",
     "week": 5,
     "zone_type": "Residential",
@@ -51,6 +156,15 @@
     "location_name": "Vrindavan Yojana",
     "city": "Lucknow",
     "latitude": 26.79,
-    "longitude": 81.0
+    "longitude": 81.0,
+    "predicted_risk_probability": 0.1923,
+    "risk_score": 19.2343,
+    "population_exposure_score": 72.6561,
+    "vehicle_exposure_score": 44.7954,
+    "temporal_trend_score": 60.6368,
+    "priority_score": 43.9123,
+    "priority_rank": 21,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.1923
   }
 }

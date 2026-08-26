@@ -1,8 +1,121 @@
 {
   "zone_id": "Zone_11",
+  "location_name": "Lower Parel",
+  "city": "Mumbai",
+  "zone_type": "Residential",
   "week": 25,
-  "predicted_risk_probability": 0.863020185861649,
-  "metrics": {
+  "latitude": 18.9988,
+  "longitude": 72.8258,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.863,
+    "predicted_risk_percentage": 86.3,
+    "risk_label": "CRITICAL RISK",
+    "risk_color": "#ef4444",
+    "risk_delta_vs_prev_week": -4.8988,
+    "actual_incident": 1
+  },
+  "priority": {
+    "priority_score": 70.7796,
+    "priority_rank": 4,
+    "priority_level": "HIGH",
+    "components": {
+      "risk_score": 86.302,
+      "population_exposure_score": 61.7429,
+      "vehicle_exposure_score": 56.012,
+      "temporal_trend_score": 64.1378
+    },
+    "explanation": {
+      "priority_level": "HIGH",
+      "priority_score": 70.8,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udd34",
+          "value": "86/100",
+          "impact": "HIGH",
+          "detail": "Model-estimated risk score is in the critical range",
+          "weight": 86.302
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "75/100",
+          "impact": "HIGH",
+          "detail": "Congestion index at 75 \u2014 severe traffic flow degradation",
+          "weight": 74.88
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "62/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 9955 residents/km\u00b2",
+          "weight": 61.7429
+        },
+        {
+          "factor": "Rising Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "64/100",
+          "impact": "MEDIUM",
+          "detail": "Slight upward trend in congestion over past 4 weeks",
+          "weight": 38.4827
+        }
+      ],
+      "total_factors": 4,
+      "assessment": "This zone shows significant risk elevation driven by Risk Score, Congestion. Proactive intervention should be scheduled within the current planning cycle."
+    }
+  },
+  "telemetry": {
+    "congestion": 74.88,
+    "congestion_delta": -3.76,
+    "average_speed_kmh": 38.79,
+    "speed_delta": 0.71,
+    "vehicle_density": 43.49,
+    "density_delta": 0.28,
+    "population_density": 9955,
+    "red_light_violations": 5,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 30,
+    "recommended_green_seconds": 48,
+    "change_seconds": 18,
+    "change_percent": 60.0,
+    "urgency": "CRITICAL",
+    "reason": "Severe congestion requires significantly extended green phase",
+    "factors": {
+      "congestion_factor": 1.6,
+      "density_factor": 1.17,
+      "speed_factor": 0.85,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 30180.6,
+    "total_co2_tonnes_per_year": 1569.39,
+    "idle_co2_kg": 17976.1,
+    "moving_co2_kg": 12204.5,
+    "potential_savings_kg_per_week": 4941.3,
+    "potential_savings_tonnes_per_year": 256.95,
+    "trees_equivalent_per_year": 12235,
+    "fuel_saved_liters_per_week": 2139.1,
+    "citizens_impacted": 19910,
+    "optimization_factor_pct": 27.5
+  },
+  "interventions": [
+    {
+      "id": "MONITORING_UPGRADE",
+      "name": "Enhanced Monitoring & CCTV Coverage",
+      "icon": "\ud83d\udcf9",
+      "severity": "MEDIUM",
+      "description": "High-risk zone with significant population exposure warrants improved surveillance.",
+      "action": "Install additional CCTV cameras and integrate with traffic management center for real-time monitoring."
+    }
+  ],
+  "executive_briefing": "Lower Parel is in a critical safety state with 86% incident risk. Signal optimization recommended \u2014 congestion at 75/100 with speeds averaging 39 km/h. Optimizing signals could save 4941 kg CO2/week, equivalent to 12235 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_11",
     "week": 25,
     "zone_type": "Residential",
@@ -51,6 +164,15 @@
     "location_name": "Lower Parel",
     "city": "Mumbai",
     "latitude": 18.9988,
-    "longitude": 72.8258
+    "longitude": 72.8258,
+    "predicted_risk_probability": 0.863,
+    "risk_score": 86.302,
+    "population_exposure_score": 61.7429,
+    "vehicle_exposure_score": 56.012,
+    "temporal_trend_score": 64.1378,
+    "priority_score": 70.7796,
+    "priority_rank": 4,
+    "priority_level": "HIGH",
+    "risk_prob": 0.863
   }
 }

@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_33",
+  "location_name": "Aminabad",
+  "city": "Lucknow",
+  "zone_type": "Commercial_Downtown",
   "week": 13,
-  "predicted_risk_probability": 0.17826495288804517,
-  "metrics": {
+  "latitude": 26.8465,
+  "longitude": 80.94,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.1783,
+    "predicted_risk_percentage": 17.83,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": -24.3694,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 36.4782,
+    "priority_rank": 28,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 17.8265,
+      "population_exposure_score": 40.1178,
+      "vehicle_exposure_score": 48.1366,
+      "temporal_trend_score": 64.6052
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 36.5,
+      "top_contributors": [
+        {
+          "factor": "Rising Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "65/100",
+          "impact": "MEDIUM",
+          "detail": "Slight upward trend in congestion over past 4 weeks",
+          "weight": 38.7631
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "40/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 28.0825
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "18/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 17.8265
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone has moderate risk levels with contributing factors: Rising Trend, Population Exposure. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 19.64,
+    "congestion_delta": -13.58,
+    "average_speed_kmh": 59.86,
+    "speed_delta": 4.61,
+    "vehicle_density": 31.0,
+    "density_delta": -8.65,
+    "population_density": 6945,
+    "red_light_violations": 3,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 40,
+    "recommended_green_seconds": 40,
+    "change_seconds": 0,
+    "change_percent": 0.0,
+    "urgency": "NOMINAL",
+    "reason": "Current default timing is adequate",
+    "factors": {
+      "congestion_factor": 1.16,
+      "density_factor": 1.12,
+      "speed_factor": 0.78,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 42012.9,
+    "total_co2_tonnes_per_year": 2184.67,
+    "idle_co2_kg": 3360.8,
+    "moving_co2_kg": 38652.1,
+    "potential_savings_kg_per_week": 738.2,
+    "potential_savings_tonnes_per_year": 38.38,
+    "trees_equivalent_per_year": 1827,
+    "fuel_saved_liters_per_week": 319.6,
+    "citizens_impacted": 13890,
+    "optimization_factor_pct": 22.0
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "Aminabad is within safe operating parameters (18% risk). Continue routine monitoring. Optimizing signals could save 738 kg CO2/week, equivalent to 1827 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_33",
     "week": 13,
     "zone_type": "Commercial_Downtown",
@@ -51,6 +156,15 @@
     "location_name": "Aminabad",
     "city": "Lucknow",
     "latitude": 26.8465,
-    "longitude": 80.94
+    "longitude": 80.94,
+    "predicted_risk_probability": 0.1783,
+    "risk_score": 17.8265,
+    "population_exposure_score": 40.1178,
+    "vehicle_exposure_score": 48.1366,
+    "temporal_trend_score": 64.6052,
+    "priority_score": 36.4782,
+    "priority_rank": 28,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.1783
   }
 }

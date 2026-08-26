@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_12",
+  "location_name": "Malad",
+  "city": "Mumbai",
+  "zone_type": "Commercial_Downtown",
   "week": 21,
-  "predicted_risk_probability": 0.3587088747033997,
-  "metrics": {
+  "latitude": 19.1874,
+  "longitude": 72.8484,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.3587,
+    "predicted_risk_percentage": 35.87,
+    "risk_label": "MODERATE RISK",
+    "risk_color": "#eab308",
+    "risk_delta_vs_prev_week": -27.6269,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 51.5926,
+    "priority_rank": 18,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 35.8709,
+      "population_exposure_score": 52.9061,
+      "vehicle_exposure_score": 45.0888,
+      "temporal_trend_score": 100.0
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 51.6,
+      "top_contributors": [
+        {
+          "factor": "Worsening Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "100/100",
+          "impact": "HIGH",
+          "detail": "4-week congestion trend is actively worsening \u2014 conditions deteriorating",
+          "weight": 100.0
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "53/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 37.0343
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "36/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 35.8709
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone has moderate risk levels with contributing factors: Worsening Trend, Population Exposure. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 22.66,
+    "congestion_delta": -33.25,
+    "average_speed_kmh": 61.73,
+    "speed_delta": 21.04,
+    "vehicle_density": 34.57,
+    "density_delta": -13.83,
+    "population_density": 8725,
+    "red_light_violations": 5,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 40,
+    "recommended_green_seconds": 41,
+    "change_seconds": 1,
+    "change_percent": 2.5,
+    "urgency": "NOMINAL",
+    "reason": "Current default timing is adequate",
+    "factors": {
+      "congestion_factor": 1.18,
+      "density_factor": 1.14,
+      "speed_factor": 0.77,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 47103.5,
+    "total_co2_tonnes_per_year": 2449.38,
+    "idle_co2_kg": 4324.1,
+    "moving_co2_kg": 42779.4,
+    "potential_savings_kg_per_week": 962.8,
+    "potential_savings_tonnes_per_year": 50.07,
+    "trees_equivalent_per_year": 2384,
+    "fuel_saved_liters_per_week": 416.8,
+    "citizens_impacted": 17450,
+    "optimization_factor_pct": 22.3
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "No specific risk indicators triggered.",
+      "action": "Continue routine monitoring."
+    }
+  ],
+  "executive_briefing": "Malad shows elevated risk at 36%. Continue routine monitoring. Optimizing signals could save 963 kg CO2/week, equivalent to 2384 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_12",
     "week": 21,
     "zone_type": "Commercial_Downtown",
@@ -51,6 +156,15 @@
     "location_name": "Malad",
     "city": "Mumbai",
     "latitude": 19.1874,
-    "longitude": 72.8484
+    "longitude": 72.8484,
+    "predicted_risk_probability": 0.3587,
+    "risk_score": 35.8709,
+    "population_exposure_score": 52.9061,
+    "vehicle_exposure_score": 45.0888,
+    "temporal_trend_score": 100.0,
+    "priority_score": 51.5926,
+    "priority_rank": 18,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.3587
   }
 }

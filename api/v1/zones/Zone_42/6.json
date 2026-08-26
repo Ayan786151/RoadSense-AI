@@ -1,8 +1,121 @@
 {
   "zone_id": "Zone_42",
+  "location_name": "Guindy",
+  "city": "Chennai",
+  "zone_type": "University_District",
   "week": 6,
-  "predicted_risk_probability": 0.6973495104163464,
-  "metrics": {
+  "latitude": 13.0067,
+  "longitude": 80.2206,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.6973,
+    "predicted_risk_percentage": 69.73,
+    "risk_label": "HIGH RISK",
+    "risk_color": "#f97316",
+    "risk_delta_vs_prev_week": 23.3018,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 59.3899,
+    "priority_rank": 8,
+    "priority_level": "HIGH",
+    "components": {
+      "risk_score": 69.735,
+      "population_exposure_score": 43.164,
+      "vehicle_exposure_score": 63.9078,
+      "temporal_trend_score": 52.8222
+    },
+    "explanation": {
+      "priority_level": "HIGH",
+      "priority_score": 59.4,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "70/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 69.735
+        },
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "64/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 63.9078
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "52/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate congestion at 52",
+          "weight": 36.197
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "43/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 30.2148
+        }
+      ],
+      "total_factors": 4,
+      "assessment": "This zone shows significant risk elevation driven by Vehicle Density. Proactive intervention should be scheduled within the current planning cycle."
+    }
+  },
+  "telemetry": {
+    "congestion": 51.71,
+    "congestion_delta": 16.85,
+    "average_speed_kmh": 41.08,
+    "speed_delta": -14.27,
+    "vehicle_density": 40.46,
+    "density_delta": 6.29,
+    "population_density": 7369,
+    "red_light_violations": 7,
+    "weather": "Light Rain",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 52,
+    "change_seconds": 17,
+    "change_percent": 48.6,
+    "urgency": "CRITICAL",
+    "reason": "Severe congestion requires significantly extended green phase",
+    "factors": {
+      "congestion_factor": 1.41,
+      "density_factor": 1.16,
+      "speed_factor": 0.85,
+      "event_boost": 1.0,
+      "weather_boost": 1.08
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 34664.5,
+    "total_co2_tonnes_per_year": 1802.55,
+    "idle_co2_kg": 11548.9,
+    "moving_co2_kg": 23115.6,
+    "potential_savings_kg_per_week": 2907.0,
+    "potential_savings_tonnes_per_year": 151.16,
+    "trees_equivalent_per_year": 7198,
+    "fuel_saved_liters_per_week": 1258.4,
+    "citizens_impacted": 14738,
+    "optimization_factor_pct": 25.2
+  },
+  "interventions": [
+    {
+      "id": "ROAD_MAINTENANCE",
+      "name": "Road Maintenance Inspection",
+      "icon": "\ud83d\udee3\ufe0f",
+      "severity": "MEDIUM",
+      "description": "Deteriorated road surface combined with elevated risk indicates infrastructure maintenance need.",
+      "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
+    }
+  ],
+  "executive_briefing": "Guindy is in a critical safety state with 70% incident risk. Continue routine monitoring. Optimizing signals could save 2907 kg CO2/week, equivalent to 7198 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_42",
     "week": 6,
     "zone_type": "University_District",
@@ -51,6 +164,15 @@
     "location_name": "Guindy",
     "city": "Chennai",
     "latitude": 13.0067,
-    "longitude": 80.2206
+    "longitude": 80.2206,
+    "predicted_risk_probability": 0.6973,
+    "risk_score": 69.735,
+    "population_exposure_score": 43.164,
+    "vehicle_exposure_score": 63.9078,
+    "temporal_trend_score": 52.8222,
+    "priority_score": 59.3899,
+    "priority_rank": 8,
+    "priority_level": "HIGH",
+    "risk_prob": 0.6973
   }
 }

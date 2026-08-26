@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_21",
+  "location_name": "Janakpuri",
+  "city": "Delhi",
+  "zone_type": "Residential",
   "week": 5,
-  "predicted_risk_probability": 0.315644132805433,
-  "metrics": {
+  "latitude": 28.6219,
+  "longitude": 77.0878,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.3156,
+    "predicted_risk_percentage": 31.56,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": null,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 49.978,
+    "priority_rank": 15,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 31.5644,
+      "population_exposure_score": 73.8846,
+      "vehicle_exposure_score": 61.1172,
+      "temporal_trend_score": 44.384
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 50.0,
+      "top_contributors": [
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "74/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 11645 residents/km\u00b2",
+          "weight": 73.8846
+        },
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "61/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 61.1172
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "32/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 31.5644
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone has moderate risk levels with contributing factors: Population Exposure, Vehicle Density. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 24.85,
+    "congestion_delta": 7.39,
+    "average_speed_kmh": 61.19,
+    "speed_delta": 2.34,
+    "vehicle_density": 39.28,
+    "density_delta": 4.64,
+    "population_density": 11645,
+    "red_light_violations": 6,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 30,
+    "recommended_green_seconds": 32,
+    "change_seconds": 2,
+    "change_percent": 6.7,
+    "urgency": "MODERATE",
+    "reason": "Slight adjustment for current conditions",
+    "factors": {
+      "congestion_factor": 1.2,
+      "density_factor": 1.16,
+      "speed_factor": 0.77,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 52206.4,
+    "total_co2_tonnes_per_year": 2714.74,
+    "idle_co2_kg": 5388.1,
+    "moving_co2_kg": 46818.3,
+    "potential_savings_kg_per_week": 1211.5,
+    "potential_savings_tonnes_per_year": 63.0,
+    "trees_equivalent_per_year": 2999,
+    "fuel_saved_liters_per_week": 524.5,
+    "citizens_impacted": 23290,
+    "optimization_factor_pct": 22.5
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "No specific risk indicators triggered.",
+      "action": "Continue routine monitoring."
+    }
+  ],
+  "executive_briefing": "Janakpuri is within safe operating parameters (32% risk). Continue routine monitoring. Optimizing signals could save 1212 kg CO2/week, equivalent to 2999 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_21",
     "week": 5,
     "zone_type": "Residential",
@@ -51,6 +156,15 @@
     "location_name": "Janakpuri",
     "city": "Delhi",
     "latitude": 28.6219,
-    "longitude": 77.0878
+    "longitude": 77.0878,
+    "predicted_risk_probability": 0.3156,
+    "risk_score": 31.5644,
+    "population_exposure_score": 73.8846,
+    "vehicle_exposure_score": 61.1172,
+    "temporal_trend_score": 44.384,
+    "priority_score": 49.978,
+    "priority_rank": 15,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.3156
   }
 }

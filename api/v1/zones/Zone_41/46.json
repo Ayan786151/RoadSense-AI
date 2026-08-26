@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_41",
+  "location_name": "Adyar",
+  "city": "Chennai",
+  "zone_type": "Highway_Junction",
   "week": 46,
-  "predicted_risk_probability": 0.5067149867761741,
-  "metrics": {
+  "latitude": 13.0063,
+  "longitude": 80.2574,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.5067,
+    "predicted_risk_percentage": 50.67,
+    "risk_label": "MODERATE RISK",
+    "risk_color": "#eab308",
+    "risk_delta_vs_prev_week": -15.2932,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 34.9265,
+    "priority_rank": 27,
+    "priority_level": "LOW",
+    "components": {
+      "risk_score": 50.6715,
+      "population_exposure_score": 8.5351,
+      "vehicle_exposure_score": 36.5433,
+      "temporal_trend_score": 34.7697
+    },
+    "explanation": {
+      "priority_level": "LOW",
+      "priority_score": 34.9,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "51/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 50.6715
+        },
+        {
+          "factor": "Violation Count",
+          "icon": "\ud83d\udea8",
+          "value": "10",
+          "impact": "HIGH",
+          "detail": "10 red-light violations recorded \u2014 intersection safety concern",
+          "weight": 50
+        }
+      ],
+      "total_factors": 2,
+      "assessment": "This zone is currently within acceptable safety parameters. Routine monitoring is sufficient."
+    }
+  },
+  "telemetry": {
+    "congestion": 37.12,
+    "congestion_delta": -15.54,
+    "average_speed_kmh": 58.97,
+    "speed_delta": 11.02,
+    "vehicle_density": 29.22,
+    "density_delta": -7.68,
+    "population_density": 2549,
+    "red_light_violations": 10,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 50,
+    "recommended_green_seconds": 56,
+    "change_seconds": 6,
+    "change_percent": 12.0,
+    "urgency": "MODERATE",
+    "reason": "Slight adjustment for current conditions",
+    "factors": {
+      "congestion_factor": 1.3,
+      "density_factor": 1.12,
+      "speed_factor": 0.78,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 34071.2,
+    "total_co2_tonnes_per_year": 1771.7,
+    "idle_co2_kg": 5987.2,
+    "moving_co2_kg": 28084.0,
+    "potential_savings_kg_per_week": 1419.7,
+    "potential_savings_tonnes_per_year": 73.82,
+    "trees_equivalent_per_year": 3515,
+    "fuel_saved_liters_per_week": 614.6,
+    "citizens_impacted": 5098,
+    "optimization_factor_pct": 23.7
+  },
+  "interventions": [
+    {
+      "id": "SPEED_CALMING",
+      "name": "Speed Calming & Enforcement",
+      "icon": "\ud83c\udfce\ufe0f",
+      "severity": "HIGH",
+      "description": "High average speed combined with elevated risk score suggests speed-related hazards.",
+      "action": "Deploy speed calming measures (speed bumps, radar signs) and increase enforcement patrols."
+    },
+    {
+      "id": "VIOLATION_ENFORCEMENT",
+      "name": "Red-Light Violation Enforcement",
+      "icon": "\ud83d\udea8",
+      "severity": "HIGH",
+      "description": "Elevated red-light violation count indicates intersection compliance failure.",
+      "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
+    }
+  ],
+  "executive_briefing": "Adyar shows elevated risk at 51%. Enforcement focus needed \u2014 10 red-light violations recorded. Optimizing signals could save 1420 kg CO2/week, equivalent to 3515 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_41",
     "week": 46,
     "zone_type": "Highway_Junction",
@@ -51,6 +156,15 @@
     "location_name": "Adyar",
     "city": "Chennai",
     "latitude": 13.0063,
-    "longitude": 80.2574
+    "longitude": 80.2574,
+    "predicted_risk_probability": 0.5067,
+    "risk_score": 50.6715,
+    "population_exposure_score": 8.5351,
+    "vehicle_exposure_score": 36.5433,
+    "temporal_trend_score": 34.7697,
+    "priority_score": 34.9265,
+    "priority_rank": 27,
+    "priority_level": "LOW",
+    "risk_prob": 0.5067
   }
 }

@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_33",
+  "location_name": "Aminabad",
+  "city": "Lucknow",
+  "zone_type": "Commercial_Downtown",
   "week": 12,
-  "predicted_risk_probability": 0.42195896471875133,
-  "metrics": {
+  "latitude": 26.8465,
+  "longitude": 80.94,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.422,
+    "predicted_risk_percentage": 42.2,
+    "risk_label": "MODERATE RISK",
+    "risk_color": "#eab308",
+    "risk_delta_vs_prev_week": -9.4087,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 47.3445,
+    "priority_rank": 20,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 42.1959,
+      "population_exposure_score": 40.1178,
+      "vehicle_exposure_score": 61.9725,
+      "temporal_trend_score": 53.6145
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 47.3,
+      "top_contributors": [
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "62/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 61.9725
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "42/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 42.1959
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "40/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 28.0825
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone has moderate risk levels with contributing factors: Vehicle Density, Risk Score. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 33.22,
+    "congestion_delta": -0.59,
+    "average_speed_kmh": 55.25,
+    "speed_delta": -1.06,
+    "vehicle_density": 39.65,
+    "density_delta": 1.51,
+    "population_density": 6945,
+    "red_light_violations": 6,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 40,
+    "recommended_green_seconds": 46,
+    "change_seconds": 6,
+    "change_percent": 15.0,
+    "urgency": "MODERATE",
+    "reason": "Slight adjustment for current conditions",
+    "factors": {
+      "congestion_factor": 1.27,
+      "density_factor": 1.16,
+      "speed_factor": 0.79,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 45189.8,
+    "total_co2_tonnes_per_year": 2349.87,
+    "idle_co2_kg": 7270.8,
+    "moving_co2_kg": 37919.0,
+    "potential_savings_kg_per_week": 1695.7,
+    "potential_savings_tonnes_per_year": 88.18,
+    "trees_equivalent_per_year": 4198,
+    "fuel_saved_liters_per_week": 734.1,
+    "citizens_impacted": 13890,
+    "optimization_factor_pct": 23.3
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "No specific risk indicators triggered.",
+      "action": "Continue routine monitoring."
+    }
+  ],
+  "executive_briefing": "Aminabad shows elevated risk at 42%. Continue routine monitoring. Optimizing signals could save 1696 kg CO2/week, equivalent to 4198 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_33",
     "week": 12,
     "zone_type": "Commercial_Downtown",
@@ -51,6 +156,15 @@
     "location_name": "Aminabad",
     "city": "Lucknow",
     "latitude": 26.8465,
-    "longitude": 80.94
+    "longitude": 80.94,
+    "predicted_risk_probability": 0.422,
+    "risk_score": 42.1959,
+    "population_exposure_score": 40.1178,
+    "vehicle_exposure_score": 61.9725,
+    "temporal_trend_score": 53.6145,
+    "priority_score": 47.3445,
+    "priority_rank": 20,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.422
   }
 }

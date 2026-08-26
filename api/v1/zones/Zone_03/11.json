@@ -1,8 +1,137 @@
 {
   "zone_id": "Zone_03",
+  "location_name": "Kurla",
+  "city": "Mumbai",
+  "zone_type": "University_District",
   "week": 11,
-  "predicted_risk_probability": 0.6007841862777592,
-  "metrics": {
+  "latitude": 19.0726,
+  "longitude": 72.8845,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.6008,
+    "predicted_risk_percentage": 60.08,
+    "risk_label": "HIGH RISK",
+    "risk_color": "#f97316",
+    "risk_delta_vs_prev_week": 20.1709,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 53.2833,
+    "priority_rank": 11,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 60.0784,
+      "population_exposure_score": 45.4343,
+      "vehicle_exposure_score": 65.5526,
+      "temporal_trend_score": 31.8855
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 53.3,
+      "top_contributors": [
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "66/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 65.5526
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "60/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 60.0784
+        },
+        {
+          "factor": "Violation Count",
+          "icon": "\ud83d\udea8",
+          "value": "10",
+          "impact": "HIGH",
+          "detail": "10 red-light violations recorded \u2014 intersection safety concern",
+          "weight": 50
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "51/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate congestion at 51",
+          "weight": 35.651
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "45/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 31.804
+        }
+      ],
+      "total_factors": 5,
+      "assessment": "This zone has moderate risk levels with contributing factors: Vehicle Density, Violation Count. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 50.93,
+    "congestion_delta": 25.7,
+    "average_speed_kmh": 41.95,
+    "speed_delta": -19.4,
+    "vehicle_density": 41.58,
+    "density_delta": 8.84,
+    "population_density": 7685,
+    "red_light_violations": 10,
+    "weather": "Light Rain",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 52,
+    "change_seconds": 17,
+    "change_percent": 48.6,
+    "urgency": "CRITICAL",
+    "reason": "Severe congestion requires significantly extended green phase",
+    "factors": {
+      "congestion_factor": 1.41,
+      "density_factor": 1.17,
+      "speed_factor": 0.84,
+      "event_boost": 1.0,
+      "weather_boost": 1.08
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 36340.0,
+    "total_co2_tonnes_per_year": 1889.68,
+    "idle_co2_kg": 11689.5,
+    "moving_co2_kg": 24650.5,
+    "potential_savings_kg_per_week": 2933.3,
+    "potential_savings_tonnes_per_year": 152.53,
+    "trees_equivalent_per_year": 7263,
+    "fuel_saved_liters_per_week": 1269.8,
+    "citizens_impacted": 15370,
+    "optimization_factor_pct": 25.1
+  },
+  "interventions": [
+    {
+      "id": "VIOLATION_ENFORCEMENT",
+      "name": "Red-Light Violation Enforcement",
+      "icon": "\ud83d\udea8",
+      "severity": "HIGH",
+      "description": "Elevated red-light violation count indicates intersection compliance failure.",
+      "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
+    },
+    {
+      "id": "ROAD_MAINTENANCE",
+      "name": "Road Maintenance Inspection",
+      "icon": "\ud83d\udee3\ufe0f",
+      "severity": "MEDIUM",
+      "description": "Deteriorated road surface combined with elevated risk indicates infrastructure maintenance need.",
+      "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
+    }
+  ],
+  "executive_briefing": "Kurla is in a critical safety state with 60% incident risk. Enforcement focus needed \u2014 10 red-light violations recorded. Optimizing signals could save 2933 kg CO2/week, equivalent to 7263 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_03",
     "week": 11,
     "zone_type": "University_District",
@@ -51,6 +180,15 @@
     "location_name": "Kurla",
     "city": "Mumbai",
     "latitude": 19.0726,
-    "longitude": 72.8845
+    "longitude": 72.8845,
+    "predicted_risk_probability": 0.6008,
+    "risk_score": 60.0784,
+    "population_exposure_score": 45.4343,
+    "vehicle_exposure_score": 65.5526,
+    "temporal_trend_score": 31.8855,
+    "priority_score": 53.2833,
+    "priority_rank": 11,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.6008
   }
 }

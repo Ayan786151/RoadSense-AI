@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_32",
+  "location_name": "Mahanagar",
+  "city": "Lucknow",
+  "zone_type": "Commercial_Downtown",
   "week": 49,
-  "predicted_risk_probability": 0.3245941747373904,
-  "metrics": {
+  "latitude": 26.8755,
+  "longitude": 80.9595,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.3246,
+    "predicted_risk_percentage": 32.46,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": 6.062,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 37.6459,
+    "priority_rank": 31,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 32.4594,
+      "population_exposure_score": 42.2947,
+      "vehicle_exposure_score": 30.157,
+      "temporal_trend_score": 53.7136
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 37.6,
+      "top_contributors": [
+        {
+          "factor": "Violation Count",
+          "icon": "\ud83d\udea8",
+          "value": "11",
+          "impact": "HIGH",
+          "detail": "11 red-light violations recorded \u2014 intersection safety concern",
+          "weight": 55
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "32/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 32.4594
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "42/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 29.6063
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone has moderate risk levels with contributing factors: Violation Count, Population Exposure. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 20.99,
+    "congestion_delta": 5.58,
+    "average_speed_kmh": 51.97,
+    "speed_delta": -9.91,
+    "vehicle_density": 27.1,
+    "density_delta": 2.34,
+    "population_density": 7248,
+    "red_light_violations": 11,
+    "weather": "Light Rain",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 40,
+    "recommended_green_seconds": 45,
+    "change_seconds": 5,
+    "change_percent": 12.5,
+    "urgency": "MODERATE",
+    "reason": "Slight adjustment for current conditions",
+    "factors": {
+      "congestion_factor": 1.17,
+      "density_factor": 1.11,
+      "speed_factor": 0.81,
+      "event_boost": 1.0,
+      "weather_boost": 1.08
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 31982.8,
+    "total_co2_tonnes_per_year": 1663.11,
+    "idle_co2_kg": 3139.9,
+    "moving_co2_kg": 28842.9,
+    "potential_savings_kg_per_week": 693.9,
+    "potential_savings_tonnes_per_year": 36.08,
+    "trees_equivalent_per_year": 1718,
+    "fuel_saved_liters_per_week": 300.4,
+    "citizens_impacted": 14496,
+    "optimization_factor_pct": 22.1
+  },
+  "interventions": [
+    {
+      "id": "VIOLATION_ENFORCEMENT",
+      "name": "Red-Light Violation Enforcement",
+      "icon": "\ud83d\udea8",
+      "severity": "HIGH",
+      "description": "Elevated red-light violation count indicates intersection compliance failure.",
+      "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
+    }
+  ],
+  "executive_briefing": "Mahanagar is within safe operating parameters (32% risk). Enforcement focus needed \u2014 11 red-light violations recorded. Optimizing signals could save 694 kg CO2/week, equivalent to 1718 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_32",
     "week": 49,
     "zone_type": "Commercial_Downtown",
@@ -51,6 +156,15 @@
     "location_name": "Mahanagar",
     "city": "Lucknow",
     "latitude": 26.8755,
-    "longitude": 80.9595
+    "longitude": 80.9595,
+    "predicted_risk_probability": 0.3246,
+    "risk_score": 32.4594,
+    "population_exposure_score": 42.2947,
+    "vehicle_exposure_score": 30.157,
+    "temporal_trend_score": 53.7136,
+    "priority_score": 37.6459,
+    "priority_rank": 31,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.3246
   }
 }

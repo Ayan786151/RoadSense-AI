@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_17",
+  "location_name": "Saket",
+  "city": "Delhi",
+  "zone_type": "Residential",
   "week": 22,
-  "predicted_risk_probability": 0.2538947485429711,
-  "metrics": {
+  "latitude": 28.5244,
+  "longitude": 77.2066,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.2539,
+    "predicted_risk_percentage": 25.39,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": -4.392,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 37.0582,
+    "priority_rank": 31,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 25.3895,
+      "population_exposure_score": 48.1572,
+      "vehicle_exposure_score": 30.5203,
+      "temporal_trend_score": 58.3935
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 37.1,
+      "top_contributors": [
+        {
+          "factor": "Rising Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "58/100",
+          "impact": "MEDIUM",
+          "detail": "Slight upward trend in congestion over past 4 weeks",
+          "weight": 35.0361
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "48/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 33.71
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "25/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 25.3895
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone has moderate risk levels with contributing factors: Rising Trend, Population Exposure. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 25.77,
+    "congestion_delta": 2.58,
+    "average_speed_kmh": 60.58,
+    "speed_delta": 10.7,
+    "vehicle_density": 22.95,
+    "density_delta": 3.75,
+    "population_density": 8064,
+    "red_light_violations": 4,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 30,
+    "recommended_green_seconds": 30,
+    "change_seconds": 0,
+    "change_percent": 0.0,
+    "urgency": "NOMINAL",
+    "reason": "Current default timing is adequate",
+    "factors": {
+      "congestion_factor": 1.21,
+      "density_factor": 1.09,
+      "speed_factor": 0.77,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 30014.8,
+    "total_co2_tonnes_per_year": 1560.77,
+    "idle_co2_kg": 3264.6,
+    "moving_co2_kg": 26750.2,
+    "potential_savings_kg_per_week": 737.1,
+    "potential_savings_tonnes_per_year": 38.33,
+    "trees_equivalent_per_year": 1825,
+    "fuel_saved_liters_per_week": 319.1,
+    "citizens_impacted": 16128,
+    "optimization_factor_pct": 22.6
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "Saket is within safe operating parameters (25% risk). Continue routine monitoring. Optimizing signals could save 737 kg CO2/week, equivalent to 1825 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_17",
     "week": 22,
     "zone_type": "Residential",
@@ -51,6 +156,15 @@
     "location_name": "Saket",
     "city": "Delhi",
     "latitude": 28.5244,
-    "longitude": 77.2066
+    "longitude": 77.2066,
+    "predicted_risk_probability": 0.2539,
+    "risk_score": 25.3895,
+    "population_exposure_score": 48.1572,
+    "vehicle_exposure_score": 30.5203,
+    "temporal_trend_score": 58.3935,
+    "priority_score": 37.0582,
+    "priority_rank": 31,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.2539
   }
 }

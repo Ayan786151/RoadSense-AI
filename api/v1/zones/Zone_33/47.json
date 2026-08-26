@@ -1,8 +1,121 @@
 {
   "zone_id": "Zone_33",
+  "location_name": "Aminabad",
+  "city": "Lucknow",
+  "zone_type": "Commercial_Downtown",
   "week": 47,
-  "predicted_risk_probability": 0.2680837150252808,
-  "metrics": {
+  "latitude": 26.8465,
+  "longitude": 80.94,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.2681,
+    "predicted_risk_percentage": 26.81,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": -3.0676,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 30.6504,
+    "priority_rank": 33,
+    "priority_level": "LOW",
+    "components": {
+      "risk_score": 26.8084,
+      "population_exposure_score": 40.1178,
+      "vehicle_exposure_score": 27.7732,
+      "temporal_trend_score": 28.9531
+    },
+    "explanation": {
+      "priority_level": "LOW",
+      "priority_score": 30.7,
+      "top_contributors": [
+        {
+          "factor": "Improving Trend",
+          "icon": "\ud83d\udcc9",
+          "value": "29/100",
+          "impact": "POSITIVE",
+          "detail": "Conditions are improving over past 4 weeks",
+          "weight": -28.9531
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "40/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 28.0825
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "27/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 26.8084
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone is currently within acceptable safety parameters. Routine monitoring is sufficient."
+    }
+  },
+  "telemetry": {
+    "congestion": 14.25,
+    "congestion_delta": -10.05,
+    "average_speed_kmh": 61.78,
+    "speed_delta": -1.14,
+    "vehicle_density": 23.66,
+    "density_delta": -6.92,
+    "population_density": 6945,
+    "red_light_violations": 8,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 40,
+    "recommended_green_seconds": 37,
+    "change_seconds": -3,
+    "change_percent": -7.5,
+    "urgency": "NOMINAL",
+    "reason": "Current default timing is adequate",
+    "factors": {
+      "congestion_factor": 1.11,
+      "density_factor": 1.09,
+      "speed_factor": 0.77,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 34349.8,
+    "total_co2_tonnes_per_year": 1786.19,
+    "idle_co2_kg": 1861.1,
+    "moving_co2_kg": 32488.7,
+    "potential_savings_kg_per_week": 398.7,
+    "potential_savings_tonnes_per_year": 20.73,
+    "trees_equivalent_per_year": 987,
+    "fuel_saved_liters_per_week": 172.6,
+    "citizens_impacted": 13890,
+    "optimization_factor_pct": 21.4
+  },
+  "interventions": [
+    {
+      "id": "VIOLATION_ENFORCEMENT",
+      "name": "Red-Light Violation Enforcement",
+      "icon": "\ud83d\udea8",
+      "severity": "HIGH",
+      "description": "Elevated red-light violation count indicates intersection compliance failure.",
+      "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
+    },
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "Aminabad is within safe operating parameters (27% risk). Continue routine monitoring. Optimizing signals could save 399 kg CO2/week, equivalent to 987 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_33",
     "week": 47,
     "zone_type": "Commercial_Downtown",
@@ -51,6 +164,15 @@
     "location_name": "Aminabad",
     "city": "Lucknow",
     "latitude": 26.8465,
-    "longitude": 80.94
+    "longitude": 80.94,
+    "predicted_risk_probability": 0.2681,
+    "risk_score": 26.8084,
+    "population_exposure_score": 40.1178,
+    "vehicle_exposure_score": 27.7732,
+    "temporal_trend_score": 28.9531,
+    "priority_score": 30.6504,
+    "priority_rank": 33,
+    "priority_level": "LOW",
+    "risk_prob": 0.2681
   }
 }

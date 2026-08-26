@@ -1,8 +1,121 @@
 {
   "zone_id": "Zone_14",
+  "location_name": "Connaught Place",
+  "city": "Delhi",
+  "zone_type": "University_District",
   "week": 34,
-  "predicted_risk_probability": 0.4351072763057265,
-  "metrics": {
+  "latitude": 28.6315,
+  "longitude": 77.2167,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.4351,
+    "predicted_risk_percentage": 43.51,
+    "risk_label": "MODERATE RISK",
+    "risk_color": "#eab308",
+    "risk_delta_vs_prev_week": -8.4213,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 57.1558,
+    "priority_rank": 21,
+    "priority_level": "HIGH",
+    "components": {
+      "risk_score": 43.5107,
+      "population_exposure_score": 66.0249,
+      "vehicle_exposure_score": 71.6766,
+      "temporal_trend_score": 59.4001
+    },
+    "explanation": {
+      "priority_level": "HIGH",
+      "priority_score": 57.2,
+      "top_contributors": [
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "72/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 71.6766
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "66/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 10551 residents/km\u00b2",
+          "weight": 66.0249
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "44/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 43.5107
+        },
+        {
+          "factor": "Rising Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "59/100",
+          "impact": "MEDIUM",
+          "detail": "Slight upward trend in congestion over past 4 weeks",
+          "weight": 35.6401
+        }
+      ],
+      "total_factors": 4,
+      "assessment": "This zone shows significant risk elevation driven by Vehicle Density, Population Exposure. Proactive intervention should be scheduled within the current planning cycle."
+    }
+  },
+  "telemetry": {
+    "congestion": 37.78,
+    "congestion_delta": -4.96,
+    "average_speed_kmh": 44.48,
+    "speed_delta": -0.98,
+    "vehicle_density": 53.94,
+    "density_delta": -0.83,
+    "population_density": 10551,
+    "red_light_violations": 2,
+    "weather": "Light Rain",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 49,
+    "change_seconds": 14,
+    "change_percent": 40.0,
+    "urgency": "HIGH",
+    "reason": "Elevated traffic density needs extended clearance time",
+    "factors": {
+      "congestion_factor": 1.3,
+      "density_factor": 1.22,
+      "speed_factor": 0.83,
+      "event_boost": 1.0,
+      "weather_boost": 1.08
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 54242.0,
+    "total_co2_tonnes_per_year": 2820.58,
+    "idle_co2_kg": 11248.9,
+    "moving_co2_kg": 42993.0,
+    "potential_savings_kg_per_week": 2674.8,
+    "potential_savings_tonnes_per_year": 139.09,
+    "trees_equivalent_per_year": 6623,
+    "fuel_saved_liters_per_week": 1157.9,
+    "citizens_impacted": 21102,
+    "optimization_factor_pct": 23.8
+  },
+  "interventions": [
+    {
+      "id": "ROAD_MAINTENANCE",
+      "name": "Road Maintenance Inspection",
+      "icon": "\ud83d\udee3\ufe0f",
+      "severity": "MEDIUM",
+      "description": "Deteriorated road surface combined with elevated risk indicates infrastructure maintenance need.",
+      "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
+    }
+  ],
+  "executive_briefing": "Connaught Place shows elevated risk at 44%. Continue routine monitoring. Optimizing signals could save 2675 kg CO2/week, equivalent to 6623 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_14",
     "week": 34,
     "zone_type": "University_District",
@@ -51,6 +164,15 @@
     "location_name": "Connaught Place",
     "city": "Delhi",
     "latitude": 28.6315,
-    "longitude": 77.2167
+    "longitude": 77.2167,
+    "predicted_risk_probability": 0.4351,
+    "risk_score": 43.5107,
+    "population_exposure_score": 66.0249,
+    "vehicle_exposure_score": 71.6766,
+    "temporal_trend_score": 59.4001,
+    "priority_score": 57.1558,
+    "priority_rank": 21,
+    "priority_level": "HIGH",
+    "risk_prob": 0.4351
   }
 }

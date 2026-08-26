@@ -1,8 +1,121 @@
 {
   "zone_id": "Zone_06",
+  "location_name": "Borivali",
+  "city": "Mumbai",
+  "zone_type": "University_District",
   "week": 41,
-  "predicted_risk_probability": 0.32204963305809337,
-  "metrics": {
+  "latitude": 19.2307,
+  "longitude": 72.8567,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.322,
+    "predicted_risk_percentage": 32.2,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": 5.7521,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 41.5958,
+    "priority_rank": 20,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 32.205,
+      "population_exposure_score": 53.0642,
+      "vehicle_exposure_score": 61.7524,
+      "temporal_trend_score": 20.6485
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 41.6,
+      "top_contributors": [
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "62/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 61.7524
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "53/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 37.1449
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "32/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 32.205
+        },
+        {
+          "factor": "Improving Trend",
+          "icon": "\ud83d\udcc9",
+          "value": "21/100",
+          "impact": "POSITIVE",
+          "detail": "Conditions are improving over past 4 weeks",
+          "weight": -20.6485
+        }
+      ],
+      "total_factors": 4,
+      "assessment": "This zone has moderate risk levels with contributing factors: Vehicle Density, Population Exposure. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 23.92,
+    "congestion_delta": -0.03,
+    "average_speed_kmh": 57.7,
+    "speed_delta": -1.35,
+    "vehicle_density": 46.04,
+    "density_delta": 4.86,
+    "population_density": 8747,
+    "red_light_violations": 5,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 38,
+    "change_seconds": 3,
+    "change_percent": 8.6,
+    "urgency": "MODERATE",
+    "reason": "Slight adjustment for current conditions",
+    "factors": {
+      "congestion_factor": 1.19,
+      "density_factor": 1.18,
+      "speed_factor": 0.78,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 58465.2,
+    "total_co2_tonnes_per_year": 3040.19,
+    "idle_co2_kg": 6079.0,
+    "moving_co2_kg": 52386.2,
+    "potential_savings_kg_per_week": 1361.2,
+    "potential_savings_tonnes_per_year": 70.78,
+    "trees_equivalent_per_year": 3370,
+    "fuel_saved_liters_per_week": 589.3,
+    "citizens_impacted": 17494,
+    "optimization_factor_pct": 22.4
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "No specific risk indicators triggered.",
+      "action": "Continue routine monitoring."
+    }
+  ],
+  "executive_briefing": "Borivali is within safe operating parameters (32% risk). Continue routine monitoring. Optimizing signals could save 1361 kg CO2/week, equivalent to 3370 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_06",
     "week": 41,
     "zone_type": "University_District",
@@ -51,6 +164,15 @@
     "location_name": "Borivali",
     "city": "Mumbai",
     "latitude": 19.2307,
-    "longitude": 72.8567
+    "longitude": 72.8567,
+    "predicted_risk_probability": 0.322,
+    "risk_score": 32.205,
+    "population_exposure_score": 53.0642,
+    "vehicle_exposure_score": 61.7524,
+    "temporal_trend_score": 20.6485,
+    "priority_score": 41.5958,
+    "priority_rank": 20,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.322
   }
 }

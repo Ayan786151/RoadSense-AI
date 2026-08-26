@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_02",
+  "location_name": "Bandra",
+  "city": "Mumbai",
+  "zone_type": "Residential",
   "week": 41,
-  "predicted_risk_probability": 0.2519860737690813,
-  "metrics": {
+  "latitude": 19.0596,
+  "longitude": 72.8295,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.252,
+    "predicted_risk_percentage": 25.2,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": -1.4762,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 42.5292,
+    "priority_rank": 18,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 25.1986,
+      "population_exposure_score": 79.4957,
+      "vehicle_exposure_score": 43.6228,
+      "temporal_trend_score": 25.6751
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 42.5,
+      "top_contributors": [
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "79/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 12426 residents/km\u00b2",
+          "weight": 79.4957
+        },
+        {
+          "factor": "Improving Trend",
+          "icon": "\ud83d\udcc9",
+          "value": "26/100",
+          "impact": "POSITIVE",
+          "detail": "Conditions are improving over past 4 weeks",
+          "weight": -25.6751
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "25/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 25.1986
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone has moderate risk levels with contributing factors: Population Exposure. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 21.25,
+    "congestion_delta": 3.26,
+    "average_speed_kmh": 59.0,
+    "speed_delta": -1.0,
+    "vehicle_density": 34.37,
+    "density_delta": -1.67,
+    "population_density": 12426,
+    "red_light_violations": 6,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 30,
+    "recommended_green_seconds": 31,
+    "change_seconds": 1,
+    "change_percent": 3.3,
+    "urgency": "NOMINAL",
+    "reason": "Current default timing is adequate",
+    "factors": {
+      "congestion_factor": 1.17,
+      "density_factor": 1.14,
+      "speed_factor": 0.78,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 45423.7,
+    "total_co2_tonnes_per_year": 2362.03,
+    "idle_co2_kg": 4031.6,
+    "moving_co2_kg": 41392.1,
+    "potential_savings_kg_per_week": 892.0,
+    "potential_savings_tonnes_per_year": 46.38,
+    "trees_equivalent_per_year": 2208,
+    "fuel_saved_liters_per_week": 386.1,
+    "citizens_impacted": 24852,
+    "optimization_factor_pct": 22.1
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "Bandra is within safe operating parameters (25% risk). Continue routine monitoring. Optimizing signals could save 892 kg CO2/week, equivalent to 2208 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_02",
     "week": 41,
     "zone_type": "Residential",
@@ -51,6 +156,15 @@
     "location_name": "Bandra",
     "city": "Mumbai",
     "latitude": 19.0596,
-    "longitude": 72.8295
+    "longitude": 72.8295,
+    "predicted_risk_probability": 0.252,
+    "risk_score": 25.1986,
+    "population_exposure_score": 79.4957,
+    "vehicle_exposure_score": 43.6228,
+    "temporal_trend_score": 25.6751,
+    "priority_score": 42.5292,
+    "priority_rank": 18,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.252
   }
 }

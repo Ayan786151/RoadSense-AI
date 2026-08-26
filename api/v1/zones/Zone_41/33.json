@@ -1,8 +1,121 @@
 {
   "zone_id": "Zone_41",
+  "location_name": "Adyar",
+  "city": "Chennai",
+  "zone_type": "Highway_Junction",
   "week": 33,
-  "predicted_risk_probability": 0.8662474242991304,
-  "metrics": {
+  "latitude": 13.0063,
+  "longitude": 80.2574,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.8662,
+    "predicted_risk_percentage": 86.62,
+    "risk_label": "CRITICAL RISK",
+    "risk_color": "#ef4444",
+    "risk_delta_vs_prev_week": 65.2149,
+    "actual_incident": 1
+  },
+  "priority": {
+    "priority_score": 47.5234,
+    "priority_rank": 28,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 86.6247,
+      "population_exposure_score": 8.5351,
+      "vehicle_exposure_score": 28.5495,
+      "temporal_trend_score": 33.532
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 47.5,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udd34",
+          "value": "87/100",
+          "impact": "HIGH",
+          "detail": "Model-estimated risk score is in the critical range",
+          "weight": 86.6247
+        },
+        {
+          "factor": "Speed Anomaly",
+          "icon": "\ud83d\udc0c",
+          "value": "22 km/h",
+          "impact": "HIGH",
+          "detail": "Average speed of 22 km/h indicates near-gridlock conditions",
+          "weight": 77.83
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "63/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate congestion at 63",
+          "weight": 44.03
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone has moderate risk levels with contributing factors: Risk Score, Speed Anomaly. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 62.9,
+    "congestion_delta": 47.19,
+    "average_speed_kmh": 22.17,
+    "speed_delta": -41.14,
+    "vehicle_density": 20.68,
+    "density_delta": 4.14,
+    "population_density": 2549,
+    "red_light_violations": 6,
+    "weather": "Heavy Rain",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 50,
+    "recommended_green_seconds": 88,
+    "change_seconds": 38,
+    "change_percent": 76.0,
+    "urgency": "CRITICAL",
+    "reason": "Severe congestion requires significantly extended green phase",
+    "factors": {
+      "congestion_factor": 1.5,
+      "density_factor": 1.08,
+      "speed_factor": 0.92,
+      "event_boost": 1.0,
+      "weather_boost": 1.18
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 15998.0,
+    "total_co2_tonnes_per_year": 831.89,
+    "idle_co2_kg": 7180.3,
+    "moving_co2_kg": 8817.7,
+    "potential_savings_kg_per_week": 1887.7,
+    "potential_savings_tonnes_per_year": 98.16,
+    "trees_equivalent_per_year": 4674,
+    "fuel_saved_liters_per_week": 817.2,
+    "citizens_impacted": 5098,
+    "optimization_factor_pct": 26.3
+  },
+  "interventions": [
+    {
+      "id": "SIGNAL_OPTIMIZATION",
+      "name": "Traffic Signal Optimization",
+      "icon": "\ud83d\udea6",
+      "severity": "HIGH",
+      "description": "High congestion with low throughput speed indicates signal timing inefficiency.",
+      "action": "Review and optimize signal timing at major intersections in this zone."
+    },
+    {
+      "id": "ROAD_MAINTENANCE",
+      "name": "Road Maintenance Inspection",
+      "icon": "\ud83d\udee3\ufe0f",
+      "severity": "MEDIUM",
+      "description": "Deteriorated road surface combined with elevated risk indicates infrastructure maintenance need.",
+      "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
+    }
+  ],
+  "executive_briefing": "Adyar is in a critical safety state with 87% incident risk. Signal optimization recommended \u2014 congestion at 63/100 with speeds averaging 22 km/h. Optimizing signals could save 1888 kg CO2/week, equivalent to 4674 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_41",
     "week": 33,
     "zone_type": "Highway_Junction",
@@ -51,6 +164,15 @@
     "location_name": "Adyar",
     "city": "Chennai",
     "latitude": 13.0063,
-    "longitude": 80.2574
+    "longitude": 80.2574,
+    "predicted_risk_probability": 0.8662,
+    "risk_score": 86.6247,
+    "population_exposure_score": 8.5351,
+    "vehicle_exposure_score": 28.5495,
+    "temporal_trend_score": 33.532,
+    "priority_score": 47.5234,
+    "priority_rank": 28,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.8662
   }
 }

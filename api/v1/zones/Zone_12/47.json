@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_12",
+  "location_name": "Malad",
+  "city": "Mumbai",
+  "zone_type": "Commercial_Downtown",
   "week": 47,
-  "predicted_risk_probability": 0.22511653648187205,
-  "metrics": {
+  "latitude": 19.1874,
+  "longitude": 72.8484,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.2251,
+    "predicted_risk_percentage": 22.51,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": -4.619,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 29.919,
+    "priority_rank": 34,
+    "priority_level": "LOW",
+    "components": {
+      "risk_score": 22.5117,
+      "population_exposure_score": 52.9061,
+      "vehicle_exposure_score": 24.1343,
+      "temporal_trend_score": 19.0734
+    },
+    "explanation": {
+      "priority_level": "LOW",
+      "priority_score": 29.9,
+      "top_contributors": [
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "53/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 37.0343
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "23/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 22.5117
+        },
+        {
+          "factor": "Improving Trend",
+          "icon": "\ud83d\udcc9",
+          "value": "19/100",
+          "impact": "POSITIVE",
+          "detail": "Conditions are improving over past 4 weeks",
+          "weight": -19.0734
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone is currently within acceptable safety parameters. Routine monitoring is sufficient."
+    }
+  },
+  "telemetry": {
+    "congestion": 12.21,
+    "congestion_delta": -1.97,
+    "average_speed_kmh": 64.88,
+    "speed_delta": 4.4,
+    "vehicle_density": 20.56,
+    "density_delta": -1.47,
+    "population_density": 8725,
+    "red_light_violations": 5,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 40,
+    "recommended_green_seconds": 35,
+    "change_seconds": -5,
+    "change_percent": -12.5,
+    "urgency": "OPTIMIZE",
+    "reason": "Low traffic \u2014 reduce green time to improve cross-traffic flow",
+    "factors": {
+      "congestion_factor": 1.1,
+      "density_factor": 1.08,
+      "speed_factor": 0.76,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 31739.6,
+    "total_co2_tonnes_per_year": 1650.46,
+    "idle_co2_kg": 1385.7,
+    "moving_co2_kg": 30353.9,
+    "potential_savings_kg_per_week": 294.1,
+    "potential_savings_tonnes_per_year": 15.29,
+    "trees_equivalent_per_year": 728,
+    "fuel_saved_liters_per_week": 127.3,
+    "citizens_impacted": 17450,
+    "optimization_factor_pct": 21.2
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "Malad is within safe operating parameters (23% risk). Continue routine monitoring. Optimizing signals could save 294 kg CO2/week, equivalent to 728 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_12",
     "week": 47,
     "zone_type": "Commercial_Downtown",
@@ -51,6 +156,15 @@
     "location_name": "Malad",
     "city": "Mumbai",
     "latitude": 19.1874,
-    "longitude": 72.8484
+    "longitude": 72.8484,
+    "predicted_risk_probability": 0.2251,
+    "risk_score": 22.5117,
+    "population_exposure_score": 52.9061,
+    "vehicle_exposure_score": 24.1343,
+    "temporal_trend_score": 19.0734,
+    "priority_score": 29.919,
+    "priority_rank": 34,
+    "priority_level": "LOW",
+    "risk_prob": 0.2251
   }
 }

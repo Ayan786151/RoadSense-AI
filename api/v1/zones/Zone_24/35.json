@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_24",
+  "location_name": "Nehru Place",
+  "city": "Delhi",
+  "zone_type": "Commercial_Downtown",
   "week": 35,
-  "predicted_risk_probability": 0.643643228464663,
-  "metrics": {
+  "latitude": 28.5491,
+  "longitude": 77.2519,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.6436,
+    "predicted_risk_percentage": 64.36,
+    "risk_label": "HIGH RISK",
+    "risk_color": "#f97316",
+    "risk_delta_vs_prev_week": 43.4904,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 49.0007,
+    "priority_rank": 24,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 64.3643,
+      "population_exposure_score": 52.2523,
+      "vehicle_exposure_score": 35.6616,
+      "temporal_trend_score": 20.3973
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 49.0,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "64/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 64.3643
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "52/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 36.5766
+        },
+        {
+          "factor": "Improving Trend",
+          "icon": "\ud83d\udcc9",
+          "value": "20/100",
+          "impact": "POSITIVE",
+          "detail": "Conditions are improving over past 4 weeks",
+          "weight": -20.3973
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone has moderate risk levels with contributing factors: Risk Score, Population Exposure. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 30.21,
+    "congestion_delta": 14.37,
+    "average_speed_kmh": 34.81,
+    "speed_delta": -19.62,
+    "vehicle_density": 27.34,
+    "density_delta": 2.05,
+    "population_density": 8634,
+    "red_light_violations": 4,
+    "weather": "Heavy Rain",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 40,
+    "recommended_green_seconds": 56,
+    "change_seconds": 16,
+    "change_percent": 40.0,
+    "urgency": "HIGH",
+    "reason": "Elevated traffic density needs extended clearance time",
+    "factors": {
+      "congestion_factor": 1.24,
+      "density_factor": 1.11,
+      "speed_factor": 0.87,
+      "event_boost": 1.0,
+      "weather_boost": 1.18
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 23688.0,
+    "total_co2_tonnes_per_year": 1231.78,
+    "idle_co2_kg": 4559.2,
+    "moving_co2_kg": 19128.8,
+    "potential_savings_kg_per_week": 1049.6,
+    "potential_savings_tonnes_per_year": 54.58,
+    "trees_equivalent_per_year": 2598,
+    "fuel_saved_liters_per_week": 454.4,
+    "citizens_impacted": 17268,
+    "optimization_factor_pct": 23.0
+  },
+  "interventions": [
+    {
+      "id": "ROAD_MAINTENANCE",
+      "name": "Road Maintenance Inspection",
+      "icon": "\ud83d\udee3\ufe0f",
+      "severity": "MEDIUM",
+      "description": "Deteriorated road surface combined with elevated risk indicates infrastructure maintenance need.",
+      "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
+    }
+  ],
+  "executive_briefing": "Nehru Place is in a critical safety state with 64% incident risk. Continue routine monitoring. Optimizing signals could save 1050 kg CO2/week, equivalent to 2598 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_24",
     "week": 35,
     "zone_type": "Commercial_Downtown",
@@ -51,6 +156,15 @@
     "location_name": "Nehru Place",
     "city": "Delhi",
     "latitude": 28.5491,
-    "longitude": 77.2519
+    "longitude": 77.2519,
+    "predicted_risk_probability": 0.6436,
+    "risk_score": 64.3643,
+    "population_exposure_score": 52.2523,
+    "vehicle_exposure_score": 35.6616,
+    "temporal_trend_score": 20.3973,
+    "priority_score": 49.0007,
+    "priority_rank": 24,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.6436
   }
 }

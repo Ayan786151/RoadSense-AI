@@ -1,8 +1,153 @@
 {
   "zone_id": "Zone_11",
+  "location_name": "Lower Parel",
+  "city": "Mumbai",
+  "zone_type": "Residential",
   "week": 32,
-  "predicted_risk_probability": 0.9771794673027249,
-  "metrics": {
+  "latitude": 18.9988,
+  "longitude": 72.8258,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.9772,
+    "predicted_risk_percentage": 97.72,
+    "risk_label": "CRITICAL RISK",
+    "risk_color": "#ef4444",
+    "risk_delta_vs_prev_week": 2.9315,
+    "actual_incident": 1
+  },
+  "priority": {
+    "priority_score": 64.1734,
+    "priority_rank": 17,
+    "priority_level": "HIGH",
+    "components": {
+      "risk_score": 97.7179,
+      "population_exposure_score": 61.7429,
+      "vehicle_exposure_score": 48.2524,
+      "temporal_trend_score": 0.0
+    },
+    "explanation": {
+      "priority_level": "HIGH",
+      "priority_score": 64.2,
+      "top_contributors": [
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "100/100",
+          "impact": "HIGH",
+          "detail": "Congestion index at 100 \u2014 severe traffic flow degradation",
+          "weight": 100.0
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udd34",
+          "value": "98/100",
+          "impact": "HIGH",
+          "detail": "Model-estimated risk score is in the critical range",
+          "weight": 97.7179
+        },
+        {
+          "factor": "Speed Anomaly",
+          "icon": "\ud83d\udc0c",
+          "value": "10 km/h",
+          "impact": "HIGH",
+          "detail": "Average speed of 10 km/h indicates near-gridlock conditions",
+          "weight": 90.0
+        },
+        {
+          "factor": "Violation Count",
+          "icon": "\ud83d\udea8",
+          "value": "13",
+          "impact": "HIGH",
+          "detail": "13 red-light violations recorded \u2014 intersection safety concern",
+          "weight": 65
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "62/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 9955 residents/km\u00b2",
+          "weight": 61.7429
+        }
+      ],
+      "total_factors": 6,
+      "assessment": "This zone shows significant risk elevation driven by Congestion, Risk Score. Proactive intervention should be scheduled within the current planning cycle."
+    }
+  },
+  "telemetry": {
+    "congestion": 100.0,
+    "congestion_delta": 23.33,
+    "average_speed_kmh": 10.0,
+    "speed_delta": -19.78,
+    "vehicle_density": 32.58,
+    "density_delta": -6.91,
+    "population_density": 9955,
+    "red_light_violations": 13,
+    "weather": "Heavy Rain",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 30,
+    "recommended_green_seconds": 69,
+    "change_seconds": 39,
+    "change_percent": 130.0,
+    "urgency": "CRITICAL",
+    "reason": "Severe congestion requires significantly extended green phase",
+    "factors": {
+      "congestion_factor": 1.8,
+      "density_factor": 1.13,
+      "speed_factor": 0.96,
+      "event_boost": 1.0,
+      "weather_boost": 1.18
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 18257.8,
+    "total_co2_tonnes_per_year": 949.41,
+    "idle_co2_kg": 17085.0,
+    "moving_co2_kg": 1172.9,
+    "potential_savings_kg_per_week": 5125.5,
+    "potential_savings_tonnes_per_year": 266.53,
+    "trees_equivalent_per_year": 12691,
+    "fuel_saved_liters_per_week": 2218.8,
+    "citizens_impacted": 19910,
+    "optimization_factor_pct": 30.0
+  },
+  "interventions": [
+    {
+      "id": "SIGNAL_OPTIMIZATION",
+      "name": "Traffic Signal Optimization",
+      "icon": "\ud83d\udea6",
+      "severity": "HIGH",
+      "description": "High congestion with low throughput speed indicates signal timing inefficiency.",
+      "action": "Review and optimize signal timing at major intersections in this zone."
+    },
+    {
+      "id": "VIOLATION_ENFORCEMENT",
+      "name": "Red-Light Violation Enforcement",
+      "icon": "\ud83d\udea8",
+      "severity": "HIGH",
+      "description": "Elevated red-light violation count indicates intersection compliance failure.",
+      "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
+    },
+    {
+      "id": "ROAD_MAINTENANCE",
+      "name": "Road Maintenance Inspection",
+      "icon": "\ud83d\udee3\ufe0f",
+      "severity": "MEDIUM",
+      "description": "Deteriorated road surface combined with elevated risk indicates infrastructure maintenance need.",
+      "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
+    },
+    {
+      "id": "MONITORING_UPGRADE",
+      "name": "Enhanced Monitoring & CCTV Coverage",
+      "icon": "\ud83d\udcf9",
+      "severity": "MEDIUM",
+      "description": "High-risk zone with significant population exposure warrants improved surveillance.",
+      "action": "Install additional CCTV cameras and integrate with traffic management center for real-time monitoring."
+    }
+  ],
+  "executive_briefing": "Lower Parel is in a critical safety state with 98% incident risk. Signal optimization recommended \u2014 congestion at 100/100 with speeds averaging 10 km/h. Optimizing signals could save 5126 kg CO2/week, equivalent to 12691 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_11",
     "week": 32,
     "zone_type": "Residential",
@@ -51,6 +196,15 @@
     "location_name": "Lower Parel",
     "city": "Mumbai",
     "latitude": 18.9988,
-    "longitude": 72.8258
+    "longitude": 72.8258,
+    "predicted_risk_probability": 0.9772,
+    "risk_score": 97.7179,
+    "population_exposure_score": 61.7429,
+    "vehicle_exposure_score": 48.2524,
+    "temporal_trend_score": 0.0,
+    "priority_score": 64.1734,
+    "priority_rank": 17,
+    "priority_level": "HIGH",
+    "risk_prob": 0.9772
   }
 }

@@ -1,8 +1,121 @@
 {
   "zone_id": "Zone_36",
+  "location_name": "Rajajipuram",
+  "city": "Lucknow",
+  "zone_type": "Residential",
   "week": 12,
-  "predicted_risk_probability": 0.6067711900637917,
-  "metrics": {
+  "latitude": 26.833,
+  "longitude": 80.89,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.6068,
+    "predicted_risk_percentage": 60.68,
+    "risk_label": "HIGH RISK",
+    "risk_color": "#f97316",
+    "risk_delta_vs_prev_week": 35.3313,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 61.8396,
+    "priority_rank": 8,
+    "priority_level": "HIGH",
+    "components": {
+      "risk_score": 60.6771,
+      "population_exposure_score": 81.73,
+      "vehicle_exposure_score": 55.3142,
+      "temporal_trend_score": 40.4895
+    },
+    "explanation": {
+      "priority_level": "HIGH",
+      "priority_score": 61.8,
+      "top_contributors": [
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "82/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 12737 residents/km\u00b2",
+          "weight": 81.73
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "61/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 60.6771
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "42/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate congestion at 42",
+          "weight": 29.12
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone shows significant risk elevation driven by Population Exposure. Proactive intervention should be scheduled within the current planning cycle."
+    }
+  },
+  "telemetry": {
+    "congestion": 41.6,
+    "congestion_delta": 15.83,
+    "average_speed_kmh": 43.62,
+    "speed_delta": -16.86,
+    "vehicle_density": 35.39,
+    "density_delta": -0.74,
+    "population_density": 12737,
+    "red_light_violations": 9,
+    "weather": "Light Rain",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 30,
+    "recommended_green_seconds": 41,
+    "change_seconds": 11,
+    "change_percent": 36.7,
+    "urgency": "HIGH",
+    "reason": "Elevated traffic density needs extended clearance time",
+    "factors": {
+      "congestion_factor": 1.33,
+      "density_factor": 1.14,
+      "speed_factor": 0.84,
+      "event_boost": 1.0,
+      "weather_boost": 1.08
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 34090.7,
+    "total_co2_tonnes_per_year": 1772.72,
+    "idle_co2_kg": 8126.7,
+    "moving_co2_kg": 25964.0,
+    "potential_savings_kg_per_week": 1963.4,
+    "potential_savings_tonnes_per_year": 102.1,
+    "trees_equivalent_per_year": 4861,
+    "fuel_saved_liters_per_week": 850.0,
+    "citizens_impacted": 25474,
+    "optimization_factor_pct": 24.2
+  },
+  "interventions": [
+    {
+      "id": "VIOLATION_ENFORCEMENT",
+      "name": "Red-Light Violation Enforcement",
+      "icon": "\ud83d\udea8",
+      "severity": "HIGH",
+      "description": "Elevated red-light violation count indicates intersection compliance failure.",
+      "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
+    },
+    {
+      "id": "ROAD_MAINTENANCE",
+      "name": "Road Maintenance Inspection",
+      "icon": "\ud83d\udee3\ufe0f",
+      "severity": "MEDIUM",
+      "description": "Deteriorated road surface combined with elevated risk indicates infrastructure maintenance need.",
+      "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
+    }
+  ],
+  "executive_briefing": "Rajajipuram is in a critical safety state with 61% incident risk. Enforcement focus needed \u2014 9 red-light violations recorded. Optimizing signals could save 1963 kg CO2/week, equivalent to 4861 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_36",
     "week": 12,
     "zone_type": "Residential",
@@ -51,6 +164,15 @@
     "location_name": "Rajajipuram",
     "city": "Lucknow",
     "latitude": 26.833,
-    "longitude": 80.89
+    "longitude": 80.89,
+    "predicted_risk_probability": 0.6068,
+    "risk_score": 60.6771,
+    "population_exposure_score": 81.73,
+    "vehicle_exposure_score": 55.3142,
+    "temporal_trend_score": 40.4895,
+    "priority_score": 61.8396,
+    "priority_rank": 8,
+    "priority_level": "HIGH",
+    "risk_prob": 0.6068
   }
 }

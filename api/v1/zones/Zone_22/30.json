@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_22",
+  "location_name": "Pitampura",
+  "city": "Delhi",
+  "zone_type": "University_District",
   "week": 30,
-  "predicted_risk_probability": 0.3100317174882787,
-  "metrics": {
+  "latitude": 28.7033,
+  "longitude": 77.1322,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.31,
+    "predicted_risk_percentage": 31.0,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": -12.1796,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 45.1402,
+    "priority_rank": 24,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 31.0032,
+      "population_exposure_score": 44.6081,
+      "vehicle_exposure_score": 71.6094,
+      "temporal_trend_score": 48.4337
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 45.1,
+      "top_contributors": [
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "72/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 71.6094
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "45/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 31.2257
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "31/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 31.0032
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone has moderate risk levels with contributing factors: Vehicle Density, Population Exposure. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 30.69,
+    "congestion_delta": -4.45,
+    "average_speed_kmh": 57.25,
+    "speed_delta": 2.28,
+    "vehicle_density": 49.21,
+    "density_delta": 4.26,
+    "population_density": 7570,
+    "red_light_violations": 4,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 40,
+    "change_seconds": 5,
+    "change_percent": 14.3,
+    "urgency": "MODERATE",
+    "reason": "Slight adjustment for current conditions",
+    "factors": {
+      "congestion_factor": 1.25,
+      "density_factor": 1.2,
+      "speed_factor": 0.79,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 58949.3,
+    "total_co2_tonnes_per_year": 3065.37,
+    "idle_co2_kg": 8336.6,
+    "moving_co2_kg": 50612.7,
+    "potential_savings_kg_per_week": 1923.2,
+    "potential_savings_tonnes_per_year": 100.0,
+    "trees_equivalent_per_year": 4762,
+    "fuel_saved_liters_per_week": 832.5,
+    "citizens_impacted": 15140,
+    "optimization_factor_pct": 23.1
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "No specific risk indicators triggered.",
+      "action": "Continue routine monitoring."
+    }
+  ],
+  "executive_briefing": "Pitampura is within safe operating parameters (31% risk). Continue routine monitoring. Optimizing signals could save 1923 kg CO2/week, equivalent to 4762 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_22",
     "week": 30,
     "zone_type": "University_District",
@@ -51,6 +156,15 @@
     "location_name": "Pitampura",
     "city": "Delhi",
     "latitude": 28.7033,
-    "longitude": 77.1322
+    "longitude": 77.1322,
+    "predicted_risk_probability": 0.31,
+    "risk_score": 31.0032,
+    "population_exposure_score": 44.6081,
+    "vehicle_exposure_score": 71.6094,
+    "temporal_trend_score": 48.4337,
+    "priority_score": 45.1402,
+    "priority_rank": 24,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.31
   }
 }

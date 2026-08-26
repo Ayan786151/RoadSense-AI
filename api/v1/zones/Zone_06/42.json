@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_06",
+  "location_name": "Borivali",
+  "city": "Mumbai",
+  "zone_type": "University_District",
   "week": 42,
-  "predicted_risk_probability": 0.45233511569985135,
-  "metrics": {
+  "latitude": 19.2307,
+  "longitude": 72.8567,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.4523,
+    "predicted_risk_percentage": 45.23,
+    "risk_label": "MODERATE RISK",
+    "risk_color": "#eab308",
+    "risk_delta_vs_prev_week": 13.0285,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 50.8527,
+    "priority_rank": 13,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 45.2335,
+      "population_exposure_score": 53.0642,
+      "vehicle_exposure_score": 53.2312,
+      "temporal_trend_score": 58.9804
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 50.9,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "45/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 45.2335
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "53/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 37.1449
+        },
+        {
+          "factor": "Rising Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "59/100",
+          "impact": "MEDIUM",
+          "detail": "Slight upward trend in congestion over past 4 weeks",
+          "weight": 35.3882
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone has moderate risk levels with contributing factors: Risk Score, Population Exposure. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 32.22,
+    "congestion_delta": 8.3,
+    "average_speed_kmh": 49.08,
+    "speed_delta": -8.62,
+    "vehicle_density": 41.38,
+    "density_delta": -4.66,
+    "population_density": 8747,
+    "red_light_violations": 6,
+    "weather": "Light Rain",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 45,
+    "change_seconds": 10,
+    "change_percent": 28.6,
+    "urgency": "HIGH",
+    "reason": "Elevated traffic density needs extended clearance time",
+    "factors": {
+      "congestion_factor": 1.26,
+      "density_factor": 1.17,
+      "speed_factor": 0.82,
+      "event_boost": 1.0,
+      "weather_boost": 1.08
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 47004.7,
+    "total_co2_tonnes_per_year": 2444.24,
+    "idle_co2_kg": 7359.6,
+    "moving_co2_kg": 39645.1,
+    "potential_savings_kg_per_week": 1709.0,
+    "potential_savings_tonnes_per_year": 88.87,
+    "trees_equivalent_per_year": 4231,
+    "fuel_saved_liters_per_week": 739.8,
+    "citizens_impacted": 17494,
+    "optimization_factor_pct": 23.2
+  },
+  "interventions": [
+    {
+      "id": "ROAD_MAINTENANCE",
+      "name": "Road Maintenance Inspection",
+      "icon": "\ud83d\udee3\ufe0f",
+      "severity": "MEDIUM",
+      "description": "Deteriorated road surface combined with elevated risk indicates infrastructure maintenance need.",
+      "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
+    }
+  ],
+  "executive_briefing": "Borivali shows elevated risk at 45%. Continue routine monitoring. Optimizing signals could save 1709 kg CO2/week, equivalent to 4231 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_06",
     "week": 42,
     "zone_type": "University_District",
@@ -51,6 +156,15 @@
     "location_name": "Borivali",
     "city": "Mumbai",
     "latitude": 19.2307,
-    "longitude": 72.8567
+    "longitude": 72.8567,
+    "predicted_risk_probability": 0.4523,
+    "risk_score": 45.2335,
+    "population_exposure_score": 53.0642,
+    "vehicle_exposure_score": 53.2312,
+    "temporal_trend_score": 58.9804,
+    "priority_score": 50.8527,
+    "priority_rank": 13,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.4523
   }
 }

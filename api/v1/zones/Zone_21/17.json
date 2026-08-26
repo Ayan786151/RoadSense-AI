@@ -1,8 +1,105 @@
 {
   "zone_id": "Zone_21",
+  "location_name": "Janakpuri",
+  "city": "Delhi",
+  "zone_type": "Residential",
   "week": 17,
-  "predicted_risk_probability": 0.3150280744196481,
-  "metrics": {
+  "latitude": 28.6219,
+  "longitude": 77.0878,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.315,
+    "predicted_risk_percentage": 31.5,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": 12.968,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 48.3631,
+    "priority_rank": 18,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 31.5028,
+      "population_exposure_score": 73.8846,
+      "vehicle_exposure_score": 59.7963,
+      "temporal_trend_score": 35.5436
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 48.4,
+      "top_contributors": [
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "74/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 11645 residents/km\u00b2",
+          "weight": 73.8846
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "32/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 31.5028
+        }
+      ],
+      "total_factors": 2,
+      "assessment": "This zone has moderate risk levels with contributing factors: Population Exposure. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 29.39,
+    "congestion_delta": 9.96,
+    "average_speed_kmh": 55.57,
+    "speed_delta": -6.52,
+    "vehicle_density": 41.54,
+    "density_delta": 7.69,
+    "population_density": 11645,
+    "red_light_violations": 4,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 30,
+    "recommended_green_seconds": 34,
+    "change_seconds": 4,
+    "change_percent": 13.3,
+    "urgency": "MODERATE",
+    "reason": "Slight adjustment for current conditions",
+    "factors": {
+      "congestion_factor": 1.24,
+      "density_factor": 1.17,
+      "speed_factor": 0.79,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 48987.3,
+    "total_co2_tonnes_per_year": 2547.34,
+    "idle_co2_kg": 6739.2,
+    "moving_co2_kg": 42248.2,
+    "potential_savings_kg_per_week": 1545.9,
+    "potential_savings_tonnes_per_year": 80.39,
+    "trees_equivalent_per_year": 3827,
+    "fuel_saved_liters_per_week": 669.2,
+    "citizens_impacted": 23290,
+    "optimization_factor_pct": 22.9
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "No specific risk indicators triggered.",
+      "action": "Continue routine monitoring."
+    }
+  ],
+  "executive_briefing": "Janakpuri is within safe operating parameters (32% risk). Continue routine monitoring. Optimizing signals could save 1546 kg CO2/week, equivalent to 3827 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_21",
     "week": 17,
     "zone_type": "Residential",
@@ -51,6 +148,15 @@
     "location_name": "Janakpuri",
     "city": "Delhi",
     "latitude": 28.6219,
-    "longitude": 77.0878
+    "longitude": 77.0878,
+    "predicted_risk_probability": 0.315,
+    "risk_score": 31.5028,
+    "population_exposure_score": 73.8846,
+    "vehicle_exposure_score": 59.7963,
+    "temporal_trend_score": 35.5436,
+    "priority_score": 48.3631,
+    "priority_rank": 18,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.315
   }
 }

@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_46",
+  "location_name": "Nungambakkam",
+  "city": "Chennai",
+  "zone_type": "University_District",
   "week": 11,
-  "predicted_risk_probability": 0.30962208634110167,
-  "metrics": {
+  "latitude": 13.0569,
+  "longitude": 80.2425,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.3096,
+    "predicted_risk_percentage": 30.96,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": 5.9532,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 33.743,
+    "priority_rank": 29,
+    "priority_level": "LOW",
+    "components": {
+      "risk_score": 30.9622,
+      "population_exposure_score": 48.0494,
+      "vehicle_exposure_score": 46.7287,
+      "temporal_trend_score": 0.0
+    },
+    "explanation": {
+      "priority_level": "LOW",
+      "priority_score": 33.7,
+      "top_contributors": [
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "48/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 33.6346
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "31/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 30.9622
+        },
+        {
+          "factor": "Improving Trend",
+          "icon": "\ud83d\udcc9",
+          "value": "0/100",
+          "impact": "POSITIVE",
+          "detail": "Conditions are improving over past 4 weeks",
+          "weight": -0.0
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone is currently within acceptable safety parameters. Routine monitoring is sufficient."
+    }
+  },
+  "telemetry": {
+    "congestion": 23.58,
+    "congestion_delta": 1.63,
+    "average_speed_kmh": 58.69,
+    "speed_delta": 0.42,
+    "vehicle_density": 29.64,
+    "density_delta": 1.32,
+    "population_density": 8049,
+    "red_light_violations": 4,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 36,
+    "change_seconds": 1,
+    "change_percent": 2.9,
+    "urgency": "NOMINAL",
+    "reason": "Current default timing is adequate",
+    "factors": {
+      "congestion_factor": 1.19,
+      "density_factor": 1.12,
+      "speed_factor": 0.78,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 38315.5,
+    "total_co2_tonnes_per_year": 1992.41,
+    "idle_co2_kg": 3858.0,
+    "moving_co2_kg": 34457.5,
+    "potential_savings_kg_per_week": 862.6,
+    "potential_savings_tonnes_per_year": 44.85,
+    "trees_equivalent_per_year": 2135,
+    "fuel_saved_liters_per_week": 373.4,
+    "citizens_impacted": 16098,
+    "optimization_factor_pct": 22.4
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "No specific risk indicators triggered.",
+      "action": "Continue routine monitoring."
+    }
+  ],
+  "executive_briefing": "Nungambakkam is within safe operating parameters (31% risk). Continue routine monitoring. Optimizing signals could save 863 kg CO2/week, equivalent to 2135 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_46",
     "week": 11,
     "zone_type": "University_District",
@@ -51,6 +156,15 @@
     "location_name": "Nungambakkam",
     "city": "Chennai",
     "latitude": 13.0569,
-    "longitude": 80.2425
+    "longitude": 80.2425,
+    "predicted_risk_probability": 0.3096,
+    "risk_score": 30.9622,
+    "population_exposure_score": 48.0494,
+    "vehicle_exposure_score": 46.7287,
+    "temporal_trend_score": 0.0,
+    "priority_score": 33.743,
+    "priority_rank": 29,
+    "priority_level": "LOW",
+    "risk_prob": 0.3096
   }
 }

@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_17",
+  "location_name": "Saket",
+  "city": "Delhi",
+  "zone_type": "Residential",
   "week": 49,
-  "predicted_risk_probability": 0.3651180039018531,
-  "metrics": {
+  "latitude": 28.5244,
+  "longitude": 77.2066,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.3651,
+    "predicted_risk_percentage": 36.51,
+    "risk_label": "MODERATE RISK",
+    "risk_color": "#eab308",
+    "risk_delta_vs_prev_week": 10.0524,
+    "actual_incident": 1
+  },
+  "priority": {
+    "priority_score": 42.5065,
+    "priority_rank": 26,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 36.5118,
+      "population_exposure_score": 48.1572,
+      "vehicle_exposure_score": 19.738,
+      "temporal_trend_score": 79.4324
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 42.5,
+      "top_contributors": [
+        {
+          "factor": "Worsening Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "79/100",
+          "impact": "HIGH",
+          "detail": "4-week congestion trend is actively worsening \u2014 conditions deteriorating",
+          "weight": 79.4324
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "37/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 36.5118
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "48/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 33.71
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone has moderate risk levels with contributing factors: Worsening Trend, Population Exposure. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 24.76,
+    "congestion_delta": -0.93,
+    "average_speed_kmh": 50.03,
+    "speed_delta": -7.51,
+    "vehicle_density": 18.67,
+    "density_delta": -4.35,
+    "population_density": 8064,
+    "red_light_violations": 2,
+    "weather": "Light Rain",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 30,
+    "recommended_green_seconds": 33,
+    "change_seconds": 3,
+    "change_percent": 10.0,
+    "urgency": "MODERATE",
+    "reason": "Slight adjustment for current conditions",
+    "factors": {
+      "congestion_factor": 1.2,
+      "density_factor": 1.07,
+      "speed_factor": 0.81,
+      "event_boost": 1.0,
+      "weather_boost": 1.08
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 20768.0,
+    "total_co2_tonnes_per_year": 1079.93,
+    "idle_co2_kg": 2551.7,
+    "moving_co2_kg": 18216.2,
+    "potential_savings_kg_per_week": 573.5,
+    "potential_savings_tonnes_per_year": 29.82,
+    "trees_equivalent_per_year": 1420,
+    "fuel_saved_liters_per_week": 248.3,
+    "citizens_impacted": 16128,
+    "optimization_factor_pct": 22.5
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "No specific risk indicators triggered.",
+      "action": "Continue routine monitoring."
+    }
+  ],
+  "executive_briefing": "Saket shows elevated risk at 37%. Continue routine monitoring. Optimizing signals could save 574 kg CO2/week, equivalent to 1420 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_17",
     "week": 49,
     "zone_type": "Residential",
@@ -51,6 +156,15 @@
     "location_name": "Saket",
     "city": "Delhi",
     "latitude": 28.5244,
-    "longitude": 77.2066
+    "longitude": 77.2066,
+    "predicted_risk_probability": 0.3651,
+    "risk_score": 36.5118,
+    "population_exposure_score": 48.1572,
+    "vehicle_exposure_score": 19.738,
+    "temporal_trend_score": 79.4324,
+    "priority_score": 42.5065,
+    "priority_rank": 26,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.3651
   }
 }

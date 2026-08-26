@@ -1,8 +1,129 @@
 {
   "zone_id": "Zone_29",
+  "location_name": "Indira Nagar",
+  "city": "Lucknow",
+  "zone_type": "Residential",
   "week": 24,
-  "predicted_risk_probability": 0.39566708039855797,
-  "metrics": {
+  "latitude": 26.88,
+  "longitude": 81.0,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.3957,
+    "predicted_risk_percentage": 39.57,
+    "risk_label": "MODERATE RISK",
+    "risk_color": "#eab308",
+    "risk_delta_vs_prev_week": 1.0581,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 63.1061,
+    "priority_rank": 9,
+    "priority_level": "HIGH",
+    "components": {
+      "risk_score": 39.5667,
+      "population_exposure_score": 86.8525,
+      "vehicle_exposure_score": 76.7743,
+      "temporal_trend_score": 68.0765
+    },
+    "explanation": {
+      "priority_level": "HIGH",
+      "priority_score": 63.1,
+      "top_contributors": [
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "87/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 13450 residents/km\u00b2",
+          "weight": 86.8525
+        },
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "77/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 76.7743
+        },
+        {
+          "factor": "Rising Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "68/100",
+          "impact": "MEDIUM",
+          "detail": "Slight upward trend in congestion over past 4 weeks",
+          "weight": 40.8459
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "40/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 39.5667
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "45/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate congestion at 45",
+          "weight": 31.395
+        }
+      ],
+      "total_factors": 5,
+      "assessment": "This zone shows significant risk elevation driven by Population Exposure, Vehicle Density. Proactive intervention should be scheduled within the current planning cycle."
+    }
+  },
+  "telemetry": {
+    "congestion": 44.85,
+    "congestion_delta": -1.16,
+    "average_speed_kmh": 51.37,
+    "speed_delta": -2.05,
+    "vehicle_density": 58.57,
+    "density_delta": -1.43,
+    "population_density": 13450,
+    "red_light_violations": 6,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 30,
+    "recommended_green_seconds": 40,
+    "change_seconds": 10,
+    "change_percent": 33.3,
+    "urgency": "HIGH",
+    "reason": "Elevated traffic density needs extended clearance time",
+    "factors": {
+      "congestion_factor": 1.36,
+      "density_factor": 1.23,
+      "speed_factor": 0.81,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 57509.9,
+    "total_co2_tonnes_per_year": 2990.51,
+    "idle_co2_kg": 14500.3,
+    "moving_co2_kg": 43009.6,
+    "potential_savings_kg_per_week": 3550.4,
+    "potential_savings_tonnes_per_year": 184.62,
+    "trees_equivalent_per_year": 8791,
+    "fuel_saved_liters_per_week": 1537.0,
+    "citizens_impacted": 26900,
+    "optimization_factor_pct": 24.5
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "No specific risk indicators triggered.",
+      "action": "Continue routine monitoring."
+    }
+  ],
+  "executive_briefing": "Indira Nagar shows elevated risk at 40%. Continue routine monitoring. Optimizing signals could save 3550 kg CO2/week, equivalent to 8791 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_29",
     "week": 24,
     "zone_type": "Residential",
@@ -51,6 +172,15 @@
     "location_name": "Indira Nagar",
     "city": "Lucknow",
     "latitude": 26.88,
-    "longitude": 81.0
+    "longitude": 81.0,
+    "predicted_risk_probability": 0.3957,
+    "risk_score": 39.5667,
+    "population_exposure_score": 86.8525,
+    "vehicle_exposure_score": 76.7743,
+    "temporal_trend_score": 68.0765,
+    "priority_score": 63.1061,
+    "priority_rank": 9,
+    "priority_level": "HIGH",
+    "risk_prob": 0.3957
   }
 }

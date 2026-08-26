@@ -1,8 +1,129 @@
 {
   "zone_id": "Zone_17",
+  "location_name": "Saket",
+  "city": "Delhi",
+  "zone_type": "Residential",
   "week": 25,
-  "predicted_risk_probability": 0.6961434353429636,
-  "metrics": {
+  "latitude": 28.5244,
+  "longitude": 77.2066,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.6961,
+    "predicted_risk_percentage": 69.61,
+    "risk_label": "HIGH RISK",
+    "risk_color": "#f97316",
+    "risk_delta_vs_prev_week": 13.7962,
+    "actual_incident": 1
+  },
+  "priority": {
+    "priority_score": 62.1542,
+    "priority_rank": 9,
+    "priority_level": "HIGH",
+    "components": {
+      "risk_score": 69.6143,
+      "population_exposure_score": 48.1572,
+      "vehicle_exposure_score": 36.3459,
+      "temporal_trend_score": 100.0
+    },
+    "explanation": {
+      "priority_level": "HIGH",
+      "priority_score": 62.2,
+      "top_contributors": [
+        {
+          "factor": "Worsening Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "100/100",
+          "impact": "HIGH",
+          "detail": "4-week congestion trend is actively worsening \u2014 conditions deteriorating",
+          "weight": 100.0
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "70/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 69.6143
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "48/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 33.71
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "41/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate congestion at 41",
+          "weight": 28.588
+        }
+      ],
+      "total_factors": 4,
+      "assessment": "This zone shows significant risk elevation driven by Worsening Trend. Proactive intervention should be scheduled within the current planning cycle."
+    }
+  },
+  "telemetry": {
+    "congestion": 40.84,
+    "congestion_delta": -8.71,
+    "average_speed_kmh": 47.14,
+    "speed_delta": -3.93,
+    "vehicle_density": 28.41,
+    "density_delta": -7.24,
+    "population_density": 8064,
+    "red_light_violations": 6,
+    "weather": "Light Rain",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 30,
+    "recommended_green_seconds": 39,
+    "change_seconds": 9,
+    "change_percent": 30.0,
+    "urgency": "HIGH",
+    "reason": "Elevated traffic density needs extended clearance time",
+    "factors": {
+      "congestion_factor": 1.33,
+      "density_factor": 1.11,
+      "speed_factor": 0.82,
+      "event_boost": 1.0,
+      "weather_boost": 1.08
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 29222.9,
+    "total_co2_tonnes_per_year": 1519.59,
+    "idle_co2_kg": 6404.7,
+    "moving_co2_kg": 22818.2,
+    "potential_savings_kg_per_week": 1542.5,
+    "potential_savings_tonnes_per_year": 80.21,
+    "trees_equivalent_per_year": 3819,
+    "fuel_saved_liters_per_week": 667.7,
+    "citizens_impacted": 16128,
+    "optimization_factor_pct": 24.1
+  },
+  "interventions": [
+    {
+      "id": "TREND_URGENT_INSPECTION",
+      "name": "Urgent Safety Inspection",
+      "icon": "\u26a0\ufe0f",
+      "severity": "CRITICAL",
+      "description": "Risk is actively worsening (high temporal trend) with already elevated risk score.",
+      "action": "Deploy immediate field inspection team. Identify root cause of deteriorating safety conditions."
+    },
+    {
+      "id": "ROAD_MAINTENANCE",
+      "name": "Road Maintenance Inspection",
+      "icon": "\ud83d\udee3\ufe0f",
+      "severity": "MEDIUM",
+      "description": "Deteriorated road surface combined with elevated risk indicates infrastructure maintenance need.",
+      "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
+    }
+  ],
+  "executive_briefing": "Saket is in a critical safety state with 70% incident risk. Continue routine monitoring. Optimizing signals could save 1542 kg CO2/week, equivalent to 3819 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_17",
     "week": 25,
     "zone_type": "Residential",
@@ -51,6 +172,15 @@
     "location_name": "Saket",
     "city": "Delhi",
     "latitude": 28.5244,
-    "longitude": 77.2066
+    "longitude": 77.2066,
+    "predicted_risk_probability": 0.6961,
+    "risk_score": 69.6143,
+    "population_exposure_score": 48.1572,
+    "vehicle_exposure_score": 36.3459,
+    "temporal_trend_score": 100.0,
+    "priority_score": 62.1542,
+    "priority_rank": 9,
+    "priority_level": "HIGH",
+    "risk_prob": 0.6961
   }
 }

@@ -1,8 +1,137 @@
 {
   "zone_id": "Zone_12",
+  "location_name": "Malad",
+  "city": "Mumbai",
+  "zone_type": "Commercial_Downtown",
   "week": 31,
-  "predicted_risk_probability": 0.717607783379881,
-  "metrics": {
+  "latitude": 19.1874,
+  "longitude": 72.8484,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.7176,
+    "predicted_risk_percentage": 71.76,
+    "risk_label": "HIGH RISK",
+    "risk_color": "#f97316",
+    "risk_delta_vs_prev_week": 34.1204,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 65.2068,
+    "priority_rank": 19,
+    "priority_level": "HIGH",
+    "components": {
+      "risk_score": 71.7608,
+      "population_exposure_score": 52.9061,
+      "vehicle_exposure_score": 68.9609,
+      "temporal_trend_score": 63.2251
+    },
+    "explanation": {
+      "priority_level": "HIGH",
+      "priority_score": 65.2,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udd34",
+          "value": "72/100",
+          "impact": "HIGH",
+          "detail": "Model-estimated risk score is in the critical range",
+          "weight": 71.7608
+        },
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "69/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 68.9609
+        },
+        {
+          "factor": "Violation Count",
+          "icon": "\ud83d\udea8",
+          "value": "12",
+          "impact": "HIGH",
+          "detail": "12 red-light violations recorded \u2014 intersection safety concern",
+          "weight": 60
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "56/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate congestion at 56",
+          "weight": 39.004
+        },
+        {
+          "factor": "Rising Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "63/100",
+          "impact": "MEDIUM",
+          "detail": "Slight upward trend in congestion over past 4 weeks",
+          "weight": 37.9351
+        }
+      ],
+      "total_factors": 6,
+      "assessment": "This zone shows significant risk elevation driven by Risk Score, Vehicle Density. Proactive intervention should be scheduled within the current planning cycle."
+    }
+  },
+  "telemetry": {
+    "congestion": 55.72,
+    "congestion_delta": 23.05,
+    "average_speed_kmh": 38.85,
+    "speed_delta": -18.59,
+    "vehicle_density": 46.79,
+    "density_delta": 3.33,
+    "population_density": 8725,
+    "red_light_violations": 12,
+    "weather": "Light Rain",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 40,
+    "recommended_green_seconds": 63,
+    "change_seconds": 23,
+    "change_percent": 57.5,
+    "urgency": "CRITICAL",
+    "reason": "Severe congestion requires significantly extended green phase",
+    "factors": {
+      "congestion_factor": 1.45,
+      "density_factor": 1.19,
+      "speed_factor": 0.85,
+      "event_boost": 1.0,
+      "weather_boost": 1.08
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 37573.0,
+    "total_co2_tonnes_per_year": 1953.8,
+    "idle_co2_kg": 14391.4,
+    "moving_co2_kg": 23181.6,
+    "potential_savings_kg_per_week": 3680.2,
+    "potential_savings_tonnes_per_year": 191.37,
+    "trees_equivalent_per_year": 9112,
+    "fuel_saved_liters_per_week": 1593.1,
+    "citizens_impacted": 17450,
+    "optimization_factor_pct": 25.6
+  },
+  "interventions": [
+    {
+      "id": "VIOLATION_ENFORCEMENT",
+      "name": "Red-Light Violation Enforcement",
+      "icon": "\ud83d\udea8",
+      "severity": "HIGH",
+      "description": "Elevated red-light violation count indicates intersection compliance failure.",
+      "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
+    },
+    {
+      "id": "ROAD_MAINTENANCE",
+      "name": "Road Maintenance Inspection",
+      "icon": "\ud83d\udee3\ufe0f",
+      "severity": "MEDIUM",
+      "description": "Deteriorated road surface combined with elevated risk indicates infrastructure maintenance need.",
+      "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
+    }
+  ],
+  "executive_briefing": "Malad is in a critical safety state with 72% incident risk. Enforcement focus needed \u2014 12 red-light violations recorded. Optimizing signals could save 3680 kg CO2/week, equivalent to 9112 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_12",
     "week": 31,
     "zone_type": "Commercial_Downtown",
@@ -51,6 +180,15 @@
     "location_name": "Malad",
     "city": "Mumbai",
     "latitude": 19.1874,
-    "longitude": 72.8484
+    "longitude": 72.8484,
+    "predicted_risk_probability": 0.7176,
+    "risk_score": 71.7608,
+    "population_exposure_score": 52.9061,
+    "vehicle_exposure_score": 68.9609,
+    "temporal_trend_score": 63.2251,
+    "priority_score": 65.2068,
+    "priority_rank": 19,
+    "priority_level": "HIGH",
+    "risk_prob": 0.7176
   }
 }

@@ -1,8 +1,105 @@
 {
   "zone_id": "Zone_36",
+  "location_name": "Rajajipuram",
+  "city": "Lucknow",
+  "zone_type": "Residential",
   "week": 19,
-  "predicted_risk_probability": 0.3148296780115265,
-  "metrics": {
+  "latitude": 26.833,
+  "longitude": 80.89,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.3148,
+    "predicted_risk_percentage": 31.48,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": -13.8461,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 50.5806,
+    "priority_rank": 20,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 31.483,
+      "population_exposure_score": 81.73,
+      "vehicle_exposure_score": 50.517,
+      "temporal_trend_score": 49.6765
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 50.6,
+      "top_contributors": [
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "82/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 12737 residents/km\u00b2",
+          "weight": 81.73
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "31/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 31.483
+        }
+      ],
+      "total_factors": 2,
+      "assessment": "This zone has moderate risk levels with contributing factors: Population Exposure. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 26.93,
+    "congestion_delta": -20.79,
+    "average_speed_kmh": 60.87,
+    "speed_delta": 9.86,
+    "vehicle_density": 40.55,
+    "density_delta": -9.56,
+    "population_density": 12737,
+    "red_light_violations": 3,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 30,
+    "recommended_green_seconds": 32,
+    "change_seconds": 2,
+    "change_percent": 6.7,
+    "urgency": "MODERATE",
+    "reason": "Slight adjustment for current conditions",
+    "factors": {
+      "congestion_factor": 1.22,
+      "density_factor": 1.16,
+      "speed_factor": 0.77,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 52776.5,
+    "total_co2_tonnes_per_year": 2744.38,
+    "idle_co2_kg": 6027.9,
+    "moving_co2_kg": 46748.6,
+    "potential_savings_kg_per_week": 1367.9,
+    "potential_savings_tonnes_per_year": 71.13,
+    "trees_equivalent_per_year": 3387,
+    "fuel_saved_liters_per_week": 592.2,
+    "citizens_impacted": 25474,
+    "optimization_factor_pct": 22.7
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "No specific risk indicators triggered.",
+      "action": "Continue routine monitoring."
+    }
+  ],
+  "executive_briefing": "Rajajipuram is within safe operating parameters (31% risk). Continue routine monitoring. Optimizing signals could save 1368 kg CO2/week, equivalent to 3387 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_36",
     "week": 19,
     "zone_type": "Residential",
@@ -51,6 +148,15 @@
     "location_name": "Rajajipuram",
     "city": "Lucknow",
     "latitude": 26.833,
-    "longitude": 80.89
+    "longitude": 80.89,
+    "predicted_risk_probability": 0.3148,
+    "risk_score": 31.483,
+    "population_exposure_score": 81.73,
+    "vehicle_exposure_score": 50.517,
+    "temporal_trend_score": 49.6765,
+    "priority_score": 50.5806,
+    "priority_rank": 20,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.3148
   }
 }

@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_21",
+  "location_name": "Janakpuri",
+  "city": "Delhi",
+  "zone_type": "Residential",
   "week": 37,
-  "predicted_risk_probability": 0.4659538549921338,
-  "metrics": {
+  "latitude": 28.6219,
+  "longitude": 77.0878,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.466,
+    "predicted_risk_percentage": 46.6,
+    "risk_label": "MODERATE RISK",
+    "risk_color": "#eab308",
+    "risk_delta_vs_prev_week": -48.8431,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 57.8871,
+    "priority_rank": 13,
+    "priority_level": "HIGH",
+    "components": {
+      "risk_score": 46.5954,
+      "population_exposure_score": 73.8846,
+      "vehicle_exposure_score": 73.5331,
+      "temporal_trend_score": 40.4748
+    },
+    "explanation": {
+      "priority_level": "HIGH",
+      "priority_score": 57.9,
+      "top_contributors": [
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "74/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 11645 residents/km\u00b2",
+          "weight": 73.8846
+        },
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "74/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 73.5331
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "47/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 46.5954
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone shows significant risk elevation driven by Population Exposure, Vehicle Density. Proactive intervention should be scheduled within the current planning cycle."
+    }
+  },
+  "telemetry": {
+    "congestion": 34.65,
+    "congestion_delta": -51.66,
+    "average_speed_kmh": 56.11,
+    "speed_delta": 44.07,
+    "vehicle_density": 47.12,
+    "density_delta": 1.08,
+    "population_density": 11645,
+    "red_light_violations": 2,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 30,
+    "recommended_green_seconds": 35,
+    "change_seconds": 5,
+    "change_percent": 16.7,
+    "urgency": "MODERATE",
+    "reason": "Slight adjustment for current conditions",
+    "factors": {
+      "congestion_factor": 1.28,
+      "density_factor": 1.19,
+      "speed_factor": 0.79,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 53796.9,
+    "total_co2_tonnes_per_year": 2797.44,
+    "idle_co2_kg": 9012.5,
+    "moving_co2_kg": 44784.3,
+    "potential_savings_kg_per_week": 2114.8,
+    "potential_savings_tonnes_per_year": 109.97,
+    "trees_equivalent_per_year": 5236,
+    "fuel_saved_liters_per_week": 915.5,
+    "citizens_impacted": 23290,
+    "optimization_factor_pct": 23.5
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "No specific risk indicators triggered.",
+      "action": "Continue routine monitoring."
+    }
+  ],
+  "executive_briefing": "Janakpuri shows elevated risk at 47%. Continue routine monitoring. Optimizing signals could save 2115 kg CO2/week, equivalent to 5236 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_21",
     "week": 37,
     "zone_type": "Residential",
@@ -51,6 +156,15 @@
     "location_name": "Janakpuri",
     "city": "Delhi",
     "latitude": 28.6219,
-    "longitude": 77.0878
+    "longitude": 77.0878,
+    "predicted_risk_probability": 0.466,
+    "risk_score": 46.5954,
+    "population_exposure_score": 73.8846,
+    "vehicle_exposure_score": 73.5331,
+    "temporal_trend_score": 40.4748,
+    "priority_score": 57.8871,
+    "priority_rank": 13,
+    "priority_level": "HIGH",
+    "risk_prob": 0.466
   }
 }

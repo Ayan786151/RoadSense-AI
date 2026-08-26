@@ -1,8 +1,121 @@
 {
   "zone_id": "Zone_02",
+  "location_name": "Bandra",
+  "city": "Mumbai",
+  "zone_type": "Residential",
   "week": 15,
-  "predicted_risk_probability": 0.41653038861630454,
-  "metrics": {
+  "latitude": 19.0596,
+  "longitude": 72.8295,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.4165,
+    "predicted_risk_percentage": 41.65,
+    "risk_label": "MODERATE RISK",
+    "risk_color": "#eab308",
+    "risk_delta_vs_prev_week": 11.6833,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 60.9072,
+    "priority_rank": 10,
+    "priority_level": "HIGH",
+    "components": {
+      "risk_score": 41.653,
+      "population_exposure_score": 79.4957,
+      "vehicle_exposure_score": 62.4267,
+      "temporal_trend_score": 79.245
+    },
+    "explanation": {
+      "priority_level": "HIGH",
+      "priority_score": 60.9,
+      "top_contributors": [
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "79/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 12426 residents/km\u00b2",
+          "weight": 79.4957
+        },
+        {
+          "factor": "Worsening Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "79/100",
+          "impact": "HIGH",
+          "detail": "4-week congestion trend is actively worsening \u2014 conditions deteriorating",
+          "weight": 79.245
+        },
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "62/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 62.4267
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "42/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 41.653
+        }
+      ],
+      "total_factors": 4,
+      "assessment": "This zone shows significant risk elevation driven by Population Exposure, Worsening Trend. Proactive intervention should be scheduled within the current planning cycle."
+    }
+  },
+  "telemetry": {
+    "congestion": 31.91,
+    "congestion_delta": 6.24,
+    "average_speed_kmh": 49.0,
+    "speed_delta": -11.1,
+    "vehicle_density": 43.56,
+    "density_delta": -4.54,
+    "population_density": 12426,
+    "red_light_violations": 5,
+    "weather": "Light Rain",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 30,
+    "recommended_green_seconds": 38,
+    "change_seconds": 8,
+    "change_percent": 26.7,
+    "urgency": "HIGH",
+    "reason": "Elevated traffic density needs extended clearance time",
+    "factors": {
+      "congestion_factor": 1.26,
+      "density_factor": 1.17,
+      "speed_factor": 0.82,
+      "event_boost": 1.0,
+      "weather_boost": 1.08
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 49529.0,
+    "total_co2_tonnes_per_year": 2575.51,
+    "idle_co2_kg": 7672.8,
+    "moving_co2_kg": 41856.2,
+    "potential_savings_kg_per_week": 1779.4,
+    "potential_savings_tonnes_per_year": 92.53,
+    "trees_equivalent_per_year": 4406,
+    "fuel_saved_liters_per_week": 770.3,
+    "citizens_impacted": 24852,
+    "optimization_factor_pct": 23.2
+  },
+  "interventions": [
+    {
+      "id": "ROAD_MAINTENANCE",
+      "name": "Road Maintenance Inspection",
+      "icon": "\ud83d\udee3\ufe0f",
+      "severity": "MEDIUM",
+      "description": "Deteriorated road surface combined with elevated risk indicates infrastructure maintenance need.",
+      "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
+    }
+  ],
+  "executive_briefing": "Bandra shows elevated risk at 42%. Continue routine monitoring. Optimizing signals could save 1779 kg CO2/week, equivalent to 4406 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_02",
     "week": 15,
     "zone_type": "Residential",
@@ -51,6 +164,15 @@
     "location_name": "Bandra",
     "city": "Mumbai",
     "latitude": 19.0596,
-    "longitude": 72.8295
+    "longitude": 72.8295,
+    "predicted_risk_probability": 0.4165,
+    "risk_score": 41.653,
+    "population_exposure_score": 79.4957,
+    "vehicle_exposure_score": 62.4267,
+    "temporal_trend_score": 79.245,
+    "priority_score": 60.9072,
+    "priority_rank": 10,
+    "priority_level": "HIGH",
+    "risk_prob": 0.4165
   }
 }

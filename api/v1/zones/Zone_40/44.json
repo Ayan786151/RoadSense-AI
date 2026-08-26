@@ -1,8 +1,129 @@
 {
   "zone_id": "Zone_40",
+  "location_name": "Velachery",
+  "city": "Chennai",
+  "zone_type": "University_District",
   "week": 44,
-  "predicted_risk_probability": 0.6224168335027023,
-  "metrics": {
+  "latitude": 12.9815,
+  "longitude": 80.218,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.6224,
+    "predicted_risk_percentage": 62.24,
+    "risk_label": "HIGH RISK",
+    "risk_color": "#f97316",
+    "risk_delta_vs_prev_week": -14.9467,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 64.2075,
+    "priority_rank": 8,
+    "priority_level": "HIGH",
+    "components": {
+      "risk_score": 62.2417,
+      "population_exposure_score": 47.1945,
+      "vehicle_exposure_score": 67.9953,
+      "temporal_trend_score": 92.7545
+    },
+    "explanation": {
+      "priority_level": "HIGH",
+      "priority_score": 64.2,
+      "top_contributors": [
+        {
+          "factor": "Worsening Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "93/100",
+          "impact": "HIGH",
+          "detail": "4-week congestion trend is actively worsening \u2014 conditions deteriorating",
+          "weight": 92.7545
+        },
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "68/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 67.9953
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "62/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 62.2417
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "54/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate congestion at 54",
+          "weight": 38.003
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "47/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 33.0361
+        }
+      ],
+      "total_factors": 5,
+      "assessment": "This zone shows significant risk elevation driven by Worsening Trend, Vehicle Density. Proactive intervention should be scheduled within the current planning cycle."
+    }
+  },
+  "telemetry": {
+    "congestion": 54.29,
+    "congestion_delta": -9.56,
+    "average_speed_kmh": 47.39,
+    "speed_delta": 12.95,
+    "vehicle_density": 48.7,
+    "density_delta": 4.54,
+    "population_density": 7930,
+    "red_light_violations": 5,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 49,
+    "change_seconds": 14,
+    "change_percent": 40.0,
+    "urgency": "HIGH",
+    "reason": "Elevated traffic density needs extended clearance time",
+    "factors": {
+      "congestion_factor": 1.43,
+      "density_factor": 1.19,
+      "speed_factor": 0.82,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 44976.7,
+    "total_co2_tonnes_per_year": 2338.79,
+    "idle_co2_kg": 14594.5,
+    "moving_co2_kg": 30382.2,
+    "potential_savings_kg_per_week": 3711.2,
+    "potential_savings_tonnes_per_year": 192.98,
+    "trees_equivalent_per_year": 9189,
+    "fuel_saved_liters_per_week": 1606.6,
+    "citizens_impacted": 15860,
+    "optimization_factor_pct": 25.4
+  },
+  "interventions": [
+    {
+      "id": "TREND_URGENT_INSPECTION",
+      "name": "Urgent Safety Inspection",
+      "icon": "\u26a0\ufe0f",
+      "severity": "CRITICAL",
+      "description": "Risk is actively worsening (high temporal trend) with already elevated risk score.",
+      "action": "Deploy immediate field inspection team. Identify root cause of deteriorating safety conditions."
+    }
+  ],
+  "executive_briefing": "Velachery is in a critical safety state with 62% incident risk. Continue routine monitoring. Optimizing signals could save 3711 kg CO2/week, equivalent to 9189 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_40",
     "week": 44,
     "zone_type": "University_District",
@@ -51,6 +172,15 @@
     "location_name": "Velachery",
     "city": "Chennai",
     "latitude": 12.9815,
-    "longitude": 80.218
+    "longitude": 80.218,
+    "predicted_risk_probability": 0.6224,
+    "risk_score": 62.2417,
+    "population_exposure_score": 47.1945,
+    "vehicle_exposure_score": 67.9953,
+    "temporal_trend_score": 92.7545,
+    "priority_score": 64.2075,
+    "priority_rank": 8,
+    "priority_level": "HIGH",
+    "risk_prob": 0.6224
   }
 }

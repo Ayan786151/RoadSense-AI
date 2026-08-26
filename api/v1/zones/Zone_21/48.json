@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_21",
+  "location_name": "Janakpuri",
+  "city": "Delhi",
+  "zone_type": "Residential",
   "week": 48,
-  "predicted_risk_probability": 0.2732137288045684,
-  "metrics": {
+  "latitude": 28.6219,
+  "longitude": 77.0878,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.2732,
+    "predicted_risk_percentage": 27.32,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": -10.9599,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 47.1413,
+    "priority_rank": 23,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 27.3214,
+      "population_exposure_score": 73.8846,
+      "vehicle_exposure_score": 65.5961,
+      "temporal_trend_score": 30.8159
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 47.1,
+      "top_contributors": [
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "74/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 11645 residents/km\u00b2",
+          "weight": 73.8846
+        },
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "66/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 65.5961
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "27/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 27.3214
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone has moderate risk levels with contributing factors: Population Exposure, Vehicle Density. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 36.06,
+    "congestion_delta": -6.14,
+    "average_speed_kmh": 56.54,
+    "speed_delta": 4.51,
+    "vehicle_density": 51.06,
+    "density_delta": -1.12,
+    "population_density": 11645,
+    "red_light_violations": 4,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 30,
+    "recommended_green_seconds": 36,
+    "change_seconds": 6,
+    "change_percent": 20.0,
+    "urgency": "MODERATE",
+    "reason": "Slight adjustment for current conditions",
+    "factors": {
+      "congestion_factor": 1.29,
+      "density_factor": 1.2,
+      "speed_factor": 0.79,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 58009.4,
+    "total_co2_tonnes_per_year": 3016.49,
+    "idle_co2_kg": 10163.6,
+    "moving_co2_kg": 47845.8,
+    "potential_savings_kg_per_week": 2399.2,
+    "potential_savings_tonnes_per_year": 124.76,
+    "trees_equivalent_per_year": 5940,
+    "fuel_saved_liters_per_week": 1038.6,
+    "citizens_impacted": 23290,
+    "optimization_factor_pct": 23.6
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "Janakpuri is within safe operating parameters (27% risk). Continue routine monitoring. Optimizing signals could save 2399 kg CO2/week, equivalent to 5940 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_21",
     "week": 48,
     "zone_type": "Residential",
@@ -51,6 +156,15 @@
     "location_name": "Janakpuri",
     "city": "Delhi",
     "latitude": 28.6219,
-    "longitude": 77.0878
+    "longitude": 77.0878,
+    "predicted_risk_probability": 0.2732,
+    "risk_score": 27.3214,
+    "population_exposure_score": 73.8846,
+    "vehicle_exposure_score": 65.5961,
+    "temporal_trend_score": 30.8159,
+    "priority_score": 47.1413,
+    "priority_rank": 23,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.2732
   }
 }

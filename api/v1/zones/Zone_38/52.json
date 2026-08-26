@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_38",
+  "location_name": "T. Nagar",
+  "city": "Chennai",
+  "zone_type": "Commercial_Downtown",
   "week": 52,
-  "predicted_risk_probability": 0.3663902968805774,
-  "metrics": {
+  "latitude": 13.0418,
+  "longitude": 80.2341,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.3664,
+    "predicted_risk_percentage": 36.64,
+    "risk_label": "MODERATE RISK",
+    "risk_color": "#eab308",
+    "risk_delta_vs_prev_week": 2.662,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 48.5752,
+    "priority_rank": 18,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 36.639,
+      "population_exposure_score": 55.1333,
+      "vehicle_exposure_score": 61.106,
+      "temporal_trend_score": 52.7673
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 48.6,
+      "top_contributors": [
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "61/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 61.106
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "55/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 38.5933
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "37/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 36.639
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone has moderate risk levels with contributing factors: Vehicle Density, Population Exposure. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 27.03,
+    "congestion_delta": 1.51,
+    "average_speed_kmh": 58.27,
+    "speed_delta": -1.72,
+    "vehicle_density": 46.63,
+    "density_delta": -4.48,
+    "population_density": 9035,
+    "red_light_violations": 8,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 40,
+    "recommended_green_seconds": 45,
+    "change_seconds": 5,
+    "change_percent": 12.5,
+    "urgency": "MODERATE",
+    "reason": "Slight adjustment for current conditions",
+    "factors": {
+      "congestion_factor": 1.22,
+      "density_factor": 1.19,
+      "speed_factor": 0.78,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 58348.8,
+    "total_co2_tonnes_per_year": 3034.14,
+    "idle_co2_kg": 6957.5,
+    "moving_co2_kg": 51391.3,
+    "potential_savings_kg_per_week": 1579.6,
+    "potential_savings_tonnes_per_year": 82.14,
+    "trees_equivalent_per_year": 3911,
+    "fuel_saved_liters_per_week": 683.8,
+    "citizens_impacted": 18070,
+    "optimization_factor_pct": 22.7
+  },
+  "interventions": [
+    {
+      "id": "VIOLATION_ENFORCEMENT",
+      "name": "Red-Light Violation Enforcement",
+      "icon": "\ud83d\udea8",
+      "severity": "HIGH",
+      "description": "Elevated red-light violation count indicates intersection compliance failure.",
+      "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
+    }
+  ],
+  "executive_briefing": "T. Nagar shows elevated risk at 37%. Continue routine monitoring. Optimizing signals could save 1580 kg CO2/week, equivalent to 3911 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_38",
     "week": 52,
     "zone_type": "Commercial_Downtown",
@@ -51,6 +156,15 @@
     "location_name": "T. Nagar",
     "city": "Chennai",
     "latitude": 13.0418,
-    "longitude": 80.2341
+    "longitude": 80.2341,
+    "predicted_risk_probability": 0.3664,
+    "risk_score": 36.639,
+    "population_exposure_score": 55.1333,
+    "vehicle_exposure_score": 61.106,
+    "temporal_trend_score": 52.7673,
+    "priority_score": 48.5752,
+    "priority_rank": 18,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.3664
   }
 }

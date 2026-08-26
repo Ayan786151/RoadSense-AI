@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_03",
+  "location_name": "Kurla",
+  "city": "Mumbai",
+  "zone_type": "University_District",
   "week": 15,
-  "predicted_risk_probability": 0.6039923830000861,
-  "metrics": {
+  "latitude": 19.0726,
+  "longitude": 72.8845,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.604,
+    "predicted_risk_percentage": 60.4,
+    "risk_label": "HIGH RISK",
+    "risk_color": "#f97316",
+    "risk_delta_vs_prev_week": 38.8765,
+    "actual_incident": 1
+  },
+  "priority": {
+    "priority_score": 43.7399,
+    "priority_rank": 27,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 60.3992,
+      "population_exposure_score": 45.4343,
+      "vehicle_exposure_score": 41.1084,
+      "temporal_trend_score": 0.0
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 43.7,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "60/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 60.3992
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "45/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 31.804
+        },
+        {
+          "factor": "Improving Trend",
+          "icon": "\ud83d\udcc9",
+          "value": "0/100",
+          "impact": "POSITIVE",
+          "detail": "Conditions are improving over past 4 weeks",
+          "weight": -0.0
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone has moderate risk levels with contributing factors: Risk Score, Population Exposure. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 31.96,
+    "congestion_delta": 12.37,
+    "average_speed_kmh": 47.41,
+    "speed_delta": -11.91,
+    "vehicle_density": 29.75,
+    "density_delta": 6.46,
+    "population_density": 7685,
+    "red_light_violations": 3,
+    "weather": "Light Rain",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 43,
+    "change_seconds": 8,
+    "change_percent": 22.9,
+    "urgency": "HIGH",
+    "reason": "Elevated traffic density needs extended clearance time",
+    "factors": {
+      "congestion_factor": 1.26,
+      "density_factor": 1.12,
+      "speed_factor": 0.82,
+      "event_boost": 1.0,
+      "weather_boost": 1.08
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 32886.9,
+    "total_co2_tonnes_per_year": 1710.12,
+    "idle_co2_kg": 5248.5,
+    "moving_co2_kg": 27638.5,
+    "potential_savings_kg_per_week": 1217.4,
+    "potential_savings_tonnes_per_year": 63.31,
+    "trees_equivalent_per_year": 3014,
+    "fuel_saved_liters_per_week": 527.0,
+    "citizens_impacted": 15370,
+    "optimization_factor_pct": 23.2
+  },
+  "interventions": [
+    {
+      "id": "ROAD_MAINTENANCE",
+      "name": "Road Maintenance Inspection",
+      "icon": "\ud83d\udee3\ufe0f",
+      "severity": "MEDIUM",
+      "description": "Deteriorated road surface combined with elevated risk indicates infrastructure maintenance need.",
+      "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
+    }
+  ],
+  "executive_briefing": "Kurla is in a critical safety state with 60% incident risk. Continue routine monitoring. Optimizing signals could save 1217 kg CO2/week, equivalent to 3014 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_03",
     "week": 15,
     "zone_type": "University_District",
@@ -51,6 +156,15 @@
     "location_name": "Kurla",
     "city": "Mumbai",
     "latitude": 19.0726,
-    "longitude": 72.8845
+    "longitude": 72.8845,
+    "predicted_risk_probability": 0.604,
+    "risk_score": 60.3992,
+    "population_exposure_score": 45.4343,
+    "vehicle_exposure_score": 41.1084,
+    "temporal_trend_score": 0.0,
+    "priority_score": 43.7399,
+    "priority_rank": 27,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.604
   }
 }

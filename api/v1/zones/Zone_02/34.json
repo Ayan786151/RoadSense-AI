@@ -1,8 +1,169 @@
 {
   "zone_id": "Zone_02",
+  "location_name": "Bandra",
+  "city": "Mumbai",
+  "zone_type": "Residential",
   "week": 34,
-  "predicted_risk_probability": 0.9518448857433113,
-  "metrics": {
+  "latitude": 19.0596,
+  "longitude": 72.8295,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.9518,
+    "predicted_risk_percentage": 95.18,
+    "risk_label": "CRITICAL RISK",
+    "risk_color": "#ef4444",
+    "risk_delta_vs_prev_week": 1.6906,
+    "actual_incident": 1
+  },
+  "priority": {
+    "priority_score": 82.3029,
+    "priority_rank": 5,
+    "priority_level": "CRITICAL",
+    "components": {
+      "risk_score": 95.1845,
+      "population_exposure_score": 79.4957,
+      "vehicle_exposure_score": 61.6891,
+      "temporal_trend_score": 80.116
+    },
+    "explanation": {
+      "priority_level": "CRITICAL",
+      "priority_score": 82.3,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udd34",
+          "value": "95/100",
+          "impact": "HIGH",
+          "detail": "Model-estimated risk score is in the critical range",
+          "weight": 95.1845
+        },
+        {
+          "factor": "Worsening Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "80/100",
+          "impact": "HIGH",
+          "detail": "4-week congestion trend is actively worsening \u2014 conditions deteriorating",
+          "weight": 80.116
+        },
+        {
+          "factor": "Speed Anomaly",
+          "icon": "\ud83d\udc0c",
+          "value": "20 km/h",
+          "impact": "HIGH",
+          "detail": "Average speed of 20 km/h indicates near-gridlock conditions",
+          "weight": 79.85
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "79/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 12426 residents/km\u00b2",
+          "weight": 79.4957
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "68/100",
+          "impact": "HIGH",
+          "detail": "Congestion index at 68 \u2014 severe traffic flow degradation",
+          "weight": 67.73
+        }
+      ],
+      "total_factors": 6,
+      "assessment": "This zone requires URGENT attention. Primary risk drivers: Risk Score, Worsening Trend, Speed Anomaly. Immediate field inspection and intervention planning recommended."
+    }
+  },
+  "telemetry": {
+    "congestion": 67.73,
+    "congestion_delta": 3.83,
+    "average_speed_kmh": 20.15,
+    "speed_delta": -4.37,
+    "vehicle_density": 46.75,
+    "density_delta": 0.69,
+    "population_density": 12426,
+    "red_light_violations": 9,
+    "weather": "Heavy Rain",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 30,
+    "recommended_green_seconds": 59,
+    "change_seconds": 29,
+    "change_percent": 96.7,
+    "urgency": "CRITICAL",
+    "reason": "Severe congestion requires significantly extended green phase",
+    "factors": {
+      "congestion_factor": 1.54,
+      "density_factor": 1.19,
+      "speed_factor": 0.92,
+      "event_boost": 1.0,
+      "weather_boost": 1.18
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 33237.1,
+    "total_co2_tonnes_per_year": 1728.33,
+    "idle_co2_kg": 17478.4,
+    "moving_co2_kg": 15758.7,
+    "potential_savings_kg_per_week": 4679.5,
+    "potential_savings_tonnes_per_year": 243.33,
+    "trees_equivalent_per_year": 11587,
+    "fuel_saved_liters_per_week": 2025.8,
+    "citizens_impacted": 24852,
+    "optimization_factor_pct": 26.8
+  },
+  "interventions": [
+    {
+      "id": "TREND_URGENT_INSPECTION",
+      "name": "Urgent Safety Inspection",
+      "icon": "\u26a0\ufe0f",
+      "severity": "CRITICAL",
+      "description": "Risk is actively worsening (high temporal trend) with already elevated risk score.",
+      "action": "Deploy immediate field inspection team. Identify root cause of deteriorating safety conditions."
+    },
+    {
+      "id": "SIGNAL_OPTIMIZATION",
+      "name": "Traffic Signal Optimization",
+      "icon": "\ud83d\udea6",
+      "severity": "HIGH",
+      "description": "High congestion with low throughput speed indicates signal timing inefficiency.",
+      "action": "Review and optimize signal timing at major intersections in this zone."
+    },
+    {
+      "id": "VIOLATION_ENFORCEMENT",
+      "name": "Red-Light Violation Enforcement",
+      "icon": "\ud83d\udea8",
+      "severity": "HIGH",
+      "description": "Elevated red-light violation count indicates intersection compliance failure.",
+      "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
+    },
+    {
+      "id": "PEDESTRIAN_SAFETY",
+      "name": "Pedestrian Crossing Intervention",
+      "icon": "\ud83d\udeb6",
+      "severity": "MEDIUM",
+      "description": "High population density zone with significant traffic congestion creates pedestrian exposure risk.",
+      "action": "Install protected pedestrian crossings, improve sidewalk infrastructure, and add pedestrian countdown signals."
+    },
+    {
+      "id": "ROAD_MAINTENANCE",
+      "name": "Road Maintenance Inspection",
+      "icon": "\ud83d\udee3\ufe0f",
+      "severity": "MEDIUM",
+      "description": "Deteriorated road surface combined with elevated risk indicates infrastructure maintenance need.",
+      "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
+    },
+    {
+      "id": "MONITORING_UPGRADE",
+      "name": "Enhanced Monitoring & CCTV Coverage",
+      "icon": "\ud83d\udcf9",
+      "severity": "MEDIUM",
+      "description": "High-risk zone with significant population exposure warrants improved surveillance.",
+      "action": "Install additional CCTV cameras and integrate with traffic management center for real-time monitoring."
+    }
+  ],
+  "executive_briefing": "Bandra is in a critical safety state with 95% incident risk. Signal optimization recommended \u2014 congestion at 68/100 with speeds averaging 20 km/h. Optimizing signals could save 4680 kg CO2/week, equivalent to 11587 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_02",
     "week": 34,
     "zone_type": "Residential",
@@ -51,6 +212,15 @@
     "location_name": "Bandra",
     "city": "Mumbai",
     "latitude": 19.0596,
-    "longitude": 72.8295
+    "longitude": 72.8295,
+    "predicted_risk_probability": 0.9518,
+    "risk_score": 95.1845,
+    "population_exposure_score": 79.4957,
+    "vehicle_exposure_score": 61.6891,
+    "temporal_trend_score": 80.116,
+    "priority_score": 82.3029,
+    "priority_rank": 5,
+    "priority_level": "CRITICAL",
+    "risk_prob": 0.9518
   }
 }

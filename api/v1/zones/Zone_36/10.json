@@ -1,8 +1,129 @@
 {
   "zone_id": "Zone_36",
+  "location_name": "Rajajipuram",
+  "city": "Lucknow",
+  "zone_type": "Residential",
   "week": 10,
-  "predicted_risk_probability": 0.6360156316701778,
-  "metrics": {
+  "latitude": 26.833,
+  "longitude": 80.89,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.636,
+    "predicted_risk_percentage": 63.6,
+    "risk_label": "HIGH RISK",
+    "risk_color": "#f97316",
+    "risk_delta_vs_prev_week": 24.2925,
+    "actual_incident": 1
+  },
+  "priority": {
+    "priority_score": 68.9183,
+    "priority_rank": 5,
+    "priority_level": "HIGH",
+    "components": {
+      "risk_score": 63.6016,
+      "population_exposure_score": 81.73,
+      "vehicle_exposure_score": 76.6634,
+      "temporal_trend_score": 51.4164
+    },
+    "explanation": {
+      "priority_level": "HIGH",
+      "priority_score": 68.9,
+      "top_contributors": [
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "82/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 12737 residents/km\u00b2",
+          "weight": 81.73
+        },
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "77/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 76.6634
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "64/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 63.6016
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "48/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate congestion at 48",
+          "weight": 33.663
+        }
+      ],
+      "total_factors": 4,
+      "assessment": "This zone shows significant risk elevation driven by Population Exposure, Vehicle Density. Proactive intervention should be scheduled within the current planning cycle."
+    }
+  },
+  "telemetry": {
+    "congestion": 48.09,
+    "congestion_delta": 9.5,
+    "average_speed_kmh": 55.7,
+    "speed_delta": -0.3,
+    "vehicle_density": 47.01,
+    "density_delta": 3.81,
+    "population_density": 12737,
+    "red_light_violations": 6,
+    "weather": "Normal",
+    "special_event": 1
+  },
+  "signal_optimization": {
+    "base_green_seconds": 30,
+    "recommended_green_seconds": 44,
+    "change_seconds": 14,
+    "change_percent": 46.7,
+    "urgency": "CRITICAL",
+    "reason": "Severe congestion requires significantly extended green phase",
+    "factors": {
+      "congestion_factor": 1.38,
+      "density_factor": 1.19,
+      "speed_factor": 0.79,
+      "event_boost": 1.15,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 47710.7,
+    "total_co2_tonnes_per_year": 2480.95,
+    "idle_co2_kg": 12479.1,
+    "moving_co2_kg": 35231.5,
+    "potential_savings_kg_per_week": 3095.9,
+    "potential_savings_tonnes_per_year": 160.99,
+    "trees_equivalent_per_year": 7666,
+    "fuel_saved_liters_per_week": 1340.2,
+    "citizens_impacted": 25474,
+    "optimization_factor_pct": 24.8
+  },
+  "interventions": [
+    {
+      "id": "SPEED_CALMING",
+      "name": "Speed Calming & Enforcement",
+      "icon": "\ud83c\udfce\ufe0f",
+      "severity": "HIGH",
+      "description": "High average speed combined with elevated risk score suggests speed-related hazards.",
+      "action": "Deploy speed calming measures (speed bumps, radar signs) and increase enforcement patrols."
+    },
+    {
+      "id": "EVENT_TRAFFIC_PLAN",
+      "name": "Special Event Traffic Plan",
+      "icon": "\ud83c\udfaa",
+      "severity": "MEDIUM",
+      "description": "Active special event generating additional traffic demand.",
+      "action": "Activate event traffic management plan. Deploy traffic marshals and temporary signage."
+    }
+  ],
+  "executive_briefing": "Rajajipuram is in a critical safety state with 64% incident risk. Continue routine monitoring. Optimizing signals could save 3096 kg CO2/week, equivalent to 7666 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_36",
     "week": 10,
     "zone_type": "Residential",
@@ -51,6 +172,15 @@
     "location_name": "Rajajipuram",
     "city": "Lucknow",
     "latitude": 26.833,
-    "longitude": 80.89
+    "longitude": 80.89,
+    "predicted_risk_probability": 0.636,
+    "risk_score": 63.6016,
+    "population_exposure_score": 81.73,
+    "vehicle_exposure_score": 76.6634,
+    "temporal_trend_score": 51.4164,
+    "priority_score": 68.9183,
+    "priority_rank": 5,
+    "priority_level": "HIGH",
+    "risk_prob": 0.636
   }
 }

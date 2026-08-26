@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_29",
+  "location_name": "Indira Nagar",
+  "city": "Lucknow",
+  "zone_type": "Residential",
   "week": 12,
-  "predicted_risk_probability": 0.25127993720223074,
-  "metrics": {
+  "latitude": 26.88,
+  "longitude": 81.0,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.2513,
+    "predicted_risk_percentage": 25.13,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": 3.4163,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 51.7207,
+    "priority_rank": 14,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 25.128,
+      "population_exposure_score": 86.8525,
+      "vehicle_exposure_score": 66.0206,
+      "temporal_trend_score": 45.0151
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 51.7,
+      "top_contributors": [
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "87/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 13450 residents/km\u00b2",
+          "weight": 86.8525
+        },
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "66/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 66.0206
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "25/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 25.128
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone has moderate risk levels with contributing factors: Population Exposure, Vehicle Density. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 21.88,
+    "congestion_delta": 5.7,
+    "average_speed_kmh": 58.1,
+    "speed_delta": -3.52,
+    "vehicle_density": 42.24,
+    "density_delta": 5.71,
+    "population_density": 13450,
+    "red_light_violations": 2,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 30,
+    "recommended_green_seconds": 32,
+    "change_seconds": 2,
+    "change_percent": 6.7,
+    "urgency": "MODERATE",
+    "reason": "Slight adjustment for current conditions",
+    "factors": {
+      "congestion_factor": 1.18,
+      "density_factor": 1.17,
+      "speed_factor": 0.78,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 54794.9,
+    "total_co2_tonnes_per_year": 2849.33,
+    "idle_co2_kg": 5101.6,
+    "moving_co2_kg": 49693.2,
+    "potential_savings_kg_per_week": 1132.0,
+    "potential_savings_tonnes_per_year": 58.86,
+    "trees_equivalent_per_year": 2802,
+    "fuel_saved_liters_per_week": 490.0,
+    "citizens_impacted": 26900,
+    "optimization_factor_pct": 22.2
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "Indira Nagar is within safe operating parameters (25% risk). Continue routine monitoring. Optimizing signals could save 1132 kg CO2/week, equivalent to 2802 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_29",
     "week": 12,
     "zone_type": "Residential",
@@ -51,6 +156,15 @@
     "location_name": "Indira Nagar",
     "city": "Lucknow",
     "latitude": 26.88,
-    "longitude": 81.0
+    "longitude": 81.0,
+    "predicted_risk_probability": 0.2513,
+    "risk_score": 25.128,
+    "population_exposure_score": 86.8525,
+    "vehicle_exposure_score": 66.0206,
+    "temporal_trend_score": 45.0151,
+    "priority_score": 51.7207,
+    "priority_rank": 14,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.2513
   }
 }

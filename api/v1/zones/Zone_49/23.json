@@ -1,8 +1,129 @@
 {
   "zone_id": "Zone_49",
+  "location_name": "Sholinganallur",
+  "city": "Chennai",
+  "zone_type": "University_District",
   "week": 23,
-  "predicted_risk_probability": 0.7100008673258487,
-  "metrics": {
+  "latitude": 12.901,
+  "longitude": 80.2279,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.71,
+    "predicted_risk_percentage": 71.0,
+    "risk_label": "HIGH RISK",
+    "risk_color": "#f97316",
+    "risk_delta_vs_prev_week": -10.6011,
+    "actual_incident": 1
+  },
+  "priority": {
+    "priority_score": 67.5947,
+    "priority_rank": 6,
+    "priority_level": "HIGH",
+    "components": {
+      "risk_score": 71.0001,
+      "population_exposure_score": 73.1231,
+      "vehicle_exposure_score": 81.1331,
+      "temporal_trend_score": 31.2486
+    },
+    "explanation": {
+      "priority_level": "HIGH",
+      "priority_score": 67.6,
+      "top_contributors": [
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "81/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 81.1331
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "73/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 11539 residents/km\u00b2",
+          "weight": 73.1231
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udd34",
+          "value": "71/100",
+          "impact": "HIGH",
+          "detail": "Model-estimated risk score is in the critical range",
+          "weight": 71.0001
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "60/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate congestion at 60",
+          "weight": 41.65
+        }
+      ],
+      "total_factors": 4,
+      "assessment": "This zone shows significant risk elevation driven by Vehicle Density, Population Exposure. Proactive intervention should be scheduled within the current planning cycle."
+    }
+  },
+  "telemetry": {
+    "congestion": 59.5,
+    "congestion_delta": -6.59,
+    "average_speed_kmh": 47.54,
+    "speed_delta": 2.74,
+    "vehicle_density": 58.57,
+    "density_delta": -1.79,
+    "population_density": 11539,
+    "red_light_violations": 3,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 52,
+    "change_seconds": 17,
+    "change_percent": 48.6,
+    "urgency": "CRITICAL",
+    "reason": "Severe congestion requires significantly extended green phase",
+    "factors": {
+      "congestion_factor": 1.48,
+      "density_factor": 1.23,
+      "speed_factor": 0.82,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 51714.2,
+    "total_co2_tonnes_per_year": 2689.14,
+    "idle_co2_kg": 19236.7,
+    "moving_co2_kg": 32477.4,
+    "potential_savings_kg_per_week": 4991.9,
+    "potential_savings_tonnes_per_year": 259.58,
+    "trees_equivalent_per_year": 12360,
+    "fuel_saved_liters_per_week": 2161.0,
+    "citizens_impacted": 23078,
+    "optimization_factor_pct": 25.9
+  },
+  "interventions": [
+    {
+      "id": "PEDESTRIAN_SAFETY",
+      "name": "Pedestrian Crossing Intervention",
+      "icon": "\ud83d\udeb6",
+      "severity": "MEDIUM",
+      "description": "High population density zone with significant traffic congestion creates pedestrian exposure risk.",
+      "action": "Install protected pedestrian crossings, improve sidewalk infrastructure, and add pedestrian countdown signals."
+    },
+    {
+      "id": "MONITORING_UPGRADE",
+      "name": "Enhanced Monitoring & CCTV Coverage",
+      "icon": "\ud83d\udcf9",
+      "severity": "MEDIUM",
+      "description": "High-risk zone with significant population exposure warrants improved surveillance.",
+      "action": "Install additional CCTV cameras and integrate with traffic management center for real-time monitoring."
+    }
+  ],
+  "executive_briefing": "Sholinganallur is in a critical safety state with 71% incident risk. Continue routine monitoring. Optimizing signals could save 4992 kg CO2/week, equivalent to 12360 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_49",
     "week": 23,
     "zone_type": "University_District",
@@ -51,6 +172,15 @@
     "location_name": "Sholinganallur",
     "city": "Chennai",
     "latitude": 12.901,
-    "longitude": 80.2279
+    "longitude": 80.2279,
+    "predicted_risk_probability": 0.71,
+    "risk_score": 71.0001,
+    "population_exposure_score": 73.1231,
+    "vehicle_exposure_score": 81.1331,
+    "temporal_trend_score": 31.2486,
+    "priority_score": 67.5947,
+    "priority_rank": 6,
+    "priority_level": "HIGH",
+    "risk_prob": 0.71
   }
 }

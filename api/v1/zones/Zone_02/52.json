@@ -1,8 +1,105 @@
 {
   "zone_id": "Zone_02",
+  "location_name": "Bandra",
+  "city": "Mumbai",
+  "zone_type": "Residential",
   "week": 52,
-  "predicted_risk_probability": 0.2828126879184285,
-  "metrics": {
+  "latitude": 19.0596,
+  "longitude": 72.8295,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.2828,
+    "predicted_risk_percentage": 28.28,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": 6.8621,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 45.7774,
+    "priority_rank": 20,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 28.2813,
+      "population_exposure_score": 79.4957,
+      "vehicle_exposure_score": 45.5773,
+      "temporal_trend_score": 36.5033
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 45.8,
+      "top_contributors": [
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "79/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 12426 residents/km\u00b2",
+          "weight": 79.4957
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "28/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 28.2813
+        }
+      ],
+      "total_factors": 2,
+      "assessment": "This zone has moderate risk levels with contributing factors: Population Exposure. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 20.56,
+    "congestion_delta": 2.33,
+    "average_speed_kmh": 54.06,
+    "speed_delta": -6.78,
+    "vehicle_density": 34.78,
+    "density_delta": -2.85,
+    "population_density": 12426,
+    "red_light_violations": 3,
+    "weather": "Light Rain",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 30,
+    "recommended_green_seconds": 34,
+    "change_seconds": 4,
+    "change_percent": 13.3,
+    "urgency": "MODERATE",
+    "reason": "Slight adjustment for current conditions",
+    "factors": {
+      "congestion_factor": 1.16,
+      "density_factor": 1.14,
+      "speed_factor": 0.8,
+      "event_boost": 1.0,
+      "weather_boost": 1.08
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 42662.3,
+    "total_co2_tonnes_per_year": 2218.44,
+    "idle_co2_kg": 3947.2,
+    "moving_co2_kg": 38715.1,
+    "potential_savings_kg_per_week": 870.6,
+    "potential_savings_tonnes_per_year": 45.27,
+    "trees_equivalent_per_year": 2155,
+    "fuel_saved_liters_per_week": 376.9,
+    "citizens_impacted": 24852,
+    "optimization_factor_pct": 22.1
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "Bandra is within safe operating parameters (28% risk). Continue routine monitoring. Optimizing signals could save 871 kg CO2/week, equivalent to 2155 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_02",
     "week": 52,
     "zone_type": "Residential",
@@ -51,6 +148,15 @@
     "location_name": "Bandra",
     "city": "Mumbai",
     "latitude": 19.0596,
-    "longitude": 72.8295
+    "longitude": 72.8295,
+    "predicted_risk_probability": 0.2828,
+    "risk_score": 28.2813,
+    "population_exposure_score": 79.4957,
+    "vehicle_exposure_score": 45.5773,
+    "temporal_trend_score": 36.5033,
+    "priority_score": 45.7774,
+    "priority_rank": 20,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.2828
   }
 }

@@ -1,8 +1,105 @@
 {
   "zone_id": "Zone_17",
+  "location_name": "Saket",
+  "city": "Delhi",
+  "zone_type": "Residential",
   "week": 2,
-  "predicted_risk_probability": null,
-  "metrics": {
+  "latitude": 28.5244,
+  "longitude": 77.2066,
+  "risk_analysis": {
+    "predicted_risk_probability": null,
+    "predicted_risk_percentage": null,
+    "risk_label": "BASELINE WARMUP",
+    "risk_color": "#71717a",
+    "risk_delta_vs_prev_week": null,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 25.6777,
+    "priority_rank": 31,
+    "priority_level": "LOW",
+    "components": {
+      "risk_score": 0.0,
+      "population_exposure_score": 48.1572,
+      "vehicle_exposure_score": 30.6922,
+      "temporal_trend_score": 50.0
+    },
+    "explanation": {
+      "priority_level": "LOW",
+      "priority_score": 25.7,
+      "top_contributors": [
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "48/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 33.71
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "0/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 0.0
+        }
+      ],
+      "total_factors": 2,
+      "assessment": "This zone is currently within acceptable safety parameters. Routine monitoring is sufficient."
+    }
+  },
+  "telemetry": {
+    "congestion": 13.83,
+    "congestion_delta": -0.91,
+    "average_speed_kmh": 66.31,
+    "speed_delta": 2.12,
+    "vehicle_density": 16.85,
+    "density_delta": 1.88,
+    "population_density": 8064,
+    "red_light_violations": 3,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 30,
+    "recommended_green_seconds": 26,
+    "change_seconds": -4,
+    "change_percent": -13.3,
+    "urgency": "OPTIMIZE",
+    "reason": "Low traffic \u2014 reduce green time to improve cross-traffic flow",
+    "factors": {
+      "congestion_factor": 1.11,
+      "density_factor": 1.07,
+      "speed_factor": 0.75,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 26242.1,
+    "total_co2_tonnes_per_year": 1364.59,
+    "idle_co2_kg": 1286.4,
+    "moving_co2_kg": 24955.7,
+    "potential_savings_kg_per_week": 275.1,
+    "potential_savings_tonnes_per_year": 14.3,
+    "trees_equivalent_per_year": 681,
+    "fuel_saved_liters_per_week": 119.1,
+    "citizens_impacted": 16128,
+    "optimization_factor_pct": 21.4
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "Saket is within safe operating parameters (0% risk). Continue routine monitoring. Optimizing signals could save 275 kg CO2/week, equivalent to 681 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_17",
     "week": 2,
     "zone_type": "Residential",
@@ -51,6 +148,15 @@
     "location_name": "Saket",
     "city": "Delhi",
     "latitude": 28.5244,
-    "longitude": 77.2066
+    "longitude": 77.2066,
+    "predicted_risk_probability": null,
+    "risk_score": 0.0,
+    "population_exposure_score": 48.1572,
+    "vehicle_exposure_score": 30.6922,
+    "temporal_trend_score": 50.0,
+    "priority_score": 25.6777,
+    "priority_rank": 31,
+    "priority_level": "LOW",
+    "risk_prob": null
   }
 }

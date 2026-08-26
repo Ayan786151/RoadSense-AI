@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_36",
+  "location_name": "Rajajipuram",
+  "city": "Lucknow",
+  "zone_type": "Residential",
   "week": 3,
-  "predicted_risk_probability": null,
-  "metrics": {
+  "latitude": 26.833,
+  "longitude": 80.89,
+  "risk_analysis": {
+    "predicted_risk_probability": null,
+    "predicted_risk_percentage": null,
+    "risk_label": "BASELINE WARMUP",
+    "risk_color": "#71717a",
+    "risk_delta_vs_prev_week": null,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 39.9631,
+    "priority_rank": 8,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 0.0,
+      "population_exposure_score": 81.73,
+      "vehicle_exposure_score": 60.1531,
+      "temporal_trend_score": 50.0
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 40.0,
+      "top_contributors": [
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "82/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 12737 residents/km\u00b2",
+          "weight": 81.73
+        },
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "60/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 60.1531
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "0/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 0.0
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone has moderate risk levels with contributing factors: Population Exposure, Vehicle Density. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 29.32,
+    "congestion_delta": -6.81,
+    "average_speed_kmh": 57.48,
+    "speed_delta": -0.85,
+    "vehicle_density": 36.14,
+    "density_delta": -6.68,
+    "population_density": 12737,
+    "red_light_violations": 4,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 30,
+    "recommended_green_seconds": 33,
+    "change_seconds": 3,
+    "change_percent": 10.0,
+    "urgency": "MODERATE",
+    "reason": "Slight adjustment for current conditions",
+    "factors": {
+      "congestion_factor": 1.23,
+      "density_factor": 1.14,
+      "speed_factor": 0.78,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 43906.3,
+    "total_co2_tonnes_per_year": 2283.13,
+    "idle_co2_kg": 5849.1,
+    "moving_co2_kg": 38057.2,
+    "potential_savings_kg_per_week": 1341.3,
+    "potential_savings_tonnes_per_year": 69.75,
+    "trees_equivalent_per_year": 3321,
+    "fuel_saved_liters_per_week": 580.7,
+    "citizens_impacted": 25474,
+    "optimization_factor_pct": 22.9
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "Rajajipuram is within safe operating parameters (0% risk). Continue routine monitoring. Optimizing signals could save 1341 kg CO2/week, equivalent to 3321 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_36",
     "week": 3,
     "zone_type": "Residential",
@@ -51,6 +156,15 @@
     "location_name": "Rajajipuram",
     "city": "Lucknow",
     "latitude": 26.833,
-    "longitude": 80.89
+    "longitude": 80.89,
+    "predicted_risk_probability": null,
+    "risk_score": 0.0,
+    "population_exposure_score": 81.73,
+    "vehicle_exposure_score": 60.1531,
+    "temporal_trend_score": 50.0,
+    "priority_score": 39.9631,
+    "priority_rank": 8,
+    "priority_level": "MODERATE",
+    "risk_prob": null
   }
 }

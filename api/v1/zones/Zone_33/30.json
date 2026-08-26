@@ -1,8 +1,129 @@
 {
   "zone_id": "Zone_33",
+  "location_name": "Aminabad",
+  "city": "Lucknow",
+  "zone_type": "Commercial_Downtown",
   "week": 30,
-  "predicted_risk_probability": 0.5902122968641785,
-  "metrics": {
+  "latitude": 26.8465,
+  "longitude": 80.94,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.5902,
+    "predicted_risk_percentage": 59.02,
+    "risk_label": "HIGH RISK",
+    "risk_color": "#f97316",
+    "risk_delta_vs_prev_week": -16.6457,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 51.8178,
+    "priority_rank": 20,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 59.0212,
+      "population_exposure_score": 40.1178,
+      "vehicle_exposure_score": 76.1641,
+      "temporal_trend_score": 19.6468
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 51.8,
+      "top_contributors": [
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "76/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 76.1641
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "59/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 59.0212
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "46/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate congestion at 46",
+          "weight": 32.305
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "40/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 28.0825
+        },
+        {
+          "factor": "Improving Trend",
+          "icon": "\ud83d\udcc9",
+          "value": "20/100",
+          "impact": "POSITIVE",
+          "detail": "Conditions are improving over past 4 weeks",
+          "weight": -19.6468
+        }
+      ],
+      "total_factors": 5,
+      "assessment": "This zone has moderate risk levels with contributing factors: Vehicle Density, Risk Score. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 46.15,
+    "congestion_delta": 0.95,
+    "average_speed_kmh": 53.61,
+    "speed_delta": 2.81,
+    "vehicle_density": 52.34,
+    "density_delta": 1.21,
+    "population_density": 6945,
+    "red_light_violations": 9,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 40,
+    "recommended_green_seconds": 52,
+    "change_seconds": 12,
+    "change_percent": 30.0,
+    "urgency": "HIGH",
+    "reason": "Elevated traffic density needs extended clearance time",
+    "factors": {
+      "congestion_factor": 1.37,
+      "density_factor": 1.21,
+      "speed_factor": 0.8,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 52498.7,
+    "total_co2_tonnes_per_year": 2729.93,
+    "idle_co2_kg": 13333.5,
+    "moving_co2_kg": 39165.2,
+    "potential_savings_kg_per_week": 3282.0,
+    "potential_savings_tonnes_per_year": 170.67,
+    "trees_equivalent_per_year": 8126,
+    "fuel_saved_liters_per_week": 1420.8,
+    "citizens_impacted": 13890,
+    "optimization_factor_pct": 24.6
+  },
+  "interventions": [
+    {
+      "id": "VIOLATION_ENFORCEMENT",
+      "name": "Red-Light Violation Enforcement",
+      "icon": "\ud83d\udea8",
+      "severity": "HIGH",
+      "description": "Elevated red-light violation count indicates intersection compliance failure.",
+      "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
+    }
+  ],
+  "executive_briefing": "Aminabad shows elevated risk at 59%. Enforcement focus needed \u2014 9 red-light violations recorded. Optimizing signals could save 3282 kg CO2/week, equivalent to 8126 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_33",
     "week": 30,
     "zone_type": "Commercial_Downtown",
@@ -51,6 +172,15 @@
     "location_name": "Aminabad",
     "city": "Lucknow",
     "latitude": 26.8465,
-    "longitude": 80.94
+    "longitude": 80.94,
+    "predicted_risk_probability": 0.5902,
+    "risk_score": 59.0212,
+    "population_exposure_score": 40.1178,
+    "vehicle_exposure_score": 76.1641,
+    "temporal_trend_score": 19.6468,
+    "priority_score": 51.8178,
+    "priority_rank": 20,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.5902
   }
 }

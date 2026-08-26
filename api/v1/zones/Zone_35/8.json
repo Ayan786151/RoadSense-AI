@@ -1,8 +1,121 @@
 {
   "zone_id": "Zone_35",
+  "location_name": "Jankipuram",
+  "city": "Lucknow",
+  "zone_type": "Residential",
   "week": 8,
-  "predicted_risk_probability": 0.2269381394007552,
-  "metrics": {
+  "latitude": 26.93,
+  "longitude": 80.94,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.2269,
+    "predicted_risk_percentage": 22.69,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": -33.3055,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 58.9118,
+    "priority_rank": 10,
+    "priority_level": "HIGH",
+    "components": {
+      "risk_score": 22.6938,
+      "population_exposure_score": 100.0,
+      "vehicle_exposure_score": 79.3631,
+      "temporal_trend_score": 59.7446
+    },
+    "explanation": {
+      "priority_level": "HIGH",
+      "priority_score": 58.9,
+      "top_contributors": [
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "100/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 15280 residents/km\u00b2",
+          "weight": 100.0
+        },
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "79/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 79.3631
+        },
+        {
+          "factor": "Rising Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "60/100",
+          "impact": "MEDIUM",
+          "detail": "Slight upward trend in congestion over past 4 weeks",
+          "weight": 35.8468
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "23/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 22.6938
+        }
+      ],
+      "total_factors": 4,
+      "assessment": "This zone shows significant risk elevation driven by Population Exposure, Vehicle Density. Proactive intervention should be scheduled within the current planning cycle."
+    }
+  },
+  "telemetry": {
+    "congestion": 26.99,
+    "congestion_delta": -6.15,
+    "average_speed_kmh": 57.38,
+    "speed_delta": 10.18,
+    "vehicle_density": 45.0,
+    "density_delta": -0.74,
+    "population_density": 15280,
+    "red_light_violations": 0,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 30,
+    "recommended_green_seconds": 33,
+    "change_seconds": 3,
+    "change_percent": 10.0,
+    "urgency": "MODERATE",
+    "reason": "Slight adjustment for current conditions",
+    "factors": {
+      "congestion_factor": 1.22,
+      "density_factor": 1.18,
+      "speed_factor": 0.78,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 55568.5,
+    "total_co2_tonnes_per_year": 2889.56,
+    "idle_co2_kg": 6704.3,
+    "moving_co2_kg": 48864.2,
+    "potential_savings_kg_per_week": 1521.8,
+    "potential_savings_tonnes_per_year": 79.13,
+    "trees_equivalent_per_year": 3768,
+    "fuel_saved_liters_per_week": 658.8,
+    "citizens_impacted": 30560,
+    "optimization_factor_pct": 22.7
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "Jankipuram is within safe operating parameters (23% risk). Continue routine monitoring. Optimizing signals could save 1522 kg CO2/week, equivalent to 3768 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_35",
     "week": 8,
     "zone_type": "Residential",
@@ -51,6 +164,15 @@
     "location_name": "Jankipuram",
     "city": "Lucknow",
     "latitude": 26.93,
-    "longitude": 80.94
+    "longitude": 80.94,
+    "predicted_risk_probability": 0.2269,
+    "risk_score": 22.6938,
+    "population_exposure_score": 100.0,
+    "vehicle_exposure_score": 79.3631,
+    "temporal_trend_score": 59.7446,
+    "priority_score": 58.9118,
+    "priority_rank": 10,
+    "priority_level": "HIGH",
+    "risk_prob": 0.2269
   }
 }

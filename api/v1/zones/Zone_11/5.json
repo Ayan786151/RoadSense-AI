@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_11",
+  "location_name": "Lower Parel",
+  "city": "Mumbai",
+  "zone_type": "Residential",
   "week": 5,
-  "predicted_risk_probability": 0.4040865727769021,
-  "metrics": {
+  "latitude": 18.9988,
+  "longitude": 72.8258,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.4041,
+    "predicted_risk_percentage": 40.41,
+    "risk_label": "MODERATE RISK",
+    "risk_color": "#eab308",
+    "risk_delta_vs_prev_week": null,
+    "actual_incident": 1
+  },
+  "priority": {
+    "priority_score": 48.4453,
+    "priority_rank": 16,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 40.4087,
+      "population_exposure_score": 61.7429,
+      "vehicle_exposure_score": 38.5717,
+      "temporal_trend_score": 60.8785
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 48.4,
+      "top_contributors": [
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "62/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 9955 residents/km\u00b2",
+          "weight": 61.7429
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "40/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 40.4087
+        },
+        {
+          "factor": "Rising Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "61/100",
+          "impact": "MEDIUM",
+          "detail": "Slight upward trend in congestion over past 4 weeks",
+          "weight": 36.5271
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone has moderate risk levels with contributing factors: Population Exposure, Risk Score. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 29.85,
+    "congestion_delta": 3.54,
+    "average_speed_kmh": 57.18,
+    "speed_delta": -2.36,
+    "vehicle_density": 24.79,
+    "density_delta": 1.96,
+    "population_density": 9955,
+    "red_light_violations": 3,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 30,
+    "recommended_green_seconds": 32,
+    "change_seconds": 2,
+    "change_percent": 6.7,
+    "urgency": "MODERATE",
+    "reason": "Slight adjustment for current conditions",
+    "factors": {
+      "congestion_factor": 1.24,
+      "density_factor": 1.1,
+      "speed_factor": 0.79,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 29858.8,
+    "total_co2_tonnes_per_year": 1552.66,
+    "idle_co2_kg": 4084.7,
+    "moving_co2_kg": 25774.1,
+    "potential_savings_kg_per_week": 938.9,
+    "potential_savings_tonnes_per_year": 48.82,
+    "trees_equivalent_per_year": 2324,
+    "fuel_saved_liters_per_week": 406.4,
+    "citizens_impacted": 19910,
+    "optimization_factor_pct": 23.0
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "No specific risk indicators triggered.",
+      "action": "Continue routine monitoring."
+    }
+  ],
+  "executive_briefing": "Lower Parel shows elevated risk at 40%. Continue routine monitoring. Optimizing signals could save 939 kg CO2/week, equivalent to 2324 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_11",
     "week": 5,
     "zone_type": "Residential",
@@ -51,6 +156,15 @@
     "location_name": "Lower Parel",
     "city": "Mumbai",
     "latitude": 18.9988,
-    "longitude": 72.8258
+    "longitude": 72.8258,
+    "predicted_risk_probability": 0.4041,
+    "risk_score": 40.4087,
+    "population_exposure_score": 61.7429,
+    "vehicle_exposure_score": 38.5717,
+    "temporal_trend_score": 60.8785,
+    "priority_score": 48.4453,
+    "priority_rank": 16,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.4041
   }
 }

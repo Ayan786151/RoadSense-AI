@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_36",
+  "location_name": "Rajajipuram",
+  "city": "Lucknow",
+  "zone_type": "Residential",
   "week": 23,
-  "predicted_risk_probability": 0.2781893407480532,
-  "metrics": {
+  "latitude": 26.833,
+  "longitude": 80.89,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.2782,
+    "predicted_risk_percentage": 27.82,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": -8.5705,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 53.6584,
+    "priority_rank": 18,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 27.8189,
+      "population_exposure_score": 81.73,
+      "vehicle_exposure_score": 57.3071,
+      "temporal_trend_score": 70.9125
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 53.7,
+      "top_contributors": [
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "82/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 12737 residents/km\u00b2",
+          "weight": 81.73
+        },
+        {
+          "factor": "Worsening Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "71/100",
+          "impact": "HIGH",
+          "detail": "4-week congestion trend is actively worsening \u2014 conditions deteriorating",
+          "weight": 70.9125
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "28/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 27.8189
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone has moderate risk levels with contributing factors: Population Exposure, Worsening Trend. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 31.56,
+    "congestion_delta": -5.97,
+    "average_speed_kmh": 55.98,
+    "speed_delta": 1.74,
+    "vehicle_density": 41.37,
+    "density_delta": -1.75,
+    "population_density": 12737,
+    "red_light_violations": 2,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 30,
+    "recommended_green_seconds": 34,
+    "change_seconds": 4,
+    "change_percent": 13.3,
+    "urgency": "MODERATE",
+    "reason": "Slight adjustment for current conditions",
+    "factors": {
+      "congestion_factor": 1.25,
+      "density_factor": 1.17,
+      "speed_factor": 0.79,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 48290.2,
+    "total_co2_tonnes_per_year": 2511.09,
+    "idle_co2_kg": 7207.1,
+    "moving_co2_kg": 41083.1,
+    "potential_savings_kg_per_week": 1668.9,
+    "potential_savings_tonnes_per_year": 86.78,
+    "trees_equivalent_per_year": 4132,
+    "fuel_saved_liters_per_week": 722.5,
+    "citizens_impacted": 25474,
+    "optimization_factor_pct": 23.2
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "Rajajipuram is within safe operating parameters (28% risk). Continue routine monitoring. Optimizing signals could save 1669 kg CO2/week, equivalent to 4132 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_36",
     "week": 23,
     "zone_type": "Residential",
@@ -51,6 +156,15 @@
     "location_name": "Rajajipuram",
     "city": "Lucknow",
     "latitude": 26.833,
-    "longitude": 80.89
+    "longitude": 80.89,
+    "predicted_risk_probability": 0.2782,
+    "risk_score": 27.8189,
+    "population_exposure_score": 81.73,
+    "vehicle_exposure_score": 57.3071,
+    "temporal_trend_score": 70.9125,
+    "priority_score": 53.6584,
+    "priority_rank": 18,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.2782
   }
 }

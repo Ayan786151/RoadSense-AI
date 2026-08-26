@@ -1,8 +1,129 @@
 {
   "zone_id": "Zone_50",
+  "location_name": "Egmore",
+  "city": "Chennai",
+  "zone_type": "University_District",
   "week": 10,
-  "predicted_risk_probability": 0.4483334988211819,
-  "metrics": {
+  "latitude": 13.0732,
+  "longitude": 80.2609,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.4483,
+    "predicted_risk_percentage": 44.83,
+    "risk_label": "MODERATE RISK",
+    "risk_color": "#eab308",
+    "risk_delta_vs_prev_week": 0.4554,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 69.0179,
+    "priority_rank": 4,
+    "priority_level": "HIGH",
+    "components": {
+      "risk_score": 44.8333,
+      "population_exposure_score": 73.5038,
+      "vehicle_exposure_score": 93.0528,
+      "temporal_trend_score": 93.9867
+    },
+    "explanation": {
+      "priority_level": "HIGH",
+      "priority_score": 69.0,
+      "top_contributors": [
+        {
+          "factor": "Worsening Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "94/100",
+          "impact": "HIGH",
+          "detail": "4-week congestion trend is actively worsening \u2014 conditions deteriorating",
+          "weight": 93.9867
+        },
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "93/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 93.0528
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "74/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 11592 residents/km\u00b2",
+          "weight": 73.5038
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "45/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 44.8333
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "48/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate congestion at 48",
+          "weight": 33.404
+        }
+      ],
+      "total_factors": 5,
+      "assessment": "This zone shows significant risk elevation driven by Worsening Trend, Vehicle Density. Proactive intervention should be scheduled within the current planning cycle."
+    }
+  },
+  "telemetry": {
+    "congestion": 47.72,
+    "congestion_delta": -4.26,
+    "average_speed_kmh": 50.32,
+    "speed_delta": 1.84,
+    "vehicle_density": 57.06,
+    "density_delta": -2.47,
+    "population_density": 11592,
+    "red_light_violations": 7,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 48,
+    "change_seconds": 13,
+    "change_percent": 37.1,
+    "urgency": "HIGH",
+    "reason": "Elevated traffic density needs extended clearance time",
+    "factors": {
+      "congestion_factor": 1.38,
+      "density_factor": 1.23,
+      "speed_factor": 0.81,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 53938.8,
+    "total_co2_tonnes_per_year": 2804.82,
+    "idle_co2_kg": 15030.4,
+    "moving_co2_kg": 38908.4,
+    "potential_savings_kg_per_week": 3723.3,
+    "potential_savings_tonnes_per_year": 193.61,
+    "trees_equivalent_per_year": 9219,
+    "fuel_saved_liters_per_week": 1611.8,
+    "citizens_impacted": 23184,
+    "optimization_factor_pct": 24.8
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "No specific risk indicators triggered.",
+      "action": "Continue routine monitoring."
+    }
+  ],
+  "executive_briefing": "Egmore shows elevated risk at 45%. Continue routine monitoring. Optimizing signals could save 3723 kg CO2/week, equivalent to 9219 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_50",
     "week": 10,
     "zone_type": "University_District",
@@ -51,6 +172,15 @@
     "location_name": "Egmore",
     "city": "Chennai",
     "latitude": 13.0732,
-    "longitude": 80.2609
+    "longitude": 80.2609,
+    "predicted_risk_probability": 0.4483,
+    "risk_score": 44.8333,
+    "population_exposure_score": 73.5038,
+    "vehicle_exposure_score": 93.0528,
+    "temporal_trend_score": 93.9867,
+    "priority_score": 69.0179,
+    "priority_rank": 4,
+    "priority_level": "HIGH",
+    "risk_prob": 0.4483
   }
 }

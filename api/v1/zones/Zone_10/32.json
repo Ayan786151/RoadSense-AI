@@ -1,8 +1,161 @@
 {
   "zone_id": "Zone_10",
+  "location_name": "Colaba",
+  "city": "Mumbai",
+  "zone_type": "Residential",
   "week": 32,
-  "predicted_risk_probability": 0.9815605500488094,
-  "metrics": {
+  "latitude": 18.922,
+  "longitude": 72.8347,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.9816,
+    "predicted_risk_percentage": 98.16,
+    "risk_label": "CRITICAL RISK",
+    "risk_color": "#ef4444",
+    "risk_delta_vs_prev_week": -0.1018,
+    "actual_incident": 1
+  },
+  "priority": {
+    "priority_score": 85.1329,
+    "priority_rank": 3,
+    "priority_level": "CRITICAL",
+    "components": {
+      "risk_score": 98.1561,
+      "population_exposure_score": 98.6996,
+      "vehicle_exposure_score": 83.1457,
+      "temporal_trend_score": 30.4426
+    },
+    "explanation": {
+      "priority_level": "CRITICAL",
+      "priority_score": 85.1,
+      "top_contributors": [
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "100/100",
+          "impact": "HIGH",
+          "detail": "Congestion index at 100 \u2014 severe traffic flow degradation",
+          "weight": 100.0
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "99/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 15099 residents/km\u00b2",
+          "weight": 98.6996
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udd34",
+          "value": "98/100",
+          "impact": "HIGH",
+          "detail": "Model-estimated risk score is in the critical range",
+          "weight": 98.1561
+        },
+        {
+          "factor": "Speed Anomaly",
+          "icon": "\ud83d\udc0c",
+          "value": "10 km/h",
+          "impact": "HIGH",
+          "detail": "Average speed of 10 km/h indicates near-gridlock conditions",
+          "weight": 90.0
+        },
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "83/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 83.1457
+        }
+      ],
+      "total_factors": 6,
+      "assessment": "This zone requires URGENT attention. Primary risk drivers: Congestion, Population Exposure, Risk Score. Immediate field inspection and intervention planning recommended."
+    }
+  },
+  "telemetry": {
+    "congestion": 100.0,
+    "congestion_delta": 0.96,
+    "average_speed_kmh": 10.0,
+    "speed_delta": -9.48,
+    "vehicle_density": 56.14,
+    "density_delta": 1.02,
+    "population_density": 15099,
+    "red_light_violations": 11,
+    "weather": "Heavy Rain",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 30,
+    "recommended_green_seconds": 75,
+    "change_seconds": 45,
+    "change_percent": 150.0,
+    "urgency": "CRITICAL",
+    "reason": "Severe congestion requires significantly extended green phase",
+    "factors": {
+      "congestion_factor": 1.8,
+      "density_factor": 1.22,
+      "speed_factor": 0.96,
+      "event_boost": 1.0,
+      "weather_boost": 1.18
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 31460.9,
+    "total_co2_tonnes_per_year": 1635.96,
+    "idle_co2_kg": 29439.8,
+    "moving_co2_kg": 2021.0,
+    "potential_savings_kg_per_week": 8831.9,
+    "potential_savings_tonnes_per_year": 459.26,
+    "trees_equivalent_per_year": 21869,
+    "fuel_saved_liters_per_week": 3823.4,
+    "citizens_impacted": 30198,
+    "optimization_factor_pct": 30.0
+  },
+  "interventions": [
+    {
+      "id": "SIGNAL_OPTIMIZATION",
+      "name": "Traffic Signal Optimization",
+      "icon": "\ud83d\udea6",
+      "severity": "HIGH",
+      "description": "High congestion with low throughput speed indicates signal timing inefficiency.",
+      "action": "Review and optimize signal timing at major intersections in this zone."
+    },
+    {
+      "id": "VIOLATION_ENFORCEMENT",
+      "name": "Red-Light Violation Enforcement",
+      "icon": "\ud83d\udea8",
+      "severity": "HIGH",
+      "description": "Elevated red-light violation count indicates intersection compliance failure.",
+      "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
+    },
+    {
+      "id": "PEDESTRIAN_SAFETY",
+      "name": "Pedestrian Crossing Intervention",
+      "icon": "\ud83d\udeb6",
+      "severity": "MEDIUM",
+      "description": "High population density zone with significant traffic congestion creates pedestrian exposure risk.",
+      "action": "Install protected pedestrian crossings, improve sidewalk infrastructure, and add pedestrian countdown signals."
+    },
+    {
+      "id": "ROAD_MAINTENANCE",
+      "name": "Road Maintenance Inspection",
+      "icon": "\ud83d\udee3\ufe0f",
+      "severity": "MEDIUM",
+      "description": "Deteriorated road surface combined with elevated risk indicates infrastructure maintenance need.",
+      "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
+    },
+    {
+      "id": "MONITORING_UPGRADE",
+      "name": "Enhanced Monitoring & CCTV Coverage",
+      "icon": "\ud83d\udcf9",
+      "severity": "MEDIUM",
+      "description": "High-risk zone with significant population exposure warrants improved surveillance.",
+      "action": "Install additional CCTV cameras and integrate with traffic management center for real-time monitoring."
+    }
+  ],
+  "executive_briefing": "Colaba is in a critical safety state with 98% incident risk. Signal optimization recommended \u2014 congestion at 100/100 with speeds averaging 10 km/h. Optimizing signals could save 8832 kg CO2/week, equivalent to 21869 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_10",
     "week": 32,
     "zone_type": "Residential",
@@ -51,6 +204,15 @@
     "location_name": "Colaba",
     "city": "Mumbai",
     "latitude": 18.922,
-    "longitude": 72.8347
+    "longitude": 72.8347,
+    "predicted_risk_probability": 0.9816,
+    "risk_score": 98.1561,
+    "population_exposure_score": 98.6996,
+    "vehicle_exposure_score": 83.1457,
+    "temporal_trend_score": 30.4426,
+    "priority_score": 85.1329,
+    "priority_rank": 3,
+    "priority_level": "CRITICAL",
+    "risk_prob": 0.9816
   }
 }

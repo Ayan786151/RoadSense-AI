@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_06",
+  "location_name": "Borivali",
+  "city": "Mumbai",
+  "zone_type": "University_District",
   "week": 44,
-  "predicted_risk_probability": 0.3428154122634988,
-  "metrics": {
+  "latitude": 19.2307,
+  "longitude": 72.8567,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.3428,
+    "predicted_risk_percentage": 34.28,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": 19.8774,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 46.1323,
+    "priority_rank": 18,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 34.2815,
+      "population_exposure_score": 53.0642,
+      "vehicle_exposure_score": 47.2478,
+      "temporal_trend_score": 64.6941
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 46.1,
+      "top_contributors": [
+        {
+          "factor": "Rising Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "65/100",
+          "impact": "MEDIUM",
+          "detail": "Slight upward trend in congestion over past 4 weeks",
+          "weight": 38.8164
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "53/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 37.1449
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "34/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 34.2815
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone has moderate risk levels with contributing factors: Rising Trend, Population Exposure. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 27.63,
+    "congestion_delta": 7.62,
+    "average_speed_kmh": 49.66,
+    "speed_delta": -12.39,
+    "vehicle_density": 34.49,
+    "density_delta": -3.96,
+    "population_density": 8747,
+    "red_light_violations": 2,
+    "weather": "Light Rain",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 42,
+    "change_seconds": 7,
+    "change_percent": 20.0,
+    "urgency": "MODERATE",
+    "reason": "Slight adjustment for current conditions",
+    "factors": {
+      "congestion_factor": 1.22,
+      "density_factor": 1.14,
+      "speed_factor": 0.81,
+      "event_boost": 1.0,
+      "weather_boost": 1.08
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 40958.9,
+    "total_co2_tonnes_per_year": 2129.86,
+    "idle_co2_kg": 5260.3,
+    "moving_co2_kg": 35698.6,
+    "potential_savings_kg_per_week": 1197.4,
+    "potential_savings_tonnes_per_year": 62.27,
+    "trees_equivalent_per_year": 2965,
+    "fuel_saved_liters_per_week": 518.4,
+    "citizens_impacted": 17494,
+    "optimization_factor_pct": 22.8
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "No specific risk indicators triggered.",
+      "action": "Continue routine monitoring."
+    }
+  ],
+  "executive_briefing": "Borivali is within safe operating parameters (34% risk). Continue routine monitoring. Optimizing signals could save 1197 kg CO2/week, equivalent to 2965 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_06",
     "week": 44,
     "zone_type": "University_District",
@@ -51,6 +156,15 @@
     "location_name": "Borivali",
     "city": "Mumbai",
     "latitude": 19.2307,
-    "longitude": 72.8567
+    "longitude": 72.8567,
+    "predicted_risk_probability": 0.3428,
+    "risk_score": 34.2815,
+    "population_exposure_score": 53.0642,
+    "vehicle_exposure_score": 47.2478,
+    "temporal_trend_score": 64.6941,
+    "priority_score": 46.1323,
+    "priority_rank": 18,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.3428
   }
 }

@@ -1,8 +1,129 @@
 {
   "zone_id": "Zone_07",
+  "location_name": "Goregaon",
+  "city": "Mumbai",
+  "zone_type": "University_District",
   "week": 27,
-  "predicted_risk_probability": 0.6565054807890308,
-  "metrics": {
+  "latitude": 19.1663,
+  "longitude": 72.8526,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.6565,
+    "predicted_risk_percentage": 65.65,
+    "risk_label": "HIGH RISK",
+    "risk_color": "#f97316",
+    "risk_delta_vs_prev_week": 21.2973,
+    "actual_incident": 1
+  },
+  "priority": {
+    "priority_score": 47.804,
+    "priority_rank": 18,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 65.6505,
+      "population_exposure_score": 42.4312,
+      "vehicle_exposure_score": 41.3232,
+      "temporal_trend_score": 17.8087
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 47.8,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "66/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 65.6505
+        },
+        {
+          "factor": "Violation Count",
+          "icon": "\ud83d\udea8",
+          "value": "10",
+          "impact": "HIGH",
+          "detail": "10 red-light violations recorded \u2014 intersection safety concern",
+          "weight": 50
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "44/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate congestion at 44",
+          "weight": 30.639
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "42/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 29.7018
+        },
+        {
+          "factor": "Improving Trend",
+          "icon": "\ud83d\udcc9",
+          "value": "18/100",
+          "impact": "POSITIVE",
+          "detail": "Conditions are improving over past 4 weeks",
+          "weight": -17.8087
+        }
+      ],
+      "total_factors": 5,
+      "assessment": "This zone has moderate risk levels with contributing factors: Violation Count, Risk Score. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 43.77,
+    "congestion_delta": 4.88,
+    "average_speed_kmh": 54.59,
+    "speed_delta": -1.09,
+    "vehicle_density": 33.75,
+    "density_delta": 4.44,
+    "population_density": 7267,
+    "red_light_violations": 10,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 42,
+    "change_seconds": 7,
+    "change_percent": 20.0,
+    "urgency": "MODERATE",
+    "reason": "Slight adjustment for current conditions",
+    "factors": {
+      "congestion_factor": 1.35,
+      "density_factor": 1.14,
+      "speed_factor": 0.8,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 35007.2,
+    "total_co2_tonnes_per_year": 1820.37,
+    "idle_co2_kg": 8154.4,
+    "moving_co2_kg": 26852.8,
+    "potential_savings_kg_per_week": 1987.8,
+    "potential_savings_tonnes_per_year": 103.36,
+    "trees_equivalent_per_year": 4922,
+    "fuel_saved_liters_per_week": 860.5,
+    "citizens_impacted": 14534,
+    "optimization_factor_pct": 24.4
+  },
+  "interventions": [
+    {
+      "id": "VIOLATION_ENFORCEMENT",
+      "name": "Red-Light Violation Enforcement",
+      "icon": "\ud83d\udea8",
+      "severity": "HIGH",
+      "description": "Elevated red-light violation count indicates intersection compliance failure.",
+      "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
+    }
+  ],
+  "executive_briefing": "Goregaon is in a critical safety state with 66% incident risk. Enforcement focus needed \u2014 10 red-light violations recorded. Optimizing signals could save 1988 kg CO2/week, equivalent to 4922 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_07",
     "week": 27,
     "zone_type": "University_District",
@@ -51,6 +172,15 @@
     "location_name": "Goregaon",
     "city": "Mumbai",
     "latitude": 19.1663,
-    "longitude": 72.8526
+    "longitude": 72.8526,
+    "predicted_risk_probability": 0.6565,
+    "risk_score": 65.6505,
+    "population_exposure_score": 42.4312,
+    "vehicle_exposure_score": 41.3232,
+    "temporal_trend_score": 17.8087,
+    "priority_score": 47.804,
+    "priority_rank": 18,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.6565
   }
 }

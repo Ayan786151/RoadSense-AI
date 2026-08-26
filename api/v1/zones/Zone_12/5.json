@@ -1,8 +1,129 @@
 {
   "zone_id": "Zone_12",
+  "location_name": "Malad",
+  "city": "Mumbai",
+  "zone_type": "Commercial_Downtown",
   "week": 5,
-  "predicted_risk_probability": 0.39946893025333596,
-  "metrics": {
+  "latitude": 19.1874,
+  "longitude": 72.8484,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.3995,
+    "predicted_risk_percentage": 39.95,
+    "risk_label": "MODERATE RISK",
+    "risk_color": "#eab308",
+    "risk_delta_vs_prev_week": null,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 56.4183,
+    "priority_rank": 10,
+    "priority_level": "HIGH",
+    "components": {
+      "risk_score": 39.9469,
+      "population_exposure_score": 52.9061,
+      "vehicle_exposure_score": 74.9494,
+      "temporal_trend_score": 81.4875
+    },
+    "explanation": {
+      "priority_level": "HIGH",
+      "priority_score": 56.4,
+      "top_contributors": [
+        {
+          "factor": "Worsening Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "81/100",
+          "impact": "HIGH",
+          "detail": "4-week congestion trend is actively worsening \u2014 conditions deteriorating",
+          "weight": 81.4875
+        },
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "75/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 74.9494
+        },
+        {
+          "factor": "Violation Count",
+          "icon": "\ud83d\udea8",
+          "value": "13",
+          "impact": "HIGH",
+          "detail": "13 red-light violations recorded \u2014 intersection safety concern",
+          "weight": 65
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "40/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 39.9469
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "53/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 37.0343
+        }
+      ],
+      "total_factors": 5,
+      "assessment": "This zone shows significant risk elevation driven by Worsening Trend, Vehicle Density. Proactive intervention should be scheduled within the current planning cycle."
+    }
+  },
+  "telemetry": {
+    "congestion": 35.7,
+    "congestion_delta": -11.19,
+    "average_speed_kmh": 56.49,
+    "speed_delta": 11.6,
+    "vehicle_density": 48.17,
+    "density_delta": 6.52,
+    "population_density": 8725,
+    "red_light_violations": 13,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 40,
+    "recommended_green_seconds": 48,
+    "change_seconds": 8,
+    "change_percent": 20.0,
+    "urgency": "MODERATE",
+    "reason": "Slight adjustment for current conditions",
+    "factors": {
+      "congestion_factor": 1.29,
+      "density_factor": 1.19,
+      "speed_factor": 0.79,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 54844.3,
+    "total_co2_tonnes_per_year": 2851.91,
+    "idle_co2_kg": 9492.6,
+    "moving_co2_kg": 45351.8,
+    "potential_savings_kg_per_week": 2237.4,
+    "potential_savings_tonnes_per_year": 116.34,
+    "trees_equivalent_per_year": 5540,
+    "fuel_saved_liters_per_week": 968.6,
+    "citizens_impacted": 17450,
+    "optimization_factor_pct": 23.6
+  },
+  "interventions": [
+    {
+      "id": "VIOLATION_ENFORCEMENT",
+      "name": "Red-Light Violation Enforcement",
+      "icon": "\ud83d\udea8",
+      "severity": "HIGH",
+      "description": "Elevated red-light violation count indicates intersection compliance failure.",
+      "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
+    }
+  ],
+  "executive_briefing": "Malad shows elevated risk at 40%. Enforcement focus needed \u2014 13 red-light violations recorded. Optimizing signals could save 2237 kg CO2/week, equivalent to 5540 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_12",
     "week": 5,
     "zone_type": "Commercial_Downtown",
@@ -51,6 +172,15 @@
     "location_name": "Malad",
     "city": "Mumbai",
     "latitude": 19.1874,
-    "longitude": 72.8484
+    "longitude": 72.8484,
+    "predicted_risk_probability": 0.3995,
+    "risk_score": 39.9469,
+    "population_exposure_score": 52.9061,
+    "vehicle_exposure_score": 74.9494,
+    "temporal_trend_score": 81.4875,
+    "priority_score": 56.4183,
+    "priority_rank": 10,
+    "priority_level": "HIGH",
+    "risk_prob": 0.3995
   }
 }

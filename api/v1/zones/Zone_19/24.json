@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_19",
+  "location_name": "Lajpat Nagar",
+  "city": "Delhi",
+  "zone_type": "Industrial_Corridor",
   "week": 24,
-  "predicted_risk_probability": 0.11445740645660614,
-  "metrics": {
+  "latitude": 28.5677,
+  "longitude": 77.243,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.1145,
+    "predicted_risk_percentage": 11.45,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": -3.5644,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 21.8678,
+    "priority_rank": 39,
+    "priority_level": "LOW",
+    "components": {
+      "risk_score": 11.4457,
+      "population_exposure_score": 19.9368,
+      "vehicle_exposure_score": 17.6454,
+      "temporal_trend_score": 58.5084
+    },
+    "explanation": {
+      "priority_level": "LOW",
+      "priority_score": 21.9,
+      "top_contributors": [
+        {
+          "factor": "Rising Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "59/100",
+          "impact": "MEDIUM",
+          "detail": "Slight upward trend in congestion over past 4 weeks",
+          "weight": 35.105
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "11/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 11.4457
+        }
+      ],
+      "total_factors": 2,
+      "assessment": "This zone is currently within acceptable safety parameters. Routine monitoring is sufficient."
+    }
+  },
+  "telemetry": {
+    "congestion": 8.3,
+    "congestion_delta": -4.72,
+    "average_speed_kmh": 62.84,
+    "speed_delta": 4.68,
+    "vehicle_density": 16.08,
+    "density_delta": -0.58,
+    "population_density": 4136,
+    "red_light_violations": 5,
+    "weather": "Normal",
+    "special_event": 1
+  },
+  "signal_optimization": {
+    "base_green_seconds": 45,
+    "recommended_green_seconds": 44,
+    "change_seconds": -1,
+    "change_percent": -2.2,
+    "urgency": "NOMINAL",
+    "reason": "Current default timing is adequate",
+    "factors": {
+      "congestion_factor": 1.07,
+      "density_factor": 1.06,
+      "speed_factor": 0.76,
+      "event_boost": 1.15,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 24754.2,
+    "total_co2_tonnes_per_year": 1287.22,
+    "idle_co2_kg": 736.7,
+    "moving_co2_kg": 24017.4,
+    "potential_savings_kg_per_week": 153.5,
+    "potential_savings_tonnes_per_year": 7.98,
+    "trees_equivalent_per_year": 379,
+    "fuel_saved_liters_per_week": 66.4,
+    "citizens_impacted": 8272,
+    "optimization_factor_pct": 20.8
+  },
+  "interventions": [
+    {
+      "id": "EVENT_TRAFFIC_PLAN",
+      "name": "Special Event Traffic Plan",
+      "icon": "\ud83c\udfaa",
+      "severity": "MEDIUM",
+      "description": "Active special event generating additional traffic demand.",
+      "action": "Activate event traffic management plan. Deploy traffic marshals and temporary signage."
+    },
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "Lajpat Nagar is within safe operating parameters (11% risk). Continue routine monitoring. Optimizing signals could save 154 kg CO2/week, equivalent to 379 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_19",
     "week": 24,
     "zone_type": "Industrial_Corridor",
@@ -51,6 +156,15 @@
     "location_name": "Lajpat Nagar",
     "city": "Delhi",
     "latitude": 28.5677,
-    "longitude": 77.243
+    "longitude": 77.243,
+    "predicted_risk_probability": 0.1145,
+    "risk_score": 11.4457,
+    "population_exposure_score": 19.9368,
+    "vehicle_exposure_score": 17.6454,
+    "temporal_trend_score": 58.5084,
+    "priority_score": 21.8678,
+    "priority_rank": 39,
+    "priority_level": "LOW",
+    "risk_prob": 0.1145
   }
 }

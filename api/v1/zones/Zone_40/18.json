@@ -1,8 +1,137 @@
 {
   "zone_id": "Zone_40",
+  "location_name": "Velachery",
+  "city": "Chennai",
+  "zone_type": "University_District",
   "week": 18,
-  "predicted_risk_probability": 0.8958746661657894,
-  "metrics": {
+  "latitude": 12.9815,
+  "longitude": 80.218,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.8959,
+    "predicted_risk_percentage": 89.59,
+    "risk_label": "CRITICAL RISK",
+    "risk_color": "#ef4444",
+    "risk_delta_vs_prev_week": 36.2715,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 64.5774,
+    "priority_rank": 9,
+    "priority_level": "HIGH",
+    "components": {
+      "risk_score": 89.5875,
+      "population_exposure_score": 47.1945,
+      "vehicle_exposure_score": 56.9239,
+      "temporal_trend_score": 37.0599
+    },
+    "explanation": {
+      "priority_level": "HIGH",
+      "priority_score": 64.6,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udd34",
+          "value": "90/100",
+          "impact": "HIGH",
+          "detail": "Model-estimated risk score is in the critical range",
+          "weight": 89.5875
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "79/100",
+          "impact": "HIGH",
+          "detail": "Congestion index at 79 \u2014 severe traffic flow degradation",
+          "weight": 78.56
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "47/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 33.0361
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone shows significant risk elevation driven by Risk Score, Congestion. Proactive intervention should be scheduled within the current planning cycle."
+    }
+  },
+  "telemetry": {
+    "congestion": 78.56,
+    "congestion_delta": 32.47,
+    "average_speed_kmh": 29.46,
+    "speed_delta": -23.97,
+    "vehicle_density": 41.97,
+    "density_delta": -1.39,
+    "population_density": 7930,
+    "red_light_violations": 8,
+    "weather": "Light Rain",
+    "special_event": 1
+  },
+  "signal_optimization": {
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 73,
+    "change_seconds": 38,
+    "change_percent": 108.6,
+    "urgency": "CRITICAL",
+    "reason": "Severe congestion requires significantly extended green phase",
+    "factors": {
+      "congestion_factor": 1.63,
+      "density_factor": 1.17,
+      "speed_factor": 0.89,
+      "event_boost": 1.15,
+      "weather_boost": 1.08
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 31942.7,
+    "total_co2_tonnes_per_year": 1661.02,
+    "idle_co2_kg": 18200.3,
+    "moving_co2_kg": 13742.4,
+    "potential_savings_kg_per_week": 5069.9,
+    "potential_savings_tonnes_per_year": 263.63,
+    "trees_equivalent_per_year": 12554,
+    "fuel_saved_liters_per_week": 2194.8,
+    "citizens_impacted": 15860,
+    "optimization_factor_pct": 27.9
+  },
+  "interventions": [
+    {
+      "id": "SIGNAL_OPTIMIZATION",
+      "name": "Traffic Signal Optimization",
+      "icon": "\ud83d\udea6",
+      "severity": "HIGH",
+      "description": "High congestion with low throughput speed indicates signal timing inefficiency.",
+      "action": "Review and optimize signal timing at major intersections in this zone."
+    },
+    {
+      "id": "VIOLATION_ENFORCEMENT",
+      "name": "Red-Light Violation Enforcement",
+      "icon": "\ud83d\udea8",
+      "severity": "HIGH",
+      "description": "Elevated red-light violation count indicates intersection compliance failure.",
+      "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
+    },
+    {
+      "id": "ROAD_MAINTENANCE",
+      "name": "Road Maintenance Inspection",
+      "icon": "\ud83d\udee3\ufe0f",
+      "severity": "MEDIUM",
+      "description": "Deteriorated road surface combined with elevated risk indicates infrastructure maintenance need.",
+      "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
+    },
+    {
+      "id": "EVENT_TRAFFIC_PLAN",
+      "name": "Special Event Traffic Plan",
+      "icon": "\ud83c\udfaa",
+      "severity": "MEDIUM",
+      "description": "Active special event generating additional traffic demand.",
+      "action": "Activate event traffic management plan. Deploy traffic marshals and temporary signage."
+    }
+  ],
+  "executive_briefing": "Velachery is in a critical safety state with 90% incident risk. Signal optimization recommended \u2014 congestion at 79/100 with speeds averaging 29 km/h. Optimizing signals could save 5070 kg CO2/week, equivalent to 12554 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_40",
     "week": 18,
     "zone_type": "University_District",
@@ -51,6 +180,15 @@
     "location_name": "Velachery",
     "city": "Chennai",
     "latitude": 12.9815,
-    "longitude": 80.218
+    "longitude": 80.218,
+    "predicted_risk_probability": 0.8959,
+    "risk_score": 89.5875,
+    "population_exposure_score": 47.1945,
+    "vehicle_exposure_score": 56.9239,
+    "temporal_trend_score": 37.0599,
+    "priority_score": 64.5774,
+    "priority_rank": 9,
+    "priority_level": "HIGH",
+    "risk_prob": 0.8959
   }
 }

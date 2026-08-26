@@ -1,8 +1,121 @@
 {
   "zone_id": "Zone_36",
+  "location_name": "Rajajipuram",
+  "city": "Lucknow",
+  "zone_type": "Residential",
   "week": 8,
-  "predicted_risk_probability": 0.2896261814472658,
-  "metrics": {
+  "latitude": 26.833,
+  "longitude": 80.89,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.2896,
+    "predicted_risk_percentage": 28.96,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": -25.2235,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 58.5976,
+    "priority_rank": 11,
+    "priority_level": "HIGH",
+    "components": {
+      "risk_score": 28.9626,
+      "population_exposure_score": 81.73,
+      "vehicle_exposure_score": 69.1616,
+      "temporal_trend_score": 84.9846
+    },
+    "explanation": {
+      "priority_level": "HIGH",
+      "priority_score": 58.6,
+      "top_contributors": [
+        {
+          "factor": "Worsening Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "85/100",
+          "impact": "HIGH",
+          "detail": "4-week congestion trend is actively worsening \u2014 conditions deteriorating",
+          "weight": 84.9846
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "82/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 12737 residents/km\u00b2",
+          "weight": 81.73
+        },
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "69/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 69.1616
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "29/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 28.9626
+        }
+      ],
+      "total_factors": 4,
+      "assessment": "This zone shows significant risk elevation driven by Worsening Trend, Population Exposure. Proactive intervention should be scheduled within the current planning cycle."
+    }
+  },
+  "telemetry": {
+    "congestion": 31.67,
+    "congestion_delta": -8.37,
+    "average_speed_kmh": 58.12,
+    "speed_delta": 5.66,
+    "vehicle_density": 39.33,
+    "density_delta": -6.64,
+    "population_density": 12737,
+    "red_light_violations": 7,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 30,
+    "recommended_green_seconds": 34,
+    "change_seconds": 4,
+    "change_percent": 13.3,
+    "urgency": "MODERATE",
+    "reason": "Slight adjustment for current conditions",
+    "factors": {
+      "congestion_factor": 1.25,
+      "density_factor": 1.16,
+      "speed_factor": 0.78,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 47360.8,
+    "total_co2_tonnes_per_year": 2462.76,
+    "idle_co2_kg": 6875.6,
+    "moving_co2_kg": 40485.2,
+    "potential_savings_kg_per_week": 1592.9,
+    "potential_savings_tonnes_per_year": 82.83,
+    "trees_equivalent_per_year": 3944,
+    "fuel_saved_liters_per_week": 689.6,
+    "citizens_impacted": 25474,
+    "optimization_factor_pct": 23.2
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "Rajajipuram is within safe operating parameters (29% risk). Continue routine monitoring. Optimizing signals could save 1593 kg CO2/week, equivalent to 3944 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_36",
     "week": 8,
     "zone_type": "Residential",
@@ -51,6 +164,15 @@
     "location_name": "Rajajipuram",
     "city": "Lucknow",
     "latitude": 26.833,
-    "longitude": 80.89
+    "longitude": 80.89,
+    "predicted_risk_probability": 0.2896,
+    "risk_score": 28.9626,
+    "population_exposure_score": 81.73,
+    "vehicle_exposure_score": 69.1616,
+    "temporal_trend_score": 84.9846,
+    "priority_score": 58.5976,
+    "priority_rank": 11,
+    "priority_level": "HIGH",
+    "risk_prob": 0.2896
   }
 }

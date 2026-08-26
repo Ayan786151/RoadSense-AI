@@ -1,8 +1,105 @@
 {
   "zone_id": "Zone_48",
+  "location_name": "Ambattur",
+  "city": "Chennai",
+  "zone_type": "Industrial_Corridor",
   "week": 29,
-  "predicted_risk_probability": 0.17231384037103148,
-  "metrics": {
+  "latitude": 13.1143,
+  "longitude": 80.1486,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.1723,
+    "predicted_risk_percentage": 17.23,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": -17.5498,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 31.5567,
+    "priority_rank": 32,
+    "priority_level": "LOW",
+    "components": {
+      "risk_score": 17.2314,
+      "population_exposure_score": 18.9525,
+      "vehicle_exposure_score": 52.8305,
+      "temporal_trend_score": 62.3992
+    },
+    "explanation": {
+      "priority_level": "LOW",
+      "priority_score": 31.6,
+      "top_contributors": [
+        {
+          "factor": "Rising Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "62/100",
+          "impact": "MEDIUM",
+          "detail": "Slight upward trend in congestion over past 4 weeks",
+          "weight": 37.4395
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "17/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 17.2314
+        }
+      ],
+      "total_factors": 2,
+      "assessment": "This zone is currently within acceptable safety parameters. Routine monitoring is sufficient."
+    }
+  },
+  "telemetry": {
+    "congestion": 16.83,
+    "congestion_delta": -10.86,
+    "average_speed_kmh": 60.55,
+    "speed_delta": 5.41,
+    "vehicle_density": 34.53,
+    "density_delta": 3.8,
+    "population_density": 3999,
+    "red_light_violations": 3,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 45,
+    "recommended_green_seconds": 44,
+    "change_seconds": -1,
+    "change_percent": -2.2,
+    "urgency": "NOMINAL",
+    "reason": "Current default timing is adequate",
+    "factors": {
+      "congestion_factor": 1.13,
+      "density_factor": 1.14,
+      "speed_factor": 0.77,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 48280.5,
+    "total_co2_tonnes_per_year": 2510.58,
+    "idle_co2_kg": 3207.9,
+    "moving_co2_kg": 45072.6,
+    "potential_savings_kg_per_week": 695.6,
+    "potential_savings_tonnes_per_year": 36.17,
+    "trees_equivalent_per_year": 1722,
+    "fuel_saved_liters_per_week": 301.1,
+    "citizens_impacted": 7998,
+    "optimization_factor_pct": 21.7
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "Ambattur is within safe operating parameters (17% risk). Continue routine monitoring. Optimizing signals could save 696 kg CO2/week, equivalent to 1722 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_48",
     "week": 29,
     "zone_type": "Industrial_Corridor",
@@ -51,6 +148,15 @@
     "location_name": "Ambattur",
     "city": "Chennai",
     "latitude": 13.1143,
-    "longitude": 80.1486
+    "longitude": 80.1486,
+    "predicted_risk_probability": 0.1723,
+    "risk_score": 17.2314,
+    "population_exposure_score": 18.9525,
+    "vehicle_exposure_score": 52.8305,
+    "temporal_trend_score": 62.3992,
+    "priority_score": 31.5567,
+    "priority_rank": 32,
+    "priority_level": "LOW",
+    "risk_prob": 0.1723
   }
 }

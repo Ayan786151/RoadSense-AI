@@ -1,8 +1,105 @@
 {
   "zone_id": "Zone_11",
+  "location_name": "Lower Parel",
+  "city": "Mumbai",
+  "zone_type": "Residential",
   "week": 13,
-  "predicted_risk_probability": 0.29370208857231145,
-  "metrics": {
+  "latitude": 18.9988,
+  "longitude": 72.8258,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.2937,
+    "predicted_risk_percentage": 29.37,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": -29.5944,
+    "actual_incident": 0
+  },
+  "priority": {
+    "priority_score": 40.3019,
+    "priority_rank": 23,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 29.3702,
+      "population_exposure_score": 61.7429,
+      "vehicle_exposure_score": 41.9099,
+      "temporal_trend_score": 31.5742
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 40.3,
+      "top_contributors": [
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "62/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 9955 residents/km\u00b2",
+          "weight": 61.7429
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "29/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 29.3702
+        }
+      ],
+      "total_factors": 2,
+      "assessment": "This zone has moderate risk levels with contributing factors: Population Exposure. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 28.13,
+    "congestion_delta": -13.71,
+    "average_speed_kmh": 60.34,
+    "speed_delta": 10.01,
+    "vehicle_density": 26.99,
+    "density_delta": -2.66,
+    "population_density": 9955,
+    "red_light_violations": 4,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 30,
+    "recommended_green_seconds": 31,
+    "change_seconds": 1,
+    "change_percent": 3.3,
+    "urgency": "NOMINAL",
+    "reason": "Current default timing is adequate",
+    "factors": {
+      "congestion_factor": 1.23,
+      "density_factor": 1.11,
+      "speed_factor": 0.77,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 34529.2,
+    "total_co2_tonnes_per_year": 1795.52,
+    "idle_co2_kg": 4190.9,
+    "moving_co2_kg": 30338.3,
+    "potential_savings_kg_per_week": 956.1,
+    "potential_savings_tonnes_per_year": 49.72,
+    "trees_equivalent_per_year": 2367,
+    "fuel_saved_liters_per_week": 413.9,
+    "citizens_impacted": 19910,
+    "optimization_factor_pct": 22.8
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "Lower Parel is within safe operating parameters (29% risk). Continue routine monitoring. Optimizing signals could save 956 kg CO2/week, equivalent to 2367 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_11",
     "week": 13,
     "zone_type": "Residential",
@@ -51,6 +148,15 @@
     "location_name": "Lower Parel",
     "city": "Mumbai",
     "latitude": 18.9988,
-    "longitude": 72.8258
+    "longitude": 72.8258,
+    "predicted_risk_probability": 0.2937,
+    "risk_score": 29.3702,
+    "population_exposure_score": 61.7429,
+    "vehicle_exposure_score": 41.9099,
+    "temporal_trend_score": 31.5742,
+    "priority_score": 40.3019,
+    "priority_rank": 23,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.2937
   }
 }

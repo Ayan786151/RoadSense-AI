@@ -1,8 +1,121 @@
 {
   "zone_id": "Zone_07",
+  "location_name": "Goregaon",
+  "city": "Mumbai",
+  "zone_type": "University_District",
   "week": 42,
-  "predicted_risk_probability": 0.7708917197903392,
-  "metrics": {
+  "latitude": 19.1663,
+  "longitude": 72.8526,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.7709,
+    "predicted_risk_percentage": 77.09,
+    "risk_label": "CRITICAL RISK",
+    "risk_color": "#ef4444",
+    "risk_delta_vs_prev_week": -0.3033,
+    "actual_incident": 1
+  },
+  "priority": {
+    "priority_score": 61.1495,
+    "priority_rank": 7,
+    "priority_level": "HIGH",
+    "components": {
+      "risk_score": 77.0892,
+      "population_exposure_score": 42.4312,
+      "vehicle_exposure_score": 58.7443,
+      "temporal_trend_score": 53.0479
+    },
+    "explanation": {
+      "priority_level": "HIGH",
+      "priority_score": 61.1,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udd34",
+          "value": "77/100",
+          "impact": "HIGH",
+          "detail": "Model-estimated risk score is in the critical range",
+          "weight": 77.0892
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "66/100",
+          "impact": "HIGH",
+          "detail": "Congestion index at 66 \u2014 severe traffic flow degradation",
+          "weight": 66.11
+        },
+        {
+          "factor": "Violation Count",
+          "icon": "\ud83d\udea8",
+          "value": "12",
+          "impact": "HIGH",
+          "detail": "12 red-light violations recorded \u2014 intersection safety concern",
+          "weight": 60
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "42/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 29.7018
+        }
+      ],
+      "total_factors": 4,
+      "assessment": "This zone shows significant risk elevation driven by Risk Score, Congestion. Proactive intervention should be scheduled within the current planning cycle."
+    }
+  },
+  "telemetry": {
+    "congestion": 66.11,
+    "congestion_delta": -3.92,
+    "average_speed_kmh": 42.35,
+    "speed_delta": -0.91,
+    "vehicle_density": 44.98,
+    "density_delta": 0.39,
+    "population_density": 7267,
+    "red_light_violations": 12,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 53,
+    "change_seconds": 18,
+    "change_percent": 51.4,
+    "urgency": "CRITICAL",
+    "reason": "Severe congestion requires significantly extended green phase",
+    "factors": {
+      "congestion_factor": 1.53,
+      "density_factor": 1.18,
+      "speed_factor": 0.84,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 35006.9,
+    "total_co2_tonnes_per_year": 1820.36,
+    "idle_co2_kg": 16414.4,
+    "moving_co2_kg": 18592.5,
+    "potential_savings_kg_per_week": 4368.0,
+    "potential_savings_tonnes_per_year": 227.14,
+    "trees_equivalent_per_year": 10816,
+    "fuel_saved_liters_per_week": 1890.9,
+    "citizens_impacted": 14534,
+    "optimization_factor_pct": 26.6
+  },
+  "interventions": [
+    {
+      "id": "VIOLATION_ENFORCEMENT",
+      "name": "Red-Light Violation Enforcement",
+      "icon": "\ud83d\udea8",
+      "severity": "HIGH",
+      "description": "Elevated red-light violation count indicates intersection compliance failure.",
+      "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
+    }
+  ],
+  "executive_briefing": "Goregaon is in a critical safety state with 77% incident risk. Signal optimization recommended \u2014 congestion at 66/100 with speeds averaging 42 km/h. Optimizing signals could save 4368 kg CO2/week, equivalent to 10816 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_07",
     "week": 42,
     "zone_type": "University_District",
@@ -51,6 +164,15 @@
     "location_name": "Goregaon",
     "city": "Mumbai",
     "latitude": 19.1663,
-    "longitude": 72.8526
+    "longitude": 72.8526,
+    "predicted_risk_probability": 0.7709,
+    "risk_score": 77.0892,
+    "population_exposure_score": 42.4312,
+    "vehicle_exposure_score": 58.7443,
+    "temporal_trend_score": 53.0479,
+    "priority_score": 61.1495,
+    "priority_rank": 7,
+    "priority_level": "HIGH",
+    "risk_prob": 0.7709
   }
 }

@@ -1,8 +1,113 @@
 {
   "zone_id": "Zone_46",
+  "location_name": "Nungambakkam",
+  "city": "Chennai",
+  "zone_type": "University_District",
   "week": 14,
-  "predicted_risk_probability": 0.29935242836927095,
-  "metrics": {
+  "latitude": 13.0569,
+  "longitude": 80.2425,
+  "risk_analysis": {
+    "predicted_risk_probability": 0.2994,
+    "predicted_risk_percentage": 29.94,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": -11.3343,
+    "actual_incident": 1
+  },
+  "priority": {
+    "priority_score": 46.6426,
+    "priority_rank": 19,
+    "priority_level": "MODERATE",
+    "components": {
+      "risk_score": 29.9352,
+      "population_exposure_score": 48.0494,
+      "vehicle_exposure_score": 44.3619,
+      "temporal_trend_score": 91.8917
+    },
+    "explanation": {
+      "priority_level": "MODERATE",
+      "priority_score": 46.6,
+      "top_contributors": [
+        {
+          "factor": "Worsening Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "92/100",
+          "impact": "HIGH",
+          "detail": "4-week congestion trend is actively worsening \u2014 conditions deteriorating",
+          "weight": 91.8917
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "48/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 33.6346
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "30/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 29.9352
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone has moderate risk levels with contributing factors: Worsening Trend, Population Exposure. Continue monitoring and schedule review if conditions worsen."
+    }
+  },
+  "telemetry": {
+    "congestion": 24.77,
+    "congestion_delta": -11.25,
+    "average_speed_kmh": 60.32,
+    "speed_delta": 8.51,
+    "vehicle_density": 28.68,
+    "density_delta": -3.56,
+    "population_density": 8049,
+    "red_light_violations": 3,
+    "weather": "Normal",
+    "special_event": 0
+  },
+  "signal_optimization": {
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 36,
+    "change_seconds": 1,
+    "change_percent": 2.9,
+    "urgency": "NOMINAL",
+    "reason": "Current default timing is adequate",
+    "factors": {
+      "congestion_factor": 1.2,
+      "density_factor": 1.11,
+      "speed_factor": 0.77,
+      "event_boost": 1.0,
+      "weather_boost": 1.0
+    }
+  },
+  "environmental_impact": {
+    "total_co2_kg_per_week": 37655.3,
+    "total_co2_tonnes_per_year": 1958.08,
+    "idle_co2_kg": 3921.4,
+    "moving_co2_kg": 33733.9,
+    "potential_savings_kg_per_week": 881.4,
+    "potential_savings_tonnes_per_year": 45.83,
+    "trees_equivalent_per_year": 2182,
+    "fuel_saved_liters_per_week": 381.6,
+    "citizens_impacted": 16098,
+    "optimization_factor_pct": 22.5
+  },
+  "interventions": [
+    {
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
+    }
+  ],
+  "executive_briefing": "Nungambakkam is within safe operating parameters (30% risk). Continue routine monitoring. Optimizing signals could save 881 kg CO2/week, equivalent to 2182 trees/year.",
+  "raw_metrics": {
     "zone_id": "Zone_46",
     "week": 14,
     "zone_type": "University_District",
@@ -51,6 +156,15 @@
     "location_name": "Nungambakkam",
     "city": "Chennai",
     "latitude": 13.0569,
-    "longitude": 80.2425
+    "longitude": 80.2425,
+    "predicted_risk_probability": 0.2994,
+    "risk_score": 29.9352,
+    "population_exposure_score": 48.0494,
+    "vehicle_exposure_score": 44.3619,
+    "temporal_trend_score": 91.8917,
+    "priority_score": 46.6426,
+    "priority_rank": 19,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.2994
   }
 }
