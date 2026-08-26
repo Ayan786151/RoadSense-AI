@@ -1,0 +1,730 @@
+================================================================================
+ROADSENSE AI — COMPREHENSIVE PROJECT GUIDE & SYSTEM DOCUMENTATION
+Civic Infrastructure Intelligence, Computer Vision, Machine Learning & Sustainability
+================================================================================
+
+This document provides a complete, easy-to-understand explanation of the entire 
+RoadSense AI project. It details every module, script, machine learning model, 
+computer vision algorithm, and external library so that every teammate can 
+confidently understand, explain, run, and present the system.
+
+--------------------------------------------------------------------------------
+TABLE OF CONTENTS
+--------------------------------------------------------------------------------
+1.  PROJECT OVERVIEW & CIVIC IMPACT
+2.  HIGH-LEVEL SYSTEM ARCHITECTURE & DATA FLOW
+3.  COMPLETE DIRECTORY & CODEBASE MAP
+4.  DETAILED BREAKDOWN OF EVERY SCRIPT & MODULE
+    - 4.1 Root Entrypoint & Simulator (app.py, sim.py)
+    - 4.2 Machine Learning & Risk Forecasting (models/)
+    - 4.3 Temporal Feature Engineering & Data Audits (analysis/)
+    - 4.4 Priority & Municipal Intervention Engines (priority/)
+    - 4.5 Computer Vision, Tracking & Safety Systems (vision/)
+    - 4.6 Adaptive Intelligence, CO2 & Legal E-Challan (intelligence/)
+    - 4.7 Command Center Dashboards & Visualizations (dashboard/)
+    - 4.8 Automation & Presentation Scripts (scripts/)
+5.  ALL MODELS EXPLAINED (WHAT EACH MODEL DOES & HOW IT WORKS)
+    - 5.1 Supervised ML Classification Models (Random Forest & Logistic Regression)
+    - 5.2 Deep Learning Object Detectors (YOLOv11s, YOLOv11n)
+    - 5.3 Specialized Safety & Fine-Tuned Models (Helmet, Red-Light, UVH-26 Indian Traffic)
+    - 5.4 Algorithmic, Kinematic & Mathematical Models (Kalman Filter, Homography, Hough)
+    - 5.5 Generative AI Intelligence Models (Llama-3.3-70B & Gemini-2.5-Flash)
+6.  ALL LIBRARIES EXPLAINED (WHY AND WHERE EACH IS USED)
+7.  KEY MATHEMATICAL FORMULAS & DECISION LOGIC
+8.  STEP-BY-STEP GUIDE: HOW TO RUN & DEMONSTRATE THE PROJECT
+9.  TALKING POINTS FOR PRESENTATIONS & HACKATHONS
+
+================================================================================
+1. PROJECT OVERVIEW & CIVIC IMPACT
+================================================================================
+
+RoadSense AI is an end-to-end Kinetic Infrastructure Intelligence and Traffic 
+Safety Management System. It bridges real-time computer vision with longitudinal 
+predictive machine learning to solve four major urban transportation challenges:
+
+1. High Two-Wheeler Vulnerability & Safety Non-Compliance:
+   In fast-growing cities, >70% of fatal traffic accidents involve two-wheelers. 
+   Failure to wear helmets, red-light jumping, and dangerous triple-riding are 
+   primary contributors. RoadSense AI detects these violations automatically from 
+   CCTV feeds and generates legally valid Digital E-Challan citations mapped to 
+   the Motor Vehicles Act (MVA) 1988.
+
+2. Inefficient Static Traffic Signals:
+   Traditional timers (e.g., fixed 90 seconds green) cause massive congestion on 
+   busy approaches while green lights waste time on empty lanes. RoadSense AI 
+   calculates Dynamic Traffic Signal Control (DTSC) green durations in real-time 
+   (15s to 120s) based on vehicle density, speed, and queue kinematics.
+
+3. Environmental Carbon Emissions & Fuel Waste:
+   Vehicles trapped in stop-and-go congestion emit 2.5x more CO2 than free-flowing 
+   traffic. RoadSense AI quantifies kilograms of CO2 prevented, liters of fuel 
+   saved, and tree-equivalent absorption resulting from signal optimization.
+
+4. Lack of Predictive Long-Term Risk Planning:
+   Municipal traffic departments typically react after accidents happen. RoadSense 
+   AI trains a leakage-free Supervised ML Risk Forecaster across 50 municipal 
+   zones over 52 weeks to predict the probability of an accident occurring in 
+   upcoming weeks, enabling proactive police and engineering interventions.
+
+================================================================================
+2. HIGH-LEVEL SYSTEM ARCHITECTURE & DATA FLOW
+================================================================================
+
+The system operates across three interconnected operational pipelines:
+
++-------------------------------------------------------------------------------+
+|                             ROADSENSE AI ARCHITECTURE                         |
++-------------------------------------------------------------------------------+
+
+[1. COMPUTER VISION & SENSING]
+  CCTV Footage / Live Stream / YouTube Feed
+           │
+           ▼
+  adaptive_preprocess_frame (CIELAB CLAHE + Gamma Correction for Low-Light/Night)
+           │
+           ▼
+  YOLOv11 Detection + ByteTrack ID Association (Cars, 2-Wheelers, Autos, Buses, Trucks)
+     ├─► Driver + Pillion Fusion (merges rider boxes into unified motorcycles)
+     ├─► HelmetViolationDetector (rider head ROI extraction & compliance check)
+     ├─► RedLightViolationDetector + AutonomousAdaptiveEngine (Hough stop-line & HSV signal)
+     └─► TripleRidingDetector (aspect ratio + torso density cluster inspection)
+           │
+           ▼
+  Perspective Homography Calibration (2D pixels -> Real-world Ground Meters)
+           │
+           ▼
+  Ground-Plane 2D Kalman Filter (Constant velocity tracking + physical km/h speed)
+           │
+           ▼
+  Telemetry Export -> live_traffic_observations.csv & violation_events.csv
+           │
+           ▼
+  Automated Legal Citation Engine (echallan_generator.py -> MVA 1988 fine HTML tickets)
+
+[2. TEMPORAL RISK & MUNICIPAL PRIORITY PIPELINE]
+  50 Zones x 52 Weeks Synthetic Traffic Simulator (sim.py)
+           │
+           ▼
+  Temporal Feature Engineering (analysis/temporal_features.py)
+  (Lag-1, Rolling 4-Week Averages, Week-over-Week Deltas, 4-Week OLS Linear Slopes)
+           │
+           ▼
+  Supervised ML Risk Model (models/train_model.py -> models/best_risk_model.pkl)
+  (Random Forest Pipeline: StandardScaler + OneHotEncoder -> Incident Probability P)
+           │
+           ▼
+  Priority Engine (priority/priority_engine.py)
+  [Priority Score = 40% ML Risk + 25% Pop. Exposure + 20% Veh. Exposure + 15% Trend]
+           │
+           ▼
+  Intervention Engine (priority/intervention_engine.py)
+  (10 Auditable Rules: Signal Timing, Speed Calming, Camera Upgrades, Pothole Repair)
+           │
+           ▼
+  Adaptive Signal & CO2 Savings Engine (intelligence/signal_co2.py)
+           │
+           ▼
+  Executive AI Safety Briefings (intelligence/llm_briefing.py -> Llama-3.3 / Gemini-2.5)
+
+[3. COMMAND CENTER & USER INTERFACE]
+  Streamlit Master Control Hub (app.py)
+     ├─► 01. SIMULATION & RISK ENGINE (52-week zone explorer, ML test lab, LLM brief)
+     ├─► 02. LIVE CCTV SURVEILLANCE (telemetry graphs, homography overlays, speed ledger)
+     ├─► 03. COMPUTER VISION STUDIO (live video processor, violation alerts, e-challans)
+     └─► 04. GEOSPATIAL INCIDENT RADAR (Mapbox city heatmap, risk density radar)
+
+================================================================================
+3. COMPLETE DIRECTORY & CODEBASE MAP
+================================================================================
+
+traffic_sim/
+├── app.py                          # Master Streamlit UI & Command Center entrypoint
+├── sim.py                          # 50-Zone x 52-Week synthetic urban traffic simulator
+├── requirements.txt                # Pinned project dependencies
+├── README.md                       # High-level documentation & project overview
+├── yolo11n.pt / yolo11s.pt         # Pretrained Ultralytics YOLOv11 neural network weights
+│
+├── analysis/                       # Data processing & validation scripts
+│   ├── temporal_features.py        # Leakage-free lag, rolling, delta, and OLS features
+│   └── validate_sessions.py        # Multi-session CCTV integrity and schema auditor
+│
+├── config/                         # Configuration contracts
+│   └── feature_contract.json       # Strict JSON schema and data type contract for ML
+│
+├── dashboard/                      # UI submodules rendered by app.py
+│   ├── simulation_dashboard.py     # 52-Week analytics, ML model card & LLM executive brief
+│   ├── vision_studio.py            # Live video processing studio with YouTube stream support
+│   ├── city_map.py                 # Geospatial Mapbox risk radar & congestion contours
+│   └── api_pusher.py               # Static JSON REST API generator (/api/v1/)
+│
+├── data/                           # Data storage directory
+│   ├── simulation_temporal_features.csv  # 2,600-row engineered temporal dataset
+│   ├── risk_predictions.csv        # ML model risk outputs across test weeks
+│   ├── final_priority_results.csv  # Composite priority scores and intervention triggers
+│   ├── location_mapping.csv        # Real Indian city coordinates (Bengaluru, Mumbai, Delhi)
+│   ├── calibration_config.json     # 4-point perspective homography ground-plane coordinates
+│   └── sessions/                   # Saved CCTV telemetry sessions (session_001, 002, etc.)
+│
+├── intelligence/                   # Smart city AI & civic automation services
+│   ├── signal_co2.py               # Adaptive green light duration & CO2 savings calculator
+│   ├── llm_briefing.py             # Multi-key Groq / Gemini executive brief generator
+│   └── echallan_generator.py       # Motor Vehicles Act legal e-challan & HTML ticket engine
+│
+├── models/                         # Machine learning model artifacts & training
+│   ├── train_model.py              # ML risk model trainer (Random Forest & Logistic Regression)
+│   ├── best_risk_model.pkl         # Serialized scikit-learn pipeline artifact
+│   └── MODEL_CARD.md               # Standardized ML model card & ethical disclosure
+│
+├── priority/                       # Municipal prioritization & decision systems
+│   ├── priority_engine.py          # Risk x Exposure x Trend weighted scoring algorithm
+│   └── intervention_engine.py      # 10 rule-based municipal action recommendations
+│
+├── scripts/                        # Utility & reporting scripts
+│   └── remake_presentation.py      # Automated PowerPoint generator for competition slides
+│
+├── videos/                         # Test CCTV traffic footage clips
+│   └── traffic.mp4                 # Baseline intersection video
+│
+└── vision/                         # Computer vision & kinematic detection engine
+    ├── vehicle_detector.py         # YOLOv11 detection + ByteTrack + rider fusion
+    ├── calibration.py              # 4-point planar perspective homography matrix
+    ├── enhancement.py              # CIELAB CLAHE + Gamma low-light/night preprocessor
+    ├── movement_analyzer.py        # Real-world metric speed estimation (km/h)
+    ├── kalman_tracker.py           # 2D ground-plane Kalman filter with occlusion handling
+    ├── helmet_detector.py          # Two-wheeler rider helmet compliance detector
+    ├── red_light_detector.py       # Optical traffic light HSV tracker + stop-line enforcement
+    ├── triple_riding_detector.py   # Overloaded two-wheeler multi-passenger detector
+    ├── violation_tracker.py        # Master video processing pipeline for violations
+    ├── adaptive_engine.py          # Autonomous Hough stop-line discovery & auto-calibration
+    ├── traffic_analyzer.py         # Frame-level occupancy & density metric generator
+    ├── feature_fusion.py           # Relational timestamp fusion of vision & speed streams
+    ├── train_all.py                # Master all-in-one neural & ML training orchestrator
+    ├── train_helmet_model.py       # Specialized helmet YOLO training script
+    ├── train_violation_model.py    # Multi-violation YOLO fine-tuning pipeline
+    └── train_uvh26.py              # IISc AIM 14-class Indian traffic dataset fine-tuner
+
+================================================================================
+4. DETAILED BREAKDOWN OF EVERY SCRIPT & MODULE
+================================================================================
+
+--------------------------------------------------------------------------------
+4.1 Root Entrypoint & Simulator
+--------------------------------------------------------------------------------
+
+• app.py
+  - Purpose: The master entrypoint for the Streamlit web application.
+  - Features:
+    * Implements a custom dark-mode design system with clean typography (Inter & JetBrains Mono).
+    * Provides a sidebar navigation menu with 4 main operational modules:
+      1. Simulation & Risk Engine
+      2. Live CCTV Surveillance
+      3. Computer Vision Studio
+      4. Geospatial Incident Radar
+    * Displays high-level status badges, telemetry summaries, and active session explorers.
+
+• sim.py
+  - Purpose: Generates a realistic, 52-week synthetic urban traffic panel dataset 
+    across 50 municipal zones (2,600 total observations).
+  - How it works:
+    * Initializes 50 distinct zones categorized into 6 urban archetypes:
+      Commercial Downtown, Residential, University District, Industrial Corridor, 
+      Highway Junction, and Suburban Low-Density.
+    * Implements 6 distinct temporal dynamics profiles:
+      1. STABLE: Predictable weekly baseline.
+      2. GRADUAL_DETERIORATION: Worsens progressively (+22.0 drift over 52 weeks).
+      3. GRADUAL_IMPROVEMENT: Improves progressively (-16.0 drift over 52 weeks).
+      4. PERIODIC_SPIKE: Surges every 5 weeks (e.g., bi-monthly stadium/market traffic).
+      5. EVENT_SENSITIVE: Reacts sharply to municipal festivals and conventions.
+      6. RECOVERY_AFTER_DISRUPTION: Worsens -> bottlenecks -> remediates -> stabilizes.
+    * Models weather shocks (Monsoon in weeks 31-36, Winter storms in weeks 48-52).
+    * Simulates non-linear physics: effective capacity degradation, sigmoid congestion 
+      response curves, Poisson red-light violations, and Bernoulli incident occurrence.
+    * Outputs to `data/traffic_simulation.csv`.
+
+--------------------------------------------------------------------------------
+4.2 Machine Learning & Risk Forecasting (models/)
+--------------------------------------------------------------------------------
+
+• models/train_model.py
+  - Purpose: Trains, validates, compares, and exports the Supervised Machine Learning 
+    Risk Model predicting the probability of an incident: P(incident_occurred = 1).
+  - Pipeline Design:
+    * Chronological data split: Weeks 5-40 (Train: 1,800 rows), Weeks 41-46 (Val: 300 rows), 
+      Weeks 47-52 (Test: 300 rows). Weeks 1-4 are dropped as historical warm-up.
+    * Preprocessor: scikit-learn ColumnTransformer with StandardScaler for 37 numerical 
+      features and OneHotEncoder for 3 categorical features (zone_type, weather, road_condition).
+    * Model Comparison: Compares Logistic Regression (baseline) against a Random Forest 
+      Classifier (150 trees, max_depth=6, class_weight="balanced").
+    * Evaluation Metrics: Computes Accuracy, Precision, Recall, F1-Score, ROC-AUC, 
+      PR-AUC, Brier Score, and Confusion Matrices.
+    * Exports the best pipeline to `models/best_risk_model.pkl` and test predictions to 
+      `data/risk_predictions.csv`.
+
+• models/MODEL_CARD.md
+  - Purpose: Industry-standard documentation disclosing model architecture, intended 
+    use, evaluation results, ethical boundaries, and data limitations.
+
+--------------------------------------------------------------------------------
+4.3 Temporal Feature Engineering & Data Audits (analysis/)
+--------------------------------------------------------------------------------
+
+• analysis/temporal_features.py
+  - Purpose: Ingests raw simulation data and constructs 40 leakage-free temporal 
+    momentum features required by the ML model.
+  - Feature Categories:
+    1. Lag-1 Features (Week t-1): Previous-week density, congestion, speed, violations, incidents.
+    2. Rolling 4-Week Historical Features (Weeks t-4 to t-1): Rolling averages, cumulative 
+       incident counts, and historical incident rates.
+    3. Week-over-Week Deltas (Week t vs t-1): Absolute changes in density, congestion, speed.
+    4. Percentage Changes: Relative weekly shifts in key traffic metrics.
+    5. 4-Week Linear Trend Slopes: Ordinary Least Squares (OLS) slope of congestion, density, 
+       speed, and incidents over past 4 weeks.
+    * Strict Leakage Prevention: Uses `.shift(1)` so current week t is NEVER included in history.
+    * Outputs to `data/simulation_temporal_features.csv`.
+
+• analysis/validate_sessions.py
+  - Purpose: Automated test suite auditing CCTV session files, ensuring tracker states, 
+    unique vehicle IDs, and metrics remain consistent across multiple video recordings.
+
+--------------------------------------------------------------------------------
+4.4 Priority & Municipal Intervention Engines (priority/)
+--------------------------------------------------------------------------------
+
+• priority/priority_engine.py
+  - Purpose: Combines ML risk probability with real-world exposure to compute an 
+    actionable Municipal Priority Score (0-100) and rank zones 1 to 50.
+  - Formula:
+    Priority Score = (0.40 * Risk_Score) + 
+                     (0.25 * Population_Exposure_Score) + 
+                     (0.20 * Vehicle_Exposure_Score) + 
+                     (0.15 * Temporal_Trend_Score)
+  - Output Classifications:
+    * CRITICAL: Score >= 75 (Requires urgent multi-department deployment)
+    * HIGH: Score 55 - 74 (Scheduled intervention in current cycle)
+    * MODERATE: Score 35 - 54 (Active monitoring and review)
+    * LOW: Score < 35 (Routine baseline monitoring)
+  - Merges real geographic coordinates from `data/location_mapping.csv` and outputs 
+    to `data/final_priority_results.csv`.
+
+• priority/intervention_engine.py
+  - Purpose: Evaluates 10 explicit, auditable municipal intervention rules based on 
+    current traffic metrics and generates structured, human-readable explanations.
+  - Sample Rules Triggered:
+    * Traffic Signal Optimization: Triggered when Congestion >= 60 and Speed < 35 km/h.
+    * Speed Calming & Enforcement: Triggered when Speed > 55 km/h and Risk > 50.
+    * Red-Light Camera Activation: Triggered when Violations >= 8.
+    * Pedestrian Crossing Protection: Triggered when Population > 10,000 and Congestion > 50.
+    * Road Maintenance / Pothole Repair: Triggered when Road Condition is Poor and Risk > 40.
+    * Urgent Safety Inspection: Triggered when 4-Week Trend > 75 and Risk > 60.
+
+--------------------------------------------------------------------------------
+4.5 Computer Vision, Tracking & Safety Systems (vision/)
+--------------------------------------------------------------------------------
+
+• vision/enhancement.py
+  - Purpose: Adaptive low-light, nighttime, and glare mitigation preprocessor.
+  - Math & Technique:
+    * Converts BGR image into CIELAB color space, separating Luminance (L*) from color (a*, b*).
+    * Applies Contrast Limited Adaptive Histogram Equalization (CLAHE) with clipLimit=2.5 
+      and tileGridSize=(8, 8) to enhance dark vehicle edges without amplifying noise.
+    * For deep night scenes (L* < 40), applies a non-linear power-law gamma lookup table 
+      (gamma=0.70) to brighten shadows.
+    * Daytime frames (L* >= 65) pass through untouched with zero computational distortion.
+
+• vision/calibration.py
+  - Purpose: Perspective homography engine mapping 2D camera pixels onto a real-world 
+    2D ground coordinate plane in meters.
+  - Math & Technique:
+    * Uses a 4-point quadrilateral homography matrix H calculated via `cv2.getPerspectiveTransform`.
+    * Computes real-world ground coordinates: `s * [X, Y, 1]^T = H * [u, v, 1]^T`.
+    * Supports wide-angle lens undistortion using radial/tangential coefficients (k1, k2, p1, p2).
+
+• vision/vehicle_detector.py
+  - Purpose: Primary object detection and vehicle tracking pipeline.
+  - Features:
+    * Uses Ultralytics YOLOv11 neural network for multi-class detection.
+    * Universal class resolver: maps classes into 5 categories (cars, 2-wheelers, auto-rickshaws, buses, trucks).
+    * Multi-Rider Fusion (`fuse_driver_pillion_riders`): detects vertically stacked rider boxes 
+      on a motorcycle and merges them into a single physical 2-wheeler unit to eliminate double-counting.
+    * Implements ByteTrack persistent tracking across video frames.
+
+• vision/movement_analyzer.py
+  - Purpose: Calculates vehicle kinematic trajectory metrics and true physical speed in km/h.
+  - Math:
+    * Uses bottom-center of bounding boxes (road-contact point).
+    * Projects points through homography H into metric coordinates (X_meters, Y_meters).
+    * Computes displacement Delta_d and elapsed time Delta_t -> Speed (km/h) = (Delta_d / Delta_t) * 3.6.
+    * Excludes first observation (assigned NaN) and filters out non-physical teleportation jumps.
+
+• vision/kalman_tracker.py
+  - Purpose: 2D Constant-Velocity Kalman Filter on the ground plane.
+  - Math:
+    * State vector: `x = [X, Y, vX, vY]^T` (Position in meters, Velocity in m/s).
+    * Continuous-acceleration white noise motion model with process covariance Q(dt).
+    * Occlusion gating: When a vehicle is occluded by another vehicle in front, the tracker 
+      coasts on momentum rather than allowing corrupted measurements to skew velocity.
+
+• vision/helmet_detector.py
+  - Purpose: Real-time safety compliance detection for two-wheeler riders.
+  - Mechanism:
+    * Extracts rider head region (upper 35% of two-wheeler bounding box).
+    * Evaluates head region using fine-tuned YOLO weights or chromatic edge inspection.
+    * Classifies as HELMET (compliant) or NO_HELMET (violation) and logs event records.
+
+• vision/red_light_detector.py
+  - Purpose: Automated red-light running and virtual stop-line breach enforcement.
+  - Mechanism:
+    * Analyzes traffic light state (RED / YELLOW / GREEN) using HSV chromatic energy segmentation.
+    * Establishes a virtual horizontal stop-line across intersection lanes.
+    * Tracks vehicle bottom-center points; if a vehicle crosses the stop line during a RED phase, 
+      a RED_LIGHT_RUNNING violation is triggered with timestamp and track ID.
+
+• vision/triple_riding_detector.py
+  - Purpose: Detects overloaded two-wheelers carrying >2 persons (Section 128 MVA).
+  - Mechanism:
+    * Evaluates horizontal bounding box aspect ratio and upper-body contour cluster density.
+    * Flags motorcycles where multiple rider silhouettes exceed safe two-passenger capacity.
+
+• vision/violation_tracker.py
+  - Purpose: Unified orchestrator running vehicle tracking, helmet detection, and red-light 
+    enforcement simultaneously on video files, exporting `violation_events.csv`.
+
+• vision/adaptive_engine.py
+  - Purpose: Autonomous scene self-calibration without manual user configuration.
+  - Features:
+    * Dynamic Stop-Line Discovery: Uses Canny edge detection and Probabilistic Hough Line 
+      Transform (`cv2.HoughLinesP`) to find painted road markings, smoothed via Exponential Moving Average.
+    * Optical Signal Tracking: Continuously tracks traffic light chromatic shifts.
+
+• vision/feature_fusion.py & traffic_analyzer.py
+  - Purpose: Relational database join merging vehicle count density with kinematics metrics 
+    on exact timestamps (`timestamp_seconds`), producing combined congestion scores.
+
+• vision/train_*.py (Training scripts)
+  - `train_helmet_model.py`: Fine-tunes YOLO for helmet vs no-helmet detection.
+  - `train_violation_model.py`: Multi-class safety violation training pipeline.
+  - `train_uvh26.py`: Fine-tunes YOLO on IISc AIM Indian traffic datasets (14 vehicle classes).
+  - `train_all.py`: Master one-click script that trains all ML and computer vision models in sequence.
+
+--------------------------------------------------------------------------------
+4.6 Adaptive Intelligence, CO2 & Legal E-Challan (intelligence/)
+--------------------------------------------------------------------------------
+
+• intelligence/signal_co2.py
+  - Purpose: Computes dynamic green-light signal allocation and quantifies environmental savings.
+  - Dynamic Signal Control (DTSC):
+    * Adjusts archetype base green times (25s-50s) using congestion multipliers (1.0x-1.8x), 
+      density factors, speed clearance factors, and weather boosts, clamped between 15s and 120s.
+  - CO2 Impact Estimation:
+    * Models vehicle idle emission (2.3 kg CO2/veh/hour) vs moving emissions based on CPCB India standards.
+    * Computes weekly CO2 generated, kilograms prevented via signal smoothing, fuel saved (liters/week), 
+      and equivalent trees needed to absorb the carbon offset.
+
+• intelligence/llm_briefing.py
+  - Purpose: Automated executive briefing generator translating complex metrics into plain English.
+  - Architecture:
+    * Connects to Groq API (running `llama-3.3-70b-versatile`) and Google Gemini API (`gemini-2.5-flash`).
+    * Features automatic round-robin API key rotation across key pools (`GROQ_API_KEYS`, `GEMINI_API_KEYS`) 
+      with intelligent 60-second cooldown on rate limits (HTTP 429).
+    * Deterministic template fallback if no internet/API key is present.
+
+• intelligence/echallan_generator.py
+  - Purpose: Converts detected safety violations into legally enforceable Digital E-Challan citations.
+  - Features:
+    * Generates unique verifiable citation IDs (e.g. `RS-2026-F982A1`).
+    * Maps violations to statutory penal sections of the Motor Vehicles Act (MVA) 1988:
+      - No-Helmet: Section 129 r/w Section 194D (Rs 1,000 fine + 3-month license suspension).
+      - Red-Light Jumping: Section 119 r/w Sections 177A & 184 (Rs 5,000 fine).
+      - Triple-Riding: Section 128 r/w Section 194C (Rs 1,000 fine).
+      - Over-Speeding: Section 112 r/w Section 183 (Rs 2,000 fine).
+    * Renders a high-aesthetic, print-ready HTML citation ticket with MD5/SHA-256 verification hash.
+
+--------------------------------------------------------------------------------
+4.7 Command Center Dashboards & Visualizations (dashboard/)
+--------------------------------------------------------------------------------
+
+• dashboard/simulation_dashboard.py
+  - Purpose: The interactive analytics lab for exploring the 52-week 50-zone simulation.
+  - Features:
+    * Zone selector with urban archetype, temporal profile, and live condition metrics.
+    * Dynamic Signal Timing & CO2 Emission Calculator with interactive sliders.
+    * 52-Week Historical Timeline Charts showing Congestion vs Predicted Incident Probability.
+    * AI Executive Review tab powered by Llama-3.3 / Gemini-2.5.
+    * City-wide leaderboard ranking top critical zones.
+
+• dashboard/vision_studio.py
+  - Purpose: Computer Vision testing studio for processing live videos and YouTube streams.
+  - Features:
+    * Supports local MP4 video uploads and direct YouTube stream ingestion via `yt-dlp`.
+    * Real-time video processing with bounding boxes, vehicle classifications, and speed overlays.
+    * Violation Inspector: displays detected infractions with direct links to view generated E-Challan tickets.
+
+• dashboard/city_map.py
+  - Purpose: Geospatial command radar displaying the 50 municipal zones on an interactive 
+    dark Mapbox map centered on real metropolitan coordinates, with color-coded risk and congestion tiers.
+
+• dashboard/api_pusher.py
+  - Purpose: Serializes all simulation, ML prediction, priority, and intervention data into 
+    standardized JSON files under `api/v1/` (`zones.json`, `summary.json`, `weeks/week_*.json`).
+
+--------------------------------------------------------------------------------
+4.8 Automation & Presentation Scripts (scripts/)
+--------------------------------------------------------------------------------
+
+• scripts/remake_presentation.py
+  - Purpose: Programmatic PowerPoint populator using `python-pptx`. Ingests a conference/competition 
+    presentation template and inserts formatted slides covering problem statements, architecture, 
+    ML results, and civic impact while preserving layout and fonts.
+
+================================================================================
+5. ALL MODELS EXPLAINED (WHAT EACH MODEL DOES & HOW IT WORKS)
+================================================================================
+
+RoadSense AI uses a multi-tiered combination of Machine Learning, Deep Learning, 
+Generative AI, and Kinematic Mathematical Models:
+
+--------------------------------------------------------------------------------
+5.1 Supervised ML Classification Models
+--------------------------------------------------------------------------------
+• Random Forest Classifier (Primary Model in `models/best_risk_model.pkl`)
+  - Role: Predicts weekly incident probability `P(incident_occurred = 1)` for any zone-week.
+  - Configuration: 150 decision trees, max depth = 6, min_samples_leaf = 8, class_weight = "balanced".
+  - Why it is used: Non-linear ensemble model that handles complex feature interactions 
+    between congestion, weather, violations, and 4-week trend slopes without overfitting.
+  - Preprocessing: Numerical features normalized with StandardScaler; categorical features 
+    encoded with OneHotEncoder.
+
+• Logistic Regression (Baseline Model)
+  - Role: Acts as an interpretable linear baseline to validate the performance of the Random Forest.
+  - Configuration: L2 regularization (C=0.1), balanced class weights.
+
+--------------------------------------------------------------------------------
+5.2 Deep Learning Object Detectors
+--------------------------------------------------------------------------------
+• Ultralytics YOLOv11 (YOLOv11s / YOLOv11n)
+  - Role: Real-time object detection across CCTV video frames.
+  - Classes Detected: Cars, Motorcycles/Bicycles (2-Wheelers), Auto-Rickshaws, Buses, Trucks.
+  - Why it is used: State-of-the-art inference speed (30-60+ FPS on GPU) with high accuracy 
+    under diverse real-world lighting and weather conditions.
+
+--------------------------------------------------------------------------------
+5.3 Specialized Safety & Fine-Tuned Models
+--------------------------------------------------------------------------------
+• Helmet Violation Model (`models/helmet_yolo.pt`)
+  - Role: Detects presence vs absence of protective helmets on 2-wheeler riders.
+  - Classes: `helmet`, `no_helmet`, `motorcyclist`.
+
+• Multi-Violation Model (`models/violation_models/`)
+  - Role: Dedicated fine-tuned YOLO model for traffic lights (red/yellow/green) and rider infractions.
+
+• IISc AIM UVH-26 / BMD-45 Fine-Tuned Indian Traffic Model
+  - Role: 14-class specialized object detector trained on real Indian traffic datasets 
+    (handling auto-rickshaws, e-rickshaws, tempos, and mixed lane discipline).
+
+--------------------------------------------------------------------------------
+5.4 Algorithmic, Kinematic & Mathematical Models
+--------------------------------------------------------------------------------
+• 2D Ground-Plane Kalman Filter (`vision/kalman_tracker.py`)
+  - Role: Estimates smooth velocity (vX, vY) and filters out camera jitter and occlusion.
+  - Model: Constant-velocity state transition with continuous-acceleration process noise Q(dt).
+
+• Planar Perspective Homography Matrix (`vision/calibration.py`)
+  - Role: Mathematical 3x3 projective transformation matrix mapping camera pixels to ground meters.
+
+• Hough Line Road Marking Discovery (`vision/adaptive_engine.py`)
+  - Role: Canny edge detection + Probabilistic Hough Lines (`cv2.HoughLinesP`) to locate stop lines.
+
+• CIELAB CLAHE + Gamma Correction (`vision/enhancement.py`)
+  - Role: Luminance-isolated contrast equalisation and non-linear power-law gamma curve for night footage.
+
+• Poisson & Sigmoid Traffic Simulation Models (`sim.py`)
+  - Role: Sigmoid response curves for congestion pressure and Poisson distributions for violations.
+
+--------------------------------------------------------------------------------
+5.5 Generative AI Intelligence Models
+--------------------------------------------------------------------------------
+• Meta Llama-3.3-70B-Versatile (via Groq Cloud API)
+  - Role: Ultra-fast LLM generating plain-English executive briefings and action plans for traffic controllers.
+
+• Google Gemini-2.5-Flash (via Google Gemini API)
+  - Role: Fallback high-speed multimodal LLM for intelligent summaries and civic review generation.
+
+================================================================================
+6. ALL LIBRARIES EXPLAINED (WHY AND WHERE EACH IS USED)
+================================================================================
+
+Below is the complete inventory of all libraries listed in `requirements.txt` and used in the codebase:
+
+1. numpy (~= 2.0)
+   - What it is: Core numerical and array computing library.
+   - Where used: Vectorized calculations in `sim.py` (sigmoid, log-odds), coordinate geometry 
+     in `calibration.py`, Kalman matrix multiplications in `kalman_tracker.py`, and normalization.
+
+2. pandas (~= 2.2)
+   - What it is: Tabular data analysis and dataframe manipulation library.
+   - Where used: Ingesting, cleaning, merging, and exporting time-series data across `sim.py`, 
+     `temporal_features.py`, `train_model.py`, `priority_engine.py`, and `app.py`.
+
+3. scikit-learn (~= 1.5)
+   - What it is: Machine learning library for Python.
+   - Where used: In `models/train_model.py` for RandomForestClassifier, LogisticRegression, 
+     ColumnTransformer, StandardScaler, OneHotEncoder, and evaluation metrics (ROC-AUC, F1, Brier).
+
+4. opencv-python (~= 4.10)
+   - What it is: Open-source computer vision and image processing library.
+   - Where used: Reading video files, converting color spaces (BGR to CIELAB, HSV, Gray), 
+     CLAHE enhancement, Canny edge detection, Hough line transforms, perspective warping, 
+     and drawing bounding boxes and overlays.
+
+5. ultralytics (~= 8.3)
+   - What it is: The official library for YOLOv8 and YOLOv11 deep learning object detection.
+   - Where used: Object detection, tracking (ByteTrack), bounding box regression, and 
+     model training/fine-tuning in `vision/vehicle_detector.py` and `vision/train_*.py`.
+
+6. torch (~= 2.4 - PyTorch)
+   - What it is: Deep learning tensor framework.
+   - Where used: Serves as the underlying computational backend for Ultralytics YOLO, 
+     enabling GPU CUDA hardware acceleration for neural network inference.
+
+7. joblib (~= 1.4)
+   - What it is: Efficient Python object serialization and disk persistence library.
+   - Where used: Saving and loading the trained scikit-learn pipeline artifact (`models/best_risk_model.pkl`).
+
+8. streamlit (~= 1.38)
+   - What it is: Rapid web application framework for data science and AI.
+   - Where used: Powers the entire RoadSense AI Command Center UI (`app.py`, `dashboard/`), 
+     handling layout, tabs, interactive sliders, metrics, tables, and reactive states.
+
+9. plotly (~= 5.24)
+   - What it is: Interactive, high-performance charting and graphing library.
+   - Where used: Renders line charts, pie charts, scatter trajectory plots, and timeline graphs 
+     in `app.py`, `simulation_dashboard.py`, and `city_map.py`.
+
+10. openai (>= 1.0)
+    - What it is: API client SDK for OpenAI-compatible LLM endpoints.
+    - Where used: In `intelligence/llm_briefing.py` to invoke Groq (Llama-3.3-70B) and Google Gemini (Gemini-2.5) 
+      endpoints using structured prompts.
+
+11. yt-dlp (>= 2024.0.0)
+    - What it is: Advanced video streaming and media downloading library.
+    - Where used: In `dashboard/vision_studio.py` to extract live stream URLs and download sample 
+      traffic video clips directly from YouTube for live vision analysis.
+
+12. python-pptx (in scripts)
+    - What it is: Library for creating and updating PowerPoint (.pptx) presentations.
+    - Where used: In `scripts/remake_presentation.py` to auto-populate presentation slides.
+
+13. Python Built-In Libraries:
+    - `os`, `sys`, `pathlib`: File system navigation, cross-platform path handling.
+    - `json`: Parsing and exporting configurations, contracts, and REST API endpoints.
+    - `hashlib`: Generating unique SHA-256 and MD5 verification digests for e-challans and models.
+    - `datetime`, `time`: Timestamp formatting, time tracking, and API cooldown timers.
+    - `typing`: Type annotations (`Dict`, `List`, `Tuple`, `Optional`, `Any`) ensuring code reliability.
+
+================================================================================
+7. KEY MATHEMATICAL FORMULAS & DECISION LOGIC
+================================================================================
+
+1. Incident Probability Log-Odds (Simulator):
+   risk_logit = -3.40 + 0.036*Congestion + 0.095*Violations + 0.040*max(0, 42 - Speed)
+                + 0.350*max(0, Pressure - 1.0) + 0.250*Historical_Memory + Weather_Risk + Road_Risk
+   P(incident) = 1 / (1 + e^(-risk_logit))
+
+2. Traffic Pressure & Non-Linear Congestion:
+   Traffic Pressure = Vehicle_Density / Effective_Road_Capacity
+   Congestion = 100 * Sigmoid(3.4 * (Traffic_Pressure - 0.85)) * Weather_Multiplier
+
+3. Planar Perspective Homography:
+   s * [X_world, Y_world, 1]^T = H * [u_pixel, v_pixel, 1]^T
+   where H is the 3x3 projective transformation matrix computed from 4 reference points.
+
+4. Kinematic Real-World Speed:
+   Delta_d = sqrt((X_t - X_{t-1})^2 + (Y_t - Y_{t-1})^2)  [meters]
+   Speed (km/h) = (Delta_d / Delta_t) * 3.6
+
+5. Composite Municipal Priority Score:
+   Priority = (0.40 * Risk_Score) + (0.25 * Pop_Exposure) + (0.20 * Veh_Exposure) + (0.15 * Trend_Score)
+
+6. Adaptive Green Phase Duration:
+   Recommended_Green = Base_Green * Congestion_Factor * Density_Factor * Speed_Factor * Event_Boost * Weather_Boost
+   Clamped between 15 seconds (minimum clearance) and 120 seconds (maximum cycle).
+
+7. Weekly CO2 Savings from Signal Optimization:
+   Idle_CO2 = Estimated_Vehicles * Idle_Fraction * 2.3 kg_CO2/hr * Weekly_Hours
+   Potential_Savings = Idle_CO2 * (0.20 + 0.10 * (Congestion / 100))
+
+================================================================================
+8. STEP-BY-STEP GUIDE: HOW TO RUN & DEMONSTRATE THE PROJECT
+================================================================================
+
+Step 1: Install Dependencies
+Open terminal / command prompt in the project root:
+```bash
+pip install -r requirements.txt
+```
+
+Step 2: Launch the Command Center Web Dashboard
+```bash
+streamlit run app.py
+```
+This will start the local web server and open `http://localhost:8501` in your browser.
+
+Step 3: How to Demo the 4 Dashboard Tabs to Evaluators
+• Tab 1 (Simulation & Risk Engine):
+  - Select any zone (e.g. Zone 01 - Commercial Downtown).
+  - Show the 52-week historical trend graph comparing Congestion against Predicted Risk.
+  - Move the "Simulation Congestion" and "Vehicle Density" sliders to demonstrate 
+    how the Adaptive Signal Timing (DTSC) and CO2 Offset calculations update in real-time.
+  - Click "Generate AI Safety Briefing" to show the LLM summarizing the zone's status.
+
+• Tab 2 (Live CCTV Surveillance):
+  - Select a recorded session (e.g. `session_001` or `session_002`).
+  - Show the Vehicle Kinematics timeline, Vehicle Classification breakdown pie chart, 
+    and the Perspective Homography Trajectory scatter plot.
+
+• Tab 3 (Computer Vision Studio):
+  - Load `videos/traffic.mp4` or paste a YouTube traffic stream link.
+  - Enable Helmet Tracking and Red-Light Enforcement.
+  - Click "Start Real-Time Vision Processing" to show live YOLOv11 bounding boxes.
+  - Scroll down to the E-Challan section and click on any detected violation to display 
+    the print-ready digital citation ticket.
+
+• Tab 4 (Geospatial Incident Radar):
+  - Drag the timeline slider to observe how municipal risk heatmaps evolve over time.
+  - Switch between Congestion Score, Vehicle Density, and Predicted Risk metrics.
+
+Step 4: Running Background Retraining (Optional)
+• To re-generate simulation data: `python sim.py`
+• To re-engineer temporal features: `python analysis/temporal_features.py`
+• To retrain the ML risk model: `python models/train_model.py`
+• To train all models in one click: `python vision/train_all.py`
+
+================================================================================
+9. TALKING POINTS FOR PRESENTATIONS & HACKATHONS
+================================================================================
+
+When explaining this project to professors, judges, or teammates, emphasize these points:
+
+1. "We don't just detect traffic; we predict it and act on it."
+   RoadSense AI unites real-time vision telemetry with a 52-week longitudinal predictive 
+   machine learning model to allocate city resources weeks before accidents happen.
+
+2. "Zero Temporal Data Leakage."
+   Our feature pipeline uses strict chronological splits and shifted rolling windows (t-4 to t-1), 
+   ensuring the ML model never peeks into the future during training.
+
+3. "Civic Social Impact & Sustainability."
+   Beyond law enforcement, our system calculates dynamic signal timing that saves fuel 
+   and directly quantifies kilograms of CO2 prevented and tree-equivalent absorption.
+
+4. "Legally Grounded Automation."
+   Violations are not just logged as bounding boxes; they are automatically converted into 
+   verifiable Digital E-Challan citations mapped to specific sections of the Indian Motor Vehicles Act.
+
+5. "Self-Adaptive, Zero-Hardcoding Vision."
+   Our system autonomously learns stop-line positions using Hough transforms and automatically 
+   enhances low-light nighttime video using CIELAB CLAHE and gamma correction.
+
+================================================================================
+END OF ROADSENSE AI PROJECT GUIDE
+================================================================================
