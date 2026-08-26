@@ -6,6 +6,7 @@ DESIGN SYSTEM: KINETIC INFRASTRUCTURE INTELLIGENCE (STITCH MCP)
 """
 
 import os
+import gc
 import glob
 import time
 import cv2
@@ -268,6 +269,9 @@ def render_vision_studio():
                     red_light_detector = RedLightViolationDetector(stop_line_y_ratio=stop_line_ratio) if track_red_lights else None
                     triple_detector = TripleRidingDetector() if track_triple else None
 
+                    # Elevate GC collection threshold to prevent stop-the-world pauses in frame loop
+                    gc.set_threshold(50000, 20, 20)
+
                     frame_idx = 0
                     processed_records = []
                     violation_records = []
@@ -458,24 +462,25 @@ def render_vision_studio():
                         red_light_cnt = len(red_light_detector.logged_violations) if red_light_detector else 0
                         triple_cnt = len(triple_detector.logged_violations) if triple_detector else 0
 
-                        if is_live_infinite:
-                            status_text.markdown(f"""
-                            <div class="telemetry-badge" style="width: 100%; text-align: left; padding: 8px 12px; margin-bottom: 8px;">
-                                STATUS: ACTIVE • FRAME: {frame_idx} | LIVE VEHICLES: {total_v} | NO-HELMET: {no_helmet_cnt} | RED-LIGHT: {red_light_cnt} | TRIPLE: {triple_cnt}
-                            </div>
-                            """, unsafe_allow_html=True)
-                        else:
-                            pct = min(1.0, frame_idx / max(total_f, 1))
-                            progress.progress(pct)
-                            status_text.text(f"FRAME {frame_idx}/{total_f} • VEHICLES: {total_v} | NO-HELMET: {no_helmet_cnt} | RED-LIGHT: {red_light_cnt} | TRIPLE: {triple_cnt}")
+                        # Throttle status text DOM updates to avoid WebSocket and string churn
+                        if frame_idx % (frame_skip * 4) == 0:
+                            if is_live_infinite:
+                                status_text.markdown(f"""
+                                <div class="telemetry-badge" style="width: 100%; text-align: left; padding: 8px 12px; margin-bottom: 8px;">
+                                    STATUS: ACTIVE • FRAME: {frame_idx} | LIVE VEHICLES: {total_v} | NO-HELMET: {no_helmet_cnt} | RED-LIGHT: {red_light_cnt} | TRIPLE: {triple_cnt}
+                                </div>
+                                """, unsafe_allow_html=True)
+                            else:
+                                pct = min(1.0, frame_idx / max(total_f, 1))
+                                progress.progress(pct)
+                                status_text.text(f"FRAME {frame_idx}/{total_f} • VEHICLES: {total_v} | NO-HELMET: {no_helmet_cnt} | RED-LIGHT: {red_light_cnt} | TRIPLE: {triple_cnt}")
 
-                        # Live visual preview update (Downscaled WebSocket transfer for max fluidity)
+                        # Live visual preview update (Fast linear resize + direct BGR channel rendering)
                         if frame_idx % frame_skip == 0:
-                            rgb_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
                             disp_w = 540 if preview_size == "Compact (540px)" else (720 if preview_size == "Standard (720px)" else 854)
                             disp_h = int(disp_w * frame.shape[0] / max(1, frame.shape[1]))
-                            small_rgb = cv2.resize(rgb_frame, (disp_w, disp_h), interpolation=cv2.INTER_AREA)
-                            preview_container.image(small_rgb, caption=f"Live Surveillance Telemetry (Frame {frame_idx})")
+                            small_frame = cv2.resize(frame, (disp_w, disp_h), interpolation=cv2.INTER_LINEAR)
+                            preview_container.image(small_frame, channels="BGR", caption=f"Live Surveillance Telemetry (Frame {frame_idx})")
 
                     cap.release()
                     if not is_live_infinite:
@@ -568,6 +573,9 @@ def render_vision_studio():
 
                 except Exception as e:
                     status_text.error(f"Error during video processing: {e}")
+                finally:
+                    gc.set_threshold(700, 10, 10)
+                    gc.collect()
 
     # ==========================================================================
     # TAB 2: VIOLATION ENFORCEMENT & MODEL TRAINER HUB
