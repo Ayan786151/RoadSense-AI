@@ -211,7 +211,8 @@ def main():
             "01. SIMULATION & RISK ENGINE",
             "02. LIVE CCTV SURVEILLANCE",
             "03. COMPUTER VISION STUDIO",
-            "04. GEOSPATIAL INCIDENT RADAR"
+            "04. GEOSPATIAL INCIDENT RADAR",
+            "05. 30-DAY CROSSROAD TRANSFORMATION"
         ],
         index=0
     )
@@ -224,8 +225,10 @@ def main():
         render_live_vision_dashboard()
     elif app_mode.startswith("03"):
         render_vision_studio()
-    else:
+    elif app_mode.startswith("04"):
         render_city_command_map()
+    else:
+        render_crossroad_animation_tab()
 
     # Sidebar Footer
     st.sidebar.markdown("""
@@ -423,6 +426,31 @@ def render_live_vision_dashboard():
                 st.plotly_chart(fig_traj, width="stretch")
             else:
                 st.info("No ground trajectory data available for this session.")
+
+
+def render_crossroad_animation_tab():
+    """Renders the standalone 30-Day Crossroad Transformation animation canvas."""
+    st.markdown("""
+    <div class="telemetry-header">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #a1a1aa; letter-spacing: 0.06em; text-transform: uppercase;">
+            STAGE 05 • HACKATHON PITCH ANIMATION
+        </div>
+        <h2 style="margin: 4px 0 0 0; font-size: 22px;">
+            30-Day Crossroad Transformation: From Chaos to Autonomous Flow
+        </h2>
+        <p style="margin: 6px 0 0 0; color: #a1a1aa; font-size: 13px;">
+            Smooth auto-transiting simulation showing how CCTV perception, DTSC adaptive signals, and police warden deployment systematically eliminate accidents and cut emissions over 30 days.
+        </p>
+    </div>
+    """, unsafe_allow_html=True)
+
+    anim_path = os.path.join(os.path.dirname(__file__), "crossroad_animation.html")
+    if os.path.exists(anim_path):
+        with open(anim_path, "r", encoding="utf-8") as f:
+            html_content = f.read()
+        st.components.v1.html(html_content, height=860, scrolling=False)
+    else:
+        st.error("crossroad_animation.html not found.")
 
 
 if __name__ == "__main__":

@@ -1,0 +1,1643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoadSense AI — 30-Day Urban Crossroad Transformation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-base: #07070a;
+            --bg-surface: #0e0e14;
+            --bg-elevated: #14141d;
+            --bg-glass: rgba(14, 14, 20, 0.88);
+            --border-subtle: rgba(255, 255, 255, 0.08);
+            --border-strong: rgba(255, 255, 255, 0.16);
+            --accent-emerald: #10b981;
+            --accent-emerald-glow: rgba(16, 185, 129, 0.35);
+            --accent-cyan: #06b6d4;
+            --accent-cyan-glow: rgba(6, 182, 212, 0.35);
+            --accent-amber: #f59e0b;
+            --accent-amber-glow: rgba(245, 158, 11, 0.35);
+            --accent-crimson: #ef4444;
+            --accent-crimson-glow: rgba(239, 68, 68, 0.35);
+            --text-primary: #fafafa;
+            --text-secondary: #a1a1aa;
+            --text-muted: #71717a;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            user-select: none;
+        }
+
+        body {
+            background-color: var(--bg-base);
+            color: var(--text-primary);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            letter-spacing: -0.01em;
+        }
+
+        /* Top Header Bar */
+        header {
+            background: var(--bg-surface);
+            border-bottom: 1px solid var(--border-subtle);
+            padding: 0 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 56px;
+            z-index: 100;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .brand-box {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .brand-pill {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: #022c22;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11px;
+            font-weight: 800;
+            padding: 4px 9px;
+            border-radius: 5px;
+            letter-spacing: 0.08em;
+            box-shadow: 0 0 16px var(--accent-emerald-glow);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .pulse-live {
+            width: 6px;
+            height: 6px;
+            background: #022c22;
+            border-radius: 50%;
+            animation: pulse 1.6s infinite ease-in-out;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(0.9); opacity: 0.6; }
+            50% { transform: scale(1.3); opacity: 1; }
+        }
+
+        .brand-title {
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: #ffffff;
+        }
+
+        .brand-sub {
+            font-size: 11px;
+            color: var(--text-secondary);
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .stage-pill {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--bg-elevated);
+            border: 1px solid var(--border-strong);
+            padding: 6px 16px;
+            border-radius: 30px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12px;
+            font-weight: 600;
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+            transition: all 0.3s ease;
+        }
+
+        .stage-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--accent-crimson);
+            box-shadow: 0 0 10px var(--accent-crimson-glow);
+            transition: all 0.4s ease;
+        }
+
+        /* Main Workspace Grid */
+        .workspace {
+            display: grid;
+            grid-template-columns: 1fr 390px;
+            height: calc(100vh - 56px);
+            overflow: hidden;
+        }
+
+        /* Viewport Canvas Area */
+        .canvas-area {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 16px;
+            background: radial-gradient(circle at center, #13131b 0%, #07070a 100%);
+            overflow: hidden;
+        }
+
+        /* Engineering Grid Overlay */
+        .canvas-area::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: 
+                linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+            background-size: 32px 32px;
+            pointer-events: none;
+        }
+
+        #trafficCanvas {
+            border-radius: 10px;
+            box-shadow: 
+                0 24px 60px rgba(0, 0, 0, 0.9),
+                0 0 0 1px rgba(255, 255, 255, 0.08);
+            background: #0d0d12;
+            max-width: 100%;
+            max-height: calc(100vh - 170px);
+            object-fit: contain;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Cinematic Stage Splash Banner */
+        .stage-banner {
+            position: absolute;
+            top: 24px;
+            left: 50%;
+            transform: translateX(-50%) translateY(-20px);
+            background: rgba(14, 14, 20, 0.95);
+            backdrop-filter: blur(16px);
+            border: 1px solid var(--accent-emerald);
+            padding: 8px 24px;
+            border-radius: 30px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--accent-emerald);
+            box-shadow: 0 12px 32px var(--accent-emerald-glow);
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            z-index: 50;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .stage-banner.show {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        /* Bottom Floating Glass Control Dock */
+        .control-dock {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: 820px;
+            background: var(--bg-glass);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--border-strong);
+            border-radius: 14px;
+            padding: 12px 22px;
+            box-shadow: 0 20px 48px rgba(0, 0, 0, 0.75), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 40;
+        }
+
+        .dock-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12px;
+        }
+
+        .day-counter {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--accent-emerald);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .day-badge {
+            background: var(--bg-elevated);
+            border: 1px solid var(--border-subtle);
+            color: #fafafa;
+            padding: 3px 10px;
+            border-radius: 6px;
+            font-size: 11px;
+            font-weight: 700;
+        }
+
+        .dock-controls {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        /* Stage Milestone Labels along scrubber */
+        .timeline-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .timeline-range {
+            width: 100%;
+            -webkit-appearance: none;
+            appearance: none;
+            height: 6px;
+            border-radius: 3px;
+            background: #23232c;
+            outline: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .timeline-range::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: var(--accent-emerald);
+            cursor: pointer;
+            box-shadow: 0 0 14px var(--accent-emerald-glow);
+            border: 2px solid #ffffff;
+            transition: transform 0.15s ease;
+        }
+
+        .timeline-range::-webkit-slider-thumb:hover {
+            transform: scale(1.25);
+        }
+
+        .timeline-milestones {
+            display: flex;
+            justify-content: space-between;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 9px;
+            color: var(--text-muted);
+            padding: 0 4px;
+        }
+
+        .milestone-node {
+            cursor: pointer;
+            transition: color 0.15s ease;
+        }
+
+        .milestone-node:hover {
+            color: #fafafa;
+        }
+
+        .btn-row {
+            display: flex;
+            gap: 6px;
+        }
+
+        button {
+            font-family: 'Inter', sans-serif;
+            font-size: 12px;
+            font-weight: 600;
+            background: #1c1c24;
+            color: #fafafa;
+            border: 1px solid var(--border-strong);
+            padding: 7px 15px;
+            border-radius: 7px;
+            cursor: pointer;
+            transition: all 0.15s ease;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+        }
+
+        button:hover {
+            background: #282834;
+            color: #ffffff;
+            border-color: rgba(255, 255, 255, 0.25);
+        }
+
+        button:active {
+            transform: scale(0.96);
+        }
+
+        button.primary {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: #022c22;
+            border-color: #10b981;
+            font-weight: 700;
+            box-shadow: 0 0 16px var(--accent-emerald-glow);
+        }
+
+        button.primary:hover {
+            background: linear-gradient(135deg, #34d399 0%, #10b981 100%);
+        }
+
+        .speed-badge {
+            font-family: 'JetBrains Mono', monospace;
+            min-width: 48px;
+            justify-content: center;
+        }
+
+        /* Sidebar Analytics Panel */
+        .sidebar {
+            background: var(--bg-surface);
+            border-left: 1px solid var(--border-subtle);
+            padding: 18px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            overflow-y: auto;
+        }
+
+        .section-label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .section-title {
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: #ffffff;
+            margin-top: 2px;
+        }
+
+        /* KPI Cards Grid */
+        .kpi-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .kpi-box {
+            background: var(--bg-elevated);
+            border: 1px solid var(--border-subtle);
+            border-radius: 9px;
+            padding: 12px 14px;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            transition: all 0.25s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .kpi-box::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: transparent;
+            transition: background 0.3s ease;
+        }
+
+        .kpi-box.danger-top::after { background: var(--accent-crimson); }
+        .kpi-box.warn-top::after { background: var(--accent-amber); }
+        .kpi-box.success-top::after { background: var(--accent-emerald); }
+
+        .kpi-head {
+            font-size: 10px;
+            font-family: 'JetBrains Mono', monospace;
+            text-transform: uppercase;
+            color: var(--text-secondary);
+        }
+
+        .kpi-num {
+            font-size: 20px;
+            font-weight: 800;
+            font-family: 'JetBrains Mono', monospace;
+            color: #ffffff;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .kpi-status {
+            font-size: 11px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .kpi-status.danger { color: var(--accent-crimson); }
+        .kpi-status.warn { color: var(--accent-amber); }
+        .kpi-status.success { color: var(--accent-emerald); }
+
+        /* Story Briefing Card */
+        .story-box {
+            background: var(--bg-elevated);
+            border: 1px solid var(--border-subtle);
+            border-left: 4px solid var(--accent-crimson);
+            border-radius: 9px;
+            padding: 14px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        .story-head {
+            font-size: 13px;
+            font-weight: 700;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .story-body {
+            font-size: 12px;
+            line-height: 1.5;
+            color: var(--text-secondary);
+        }
+
+        /* Live Terminal Log Stream */
+        .terminal-box {
+            background: #09090d;
+            border: 1px solid var(--border-subtle);
+            border-radius: 8px;
+            padding: 12px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11px;
+            height: 175px;
+            overflow-y: hidden;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .term-row {
+            display: flex;
+            gap: 8px;
+            animation: fadeIn 0.2s ease;
+        }
+
+        .term-time { color: var(--text-muted); min-width: 48px; }
+        .term-badge { font-weight: 700; }
+        .term-badge.danger { color: var(--accent-crimson); }
+        .term-badge.vision { color: var(--accent-cyan); }
+        .term-badge.signal { color: var(--accent-amber); }
+        .term-badge.eco { color: var(--accent-emerald); }
+        .term-msg { color: #e4e4e7; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; flex: 1; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(3px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .legend-row {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            font-size: 11px;
+            font-family: 'JetBrains Mono', monospace;
+            color: var(--text-secondary);
+        }
+
+        .legend-dot {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 2px;
+            margin-right: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Command Header -->
+    <header>
+        <div class="brand-box">
+            <span class="brand-pill">
+                <span class="pulse-live"></span>
+                ROADSENSE AI
+            </span>
+            <div>
+                <div class="brand-title">30-Day Urban Crossroad Transformation</div>
+                <div class="brand-sub">Left-Hand Traffic (LHT) • DTSC 6-Phase Signal Clearance & Safety Radar</div>
+            </div>
+        </div>
+
+        <div class="header-actions">
+            <div class="stage-pill" id="stagePill">
+                <div class="stage-dot" id="stageDot"></div>
+                <span id="stageLabel">STAGE 1 • UNMANAGED CHAOS</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Workspace -->
+    <div class="workspace">
+        <!-- Viewport Canvas Area -->
+        <div class="canvas-area">
+            <!-- Stage Banner Alert -->
+            <div class="stage-banner" id="stageBanner">
+                <span id="bannerIcon">⚠️</span>
+                <span id="bannerText">STAGE 1: UNMANAGED ROAD CHAOS & FATAL ACCIDENTS</span>
+            </div>
+
+            <canvas id="trafficCanvas" width="760" height="760"></canvas>
+
+            <!-- Bottom Floating Glass Control Dock -->
+            <div class="control-dock">
+                <div class="dock-top">
+                    <div class="day-counter">
+                        <span class="day-badge" id="dayBadge">DAY 01 / 30</span>
+                        <span id="phaseSub" style="color: var(--text-secondary); font-weight: 500; font-size: 11px;">Fixed dumb timers • 0% enforcement • High collision risk</span>
+                    </div>
+                    <span style="color: var(--text-muted); font-size: 11px; font-family: 'JetBrains Mono', monospace;" id="statusIndicator">AUTO-RUNNING (2x)</span>
+                </div>
+
+                <div class="dock-controls">
+                    <div class="btn-row">
+                        <button id="btnPlayPause" class="primary">❚❚ Pause</button>
+                        <button id="btnSpeed" class="speed-badge">2x</button>
+                        <button id="btnRestart">↺ Reset</button>
+                    </div>
+
+                    <div class="timeline-container">
+                        <input type="range" min="1" max="30" step="0.05" value="1" class="timeline-range" id="timelineRange">
+                        <div class="timeline-milestones">
+                            <span class="milestone-node" onclick="jumpToDay(1)">Day 01 (Chaos)</span>
+                            <span class="milestone-node" onclick="jumpToDay(8)">Day 08 (CCTV Radar)</span>
+                            <span class="milestone-node" onclick="jumpToDay(16)">Day 16 (DTSC Deploy)</span>
+                            <span class="milestone-node" onclick="jumpToDay(24)">Day 24 (Equilibrium)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Telemetry Sidebar -->
+        <div class="sidebar">
+            <div>
+                <div class="section-label">CIVIC IMPACT RADAR</div>
+                <div class="section-title">Live Telemetry & Safety Index</div>
+            </div>
+
+            <!-- KPI Cards Grid -->
+            <div class="kpi-grid">
+                <div class="kpi-box danger-top" id="kpiBoxRisk">
+                    <span class="kpi-head">Crash Risk P(crash)</span>
+                    <span class="kpi-num" id="kpiRisk" style="color: var(--accent-crimson);">89.2%</span>
+                    <span class="kpi-status danger" id="kpiRiskStatus">▲ Critical Hazard</span>
+                </div>
+                <div class="kpi-box danger-top" id="kpiBoxWait">
+                    <span class="kpi-head">Avg Queue Wait</span>
+                    <span class="kpi-num" id="kpiWait">132s</span>
+                    <span class="kpi-status danger" id="kpiWaitStatus">▲ Severe Gridlock</span>
+                </div>
+                <div class="kpi-box success-top" id="kpiBoxCO2">
+                    <span class="kpi-head">CO2 Prevented</span>
+                    <span class="kpi-num" id="kpiCO2" style="color: var(--accent-emerald);">0.0 T</span>
+                    <span class="kpi-status success" id="kpiCO2Status">+0 Trees Planted</span>
+                </div>
+                <div class="kpi-box warn-top" id="kpiBoxViol">
+                    <span class="kpi-head">Violations Rate</span>
+                    <span class="kpi-num" id="kpiViol" style="color: var(--accent-amber);">58/min</span>
+                    <span class="kpi-status danger" id="kpiViolStatus">▲ 0% Enforcement</span>
+                </div>
+            </div>
+
+            <!-- Storyboard Briefing Card -->
+            <div class="story-box" id="storyBox">
+                <div class="story-head" id="storyHead">
+                    <span>Days 1–7: Baseline Unmanaged Chaos</span>
+                </div>
+                <div class="story-body" id="storyBody">
+                    Dumb fixed-interval timers with zero clearance buffer cause severe gridlock. Impatient drivers speed through yellow lights and jump red signals, resulting in frequent right-angle collisions.
+                </div>
+            </div>
+
+            <!-- Vehicle Legend (IISc UVH26) -->
+            <div>
+                <div class="section-label" style="margin-bottom: 6px;">VEHICLE CLASSES (IISc UVH26)</div>
+                <div class="legend-row">
+                    <span><span class="legend-dot" style="background: #facc15;"></span>2-Wheeler</span>
+                    <span><span class="legend-dot" style="background: #06b6d4;"></span>Auto-Rickshaw</span>
+                    <span><span class="legend-dot" style="background: #10b981;"></span>Car/SUV</span>
+                    <span><span class="legend-dot" style="background: #f97316;"></span>Bus (PCE=3)</span>
+                </div>
+            </div>
+
+            <!-- Live Dispatch Event Feed -->
+            <div style="flex: 1; display: flex; flex-direction: column;">
+                <div class="section-label" style="margin-bottom: 6px;">CIVIC DISPATCH STREAM</div>
+                <div class="terminal-box" id="terminalBox"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Simulation Script Engine -->
+    <script>
+        const canvas = document.getElementById('trafficCanvas');
+        const ctx = canvas.getContext('2d');
+
+        // UI Elements
+        const timelineRange = document.getElementById('timelineRange');
+        const dayBadge = document.getElementById('dayBadge');
+        const phaseSub = document.getElementById('phaseSub');
+        const statusIndicator = document.getElementById('statusIndicator');
+        const btnPlayPause = document.getElementById('btnPlayPause');
+        const btnSpeed = document.getElementById('btnSpeed');
+        const btnRestart = document.getElementById('btnRestart');
+        const stagePill = document.getElementById('stagePill');
+        const stageDot = document.getElementById('stageDot');
+        const stageLabel = document.getElementById('stageLabel');
+        const stageBanner = document.getElementById('stageBanner');
+        const bannerIcon = document.getElementById('bannerIcon');
+        const bannerText = document.getElementById('bannerText');
+
+        const kpiBoxRisk = document.getElementById('kpiBoxRisk');
+        const kpiBoxWait = document.getElementById('kpiBoxWait');
+        const kpiBoxCO2 = document.getElementById('kpiBoxCO2');
+        const kpiBoxViol = document.getElementById('kpiBoxViol');
+
+        const kpiRisk = document.getElementById('kpiRisk');
+        const kpiRiskStatus = document.getElementById('kpiRiskStatus');
+        const kpiWait = document.getElementById('kpiWait');
+        const kpiWaitStatus = document.getElementById('kpiWaitStatus');
+        const kpiCO2 = document.getElementById('kpiCO2');
+        const kpiCO2Status = document.getElementById('kpiCO2Status');
+        const kpiViol = document.getElementById('kpiViol');
+        const kpiViolStatus = document.getElementById('kpiViolStatus');
+
+        const storyBox = document.getElementById('storyBox');
+        const storyHead = document.getElementById('storyHead');
+        const storyBody = document.getElementById('storyBody');
+        const terminalBox = document.getElementById('terminalBox');
+
+        // Dimensions
+        const CW = canvas.width;
+        const CH = canvas.height;
+        const CX = CW / 2;
+        const CY = CH / 2;
+        const ROAD_W = 220;
+        const LANE_W = ROAD_W / 4; // 4 lanes (2 per direction)
+
+        // State variables
+        let currentDay = 1.0;
+        let isPlaying = true;
+        let speedMultiplier = 2.0; // 2x default
+        let lastTime = performance.now();
+        let lastStage = 0;
+
+        // Vehicle Colors
+        const COLORS = {
+            motorcycle: '#facc15',
+            auto: '#06b6d4',
+            car: '#10b981',
+            bus: '#f97316',
+            truck: '#ef4444'
+        };
+
+        // Vehicles, Particles, Alerts
+        let vehicles = [];
+        let particles = [];
+        let crashAlerts = [];
+        let challanAlerts = [];
+
+        // 6-Phase Traffic Signal State Machine:
+        // Phase 0: NS_GREEN (EW RED)
+        // Phase 1: NS_YELLOW (EW RED) -> Amber warning
+        // Phase 2: ALL_RED_1 (Both RED) -> Clears intersection box before EW starts!
+        // Phase 3: EW_GREEN (NS RED)
+        // Phase 4: EW_YELLOW (NS RED) -> Amber warning
+        // Phase 5: ALL_RED_2 (Both RED) -> Clears intersection box before NS starts!
+        let signalState = {
+            phase: 0,
+            northSouth: 'GREEN',
+            eastWest: 'RED',
+            timer: 0
+        };
+
+        function getPhaseDurations(day) {
+            const greenDur = (day >= 16) ? 4.5 : 6.0;
+            const yellowDur = 1.6;
+            const allRedDur = 1.4; // 1.4s all-red clearance interval
+            return [greenDur, yellowDur, allRedDur, greenDur, yellowDur, allRedDur];
+        }
+
+        // Vehicle Class with Indian Left-Hand Traffic (LHT) Physics & Zero-Overlap Clamping
+        class Vehicle {
+            constructor(dir) {
+                this.id = Math.floor(Math.random() * 900) + 100;
+                this.dir = dir; // 'N', 'S', 'E', 'W'
+                this.lane = Math.random() > 0.5 ? 1 : 0;
+
+                const r = Math.random();
+                if (r < 0.40) this.type = 'motorcycle';
+                else if (r < 0.65) this.type = 'car';
+                else if (r < 0.85) this.type = 'auto';
+                else if (r < 0.95) this.type = 'bus';
+                else this.type = 'truck';
+
+                // Physical dimensions (h is length along motion direction)
+                if (this.type === 'motorcycle') { this.w = 12; this.h = 24; this.baseSpeed = 3.6; }
+                else if (this.type === 'auto') { this.w = 18; this.h = 28; this.baseSpeed = 2.8; }
+                else if (this.type === 'car') { this.w = 22; this.h = 36; this.baseSpeed = 3.2; }
+                else if (this.type === 'bus') { this.w = 26; this.h = 64; this.baseSpeed = 2.2; }
+                else { this.w = 26; this.h = 54; this.baseSpeed = 2.4; }
+
+                this.hasHelmet = Math.random() > 0.45;
+                this.isTriple = (this.type === 'motorcycle') && (Math.random() < 0.30);
+                this.crashed = false;
+                this.crashTimer = 0;
+                this.curSpeed = this.baseSpeed;
+                this.braking = false;
+                this.willComply = true;
+
+                this.resetPosition();
+            }
+
+            resetPosition() {
+                const offset = (this.lane === 0) ? LANE_W * 0.5 : LANE_W * 1.5;
+                const jitter = Math.random() * 140;
+
+                // Indian Left-Hand Traffic (LHT) Lane Assignment:
+                if (this.dir === 'N') { // Southbound
+                    this.x = CX + offset;
+                    this.y = -60 - jitter;
+                    this.vx = 0; this.vy = this.baseSpeed;
+                } else if (this.dir === 'S') { // Northbound
+                    this.x = CX - offset;
+                    this.y = CH + 60 + jitter;
+                    this.vx = 0; this.vy = -this.baseSpeed;
+                } else if (this.dir === 'E') { // Westbound
+                    this.x = CW + 60 + jitter;
+                    this.y = CY + offset;
+                    this.vx = -this.baseSpeed; this.vy = 0;
+                } else { // 'W' // Eastbound
+                    this.x = -60 - jitter;
+                    this.y = CY - offset;
+                    this.vx = this.baseSpeed; this.vy = 0;
+                }
+
+                this.crashed = false;
+                this.crashTimer = 0;
+                this.braking = false;
+                this.curSpeed = this.baseSpeed;
+
+                // Compliance decision per vehicle
+                const violationRate = Math.max(0.0, 0.65 - (currentDay / 26.0));
+                this.willComply = Math.random() > violationRate;
+            }
+
+            update(dt, day, currentSignals) {
+                if (this.crashed) {
+                    this.crashTimer -= 1 * speedMultiplier * dt;
+                    if (this.crashTimer <= 0) {
+                        this.resetPosition();
+                    }
+                    return;
+                }
+
+                const isNS = (this.dir === 'N' || this.dir === 'S');
+                const signalColor = isNS ? currentSignals.northSouth : currentSignals.eastWest;
+
+                // Distance to stop line
+                let distToLine = 9999;
+                if (this.dir === 'N') distToLine = (CY - ROAD_W/2) - this.y;
+                else if (this.dir === 'S') distToLine = this.y - (CY + ROAD_W/2);
+                else if (this.dir === 'W') distToLine = (CX - ROAD_W/2) - this.x;
+                else if (this.dir === 'E') distToLine = this.x - (CX + ROAD_W/2);
+
+                const frontBumperDist = distToLine - (this.h / 2);
+                const minStopLineBuffer = 12; // 12px clear buffer before stop line
+
+                // Stop Decision Logic:
+                let stopForSignal = false;
+                if (frontBumperDist > 0 && frontBumperDist < 140) {
+                    if (signalColor === 'RED') {
+                        if (this.willComply) {
+                            stopForSignal = true;
+                        } else if (frontBumperDist < 30 && day >= 16) {
+                            if (Math.random() < 0.05) {
+                                spawnChallan(this.x, this.y, `E-CHALLAN: RED LIGHT #184 (INR 1,000) #${this.id}`);
+                            }
+                        }
+                    } else if (signalColor === 'YELLOW') {
+                        if (frontBumperDist > 38 && this.willComply) {
+                            stopForSignal = true;
+                        }
+                    }
+                }
+
+                // True Bumper-to-Bumper Distance Calculation
+                let minBumperGap = 9999;
+                let leaderSpeed = 0;
+                let leaderVehicle = null;
+
+                for (let other of vehicles) {
+                    if (other === this || other.crashed) continue;
+                    if (other.dir === this.dir && other.lane === this.lane) {
+                        let c2c = 9999;
+                        if (this.dir === 'N' && other.y > this.y) c2c = other.y - this.y;
+                        else if (this.dir === 'S' && other.y < this.y) c2c = this.y - other.y;
+                        else if (this.dir === 'W' && other.x > this.x) c2c = other.x - this.x;
+                        else if (this.dir === 'E' && other.x < this.x) c2c = this.x - other.x;
+
+                        if (c2c < 9999) {
+                            const gap = c2c - (this.h / 2) - (other.h / 2);
+                            if (gap < minBumperGap) {
+                                minBumperGap = gap;
+                                leaderSpeed = other.curSpeed;
+                                leaderVehicle = other;
+                            }
+                        }
+                    }
+                }
+
+                // Standstill Gap & Deceleration Model
+                const minStandstillGap = (day > 7) ? 20 : 16;
+                const desiredGap = minStandstillGap + this.curSpeed * 12;
+
+                let needBraking = false;
+                if (stopForSignal && frontBumperDist > minStopLineBuffer) needBraking = true;
+                if (minBumperGap < desiredGap) needBraking = true;
+
+                if (needBraking) {
+                    this.braking = true;
+                    this.curSpeed = Math.max(0, this.curSpeed - 0.35 * dt);
+                } else {
+                    this.braking = false;
+                    this.curSpeed = Math.min(this.baseSpeed, this.curSpeed + 0.18 * dt);
+                }
+
+                // Hard Separation Clamping (Physically prevents touching & 1-pixel overlaps)
+                if (leaderVehicle && minBumperGap <= minStandstillGap) {
+                    this.curSpeed = Math.min(this.curSpeed, leaderSpeed);
+                    if (minBumperGap < minStandstillGap) {
+                        this.curSpeed = 0;
+                        if (this.dir === 'N') this.y = leaderVehicle.y - (leaderVehicle.h / 2) - (this.h / 2) - minStandstillGap;
+                        else if (this.dir === 'S') this.y = leaderVehicle.y + (leaderVehicle.h / 2) + (this.h / 2) + minStandstillGap;
+                        else if (this.dir === 'W') this.x = leaderVehicle.x - (leaderVehicle.h / 2) - (this.h / 2) - minStandstillGap;
+                        else if (this.dir === 'E') this.x = leaderVehicle.x + (leaderVehicle.h / 2) + (this.h / 2) + minStandstillGap;
+                    }
+                }
+
+                // Stop line clamp
+                if (stopForSignal && frontBumperDist <= minStopLineBuffer) {
+                    this.curSpeed = 0;
+                    if (this.dir === 'N') this.y = (CY - ROAD_W/2) - (this.h / 2) - minStopLineBuffer;
+                    else if (this.dir === 'S') this.y = (CY + ROAD_W/2) + (this.h / 2) + minStopLineBuffer;
+                    else if (this.dir === 'W') this.x = (CX - ROAD_W/2) - (this.h / 2) - minStopLineBuffer;
+                    else if (this.dir === 'E') this.x = (CX + ROAD_W/2) + (this.h / 2) + minStopLineBuffer;
+                }
+
+                const speedFactor = this.curSpeed / this.baseSpeed;
+                this.x += this.vx * speedFactor * dt;
+                this.y += this.vy * speedFactor * dt;
+            }
+
+            draw() {
+                ctx.save();
+                ctx.translate(this.x, this.y);
+
+                // Exact physical heading angle: Local +Y is FORWARD (direction of motion)
+                const angle = Math.atan2(this.vy, this.vx) - Math.PI / 2;
+                ctx.rotate(angle);
+
+                // Forward Headlights Illumination Beam (Shines forward ahead: +Y)
+                ctx.fillStyle = 'rgba(254, 240, 138, 0.11)';
+                ctx.beginPath();
+                ctx.moveTo(-this.w/2 + 2, this.h/2);
+                ctx.lineTo(-this.w - 14, this.h/2 + 70);
+                ctx.lineTo(this.w + 14, this.h/2 + 70);
+                ctx.lineTo(this.w/2 - 2, this.h/2);
+                ctx.closePath();
+                ctx.fill();
+
+                // Vehicle Body with Subtle Bevel Shading
+                const col = COLORS[this.type] || '#ffffff';
+                ctx.fillStyle = col;
+                ctx.strokeStyle = '#050508';
+                ctx.lineWidth = 1.5;
+
+                ctx.beginPath();
+                ctx.roundRect(-this.w/2, -this.h/2, this.w, this.h, 4);
+                ctx.fill();
+                ctx.stroke();
+
+                // Windshield / Cabin Glass Detailing
+                ctx.fillStyle = '#0f172a';
+                if (this.type === 'car') {
+                    // Front Windshield
+                    ctx.fillRect(-this.w/2 + 3, this.h/2 - 12, this.w - 6, 7);
+                    // Rear Glass
+                    ctx.fillRect(-this.w/2 + 3, -this.h/2 + 6, this.w - 6, 6);
+                } else if (this.type === 'auto') {
+                    // Canopy Top
+                    ctx.fillStyle = '#18181b';
+                    ctx.fillRect(-this.w/2 + 2, -this.h/2 + 4, this.w - 4, this.h - 10);
+                    // Front Windshield
+                    ctx.fillStyle = '#0f172a';
+                    ctx.fillRect(-this.w/2 + 3, this.h/2 - 6, this.w - 6, 4);
+                } else if (this.type === 'motorcycle') {
+                    // Rider Helmet
+                    ctx.fillStyle = this.hasHelmet ? '#10b981' : '#ef4444';
+                    ctx.beginPath();
+                    ctx.arc(0, 2, 4.5, 0, Math.PI * 2);
+                    ctx.fill();
+
+                    if (this.isTriple) {
+                        ctx.fillStyle = '#ef4444';
+                        ctx.beginPath();
+                        ctx.arc(0, -6, 3.5, 0, Math.PI * 2);
+                        ctx.fill();
+                    }
+                } else if (this.type === 'bus') {
+                    // Front Panoramic Windshield
+                    ctx.fillRect(-this.w/2 + 3, this.h/2 - 12, this.w - 6, 8);
+                    // Passenger Side Windows
+                    for (let i = 0; i < 4; i++) {
+                        ctx.fillRect(-this.w/2 + 3, -this.h/2 + 8 + i * 10, this.w - 6, 5);
+                    }
+                }
+
+                // Front Headlight Bulbs (at front +Y)
+                ctx.fillStyle = '#fef08a';
+                ctx.fillRect(-this.w/2 + 2, this.h/2 - 2, 4, 2);
+                ctx.fillRect(this.w/2 - 6, this.h/2 - 2, 4, 2);
+
+                // Rear Taillights / Glowing Brake Lights (at rear -Y)
+                if (this.braking) {
+                    ctx.shadowColor = '#ef4444';
+                    ctx.shadowBlur = 14;
+                    ctx.fillStyle = '#ff0000';
+                    ctx.fillRect(-this.w/2 + 1, -this.h/2 - 2, 5, 3);
+                    ctx.fillRect(this.w/2 - 6, -this.h/2 - 2, 5, 3);
+                    ctx.shadowBlur = 0;
+                } else {
+                    ctx.fillStyle = '#7f1d1d';
+                    ctx.fillRect(-this.w/2 + 1, -this.h/2 - 1, 4, 2);
+                    ctx.fillRect(this.w/2 - 5, -this.h/2 - 1, 4, 2);
+                }
+
+                // Stage 4 Green Wave Eco-Aura (Equilibrium)
+                if (currentDay >= 24) {
+                    ctx.strokeStyle = 'rgba(16, 185, 129, 0.45)';
+                    ctx.lineWidth = 2;
+                    ctx.strokeRect(-this.w/2 - 3, -this.h/2 - 3, this.w + 6, this.h + 6);
+                }
+
+                ctx.restore();
+
+                // YOLOv11 Telemetry Bounding Box Overlay (Day 8+)
+                if (currentDay >= 8) {
+                    const bw = Math.max(this.w, this.h) + 6;
+                    ctx.strokeStyle = col;
+                    ctx.lineWidth = 1;
+                    ctx.strokeRect(this.x - bw/2, this.y - bw/2, bw, bw);
+
+                    // HUD Tag
+                    ctx.fillStyle = 'rgba(14, 14, 20, 0.9)';
+                    ctx.fillRect(this.x - bw/2, this.y - bw/2 - 11, 58, 10);
+                    ctx.fillStyle = col;
+                    ctx.font = '8px JetBrains Mono';
+                    ctx.fillText(`${this.type.slice(0,3).toUpperCase()} #${this.id}`, this.x - bw/2 + 2, this.y - bw/2 - 3);
+                }
+            }
+        }
+
+        // Spawn Crash Particles
+        function spawnCrash(x, y) {
+            for (let i = 0; i < 30; i++) {
+                particles.push({
+                    x: x,
+                    y: y,
+                    vx: (Math.random() - 0.5) * 8,
+                    vy: (Math.random() - 0.5) * 8,
+                    color: Math.random() > 0.4 ? '#ef4444' : '#f59e0b',
+                    radius: Math.random() * 5 + 2,
+                    alpha: 1.0,
+                    decay: Math.random() * 0.03 + 0.02
+                });
+            }
+            crashAlerts.push({ x, y, time: 70, text: 'CRASH: RIGHT-ANGLE IMPACT' });
+            addLog('danger', `⚠️ COLLISION: Right-Angle Impact @ Center Box (Day ${Math.floor(currentDay)})`);
+        }
+
+        // Spawn E-Challan Alert
+        function spawnChallan(x, y, text) {
+            challanAlerts.push({ x, y, time: 50, text: text });
+            addLog('signal', `📋 E-CHALLAN: Red-Light Violation Logged (Day ${Math.floor(currentDay)})`);
+        }
+
+        // Terminal Log Stream Helper
+        function addLog(type, msg) {
+            const timeStr = `D${Math.floor(currentDay).toString().padStart(2, '0')}:${(Math.floor((currentDay % 1) * 24)).toString().padStart(2, '0')}h`;
+            const row = document.createElement('div');
+            row.className = 'term-row';
+            row.innerHTML = `
+                <span class="term-time">${timeStr}</span>
+                <span class="term-badge ${type}">[${type.toUpperCase()}]</span>
+                <span class="term-msg">${msg}</span>
+            `;
+            terminalBox.prepend(row);
+            if (terminalBox.children.length > 18) {
+                terminalBox.removeChild(terminalBox.lastChild);
+            }
+        }
+
+        // Initialize Vehicles
+        function initVehicles() {
+            vehicles = [];
+            const dirs = ['N', 'S', 'E', 'W'];
+            for (let i = 0; i < 16; i++) {
+                vehicles.push(new Vehicle(dirs[i % 4]));
+            }
+        }
+
+        // Draw Infrastructure with Left-Hand Traffic Markings
+        function drawInfrastructure() {
+            // Asphalt Roads
+            ctx.fillStyle = '#14141d';
+            ctx.fillRect(CX - ROAD_W/2, 0, ROAD_W, CH);
+            ctx.fillRect(0, CY - ROAD_W/2, CW, ROAD_W);
+
+            // Sidewalk Blocks with Subtle Corner Shading
+            ctx.fillStyle = '#0a0a0f';
+            ctx.fillRect(0, 0, CX - ROAD_W/2, CY - ROAD_W/2);
+            ctx.fillRect(CX + ROAD_W/2, 0, CX - ROAD_W/2, CY - ROAD_W/2);
+            ctx.fillRect(0, CY + ROAD_W/2, CX - ROAD_W/2, CY - ROAD_W/2);
+            ctx.fillRect(CX + ROAD_W/2, CY + ROAD_W/2, CX - ROAD_W/2, CY - ROAD_W/2);
+
+            // Concrete Curb Edges
+            ctx.strokeStyle = '#272732';
+            ctx.lineWidth = 2;
+            ctx.strokeRect(0, 0, CX - ROAD_W/2, CY - ROAD_W/2);
+            ctx.strokeRect(CX + ROAD_W/2, 0, CX - ROAD_W/2, CY - ROAD_W/2);
+            ctx.strokeRect(0, CY + ROAD_W/2, CX - ROAD_W/2, CY - ROAD_W/2);
+            ctx.strokeRect(CX + ROAD_W/2, CY + ROAD_W/2, CX - ROAD_W/2, CY - ROAD_W/2);
+
+            // Dashed Lane Dividers
+            ctx.strokeStyle = '#383844';
+            ctx.lineWidth = 1.5;
+            ctx.setLineDash([14, 14]);
+
+            // Vertical centerline & lane dividers
+            ctx.beginPath();
+            ctx.moveTo(CX, 0); ctx.lineTo(CX, CY - ROAD_W/2);
+            ctx.moveTo(CX, CY + ROAD_W/2); ctx.lineTo(CX, CH);
+            // Horizontal centerline & lane dividers
+            ctx.moveTo(0, CY); ctx.lineTo(CX - ROAD_W/2, CY);
+            ctx.moveTo(CX + ROAD_W/2, CY); ctx.lineTo(CW, CY);
+            ctx.stroke();
+            ctx.setLineDash([]);
+
+            // Zebra Crosswalks
+            ctx.fillStyle = '#3a3a46';
+            const numBars = 8;
+            for (let i = 0; i < numBars; i++) {
+                const off = (ROAD_W / numBars) * i + 4;
+                ctx.fillRect(CX - ROAD_W/2 + off, CY - ROAD_W/2 - 18, 14, 14);
+                ctx.fillRect(CX - ROAD_W/2 + off, CY + ROAD_W/2 + 4, 14, 14);
+                ctx.fillRect(CX - ROAD_W/2 - 18, CY - ROAD_W/2 + off, 14, 14);
+                ctx.fillRect(CX + ROAD_W/2 + 4, CY - ROAD_W/2 + off, 14, 14);
+            }
+
+            // Indian LHT Stop-Line Lasers (on incoming driver side of road)
+            const laserCol = currentDay >= 16 ? '#10b981' : (currentDay >= 8 ? '#06b6d4' : 'rgba(239,68,68,0.55)');
+            ctx.strokeStyle = laserCol;
+            ctx.lineWidth = currentDay >= 16 ? 3 : 1.5;
+
+            ctx.beginPath();
+            // North approach incoming stop line (right half of vertical road)
+            ctx.moveTo(CX, CY - ROAD_W/2 - 2); ctx.lineTo(CX + ROAD_W/2, CY - ROAD_W/2 - 2);
+            // South approach incoming stop line (left half of vertical road)
+            ctx.moveTo(CX - ROAD_W/2, CY + ROAD_W/2 + 2); ctx.lineTo(CX, CY + ROAD_W/2 + 2);
+            // East approach incoming stop line (bottom half of horizontal road)
+            ctx.moveTo(CX + ROAD_W/2 + 2, CY); ctx.lineTo(CX + ROAD_W/2 + 2, CY + ROAD_W/2);
+            // West approach incoming stop line (top half of horizontal road)
+            ctx.moveTo(CX - ROAD_W/2 - 2, CY - ROAD_W/2); ctx.lineTo(CX - ROAD_W/2 - 2, CY);
+            ctx.stroke();
+        }
+
+        // Draw CCTV Camera Poles & Scanning Laser Cones
+        function drawCCTV() {
+            const poles = [
+                { x: CX - ROAD_W/2 - 16, y: CY - ROAD_W/2 - 16, a: Math.PI / 4 },
+                { x: CX + ROAD_W/2 + 16, y: CY - ROAD_W/2 - 16, a: (3 * Math.PI) / 4 },
+                { x: CX + ROAD_W/2 + 16, y: CY + ROAD_W/2 + 16, a: (5 * Math.PI) / 4 },
+                { x: CX - ROAD_W/2 - 16, y: CY + ROAD_W/2 + 16, a: (7 * Math.PI) / 4 }
+            ];
+
+            poles.forEach((p, i) => {
+                ctx.fillStyle = '#22222b';
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, 8, 0, Math.PI * 2);
+                ctx.fill();
+
+                // Lens core glow
+                ctx.fillStyle = currentDay >= 8 ? '#06b6d4' : '#52525b';
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, 4, 0, Math.PI * 2);
+                ctx.fill();
+
+                // Scanning Radar Cones (Day 8+)
+                if (currentDay >= 8) {
+                    ctx.save();
+                    ctx.translate(p.x, p.y);
+                    ctx.rotate(p.a);
+
+                    const sweep = Math.sin(performance.now() * 0.002 + i) * 0.18;
+                    ctx.rotate(sweep);
+
+                    const grad = ctx.createRadialGradient(0, 0, 10, 0, 0, 180);
+                    grad.addColorStop(0, 'rgba(6, 182, 212, 0.22)');
+                    grad.addColorStop(1, 'rgba(6, 182, 212, 0.0)');
+
+                    ctx.fillStyle = grad;
+                    ctx.beginPath();
+                    ctx.moveTo(0, 0);
+                    ctx.arc(0, 0, 180, -Math.PI / 5, Math.PI / 5);
+                    ctx.closePath();
+                    ctx.fill();
+
+                    ctx.restore();
+                }
+            });
+        }
+
+        // Draw Traffic Signal Gantries with Dynamic 3-Lens Glow
+        function drawSignals() {
+            const lights = [
+                { x: CX + ROAD_W/2 + 20, y: CY - ROAD_W/2 - 20, state: signalState.northSouth },
+                { x: CX - ROAD_W/2 - 20, y: CY + ROAD_W/2 + 20, state: signalState.northSouth },
+                { x: CX + ROAD_W/2 + 20, y: CY + ROAD_W/2 + 20, state: signalState.eastWest },
+                { x: CX - ROAD_W/2 - 20, y: CY - ROAD_W/2 - 20, state: signalState.eastWest }
+            ];
+
+            lights.forEach(l => {
+                ctx.fillStyle = '#0a0a0f';
+                ctx.strokeStyle = '#383844';
+                ctx.lineWidth = 1;
+                ctx.fillRect(l.x - 8, l.y - 18, 16, 36);
+                ctx.strokeRect(l.x - 8, l.y - 18, 16, 36);
+
+                // Red Lens (Top)
+                if (l.state === 'RED') {
+                    ctx.shadowColor = '#ef4444';
+                    ctx.shadowBlur = 12;
+                    ctx.fillStyle = '#ef4444';
+                } else {
+                    ctx.shadowBlur = 0;
+                    ctx.fillStyle = '#331010';
+                }
+                ctx.beginPath(); ctx.arc(l.x, l.y - 10, 5, 0, Math.PI * 2); ctx.fill();
+
+                // Yellow Lens (Middle)
+                if (l.state === 'YELLOW') {
+                    ctx.shadowColor = '#f59e0b';
+                    ctx.shadowBlur = 14;
+                    ctx.fillStyle = '#f59e0b';
+                } else {
+                    ctx.shadowBlur = 0;
+                    ctx.fillStyle = '#332510';
+                }
+                ctx.beginPath(); ctx.arc(l.x, l.y, 5, 0, Math.PI * 2); ctx.fill();
+
+                // Green Lens (Bottom)
+                if (l.state === 'GREEN') {
+                    ctx.shadowColor = '#10b981';
+                    ctx.shadowBlur = 12;
+                    ctx.fillStyle = '#10b981';
+                } else {
+                    ctx.shadowBlur = 0;
+                    ctx.fillStyle = '#103320';
+                }
+                ctx.beginPath(); ctx.arc(l.x, l.y + 10, 5, 0, Math.PI * 2); ctx.fill();
+                ctx.shadowBlur = 0;
+
+                // Adaptive Green Ring (DTSC in Stage 3+)
+                if (currentDay >= 16 && l.state === 'GREEN') {
+                    ctx.shadowColor = '#10b981';
+                    ctx.shadowBlur = 14;
+                    ctx.strokeStyle = '#10b981';
+                    ctx.lineWidth = 1.5;
+                    ctx.strokeRect(l.x - 9, l.y - 19, 18, 38);
+                    ctx.shadowBlur = 0;
+                }
+            });
+        }
+
+        // Draw Police Traffic Wardens (Day 16+)
+        function drawPolice() {
+            if (currentDay < 16) return;
+
+            const wardens = [
+                { x: CX - ROAD_W/2 - 12, y: CY + ROAD_W/2 + 12 },
+                { x: CX + ROAD_W/2 + 12, y: CY - ROAD_W/2 - 12 }
+            ];
+
+            wardens.forEach((w, i) => {
+                ctx.fillStyle = '#facc15';
+                ctx.beginPath();
+                ctx.arc(w.x, w.y, 7, 0, Math.PI * 2);
+                ctx.fill();
+
+                ctx.fillStyle = '#1e3a8a';
+                ctx.fillRect(w.x - 5, w.y - 9, 10, 4);
+
+                const batonAngle = Math.sin(performance.now() * 0.005 + i) * 0.4;
+                ctx.save();
+                ctx.translate(w.x, w.y);
+                ctx.rotate(batonAngle);
+                ctx.strokeStyle = (i === 0) ? '#10b981' : '#ef4444';
+                ctx.lineWidth = 3.5;
+                ctx.beginPath();
+                ctx.moveTo(3, 0);
+                ctx.lineTo(14, -8);
+                ctx.stroke();
+                ctx.restore();
+            });
+        }
+
+        // Check Collisions
+        function checkCollisions() {
+            if (currentDay >= 22) return;
+
+            for (let i = 0; i < vehicles.length; i++) {
+                for (let j = i + 1; j < vehicles.length; j++) {
+                    const v1 = vehicles[i];
+                    const v2 = vehicles[j];
+                    if (v1.crashed || v2.crashed) continue;
+
+                    const inCenter1 = Math.abs(v1.x - CX) < ROAD_W/2 && Math.abs(v1.y - CY) < ROAD_W/2;
+                    const inCenter2 = Math.abs(v2.x - CX) < ROAD_W/2 && Math.abs(v2.y - CY) < ROAD_W/2;
+
+                    if (inCenter1 && inCenter2 && v1.dir !== v2.dir) {
+                        const dist = Math.hypot(v1.x - v2.x, v1.y - v2.y);
+                        if (dist < 26) {
+                            v1.crashed = true;
+                            v2.crashed = true;
+                            v1.crashTimer = 100;
+                            v2.crashTimer = 100;
+                            spawnCrash((v1.x + v2.x)/2, (v1.y + v2.y)/2);
+                        }
+                    }
+                }
+            }
+        }
+
+        // Stage Banner Triggers
+        function triggerBanner(stage, icon, text) {
+            if (lastStage === stage) return;
+            lastStage = stage;
+            bannerIcon.innerText = icon;
+            bannerText.innerText = text;
+            stageBanner.classList.add('show');
+            setTimeout(() => {
+                stageBanner.classList.remove('show');
+            }, 3000);
+        }
+
+        // Update UI & Telemetry Curves
+        function updateUI() {
+            dayBadge.innerText = `DAY ${Math.floor(currentDay).toString().padStart(2, '0')} / 30`;
+            timelineRange.value = currentDay;
+
+            if (currentDay < 8) {
+                // STAGE 1: Days 1-7 (Baseline Unmanaged Chaos - No AI or interventions deployed)
+                stageLabel.innerText = 'STAGE 1 • UNMANAGED CHAOS';
+                stageDot.style.background = '#ef4444';
+                stageDot.style.boxShadow = '0 0 10px rgba(239, 68, 68, 0.5)';
+                phaseSub.innerText = 'Fixed dumb timers • 0% enforcement • High collision risk';
+
+                storyBox.style.borderLeftColor = '#ef4444';
+                storyHead.innerHTML = '<span>Days 1–7: Baseline Unmanaged Chaos</span>';
+                storyBody.innerText = 'Dumb fixed-interval timers with zero clearance buffer cause severe gridlock. Impatient drivers speed through yellow lights and jump red signals, resulting in frequent right-angle collisions.';
+
+                kpiRisk.innerText = '89.2%';
+                kpiRisk.style.color = '#ef4444';
+                kpiRiskStatus.innerText = '▲ Critical Hazard';
+                kpiRiskStatus.className = 'kpi-status danger';
+
+                kpiWait.innerText = '132s';
+                kpiWaitStatus.innerText = '▲ Severe Gridlock';
+                kpiWaitStatus.className = 'kpi-status danger';
+
+                kpiCO2.innerText = '0.0 T';
+                kpiCO2Status.innerText = '+0 Trees (Zero Savings)';
+
+                kpiViol.innerText = '58/min';
+                kpiViolStatus.innerText = '▲ 0% Enforcement';
+                kpiViolStatus.className = 'kpi-status danger';
+
+                kpiBoxRisk.className = 'kpi-box danger-top';
+                kpiBoxWait.className = 'kpi-box danger-top';
+
+                triggerBanner(1, '⚠️', 'STAGE 1: HIGH CONGESTION & FATAL ACCIDENTS');
+
+            } else if (currentDay < 16) {
+                // STAGE 2: Days 8-15 (Passive CCTV & Telemetry Ingestion - Observation only)
+                stageLabel.innerText = 'STAGE 2 • VISION TELEMETRY ONLINE';
+                stageDot.style.background = '#06b6d4';
+                stageDot.style.boxShadow = '0 0 10px rgba(6, 182, 212, 0.5)';
+                phaseSub.innerText = 'YOLOv11 & Homography Velocity Radar • Measuring baseline risk';
+
+                storyBox.style.borderLeftColor = '#06b6d4';
+                storyHead.innerHTML = '<span>Days 8–15: Passive CCTV Perception & Radar Telemetry</span>';
+                storyBody.innerText = 'High-speed CCTV cameras activate. YOLOv11 multi-class tracking and homography velocity radar measure baseline hazards into the panel database. Physical traffic signals remain unchanged.';
+
+                const p = (currentDay - 8) / 8;
+                kpiRisk.innerText = (87.0 - p * 2.4).toFixed(1) + '%';
+                kpiRisk.style.color = '#06b6d4';
+                kpiRiskStatus.innerText = '● Telemetry Ingesting';
+                kpiRiskStatus.className = 'kpi-status warn';
+
+                kpiWait.innerText = Math.round(128 - p * 8) + 's';
+                kpiWaitStatus.innerText = '▲ Unoptimized Signals';
+                kpiWaitStatus.className = 'kpi-status danger';
+
+                kpiCO2.innerText = (0.1 + p * 0.5).toFixed(1) + ' T';
+                kpiCO2Status.innerText = '+12 Trees (Monitoring)';
+
+                kpiViol.innerText = Math.round(56 - p * 8) + '/min';
+                kpiViolStatus.innerText = '▲ 100% Ingest Coverage';
+                kpiViolStatus.className = 'kpi-status warn';
+
+                kpiBoxRisk.className = 'kpi-box warn-top';
+                kpiBoxWait.className = 'kpi-box danger-top';
+
+                triggerBanner(2, '📷', 'STAGE 2: YOLOv11 & HOMOGRAPHY PERCEPTION ENGAGED');
+
+            } else if (currentDay < 24) {
+                // STAGE 3: Days 16-23 (INTERVENTIONS DEPLOYED)
+                stageLabel.innerText = 'STAGE 3 • ADAPTIVE DTSC & POLICE WARDENS';
+                stageDot.style.background = '#f59e0b';
+                stageDot.style.boxShadow = '0 0 10px rgba(245, 158, 11, 0.5)';
+                phaseSub.innerText = 'Dynamic green allocation • All-red clearance buffer • Tactical wardens';
+
+                storyBox.style.borderLeftColor = '#f59e0b';
+                storyHead.innerHTML = '<span>Days 16–23: Interventions Deployed — DTSC & Digital E-Challans</span>';
+                storyBody.innerText = 'Dynamic Traffic Signal Control (DTSC) deploys adaptive green waves and all-red clearance intervals. Tactical police wardens and instant E-Challan enforcement cause risk and delays to plummet.';
+
+                const p = (currentDay - 16) / 8;
+                kpiRisk.innerText = (84.6 - p * 62.6).toFixed(1) + '%';
+                kpiRisk.style.color = '#f59e0b';
+                kpiRiskStatus.innerText = '▼ 74% Drop (DTSC Live)';
+                kpiRiskStatus.className = 'kpi-status success';
+
+                kpiWait.innerText = Math.round(120 - p * 88) + 's';
+                kpiWaitStatus.innerText = '▼ 73% Delay Reduction';
+                kpiWaitStatus.className = 'kpi-status success';
+
+                kpiCO2.innerText = (0.6 + p * 9.9).toFixed(1) + ' T';
+                kpiCO2Status.innerText = `+${Math.round(40 + p * 480)} Trees Planted`;
+
+                kpiViol.innerText = Math.round(48 - p * 42) + '/min';
+                kpiViolStatus.innerText = '▼ 88% Violations Cut';
+                kpiViolStatus.className = 'kpi-status success';
+
+                kpiBoxRisk.className = 'kpi-box warn-top';
+                kpiBoxWait.className = 'kpi-box success-top';
+
+                triggerBanner(3, '🚦', 'STAGE 3: DTSC ADAPTIVE GREENS & WARDEN DEPLOYMENT');
+
+            } else {
+                // STAGE 4: Days 24-30 (Autonomous Equilibrium)
+                stageLabel.innerText = 'STAGE 4 • AUTONOMOUS EQUILIBRIUM';
+                stageDot.style.background = '#10b981';
+                stageDot.style.boxShadow = '0 0 14px rgba(16, 185, 129, 0.6)';
+                phaseSub.innerText = 'Synchronized green waves • Zero collisions • Max fuel savings';
+
+                storyBox.style.borderLeftColor = '#10b981';
+                storyHead.innerHTML = '<span>Days 24–30: Autonomous Flow & Zero-Crash Equilibrium</span>';
+                storyBody.innerText = 'Synchronized smart green waves eliminate idling stops. Zero accidents recorded, queue delays drop to under 15 seconds, and over 18 tonnes of carbon emissions are prevented.';
+
+                const p = (currentDay - 24) / 6;
+                kpiRisk.innerText = (22.0 - p * 19.8).toFixed(1) + '%';
+                kpiRisk.style.color = '#10b981';
+                kpiRiskStatus.innerText = '▼ 97.5% Zero-Crash Flow';
+                kpiRiskStatus.className = 'kpi-status success';
+
+                kpiWait.innerText = Math.round(32 - p * 18) + 's';
+                kpiWaitStatus.innerText = '▼ Free-Flow Waves';
+                kpiWaitStatus.className = 'kpi-status success';
+
+                kpiCO2.innerText = (10.5 + p * 8.3).toFixed(1) + ' T';
+                kpiCO2Status.innerText = '+920 Trees Saved';
+
+                kpiViol.innerText = Math.max(0, Math.round(6 - p * 6)) + '/min';
+                kpiViolStatus.innerText = '▼ 99% Compliance';
+                kpiViolStatus.className = 'kpi-status success';
+
+                kpiBoxRisk.className = 'kpi-box success-top';
+                kpiBoxWait.className = 'kpi-box success-top';
+
+                triggerBanner(4, '🌿', 'STAGE 4: ZERO-ACCIDENT EQUILIBRIUM ACHIEVED');
+            }
+        }
+
+        // Main Animation Loop
+        function animate(timestamp) {
+            const dt = Math.min((timestamp - lastTime) / 16.66, 2.0);
+            lastTime = timestamp;
+
+            ctx.clearRect(0, 0, CW, CH);
+
+            if (isPlaying) {
+                // Advance Timeline (~36s for 30 days at 2x)
+                currentDay += 0.007 * speedMultiplier * dt;
+                if (currentDay > 30) currentDay = 1.0;
+                updateUI();
+
+                // 6-Phase Signal State Machine
+                const durations = getPhaseDurations(currentDay);
+                signalState.timer += 0.016 * speedMultiplier * dt;
+
+                if (signalState.timer > durations[signalState.phase]) {
+                    signalState.timer = 0;
+                    signalState.phase = (signalState.phase + 1) % 6;
+
+                    switch (signalState.phase) {
+                        case 0: signalState.northSouth = 'GREEN'; signalState.eastWest = 'RED'; break;
+                        case 1: signalState.northSouth = 'YELLOW'; signalState.eastWest = 'RED'; break;
+                        case 2: signalState.northSouth = 'RED'; signalState.eastWest = 'RED'; break; // All-Red 1
+                        case 3: signalState.northSouth = 'RED'; signalState.eastWest = 'GREEN'; break;
+                        case 4: signalState.northSouth = 'RED'; signalState.eastWest = 'YELLOW'; break;
+                        case 5: signalState.northSouth = 'RED'; signalState.eastWest = 'RED'; break; // All-Red 2
+                    }
+                }
+
+                // Update Vehicles
+                vehicles.forEach(v => {
+                    v.update(dt, currentDay, signalState);
+                    if (v.x < -90 || v.x > CW + 90 || v.y < -90 || v.y > CH + 90) {
+                        v.resetPosition();
+                    }
+                });
+
+                // Check Collisions
+                checkCollisions();
+
+                // Update Particles
+                for (let i = particles.length - 1; i >= 0; i--) {
+                    const p = particles[i];
+                    p.x += p.vx;
+                    p.y += p.vy;
+                    p.alpha -= p.decay;
+                    if (p.alpha <= 0) particles.splice(i, 1);
+                }
+
+                // Update Alerts
+                for (let i = crashAlerts.length - 1; i >= 0; i--) {
+                    crashAlerts[i].time -= 1;
+                    if (crashAlerts[i].time <= 0) crashAlerts.splice(i, 1);
+                }
+                for (let i = challanAlerts.length - 1; i >= 0; i--) {
+                    challanAlerts[i].time -= 1;
+                    if (challanAlerts[i].time <= 0) challanAlerts.splice(i, 1);
+                }
+            }
+
+            // Draw Canvas Frame
+            drawInfrastructure();
+            drawCCTV();
+            drawSignals();
+            drawPolice();
+
+            // Draw Vehicles
+            vehicles.forEach(v => v.draw());
+
+            // Draw Particles
+            particles.forEach(p => {
+                ctx.save();
+                ctx.globalAlpha = p.alpha;
+                ctx.fillStyle = p.color;
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+                ctx.fill();
+                ctx.restore();
+            });
+
+            // Draw Crash Banners
+            crashAlerts.forEach(ca => {
+                ctx.fillStyle = '#ef4444';
+                ctx.strokeStyle = '#ffffff';
+                ctx.lineWidth = 1;
+                ctx.fillRect(ca.x - 80, ca.y - 24, 160, 20);
+                ctx.strokeRect(ca.x - 80, ca.y - 24, 160, 20);
+                ctx.fillStyle = '#ffffff';
+                ctx.font = 'bold 9px JetBrains Mono';
+                ctx.textAlign = 'center';
+                ctx.fillText(ca.text, ca.x, ca.y - 11);
+            });
+
+            // Draw Challan Banners
+            challanAlerts.forEach(ch => {
+                ctx.fillStyle = '#f59e0b';
+                ctx.fillRect(ch.x - 100, ch.y - 30, 200, 18);
+                ctx.fillStyle = '#042f2e';
+                ctx.font = 'bold 8px JetBrains Mono';
+                ctx.textAlign = 'center';
+                ctx.fillText(ch.text, ch.x, ch.y - 18);
+            });
+
+            requestAnimationFrame(animate);
+        }
+
+        // Direct Stage Jump Helper
+        function jumpToDay(day) {
+            currentDay = day;
+            updateUI();
+        }
+
+        // Event Listeners
+        timelineRange.addEventListener('input', (e) => {
+            currentDay = parseFloat(e.target.value);
+            updateUI();
+        });
+
+        btnPlayPause.addEventListener('click', () => {
+            isPlaying = !isPlaying;
+            btnPlayPause.innerText = isPlaying ? '❚❚ Pause' : '▶ Play';
+            btnPlayPause.classList.toggle('primary', isPlaying);
+            statusIndicator.innerText = isPlaying ? `AUTO-RUNNING (${speedMultiplier}x)` : 'PAUSED';
+            statusIndicator.style.color = isPlaying ? 'var(--text-muted)' : 'var(--accent-amber)';
+        });
+
+        const speeds = [0.5, 1.0, 2.0, 4.0];
+        let speedIdx = 2; // 2x default
+        btnSpeed.addEventListener('click', () => {
+            speedIdx = (speedIdx + 1) % speeds.length;
+            speedMultiplier = speeds[speedIdx];
+            btnSpeed.innerText = `${speedMultiplier}x`;
+            if (isPlaying) {
+                statusIndicator.innerText = `AUTO-RUNNING (${speedMultiplier}x)`;
+            }
+        });
+
+        btnRestart.addEventListener('click', () => {
+            currentDay = 1.0;
+            particles = [];
+            crashAlerts = [];
+            challanAlerts = [];
+            terminalBox.innerHTML = '';
+            initVehicles();
+            addLog('danger', 'System reset to Day 01: Baseline Unmanaged Chaos');
+            updateUI();
+        });
+
+        // Keyboard Shortcuts: Space (Play/Pause), R (Reset), 1-4 (Stage jumps)
+        window.addEventListener('keydown', (e) => {
+            if (e.code === 'Space') {
+                e.preventDefault();
+                btnPlayPause.click();
+            } else if (e.code === 'KeyR') {
+                btnRestart.click();
+            } else if (e.key === '1') jumpToDay(1);
+            else if (e.key === '2') jumpToDay(8);
+            else if (e.key === '3') jumpToDay(16);
+            else if (e.key === '4') jumpToDay(24);
+        });
+
+        // Launch Simulation
+        initVehicles();
+        addLog('danger', 'System Initialized: Baseline unmanaged gridlock.');
+        updateUI();
+        requestAnimationFrame(animate);
+    </script>
+</body>
+</html>
