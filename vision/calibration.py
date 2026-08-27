@@ -280,7 +280,16 @@ class HomographyCalibrator:
             basename = Path(video_key).name
             stem = Path(video_key).stem
             key_candidates.extend([video_key, basename, stem])
-        key_candidates.extend(["traffic.mp4", "default", "demo"])
+            
+            # Check for substring matches in config keys
+            for config_k in config_data.keys():
+                if config_k.lower() in video_key.lower() or config_k.lower() in basename.lower():
+                    key_candidates.append(config_k)
+                if "2min" in video_key.lower() and "2min" in config_k.lower():
+                    key_candidates.insert(0, config_k)
+
+        # Default fallback candidates
+        key_candidates.extend(["traffic_2min.mp4", "traffic.mp4", "custom_camera_template", "default", "demo"])
 
         selected_entry = None
         matched_key = None

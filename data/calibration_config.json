@@ -18,18 +18,18 @@
   },
   "traffic_2min.mp4": {
     "status": "demo_calibration",
-    "description": "Demonstrator calibration for 2-minute 1080p video feed (traffic_2min.mp4). Approximates a 14m wide by 60m deep multi-lane road perspective.",
+    "description": "4-point planar perspective homography calibration for 1080p highway video (traffic_2min.mp4). Mapped to 12.0m 3-lane width by 30.0m roadway plane.",
     "resolution": [1080, 1920],
     "image_points": [
-      [500.0, 480.0],
-      [1400.0, 480.0],
-      [1750.0, 1020.0],
-      [100.0, 1020.0]
+      [520.0, 470.0],
+      [1380.0, 470.0],
+      [1820.0, 1040.0],
+      [60.0, 1040.0]
     ],
     "world_points": [
-      [0.0, 60.0],
-      [14.0, 60.0],
-      [14.0, 0.0],
+      [0.0, 30.0],
+      [12.0, 30.0],
+      [12.0, 0.0],
       [0.0, 0.0]
     ]
   },

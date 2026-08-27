@@ -9,6 +9,7 @@ import os
 import glob
 import html
 import joblib
+from collections import deque
 import cv2
 import numpy as np
 import pandas as pd
@@ -21,6 +22,14 @@ try:
     from ultralytics import YOLO
 except ImportError:
     YOLO = None
+
+try:
+    from vision.calibration import HomographyCalibrator
+except ImportError:
+    try:
+        from calibration import HomographyCalibrator
+    except ImportError:
+        HomographyCalibrator = None
 
 # Configure page settings
 st.set_page_config(
@@ -300,8 +309,7 @@ def main():
             "01. 🧠 ML RISK PREDICTOR & SIMULATION LAB",
             "02. 📹 COMPUTER VISION & KINEMATIC TRACKER",
             "03. 🚦 DYNAMIC SIGNAL OPTIMIZER (DTSC)",
-            "04. 🗺️ GEOSPATIAL URBAN RISK RADAR",
-            "05. 🎬 30-DAY CROSSROAD TRANSFORMATION"
+            "04. 🗺️ GEOSPATIAL URBAN RISK RADAR"
         ],
         index=0
     )
@@ -317,8 +325,6 @@ def main():
         render_dtsc_optimizer()
     elif app_mode.startswith("04"):
         render_geospatial_radar()
-    else:
-        render_crossroad_transformation_hub()
 
     # Sidebar Footer
     st.sidebar.markdown("""
@@ -719,11 +725,22 @@ def render_vision_kinematics():
                     y_model = None
                     status_slot.error(f"Error loading YOLO: {e}")
 
+                # Instantiate Homography Calibrator for selected video
+                calibrator = None
+                if HomographyCalibrator is not None:
+                    calib_cfg = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "calibration_config.json")
+                    if not os.path.exists(calib_cfg):
+                        calib_cfg = "data/calibration_config.json"
+                    try:
+                        calibrator = HomographyCalibrator.from_config(config_source=calib_cfg, video_key=os.path.basename(selected_vid))
+                    except Exception as e:
+                        calibrator = None
+
                 class_counts_acc = {"Cars": 0, "Two-Wheelers": 0, "Auto-Rickshaws": 0, "Buses": 0, "Trucks": 0}
                 peak_density = 0
                 frame_idx = 0
                 tracked_unique_ids = set()
-                track_history = {}  # track_id -> (cx, cy, timestamp)
+                track_history = {}  # track_id -> deque of (X_ground, Y_ground, timestamp, cx, cy)
                 speed_samples = []
                 helmet_eval_total = 0
                 helmet_eval_compliant = 0
@@ -788,16 +805,37 @@ def render_vision_kinematics():
                                 x1, y1, x2, y2 = boxes.xyxy[i].cpu().numpy().astype(int)
                                 cx, cy = float((x1 + x2) / 2.0), float(y2)
                                 
-                                # Dynamic Speed Calculation
+                                # Dynamic 4-Point Planar Perspective Homography Speed Calculation
                                 if t_id is not None:
-                                    if t_id in track_history:
-                                        prev_cx, prev_cy, prev_t = track_history[t_id]
-                                        dt = max(0.033, timestamp - prev_t)
-                                        dp_px = np.sqrt((cx - prev_cx)**2 + (cy - prev_cy)**2)
-                                        calc_spd = float(np.clip((dp_px * 0.05 / dt) * 3.6, 12.0, 72.0))
-                                        speed_samples.append(calc_spd)
-                                        frame_speeds.append(calc_spd)
-                                    track_history[t_id] = (cx, cy, timestamp)
+                                    # Project bottom-center contact patch to real-world ground meters
+                                    if calibrator is not None and calibrator.is_calibrated:
+                                        w_pt = calibrator.pixel_to_world([[cx, cy]])[0]
+                                        X_ground, Y_ground = float(w_pt[0]), float(w_pt[1])
+                                    else:
+                                        # Physical Inverse Perspective Mapping (IPM) model fallback (Pole height 6.0m, tilt 25 deg)
+                                        norm_y = max(0.05, min(0.98, cy / max(1.0, frame.shape[0])))
+                                        pitch_angle = 0.12 + 0.58 * norm_y
+                                        Y_ground = 6.0 / max(0.05, np.tan(pitch_angle))
+                                        X_ground = ((cx - frame.shape[1] * 0.5) / max(1.0, frame.shape[1])) * Y_ground * 1.35
+
+                                    if np.isfinite(X_ground) and np.isfinite(Y_ground):
+                                        if t_id not in track_history:
+                                            track_history[t_id] = deque(maxlen=8)
+                                        hist = track_history[t_id]
+                                        hist.append((X_ground, Y_ground, timestamp, cx, cy))
+
+                                        # Measure in stable visual zone (exclude far-horizon perspective singularity near top)
+                                        in_measurement_zone = cy >= (frame.shape[0] * 0.45)
+                                        if in_measurement_zone and len(hist) >= 4:
+                                            prev_X, prev_Y, prev_t, prev_cx, prev_cy = hist[0]
+                                            dt = timestamp - prev_t
+                                            if dt >= 0.09:
+                                                dist_m = np.sqrt((X_ground - prev_X)**2 + (Y_ground - prev_Y)**2)
+                                                calc_spd = float((dist_m / dt) * 3.6)
+                                                # Physical outlier rejection: realistic road speeds between 5 km/h and 140 km/h
+                                                if 5.0 <= calc_spd <= 140.0:
+                                                    speed_samples.append(calc_spd)
+                                                    frame_speeds.append(calc_spd)
                                 
                                 # 2-Wheeler Helmet Analysis
                                 if cat == "Two-Wheelers":
@@ -838,7 +876,8 @@ def render_vision_kinematics():
                     status_slot.text(f"Processing Frame {frame_idx}/{max_f} • Currently In-View: {sum(current_frame_counts.values())} Vehicles")
                     
                     # Compute actual live statistics
-                    live_mean_spd = round(float(np.mean(frame_speeds)), 1) if frame_speeds else (round(float(np.mean(speed_samples)), 1) if speed_samples else 31.8)
+                    live_mean_spd = round(float(np.mean(frame_speeds)), 1) if frame_speeds else (round(float(np.mean(speed_samples[-40:])), 1) if speed_samples else 0.0)
+                    speed_std = round(float(np.std(speed_samples[-40:])), 1) if len(speed_samples) >= 5 else 1.8
                     live_helmet_pct = round((helmet_eval_compliant / max(1, helmet_eval_total)) * 100, 1) if helmet_eval_total > 0 else 88.0
                     live_unique_cnt = len(tracked_unique_ids) if len(tracked_unique_ids) > 0 else (peak_density * 2)
 
@@ -846,7 +885,7 @@ def render_vision_kinematics():
                     with metrics_container.container():
                         vk1, vk2 = st.columns(2)
                         vk1.metric("CURRENT IN-FRAME", f"{sum(current_frame_counts.values())} veh", f"Peak: {peak_density} veh/frame")
-                        vk2.metric("MEASURED VELOCITY", f"{live_mean_spd:.1f} km/h", "±1.8 km/h homography")
+                        vk2.metric("MEASURED VELOCITY", f"{live_mean_spd:.1f} km/h", f"±{speed_std:.1f} km/h homography")
                         
                         vk3, vk4 = st.columns(2)
                         vk3.metric("TRACKED VEHICLES", f"{live_unique_cnt} Unique", f"Frame {frame_idx}/{max_f}")
@@ -867,12 +906,13 @@ def render_vision_kinematics():
                 cap.release()
                 status_slot.success(f"✅ Ingestion Complete! Extracted {frame_idx} frames from '{os.path.basename(selected_vid)}'. Detected {len(tracked_unique_ids) or peak_density} unique vehicles.")
                 
+                final_spd = round(float(np.mean(speed_samples[-50:])), 1) if speed_samples else (round(float(np.mean(speed_samples)), 1) if speed_samples else 0.0)
                 st.session_state["last_video_results_interim"] = {
                     "vid_name": os.path.basename(selected_vid),
                     "frames": frame_idx,
                     "peak": peak_density,
                     "unique": len(tracked_unique_ids) or (peak_density * 2),
-                    "speed": round(float(np.mean(speed_samples)), 1) if speed_samples else 32.5,
+                    "speed": final_spd,
                     "helmet": live_helmet_pct,
                     "classes": {k: v for k, v in class_counts_acc.items() if v > 0}
                 }
@@ -1240,7 +1280,7 @@ def render_crossroad_transformation_hub():
         if anim_path:
             with open(anim_path, "r", encoding="utf-8") as f:
                 html_content = f.read()
-            st.components.v1.html(html_content, height=880, scrolling=False)
+            st.components.v1.html(html_content, height=960, scrolling=True)
         else:
             st.warning("crossroad_animation.html file not found in project directory.")
 
