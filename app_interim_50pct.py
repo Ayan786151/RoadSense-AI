@@ -983,7 +983,6 @@ def render_geospatial_radar():
     w_df["longitude"] = lons
     w_df["priority_score"] = priorities
 
-    # Map visualization
     fig_map = px.scatter_mapbox(
         w_df,
         lat="latitude",
@@ -993,12 +992,12 @@ def render_geospatial_radar():
         color_continuous_scale="Viridis",
         size_max=20,
         zoom=11,
-        mapbox_style="carto-darkmatter",
+        mapbox_style="open-street-map",
         hover_name="zone_id",
         hover_data={"priority_score": True, "congestion": True, "vehicle_density": True, "latitude": False, "longitude": False},
         title=f"Geospatial Priority Risk Heatmap (Week {week_num})"
     )
-    fig_map.update_layout(paper_bgcolor="#18181b", height=420, margin=dict(l=0, r=0, t=30, b=0), font={"family": "Inter", "color": "#fafafa"})
+    fig_map.update_layout(paper_bgcolor="#18181b", height=420, margin=dict(l=0, r=0, t=30, b=0), font={"family": "Inter", "color": "#fafafa"}, mapbox=dict(style="open-street-map"))
     st.plotly_chart(fig_map, width="stretch")
 
     st.markdown("#### Top 5 High-Priority Municipal Intervention Zones")

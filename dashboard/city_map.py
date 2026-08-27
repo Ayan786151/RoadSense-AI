@@ -98,7 +98,6 @@ def render_city_command_map():
     }
     target_col = col_map.get(metric_choice, "congestion")
 
-    # Create Plotly Map
     fig = px.scatter_mapbox(
         merged,
         lat="latitude",
@@ -108,7 +107,7 @@ def render_city_command_map():
         color_continuous_scale="Viridis",
         size_max=22,
         zoom=11,
-        mapbox_style="carto-darkmatter",
+        mapbox_style="open-street-map",
         hover_name="zone_name",
         hover_data={
             "latitude": False,
@@ -125,7 +124,10 @@ def render_city_command_map():
         margin={"r": 0, "t": 40, "l": 0, "b": 0},
         height=540,
         paper_bgcolor="#18181b",
-        font={"family": "Inter", "color": "#fafafa"}
+        font={"family": "Inter", "color": "#fafafa"},
+        mapbox=dict(
+            style="open-street-map"
+        )
     )
 
     st.plotly_chart(fig, width="stretch")
