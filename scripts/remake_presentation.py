@@ -62,7 +62,7 @@ for shape in slide2.shapes:
                  "Over 70% of urban road deaths involve vulnerable two-wheelers. Rampant non-compliance in helmet wearing, red-light jumping, and triple-riding overloads directly causes fatal right-angle and skid collisions."),
                 ("2. Static, Non-Adaptive Signal Timers:", 
                  "Fixed 90-120s signal clocks force green lights on empty lanes while opposing lanes choke in gridlock. This generates millions of wasted commuter hours, fuel burn, and toxic localized CO2 spikes."),
-                ("3. Fragmented, Reactive Law Enforcement:", 
+                ("3. Fragmented, Reactive Law Enforcement:",  
                  "Traffic authorities rely on manual, hazardous roadside ticketing. Enforcement is sporadic, prone to evasion, and completely disconnected from real-time dynamic traffic density."),
                 ("4. Zero Longitudinal Risk Planning:", 
                  "Municipal authorities lack predictive AI to forecast how seasonal volume shifts, weather disruptions, and arterial bottlenecks will trigger network-wide gridlock weeks in advance.")
