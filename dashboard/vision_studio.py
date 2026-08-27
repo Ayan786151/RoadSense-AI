@@ -98,6 +98,39 @@ def download_youtube_clip(url: str, output_path: str, max_duration_sec: int = 30
         ydl.download([url])
 
 
+def find_all_local_videos():
+    """Recursively scans all video directories and returns a list of existing video file paths."""
+    search_dirs = [
+        "videos",
+        "traffic_sim-main/videos",
+        "../videos",
+        "../../videos",
+        "data",
+        "assets",
+        os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "videos"),
+        os.path.join(os.path.dirname(os.path.abspath(__file__)), "videos")
+    ]
+    extensions = ["*.mp4", "*.avi", "*.mov", "*.mkv", "*.webm", "*.m4v", "*.MP4", "*.AVI", "*.MOV", "*.MKV"]
+    found_videos = []
+    seen = set()
+
+    for s_dir in search_dirs:
+        if os.path.exists(s_dir):
+            for ext in extensions:
+                for v in glob.glob(os.path.join(s_dir, ext)):
+                    abs_p = os.path.abspath(v)
+                    if abs_p not in seen and os.path.isfile(abs_p):
+                        seen.add(abs_p)
+                        found_videos.append(v)
+                for v in glob.glob(os.path.join(s_dir, "**", ext), recursive=True):
+                    abs_p = os.path.abspath(v)
+                    if abs_p not in seen and os.path.isfile(abs_p):
+                        seen.add(abs_p)
+                        found_videos.append(v)
+                        
+    return found_videos
+
+
 def render_vision_studio():
     """Renders the Minimalist Computer Vision Studio and Violation Enforcement Hub."""
     st.markdown("""
@@ -125,11 +158,11 @@ def render_vision_studio():
     # ==========================================================================
     with tab_runner:
         st.markdown("#### Real-Time Video Ingestion & Multi-Violation Tracking")
-        st.caption("Select local traffic footage or configure a live stream feed for real-time kinematic processing.")
+        st.caption("Select local traffic footage, upload any video file, or configure a live stream feed.")
 
         media_source = st.radio(
             "MEDIA INPUT SOURCE",
-            ["Local Video Archive (videos/*.mp4)", "YouTube Live Stream / Video URL"],
+            ["Local Video Archive / Uploaded Videos", "YouTube Live Stream / Video URL"],
             horizontal=True
         )
 
@@ -141,9 +174,29 @@ def render_vision_studio():
 
         with col1:
             if not is_yt_source:
-                existing_videos = glob.glob("videos/*.mp4") + glob.glob("videos/*.avi")
+                existing_videos = find_all_local_videos()
                 vid_options = existing_videos if existing_videos else ["videos/traffic.mp4"]
-                selected_video = st.selectbox("SELECT INPUT VIDEO", vid_options, index=0)
+                
+                selected_video = st.selectbox(
+                    "SELECT INPUT VIDEO",
+                    vid_options,
+                    format_func=lambda p: f"📹 {os.path.basename(p)} ({os.path.getsize(p)/(1024*1024):.1f} MB)" if os.path.exists(p) else p,
+                    index=0
+                )
+                
+                # Direct drag and drop video uploader
+                uploaded_vid = st.file_uploader(
+                    "OR DRAG & DROP / UPLOAD ANY VIDEO FILE",
+                    type=["mp4", "avi", "mov", "mkv", "webm", "m4v"],
+                    help="Upload any video from your computer to run computer vision detection immediately."
+                )
+                if uploaded_vid is not None:
+                    os.makedirs("videos", exist_ok=True)
+                    uploaded_path = os.path.join("videos", uploaded_vid.name)
+                    with open(uploaded_path, "wb") as f:
+                        f.write(uploaded_vid.getbuffer())
+                    selected_video = uploaded_path
+                    st.success(f"Loaded: {uploaded_vid.name}")
             else:
                 yt_input_url = st.text_input(
                     "YOUTUBE STREAM URL",
@@ -188,6 +241,12 @@ def render_vision_studio():
             new_session_name = st.text_input("OUTPUT SESSION ID", value=f"session_{int(time.time()) % 1000:03d}")
             conf_thresh = st.slider("CONFIDENCE THRESHOLD", 0.10, 0.60, 0.25, step=0.05, help="Lower confidence captures distant 2-wheelers and vehicles.")
             frame_skip = st.slider("FRAME SKIP MULTIPLIER", 1, 10, 2)
+            max_process_frames = st.select_slider(
+                "MAX FRAMES TO PROCESS (PREVENTS INFINITE LOOP)",
+                options=[60, 150, 300, 600, 1200, 2400, "All Frames"],
+                value=300,
+                help="Sets maximum frame limit to prevent infinite telemetry stream and browser freeze."
+            )
             enable_night = st.checkbox("Force CLAHE Low-Light Enhancement", value=False)
 
         st.markdown("##### Enforcement & Signal Parameters:")
@@ -250,20 +309,29 @@ def render_vision_studio():
                         c.set(cv2.CAP_PROP_BUFFERSIZE, 3)
                         return c
 
-                    cap = open_live_capture(stream_source) if is_yt_source else cv2.VideoCapture(stream_source)
+                    abs_source = stream_source if is_yt_source else os.path.abspath(stream_source)
+                    cap = open_live_capture(abs_source) if is_yt_source else cv2.VideoCapture(abs_source)
                     if not cap.isOpened():
-                        st.error(f"Could not open video stream: {stream_source}")
+                        st.error(f"Could not open video stream: {abs_source}")
                         st.stop()
 
                     if is_yt_source:
-                        total_f = 999999999
+                        total_f = 500 if max_process_frames == "All Frames" else int(max_process_frames)
                     else:
                         raw_total_f = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
                         total_f = raw_total_f if raw_total_f > 0 else 500
+                        if max_process_frames != "All Frames":
+                            total_f = min(total_f, int(max_process_frames))
                     
                     fps = cap.get(cv2.CAP_PROP_FPS) or 30.0
                     
-                    yolo_model = YOLO(model_target)
+                    # Resolve model weights path robustly
+                    actual_model_path = model_target
+                    if not os.path.exists(actual_model_path):
+                        parent_m = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", model_target)
+                        if os.path.exists(parent_m):
+                            actual_model_path = parent_m
+                    yolo_model = YOLO(actual_model_path)
                     adaptive_engine = AutonomousAdaptiveEngine()
                     helmet_detector = HelmetViolationDetector() if track_helmets else None
                     red_light_detector = RedLightViolationDetector(stop_line_y_ratio=stop_line_ratio) if track_red_lights else None
@@ -285,30 +353,25 @@ def render_vision_studio():
                         if not ret:
                             if is_yt_source:
                                 consecutive_fails += 1
-                                if consecutive_fails > 5:
-                                    status_text.warning("Connection lost after 5 retries. Reconnecting...")
-                                    consecutive_fails = 0
+                                if consecutive_fails > 2:
+                                    status_text.info("Live stream ended or connection lost. Finalizing session...")
+                                    break
                                 try:
                                     cap.release()
-                                    status_text.info("Refreshing live stream buffer...")
+                                    time.sleep(0.5)
                                     stream_source, _, _ = resolve_youtube_stream_url(selected_video)
                                     cap = open_live_capture(stream_source)
-                                    time.sleep(0.5)
                                     ret, frame = cap.read()
                                     if not ret:
-                                        time.sleep(1.0)
-                                        continue
-                                    consecutive_fails = 0
+                                        break
                                 except Exception:
-                                    time.sleep(1.0)
-                                    continue
+                                    break
                             else:
                                 break
-                        else:
-                            consecutive_fails = 0
-                        
+
                         frame_idx += 1
-                        if not is_yt_source and frame_idx >= total_f:
+                        if frame_idx >= total_f:
+                            status_text.info(f"Reached specified frame limit ({total_f} frames). Finalizing session...")
                             break
 
                         if frame_idx % frame_skip != 0:
