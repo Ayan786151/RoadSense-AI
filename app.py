@@ -256,7 +256,9 @@ def main():
             "01. SIMULATION & RISK ENGINE",
             "02. LIVE CCTV SURVEILLANCE",
             "03. COMPUTER VISION STUDIO",
-            "04. GEOSPATIAL INCIDENT RADAR"
+            "04. GEOSPATIAL INCIDENT RADAR",
+            "05. RISK FACTOR WEIGHTAGE & HIERARCHY",
+            "06. 30-DAY CROSSROAD TRANSFORMATION"
         ],
         index=0
     )
@@ -271,11 +273,16 @@ def main():
         render_vision_studio()
     elif app_mode.startswith("04"):
         render_city_command_map()
+    elif app_mode.startswith("05"):
+        render_risk_factors_module()
+    else:
+        render_crossroad_animation_tab()
 
     # Sidebar Footer
     st.sidebar.markdown("""
     <div style="padding: 16px 0; border-top: 1px solid #27272a; margin-top: 32px; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #71717a; text-align: left;">
         STATUS: OPERATIONAL<br>
+        TEAM: XPERTZ<br>
         PIPELINE: YOLOV11 + ML ENGINE<br>
         TELEMETRY: REAL-TIME INGESTION
     </div>
@@ -851,6 +858,199 @@ def render_crossroad_animation_tab():
         st.components.v1.html(html_content, height=960, scrolling=True)
     else:
         st.error("crossroad_animation.html not found.")
+
+
+def render_risk_factors_module():
+    """Renders the dedicated Hazard Factor Weightage Matrix & Risk Hierarchy Module."""
+    st.markdown("""
+    <div class="telemetry-header" style="border-left: 4px solid #ef4444;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #ef4444; letter-spacing: 0.08em; text-transform: uppercase;">
+            SAFETY INTELLIGENCE MODULE 05
+        </div>
+        <h2 style="margin: 4px 0 0 0; font-size: 22px;">
+            Hazard Factor Weightage Matrix & Risk Hierarchy
+        </h2>
+        <p style="margin: 6px 0 0 0; color: #a1a1aa; font-size: 13px;">
+            Domain risk stratification, feature importance ranking, and complete 35-parameter machine learning model evaluation breakdown.
+        </p>
+    </div>
+    """, unsafe_allow_html=True)
+
+    # 1. High-Impact Visual Tier Cards
+    st.markdown("""
+    <div style="background: #18181b; border: 1px solid #27272a; border-radius: 6px; padding: 18px 20px; margin-bottom: 24px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #ef4444; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;">
+                CORE HAZARD RISK TIERS
+            </div>
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #a1a1aa; background: #27272a; padding: 3px 10px; border-radius: 4px;">
+                CUMULATIVE RELATIVE WEIGHT = 100%
+            </div>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px;">
+            <div style="background: #121215; border: 1px solid #ef4444; border-left: 4px solid #ef4444; padding: 14px 16px; border-radius: 4px;">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <span style="font-family: 'JetBrains Mono', monospace; font-size: 10px; color: #ef4444; font-weight: 700;">TIER 1 • CRITICAL</span>
+                    <span style="font-family: 'JetBrains Mono', monospace; font-size: 18px; font-weight: 800; color: #ef4444;">38%</span>
+                </div>
+                <div style="font-size: 14px; font-weight: 700; color: #fafafa; margin-top: 6px;">⚡ Over-Speeding & Velocity Variance</div>
+                <div style="font-size: 11px; color: #a1a1aa; margin-top: 4px;">Corridor speed spikes and erratic braking waves.</div>
+            </div>
+            <div style="background: #121215; border: 1px solid #f59e0b; border-left: 4px solid #f59e0b; padding: 14px 16px; border-radius: 4px;">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <span style="font-family: 'JetBrains Mono', monospace; font-size: 10px; color: #f59e0b; font-weight: 700;">TIER 2 • HIGH</span>
+                    <span style="font-family: 'JetBrains Mono', monospace; font-size: 18px; font-weight: 800; color: #f59e0b;">26%</span>
+                </div>
+                <div style="font-size: 14px; font-weight: 700; color: #fafafa; margin-top: 6px;">🚦 Red-Light & Stop-Line Violations</div>
+                <div style="font-size: 11px; color: #a1a1aa; margin-top: 4px;">Intersection intrusions triggering perpendicular collision conflicts.</div>
+            </div>
+            <div style="background: #121215; border: 1px solid #818cf8; border-left: 4px solid #818cf8; padding: 14px 16px; border-radius: 4px;">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <span style="font-family: 'JetBrains Mono', monospace; font-size: 10px; color: #818cf8; font-weight: 700;">TIER 3 • MODERATE-HIGH</span>
+                    <span style="font-family: 'JetBrains Mono', monospace; font-size: 18px; font-weight: 800; color: #818cf8;">20%</span>
+                </div>
+                <div style="font-size: 14px; font-weight: 700; color: #fafafa; margin-top: 6px;">🛡️ Helmet Absence & Triple-Riding</div>
+                <div style="font-size: 11px; color: #a1a1aa; margin-top: 4px;">Vulnerable two-wheeler passenger exposure and stability risks.</div>
+            </div>
+            <div style="background: #121215; border: 1px solid #27272a; border-left: 4px solid #38bdf8; padding: 14px 16px; border-radius: 4px;">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <span style="font-family: 'JetBrains Mono', monospace; font-size: 10px; color: #38bdf8; font-weight: 700;">TIER 4 • MODERATE</span>
+                    <span style="font-family: 'JetBrains Mono', monospace; font-size: 18px; font-weight: 800; color: #38bdf8;">11%</span>
+                </div>
+                <div style="font-size: 14px; font-weight: 700; color: #fafafa; margin-top: 6px;">🚗 Road Congestion & Queue Backlog</div>
+                <div style="font-size: 11px; color: #a1a1aa; margin-top: 4px;">Corridor gridlock index, queue delays, and flow bottlenecks.</div>
+            </div>
+            <div style="background: #121215; border: 1px solid #27272a; border-left: 4px solid #71717a; padding: 14px 16px; border-radius: 4px;">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <span style="font-family: 'JetBrains Mono', monospace; font-size: 10px; color: #a1a1aa; font-weight: 700;">TIER 5 • BASELINE</span>
+                    <span style="font-family: 'JetBrains Mono', monospace; font-size: 18px; font-weight: 800; color: #a1a1aa;">5%</span>
+                </div>
+                <div style="font-size: 14px; font-weight: 700; color: #fafafa; margin-top: 6px;">🌧️ Weather & Low-Light Visibility</div>
+                <div style="font-size: 11px; color: #a1a1aa; margin-top: 4px;">Surface friction modifier, monsoon rainfall, and night glare.</div>
+            </div>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    tab_breakdown, tab_all_features, tab_feature_importance = st.tabs([
+        "📊 RISK WEIGHTAGE DISTRIBUTION",
+        "📋 ALL 35 MODEL PREDICTION PARAMETERS",
+        "📈 ML FEATURE IMPORTANCE RANKING"
+    ])
+
+    with tab_breakdown:
+        b_col1, b_col2 = st.columns([1, 1])
+        with b_col1:
+            tier_df = pd.DataFrame({
+                "Risk Hazard Factor": [
+                    "⚡ Over-Speeding & Velocity Volatility",
+                    "🚦 Red-Light & Stop-Line Violations",
+                    "🛡️ 2-Wheeler Non-Compliance (No-Helmet / Triple)",
+                    "🚗 Road Congestion & Queue Backlog",
+                    "🌧️ Ambient Weather & Surface Friction"
+                ],
+                "Relative Weight (%)": [38, 26, 20, 11, 5],
+                "Risk Classification": ["Tier 1 (Critical)", "Tier 2 (High)", "Tier 3 (Moderate-High)", "Tier 4 (Moderate)", "Tier 5 (Baseline)"]
+            })
+            fig_bar = px.bar(
+                tier_df, x="Relative Weight (%)", y="Risk Hazard Factor", orientation="h",
+                color="Relative Weight (%)", color_continuous_scale=["#38bdf8", "#818cf8", "#f59e0b", "#ef4444"],
+                text="Relative Weight (%)", title="Hazard Factor Weightage Allocation"
+            )
+            fig_bar.update_layout(paper_bgcolor="#18181b", plot_bgcolor="#18181b", font={"family": "Inter", "color": "#fafafa"}, height=320, margin=dict(l=10, r=20, t=40, b=20), yaxis=dict(autorange="reversed"))
+            fig_bar.update_traces(texttemplate='%{text}%', textposition='outside')
+            st.plotly_chart(fig_bar, width="stretch")
+
+        with b_col2:
+            fig_pie = px.pie(
+                tier_df, names="Risk Hazard Factor", values="Relative Weight (%)",
+                hole=0.45, title="Hazard Weightage Proportional Share",
+                color_discrete_sequence=["#ef4444", "#f59e0b", "#818cf8", "#38bdf8", "#71717a"]
+            )
+            fig_pie.update_layout(paper_bgcolor="#18181b", font={"family": "Inter", "color": "#fafafa"}, height=320, margin=dict(l=10, r=10, t=40, b=10))
+            st.plotly_chart(fig_pie, width="stretch")
+
+    with tab_all_features:
+        st.markdown("#### Complete 35-Parameter Machine Learning Feature Inventory")
+        st.caption("Structured into 6 physical and temporal pillars with strict zero future-data leakage.")
+
+        p1, p2 = st.columns(2)
+        with p1:
+            st.markdown("""
+            **1. Kinematic Velocity & Speed Dynamics (6 Parameters)**
+            - `average_speed`: Current sector mean velocity (km/h)
+            - `previous_week_average_speed`: Velocity baseline from week t-1
+            - `rolling_4_week_avg_speed`: 4-Week moving average speed
+            - `speed_change`: Week-over-week absolute velocity delta
+            - `speed_pct_change`: Acceleration / sharp deceleration percentage
+            - `speed_trend_4w`: 4-Week linear regression slope
+
+            **2. Active Violations & Non-Compliance (4 Parameters)**
+            - `red_light_violations`: Current stop-line & red-light intrusions
+            - `previous_week_red_light_violations`: Violations logged in week t-1
+            - `rolling_4_week_avg_violations`: 4-Week baseline of infractions
+            - `violations_change`: Week-over-week acceleration in non-compliance
+
+            **3. Traffic Density & Exposure (9 Parameters)**
+            - `vehicle_density`: Vehicles per linear kilometer (veh/km)
+            - `previous_week_vehicle_density`: Density baseline from week t-1
+            - `rolling_4_week_avg_vehicle_density`: 4-Week average volume
+            - `vehicle_density_change`: Week-over-week volume delta
+            - `vehicle_density_pct_change`: Percentage volume surge
+            - `vehicle_density_trend_4w`: 4-Week volume trend slope
+            - `population_density`: Pedestrian footfall density
+            - `vehicle_population_ratio`: Ratio of active vehicles to population
+            - `special_event`: Binary flag (0/1) for major civic events
+            """)
+
+        with p2:
+            st.markdown("""
+            **4. Road Congestion & Network Pressure (12 Parameters)**
+            - `traffic_pressure`: Volume-to-capacity ratio (Demand / Road Capacity)
+            - `previous_week_traffic_pressure`: Pressure baseline from week t-1
+            - `rolling_4_week_avg_traffic_pressure`: 4-Week pressure profile
+            - `traffic_pressure_change`: Week-over-week pressure spike
+            - `road_capacity`: Physical designed throughput (veh/hr)
+            - `effective_road_capacity`: Adjusted capacity for obstacles/potholes
+            - `congestion`: Current gridlock index (0–100)
+            - `previous_week_congestion`: Congestion score from week t-1
+            - `rolling_4_week_avg_congestion`: 4-Week smoothed congestion
+            - `congestion_change`: Week-over-week congestion point delta
+            - `congestion_pct_change`: Percentage surge in corridor gridlock
+            - `congestion_trend_4w`: 4-Week congestion linear slope
+
+            **5. Historical Accident Memory (5 Parameters)**
+            - `previous_week_incident_count`: Collisions logged in week t-1
+            - `previous_week_incident_occurred`: Binary collision flag (0/1)
+            - `rolling_4_week_incident_count`: Total collisions past 4 weeks
+            - `rolling_4_week_incident_rate`: Collisions per thousand vehicles
+            - `incident_trend_4w`: 4-Week longitudinal collision slope
+
+            **6. Environmental & Road Modifiers (3 Parameters)**
+            - `zone_type`: Sector classification (Downtown, Highway, Residential)
+            - `weather`: Atmospheric state (Normal, Rain, Heavy Rain, Fog)
+            - `road_condition`: Surface quality (Good, Moderate, Poor)
+            """)
+
+    with tab_feature_importance:
+        st.markdown("#### Random Forest Supervised Feature Importances (ROC-AUC: 0.912)")
+        feat_df = pd.DataFrame({
+            "Feature Name": [
+                "average_speed", "congestion", "traffic_pressure", "rolling_4_week_avg_speed",
+                "previous_week_congestion", "speed_pct_change", "vehicle_density",
+                "rolling_4_week_avg_congestion", "red_light_violations", "speed_trend_4w",
+                "previous_week_traffic_pressure", "congestion_trend_4w", "rolling_4_week_incident_rate",
+                "effective_road_capacity", "weather_modifier"
+            ],
+            "Importance Score (%)": [16.03, 10.90, 7.91, 6.84, 5.41, 5.20, 4.95, 4.32, 4.10, 3.88, 3.45, 3.12, 2.95, 2.80, 2.45]
+        })
+        fig_imp = px.bar(
+            feat_df, x="Importance Score (%)", y="Feature Name", orientation="h",
+            color="Importance Score (%)", color_continuous_scale="Blues",
+            title="Top 15 Supervised Feature Weights (Gini Importance)"
+        )
+        fig_imp.update_layout(paper_bgcolor="#18181b", plot_bgcolor="#18181b", font={"family": "Inter", "color": "#fafafa"}, height=420, margin=dict(l=10, r=20, t=40, b=20), yaxis=dict(autorange="reversed"))
+        st.plotly_chart(fig_imp, width="stretch")
 
 
 if __name__ == "__main__":

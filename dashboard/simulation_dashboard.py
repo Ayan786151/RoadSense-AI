@@ -156,64 +156,6 @@ def render_simulation_dashboard():
     </div>
     """, unsafe_allow_html=True)
 
-    st.markdown("""
-    <div style="background: #18181b; border: 1px solid #27272a; border-radius: 6px; padding: 18px 20px; margin-bottom: 20px;">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
-            <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #38bdf8; letter-spacing: 0.08em; text-transform: uppercase;">
-                JUDGING CRITERIA • HAZARD FACTOR RISK WEIGHTAGE & RELATIVE IMPACT HIERARCHY
-            </div>
-            <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; color: #a1a1aa; background: #27272a; padding: 2px 8px; border-radius: 3px;">
-                TOTAL WEIGHT = 100%
-            </div>
-        </div>
-        <p style="font-size: 12px; color: #a1a1aa; margin: 4px 0 14px 0;">
-            <b>Why factors have different weightages:</b> Over-speeding and red-light violations carry <b>3.5× more weight than static road congestion</b> because kinetic impact energy scales quadratically (<code style="color: #38bdf8;">E_k = ½mv²</code>). Congestion causes delays but slow-moving vehicles rarely result in fatal crashes.
-        </p>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px;">
-            <div style="background: #121215; border: 1px solid #ef4444; border-left: 4px solid #ef4444; padding: 12px 14px; border-radius: 4px;">
-                <div style="display: flex; justify-content: space-between; align-items: center;">
-                    <span style="font-family: 'JetBrains Mono', monospace; font-size: 10px; color: #ef4444; font-weight: 700;">TIER 1 • CRITICAL</span>
-                    <span style="font-family: 'JetBrains Mono', monospace; font-size: 16px; font-weight: 800; color: #ef4444;">38%</span>
-                </div>
-                <div style="font-size: 13px; font-weight: 700; color: #fafafa; margin-top: 4px;">⚡ Over-Speeding & Velocity Variance</div>
-                <div style="font-size: 11px; color: #a1a1aa; margin-top: 4px;">High speeds & erratic braking; #1 determinant of fatal collision impact energy.</div>
-            </div>
-            <div style="background: #121215; border: 1px solid #f59e0b; border-left: 4px solid #f59e0b; padding: 12px 14px; border-radius: 4px;">
-                <div style="display: flex; justify-content: space-between; align-items: center;">
-                    <span style="font-family: 'JetBrains Mono', monospace; font-size: 10px; color: #f59e0b; font-weight: 700;">TIER 2 • HIGH</span>
-                    <span style="font-family: 'JetBrains Mono', monospace; font-size: 16px; font-weight: 800; color: #f59e0b;">26%</span>
-                </div>
-                <div style="font-size: 13px; font-weight: 700; color: #fafafa; margin-top: 4px;">🚦 Red-Light & Stop-Line Violations</div>
-                <div style="font-size: 11px; color: #a1a1aa; margin-top: 4px;">Intersection intrusions directly triggering severe right-angle T-bone collisions.</div>
-            </div>
-            <div style="background: #121215; border: 1px solid #818cf8; border-left: 4px solid #818cf8; padding: 12px 14px; border-radius: 4px;">
-                <div style="display: flex; justify-content: space-between; align-items: center;">
-                    <span style="font-family: 'JetBrains Mono', monospace; font-size: 10px; color: #818cf8; font-weight: 700;">TIER 3 • MODERATE-HIGH</span>
-                    <span style="font-family: 'JetBrains Mono', monospace; font-size: 16px; font-weight: 800; color: #818cf8;">20%</span>
-                </div>
-                <div style="font-size: 13px; font-weight: 700; color: #fafafa; margin-top: 4px;">🛡️ Helmet Absence & Triple-Riding</div>
-                <div style="font-size: 11px; color: #a1a1aa; margin-top: 4px;">Vulnerable 2-wheeler user exposure (accounts for 70%+ of urban casualties).</div>
-            </div>
-            <div style="background: #121215; border: 1px solid #27272a; border-left: 4px solid #38bdf8; padding: 12px 14px; border-radius: 4px;">
-                <div style="display: flex; justify-content: space-between; align-items: center;">
-                    <span style="font-family: 'JetBrains Mono', monospace; font-size: 10px; color: #38bdf8; font-weight: 700;">TIER 4 • MODERATE</span>
-                    <span style="font-family: 'JetBrains Mono', monospace; font-size: 16px; font-weight: 800; color: #38bdf8;">11%</span>
-                </div>
-                <div style="font-size: 13px; font-weight: 700; color: #fafafa; margin-top: 4px;">🚗 Road Congestion & Queue Backlog</div>
-                <div style="font-size: 11px; color: #a1a1aa; margin-top: 4px;">High commuter delays but low vehicle speeds; lower kinetic crash severity.</div>
-            </div>
-            <div style="background: #121215; border: 1px solid #27272a; border-left: 4px solid #71717a; padding: 12px 14px; border-radius: 4px;">
-                <div style="display: flex; justify-content: space-between; align-items: center;">
-                    <span style="font-family: 'JetBrains Mono', monospace; font-size: 10px; color: #a1a1aa; font-weight: 700;">TIER 5 • BASELINE</span>
-                    <span style="font-family: 'JetBrains Mono', monospace; font-size: 16px; font-weight: 800; color: #a1a1aa;">5%</span>
-                </div>
-                <div style="font-size: 13px; font-weight: 700; color: #fafafa; margin-top: 4px;">🌧️ Weather & Low-Light Visibility</div>
-                <div style="font-size: 11px; color: #a1a1aa; margin-top: 4px;">Frictional surface grip modifier & night glare (enhanced via CLAHE).</div>
-            </div>
-        </div>
-    </div>
-    """, unsafe_allow_html=True)
-
     # Sidebar Controls
     st.sidebar.markdown("### SIMULATION CONTROLS")
     
