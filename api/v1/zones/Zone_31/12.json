@@ -1,155 +1,245 @@
 {
   "zone_id": "Zone_31",
-  "location_name": "Albany Park - Lawrence Ave & Kedzie Ave",
-  "city": "Chicago",
-  "zone_type": "Transit Dining Corridor",
+  "location_name": "Zone_31",
+  "city": "",
+  "zone_type": "Commercial_Downtown",
   "week": 12,
-  "latitude": 41.9687,
-  "longitude": -87.7082,
+  "latitude": 0.0,
+  "longitude": 0.0,
   "risk_analysis": {
-    "predicted_risk_probability": 0.95,
-    "predicted_risk_percentage": 95.0,
-    "risk_label": "CRITICAL RISK",
-    "risk_color": "#ef4444",
-    "risk_delta_vs_prev_week": -65.0,
-    "actual_incident": 1
+    "predicted_risk_probability": 0.5579,
+    "predicted_risk_percentage": 55.79,
+    "risk_label": "HIGH RISK",
+    "risk_color": "#f97316",
+    "risk_delta_vs_prev_week": -2.9045,
+    "actual_incident": 0
   },
   "priority": {
-    "priority_score": 75.75,
-    "priority_rank": 1,
-    "priority_level": "CRITICAL",
+    "priority_score": 55.6062,
+    "priority_rank": 12,
+    "priority_level": "HIGH",
     "components": {
-      "risk_score": 95.0,
-      "population_exposure_score": 65.0,
-      "vehicle_exposure_score": 100.0,
-      "temporal_trend_score": 10.0
+      "risk_score": 55.7882,
+      "population_exposure_score": 57.4969,
+      "vehicle_exposure_score": 77.8212,
+      "temporal_trend_score": 22.3494
     },
     "explanation": {
-      "priority_level": "CRITICAL",
-      "priority_score": 75.75,
-      "assessment": "Corridor in 17th District - Albany Park exhibits critical traffic hazard priority driven by Chicago crash history."
+      "priority_level": "HIGH",
+      "priority_score": 55.6,
+      "top_contributors": [
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "78/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 77.8212
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "72/100",
+          "impact": "HIGH",
+          "detail": "Congestion index at 72 \u2014 severe traffic flow degradation",
+          "weight": 72.39
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "56/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 55.7882
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "57/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 40.2479
+        },
+        {
+          "factor": "Improving Trend",
+          "icon": "\ud83d\udcc9",
+          "value": "22/100",
+          "impact": "POSITIVE",
+          "detail": "Conditions are improving over past 4 weeks",
+          "weight": -22.3494
+        }
+      ],
+      "total_factors": 5,
+      "assessment": "This zone shows significant risk elevation driven by Vehicle Density, Congestion. Proactive intervention should be scheduled within the current planning cycle."
     }
   },
   "telemetry": {
-    "congestion": 100.0,
-    "congestion_delta": 0.0,
-    "average_speed_kmh": 48.3,
-    "speed_delta": 0.0,
-    "vehicle_density": 120.0,
-    "density_delta": 0.0,
-    "population_density": 8500,
-    "red_light_violations": 18,
-    "weather": "CLEAR",
+    "congestion": 72.39,
+    "congestion_delta": 0.15,
+    "average_speed_kmh": 40.07,
+    "speed_delta": -0.04,
+    "vehicle_density": 49.79,
+    "density_delta": -4.07,
+    "population_density": 9364,
+    "red_light_violations": 8,
+    "weather": "Normal",
     "special_event": 0
   },
   "signal_optimization": {
-    "base_green_seconds": 35,
-    "recommended_green_seconds": 72,
-    "change_seconds": 37,
-    "change_percent": 105.7,
+    "base_green_seconds": 40,
+    "recommended_green_seconds": 64,
+    "change_seconds": 24,
+    "change_percent": 60.0,
     "urgency": "CRITICAL",
     "reason": "Severe congestion requires significantly extended green phase",
     "factors": {
-      "congestion_factor": 1.8,
-      "density_factor": 1.4,
-      "speed_factor": 0.82,
+      "congestion_factor": 1.58,
+      "density_factor": 1.2,
+      "speed_factor": 0.85,
       "event_boost": 1.0,
       "weather_boost": 1.0
     }
   },
   "environmental_impact": {
-    "total_co2_kg_per_week": 71274.2,
-    "total_co2_tonnes_per_year": 3706.26,
-    "idle_co2_kg": 62928.0,
-    "moving_co2_kg": 8346.2,
-    "potential_savings_kg_per_week": 18878.4,
-    "potential_savings_tonnes_per_year": 981.68,
-    "trees_equivalent_per_year": 46746,
-    "fuel_saved_liters_per_week": 8172.5,
-    "citizens_impacted": 17000,
-    "optimization_factor_pct": 30.0
+    "total_co2_kg_per_week": 35760.0,
+    "total_co2_tonnes_per_year": 1859.52,
+    "idle_co2_kg": 19895.7,
+    "moving_co2_kg": 15864.3,
+    "potential_savings_kg_per_week": 5419.4,
+    "potential_savings_tonnes_per_year": 281.81,
+    "trees_equivalent_per_year": 13419,
+    "fuel_saved_liters_per_week": 2346.1,
+    "citizens_impacted": 18728,
+    "optimization_factor_pct": 27.2
   },
   "interventions": [
     {
-      "title": "Deploy Speed Calming & Signal Synchronization on Lawrence Ave & Kedzie Ave",
-      "type": "MUNICIPAL_CORRIDOR_CALMING",
-      "priority": "CRITICAL",
-      "target_reduction": "18% collision frequency reduction"
-    },
-    {
-      "title": "Pedestrian Crosswalk High-Visibility Illumination & Turn Signal Audit",
-      "type": "INFRASTRUCTURE_SAFETY",
-      "priority": "HIGH",
-      "target_reduction": "Eliminate left-turn crossing conflicts"
+      "id": "VIOLATION_ENFORCEMENT",
+      "name": "Red-Light Violation Enforcement",
+      "icon": "\ud83d\udea8",
+      "severity": "HIGH",
+      "description": "Elevated red-light violation count indicates intersection compliance failure.",
+      "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
     }
   ],
-  "executive_briefing": "Chicago Police Beat 1711 (Albany Park - Lawrence Ave & Kedzie Ave) logged 9 collisions in week 12. Current risk score is 95%, with upcoming risk forecast at 30%.",
+  "executive_briefing": "Zone_31 shows elevated risk at 56%. Signal optimization recommended \u2014 congestion at 72/100 with speeds averaging 40 km/h. Optimizing signals could save 5419 kg CO2/week, equivalent to 13419 trees/year.",
   "civilian_road_safety_radar": {
     "current_week": {
-      "period": "2024-W12",
-      "date_range": "Mar 18 - Mar 24, 2024",
-      "risk_score": 95.0,
-      "risk_percentage": "95%",
-      "risk_badge": "[HIGH RISK ALERT]",
-      "risk_color": "#ef4444",
-      "description": "Elevated collision activity recorded recently. Extra vigilance recommended.",
-      "crashes_reported": 9,
-      "crashes_rolling4w_avg": 9.5,
-      "dominant_weather": "CLEAR"
+      "week": 12,
+      "risk_score": 55.8,
+      "risk_percentage": "56%",
+      "risk_badge": "HIGH RISK",
+      "risk_color": "#f97316",
+      "description": "Elevated collision activity observed.",
+      "crashes_reported": 0
     },
     "upcoming_week": {
-      "period": "2024-W13",
-      "predicted_risk_probability": 0.3,
-      "predicted_risk_percentage": "30%",
-      "predicted_risk_badge": "[PREDICTED: SAFE CORRIDOR]",
-      "risk_color": "#22c55e",
-      "description": "Forecast models project normal baseline traffic conditions.",
-      "trend_label": "[TREND: COOLING DOWN]",
-      "trend_color": "#22c55e",
-      "trend_percentage_change": "-65%"
+      "predicted_risk_probability": 0.6028,
+      "predicted_risk_percentage": "60%",
+      "predicted_risk_badge": "HIGH RISK",
+      "risk_color": "#f97316",
+      "description": "Forecast models project elevated collision probability.",
+      "trend_label": "[TREND: STABLE]"
     },
     "why_accidents_might_happen": {
       "primary_collision_cause": {
-        "title": "Failing to Yield Right-of-Way",
-        "explanation": "Drivers turning left across oncoming traffic or turning on yellow without checking cross-traffic and crossing pedestrians.",
-        "historical_frequency_pct": 34.2
+        "title": "Congestion Bottleneck & Merge Conflicts",
+        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
       },
       "behavior_factor": {
-        "title": "Tailgating & Sudden Braking",
-        "explanation": "High-density commuter queues cause rear-end collisions when drivers follow too closely during rush hours.",
-        "risk_level": "ELEVATED"
+        "title": "Tailgating & Speed Variance",
+        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
       },
       "street_environment": {
-        "posted_speed_limit_mph": 30.0,
-        "intersection_crossroad_density_pct": 48.5,
-        "title": "30 mph Zone | 49% Crossroad Density",
-        "explanation": "Frequent signalized crossroads combined with multi-lane traffic flow increase conflict points at peak times."
+        "zone_type": "Commercial_Downtown",
+        "average_speed_kmh": 40.07,
+        "congestion_level": 72.39
       }
     },
     "civilian_safety_guide": {
       "for_drivers": {
         "action": "Increase Following Distance",
-        "details": "Maintain at least 3 car lengths of space behind the vehicle ahead. Avoid tailgating near transit stops and expressway exit ramps where sudden stops occur.",
-        "key_tip": "Leave 3-4 car lengths buffer on commercial transit corridors"
+        "details": "Maintain 3 car lengths buffer during peak rush hours."
       },
       "for_pedestrians_and_cyclists": {
-        "action": "Double-Check Turning Cars",
-        "details": "Make eye contact with drivers turning right on red before stepping into crosswalks. Use reflective gear or activate bicycle lights after dusk.",
-        "key_tip": "Never assume a turning driver has seen you at green lights"
+        "action": "Double-Check Turning Vehicles",
+        "details": "Make eye contact with turning drivers at intersections before crossing."
       },
       "peak_danger_windows": {
-        "primary_peak": "4:30 PM - 7:30 PM Weekdays (Evening Commute Congestion)",
-        "secondary_peak": "10:00 PM - 2:00 AM Friday & Saturday (Reduced Lighting & Speed Variance)",
-        "details": "Evening rush hours experience 3x higher collision rates than midday. Exercise maximum patience during heavy congestion."
+        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
+        "details": "Congestion peaks during evening travel windows."
       }
     }
   },
   "raw_metrics": {
     "zone_id": "Zone_31",
-    "chicago_beat": "1711",
     "week": 12,
-    "crashes": 9,
-    "rolling4w_avg": 9.5,
-    "speed_mph": 30.0
+    "zone_type": "Commercial_Downtown",
+    "temporal_profile": "EVENT_SENSITIVE",
+    "population_density": 9364,
+    "road_capacity": 45,
+    "effective_road_capacity": 45.0,
+    "vehicle_density": 49.79,
+    "traffic_pressure": 1.106,
+    "congestion": 72.39,
+    "average_speed": 40.07,
+    "red_light_violations": 8,
+    "weather": "Normal",
+    "road_condition": "Good",
+    "special_event": 0,
+    "incident_count": 0,
+    "incident_occurred": 0,
+    "previous_week_vehicle_density": 53.86,
+    "previous_week_congestion": 72.24,
+    "previous_week_average_speed": 40.11,
+    "previous_week_red_light_violations": 11.0,
+    "previous_week_incident_count": 0.0,
+    "previous_week_incident_occurred": 0.0,
+    "previous_week_traffic_pressure": 1.197,
+    "rolling_4_week_avg_vehicle_density": 53.24,
+    "rolling_4_week_avg_congestion": 75.7,
+    "rolling_4_week_avg_speed": 38.6,
+    "rolling_4_week_avg_violations": 12.75,
+    "rolling_4_week_incident_count": 5.0,
+    "rolling_4_week_incident_rate": 0.75,
+    "rolling_4_week_avg_traffic_pressure": 1.224,
+    "vehicle_density_change": -4.07,
+    "congestion_change": 0.15,
+    "speed_change": -0.04,
+    "violations_change": -3.0,
+    "traffic_pressure_change": -0.091,
+    "incident_count_change": -1.0,
+    "vehicle_density_pct_change": -7.56,
+    "congestion_pct_change": 0.21,
+    "speed_pct_change": -0.1,
+    "vehicle_population_ratio": 5.317,
+    "congestion_trend_4w": -3.229,
+    "vehicle_density_trend_4w": -0.011,
+    "speed_trend_4w": 1.821,
+    "incident_trend_4w": -0.3,
+    "location_name_x": "Alambagh",
+    "city_x": "Lucknow",
+    "latitude_x": 26.813,
+    "longitude_x": 80.918,
+    "car_percentage": 45.3,
+    "motorcycle_percentage": 40.0,
+    "bus_percentage": 7.7,
+    "truck_percentage": 7.0,
+    "moving_vehicle_percentage": 24.2,
+    "slow_vehicle_percentage": 45.5,
+    "stopped_vehicle_percentage": 30.4,
+    "location_name_y": "Albany Park - Lawrence Ave & Kedzie Ave",
+    "city_y": "Chicago",
+    "latitude_y": 41.9687,
+    "longitude_y": -87.7082,
+    "predicted_risk_probability": 0.5579,
+    "risk_score": 55.7882,
+    "population_exposure_score": 57.4969,
+    "vehicle_exposure_score": 77.8212,
+    "temporal_trend_score": 22.3494,
+    "priority_score": 55.6062,
+    "priority_rank": 12,
+    "priority_level": "HIGH",
+    "risk_prob": 0.5579
   }
 }

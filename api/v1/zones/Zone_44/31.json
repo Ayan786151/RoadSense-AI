@@ -1,155 +1,221 @@
 {
   "zone_id": "Zone_44",
-  "location_name": "Roseland - 95th St & Michigan Ave",
-  "city": "Chicago",
-  "zone_type": "Red Line Terminal Gateway",
+  "location_name": "Zone_44",
+  "city": "",
+  "zone_type": "Suburban_LowDensity",
   "week": 31,
-  "latitude": 41.7214,
-  "longitude": -87.62,
+  "latitude": 0.0,
+  "longitude": 0.0,
   "risk_analysis": {
-    "predicted_risk_probability": 0.95,
-    "predicted_risk_percentage": 95.0,
-    "risk_label": "CRITICAL RISK",
-    "risk_color": "#ef4444",
-    "risk_delta_vs_prev_week": -68.4,
+    "predicted_risk_probability": 0.6646,
+    "predicted_risk_percentage": 66.46,
+    "risk_label": "HIGH RISK",
+    "risk_color": "#f97316",
+    "risk_delta_vs_prev_week": 36.312,
     "actual_incident": 1
   },
   "priority": {
-    "priority_score": 75.75,
-    "priority_rank": 1,
-    "priority_level": "CRITICAL",
+    "priority_score": 44.9583,
+    "priority_rank": 32,
+    "priority_level": "MODERATE",
     "components": {
-      "risk_score": 95.0,
-      "population_exposure_score": 65.0,
-      "vehicle_exposure_score": 100.0,
-      "temporal_trend_score": 10.0
+      "risk_score": 66.4612,
+      "population_exposure_score": 16.9481,
+      "vehicle_exposure_score": 24.6721,
+      "temporal_trend_score": 61.3491
     },
     "explanation": {
-      "priority_level": "CRITICAL",
-      "priority_score": 75.75,
-      "assessment": "Corridor in 05th District - Calumet exhibits critical traffic hazard priority driven by Chicago crash history."
+      "priority_level": "MODERATE",
+      "priority_score": 45.0,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "66/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 66.4612
+        },
+        {
+          "factor": "Rising Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "61/100",
+          "impact": "MEDIUM",
+          "detail": "Slight upward trend in congestion over past 4 weeks",
+          "weight": 36.8095
+        }
+      ],
+      "total_factors": 2,
+      "assessment": "This zone has moderate risk levels with contributing factors: Risk Score, Rising Trend. Continue monitoring and schedule review if conditions worsen."
     }
   },
   "telemetry": {
-    "congestion": 100.0,
-    "congestion_delta": 0.0,
-    "average_speed_kmh": 48.3,
-    "speed_delta": 0.0,
-    "vehicle_density": 120.0,
-    "density_delta": 0.0,
-    "population_density": 8500,
-    "red_light_violations": 14,
-    "weather": "CLEAR",
+    "congestion": 24.11,
+    "congestion_delta": 15.97,
+    "average_speed_kmh": 35.99,
+    "speed_delta": -22.56,
+    "vehicle_density": 16.74,
+    "density_delta": 9.26,
+    "population_density": 3720,
+    "red_light_violations": 7,
+    "weather": "Heavy Rain",
     "special_event": 0
   },
   "signal_optimization": {
-    "base_green_seconds": 35,
-    "recommended_green_seconds": 72,
-    "change_seconds": 37,
-    "change_percent": 105.7,
-    "urgency": "CRITICAL",
-    "reason": "Severe congestion requires significantly extended green phase",
+    "base_green_seconds": 25,
+    "recommended_green_seconds": 32,
+    "change_seconds": 7,
+    "change_percent": 28.0,
+    "urgency": "HIGH",
+    "reason": "Elevated traffic density needs extended clearance time",
     "factors": {
-      "congestion_factor": 1.8,
-      "density_factor": 1.4,
-      "speed_factor": 0.82,
+      "congestion_factor": 1.19,
+      "density_factor": 1.07,
+      "speed_factor": 0.87,
       "event_boost": 1.0,
-      "weather_boost": 1.0
+      "weather_boost": 1.18
     }
   },
   "environmental_impact": {
-    "total_co2_kg_per_week": 71274.2,
-    "total_co2_tonnes_per_year": 3706.26,
-    "idle_co2_kg": 62928.0,
-    "moving_co2_kg": 8346.2,
-    "potential_savings_kg_per_week": 18878.4,
-    "potential_savings_tonnes_per_year": 981.68,
-    "trees_equivalent_per_year": 46746,
-    "fuel_saved_liters_per_week": 8172.5,
-    "citizens_impacted": 17000,
-    "optimization_factor_pct": 30.0
+    "total_co2_kg_per_week": 15395.7,
+    "total_co2_tonnes_per_year": 800.58,
+    "idle_co2_kg": 2227.9,
+    "moving_co2_kg": 13167.8,
+    "potential_savings_kg_per_week": 499.3,
+    "potential_savings_tonnes_per_year": 25.96,
+    "trees_equivalent_per_year": 1236,
+    "fuel_saved_liters_per_week": 216.1,
+    "citizens_impacted": 7440,
+    "optimization_factor_pct": 22.4
   },
   "interventions": [
     {
-      "title": "Deploy Speed Calming & Signal Synchronization on 95th St & Michigan Ave",
-      "type": "MUNICIPAL_CORRIDOR_CALMING",
-      "priority": "CRITICAL",
-      "target_reduction": "18% collision frequency reduction"
-    },
-    {
-      "title": "Pedestrian Crosswalk High-Visibility Illumination & Turn Signal Audit",
-      "type": "INFRASTRUCTURE_SAFETY",
-      "priority": "MODERATE",
-      "target_reduction": "Eliminate left-turn crossing conflicts"
+      "id": "ROAD_MAINTENANCE",
+      "name": "Road Maintenance Inspection",
+      "icon": "\ud83d\udee3\ufe0f",
+      "severity": "MEDIUM",
+      "description": "Deteriorated road surface combined with elevated risk indicates infrastructure maintenance need.",
+      "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
     }
   ],
-  "executive_briefing": "Chicago Police Beat 511 (Roseland - 95th St & Michigan Ave) logged 7 collisions in week 31. Current risk score is 95%, with upcoming risk forecast at 27%.",
+  "executive_briefing": "Zone_44 is in a critical safety state with 66% incident risk. Continue routine monitoring. Optimizing signals could save 499 kg CO2/week, equivalent to 1236 trees/year.",
   "civilian_road_safety_radar": {
     "current_week": {
-      "period": "2024-W31",
-      "date_range": "Jul 29 - Aug 04, 2024",
-      "risk_score": 95.0,
-      "risk_percentage": "95%",
-      "risk_badge": "[HIGH RISK ALERT]",
-      "risk_color": "#ef4444",
-      "description": "Elevated collision activity recorded recently. Extra vigilance recommended.",
-      "crashes_reported": 7,
-      "crashes_rolling4w_avg": 11.75,
-      "dominant_weather": "CLEAR"
+      "week": 31,
+      "risk_score": 66.5,
+      "risk_percentage": "66%",
+      "risk_badge": "HIGH RISK",
+      "risk_color": "#f97316",
+      "description": "Elevated collision activity observed.",
+      "crashes_reported": 0
     },
     "upcoming_week": {
-      "period": "2024-W32",
-      "predicted_risk_probability": 0.266,
-      "predicted_risk_percentage": "27%",
-      "predicted_risk_badge": "[PREDICTED: SAFE CORRIDOR]",
-      "risk_color": "#22c55e",
-      "description": "Forecast models project normal baseline traffic conditions.",
-      "trend_label": "[TREND: COOLING DOWN]",
-      "trend_color": "#22c55e",
-      "trend_percentage_change": "-68%"
+      "predicted_risk_probability": 0.8264,
+      "predicted_risk_percentage": "83%",
+      "predicted_risk_badge": "CRITICAL RISK",
+      "risk_color": "#ef4444",
+      "description": "Forecast models project elevated collision probability.",
+      "trend_label": "[TREND: INCREASING HAZARD]"
     },
     "why_accidents_might_happen": {
       "primary_collision_cause": {
-        "title": "Failing to Yield Right-of-Way",
-        "explanation": "Drivers turning left across oncoming traffic or turning on yellow without checking cross-traffic and crossing pedestrians.",
-        "historical_frequency_pct": 34.2
+        "title": "Congestion Bottleneck & Merge Conflicts",
+        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
       },
       "behavior_factor": {
-        "title": "Tailgating & Sudden Braking",
-        "explanation": "High-density commuter queues cause rear-end collisions when drivers follow too closely during rush hours.",
-        "risk_level": "ELEVATED"
+        "title": "Tailgating & Speed Variance",
+        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
       },
       "street_environment": {
-        "posted_speed_limit_mph": 30.0,
-        "intersection_crossroad_density_pct": 48.5,
-        "title": "30 mph Zone | 49% Crossroad Density",
-        "explanation": "Frequent signalized crossroads combined with multi-lane traffic flow increase conflict points at peak times."
+        "zone_type": "Suburban_LowDensity",
+        "average_speed_kmh": 35.99,
+        "congestion_level": 24.11
       }
     },
     "civilian_safety_guide": {
       "for_drivers": {
         "action": "Increase Following Distance",
-        "details": "Maintain at least 3 car lengths of space behind the vehicle ahead. Avoid tailgating near transit stops and expressway exit ramps where sudden stops occur.",
-        "key_tip": "Leave 3-4 car lengths buffer on commercial transit corridors"
+        "details": "Maintain 3 car lengths buffer during peak rush hours."
       },
       "for_pedestrians_and_cyclists": {
-        "action": "Double-Check Turning Cars",
-        "details": "Make eye contact with drivers turning right on red before stepping into crosswalks. Use reflective gear or activate bicycle lights after dusk.",
-        "key_tip": "Never assume a turning driver has seen you at green lights"
+        "action": "Double-Check Turning Vehicles",
+        "details": "Make eye contact with turning drivers at intersections before crossing."
       },
       "peak_danger_windows": {
-        "primary_peak": "4:30 PM - 7:30 PM Weekdays (Evening Commute Congestion)",
-        "secondary_peak": "10:00 PM - 2:00 AM Friday & Saturday (Reduced Lighting & Speed Variance)",
-        "details": "Evening rush hours experience 3x higher collision rates than midday. Exercise maximum patience during heavy congestion."
+        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
+        "details": "Congestion peaks during evening travel windows."
       }
     }
   },
   "raw_metrics": {
     "zone_id": "Zone_44",
-    "chicago_beat": "511",
     "week": 31,
-    "crashes": 7,
-    "rolling4w_avg": 11.75,
-    "speed_mph": 30.0
+    "zone_type": "Suburban_LowDensity",
+    "temporal_profile": "STABLE",
+    "population_density": 3720,
+    "road_capacity": 70,
+    "effective_road_capacity": 40.95,
+    "vehicle_density": 16.74,
+    "traffic_pressure": 0.409,
+    "congestion": 24.11,
+    "average_speed": 35.99,
+    "red_light_violations": 7,
+    "weather": "Heavy Rain",
+    "road_condition": "Poor",
+    "special_event": 0,
+    "incident_count": 1,
+    "incident_occurred": 1,
+    "previous_week_vehicle_density": 7.48,
+    "previous_week_congestion": 8.14,
+    "previous_week_average_speed": 58.55,
+    "previous_week_red_light_violations": 1.0,
+    "previous_week_incident_count": 0.0,
+    "previous_week_incident_occurred": 0.0,
+    "previous_week_traffic_pressure": 0.129,
+    "rolling_4_week_avg_vehicle_density": 7.21,
+    "rolling_4_week_avg_congestion": 7.28,
+    "rolling_4_week_avg_speed": 60.88,
+    "rolling_4_week_avg_violations": 1.0,
+    "rolling_4_week_incident_count": 0.0,
+    "rolling_4_week_incident_rate": 0.0,
+    "rolling_4_week_avg_traffic_pressure": 0.116,
+    "vehicle_density_change": 9.26,
+    "congestion_change": 15.97,
+    "speed_change": -22.56,
+    "violations_change": 6.0,
+    "traffic_pressure_change": 0.28,
+    "incident_count_change": 0.0,
+    "vehicle_density_pct_change": 123.8,
+    "congestion_pct_change": 196.19,
+    "speed_pct_change": -38.53,
+    "vehicle_population_ratio": 4.5,
+    "congestion_trend_4w": 0.468,
+    "vehicle_density_trend_4w": -0.314,
+    "speed_trend_4w": -1.237,
+    "incident_trend_4w": 0.0,
+    "location_name_x": "Porur",
+    "city_x": "Chennai",
+    "latitude_x": 13.0358,
+    "longitude_x": 80.156,
+    "car_percentage": 46.4,
+    "motorcycle_percentage": 39.3,
+    "bus_percentage": 7.8,
+    "truck_percentage": 6.5,
+    "moving_vehicle_percentage": 87.3,
+    "slow_vehicle_percentage": 14.4,
+    "stopped_vehicle_percentage": 0.0,
+    "location_name_y": "Roseland - 95th St & Michigan Ave",
+    "city_y": "Chicago",
+    "latitude_y": 41.7214,
+    "longitude_y": -87.62,
+    "predicted_risk_probability": 0.6646,
+    "risk_score": 66.4612,
+    "population_exposure_score": 16.9481,
+    "vehicle_exposure_score": 24.6721,
+    "temporal_trend_score": 61.3491,
+    "priority_score": 44.9583,
+    "priority_rank": 32,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.6646
   }
 }

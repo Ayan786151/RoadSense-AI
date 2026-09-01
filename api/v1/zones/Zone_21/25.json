@@ -1,155 +1,229 @@
 {
   "zone_id": "Zone_21",
-  "location_name": "Bridgeport - 31st St & Halsted St",
-  "city": "Chicago",
-  "zone_type": "Freight & Mixed Commercial Hub",
+  "location_name": "Zone_21",
+  "city": "",
+  "zone_type": "Residential",
   "week": 25,
-  "latitude": 41.8378,
-  "longitude": -87.6461,
+  "latitude": 0.0,
+  "longitude": 0.0,
   "risk_analysis": {
-    "predicted_risk_probability": 0.95,
-    "predicted_risk_percentage": 95.0,
-    "risk_label": "CRITICAL RISK",
-    "risk_color": "#ef4444",
-    "risk_delta_vs_prev_week": -64.6,
-    "actual_incident": 1
+    "predicted_risk_probability": 0.4565,
+    "predicted_risk_percentage": 45.65,
+    "risk_label": "MODERATE RISK",
+    "risk_color": "#eab308",
+    "risk_delta_vs_prev_week": 7.2143,
+    "actual_incident": 0
   },
   "priority": {
-    "priority_score": 75.75,
-    "priority_rank": 1,
-    "priority_level": "CRITICAL",
+    "priority_score": 48.635,
+    "priority_rank": 23,
+    "priority_level": "MODERATE",
     "components": {
-      "risk_score": 95.0,
-      "population_exposure_score": 65.0,
-      "vehicle_exposure_score": 100.0,
-      "temporal_trend_score": 10.0
+      "risk_score": 45.6496,
+      "population_exposure_score": 73.8846,
+      "vehicle_exposure_score": 59.5201,
+      "temporal_trend_score": 0.0
     },
     "explanation": {
-      "priority_level": "CRITICAL",
-      "priority_score": 75.75,
-      "assessment": "Corridor in 09th District - Deering exhibits critical traffic hazard priority driven by Chicago crash history."
+      "priority_level": "MODERATE",
+      "priority_score": 48.6,
+      "top_contributors": [
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "74/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 11645 residents/km\u00b2",
+          "weight": 73.8846
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "46/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 45.6496
+        },
+        {
+          "factor": "Improving Trend",
+          "icon": "\ud83d\udcc9",
+          "value": "0/100",
+          "impact": "POSITIVE",
+          "detail": "Conditions are improving over past 4 weeks",
+          "weight": -0.0
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone has moderate risk levels with contributing factors: Population Exposure, Risk Score. Continue monitoring and schedule review if conditions worsen."
     }
   },
   "telemetry": {
-    "congestion": 100.0,
-    "congestion_delta": 0.0,
-    "average_speed_kmh": 48.3,
-    "speed_delta": 0.0,
-    "vehicle_density": 120.0,
-    "density_delta": 0.0,
-    "population_density": 8500,
-    "red_light_violations": 12,
-    "weather": "CLEAR",
+    "congestion": 35.75,
+    "congestion_delta": 9.8,
+    "average_speed_kmh": 59.29,
+    "speed_delta": -0.46,
+    "vehicle_density": 46.18,
+    "density_delta": 4.28,
+    "population_density": 11645,
+    "red_light_violations": 5,
+    "weather": "Normal",
     "special_event": 0
   },
   "signal_optimization": {
-    "base_green_seconds": 35,
-    "recommended_green_seconds": 72,
-    "change_seconds": 37,
-    "change_percent": 105.7,
-    "urgency": "CRITICAL",
-    "reason": "Severe congestion requires significantly extended green phase",
+    "base_green_seconds": 30,
+    "recommended_green_seconds": 35,
+    "change_seconds": 5,
+    "change_percent": 16.7,
+    "urgency": "MODERATE",
+    "reason": "Slight adjustment for current conditions",
     "factors": {
-      "congestion_factor": 1.8,
-      "density_factor": 1.4,
-      "speed_factor": 0.82,
+      "congestion_factor": 1.29,
+      "density_factor": 1.18,
+      "speed_factor": 0.78,
       "event_boost": 1.0,
       "weather_boost": 1.0
     }
   },
   "environmental_impact": {
-    "total_co2_kg_per_week": 71274.2,
-    "total_co2_tonnes_per_year": 3706.26,
-    "idle_co2_kg": 62928.0,
-    "moving_co2_kg": 8346.2,
-    "potential_savings_kg_per_week": 18878.4,
-    "potential_savings_tonnes_per_year": 981.68,
-    "trees_equivalent_per_year": 46746,
-    "fuel_saved_liters_per_week": 8172.5,
-    "citizens_impacted": 17000,
-    "optimization_factor_pct": 30.0
+    "total_co2_kg_per_week": 54710.9,
+    "total_co2_tonnes_per_year": 2844.97,
+    "idle_co2_kg": 9113.2,
+    "moving_co2_kg": 45597.8,
+    "potential_savings_kg_per_week": 2148.4,
+    "potential_savings_tonnes_per_year": 111.72,
+    "trees_equivalent_per_year": 5319,
+    "fuel_saved_liters_per_week": 930.1,
+    "citizens_impacted": 23290,
+    "optimization_factor_pct": 23.6
   },
   "interventions": [
     {
-      "title": "Deploy Speed Calming & Signal Synchronization on 31st St & Halsted St",
-      "type": "MUNICIPAL_CORRIDOR_CALMING",
-      "priority": "CRITICAL",
-      "target_reduction": "18% collision frequency reduction"
-    },
-    {
-      "title": "Pedestrian Crosswalk High-Visibility Illumination & Turn Signal Audit",
-      "type": "INFRASTRUCTURE_SAFETY",
-      "priority": "HIGH",
-      "target_reduction": "Eliminate left-turn crossing conflicts"
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "No specific risk indicators triggered.",
+      "action": "Continue routine monitoring."
     }
   ],
-  "executive_briefing": "Chicago Police Beat 911 (Bridgeport - 31st St & Halsted St) logged 6 collisions in week 25. Current risk score is 95%, with upcoming risk forecast at 30%.",
+  "executive_briefing": "Zone_21 shows elevated risk at 46%. Continue routine monitoring. Optimizing signals could save 2148 kg CO2/week, equivalent to 5319 trees/year.",
   "civilian_road_safety_radar": {
     "current_week": {
-      "period": "2024-W25",
-      "date_range": "Jun 17 - Jun 23, 2024",
-      "risk_score": 95.0,
-      "risk_percentage": "95%",
-      "risk_badge": "[HIGH RISK ALERT]",
-      "risk_color": "#ef4444",
-      "description": "Elevated collision activity recorded recently. Extra vigilance recommended.",
-      "crashes_reported": 6,
-      "crashes_rolling4w_avg": 10.25,
-      "dominant_weather": "CLEAR"
+      "week": 25,
+      "risk_score": 45.6,
+      "risk_percentage": "46%",
+      "risk_badge": "MODERATE RISK",
+      "risk_color": "#eab308",
+      "description": "Corridor operating within normal baseline.",
+      "crashes_reported": 0
     },
     "upcoming_week": {
-      "period": "2024-W26",
-      "predicted_risk_probability": 0.304,
-      "predicted_risk_percentage": "30%",
-      "predicted_risk_badge": "[PREDICTED: SAFE CORRIDOR]",
-      "risk_color": "#22c55e",
+      "predicted_risk_probability": 0.3548,
+      "predicted_risk_percentage": "35%",
+      "predicted_risk_badge": "MODERATE RISK",
+      "risk_color": "#eab308",
       "description": "Forecast models project normal baseline traffic conditions.",
-      "trend_label": "[TREND: COOLING DOWN]",
-      "trend_color": "#22c55e",
-      "trend_percentage_change": "-65%"
+      "trend_label": "[TREND: COOLING DOWN]"
     },
     "why_accidents_might_happen": {
       "primary_collision_cause": {
-        "title": "Failing to Yield Right-of-Way",
-        "explanation": "Drivers turning left across oncoming traffic or turning on yellow without checking cross-traffic and crossing pedestrians.",
-        "historical_frequency_pct": 34.2
+        "title": "Congestion Bottleneck & Merge Conflicts",
+        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
       },
       "behavior_factor": {
-        "title": "Tailgating & Sudden Braking",
-        "explanation": "High-density commuter queues cause rear-end collisions when drivers follow too closely during rush hours.",
-        "risk_level": "ELEVATED"
+        "title": "Tailgating & Speed Variance",
+        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
       },
       "street_environment": {
-        "posted_speed_limit_mph": 30.0,
-        "intersection_crossroad_density_pct": 48.5,
-        "title": "30 mph Zone | 49% Crossroad Density",
-        "explanation": "Frequent signalized crossroads combined with multi-lane traffic flow increase conflict points at peak times."
+        "zone_type": "Residential",
+        "average_speed_kmh": 59.29,
+        "congestion_level": 35.75
       }
     },
     "civilian_safety_guide": {
       "for_drivers": {
         "action": "Increase Following Distance",
-        "details": "Maintain at least 3 car lengths of space behind the vehicle ahead. Avoid tailgating near transit stops and expressway exit ramps where sudden stops occur.",
-        "key_tip": "Leave 3-4 car lengths buffer on commercial transit corridors"
+        "details": "Maintain 3 car lengths buffer during peak rush hours."
       },
       "for_pedestrians_and_cyclists": {
-        "action": "Double-Check Turning Cars",
-        "details": "Make eye contact with drivers turning right on red before stepping into crosswalks. Use reflective gear or activate bicycle lights after dusk.",
-        "key_tip": "Never assume a turning driver has seen you at green lights"
+        "action": "Double-Check Turning Vehicles",
+        "details": "Make eye contact with turning drivers at intersections before crossing."
       },
       "peak_danger_windows": {
-        "primary_peak": "4:30 PM - 7:30 PM Weekdays (Evening Commute Congestion)",
-        "secondary_peak": "10:00 PM - 2:00 AM Friday & Saturday (Reduced Lighting & Speed Variance)",
-        "details": "Evening rush hours experience 3x higher collision rates than midday. Exercise maximum patience during heavy congestion."
+        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
+        "details": "Congestion peaks during evening travel windows."
       }
     }
   },
   "raw_metrics": {
     "zone_id": "Zone_21",
-    "chicago_beat": "911",
     "week": 25,
-    "crashes": 6,
-    "rolling4w_avg": 10.25,
-    "speed_mph": 30.0
+    "zone_type": "Residential",
+    "temporal_profile": "GRADUAL_DETERIORATION",
+    "population_density": 11645,
+    "road_capacity": 74,
+    "effective_road_capacity": 74.0,
+    "vehicle_density": 46.18,
+    "traffic_pressure": 0.624,
+    "congestion": 35.75,
+    "average_speed": 59.29,
+    "red_light_violations": 5,
+    "weather": "Normal",
+    "road_condition": "Good",
+    "special_event": 0,
+    "incident_count": 0,
+    "incident_occurred": 0,
+    "previous_week_vehicle_density": 41.9,
+    "previous_week_congestion": 25.95,
+    "previous_week_average_speed": 59.75,
+    "previous_week_red_light_violations": 2.0,
+    "previous_week_incident_count": 0.0,
+    "previous_week_incident_occurred": 0.0,
+    "previous_week_traffic_pressure": 0.566,
+    "rolling_4_week_avg_vehicle_density": 49.91,
+    "rolling_4_week_avg_congestion": 39.95,
+    "rolling_4_week_avg_speed": 52.61,
+    "rolling_4_week_avg_violations": 4.75,
+    "rolling_4_week_incident_count": 0.0,
+    "rolling_4_week_incident_rate": 0.0,
+    "rolling_4_week_avg_traffic_pressure": 0.714,
+    "vehicle_density_change": 4.28,
+    "congestion_change": 9.8,
+    "speed_change": -0.46,
+    "violations_change": 3.0,
+    "traffic_pressure_change": 0.058,
+    "incident_count_change": 0.0,
+    "vehicle_density_pct_change": 10.21,
+    "congestion_pct_change": 37.76,
+    "speed_pct_change": -0.77,
+    "vehicle_population_ratio": 3.966,
+    "congestion_trend_4w": -7.524,
+    "vehicle_density_trend_4w": -5.245,
+    "speed_trend_4w": 2.955,
+    "incident_trend_4w": 0.0,
+    "location_name_x": "Janakpuri",
+    "city_x": "Delhi",
+    "latitude_x": 28.6219,
+    "longitude_x": 77.0878,
+    "car_percentage": 32.2,
+    "motorcycle_percentage": 60.0,
+    "bus_percentage": 5.8,
+    "truck_percentage": 2.0,
+    "moving_vehicle_percentage": 56.3,
+    "slow_vehicle_percentage": 26.4,
+    "stopped_vehicle_percentage": 17.4,
+    "location_name_y": "Bridgeport - 31st St & Halsted St",
+    "city_y": "Chicago",
+    "latitude_y": 41.8378,
+    "longitude_y": -87.6461,
+    "predicted_risk_probability": 0.4565,
+    "risk_score": 45.6496,
+    "population_exposure_score": 73.8846,
+    "vehicle_exposure_score": 59.5201,
+    "temporal_trend_score": 0.0,
+    "priority_score": 48.635,
+    "priority_rank": 23,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.4565
   }
 }

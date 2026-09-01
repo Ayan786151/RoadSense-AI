@@ -1,155 +1,213 @@
 {
   "zone_id": "Zone_45",
-  "location_name": "Pullman - 111th St & Cottage Grove Ave",
-  "city": "Chicago",
-  "zone_type": "Historic National Monument Hub",
+  "location_name": "Zone_45",
+  "city": "",
+  "zone_type": "Highway_Junction",
   "week": 4,
-  "latitude": 41.6926,
-  "longitude": -87.6046,
+  "latitude": 0.0,
+  "longitude": 0.0,
   "risk_analysis": {
-    "predicted_risk_probability": 0.95,
-    "predicted_risk_percentage": 95.0,
-    "risk_label": "CRITICAL RISK",
-    "risk_color": "#ef4444",
-    "risk_delta_vs_prev_week": -68.6,
-    "actual_incident": 1
+    "predicted_risk_probability": null,
+    "predicted_risk_percentage": null,
+    "risk_label": "BASELINE WARMUP",
+    "risk_color": "#71717a",
+    "risk_delta_vs_prev_week": null,
+    "actual_incident": 0
   },
   "priority": {
-    "priority_score": 69.51,
-    "priority_rank": 1,
-    "priority_level": "HIGH",
+    "priority_score": 13.9387,
+    "priority_rank": 38,
+    "priority_level": "LOW",
     "components": {
-      "risk_score": 95.0,
-      "population_exposure_score": 65.0,
-      "vehicle_exposure_score": 68.8,
-      "temporal_trend_score": 10.0
+      "risk_score": 0.0,
+      "population_exposure_score": 11.6819,
+      "vehicle_exposure_score": 17.5913,
+      "temporal_trend_score": 50.0
     },
     "explanation": {
-      "priority_level": "HIGH",
-      "priority_score": 69.51,
-      "assessment": "Corridor in 05th District - Calumet exhibits high traffic hazard priority driven by Chicago crash history."
+      "priority_level": "LOW",
+      "priority_score": 13.9,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "0/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 0.0
+        }
+      ],
+      "total_factors": 1,
+      "assessment": "This zone is currently within acceptable safety parameters. Routine monitoring is sufficient."
     }
   },
   "telemetry": {
-    "congestion": 81.12,
-    "congestion_delta": 0.0,
-    "average_speed_kmh": 48.3,
-    "speed_delta": 0.0,
-    "vehicle_density": 82.5,
-    "density_delta": 0.0,
-    "population_density": 8500,
+    "congestion": 8.5,
+    "congestion_delta": -4.07,
+    "average_speed_kmh": 66.3,
+    "speed_delta": 2.97,
+    "vehicle_density": 10.94,
+    "density_delta": -7.86,
+    "population_density": 2987,
     "red_light_violations": 6,
-    "weather": "RAIN",
+    "weather": "Normal",
     "special_event": 0
   },
   "signal_optimization": {
-    "base_green_seconds": 35,
-    "recommended_green_seconds": 62,
-    "change_seconds": 27,
-    "change_percent": 77.1,
-    "urgency": "CRITICAL",
-    "reason": "Severe congestion requires significantly extended green phase",
+    "base_green_seconds": 50,
+    "recommended_green_seconds": 41,
+    "change_seconds": -9,
+    "change_percent": -18.0,
+    "urgency": "OPTIMIZE",
+    "reason": "Low traffic \u2014 reduce green time to improve cross-traffic flow",
     "factors": {
-      "congestion_factor": 1.65,
-      "density_factor": 1.33,
-      "speed_factor": 0.82,
+      "congestion_factor": 1.07,
+      "density_factor": 1.04,
+      "speed_factor": 0.75,
       "event_boost": 1.0,
       "weather_boost": 1.0
     }
   },
   "environmental_impact": {
-    "total_co2_kg_per_week": 58605.4,
-    "total_co2_tonnes_per_year": 3047.48,
-    "idle_co2_kg": 36944.3,
-    "moving_co2_kg": 21661.1,
-    "potential_savings_kg_per_week": 10386.0,
-    "potential_savings_tonnes_per_year": 540.07,
-    "trees_equivalent_per_year": 25717,
-    "fuel_saved_liters_per_week": 4496.1,
-    "citizens_impacted": 17000,
-    "optimization_factor_pct": 28.1
+    "total_co2_kg_per_week": 17715.6,
+    "total_co2_tonnes_per_year": 921.21,
+    "idle_co2_kg": 513.3,
+    "moving_co2_kg": 17202.3,
+    "potential_savings_kg_per_week": 107.0,
+    "potential_savings_tonnes_per_year": 5.57,
+    "trees_equivalent_per_year": 265,
+    "fuel_saved_liters_per_week": 46.3,
+    "citizens_impacted": 5974,
+    "optimization_factor_pct": 20.9
   },
   "interventions": [
     {
-      "title": "Deploy Speed Calming & Signal Synchronization on 111th St & Cottage Grove Ave",
-      "type": "MUNICIPAL_CORRIDOR_CALMING",
-      "priority": "HIGH",
-      "target_reduction": "18% collision frequency reduction"
-    },
-    {
-      "title": "Pedestrian Crosswalk High-Visibility Illumination & Turn Signal Audit",
-      "type": "INFRASTRUCTURE_SAFETY",
-      "priority": "MODERATE",
-      "target_reduction": "Eliminate left-turn crossing conflicts"
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
     }
   ],
-  "executive_briefing": "Chicago Police Beat 531 (Pullman - 111th St & Cottage Grove Ave) logged 3 collisions in week 4. Current risk score is 95%, with upcoming risk forecast at 26%.",
+  "executive_briefing": "Zone_45 is within safe operating parameters (0% risk). Continue routine monitoring. Optimizing signals could save 107 kg CO2/week, equivalent to 265 trees/year.",
   "civilian_road_safety_radar": {
     "current_week": {
-      "period": "2024-W04",
-      "date_range": "Jan 22 - Jan 28, 2024",
-      "risk_score": 95.0,
-      "risk_percentage": "95%",
-      "risk_badge": "[HIGH RISK ALERT]",
-      "risk_color": "#ef4444",
-      "description": "Elevated collision activity recorded recently. Extra vigilance recommended.",
-      "crashes_reported": 3,
-      "crashes_rolling4w_avg": 4.25,
-      "dominant_weather": "RAIN"
+      "week": 4,
+      "risk_score": null,
+      "risk_percentage": "N/A",
+      "risk_badge": "BASELINE WARMUP",
+      "risk_color": "#71717a",
+      "description": "Corridor operating within normal baseline.",
+      "crashes_reported": 0
     },
     "upcoming_week": {
-      "period": "2024-W05",
-      "predicted_risk_probability": 0.264,
-      "predicted_risk_percentage": "26%",
-      "predicted_risk_badge": "[PREDICTED: SAFE CORRIDOR]",
+      "predicted_risk_probability": 0.1846,
+      "predicted_risk_percentage": "18%",
+      "predicted_risk_badge": "LOW RISK",
       "risk_color": "#22c55e",
       "description": "Forecast models project normal baseline traffic conditions.",
-      "trend_label": "[TREND: COOLING DOWN]",
-      "trend_color": "#22c55e",
-      "trend_percentage_change": "-69%"
+      "trend_label": "[TREND: STABLE]"
     },
     "why_accidents_might_happen": {
       "primary_collision_cause": {
-        "title": "Failing to Yield Right-of-Way",
-        "explanation": "Drivers turning left across oncoming traffic or turning on yellow without checking cross-traffic and crossing pedestrians.",
-        "historical_frequency_pct": 34.2
+        "title": "Congestion Bottleneck & Merge Conflicts",
+        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
       },
       "behavior_factor": {
-        "title": "Tailgating & Sudden Braking",
-        "explanation": "High-density commuter queues cause rear-end collisions when drivers follow too closely during rush hours.",
-        "risk_level": "ELEVATED"
+        "title": "Tailgating & Speed Variance",
+        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
       },
       "street_environment": {
-        "posted_speed_limit_mph": 30.0,
-        "intersection_crossroad_density_pct": 48.5,
-        "title": "30 mph Zone | 49% Crossroad Density",
-        "explanation": "Frequent signalized crossroads combined with multi-lane traffic flow increase conflict points at peak times."
+        "zone_type": "Highway_Junction",
+        "average_speed_kmh": 66.3,
+        "congestion_level": 8.5
       }
     },
     "civilian_safety_guide": {
       "for_drivers": {
         "action": "Increase Following Distance",
-        "details": "Maintain at least 3 car lengths of space behind the vehicle ahead. Avoid tailgating near transit stops and expressway exit ramps where sudden stops occur.",
-        "key_tip": "Leave 3-4 car lengths buffer on commercial transit corridors"
+        "details": "Maintain 3 car lengths buffer during peak rush hours."
       },
       "for_pedestrians_and_cyclists": {
-        "action": "Double-Check Turning Cars",
-        "details": "Make eye contact with drivers turning right on red before stepping into crosswalks. Use reflective gear or activate bicycle lights after dusk.",
-        "key_tip": "Never assume a turning driver has seen you at green lights"
+        "action": "Double-Check Turning Vehicles",
+        "details": "Make eye contact with turning drivers at intersections before crossing."
       },
       "peak_danger_windows": {
-        "primary_peak": "4:30 PM - 7:30 PM Weekdays (Evening Commute Congestion)",
-        "secondary_peak": "10:00 PM - 2:00 AM Friday & Saturday (Reduced Lighting & Speed Variance)",
-        "details": "Evening rush hours experience 3x higher collision rates than midday. Exercise maximum patience during heavy congestion."
+        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
+        "details": "Congestion peaks during evening travel windows."
       }
     }
   },
   "raw_metrics": {
     "zone_id": "Zone_45",
-    "chicago_beat": "531",
     "week": 4,
-    "crashes": 3,
-    "rolling4w_avg": 4.25,
-    "speed_mph": 30.0
+    "zone_type": "Highway_Junction",
+    "temporal_profile": "GRADUAL_DETERIORATION",
+    "population_density": 2987,
+    "road_capacity": 87,
+    "effective_road_capacity": 87.0,
+    "vehicle_density": 10.94,
+    "traffic_pressure": 0.126,
+    "congestion": 8.5,
+    "average_speed": 66.3,
+    "red_light_violations": 6,
+    "weather": "Normal",
+    "road_condition": "Good",
+    "special_event": 0,
+    "incident_count": 0,
+    "incident_occurred": 0,
+    "previous_week_vehicle_density": 18.8,
+    "previous_week_congestion": 12.57,
+    "previous_week_average_speed": 63.33,
+    "previous_week_red_light_violations": 7.0,
+    "previous_week_incident_count": 0.0,
+    "previous_week_incident_occurred": 0.0,
+    "previous_week_traffic_pressure": 0.216,
+    "rolling_4_week_avg_vehicle_density": null,
+    "rolling_4_week_avg_congestion": null,
+    "rolling_4_week_avg_speed": null,
+    "rolling_4_week_avg_violations": null,
+    "rolling_4_week_incident_count": null,
+    "rolling_4_week_incident_rate": null,
+    "rolling_4_week_avg_traffic_pressure": null,
+    "vehicle_density_change": -7.86,
+    "congestion_change": -4.07,
+    "speed_change": 2.97,
+    "violations_change": -1.0,
+    "traffic_pressure_change": -0.09,
+    "incident_count_change": 0.0,
+    "vehicle_density_pct_change": -41.81,
+    "congestion_pct_change": -32.38,
+    "speed_pct_change": 4.69,
+    "vehicle_population_ratio": 3.663,
+    "congestion_trend_4w": null,
+    "vehicle_density_trend_4w": null,
+    "speed_trend_4w": null,
+    "incident_trend_4w": null,
+    "location_name_x": "Mylapore",
+    "city_x": "Chennai",
+    "latitude_x": 13.0339,
+    "longitude_x": 80.2676,
+    "car_percentage": 49.0,
+    "motorcycle_percentage": 41.3,
+    "bus_percentage": 7.1,
+    "truck_percentage": 2.6,
+    "moving_vehicle_percentage": 77.0,
+    "slow_vehicle_percentage": 15.1,
+    "stopped_vehicle_percentage": 7.9,
+    "location_name_y": "Pullman - 111th St & Cottage Grove Ave",
+    "city_y": "Chicago",
+    "latitude_y": 41.6926,
+    "longitude_y": -87.6046,
+    "predicted_risk_probability": null,
+    "risk_score": 0.0,
+    "population_exposure_score": 11.6819,
+    "vehicle_exposure_score": 17.5913,
+    "temporal_trend_score": 50.0,
+    "priority_score": 13.9387,
+    "priority_rank": 38,
+    "priority_level": "LOW",
+    "risk_prob": null
   }
 }

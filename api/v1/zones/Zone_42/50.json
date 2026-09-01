@@ -1,155 +1,245 @@
 {
   "zone_id": "Zone_42",
-  "location_name": "New City - 47th St & Ashland Ave",
-  "city": "Chicago",
-  "zone_type": "Historic Commercial Crossroad",
+  "location_name": "Zone_42",
+  "city": "",
+  "zone_type": "University_District",
   "week": 50,
-  "latitude": 41.8085,
-  "longitude": -87.6648,
+  "latitude": 0.0,
+  "longitude": 0.0,
   "risk_analysis": {
-    "predicted_risk_probability": 0.6625,
-    "predicted_risk_percentage": 66.25,
-    "risk_label": "CRITICAL RISK",
-    "risk_color": "#ef4444",
-    "risk_delta_vs_prev_week": -40.15,
+    "predicted_risk_probability": 0.6741,
+    "predicted_risk_percentage": 67.41,
+    "risk_label": "HIGH RISK",
+    "risk_color": "#f97316",
+    "risk_delta_vs_prev_week": 18.5202,
     "actual_incident": 1
   },
   "priority": {
-    "priority_score": 53.83,
-    "priority_rank": 1,
-    "priority_level": "HIGH",
+    "priority_score": 54.397,
+    "priority_rank": 14,
+    "priority_level": "MODERATE",
     "components": {
-      "risk_score": 66.25,
-      "population_exposure_score": 65.0,
-      "vehicle_exposure_score": 47.9,
-      "temporal_trend_score": 10.0
+      "risk_score": 67.4143,
+      "population_exposure_score": 43.164,
+      "vehicle_exposure_score": 57.6483,
+      "temporal_trend_score": 34.0709
     },
     "explanation": {
-      "priority_level": "HIGH",
-      "priority_score": 53.83,
-      "assessment": "Corridor in 09th District - Deering exhibits high traffic hazard priority driven by Chicago crash history."
+      "priority_level": "MODERATE",
+      "priority_score": 54.4,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "67/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 67.4143
+        },
+        {
+          "factor": "Violation Count",
+          "icon": "\ud83d\udea8",
+          "value": "10",
+          "impact": "HIGH",
+          "detail": "10 red-light violations recorded \u2014 intersection safety concern",
+          "weight": 50
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "47/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate congestion at 47",
+          "weight": 32.886
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "43/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 30.2148
+        }
+      ],
+      "total_factors": 4,
+      "assessment": "This zone has moderate risk levels with contributing factors: Violation Count, Risk Score. Continue monitoring and schedule review if conditions worsen."
     }
   },
   "telemetry": {
-    "congestion": 79.88,
-    "congestion_delta": 0.0,
-    "average_speed_kmh": 48.3,
-    "speed_delta": 0.0,
-    "vehicle_density": 57.5,
-    "density_delta": 0.0,
-    "population_density": 8500,
-    "red_light_violations": 14,
-    "weather": "CLEAR",
-    "special_event": 0
+    "congestion": 46.98,
+    "congestion_delta": 22.77,
+    "average_speed_kmh": 47.34,
+    "speed_delta": -12.39,
+    "vehicle_density": 43.34,
+    "density_delta": 15.1,
+    "population_density": 7369,
+    "red_light_violations": 10,
+    "weather": "Normal",
+    "special_event": 1
   },
   "signal_optimization": {
     "base_green_seconds": 35,
-    "recommended_green_seconds": 57,
-    "change_seconds": 22,
-    "change_percent": 62.9,
+    "recommended_green_seconds": 53,
+    "change_seconds": 18,
+    "change_percent": 51.4,
     "urgency": "CRITICAL",
     "reason": "Severe congestion requires significantly extended green phase",
     "factors": {
-      "congestion_factor": 1.64,
-      "density_factor": 1.23,
+      "congestion_factor": 1.38,
+      "density_factor": 1.17,
       "speed_factor": 0.82,
-      "event_boost": 1.0,
+      "event_boost": 1.15,
       "weather_boost": 1.0
     }
   },
   "environmental_impact": {
-    "total_co2_kg_per_week": 41449.3,
-    "total_co2_tonnes_per_year": 2155.36,
-    "idle_co2_kg": 25352.3,
-    "moving_co2_kg": 16096.9,
-    "potential_savings_kg_per_week": 7095.5,
-    "potential_savings_tonnes_per_year": 368.97,
-    "trees_equivalent_per_year": 17569,
-    "fuel_saved_liters_per_week": 3071.6,
-    "citizens_impacted": 17000,
-    "optimization_factor_pct": 28.0
+    "total_co2_kg_per_week": 42568.5,
+    "total_co2_tonnes_per_year": 2213.56,
+    "idle_co2_kg": 11239.3,
+    "moving_co2_kg": 31329.2,
+    "potential_savings_kg_per_week": 2775.9,
+    "potential_savings_tonnes_per_year": 144.35,
+    "trees_equivalent_per_year": 6873,
+    "fuel_saved_liters_per_week": 1201.7,
+    "citizens_impacted": 14738,
+    "optimization_factor_pct": 24.7
   },
   "interventions": [
     {
-      "title": "Deploy Speed Calming & Signal Synchronization on 47th St & Ashland Ave",
-      "type": "MUNICIPAL_CORRIDOR_CALMING",
-      "priority": "HIGH",
-      "target_reduction": "18% collision frequency reduction"
+      "id": "VIOLATION_ENFORCEMENT",
+      "name": "Red-Light Violation Enforcement",
+      "icon": "\ud83d\udea8",
+      "severity": "HIGH",
+      "description": "Elevated red-light violation count indicates intersection compliance failure.",
+      "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
     },
     {
-      "title": "Pedestrian Crosswalk High-Visibility Illumination & Turn Signal Audit",
-      "type": "INFRASTRUCTURE_SAFETY",
-      "priority": "HIGH",
-      "target_reduction": "Eliminate left-turn crossing conflicts"
+      "id": "EVENT_TRAFFIC_PLAN",
+      "name": "Special Event Traffic Plan",
+      "icon": "\ud83c\udfaa",
+      "severity": "MEDIUM",
+      "description": "Active special event generating additional traffic demand.",
+      "action": "Activate event traffic management plan. Deploy traffic marshals and temporary signage."
     }
   ],
-  "executive_briefing": "Chicago Police Beat 933 (New City - 47th St & Ashland Ave) logged 7 collisions in week 50. Current risk score is 66%, with upcoming risk forecast at 26%.",
+  "executive_briefing": "Zone_42 is in a critical safety state with 67% incident risk. Enforcement focus needed \u2014 10 red-light violations recorded. Optimizing signals could save 2776 kg CO2/week, equivalent to 6873 trees/year.",
   "civilian_road_safety_radar": {
     "current_week": {
-      "period": "2024-W50",
-      "date_range": "Dec 09 - Dec 15, 2024",
-      "risk_score": 66.3,
-      "risk_percentage": "66%",
-      "risk_badge": "[HIGH RISK ALERT]",
-      "risk_color": "#ef4444",
-      "description": "Elevated collision activity recorded recently. Extra vigilance recommended.",
-      "crashes_reported": 7,
-      "crashes_rolling4w_avg": 1.75,
-      "dominant_weather": "CLEAR"
+      "week": 50,
+      "risk_score": 67.4,
+      "risk_percentage": "67%",
+      "risk_badge": "HIGH RISK",
+      "risk_color": "#f97316",
+      "description": "Elevated collision activity observed.",
+      "crashes_reported": 0
     },
     "upcoming_week": {
-      "period": "2024-W51",
-      "predicted_risk_probability": 0.261,
-      "predicted_risk_percentage": "26%",
-      "predicted_risk_badge": "[PREDICTED: SAFE CORRIDOR]",
-      "risk_color": "#22c55e",
+      "predicted_risk_probability": 0.3969,
+      "predicted_risk_percentage": "40%",
+      "predicted_risk_badge": "MODERATE RISK",
+      "risk_color": "#eab308",
       "description": "Forecast models project normal baseline traffic conditions.",
-      "trend_label": "[TREND: COOLING DOWN]",
-      "trend_color": "#22c55e",
-      "trend_percentage_change": "-40%"
+      "trend_label": "[TREND: COOLING DOWN]"
     },
     "why_accidents_might_happen": {
       "primary_collision_cause": {
-        "title": "Failing to Yield Right-of-Way",
-        "explanation": "Drivers turning left across oncoming traffic or turning on yellow without checking cross-traffic and crossing pedestrians.",
-        "historical_frequency_pct": 34.2
+        "title": "Congestion Bottleneck & Merge Conflicts",
+        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
       },
       "behavior_factor": {
-        "title": "Tailgating & Sudden Braking",
-        "explanation": "High-density commuter queues cause rear-end collisions when drivers follow too closely during rush hours.",
-        "risk_level": "ELEVATED"
+        "title": "Tailgating & Speed Variance",
+        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
       },
       "street_environment": {
-        "posted_speed_limit_mph": 30.0,
-        "intersection_crossroad_density_pct": 48.5,
-        "title": "30 mph Zone | 49% Crossroad Density",
-        "explanation": "Frequent signalized crossroads combined with multi-lane traffic flow increase conflict points at peak times."
+        "zone_type": "University_District",
+        "average_speed_kmh": 47.34,
+        "congestion_level": 46.98
       }
     },
     "civilian_safety_guide": {
       "for_drivers": {
         "action": "Increase Following Distance",
-        "details": "Maintain at least 3 car lengths of space behind the vehicle ahead. Avoid tailgating near transit stops and expressway exit ramps where sudden stops occur.",
-        "key_tip": "Leave 3-4 car lengths buffer on commercial transit corridors"
+        "details": "Maintain 3 car lengths buffer during peak rush hours."
       },
       "for_pedestrians_and_cyclists": {
-        "action": "Double-Check Turning Cars",
-        "details": "Make eye contact with drivers turning right on red before stepping into crosswalks. Use reflective gear or activate bicycle lights after dusk.",
-        "key_tip": "Never assume a turning driver has seen you at green lights"
+        "action": "Double-Check Turning Vehicles",
+        "details": "Make eye contact with turning drivers at intersections before crossing."
       },
       "peak_danger_windows": {
-        "primary_peak": "4:30 PM - 7:30 PM Weekdays (Evening Commute Congestion)",
-        "secondary_peak": "10:00 PM - 2:00 AM Friday & Saturday (Reduced Lighting & Speed Variance)",
-        "details": "Evening rush hours experience 3x higher collision rates than midday. Exercise maximum patience during heavy congestion."
+        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
+        "details": "Congestion peaks during evening travel windows."
       }
     }
   },
   "raw_metrics": {
     "zone_id": "Zone_42",
-    "chicago_beat": "933",
     "week": 50,
-    "crashes": 7,
-    "rolling4w_avg": 1.75,
-    "speed_mph": 30.0
+    "zone_type": "University_District",
+    "temporal_profile": "PERIODIC_SPIKE",
+    "population_density": 7369,
+    "road_capacity": 58,
+    "effective_road_capacity": 52.2,
+    "vehicle_density": 43.34,
+    "traffic_pressure": 0.83,
+    "congestion": 46.98,
+    "average_speed": 47.34,
+    "red_light_violations": 10,
+    "weather": "Normal",
+    "road_condition": "Good",
+    "special_event": 1,
+    "incident_count": 1,
+    "incident_occurred": 1,
+    "previous_week_vehicle_density": 28.24,
+    "previous_week_congestion": 24.21,
+    "previous_week_average_speed": 59.73,
+    "previous_week_red_light_violations": 2.0,
+    "previous_week_incident_count": 1.0,
+    "previous_week_incident_occurred": 1.0,
+    "previous_week_traffic_pressure": 0.487,
+    "rolling_4_week_avg_vehicle_density": 32.95,
+    "rolling_4_week_avg_congestion": 27.51,
+    "rolling_4_week_avg_speed": 58.41,
+    "rolling_4_week_avg_violations": 2.25,
+    "rolling_4_week_incident_count": 2.0,
+    "rolling_4_week_incident_rate": 0.5,
+    "rolling_4_week_avg_traffic_pressure": 0.568,
+    "vehicle_density_change": 15.1,
+    "congestion_change": 22.77,
+    "speed_change": -12.39,
+    "violations_change": 8.0,
+    "traffic_pressure_change": 0.343,
+    "incident_count_change": 1.0,
+    "vehicle_density_pct_change": 53.47,
+    "congestion_pct_change": 94.05,
+    "speed_pct_change": -20.74,
+    "vehicle_population_ratio": 5.881,
+    "congestion_trend_4w": -2.407,
+    "vehicle_density_trend_4w": -2.088,
+    "speed_trend_4w": 1.236,
+    "incident_trend_4w": 0.2,
+    "location_name_x": "Guindy",
+    "city_x": "Chennai",
+    "latitude_x": 13.0067,
+    "longitude_x": 80.2206,
+    "car_percentage": 41.0,
+    "motorcycle_percentage": 35.9,
+    "bus_percentage": 16.4,
+    "truck_percentage": 6.7,
+    "moving_vehicle_percentage": 49.1,
+    "slow_vehicle_percentage": 44.9,
+    "stopped_vehicle_percentage": 6.1,
+    "location_name_y": "New City - 47th St & Ashland Ave",
+    "city_y": "Chicago",
+    "latitude_y": 41.8085,
+    "longitude_y": -87.6648,
+    "predicted_risk_probability": 0.6741,
+    "risk_score": 67.4143,
+    "population_exposure_score": 43.164,
+    "vehicle_exposure_score": 57.6483,
+    "temporal_trend_score": 34.0709,
+    "priority_score": 54.397,
+    "priority_rank": 14,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.6741
   }
 }

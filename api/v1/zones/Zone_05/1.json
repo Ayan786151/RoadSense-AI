@@ -1,155 +1,221 @@
 {
   "zone_id": "Zone_05",
-  "location_name": "Wrigleyville - N Clark St & W Addison St",
-  "city": "Chicago",
-  "zone_type": "Sports Stadium Transit Hub",
+  "location_name": "Zone_05",
+  "city": "",
+  "zone_type": "Commercial_Downtown",
   "week": 1,
-  "latitude": 41.9474,
-  "longitude": -87.6559,
+  "latitude": 0.0,
+  "longitude": 0.0,
   "risk_analysis": {
-    "predicted_risk_probability": 0.95,
-    "predicted_risk_percentage": 95.0,
-    "risk_label": "CRITICAL RISK",
-    "risk_color": "#ef4444",
-    "risk_delta_vs_prev_week": -69.0,
-    "actual_incident": 1
+    "predicted_risk_probability": null,
+    "predicted_risk_percentage": null,
+    "risk_label": "BASELINE WARMUP",
+    "risk_color": "#71717a",
+    "risk_delta_vs_prev_week": null,
+    "actual_incident": 0
   },
   "priority": {
-    "priority_score": 71.59,
-    "priority_rank": 1,
-    "priority_level": "CRITICAL",
+    "priority_score": 29.5163,
+    "priority_rank": 25,
+    "priority_level": "LOW",
     "components": {
-      "risk_score": 95.0,
-      "population_exposure_score": 65.0,
-      "vehicle_exposure_score": 79.2,
-      "temporal_trend_score": 10.0
+      "risk_score": 0.0,
+      "population_exposure_score": 50.1616,
+      "vehicle_exposure_score": 47.3792,
+      "temporal_trend_score": 50.0
     },
     "explanation": {
-      "priority_level": "CRITICAL",
-      "priority_score": 71.59,
-      "assessment": "Corridor in 19th District - Town Hall exhibits critical traffic hazard priority driven by Chicago crash history."
+      "priority_level": "LOW",
+      "priority_score": 29.5,
+      "top_contributors": [
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "50/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 35.1132
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "0/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 0.0
+        }
+      ],
+      "total_factors": 2,
+      "assessment": "This zone is currently within acceptable safety parameters. Routine monitoring is sufficient."
     }
   },
   "telemetry": {
-    "congestion": 100.0,
-    "congestion_delta": 0.0,
-    "average_speed_kmh": 48.3,
-    "speed_delta": 0.0,
-    "vehicle_density": 95.0,
-    "density_delta": 0.0,
-    "population_density": 8500,
-    "red_light_violations": 20,
-    "weather": "CLEAR",
-    "special_event": 1
+    "congestion": 18.67,
+    "congestion_delta": null,
+    "average_speed_kmh": 63.03,
+    "speed_delta": null,
+    "vehicle_density": 28.38,
+    "density_delta": null,
+    "population_density": 8343,
+    "red_light_violations": 3,
+    "weather": "Normal",
+    "special_event": 0
   },
   "signal_optimization": {
-    "base_green_seconds": 35,
-    "recommended_green_seconds": 81,
-    "change_seconds": 46,
-    "change_percent": 131.4,
-    "urgency": "CRITICAL",
-    "reason": "Severe congestion requires significantly extended green phase",
+    "base_green_seconds": 40,
+    "recommended_green_seconds": 39,
+    "change_seconds": -1,
+    "change_percent": -2.5,
+    "urgency": "NOMINAL",
+    "reason": "Current default timing is adequate",
     "factors": {
-      "congestion_factor": 1.8,
-      "density_factor": 1.38,
-      "speed_factor": 0.82,
-      "event_boost": 1.15,
+      "congestion_factor": 1.15,
+      "density_factor": 1.11,
+      "speed_factor": 0.76,
+      "event_boost": 1.0,
       "weather_boost": 1.0
     }
   },
   "environmental_impact": {
-    "total_co2_kg_per_week": 56425.4,
-    "total_co2_tonnes_per_year": 2934.12,
-    "idle_co2_kg": 49818.0,
-    "moving_co2_kg": 6607.4,
-    "potential_savings_kg_per_week": 14945.4,
-    "potential_savings_tonnes_per_year": 777.16,
-    "trees_equivalent_per_year": 37007,
-    "fuel_saved_liters_per_week": 6469.9,
-    "citizens_impacted": 17000,
-    "optimization_factor_pct": 30.0
+    "total_co2_kg_per_week": 40633.8,
+    "total_co2_tonnes_per_year": 2112.96,
+    "idle_co2_kg": 2924.8,
+    "moving_co2_kg": 37709.0,
+    "potential_savings_kg_per_week": 639.6,
+    "potential_savings_tonnes_per_year": 33.26,
+    "trees_equivalent_per_year": 1583,
+    "fuel_saved_liters_per_week": 276.9,
+    "citizens_impacted": 16686,
+    "optimization_factor_pct": 21.9
   },
   "interventions": [
     {
-      "title": "Deploy Speed Calming & Signal Synchronization on N Clark St & W Addison St",
-      "type": "MUNICIPAL_CORRIDOR_CALMING",
-      "priority": "CRITICAL",
-      "target_reduction": "18% collision frequency reduction"
-    },
-    {
-      "title": "Pedestrian Crosswalk High-Visibility Illumination & Turn Signal Audit",
-      "type": "INFRASTRUCTURE_SAFETY",
-      "priority": "HIGH",
-      "target_reduction": "Eliminate left-turn crossing conflicts"
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
     }
   ],
-  "executive_briefing": "Chicago Police Beat 1924 (Wrigleyville - N Clark St & W Addison St) logged 10 collisions in week 1. Current risk score is 95%, with upcoming risk forecast at 26%.",
+  "executive_briefing": "Zone_05 is within safe operating parameters (0% risk). Continue routine monitoring. Optimizing signals could save 640 kg CO2/week, equivalent to 1583 trees/year.",
   "civilian_road_safety_radar": {
     "current_week": {
-      "period": "2024-W01",
-      "date_range": "Jan 01 - Jan 07, 2024",
-      "risk_score": 95.0,
-      "risk_percentage": "95%",
-      "risk_badge": "[HIGH RISK ALERT]",
-      "risk_color": "#ef4444",
-      "description": "Elevated collision activity recorded recently. Extra vigilance recommended.",
-      "crashes_reported": 10,
-      "crashes_rolling4w_avg": 5.5,
-      "dominant_weather": "CLEAR"
+      "week": 1,
+      "risk_score": null,
+      "risk_percentage": "N/A",
+      "risk_badge": "BASELINE WARMUP",
+      "risk_color": "#71717a",
+      "description": "Corridor operating within normal baseline.",
+      "crashes_reported": 0
     },
     "upcoming_week": {
-      "period": "2024-W02",
-      "predicted_risk_probability": 0.26,
-      "predicted_risk_percentage": "26%",
-      "predicted_risk_badge": "[PREDICTED: SAFE CORRIDOR]",
-      "risk_color": "#22c55e",
+      "predicted_risk_probability": null,
+      "predicted_risk_percentage": "N/A",
+      "predicted_risk_badge": "BASELINE WARMUP",
+      "risk_color": "#71717a",
       "description": "Forecast models project normal baseline traffic conditions.",
-      "trend_label": "[TREND: COOLING DOWN]",
-      "trend_color": "#22c55e",
-      "trend_percentage_change": "-69%"
+      "trend_label": "[TREND: STABLE]"
     },
     "why_accidents_might_happen": {
       "primary_collision_cause": {
-        "title": "Failing to Yield Right-of-Way",
-        "explanation": "Drivers turning left across oncoming traffic or turning on yellow without checking cross-traffic and crossing pedestrians.",
-        "historical_frequency_pct": 34.2
+        "title": "Congestion Bottleneck & Merge Conflicts",
+        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
       },
       "behavior_factor": {
-        "title": "Tailgating & Sudden Braking",
-        "explanation": "High-density commuter queues cause rear-end collisions when drivers follow too closely during rush hours.",
-        "risk_level": "ELEVATED"
+        "title": "Tailgating & Speed Variance",
+        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
       },
       "street_environment": {
-        "posted_speed_limit_mph": 30.0,
-        "intersection_crossroad_density_pct": 48.5,
-        "title": "30 mph Zone | 49% Crossroad Density",
-        "explanation": "Frequent signalized crossroads combined with multi-lane traffic flow increase conflict points at peak times."
+        "zone_type": "Commercial_Downtown",
+        "average_speed_kmh": 63.03,
+        "congestion_level": 18.67
       }
     },
     "civilian_safety_guide": {
       "for_drivers": {
         "action": "Increase Following Distance",
-        "details": "Maintain at least 3 car lengths of space behind the vehicle ahead. Avoid tailgating near transit stops and expressway exit ramps where sudden stops occur.",
-        "key_tip": "Leave 3-4 car lengths buffer on commercial transit corridors"
+        "details": "Maintain 3 car lengths buffer during peak rush hours."
       },
       "for_pedestrians_and_cyclists": {
-        "action": "Double-Check Turning Cars",
-        "details": "Make eye contact with drivers turning right on red before stepping into crosswalks. Use reflective gear or activate bicycle lights after dusk.",
-        "key_tip": "Never assume a turning driver has seen you at green lights"
+        "action": "Double-Check Turning Vehicles",
+        "details": "Make eye contact with turning drivers at intersections before crossing."
       },
       "peak_danger_windows": {
-        "primary_peak": "4:30 PM - 7:30 PM Weekdays (Evening Commute Congestion)",
-        "secondary_peak": "10:00 PM - 2:00 AM Friday & Saturday (Reduced Lighting & Speed Variance)",
-        "details": "Evening rush hours experience 3x higher collision rates than midday. Exercise maximum patience during heavy congestion."
+        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
+        "details": "Congestion peaks during evening travel windows."
       }
     }
   },
   "raw_metrics": {
     "zone_id": "Zone_05",
-    "chicago_beat": "1924",
     "week": 1,
-    "crashes": 10,
-    "rolling4w_avg": 5.5,
-    "speed_mph": 30.0
+    "zone_type": "Commercial_Downtown",
+    "temporal_profile": "GRADUAL_IMPROVEMENT",
+    "population_density": 8343,
+    "road_capacity": 66,
+    "effective_road_capacity": 66.0,
+    "vehicle_density": 28.38,
+    "traffic_pressure": 0.43,
+    "congestion": 18.67,
+    "average_speed": 63.03,
+    "red_light_violations": 3,
+    "weather": "Normal",
+    "road_condition": "Good",
+    "special_event": 0,
+    "incident_count": 0,
+    "incident_occurred": 0,
+    "previous_week_vehicle_density": null,
+    "previous_week_congestion": null,
+    "previous_week_average_speed": null,
+    "previous_week_red_light_violations": null,
+    "previous_week_incident_count": null,
+    "previous_week_incident_occurred": null,
+    "previous_week_traffic_pressure": null,
+    "rolling_4_week_avg_vehicle_density": null,
+    "rolling_4_week_avg_congestion": null,
+    "rolling_4_week_avg_speed": null,
+    "rolling_4_week_avg_violations": null,
+    "rolling_4_week_incident_count": null,
+    "rolling_4_week_incident_rate": null,
+    "rolling_4_week_avg_traffic_pressure": null,
+    "vehicle_density_change": null,
+    "congestion_change": null,
+    "speed_change": null,
+    "violations_change": null,
+    "traffic_pressure_change": null,
+    "incident_count_change": null,
+    "vehicle_density_pct_change": null,
+    "congestion_pct_change": null,
+    "speed_pct_change": null,
+    "vehicle_population_ratio": 3.402,
+    "congestion_trend_4w": null,
+    "vehicle_density_trend_4w": null,
+    "speed_trend_4w": null,
+    "incident_trend_4w": null,
+    "location_name_x": "Powai",
+    "city_x": "Mumbai",
+    "latitude_x": 19.1176,
+    "longitude_x": 72.906,
+    "car_percentage": 44.2,
+    "motorcycle_percentage": 39.6,
+    "bus_percentage": 10.3,
+    "truck_percentage": 5.8,
+    "moving_vehicle_percentage": 81.1,
+    "slow_vehicle_percentage": 10.9,
+    "stopped_vehicle_percentage": 8.0,
+    "location_name_y": "Wrigleyville - N Clark St & W Addison St",
+    "city_y": "Chicago",
+    "latitude_y": 41.9474,
+    "longitude_y": -87.6559,
+    "predicted_risk_probability": null,
+    "risk_score": 0.0,
+    "population_exposure_score": 50.1616,
+    "vehicle_exposure_score": 47.3792,
+    "temporal_trend_score": 50.0,
+    "priority_score": 29.5163,
+    "priority_rank": 25,
+    "priority_level": "LOW",
+    "risk_prob": null
   }
 }

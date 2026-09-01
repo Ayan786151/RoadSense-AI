@@ -1,155 +1,237 @@
 {
   "zone_id": "Zone_07",
-  "location_name": "Wicker Park - Milwaukee Ave & Division St",
-  "city": "Chicago",
-  "zone_type": "Six-Way Complex Junction",
+  "location_name": "Zone_07",
+  "city": "",
+  "zone_type": "University_District",
   "week": 22,
-  "latitude": 41.9038,
-  "longitude": -87.6775,
+  "latitude": 0.0,
+  "longitude": 0.0,
   "risk_analysis": {
-    "predicted_risk_probability": 0.95,
-    "predicted_risk_percentage": 95.0,
-    "risk_label": "CRITICAL RISK",
-    "risk_color": "#ef4444",
-    "risk_delta_vs_prev_week": -67.1,
-    "actual_incident": 1
+    "predicted_risk_probability": 0.48,
+    "predicted_risk_percentage": 48.0,
+    "risk_label": "MODERATE RISK",
+    "risk_color": "#eab308",
+    "risk_delta_vs_prev_week": -13.9242,
+    "actual_incident": 0
   },
   "priority": {
-    "priority_score": 74.51,
-    "priority_rank": 1,
-    "priority_level": "CRITICAL",
+    "priority_score": 43.3585,
+    "priority_rank": 27,
+    "priority_level": "MODERATE",
     "components": {
-      "risk_score": 95.0,
-      "population_exposure_score": 65.0,
-      "vehicle_exposure_score": 93.8,
-      "temporal_trend_score": 10.0
+      "risk_score": 47.9997,
+      "population_exposure_score": 42.4312,
+      "vehicle_exposure_score": 47.5837,
+      "temporal_trend_score": 26.8939
     },
     "explanation": {
-      "priority_level": "CRITICAL",
-      "priority_score": 74.51,
-      "assessment": "Corridor in 14th District - Shakespeare exhibits critical traffic hazard priority driven by Chicago crash history."
+      "priority_level": "MODERATE",
+      "priority_score": 43.4,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "48/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 47.9997
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "49/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate congestion at 49",
+          "weight": 34.391
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "42/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 29.7018
+        },
+        {
+          "factor": "Improving Trend",
+          "icon": "\ud83d\udcc9",
+          "value": "27/100",
+          "impact": "POSITIVE",
+          "detail": "Conditions are improving over past 4 weeks",
+          "weight": -26.8939
+        }
+      ],
+      "total_factors": 4,
+      "assessment": "This zone has moderate risk levels with contributing factors: Risk Score, Congestion. Continue monitoring and schedule review if conditions worsen."
     }
   },
   "telemetry": {
-    "congestion": 100.0,
-    "congestion_delta": 0.0,
-    "average_speed_kmh": 48.3,
-    "speed_delta": 0.0,
-    "vehicle_density": 112.5,
-    "density_delta": 0.0,
-    "population_density": 8500,
-    "red_light_violations": 6,
-    "weather": "CLEAR",
+    "congestion": 49.13,
+    "congestion_delta": -8.89,
+    "average_speed_kmh": 49.94,
+    "speed_delta": -0.06,
+    "vehicle_density": 34.92,
+    "density_delta": -5.42,
+    "population_density": 7267,
+    "red_light_violations": 5,
+    "weather": "Normal",
     "special_event": 0
   },
   "signal_optimization": {
     "base_green_seconds": 35,
-    "recommended_green_seconds": 72,
-    "change_seconds": 37,
-    "change_percent": 105.7,
-    "urgency": "CRITICAL",
-    "reason": "Severe congestion requires significantly extended green phase",
+    "recommended_green_seconds": 45,
+    "change_seconds": 10,
+    "change_percent": 28.6,
+    "urgency": "HIGH",
+    "reason": "Elevated traffic density needs extended clearance time",
     "factors": {
-      "congestion_factor": 1.8,
-      "density_factor": 1.4,
-      "speed_factor": 0.82,
+      "congestion_factor": 1.39,
+      "density_factor": 1.14,
+      "speed_factor": 0.81,
       "event_boost": 1.0,
       "weather_boost": 1.0
     }
   },
   "environmental_impact": {
-    "total_co2_kg_per_week": 66819.6,
-    "total_co2_tonnes_per_year": 3474.62,
-    "idle_co2_kg": 58995.0,
-    "moving_co2_kg": 7824.6,
-    "potential_savings_kg_per_week": 17698.5,
-    "potential_savings_tonnes_per_year": 920.32,
-    "trees_equivalent_per_year": 43824,
-    "fuel_saved_liters_per_week": 7661.7,
-    "citizens_impacted": 17000,
-    "optimization_factor_pct": 30.0
+    "total_co2_kg_per_week": 35019.4,
+    "total_co2_tonnes_per_year": 1821.01,
+    "idle_co2_kg": 9470.2,
+    "moving_co2_kg": 25549.2,
+    "potential_savings_kg_per_week": 2359.3,
+    "potential_savings_tonnes_per_year": 122.68,
+    "trees_equivalent_per_year": 5842,
+    "fuel_saved_liters_per_week": 1021.3,
+    "citizens_impacted": 14534,
+    "optimization_factor_pct": 24.9
   },
   "interventions": [
     {
-      "title": "Deploy Speed Calming & Signal Synchronization on Milwaukee Ave & Division St",
-      "type": "MUNICIPAL_CORRIDOR_CALMING",
-      "priority": "CRITICAL",
-      "target_reduction": "18% collision frequency reduction"
-    },
-    {
-      "title": "Pedestrian Crosswalk High-Visibility Illumination & Turn Signal Audit",
-      "type": "INFRASTRUCTURE_SAFETY",
-      "priority": "MODERATE",
-      "target_reduction": "Eliminate left-turn crossing conflicts"
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "No specific risk indicators triggered.",
+      "action": "Continue routine monitoring."
     }
   ],
-  "executive_briefing": "Chicago Police Beat 1424 (Wicker Park - Milwaukee Ave & Division St) logged 3 collisions in week 22. Current risk score is 95%, with upcoming risk forecast at 28%.",
+  "executive_briefing": "Zone_07 shows elevated risk at 48%. Continue routine monitoring. Optimizing signals could save 2359 kg CO2/week, equivalent to 5842 trees/year.",
   "civilian_road_safety_radar": {
     "current_week": {
-      "period": "2024-W22",
-      "date_range": "May 27 - Jun 02, 2024",
-      "risk_score": 95.0,
-      "risk_percentage": "95%",
-      "risk_badge": "[HIGH RISK ALERT]",
-      "risk_color": "#ef4444",
-      "description": "Elevated collision activity recorded recently. Extra vigilance recommended.",
-      "crashes_reported": 3,
-      "crashes_rolling4w_avg": 7.25,
-      "dominant_weather": "CLEAR"
+      "week": 22,
+      "risk_score": 48.0,
+      "risk_percentage": "48%",
+      "risk_badge": "MODERATE RISK",
+      "risk_color": "#eab308",
+      "description": "Corridor operating within normal baseline.",
+      "crashes_reported": 0
     },
     "upcoming_week": {
-      "period": "2024-W23",
-      "predicted_risk_probability": 0.279,
-      "predicted_risk_percentage": "28%",
-      "predicted_risk_badge": "[PREDICTED: SAFE CORRIDOR]",
-      "risk_color": "#22c55e",
+      "predicted_risk_probability": 0.5208,
+      "predicted_risk_percentage": "52%",
+      "predicted_risk_badge": "MODERATE RISK",
+      "risk_color": "#eab308",
       "description": "Forecast models project normal baseline traffic conditions.",
-      "trend_label": "[TREND: COOLING DOWN]",
-      "trend_color": "#22c55e",
-      "trend_percentage_change": "-67%"
+      "trend_label": "[TREND: STABLE]"
     },
     "why_accidents_might_happen": {
       "primary_collision_cause": {
-        "title": "Failing to Yield Right-of-Way",
-        "explanation": "Drivers turning left across oncoming traffic or turning on yellow without checking cross-traffic and crossing pedestrians.",
-        "historical_frequency_pct": 34.2
+        "title": "Congestion Bottleneck & Merge Conflicts",
+        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
       },
       "behavior_factor": {
-        "title": "Tailgating & Sudden Braking",
-        "explanation": "High-density commuter queues cause rear-end collisions when drivers follow too closely during rush hours.",
-        "risk_level": "ELEVATED"
+        "title": "Tailgating & Speed Variance",
+        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
       },
       "street_environment": {
-        "posted_speed_limit_mph": 30.0,
-        "intersection_crossroad_density_pct": 48.5,
-        "title": "30 mph Zone | 49% Crossroad Density",
-        "explanation": "Frequent signalized crossroads combined with multi-lane traffic flow increase conflict points at peak times."
+        "zone_type": "University_District",
+        "average_speed_kmh": 49.94,
+        "congestion_level": 49.13
       }
     },
     "civilian_safety_guide": {
       "for_drivers": {
         "action": "Increase Following Distance",
-        "details": "Maintain at least 3 car lengths of space behind the vehicle ahead. Avoid tailgating near transit stops and expressway exit ramps where sudden stops occur.",
-        "key_tip": "Leave 3-4 car lengths buffer on commercial transit corridors"
+        "details": "Maintain 3 car lengths buffer during peak rush hours."
       },
       "for_pedestrians_and_cyclists": {
-        "action": "Double-Check Turning Cars",
-        "details": "Make eye contact with drivers turning right on red before stepping into crosswalks. Use reflective gear or activate bicycle lights after dusk.",
-        "key_tip": "Never assume a turning driver has seen you at green lights"
+        "action": "Double-Check Turning Vehicles",
+        "details": "Make eye contact with turning drivers at intersections before crossing."
       },
       "peak_danger_windows": {
-        "primary_peak": "4:30 PM - 7:30 PM Weekdays (Evening Commute Congestion)",
-        "secondary_peak": "10:00 PM - 2:00 AM Friday & Saturday (Reduced Lighting & Speed Variance)",
-        "details": "Evening rush hours experience 3x higher collision rates than midday. Exercise maximum patience during heavy congestion."
+        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
+        "details": "Congestion peaks during evening travel windows."
       }
     }
   },
   "raw_metrics": {
     "zone_id": "Zone_07",
-    "chicago_beat": "1424",
     "week": 22,
-    "crashes": 3,
-    "rolling4w_avg": 7.25,
-    "speed_mph": 30.0
+    "zone_type": "University_District",
+    "temporal_profile": "GRADUAL_DETERIORATION",
+    "population_density": 7267,
+    "road_capacity": 42,
+    "effective_road_capacity": 42.0,
+    "vehicle_density": 34.92,
+    "traffic_pressure": 0.831,
+    "congestion": 49.13,
+    "average_speed": 49.94,
+    "red_light_violations": 5,
+    "weather": "Normal",
+    "road_condition": "Good",
+    "special_event": 0,
+    "incident_count": 0,
+    "incident_occurred": 0,
+    "previous_week_vehicle_density": 40.34,
+    "previous_week_congestion": 58.02,
+    "previous_week_average_speed": 50.0,
+    "previous_week_red_light_violations": 7.0,
+    "previous_week_incident_count": 2.0,
+    "previous_week_incident_occurred": 1.0,
+    "previous_week_traffic_pressure": 0.96,
+    "rolling_4_week_avg_vehicle_density": 45.74,
+    "rolling_4_week_avg_congestion": 73.64,
+    "rolling_4_week_avg_speed": 40.85,
+    "rolling_4_week_avg_violations": 9.25,
+    "rolling_4_week_incident_count": 6.0,
+    "rolling_4_week_incident_rate": 0.75,
+    "rolling_4_week_avg_traffic_pressure": 1.188,
+    "vehicle_density_change": -5.42,
+    "congestion_change": -8.89,
+    "speed_change": -0.06,
+    "violations_change": -2.0,
+    "traffic_pressure_change": -0.129,
+    "incident_count_change": 2.0,
+    "vehicle_density_pct_change": -13.44,
+    "congestion_pct_change": -15.32,
+    "speed_pct_change": -0.12,
+    "vehicle_population_ratio": 4.805,
+    "congestion_trend_4w": -7.025,
+    "vehicle_density_trend_4w": -2.208,
+    "speed_trend_4w": 4.78,
+    "incident_trend_4w": -0.1,
+    "location_name_x": "Goregaon",
+    "city_x": "Mumbai",
+    "latitude_x": 19.1663,
+    "longitude_x": 72.8526,
+    "car_percentage": 43.3,
+    "motorcycle_percentage": 42.6,
+    "bus_percentage": 10.1,
+    "truck_percentage": 4.0,
+    "moving_vehicle_percentage": 52.5,
+    "slow_vehicle_percentage": 34.1,
+    "stopped_vehicle_percentage": 13.4,
+    "location_name_y": "Wicker Park - Milwaukee Ave & Division St",
+    "city_y": "Chicago",
+    "latitude_y": 41.9038,
+    "longitude_y": -87.6775,
+    "predicted_risk_probability": 0.48,
+    "risk_score": 47.9997,
+    "population_exposure_score": 42.4312,
+    "vehicle_exposure_score": 47.5837,
+    "temporal_trend_score": 26.8939,
+    "priority_score": 43.3585,
+    "priority_rank": 27,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.48
   }
 }

@@ -1,155 +1,221 @@
 {
   "zone_id": "Zone_41",
-  "location_name": "Brighton Park - Archer Ave & Kedzie Ave",
-  "city": "Chicago",
-  "zone_type": "Diagonal Transit Arterial",
+  "location_name": "Zone_41",
+  "city": "",
+  "zone_type": "Highway_Junction",
   "week": 11,
-  "latitude": 41.8152,
-  "longitude": -87.7038,
+  "latitude": 0.0,
+  "longitude": 0.0,
   "risk_analysis": {
-    "predicted_risk_probability": 0.95,
-    "predicted_risk_percentage": 95.0,
-    "risk_label": "CRITICAL RISK",
-    "risk_color": "#ef4444",
-    "risk_delta_vs_prev_week": -67.4,
-    "actual_incident": 1
+    "predicted_risk_probability": 0.3117,
+    "predicted_risk_percentage": 31.17,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": 0.6507,
+    "actual_incident": 0
   },
   "priority": {
-    "priority_score": 75.75,
-    "priority_rank": 1,
-    "priority_level": "CRITICAL",
+    "priority_score": 23.5814,
+    "priority_rank": 43,
+    "priority_level": "LOW",
     "components": {
-      "risk_score": 95.0,
-      "population_exposure_score": 65.0,
-      "vehicle_exposure_score": 100.0,
-      "temporal_trend_score": 10.0
+      "risk_score": 31.1657,
+      "population_exposure_score": 8.5351,
+      "vehicle_exposure_score": 26.0918,
+      "temporal_trend_score": 25.0868
     },
     "explanation": {
-      "priority_level": "CRITICAL",
-      "priority_score": 75.75,
-      "assessment": "Corridor in 09th District - Deering exhibits critical traffic hazard priority driven by Chicago crash history."
+      "priority_level": "LOW",
+      "priority_score": 23.6,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "31/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 31.1657
+        },
+        {
+          "factor": "Improving Trend",
+          "icon": "\ud83d\udcc9",
+          "value": "25/100",
+          "impact": "POSITIVE",
+          "detail": "Conditions are improving over past 4 weeks",
+          "weight": -25.0868
+        }
+      ],
+      "total_factors": 2,
+      "assessment": "This zone is currently within acceptable safety parameters. Routine monitoring is sufficient."
     }
   },
   "telemetry": {
-    "congestion": 100.0,
-    "congestion_delta": 0.0,
-    "average_speed_kmh": 48.3,
-    "speed_delta": 0.0,
-    "vehicle_density": 120.0,
-    "density_delta": 0.0,
-    "population_density": 8500,
-    "red_light_violations": 12,
-    "weather": "CLEAR",
+    "congestion": 20.39,
+    "congestion_delta": 9.22,
+    "average_speed_kmh": 58.89,
+    "speed_delta": -3.69,
+    "vehicle_density": 16.55,
+    "density_delta": 3.76,
+    "population_density": 2549,
+    "red_light_violations": 8,
+    "weather": "Normal",
     "special_event": 0
   },
   "signal_optimization": {
-    "base_green_seconds": 35,
-    "recommended_green_seconds": 72,
-    "change_seconds": 37,
-    "change_percent": 105.7,
-    "urgency": "CRITICAL",
-    "reason": "Severe congestion requires significantly extended green phase",
+    "base_green_seconds": 50,
+    "recommended_green_seconds": 48,
+    "change_seconds": -2,
+    "change_percent": -4.0,
+    "urgency": "NOMINAL",
+    "reason": "Current default timing is adequate",
     "factors": {
-      "congestion_factor": 1.8,
-      "density_factor": 1.4,
-      "speed_factor": 0.82,
+      "congestion_factor": 1.16,
+      "density_factor": 1.07,
+      "speed_factor": 0.78,
       "event_boost": 1.0,
       "weather_boost": 1.0
     }
   },
   "environmental_impact": {
-    "total_co2_kg_per_week": 71274.2,
-    "total_co2_tonnes_per_year": 3706.26,
-    "idle_co2_kg": 62928.0,
-    "moving_co2_kg": 8346.2,
-    "potential_savings_kg_per_week": 18878.4,
-    "potential_savings_tonnes_per_year": 981.68,
-    "trees_equivalent_per_year": 46746,
-    "fuel_saved_liters_per_week": 8172.5,
-    "citizens_impacted": 17000,
-    "optimization_factor_pct": 30.0
+    "total_co2_kg_per_week": 21974.1,
+    "total_co2_tonnes_per_year": 1142.66,
+    "idle_co2_kg": 1862.7,
+    "moving_co2_kg": 20111.4,
+    "potential_savings_kg_per_week": 410.5,
+    "potential_savings_tonnes_per_year": 21.35,
+    "trees_equivalent_per_year": 1016,
+    "fuel_saved_liters_per_week": 177.7,
+    "citizens_impacted": 5098,
+    "optimization_factor_pct": 22.0
   },
   "interventions": [
     {
-      "title": "Deploy Speed Calming & Signal Synchronization on Archer Ave & Kedzie Ave",
-      "type": "MUNICIPAL_CORRIDOR_CALMING",
-      "priority": "CRITICAL",
-      "target_reduction": "18% collision frequency reduction"
-    },
-    {
-      "title": "Pedestrian Crosswalk High-Visibility Illumination & Turn Signal Audit",
-      "type": "INFRASTRUCTURE_SAFETY",
-      "priority": "HIGH",
-      "target_reduction": "Eliminate left-turn crossing conflicts"
+      "id": "VIOLATION_ENFORCEMENT",
+      "name": "Red-Light Violation Enforcement",
+      "icon": "\ud83d\udea8",
+      "severity": "HIGH",
+      "description": "Elevated red-light violation count indicates intersection compliance failure.",
+      "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
     }
   ],
-  "executive_briefing": "Chicago Police Beat 922 (Brighton Park - Archer Ave & Kedzie Ave) logged 6 collisions in week 11. Current risk score is 95%, with upcoming risk forecast at 28%.",
+  "executive_briefing": "Zone_41 is within safe operating parameters (31% risk). Continue routine monitoring. Optimizing signals could save 410 kg CO2/week, equivalent to 1016 trees/year.",
   "civilian_road_safety_radar": {
     "current_week": {
-      "period": "2024-W11",
-      "date_range": "Mar 11 - Mar 17, 2024",
-      "risk_score": 95.0,
-      "risk_percentage": "95%",
-      "risk_badge": "[HIGH RISK ALERT]",
-      "risk_color": "#ef4444",
-      "description": "Elevated collision activity recorded recently. Extra vigilance recommended.",
-      "crashes_reported": 6,
-      "crashes_rolling4w_avg": 10.0,
-      "dominant_weather": "CLEAR"
+      "week": 11,
+      "risk_score": 31.2,
+      "risk_percentage": "31%",
+      "risk_badge": "LOW RISK",
+      "risk_color": "#22c55e",
+      "description": "Corridor operating within normal baseline.",
+      "crashes_reported": 0
     },
     "upcoming_week": {
-      "period": "2024-W12",
-      "predicted_risk_probability": 0.276,
-      "predicted_risk_percentage": "28%",
-      "predicted_risk_badge": "[PREDICTED: SAFE CORRIDOR]",
+      "predicted_risk_probability": 0.3156,
+      "predicted_risk_percentage": "32%",
+      "predicted_risk_badge": "LOW RISK",
       "risk_color": "#22c55e",
       "description": "Forecast models project normal baseline traffic conditions.",
-      "trend_label": "[TREND: COOLING DOWN]",
-      "trend_color": "#22c55e",
-      "trend_percentage_change": "-67%"
+      "trend_label": "[TREND: STABLE]"
     },
     "why_accidents_might_happen": {
       "primary_collision_cause": {
-        "title": "Failing to Yield Right-of-Way",
-        "explanation": "Drivers turning left across oncoming traffic or turning on yellow without checking cross-traffic and crossing pedestrians.",
-        "historical_frequency_pct": 34.2
+        "title": "Congestion Bottleneck & Merge Conflicts",
+        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
       },
       "behavior_factor": {
-        "title": "Tailgating & Sudden Braking",
-        "explanation": "High-density commuter queues cause rear-end collisions when drivers follow too closely during rush hours.",
-        "risk_level": "ELEVATED"
+        "title": "Tailgating & Speed Variance",
+        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
       },
       "street_environment": {
-        "posted_speed_limit_mph": 30.0,
-        "intersection_crossroad_density_pct": 48.5,
-        "title": "30 mph Zone | 49% Crossroad Density",
-        "explanation": "Frequent signalized crossroads combined with multi-lane traffic flow increase conflict points at peak times."
+        "zone_type": "Highway_Junction",
+        "average_speed_kmh": 58.89,
+        "congestion_level": 20.39
       }
     },
     "civilian_safety_guide": {
       "for_drivers": {
         "action": "Increase Following Distance",
-        "details": "Maintain at least 3 car lengths of space behind the vehicle ahead. Avoid tailgating near transit stops and expressway exit ramps where sudden stops occur.",
-        "key_tip": "Leave 3-4 car lengths buffer on commercial transit corridors"
+        "details": "Maintain 3 car lengths buffer during peak rush hours."
       },
       "for_pedestrians_and_cyclists": {
-        "action": "Double-Check Turning Cars",
-        "details": "Make eye contact with drivers turning right on red before stepping into crosswalks. Use reflective gear or activate bicycle lights after dusk.",
-        "key_tip": "Never assume a turning driver has seen you at green lights"
+        "action": "Double-Check Turning Vehicles",
+        "details": "Make eye contact with turning drivers at intersections before crossing."
       },
       "peak_danger_windows": {
-        "primary_peak": "4:30 PM - 7:30 PM Weekdays (Evening Commute Congestion)",
-        "secondary_peak": "10:00 PM - 2:00 AM Friday & Saturday (Reduced Lighting & Speed Variance)",
-        "details": "Evening rush hours experience 3x higher collision rates than midday. Exercise maximum patience during heavy congestion."
+        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
+        "details": "Congestion peaks during evening travel windows."
       }
     }
   },
   "raw_metrics": {
     "zone_id": "Zone_41",
-    "chicago_beat": "922",
     "week": 11,
-    "crashes": 6,
-    "rolling4w_avg": 10.0,
-    "speed_mph": 30.0
+    "zone_type": "Highway_Junction",
+    "temporal_profile": "GRADUAL_DETERIORATION",
+    "population_density": 2549,
+    "road_capacity": 42,
+    "effective_road_capacity": 42.0,
+    "vehicle_density": 16.55,
+    "traffic_pressure": 0.394,
+    "congestion": 20.39,
+    "average_speed": 58.89,
+    "red_light_violations": 8,
+    "weather": "Normal",
+    "road_condition": "Good",
+    "special_event": 0,
+    "incident_count": 0,
+    "incident_occurred": 0,
+    "previous_week_vehicle_density": 12.79,
+    "previous_week_congestion": 11.17,
+    "previous_week_average_speed": 62.58,
+    "previous_week_red_light_violations": 9.0,
+    "previous_week_incident_count": 0.0,
+    "previous_week_incident_occurred": 0.0,
+    "previous_week_traffic_pressure": 0.305,
+    "rolling_4_week_avg_vehicle_density": 13.25,
+    "rolling_4_week_avg_congestion": 14.37,
+    "rolling_4_week_avg_speed": 61.3,
+    "rolling_4_week_avg_violations": 5.25,
+    "rolling_4_week_incident_count": 0.0,
+    "rolling_4_week_incident_rate": 0.0,
+    "rolling_4_week_avg_traffic_pressure": 0.316,
+    "vehicle_density_change": 3.76,
+    "congestion_change": 9.22,
+    "speed_change": -3.69,
+    "violations_change": -1.0,
+    "traffic_pressure_change": 0.089,
+    "incident_count_change": 0.0,
+    "vehicle_density_pct_change": 29.4,
+    "congestion_pct_change": 82.54,
+    "speed_pct_change": -5.9,
+    "vehicle_population_ratio": 6.493,
+    "congestion_trend_4w": -1.883,
+    "vehicle_density_trend_4w": -0.702,
+    "speed_trend_4w": -0.532,
+    "incident_trend_4w": 0.0,
+    "location_name_x": "Adyar",
+    "city_x": "Chennai",
+    "latitude_x": 13.0063,
+    "longitude_x": 80.2574,
+    "car_percentage": 47.6,
+    "motorcycle_percentage": 41.5,
+    "bus_percentage": 6.8,
+    "truck_percentage": 4.0,
+    "moving_vehicle_percentage": 81.3,
+    "slow_vehicle_percentage": 10.7,
+    "stopped_vehicle_percentage": 8.0,
+    "location_name_y": "Brighton Park - Archer Ave & Kedzie Ave",
+    "city_y": "Chicago",
+    "latitude_y": 41.8152,
+    "longitude_y": -87.7038,
+    "predicted_risk_probability": 0.3117,
+    "risk_score": 31.1657,
+    "population_exposure_score": 8.5351,
+    "vehicle_exposure_score": 26.0918,
+    "temporal_trend_score": 25.0868,
+    "priority_score": 23.5814,
+    "priority_rank": 43,
+    "priority_level": "LOW",
+    "risk_prob": 0.3117
   }
 }

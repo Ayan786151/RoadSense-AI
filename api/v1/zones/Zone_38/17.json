@@ -1,155 +1,237 @@
 {
   "zone_id": "Zone_38",
-  "location_name": "Near West - Madison St & United Center Arena",
-  "city": "Chicago",
-  "zone_type": "Sports Arena Event Gateway",
+  "location_name": "Zone_38",
+  "city": "",
+  "zone_type": "Commercial_Downtown",
   "week": 17,
-  "latitude": 41.8814,
-  "longitude": -87.6742,
+  "latitude": 0.0,
+  "longitude": 0.0,
   "risk_analysis": {
-    "predicted_risk_probability": 0.95,
-    "predicted_risk_percentage": 95.0,
-    "risk_label": "CRITICAL RISK",
-    "risk_color": "#ef4444",
-    "risk_delta_vs_prev_week": -60.3,
-    "actual_incident": 1
+    "predicted_risk_probability": 0.513,
+    "predicted_risk_percentage": 51.3,
+    "risk_label": "MODERATE RISK",
+    "risk_color": "#eab308",
+    "risk_delta_vs_prev_week": 9.306,
+    "actual_incident": 0
   },
   "priority": {
-    "priority_score": 70.33,
-    "priority_rank": 1,
-    "priority_level": "CRITICAL",
+    "priority_score": 52.8524,
+    "priority_rank": 17,
+    "priority_level": "MODERATE",
     "components": {
-      "risk_score": 95.0,
-      "population_exposure_score": 65.0,
-      "vehicle_exposure_score": 72.9,
-      "temporal_trend_score": 10.0
+      "risk_score": 51.3001,
+      "population_exposure_score": 55.1333,
+      "vehicle_exposure_score": 84.0174,
+      "temporal_trend_score": 11.637
     },
     "explanation": {
-      "priority_level": "CRITICAL",
-      "priority_score": 70.33,
-      "assessment": "Corridor in 12th District - Near West exhibits critical traffic hazard priority driven by Chicago crash history."
+      "priority_level": "MODERATE",
+      "priority_score": 52.9,
+      "top_contributors": [
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "84/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 84.0174
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "51/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 51.3001
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "55/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 38.5933
+        },
+        {
+          "factor": "Improving Trend",
+          "icon": "\ud83d\udcc9",
+          "value": "12/100",
+          "impact": "POSITIVE",
+          "detail": "Conditions are improving over past 4 weeks",
+          "weight": -11.637
+        }
+      ],
+      "total_factors": 4,
+      "assessment": "This zone has moderate risk levels with contributing factors: Vehicle Density, Risk Score. Continue monitoring and schedule review if conditions worsen."
     }
   },
   "telemetry": {
-    "congestion": 100.0,
-    "congestion_delta": 0.0,
-    "average_speed_kmh": 48.3,
-    "speed_delta": 0.0,
-    "vehicle_density": 87.5,
-    "density_delta": 0.0,
-    "population_density": 8500,
-    "red_light_violations": 24,
-    "weather": "CLEAR",
-    "special_event": 1
+    "congestion": 31.76,
+    "congestion_delta": -1.24,
+    "average_speed_kmh": 55.78,
+    "speed_delta": -0.88,
+    "vehicle_density": 57.71,
+    "density_delta": 2.85,
+    "population_density": 9035,
+    "red_light_violations": 6,
+    "weather": "Normal",
+    "special_event": 0
   },
   "signal_optimization": {
-    "base_green_seconds": 35,
-    "recommended_green_seconds": 80,
-    "change_seconds": 45,
-    "change_percent": 128.6,
-    "urgency": "CRITICAL",
-    "reason": "Severe congestion requires significantly extended green phase",
+    "base_green_seconds": 40,
+    "recommended_green_seconds": 48,
+    "change_seconds": 8,
+    "change_percent": 20.0,
+    "urgency": "MODERATE",
+    "reason": "Slight adjustment for current conditions",
     "factors": {
-      "congestion_factor": 1.8,
-      "density_factor": 1.35,
-      "speed_factor": 0.82,
-      "event_boost": 1.15,
+      "congestion_factor": 1.25,
+      "density_factor": 1.23,
+      "speed_factor": 0.79,
+      "event_boost": 1.0,
       "weather_boost": 1.0
     }
   },
   "environmental_impact": {
-    "total_co2_kg_per_week": 51970.8,
-    "total_co2_tonnes_per_year": 2702.48,
-    "idle_co2_kg": 45885.0,
-    "moving_co2_kg": 6085.8,
-    "potential_savings_kg_per_week": 13765.5,
-    "potential_savings_tonnes_per_year": 715.81,
-    "trees_equivalent_per_year": 34086,
-    "fuel_saved_liters_per_week": 5959.1,
-    "citizens_impacted": 17000,
-    "optimization_factor_pct": 30.0
+    "total_co2_kg_per_week": 67055.6,
+    "total_co2_tonnes_per_year": 3486.89,
+    "idle_co2_kg": 10117.4,
+    "moving_co2_kg": 56938.2,
+    "potential_savings_kg_per_week": 2344.8,
+    "potential_savings_tonnes_per_year": 121.93,
+    "trees_equivalent_per_year": 5806,
+    "fuel_saved_liters_per_week": 1015.1,
+    "citizens_impacted": 18070,
+    "optimization_factor_pct": 23.2
   },
   "interventions": [
     {
-      "title": "Deploy Speed Calming & Signal Synchronization on Madison St & United Center Arena",
-      "type": "MUNICIPAL_CORRIDOR_CALMING",
-      "priority": "CRITICAL",
-      "target_reduction": "18% collision frequency reduction"
-    },
-    {
-      "title": "Pedestrian Crosswalk High-Visibility Illumination & Turn Signal Audit",
-      "type": "INFRASTRUCTURE_SAFETY",
-      "priority": "MODERATE",
-      "target_reduction": "Eliminate left-turn crossing conflicts"
+      "id": "SPEED_CALMING",
+      "name": "Speed Calming & Enforcement",
+      "icon": "\ud83c\udfce\ufe0f",
+      "severity": "HIGH",
+      "description": "High average speed combined with elevated risk score suggests speed-related hazards.",
+      "action": "Deploy speed calming measures (speed bumps, radar signs) and increase enforcement patrols."
     }
   ],
-  "executive_briefing": "Chicago Police Beat 1212 (Near West - Madison St & United Center Arena) logged 12 collisions in week 17. Current risk score is 95%, with upcoming risk forecast at 35%.",
+  "executive_briefing": "Zone_38 shows elevated risk at 51%. Continue routine monitoring. Optimizing signals could save 2345 kg CO2/week, equivalent to 5806 trees/year.",
   "civilian_road_safety_radar": {
     "current_week": {
-      "period": "2024-W17",
-      "date_range": "Apr 22 - Apr 28, 2024",
-      "risk_score": 95.0,
-      "risk_percentage": "95%",
-      "risk_badge": "[HIGH RISK ALERT]",
-      "risk_color": "#ef4444",
-      "description": "Elevated collision activity recorded recently. Extra vigilance recommended.",
-      "crashes_reported": 12,
-      "crashes_rolling4w_avg": 4.75,
-      "dominant_weather": "CLEAR"
+      "week": 17,
+      "risk_score": 51.3,
+      "risk_percentage": "51%",
+      "risk_badge": "MODERATE RISK",
+      "risk_color": "#eab308",
+      "description": "Corridor operating within normal baseline.",
+      "crashes_reported": 0
     },
     "upcoming_week": {
-      "period": "2024-W18",
-      "predicted_risk_probability": 0.347,
-      "predicted_risk_percentage": "35%",
-      "predicted_risk_badge": "[PREDICTED: SAFE CORRIDOR]",
-      "risk_color": "#22c55e",
+      "predicted_risk_probability": 0.4847,
+      "predicted_risk_percentage": "48%",
+      "predicted_risk_badge": "MODERATE RISK",
+      "risk_color": "#eab308",
       "description": "Forecast models project normal baseline traffic conditions.",
-      "trend_label": "[TREND: COOLING DOWN]",
-      "trend_color": "#22c55e",
-      "trend_percentage_change": "-60%"
+      "trend_label": "[TREND: STABLE]"
     },
     "why_accidents_might_happen": {
       "primary_collision_cause": {
-        "title": "Failing to Yield Right-of-Way",
-        "explanation": "Drivers turning left across oncoming traffic or turning on yellow without checking cross-traffic and crossing pedestrians.",
-        "historical_frequency_pct": 34.2
+        "title": "Congestion Bottleneck & Merge Conflicts",
+        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
       },
       "behavior_factor": {
-        "title": "Tailgating & Sudden Braking",
-        "explanation": "High-density commuter queues cause rear-end collisions when drivers follow too closely during rush hours.",
-        "risk_level": "ELEVATED"
+        "title": "Tailgating & Speed Variance",
+        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
       },
       "street_environment": {
-        "posted_speed_limit_mph": 30.0,
-        "intersection_crossroad_density_pct": 48.5,
-        "title": "30 mph Zone | 49% Crossroad Density",
-        "explanation": "Frequent signalized crossroads combined with multi-lane traffic flow increase conflict points at peak times."
+        "zone_type": "Commercial_Downtown",
+        "average_speed_kmh": 55.78,
+        "congestion_level": 31.76
       }
     },
     "civilian_safety_guide": {
       "for_drivers": {
         "action": "Increase Following Distance",
-        "details": "Maintain at least 3 car lengths of space behind the vehicle ahead. Avoid tailgating near transit stops and expressway exit ramps where sudden stops occur.",
-        "key_tip": "Leave 3-4 car lengths buffer on commercial transit corridors"
+        "details": "Maintain 3 car lengths buffer during peak rush hours."
       },
       "for_pedestrians_and_cyclists": {
-        "action": "Double-Check Turning Cars",
-        "details": "Make eye contact with drivers turning right on red before stepping into crosswalks. Use reflective gear or activate bicycle lights after dusk.",
-        "key_tip": "Never assume a turning driver has seen you at green lights"
+        "action": "Double-Check Turning Vehicles",
+        "details": "Make eye contact with turning drivers at intersections before crossing."
       },
       "peak_danger_windows": {
-        "primary_peak": "4:30 PM - 7:30 PM Weekdays (Evening Commute Congestion)",
-        "secondary_peak": "10:00 PM - 2:00 AM Friday & Saturday (Reduced Lighting & Speed Variance)",
-        "details": "Evening rush hours experience 3x higher collision rates than midday. Exercise maximum patience during heavy congestion."
+        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
+        "details": "Congestion peaks during evening travel windows."
       }
     }
   },
   "raw_metrics": {
     "zone_id": "Zone_38",
-    "chicago_beat": "1212",
     "week": 17,
-    "crashes": 12,
-    "rolling4w_avg": 4.75,
-    "speed_mph": 30.0
+    "zone_type": "Commercial_Downtown",
+    "temporal_profile": "RECOVERY_AFTER_DISRUPTION",
+    "population_density": 9035,
+    "road_capacity": 94,
+    "effective_road_capacity": 94.0,
+    "vehicle_density": 57.71,
+    "traffic_pressure": 0.614,
+    "congestion": 31.76,
+    "average_speed": 55.78,
+    "red_light_violations": 6,
+    "weather": "Normal",
+    "road_condition": "Good",
+    "special_event": 0,
+    "incident_count": 0,
+    "incident_occurred": 0,
+    "previous_week_vehicle_density": 54.86,
+    "previous_week_congestion": 33.0,
+    "previous_week_average_speed": 56.66,
+    "previous_week_red_light_violations": 4.0,
+    "previous_week_incident_count": 0.0,
+    "previous_week_incident_occurred": 0.0,
+    "previous_week_traffic_pressure": 0.584,
+    "rolling_4_week_avg_vehicle_density": 59.08,
+    "rolling_4_week_avg_congestion": 38.27,
+    "rolling_4_week_avg_speed": 52.14,
+    "rolling_4_week_avg_violations": 6.25,
+    "rolling_4_week_incident_count": 2.0,
+    "rolling_4_week_incident_rate": 0.5,
+    "rolling_4_week_avg_traffic_pressure": 0.662,
+    "vehicle_density_change": 2.85,
+    "congestion_change": -1.24,
+    "speed_change": -0.88,
+    "violations_change": 2.0,
+    "traffic_pressure_change": 0.03,
+    "incident_count_change": 0.0,
+    "vehicle_density_pct_change": 5.2,
+    "congestion_pct_change": -3.76,
+    "speed_pct_change": -1.55,
+    "vehicle_population_ratio": 6.387,
+    "congestion_trend_4w": -3.921,
+    "vehicle_density_trend_4w": -0.818,
+    "speed_trend_4w": 3.911,
+    "incident_trend_4w": -0.4,
+    "location_name_x": "T. Nagar",
+    "city_x": "Chennai",
+    "latitude_x": 13.0418,
+    "longitude_x": 80.2341,
+    "car_percentage": 46.4,
+    "motorcycle_percentage": 40.2,
+    "bus_percentage": 7.1,
+    "truck_percentage": 6.3,
+    "moving_vehicle_percentage": 74.5,
+    "slow_vehicle_percentage": 16.1,
+    "stopped_vehicle_percentage": 9.4,
+    "location_name_y": "Near West - Madison St & United Center Arena",
+    "city_y": "Chicago",
+    "latitude_y": 41.8814,
+    "longitude_y": -87.6742,
+    "predicted_risk_probability": 0.513,
+    "risk_score": 51.3001,
+    "population_exposure_score": 55.1333,
+    "vehicle_exposure_score": 84.0174,
+    "temporal_trend_score": 11.637,
+    "priority_score": 52.8524,
+    "priority_rank": 17,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.513
   }
 }

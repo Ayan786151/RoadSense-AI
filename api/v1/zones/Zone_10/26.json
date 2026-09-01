@@ -1,155 +1,253 @@
 {
   "zone_id": "Zone_10",
-  "location_name": "Pilsen - 18th St & Ashland Ave",
-  "city": "Chicago",
-  "zone_type": "Dense Historic Commercial Hub",
+  "location_name": "Zone_10",
+  "city": "",
+  "zone_type": "Residential",
   "week": 26,
-  "latitude": 41.8579,
-  "longitude": -87.6663,
+  "latitude": 0.0,
+  "longitude": 0.0,
   "risk_analysis": {
-    "predicted_risk_probability": 0.95,
-    "predicted_risk_percentage": 95.0,
-    "risk_label": "CRITICAL RISK",
-    "risk_color": "#ef4444",
-    "risk_delta_vs_prev_week": -50.7,
+    "predicted_risk_probability": 0.7455,
+    "predicted_risk_percentage": 74.55,
+    "risk_label": "HIGH RISK",
+    "risk_color": "#f97316",
+    "risk_delta_vs_prev_week": 10.9815,
     "actual_incident": 1
   },
   "priority": {
-    "priority_score": 75.75,
-    "priority_rank": 1,
-    "priority_level": "CRITICAL",
+    "priority_score": 69.2206,
+    "priority_rank": 4,
+    "priority_level": "HIGH",
     "components": {
-      "risk_score": 95.0,
-      "population_exposure_score": 65.0,
-      "vehicle_exposure_score": 100.0,
-      "temporal_trend_score": 10.0
+      "risk_score": 74.5484,
+      "population_exposure_score": 98.6996,
+      "vehicle_exposure_score": 73.632,
+      "temporal_trend_score": 0.0
     },
     "explanation": {
-      "priority_level": "CRITICAL",
-      "priority_score": 75.75,
-      "assessment": "Corridor in 12th District - Near West exhibits critical traffic hazard priority driven by Chicago crash history."
+      "priority_level": "HIGH",
+      "priority_score": 69.2,
+      "top_contributors": [
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "99/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 15099 residents/km\u00b2",
+          "weight": 98.6996
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "76/100",
+          "impact": "HIGH",
+          "detail": "Congestion index at 76 \u2014 severe traffic flow degradation",
+          "weight": 76.0
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udd34",
+          "value": "75/100",
+          "impact": "HIGH",
+          "detail": "Model-estimated risk score is in the critical range",
+          "weight": 74.5484
+        },
+        {
+          "factor": "Vehicle Density",
+          "icon": "\ud83d\ude99",
+          "value": "74/100",
+          "impact": "HIGH",
+          "detail": "High vehicle density increases collision exposure",
+          "weight": 73.632
+        },
+        {
+          "factor": "Improving Trend",
+          "icon": "\ud83d\udcc9",
+          "value": "0/100",
+          "impact": "POSITIVE",
+          "detail": "Conditions are improving over past 4 weeks",
+          "weight": -0.0
+        }
+      ],
+      "total_factors": 5,
+      "assessment": "This zone shows significant risk elevation driven by Population Exposure, Congestion. Proactive intervention should be scheduled within the current planning cycle."
     }
   },
   "telemetry": {
-    "congestion": 100.0,
-    "congestion_delta": 0.0,
-    "average_speed_kmh": 48.3,
-    "speed_delta": 0.0,
-    "vehicle_density": 120.0,
-    "density_delta": 0.0,
-    "population_density": 8500,
-    "red_light_violations": 36,
-    "weather": "CLEAR",
+    "congestion": 76.0,
+    "congestion_delta": 8.42,
+    "average_speed_kmh": 38.37,
+    "speed_delta": -1.08,
+    "vehicle_density": 53.87,
+    "density_delta": 3.08,
+    "population_density": 15099,
+    "red_light_violations": 5,
+    "weather": "Normal",
     "special_event": 0
   },
   "signal_optimization": {
-    "base_green_seconds": 35,
-    "recommended_green_seconds": 72,
-    "change_seconds": 37,
-    "change_percent": 105.7,
+    "base_green_seconds": 30,
+    "recommended_green_seconds": 50,
+    "change_seconds": 20,
+    "change_percent": 66.7,
     "urgency": "CRITICAL",
     "reason": "Severe congestion requires significantly extended green phase",
     "factors": {
-      "congestion_factor": 1.8,
-      "density_factor": 1.4,
-      "speed_factor": 0.82,
+      "congestion_factor": 1.61,
+      "density_factor": 1.22,
+      "speed_factor": 0.86,
       "event_boost": 1.0,
       "weather_boost": 1.0
     }
   },
   "environmental_impact": {
-    "total_co2_kg_per_week": 71274.2,
-    "total_co2_tonnes_per_year": 3706.26,
-    "idle_co2_kg": 62928.0,
-    "moving_co2_kg": 8346.2,
-    "potential_savings_kg_per_week": 18878.4,
-    "potential_savings_tonnes_per_year": 981.68,
-    "trees_equivalent_per_year": 46746,
-    "fuel_saved_liters_per_week": 8172.5,
-    "citizens_impacted": 17000,
-    "optimization_factor_pct": 30.0
+    "total_co2_kg_per_week": 36886.6,
+    "total_co2_tonnes_per_year": 1918.1,
+    "idle_co2_kg": 22599.5,
+    "moving_co2_kg": 14287.0,
+    "potential_savings_kg_per_week": 6237.5,
+    "potential_savings_tonnes_per_year": 324.35,
+    "trees_equivalent_per_year": 15445,
+    "fuel_saved_liters_per_week": 2700.2,
+    "citizens_impacted": 30198,
+    "optimization_factor_pct": 27.6
   },
   "interventions": [
     {
-      "title": "Deploy Speed Calming & Signal Synchronization on 18th St & Ashland Ave",
-      "type": "MUNICIPAL_CORRIDOR_CALMING",
-      "priority": "CRITICAL",
-      "target_reduction": "18% collision frequency reduction"
+      "id": "PEDESTRIAN_SAFETY",
+      "name": "Pedestrian Crossing Intervention",
+      "icon": "\ud83d\udeb6",
+      "severity": "MEDIUM",
+      "description": "High population density zone with significant traffic congestion creates pedestrian exposure risk.",
+      "action": "Install protected pedestrian crossings, improve sidewalk infrastructure, and add pedestrian countdown signals."
     },
     {
-      "title": "Pedestrian Crosswalk High-Visibility Illumination & Turn Signal Audit",
-      "type": "INFRASTRUCTURE_SAFETY",
-      "priority": "HIGH",
-      "target_reduction": "Eliminate left-turn crossing conflicts"
+      "id": "MONITORING_UPGRADE",
+      "name": "Enhanced Monitoring & CCTV Coverage",
+      "icon": "\ud83d\udcf9",
+      "severity": "MEDIUM",
+      "description": "High-risk zone with significant population exposure warrants improved surveillance.",
+      "action": "Install additional CCTV cameras and integrate with traffic management center for real-time monitoring."
     }
   ],
-  "executive_briefing": "Chicago Police Beat 1231 (Pilsen - 18th St & Ashland Ave) logged 18 collisions in week 26. Current risk score is 95%, with upcoming risk forecast at 44%.",
+  "executive_briefing": "Zone_10 is in a critical safety state with 75% incident risk. Signal optimization recommended \u2014 congestion at 76/100 with speeds averaging 38 km/h. Optimizing signals could save 6238 kg CO2/week, equivalent to 15445 trees/year.",
   "civilian_road_safety_radar": {
     "current_week": {
-      "period": "2024-W26",
-      "date_range": "Jun 24 - Jun 30, 2024",
-      "risk_score": 95.0,
-      "risk_percentage": "95%",
-      "risk_badge": "[HIGH RISK ALERT]",
-      "risk_color": "#ef4444",
-      "description": "Elevated collision activity recorded recently. Extra vigilance recommended.",
-      "crashes_reported": 18,
-      "crashes_rolling4w_avg": 14.75,
-      "dominant_weather": "CLEAR"
+      "week": 26,
+      "risk_score": 74.5,
+      "risk_percentage": "75%",
+      "risk_badge": "HIGH RISK",
+      "risk_color": "#f97316",
+      "description": "Elevated collision activity observed.",
+      "crashes_reported": 0
     },
     "upcoming_week": {
-      "period": "2024-W27",
-      "predicted_risk_probability": 0.443,
-      "predicted_risk_percentage": "44%",
-      "predicted_risk_badge": "[PREDICTED: MODERATE CAUTION]",
-      "risk_color": "#f59e0b",
-      "description": "Forecast models project normal baseline traffic conditions.",
-      "trend_label": "[TREND: COOLING DOWN]",
-      "trend_color": "#f59e0b",
-      "trend_percentage_change": "-51%"
+      "predicted_risk_probability": 0.6945,
+      "predicted_risk_percentage": "69%",
+      "predicted_risk_badge": "HIGH RISK",
+      "risk_color": "#f97316",
+      "description": "Forecast models project elevated collision probability.",
+      "trend_label": "[TREND: COOLING DOWN]"
     },
     "why_accidents_might_happen": {
       "primary_collision_cause": {
-        "title": "Failing to Yield Right-of-Way",
-        "explanation": "Drivers turning left across oncoming traffic or turning on yellow without checking cross-traffic and crossing pedestrians.",
-        "historical_frequency_pct": 34.2
+        "title": "Congestion Bottleneck & Merge Conflicts",
+        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
       },
       "behavior_factor": {
-        "title": "Tailgating & Sudden Braking",
-        "explanation": "High-density commuter queues cause rear-end collisions when drivers follow too closely during rush hours.",
-        "risk_level": "ELEVATED"
+        "title": "Tailgating & Speed Variance",
+        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
       },
       "street_environment": {
-        "posted_speed_limit_mph": 30.0,
-        "intersection_crossroad_density_pct": 48.5,
-        "title": "30 mph Zone | 49% Crossroad Density",
-        "explanation": "Frequent signalized crossroads combined with multi-lane traffic flow increase conflict points at peak times."
+        "zone_type": "Residential",
+        "average_speed_kmh": 38.37,
+        "congestion_level": 76.0
       }
     },
     "civilian_safety_guide": {
       "for_drivers": {
         "action": "Increase Following Distance",
-        "details": "Maintain at least 3 car lengths of space behind the vehicle ahead. Avoid tailgating near transit stops and expressway exit ramps where sudden stops occur.",
-        "key_tip": "Leave 3-4 car lengths buffer on commercial transit corridors"
+        "details": "Maintain 3 car lengths buffer during peak rush hours."
       },
       "for_pedestrians_and_cyclists": {
-        "action": "Double-Check Turning Cars",
-        "details": "Make eye contact with drivers turning right on red before stepping into crosswalks. Use reflective gear or activate bicycle lights after dusk.",
-        "key_tip": "Never assume a turning driver has seen you at green lights"
+        "action": "Double-Check Turning Vehicles",
+        "details": "Make eye contact with turning drivers at intersections before crossing."
       },
       "peak_danger_windows": {
-        "primary_peak": "4:30 PM - 7:30 PM Weekdays (Evening Commute Congestion)",
-        "secondary_peak": "10:00 PM - 2:00 AM Friday & Saturday (Reduced Lighting & Speed Variance)",
-        "details": "Evening rush hours experience 3x higher collision rates than midday. Exercise maximum patience during heavy congestion."
+        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
+        "details": "Congestion peaks during evening travel windows."
       }
     }
   },
   "raw_metrics": {
     "zone_id": "Zone_10",
-    "chicago_beat": "1231",
     "week": 26,
-    "crashes": 18,
-    "rolling4w_avg": 14.75,
-    "speed_mph": 30.0
+    "zone_type": "Residential",
+    "temporal_profile": "GRADUAL_DETERIORATION",
+    "population_density": 15099,
+    "road_capacity": 47,
+    "effective_road_capacity": 47.0,
+    "vehicle_density": 53.87,
+    "traffic_pressure": 1.146,
+    "congestion": 76.0,
+    "average_speed": 38.37,
+    "red_light_violations": 5,
+    "weather": "Normal",
+    "road_condition": "Good",
+    "special_event": 0,
+    "incident_count": 1,
+    "incident_occurred": 1,
+    "previous_week_vehicle_density": 50.79,
+    "previous_week_congestion": 67.58,
+    "previous_week_average_speed": 39.45,
+    "previous_week_red_light_violations": 6.0,
+    "previous_week_incident_count": 0.0,
+    "previous_week_incident_occurred": 0.0,
+    "previous_week_traffic_pressure": 1.081,
+    "rolling_4_week_avg_vehicle_density": 53.37,
+    "rolling_4_week_avg_congestion": 77.34,
+    "rolling_4_week_avg_speed": 34.84,
+    "rolling_4_week_avg_violations": 6.25,
+    "rolling_4_week_incident_count": 2.0,
+    "rolling_4_week_incident_rate": 0.5,
+    "rolling_4_week_avg_traffic_pressure": 1.197,
+    "vehicle_density_change": 3.08,
+    "congestion_change": 8.42,
+    "speed_change": -1.08,
+    "violations_change": -1.0,
+    "traffic_pressure_change": 0.065,
+    "incident_count_change": -1.0,
+    "vehicle_density_pct_change": 6.06,
+    "congestion_pct_change": 12.46,
+    "speed_pct_change": -2.74,
+    "vehicle_population_ratio": 3.568,
+    "congestion_trend_4w": -9.202,
+    "vehicle_density_trend_4w": -1.294,
+    "speed_trend_4w": 6.066,
+    "incident_trend_4w": -0.2,
+    "location_name_x": "Colaba",
+    "city_x": "Mumbai",
+    "latitude_x": 18.922,
+    "longitude_x": 72.8347,
+    "car_percentage": 35.2,
+    "motorcycle_percentage": 55.9,
+    "bus_percentage": 5.9,
+    "truck_percentage": 3.0,
+    "moving_vehicle_percentage": 11.2,
+    "slow_vehicle_percentage": 47.4,
+    "stopped_vehicle_percentage": 41.4,
+    "location_name_y": "Pilsen - 18th St & Ashland Ave",
+    "city_y": "Chicago",
+    "latitude_y": 41.8579,
+    "longitude_y": -87.6663,
+    "predicted_risk_probability": 0.7455,
+    "risk_score": 74.5484,
+    "population_exposure_score": 98.6996,
+    "vehicle_exposure_score": 73.632,
+    "temporal_trend_score": 0.0,
+    "priority_score": 69.2206,
+    "priority_rank": 4,
+    "priority_level": "HIGH",
+    "risk_prob": 0.7455
   }
 }

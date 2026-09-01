@@ -1,155 +1,221 @@
 {
   "zone_id": "Zone_30",
-  "location_name": "Portage Park - Six-Corners (Milwaukee / Irving / Cicero)",
-  "city": "Chicago",
-  "zone_type": "Six-Way Complex Crossroads",
+  "location_name": "Zone_30",
+  "city": "",
+  "zone_type": "Highway_Junction",
   "week": 5,
-  "latitude": 41.9542,
-  "longitude": -87.7478,
+  "latitude": 0.0,
+  "longitude": 0.0,
   "risk_analysis": {
-    "predicted_risk_probability": 0.95,
-    "predicted_risk_percentage": 95.0,
-    "risk_label": "CRITICAL RISK",
-    "risk_color": "#ef4444",
-    "risk_delta_vs_prev_week": -63.0,
-    "actual_incident": 1
+    "predicted_risk_probability": 0.3814,
+    "predicted_risk_percentage": 38.14,
+    "risk_label": "MODERATE RISK",
+    "risk_color": "#eab308",
+    "risk_delta_vs_prev_week": null,
+    "actual_incident": 0
   },
   "priority": {
-    "priority_score": 75.75,
-    "priority_rank": 1,
-    "priority_level": "CRITICAL",
+    "priority_score": 32.464,
+    "priority_rank": 36,
+    "priority_level": "LOW",
     "components": {
-      "risk_score": 95.0,
-      "population_exposure_score": 65.0,
-      "vehicle_exposure_score": 100.0,
-      "temporal_trend_score": 10.0
+      "risk_score": 38.1387,
+      "population_exposure_score": 7.8095,
+      "vehicle_exposure_score": 22.1254,
+      "temporal_trend_score": 72.2071
     },
     "explanation": {
-      "priority_level": "CRITICAL",
-      "priority_score": 75.75,
-      "assessment": "Corridor in 16th District - Jefferson Park exhibits critical traffic hazard priority driven by Chicago crash history."
+      "priority_level": "LOW",
+      "priority_score": 32.5,
+      "top_contributors": [
+        {
+          "factor": "Worsening Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "72/100",
+          "impact": "HIGH",
+          "detail": "4-week congestion trend is actively worsening \u2014 conditions deteriorating",
+          "weight": 72.2071
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "38/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 38.1387
+        }
+      ],
+      "total_factors": 2,
+      "assessment": "This zone is currently within acceptable safety parameters. Routine monitoring is sufficient."
     }
   },
   "telemetry": {
-    "congestion": 100.0,
-    "congestion_delta": 0.0,
-    "average_speed_kmh": 48.3,
-    "speed_delta": 0.0,
-    "vehicle_density": 120.0,
-    "density_delta": 0.0,
-    "population_density": 8500,
-    "red_light_violations": 18,
-    "weather": "CLEAR",
+    "congestion": 10.39,
+    "congestion_delta": 0.84,
+    "average_speed_kmh": 55.51,
+    "speed_delta": -0.93,
+    "vehicle_density": 14.22,
+    "density_delta": 5.56,
+    "population_density": 2448,
+    "red_light_violations": 7,
+    "weather": "Light Rain",
     "special_event": 0
   },
   "signal_optimization": {
-    "base_green_seconds": 35,
-    "recommended_green_seconds": 72,
-    "change_seconds": 37,
-    "change_percent": 105.7,
-    "urgency": "CRITICAL",
-    "reason": "Severe congestion requires significantly extended green phase",
+    "base_green_seconds": 50,
+    "recommended_green_seconds": 48,
+    "change_seconds": -2,
+    "change_percent": -4.0,
+    "urgency": "NOMINAL",
+    "reason": "Current default timing is adequate",
     "factors": {
-      "congestion_factor": 1.8,
-      "density_factor": 1.4,
-      "speed_factor": 0.82,
+      "congestion_factor": 1.08,
+      "density_factor": 1.06,
+      "speed_factor": 0.79,
       "event_boost": 1.0,
-      "weather_boost": 1.0
+      "weather_boost": 1.08
     }
   },
   "environmental_impact": {
-    "total_co2_kg_per_week": 71274.2,
-    "total_co2_tonnes_per_year": 3706.26,
-    "idle_co2_kg": 62928.0,
-    "moving_co2_kg": 8346.2,
-    "potential_savings_kg_per_week": 18878.4,
-    "potential_savings_tonnes_per_year": 981.68,
-    "trees_equivalent_per_year": 46746,
-    "fuel_saved_liters_per_week": 8172.5,
-    "citizens_impacted": 17000,
-    "optimization_factor_pct": 30.0
+    "total_co2_kg_per_week": 19149.8,
+    "total_co2_tonnes_per_year": 995.79,
+    "idle_co2_kg": 815.6,
+    "moving_co2_kg": 18334.2,
+    "potential_savings_kg_per_week": 171.6,
+    "potential_savings_tonnes_per_year": 8.92,
+    "trees_equivalent_per_year": 424,
+    "fuel_saved_liters_per_week": 74.3,
+    "citizens_impacted": 4896,
+    "optimization_factor_pct": 21.0
   },
   "interventions": [
     {
-      "title": "Deploy Speed Calming & Signal Synchronization on Six-Corners (Milwaukee / Irving / Cicero)",
-      "type": "MUNICIPAL_CORRIDOR_CALMING",
-      "priority": "CRITICAL",
-      "target_reduction": "18% collision frequency reduction"
-    },
-    {
-      "title": "Pedestrian Crosswalk High-Visibility Illumination & Turn Signal Audit",
-      "type": "INFRASTRUCTURE_SAFETY",
-      "priority": "MODERATE",
-      "target_reduction": "Eliminate left-turn crossing conflicts"
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "No specific risk indicators triggered.",
+      "action": "Continue routine monitoring."
     }
   ],
-  "executive_briefing": "Chicago Police Beat 1631 (Portage Park - Six-Corners (Milwaukee / Irving / Cicero)) logged 9 collisions in week 5. Current risk score is 95%, with upcoming risk forecast at 32%.",
+  "executive_briefing": "Zone_30 shows elevated risk at 38%. Continue routine monitoring. Optimizing signals could save 172 kg CO2/week, equivalent to 424 trees/year.",
   "civilian_road_safety_radar": {
     "current_week": {
-      "period": "2024-W05",
-      "date_range": "Jan 29 - Feb 04, 2024",
-      "risk_score": 95.0,
-      "risk_percentage": "95%",
-      "risk_badge": "[HIGH RISK ALERT]",
-      "risk_color": "#ef4444",
-      "description": "Elevated collision activity recorded recently. Extra vigilance recommended.",
-      "crashes_reported": 9,
-      "crashes_rolling4w_avg": 9.5,
-      "dominant_weather": "CLEAR"
+      "week": 5,
+      "risk_score": 38.1,
+      "risk_percentage": "38%",
+      "risk_badge": "MODERATE RISK",
+      "risk_color": "#eab308",
+      "description": "Corridor operating within normal baseline.",
+      "crashes_reported": 0
     },
     "upcoming_week": {
-      "period": "2024-W06",
-      "predicted_risk_probability": 0.32,
-      "predicted_risk_percentage": "32%",
-      "predicted_risk_badge": "[PREDICTED: SAFE CORRIDOR]",
-      "risk_color": "#22c55e",
+      "predicted_risk_probability": 0.3572,
+      "predicted_risk_percentage": "36%",
+      "predicted_risk_badge": "MODERATE RISK",
+      "risk_color": "#eab308",
       "description": "Forecast models project normal baseline traffic conditions.",
-      "trend_label": "[TREND: COOLING DOWN]",
-      "trend_color": "#22c55e",
-      "trend_percentage_change": "-63%"
+      "trend_label": "[TREND: STABLE]"
     },
     "why_accidents_might_happen": {
       "primary_collision_cause": {
-        "title": "Failing to Yield Right-of-Way",
-        "explanation": "Drivers turning left across oncoming traffic or turning on yellow without checking cross-traffic and crossing pedestrians.",
-        "historical_frequency_pct": 34.2
+        "title": "Congestion Bottleneck & Merge Conflicts",
+        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
       },
       "behavior_factor": {
-        "title": "Tailgating & Sudden Braking",
-        "explanation": "High-density commuter queues cause rear-end collisions when drivers follow too closely during rush hours.",
-        "risk_level": "ELEVATED"
+        "title": "Tailgating & Speed Variance",
+        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
       },
       "street_environment": {
-        "posted_speed_limit_mph": 30.0,
-        "intersection_crossroad_density_pct": 48.5,
-        "title": "30 mph Zone | 49% Crossroad Density",
-        "explanation": "Frequent signalized crossroads combined with multi-lane traffic flow increase conflict points at peak times."
+        "zone_type": "Highway_Junction",
+        "average_speed_kmh": 55.51,
+        "congestion_level": 10.39
       }
     },
     "civilian_safety_guide": {
       "for_drivers": {
         "action": "Increase Following Distance",
-        "details": "Maintain at least 3 car lengths of space behind the vehicle ahead. Avoid tailgating near transit stops and expressway exit ramps where sudden stops occur.",
-        "key_tip": "Leave 3-4 car lengths buffer on commercial transit corridors"
+        "details": "Maintain 3 car lengths buffer during peak rush hours."
       },
       "for_pedestrians_and_cyclists": {
-        "action": "Double-Check Turning Cars",
-        "details": "Make eye contact with drivers turning right on red before stepping into crosswalks. Use reflective gear or activate bicycle lights after dusk.",
-        "key_tip": "Never assume a turning driver has seen you at green lights"
+        "action": "Double-Check Turning Vehicles",
+        "details": "Make eye contact with turning drivers at intersections before crossing."
       },
       "peak_danger_windows": {
-        "primary_peak": "4:30 PM - 7:30 PM Weekdays (Evening Commute Congestion)",
-        "secondary_peak": "10:00 PM - 2:00 AM Friday & Saturday (Reduced Lighting & Speed Variance)",
-        "details": "Evening rush hours experience 3x higher collision rates than midday. Exercise maximum patience during heavy congestion."
+        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
+        "details": "Congestion peaks during evening travel windows."
       }
     }
   },
   "raw_metrics": {
     "zone_id": "Zone_30",
-    "chicago_beat": "1631",
     "week": 5,
-    "crashes": 9,
-    "rolling4w_avg": 9.5,
-    "speed_mph": 30.0
+    "zone_type": "Highway_Junction",
+    "temporal_profile": "GRADUAL_DETERIORATION",
+    "population_density": 2448,
+    "road_capacity": 66,
+    "effective_road_capacity": 54.65,
+    "vehicle_density": 14.22,
+    "traffic_pressure": 0.26,
+    "congestion": 10.39,
+    "average_speed": 55.51,
+    "red_light_violations": 7,
+    "weather": "Light Rain",
+    "road_condition": "Moderate",
+    "special_event": 0,
+    "incident_count": 0,
+    "incident_occurred": 0,
+    "previous_week_vehicle_density": 8.66,
+    "previous_week_congestion": 9.55,
+    "previous_week_average_speed": 56.44,
+    "previous_week_red_light_violations": 3.0,
+    "previous_week_incident_count": 0.0,
+    "previous_week_incident_occurred": 0.0,
+    "previous_week_traffic_pressure": 0.158,
+    "rolling_4_week_avg_vehicle_density": 6.74,
+    "rolling_4_week_avg_congestion": 6.84,
+    "rolling_4_week_avg_speed": 61.99,
+    "rolling_4_week_avg_violations": 2.0,
+    "rolling_4_week_incident_count": 2.0,
+    "rolling_4_week_incident_rate": 0.5,
+    "rolling_4_week_avg_traffic_pressure": 0.109,
+    "vehicle_density_change": 5.56,
+    "congestion_change": 0.84,
+    "speed_change": -0.93,
+    "violations_change": 4.0,
+    "traffic_pressure_change": 0.102,
+    "incident_count_change": 0.0,
+    "vehicle_density_pct_change": 64.2,
+    "congestion_pct_change": 8.8,
+    "speed_pct_change": -1.65,
+    "vehicle_population_ratio": 5.809,
+    "congestion_trend_4w": 1.67,
+    "vehicle_density_trend_4w": 1.653,
+    "speed_trend_4w": -2.673,
+    "incident_trend_4w": -0.4,
+    "location_name_x": "Charbagh",
+    "city_x": "Lucknow",
+    "latitude_x": 26.8315,
+    "longitude_x": 80.923,
+    "car_percentage": 41.4,
+    "motorcycle_percentage": 37.7,
+    "bus_percentage": 13.4,
+    "truck_percentage": 7.5,
+    "moving_vehicle_percentage": 89.9,
+    "slow_vehicle_percentage": 8.9,
+    "stopped_vehicle_percentage": 1.2,
+    "location_name_y": "Portage Park - Six-Corners (Milwaukee / Irving / Cicero)",
+    "city_y": "Chicago",
+    "latitude_y": 41.9542,
+    "longitude_y": -87.7478,
+    "predicted_risk_probability": 0.3814,
+    "risk_score": 38.1387,
+    "population_exposure_score": 7.8095,
+    "vehicle_exposure_score": 22.1254,
+    "temporal_trend_score": 72.2071,
+    "priority_score": 32.464,
+    "priority_rank": 36,
+    "priority_level": "LOW",
+    "risk_prob": 0.3814
   }
 }

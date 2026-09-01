@@ -1,155 +1,229 @@
 {
   "zone_id": "Zone_36",
-  "location_name": "Streeterville - Navy Pier & Grand Ave Promenade",
-  "city": "Chicago",
-  "zone_type": "Lakefront Promenade Gateway",
+  "location_name": "Zone_36",
+  "city": "",
+  "zone_type": "Residential",
   "week": 43,
-  "latitude": 41.892,
-  "longitude": -87.611,
+  "latitude": 0.0,
+  "longitude": 0.0,
   "risk_analysis": {
-    "predicted_risk_probability": 0.95,
-    "predicted_risk_percentage": 95.0,
-    "risk_label": "CRITICAL RISK",
-    "risk_color": "#ef4444",
-    "risk_delta_vs_prev_week": -64.9,
-    "actual_incident": 1
+    "predicted_risk_probability": 0.4557,
+    "predicted_risk_percentage": 45.57,
+    "risk_label": "MODERATE RISK",
+    "risk_color": "#eab308",
+    "risk_delta_vs_prev_week": 6.1201,
+    "actual_incident": 0
   },
   "priority": {
-    "priority_score": 75.33,
-    "priority_rank": 1,
-    "priority_level": "CRITICAL",
+    "priority_score": 61.7311,
+    "priority_rank": 6,
+    "priority_level": "HIGH",
     "components": {
-      "risk_score": 95.0,
-      "population_exposure_score": 65.0,
-      "vehicle_exposure_score": 97.9,
-      "temporal_trend_score": 10.0
+      "risk_score": 45.572,
+      "population_exposure_score": 81.73,
+      "vehicle_exposure_score": 52.1464,
+      "temporal_trend_score": 84.2699
     },
     "explanation": {
-      "priority_level": "CRITICAL",
-      "priority_score": 75.33,
-      "assessment": "Corridor in 18th District - Near North exhibits critical traffic hazard priority driven by Chicago crash history."
+      "priority_level": "HIGH",
+      "priority_score": 61.7,
+      "top_contributors": [
+        {
+          "factor": "Worsening Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "84/100",
+          "impact": "HIGH",
+          "detail": "4-week congestion trend is actively worsening \u2014 conditions deteriorating",
+          "weight": 84.2699
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "82/100",
+          "impact": "HIGH",
+          "detail": "High population density zone \u2014 12737 residents/km\u00b2",
+          "weight": 81.73
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "46/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 45.572
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone shows significant risk elevation driven by Worsening Trend, Population Exposure. Proactive intervention should be scheduled within the current planning cycle."
     }
   },
   "telemetry": {
-    "congestion": 100.0,
-    "congestion_delta": 0.0,
-    "average_speed_kmh": 48.3,
-    "speed_delta": 0.0,
-    "vehicle_density": 117.5,
-    "density_delta": 0.0,
-    "population_density": 8500,
-    "red_light_violations": 22,
-    "weather": "CLEAR",
+    "congestion": 34.81,
+    "congestion_delta": -2.86,
+    "average_speed_kmh": 56.11,
+    "speed_delta": 1.94,
+    "vehicle_density": 38.96,
+    "density_delta": -3.69,
+    "population_density": 12737,
+    "red_light_violations": 6,
+    "weather": "Normal",
     "special_event": 0
   },
   "signal_optimization": {
-    "base_green_seconds": 35,
-    "recommended_green_seconds": 72,
-    "change_seconds": 37,
-    "change_percent": 105.7,
-    "urgency": "CRITICAL",
-    "reason": "Severe congestion requires significantly extended green phase",
+    "base_green_seconds": 30,
+    "recommended_green_seconds": 35,
+    "change_seconds": 5,
+    "change_percent": 16.7,
+    "urgency": "MODERATE",
+    "reason": "Slight adjustment for current conditions",
     "factors": {
-      "congestion_factor": 1.8,
-      "density_factor": 1.4,
-      "speed_factor": 0.82,
+      "congestion_factor": 1.28,
+      "density_factor": 1.16,
+      "speed_factor": 0.79,
       "event_boost": 1.0,
       "weather_boost": 1.0
     }
   },
   "environmental_impact": {
-    "total_co2_kg_per_week": 69789.4,
-    "total_co2_tonnes_per_year": 3629.05,
-    "idle_co2_kg": 61617.0,
-    "moving_co2_kg": 8172.4,
-    "potential_savings_kg_per_week": 18485.1,
-    "potential_savings_tonnes_per_year": 961.23,
-    "trees_equivalent_per_year": 45772,
-    "fuel_saved_liters_per_week": 8002.2,
-    "citizens_impacted": 17000,
-    "optimization_factor_pct": 30.0
+    "total_co2_kg_per_week": 44424.4,
+    "total_co2_tonnes_per_year": 2310.07,
+    "idle_co2_kg": 7486.2,
+    "moving_co2_kg": 36938.2,
+    "potential_savings_kg_per_week": 1757.8,
+    "potential_savings_tonnes_per_year": 91.41,
+    "trees_equivalent_per_year": 4352,
+    "fuel_saved_liters_per_week": 761.0,
+    "citizens_impacted": 25474,
+    "optimization_factor_pct": 23.5
   },
   "interventions": [
     {
-      "title": "Deploy Speed Calming & Signal Synchronization on Navy Pier & Grand Ave Promenade",
-      "type": "MUNICIPAL_CORRIDOR_CALMING",
-      "priority": "CRITICAL",
-      "target_reduction": "18% collision frequency reduction"
-    },
-    {
-      "title": "Pedestrian Crosswalk High-Visibility Illumination & Turn Signal Audit",
-      "type": "INFRASTRUCTURE_SAFETY",
-      "priority": "MODERATE",
-      "target_reduction": "Eliminate left-turn crossing conflicts"
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "No specific risk indicators triggered.",
+      "action": "Continue routine monitoring."
     }
   ],
-  "executive_briefing": "Chicago Police Beat 1832 (Streeterville - Navy Pier & Grand Ave Promenade) logged 11 collisions in week 43. Current risk score is 95%, with upcoming risk forecast at 30%.",
+  "executive_briefing": "Zone_36 shows elevated risk at 46%. Continue routine monitoring. Optimizing signals could save 1758 kg CO2/week, equivalent to 4352 trees/year.",
   "civilian_road_safety_radar": {
     "current_week": {
-      "period": "2024-W43",
-      "date_range": "Oct 21 - Oct 27, 2024",
-      "risk_score": 95.0,
-      "risk_percentage": "95%",
-      "risk_badge": "[HIGH RISK ALERT]",
-      "risk_color": "#ef4444",
-      "description": "Elevated collision activity recorded recently. Extra vigilance recommended.",
-      "crashes_reported": 11,
-      "crashes_rolling4w_avg": 7.75,
-      "dominant_weather": "CLEAR"
+      "week": 43,
+      "risk_score": 45.6,
+      "risk_percentage": "46%",
+      "risk_badge": "MODERATE RISK",
+      "risk_color": "#eab308",
+      "description": "Corridor operating within normal baseline.",
+      "crashes_reported": 0
     },
     "upcoming_week": {
-      "period": "2024-W44",
-      "predicted_risk_probability": 0.301,
-      "predicted_risk_percentage": "30%",
-      "predicted_risk_badge": "[PREDICTED: SAFE CORRIDOR]",
-      "risk_color": "#22c55e",
+      "predicted_risk_probability": 0.5164,
+      "predicted_risk_percentage": "52%",
+      "predicted_risk_badge": "MODERATE RISK",
+      "risk_color": "#eab308",
       "description": "Forecast models project normal baseline traffic conditions.",
-      "trend_label": "[TREND: COOLING DOWN]",
-      "trend_color": "#22c55e",
-      "trend_percentage_change": "-65%"
+      "trend_label": "[TREND: INCREASING HAZARD]"
     },
     "why_accidents_might_happen": {
       "primary_collision_cause": {
-        "title": "Failing to Yield Right-of-Way",
-        "explanation": "Drivers turning left across oncoming traffic or turning on yellow without checking cross-traffic and crossing pedestrians.",
-        "historical_frequency_pct": 34.2
+        "title": "Congestion Bottleneck & Merge Conflicts",
+        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
       },
       "behavior_factor": {
-        "title": "Tailgating & Sudden Braking",
-        "explanation": "High-density commuter queues cause rear-end collisions when drivers follow too closely during rush hours.",
-        "risk_level": "ELEVATED"
+        "title": "Tailgating & Speed Variance",
+        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
       },
       "street_environment": {
-        "posted_speed_limit_mph": 30.0,
-        "intersection_crossroad_density_pct": 48.5,
-        "title": "30 mph Zone | 49% Crossroad Density",
-        "explanation": "Frequent signalized crossroads combined with multi-lane traffic flow increase conflict points at peak times."
+        "zone_type": "Residential",
+        "average_speed_kmh": 56.11,
+        "congestion_level": 34.81
       }
     },
     "civilian_safety_guide": {
       "for_drivers": {
         "action": "Increase Following Distance",
-        "details": "Maintain at least 3 car lengths of space behind the vehicle ahead. Avoid tailgating near transit stops and expressway exit ramps where sudden stops occur.",
-        "key_tip": "Leave 3-4 car lengths buffer on commercial transit corridors"
+        "details": "Maintain 3 car lengths buffer during peak rush hours."
       },
       "for_pedestrians_and_cyclists": {
-        "action": "Double-Check Turning Cars",
-        "details": "Make eye contact with drivers turning right on red before stepping into crosswalks. Use reflective gear or activate bicycle lights after dusk.",
-        "key_tip": "Never assume a turning driver has seen you at green lights"
+        "action": "Double-Check Turning Vehicles",
+        "details": "Make eye contact with turning drivers at intersections before crossing."
       },
       "peak_danger_windows": {
-        "primary_peak": "4:30 PM - 7:30 PM Weekdays (Evening Commute Congestion)",
-        "secondary_peak": "10:00 PM - 2:00 AM Friday & Saturday (Reduced Lighting & Speed Variance)",
-        "details": "Evening rush hours experience 3x higher collision rates than midday. Exercise maximum patience during heavy congestion."
+        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
+        "details": "Congestion peaks during evening travel windows."
       }
     }
   },
   "raw_metrics": {
     "zone_id": "Zone_36",
-    "chicago_beat": "1832",
     "week": 43,
-    "crashes": 11,
-    "rolling4w_avg": 7.75,
-    "speed_mph": 30.0
+    "zone_type": "Residential",
+    "temporal_profile": "PERIODIC_SPIKE",
+    "population_density": 12737,
+    "road_capacity": 62,
+    "effective_road_capacity": 62.0,
+    "vehicle_density": 38.96,
+    "traffic_pressure": 0.628,
+    "congestion": 34.81,
+    "average_speed": 56.11,
+    "red_light_violations": 6,
+    "weather": "Normal",
+    "road_condition": "Good",
+    "special_event": 0,
+    "incident_count": 0,
+    "incident_occurred": 0,
+    "previous_week_vehicle_density": 42.65,
+    "previous_week_congestion": 37.67,
+    "previous_week_average_speed": 54.17,
+    "previous_week_red_light_violations": 2.0,
+    "previous_week_incident_count": 0.0,
+    "previous_week_incident_occurred": 0.0,
+    "previous_week_traffic_pressure": 0.688,
+    "rolling_4_week_avg_vehicle_density": 37.2,
+    "rolling_4_week_avg_congestion": 35.32,
+    "rolling_4_week_avg_speed": 52.72,
+    "rolling_4_week_avg_violations": 4.0,
+    "rolling_4_week_incident_count": 2.0,
+    "rolling_4_week_incident_rate": 0.5,
+    "rolling_4_week_avg_traffic_pressure": 0.648,
+    "vehicle_density_change": -3.69,
+    "congestion_change": -2.86,
+    "speed_change": 1.94,
+    "violations_change": 4.0,
+    "traffic_pressure_change": -0.06,
+    "incident_count_change": -1.0,
+    "vehicle_density_pct_change": -8.65,
+    "congestion_pct_change": -7.59,
+    "speed_pct_change": 3.58,
+    "vehicle_population_ratio": 3.059,
+    "congestion_trend_4w": 4.482,
+    "vehicle_density_trend_4w": 3.301,
+    "speed_trend_4w": -2.262,
+    "incident_trend_4w": -0.2,
+    "location_name_x": "Rajajipuram",
+    "city_x": "Lucknow",
+    "latitude_x": 26.833,
+    "longitude_x": 80.89,
+    "car_percentage": 36.2,
+    "motorcycle_percentage": 54.0,
+    "bus_percentage": 4.7,
+    "truck_percentage": 5.1,
+    "moving_vehicle_percentage": 83.6,
+    "slow_vehicle_percentage": 19.6,
+    "stopped_vehicle_percentage": 0.0,
+    "location_name_y": "Streeterville - Navy Pier & Grand Ave Promenade",
+    "city_y": "Chicago",
+    "latitude_y": 41.892,
+    "longitude_y": -87.611,
+    "predicted_risk_probability": 0.4557,
+    "risk_score": 45.572,
+    "population_exposure_score": 81.73,
+    "vehicle_exposure_score": 52.1464,
+    "temporal_trend_score": 84.2699,
+    "priority_score": 61.7311,
+    "priority_rank": 6,
+    "priority_level": "HIGH",
+    "risk_prob": 0.4557
   }
 }

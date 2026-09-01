@@ -1,155 +1,213 @@
 {
   "zone_id": "Zone_18",
-  "location_name": "Englewood - 63rd St & Halsted St",
-  "city": "Chicago",
-  "zone_type": "Arterial Transit Center",
+  "location_name": "Zone_18",
+  "city": "",
+  "zone_type": "Industrial_Corridor",
   "week": 29,
-  "latitude": 41.7797,
-  "longitude": -87.6444,
+  "latitude": 0.0,
+  "longitude": 0.0,
   "risk_analysis": {
-    "predicted_risk_probability": 0.95,
-    "predicted_risk_percentage": 95.0,
-    "risk_label": "CRITICAL RISK",
-    "risk_color": "#ef4444",
-    "risk_delta_vs_prev_week": -68.5,
-    "actual_incident": 1
+    "predicted_risk_probability": 0.2659,
+    "predicted_risk_percentage": 26.59,
+    "risk_label": "LOW RISK",
+    "risk_color": "#22c55e",
+    "risk_delta_vs_prev_week": 4.8012,
+    "actual_incident": 0
   },
   "priority": {
-    "priority_score": 73.67,
-    "priority_rank": 1,
-    "priority_level": "CRITICAL",
+    "priority_score": 23.1075,
+    "priority_rank": 43,
+    "priority_level": "LOW",
     "components": {
-      "risk_score": 95.0,
-      "population_exposure_score": 65.0,
-      "vehicle_exposure_score": 89.6,
-      "temporal_trend_score": 10.0
+      "risk_score": 26.5901,
+      "population_exposure_score": 13.8947,
+      "vehicle_exposure_score": 10.0673,
+      "temporal_trend_score": 46.5619
     },
     "explanation": {
-      "priority_level": "CRITICAL",
-      "priority_score": 73.67,
-      "assessment": "Corridor in 07th District - Englewood exhibits critical traffic hazard priority driven by Chicago crash history."
+      "priority_level": "LOW",
+      "priority_score": 23.1,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "27/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 26.5901
+        }
+      ],
+      "total_factors": 1,
+      "assessment": "This zone is currently within acceptable safety parameters. Routine monitoring is sufficient."
     }
   },
   "telemetry": {
-    "congestion": 100.0,
-    "congestion_delta": 0.0,
-    "average_speed_kmh": 48.3,
-    "speed_delta": 0.0,
-    "vehicle_density": 107.5,
-    "density_delta": 0.0,
-    "population_density": 8500,
-    "red_light_violations": 10,
-    "weather": "CLEAR",
+    "congestion": 4.99,
+    "congestion_delta": 0.43,
+    "average_speed_kmh": 62.62,
+    "speed_delta": -0.5,
+    "vehicle_density": 6.58,
+    "density_delta": -0.15,
+    "population_density": 3295,
+    "red_light_violations": 1,
+    "weather": "Normal",
     "special_event": 0
   },
   "signal_optimization": {
-    "base_green_seconds": 35,
-    "recommended_green_seconds": 72,
-    "change_seconds": 37,
-    "change_percent": 105.7,
-    "urgency": "CRITICAL",
-    "reason": "Severe congestion requires significantly extended green phase",
+    "base_green_seconds": 45,
+    "recommended_green_seconds": 36,
+    "change_seconds": -9,
+    "change_percent": -20.0,
+    "urgency": "OPTIMIZE",
+    "reason": "Low traffic \u2014 reduce green time to improve cross-traffic flow",
     "factors": {
-      "congestion_factor": 1.8,
-      "density_factor": 1.4,
-      "speed_factor": 0.82,
+      "congestion_factor": 1.04,
+      "density_factor": 1.03,
+      "speed_factor": 0.77,
       "event_boost": 1.0,
       "weather_boost": 1.0
     }
   },
   "environmental_impact": {
-    "total_co2_kg_per_week": 63849.8,
-    "total_co2_tonnes_per_year": 3320.19,
-    "idle_co2_kg": 56373.0,
-    "moving_co2_kg": 7476.8,
-    "potential_savings_kg_per_week": 16911.9,
-    "potential_savings_tonnes_per_year": 879.42,
-    "trees_equivalent_per_year": 41877,
-    "fuel_saved_liters_per_week": 7321.2,
-    "citizens_impacted": 17000,
-    "optimization_factor_pct": 30.0
+    "total_co2_kg_per_week": 10328.4,
+    "total_co2_tonnes_per_year": 537.08,
+    "idle_co2_kg": 181.2,
+    "moving_co2_kg": 10147.1,
+    "potential_savings_kg_per_week": 37.2,
+    "potential_savings_tonnes_per_year": 1.93,
+    "trees_equivalent_per_year": 91,
+    "fuel_saved_liters_per_week": 16.1,
+    "citizens_impacted": 6590,
+    "optimization_factor_pct": 20.5
   },
   "interventions": [
     {
-      "title": "Deploy Speed Calming & Signal Synchronization on 63rd St & Halsted St",
-      "type": "MUNICIPAL_CORRIDOR_CALMING",
-      "priority": "CRITICAL",
-      "target_reduction": "18% collision frequency reduction"
-    },
-    {
-      "title": "Pedestrian Crosswalk High-Visibility Illumination & Turn Signal Audit",
-      "type": "INFRASTRUCTURE_SAFETY",
-      "priority": "HIGH",
-      "target_reduction": "Eliminate left-turn crossing conflicts"
+      "id": "BASELINE_MONITORING",
+      "name": "Routine Monitoring",
+      "icon": "\ud83d\udcca",
+      "severity": "LOW",
+      "description": "Zone currently within acceptable risk parameters.",
+      "action": "Continue routine monitoring. No immediate intervention required."
     }
   ],
-  "executive_briefing": "Chicago Police Beat 711 (Englewood - 63rd St & Halsted St) logged 5 collisions in week 29. Current risk score is 95%, with upcoming risk forecast at 26%.",
+  "executive_briefing": "Zone_18 is within safe operating parameters (27% risk). Continue routine monitoring. Optimizing signals could save 37 kg CO2/week, equivalent to 91 trees/year.",
   "civilian_road_safety_radar": {
     "current_week": {
-      "period": "2024-W29",
-      "date_range": "Jul 15 - Jul 21, 2024",
-      "risk_score": 95.0,
-      "risk_percentage": "95%",
-      "risk_badge": "[HIGH RISK ALERT]",
-      "risk_color": "#ef4444",
-      "description": "Elevated collision activity recorded recently. Extra vigilance recommended.",
-      "crashes_reported": 5,
-      "crashes_rolling4w_avg": 6.75,
-      "dominant_weather": "CLEAR"
+      "week": 29,
+      "risk_score": 26.6,
+      "risk_percentage": "27%",
+      "risk_badge": "LOW RISK",
+      "risk_color": "#22c55e",
+      "description": "Corridor operating within normal baseline.",
+      "crashes_reported": 0
     },
     "upcoming_week": {
-      "period": "2024-W30",
-      "predicted_risk_probability": 0.265,
-      "predicted_risk_percentage": "26%",
-      "predicted_risk_badge": "[PREDICTED: SAFE CORRIDOR]",
+      "predicted_risk_probability": 0.3052,
+      "predicted_risk_percentage": "31%",
+      "predicted_risk_badge": "LOW RISK",
       "risk_color": "#22c55e",
       "description": "Forecast models project normal baseline traffic conditions.",
-      "trend_label": "[TREND: COOLING DOWN]",
-      "trend_color": "#22c55e",
-      "trend_percentage_change": "-68%"
+      "trend_label": "[TREND: STABLE]"
     },
     "why_accidents_might_happen": {
       "primary_collision_cause": {
-        "title": "Failing to Yield Right-of-Way",
-        "explanation": "Drivers turning left across oncoming traffic or turning on yellow without checking cross-traffic and crossing pedestrians.",
-        "historical_frequency_pct": 34.2
+        "title": "Congestion Bottleneck & Merge Conflicts",
+        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
       },
       "behavior_factor": {
-        "title": "Tailgating & Sudden Braking",
-        "explanation": "High-density commuter queues cause rear-end collisions when drivers follow too closely during rush hours.",
-        "risk_level": "ELEVATED"
+        "title": "Tailgating & Speed Variance",
+        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
       },
       "street_environment": {
-        "posted_speed_limit_mph": 30.0,
-        "intersection_crossroad_density_pct": 48.5,
-        "title": "30 mph Zone | 49% Crossroad Density",
-        "explanation": "Frequent signalized crossroads combined with multi-lane traffic flow increase conflict points at peak times."
+        "zone_type": "Industrial_Corridor",
+        "average_speed_kmh": 62.62,
+        "congestion_level": 4.99
       }
     },
     "civilian_safety_guide": {
       "for_drivers": {
         "action": "Increase Following Distance",
-        "details": "Maintain at least 3 car lengths of space behind the vehicle ahead. Avoid tailgating near transit stops and expressway exit ramps where sudden stops occur.",
-        "key_tip": "Leave 3-4 car lengths buffer on commercial transit corridors"
+        "details": "Maintain 3 car lengths buffer during peak rush hours."
       },
       "for_pedestrians_and_cyclists": {
-        "action": "Double-Check Turning Cars",
-        "details": "Make eye contact with drivers turning right on red before stepping into crosswalks. Use reflective gear or activate bicycle lights after dusk.",
-        "key_tip": "Never assume a turning driver has seen you at green lights"
+        "action": "Double-Check Turning Vehicles",
+        "details": "Make eye contact with turning drivers at intersections before crossing."
       },
       "peak_danger_windows": {
-        "primary_peak": "4:30 PM - 7:30 PM Weekdays (Evening Commute Congestion)",
-        "secondary_peak": "10:00 PM - 2:00 AM Friday & Saturday (Reduced Lighting & Speed Variance)",
-        "details": "Evening rush hours experience 3x higher collision rates than midday. Exercise maximum patience during heavy congestion."
+        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
+        "details": "Congestion peaks during evening travel windows."
       }
     }
   },
   "raw_metrics": {
     "zone_id": "Zone_18",
-    "chicago_beat": "711",
     "week": 29,
-    "crashes": 5,
-    "rolling4w_avg": 6.75,
-    "speed_mph": 30.0
+    "zone_type": "Industrial_Corridor",
+    "temporal_profile": "STABLE",
+    "population_density": 3295,
+    "road_capacity": 90,
+    "effective_road_capacity": 90.0,
+    "vehicle_density": 6.58,
+    "traffic_pressure": 0.073,
+    "congestion": 4.99,
+    "average_speed": 62.62,
+    "red_light_violations": 1,
+    "weather": "Normal",
+    "road_condition": "Good",
+    "special_event": 0,
+    "incident_count": 0,
+    "incident_occurred": 0,
+    "previous_week_vehicle_density": 6.73,
+    "previous_week_congestion": 4.56,
+    "previous_week_average_speed": 63.12,
+    "previous_week_red_light_violations": 1.0,
+    "previous_week_incident_count": 0.0,
+    "previous_week_incident_occurred": 0.0,
+    "previous_week_traffic_pressure": 0.075,
+    "rolling_4_week_avg_vehicle_density": 9.12,
+    "rolling_4_week_avg_congestion": 8.74,
+    "rolling_4_week_avg_speed": 64.37,
+    "rolling_4_week_avg_violations": 1.75,
+    "rolling_4_week_incident_count": 0.0,
+    "rolling_4_week_incident_rate": 0.0,
+    "rolling_4_week_avg_traffic_pressure": 0.102,
+    "vehicle_density_change": -0.15,
+    "congestion_change": 0.43,
+    "speed_change": -0.5,
+    "violations_change": 0.0,
+    "traffic_pressure_change": -0.002,
+    "incident_count_change": 0.0,
+    "vehicle_density_pct_change": -2.23,
+    "congestion_pct_change": 9.43,
+    "speed_pct_change": -0.79,
+    "vehicle_population_ratio": 1.997,
+    "congestion_trend_4w": -1.374,
+    "vehicle_density_trend_4w": -0.933,
+    "speed_trend_4w": -0.397,
+    "incident_trend_4w": 0.0,
+    "location_name_x": "Karol Bagh",
+    "city_x": "Delhi",
+    "latitude_x": 28.6514,
+    "longitude_x": 77.1907,
+    "car_percentage": 45.5,
+    "motorcycle_percentage": 37.7,
+    "bus_percentage": 10.7,
+    "truck_percentage": 6.2,
+    "moving_vehicle_percentage": 73.7,
+    "slow_vehicle_percentage": 10.6,
+    "stopped_vehicle_percentage": 15.7,
+    "location_name_y": "Englewood - 63rd St & Halsted St",
+    "city_y": "Chicago",
+    "latitude_y": 41.7797,
+    "longitude_y": -87.6444,
+    "predicted_risk_probability": 0.2659,
+    "risk_score": 26.5901,
+    "population_exposure_score": 13.8947,
+    "vehicle_exposure_score": 10.0673,
+    "temporal_trend_score": 46.5619,
+    "priority_score": 23.1075,
+    "priority_rank": 43,
+    "priority_level": "LOW",
+    "risk_prob": 0.2659
   }
 }

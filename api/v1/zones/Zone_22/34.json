@@ -1,155 +1,261 @@
 {
   "zone_id": "Zone_22",
-  "location_name": "Chinatown - Cermak Rd & Wentworth Ave",
-  "city": "Chicago",
-  "zone_type": "Cultural Commercial Core",
+  "location_name": "Zone_22",
+  "city": "",
+  "zone_type": "University_District",
   "week": 34,
-  "latitude": 41.853,
-  "longitude": -87.6322,
+  "latitude": 0.0,
+  "longitude": 0.0,
   "risk_analysis": {
-    "predicted_risk_probability": 0.95,
-    "predicted_risk_percentage": 95.0,
+    "predicted_risk_probability": 0.8721,
+    "predicted_risk_percentage": 87.21,
     "risk_label": "CRITICAL RISK",
     "risk_color": "#ef4444",
-    "risk_delta_vs_prev_week": -51.2,
+    "risk_delta_vs_prev_week": -1.1062,
     "actual_incident": 1
   },
   "priority": {
-    "priority_score": 75.75,
-    "priority_rank": 1,
-    "priority_level": "CRITICAL",
+    "priority_score": 69.4364,
+    "priority_rank": 7,
+    "priority_level": "HIGH",
     "components": {
-      "risk_score": 95.0,
-      "population_exposure_score": 65.0,
-      "vehicle_exposure_score": 100.0,
-      "temporal_trend_score": 10.0
+      "risk_score": 87.2074,
+      "population_exposure_score": 44.6081,
+      "vehicle_exposure_score": 55.341,
+      "temporal_trend_score": 82.2216
     },
     "explanation": {
-      "priority_level": "CRITICAL",
-      "priority_score": 75.75,
-      "assessment": "Corridor in 01st District - Central exhibits critical traffic hazard priority driven by Chicago crash history."
+      "priority_level": "HIGH",
+      "priority_score": 69.4,
+      "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udd34",
+          "value": "87/100",
+          "impact": "HIGH",
+          "detail": "Model-estimated risk score is in the critical range",
+          "weight": 87.2074
+        },
+        {
+          "factor": "Worsening Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "82/100",
+          "impact": "HIGH",
+          "detail": "4-week congestion trend is actively worsening \u2014 conditions deteriorating",
+          "weight": 82.2216
+        },
+        {
+          "factor": "Speed Anomaly",
+          "icon": "\ud83d\udc0c",
+          "value": "21 km/h",
+          "impact": "HIGH",
+          "detail": "Average speed of 21 km/h indicates near-gridlock conditions",
+          "weight": 79.15
+        },
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "72/100",
+          "impact": "HIGH",
+          "detail": "Congestion index at 72 \u2014 severe traffic flow degradation",
+          "weight": 71.89
+        },
+        {
+          "factor": "Population Exposure",
+          "icon": "\ud83d\udc65",
+          "value": "45/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate population exposure",
+          "weight": 31.2257
+        }
+      ],
+      "total_factors": 5,
+      "assessment": "This zone shows significant risk elevation driven by Risk Score, Worsening Trend. Proactive intervention should be scheduled within the current planning cycle."
     }
   },
   "telemetry": {
-    "congestion": 100.0,
-    "congestion_delta": 0.0,
-    "average_speed_kmh": 48.3,
-    "speed_delta": 0.0,
-    "vehicle_density": 120.0,
-    "density_delta": 0.0,
-    "population_density": 8500,
-    "red_light_violations": 30,
-    "weather": "CLEAR",
+    "congestion": 71.89,
+    "congestion_delta": -17.94,
+    "average_speed_kmh": 20.85,
+    "speed_delta": 9.51,
+    "vehicle_density": 42.18,
+    "density_delta": -5.81,
+    "population_density": 7570,
+    "red_light_violations": 6,
+    "weather": "Heavy Rain",
     "special_event": 0
   },
   "signal_optimization": {
     "base_green_seconds": 35,
-    "recommended_green_seconds": 72,
-    "change_seconds": 37,
-    "change_percent": 105.7,
+    "recommended_green_seconds": 70,
+    "change_seconds": 35,
+    "change_percent": 100.0,
     "urgency": "CRITICAL",
     "reason": "Severe congestion requires significantly extended green phase",
     "factors": {
-      "congestion_factor": 1.8,
-      "density_factor": 1.4,
-      "speed_factor": 0.82,
+      "congestion_factor": 1.58,
+      "density_factor": 1.17,
+      "speed_factor": 0.92,
       "event_boost": 1.0,
-      "weather_boost": 1.0
+      "weather_boost": 1.18
     }
   },
   "environmental_impact": {
-    "total_co2_kg_per_week": 71274.2,
-    "total_co2_tonnes_per_year": 3706.26,
-    "idle_co2_kg": 62928.0,
-    "moving_co2_kg": 8346.2,
-    "potential_savings_kg_per_week": 18878.4,
-    "potential_savings_tonnes_per_year": 981.68,
-    "trees_equivalent_per_year": 46746,
-    "fuel_saved_liters_per_week": 8172.5,
-    "citizens_impacted": 17000,
-    "optimization_factor_pct": 30.0
+    "total_co2_kg_per_week": 29554.0,
+    "total_co2_tonnes_per_year": 1536.81,
+    "idle_co2_kg": 16738.4,
+    "moving_co2_kg": 12815.6,
+    "potential_savings_kg_per_week": 4551.0,
+    "potential_savings_tonnes_per_year": 236.65,
+    "trees_equivalent_per_year": 11269,
+    "fuel_saved_liters_per_week": 1970.1,
+    "citizens_impacted": 15140,
+    "optimization_factor_pct": 27.2
   },
   "interventions": [
     {
-      "title": "Deploy Speed Calming & Signal Synchronization on Cermak Rd & Wentworth Ave",
-      "type": "MUNICIPAL_CORRIDOR_CALMING",
-      "priority": "CRITICAL",
-      "target_reduction": "18% collision frequency reduction"
+      "id": "TREND_URGENT_INSPECTION",
+      "name": "Urgent Safety Inspection",
+      "icon": "\u26a0\ufe0f",
+      "severity": "CRITICAL",
+      "description": "Risk is actively worsening (high temporal trend) with already elevated risk score.",
+      "action": "Deploy immediate field inspection team. Identify root cause of deteriorating safety conditions."
     },
     {
-      "title": "Pedestrian Crosswalk High-Visibility Illumination & Turn Signal Audit",
-      "type": "INFRASTRUCTURE_SAFETY",
-      "priority": "HIGH",
-      "target_reduction": "Eliminate left-turn crossing conflicts"
+      "id": "SIGNAL_OPTIMIZATION",
+      "name": "Traffic Signal Optimization",
+      "icon": "\ud83d\udea6",
+      "severity": "HIGH",
+      "description": "High congestion with low throughput speed indicates signal timing inefficiency.",
+      "action": "Review and optimize signal timing at major intersections in this zone."
+    },
+    {
+      "id": "ROAD_MAINTENANCE",
+      "name": "Road Maintenance Inspection",
+      "icon": "\ud83d\udee3\ufe0f",
+      "severity": "MEDIUM",
+      "description": "Deteriorated road surface combined with elevated risk indicates infrastructure maintenance need.",
+      "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
     }
   ],
-  "executive_briefing": "Chicago Police Beat 131 (Chinatown - Cermak Rd & Wentworth Ave) logged 15 collisions in week 34. Current risk score is 95%, with upcoming risk forecast at 44%.",
+  "executive_briefing": "Zone_22 is in a critical safety state with 87% incident risk. Signal optimization recommended \u2014 congestion at 72/100 with speeds averaging 21 km/h. Optimizing signals could save 4551 kg CO2/week, equivalent to 11269 trees/year.",
   "civilian_road_safety_radar": {
     "current_week": {
-      "period": "2024-W34",
-      "date_range": "Aug 19 - Aug 25, 2024",
-      "risk_score": 95.0,
-      "risk_percentage": "95%",
-      "risk_badge": "[HIGH RISK ALERT]",
+      "week": 34,
+      "risk_score": 87.2,
+      "risk_percentage": "87%",
+      "risk_badge": "CRITICAL RISK",
       "risk_color": "#ef4444",
-      "description": "Elevated collision activity recorded recently. Extra vigilance recommended.",
-      "crashes_reported": 15,
-      "crashes_rolling4w_avg": 13.25,
-      "dominant_weather": "CLEAR"
+      "description": "Elevated collision activity observed.",
+      "crashes_reported": 0
     },
     "upcoming_week": {
-      "period": "2024-W35",
-      "predicted_risk_probability": 0.438,
-      "predicted_risk_percentage": "44%",
-      "predicted_risk_badge": "[PREDICTED: MODERATE CAUTION]",
-      "risk_color": "#f59e0b",
-      "description": "Forecast models project normal baseline traffic conditions.",
-      "trend_label": "[TREND: COOLING DOWN]",
-      "trend_color": "#f59e0b",
-      "trend_percentage_change": "-51%"
+      "predicted_risk_probability": 0.6509,
+      "predicted_risk_percentage": "65%",
+      "predicted_risk_badge": "HIGH RISK",
+      "risk_color": "#f97316",
+      "description": "Forecast models project elevated collision probability.",
+      "trend_label": "[TREND: COOLING DOWN]"
     },
     "why_accidents_might_happen": {
       "primary_collision_cause": {
-        "title": "Failing to Yield Right-of-Way",
-        "explanation": "Drivers turning left across oncoming traffic or turning on yellow without checking cross-traffic and crossing pedestrians.",
-        "historical_frequency_pct": 34.2
+        "title": "Congestion Bottleneck & Merge Conflicts",
+        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
       },
       "behavior_factor": {
-        "title": "Tailgating & Sudden Braking",
-        "explanation": "High-density commuter queues cause rear-end collisions when drivers follow too closely during rush hours.",
-        "risk_level": "ELEVATED"
+        "title": "Tailgating & Speed Variance",
+        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
       },
       "street_environment": {
-        "posted_speed_limit_mph": 30.0,
-        "intersection_crossroad_density_pct": 48.5,
-        "title": "30 mph Zone | 49% Crossroad Density",
-        "explanation": "Frequent signalized crossroads combined with multi-lane traffic flow increase conflict points at peak times."
+        "zone_type": "University_District",
+        "average_speed_kmh": 20.85,
+        "congestion_level": 71.89
       }
     },
     "civilian_safety_guide": {
       "for_drivers": {
         "action": "Increase Following Distance",
-        "details": "Maintain at least 3 car lengths of space behind the vehicle ahead. Avoid tailgating near transit stops and expressway exit ramps where sudden stops occur.",
-        "key_tip": "Leave 3-4 car lengths buffer on commercial transit corridors"
+        "details": "Maintain 3 car lengths buffer during peak rush hours."
       },
       "for_pedestrians_and_cyclists": {
-        "action": "Double-Check Turning Cars",
-        "details": "Make eye contact with drivers turning right on red before stepping into crosswalks. Use reflective gear or activate bicycle lights after dusk.",
-        "key_tip": "Never assume a turning driver has seen you at green lights"
+        "action": "Double-Check Turning Vehicles",
+        "details": "Make eye contact with turning drivers at intersections before crossing."
       },
       "peak_danger_windows": {
-        "primary_peak": "4:30 PM - 7:30 PM Weekdays (Evening Commute Congestion)",
-        "secondary_peak": "10:00 PM - 2:00 AM Friday & Saturday (Reduced Lighting & Speed Variance)",
-        "details": "Evening rush hours experience 3x higher collision rates than midday. Exercise maximum patience during heavy congestion."
+        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
+        "details": "Congestion peaks during evening travel windows."
       }
     }
   },
   "raw_metrics": {
     "zone_id": "Zone_22",
-    "chicago_beat": "131",
     "week": 34,
-    "crashes": 15,
-    "rolling4w_avg": 13.25,
-    "speed_mph": 30.0
+    "zone_type": "University_District",
+    "temporal_profile": "GRADUAL_DETERIORATION",
+    "population_density": 7570,
+    "road_capacity": 76,
+    "effective_road_capacity": 44.46,
+    "vehicle_density": 42.18,
+    "traffic_pressure": 0.949,
+    "congestion": 71.89,
+    "average_speed": 20.85,
+    "red_light_violations": 6,
+    "weather": "Heavy Rain",
+    "road_condition": "Poor",
+    "special_event": 0,
+    "incident_count": 2,
+    "incident_occurred": 1,
+    "previous_week_vehicle_density": 47.99,
+    "previous_week_congestion": 89.83,
+    "previous_week_average_speed": 11.34,
+    "previous_week_red_light_violations": 10.0,
+    "previous_week_incident_count": 2.0,
+    "previous_week_incident_occurred": 1.0,
+    "previous_week_traffic_pressure": 1.079,
+    "rolling_4_week_avg_vehicle_density": 46.62,
+    "rolling_4_week_avg_congestion": 56.73,
+    "rolling_4_week_avg_speed": 35.0,
+    "rolling_4_week_avg_violations": 6.25,
+    "rolling_4_week_incident_count": 5.0,
+    "rolling_4_week_incident_rate": 0.5,
+    "rolling_4_week_avg_traffic_pressure": 0.827,
+    "vehicle_density_change": -5.81,
+    "congestion_change": -17.94,
+    "speed_change": 9.51,
+    "violations_change": -4.0,
+    "traffic_pressure_change": -0.13,
+    "incident_count_change": 2.0,
+    "vehicle_density_pct_change": -12.11,
+    "congestion_pct_change": -19.97,
+    "speed_pct_change": 83.86,
+    "vehicle_population_ratio": 5.572,
+    "congestion_trend_4w": 12.945,
+    "vehicle_density_trend_4w": -0.135,
+    "speed_trend_4w": -9.579,
+    "incident_trend_4w": 0.2,
+    "location_name_x": "Pitampura",
+    "city_x": "Delhi",
+    "latitude_x": 28.7033,
+    "longitude_x": 77.1322,
+    "car_percentage": 46.7,
+    "motorcycle_percentage": 40.1,
+    "bus_percentage": 6.6,
+    "truck_percentage": 6.6,
+    "moving_vehicle_percentage": 17.3,
+    "slow_vehicle_percentage": 49.6,
+    "stopped_vehicle_percentage": 33.1,
+    "location_name_y": "Chinatown - Cermak Rd & Wentworth Ave",
+    "city_y": "Chicago",
+    "latitude_y": 41.853,
+    "longitude_y": -87.6322,
+    "predicted_risk_probability": 0.8721,
+    "risk_score": 87.2074,
+    "population_exposure_score": 44.6081,
+    "vehicle_exposure_score": 55.341,
+    "temporal_trend_score": 82.2216,
+    "priority_score": 69.4364,
+    "priority_rank": 7,
+    "priority_level": "HIGH",
+    "risk_prob": 0.8721
   }
 }

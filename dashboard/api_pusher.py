@@ -192,9 +192,13 @@ def build_static_api():
         for i, row in zone_df.iterrows():
             week = int(row["week"])
             prev_row = zone_df.iloc[i - 1] if i > 0 else None
+            next_row = zone_df.iloc[i + 1] if (i + 1 < len(zone_df)) else None
 
             risk_prob = row["predicted_risk_probability"]
             risk_badge, risk_color = get_risk_badge(risk_prob)
+
+            next_risk = next_row["predicted_risk_probability"] if next_row is not None else risk_prob
+            next_badge, next_color = get_risk_badge(next_risk)
 
             # Compute week-over-week deltas
             prev_risk = prev_row["predicted_risk_probability"] if prev_row is not None else None
@@ -298,6 +302,14 @@ def build_static_api():
                         "risk_color": risk_color,
                         "description": "Elevated collision activity observed." if risk_prob and risk_prob >= 0.55 else "Corridor operating within normal baseline.",
                         "crashes_reported": int(row.get("actual_incident", 0))
+                    },
+                    "upcoming_week": {
+                        "predicted_risk_probability": round(next_risk, 4) if next_risk is not None else None,
+                        "predicted_risk_percentage": f"{round(next_risk * 100.0):.0f}%" if next_risk is not None else "N/A",
+                        "predicted_risk_badge": next_badge,
+                        "risk_color": next_color,
+                        "description": "Forecast models project normal baseline traffic conditions." if (next_risk is None or next_risk < 0.55) else "Forecast models project elevated collision probability.",
+                        "trend_label": "[TREND: INCREASING HAZARD]" if (next_risk and risk_prob and (next_risk - risk_prob) > 0.05) else ("[TREND: COOLING DOWN]" if (next_risk and risk_prob and (risk_prob - next_risk) > 0.05) else "[TREND: STABLE]")
                     },
                     "why_accidents_might_happen": {
                         "primary_collision_cause": {

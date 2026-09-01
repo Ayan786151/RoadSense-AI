@@ -1,155 +1,237 @@
 {
   "zone_id": "Zone_34",
-  "location_name": "Uptown - Broadway & Wilson Ave",
-  "city": "Chicago",
-  "zone_type": "Entertainment & Transit Hub",
+  "location_name": "Zone_34",
+  "city": "",
+  "zone_type": "Industrial_Corridor",
   "week": 49,
-  "latitude": 41.9654,
-  "longitude": -87.6582,
+  "latitude": 0.0,
+  "longitude": 0.0,
   "risk_analysis": {
-    "predicted_risk_probability": 0.95,
-    "predicted_risk_percentage": 95.0,
-    "risk_label": "CRITICAL RISK",
-    "risk_color": "#ef4444",
-    "risk_delta_vs_prev_week": -67.3,
-    "actual_incident": 1
+    "predicted_risk_probability": 0.5729,
+    "predicted_risk_percentage": 57.29,
+    "risk_label": "HIGH RISK",
+    "risk_color": "#f97316",
+    "risk_delta_vs_prev_week": -5.851,
+    "actual_incident": 0
   },
   "priority": {
-    "priority_score": 73.67,
-    "priority_rank": 1,
-    "priority_level": "CRITICAL",
+    "priority_score": 45.1769,
+    "priority_rank": 25,
+    "priority_level": "MODERATE",
     "components": {
-      "risk_score": 95.0,
-      "population_exposure_score": 65.0,
-      "vehicle_exposure_score": 89.6,
-      "temporal_trend_score": 10.0
+      "risk_score": 57.2902,
+      "population_exposure_score": 14.0743,
+      "vehicle_exposure_score": 47.1882,
+      "temporal_trend_score": 62.0305
     },
     "explanation": {
-      "priority_level": "CRITICAL",
-      "priority_score": 73.67,
-      "assessment": "Corridor in 19th District - Town Hall exhibits critical traffic hazard priority driven by Chicago crash history."
+      "priority_level": "MODERATE",
+      "priority_score": 45.2,
+      "top_contributors": [
+        {
+          "factor": "Congestion",
+          "icon": "\ud83d\ude97",
+          "value": "69/100",
+          "impact": "HIGH",
+          "detail": "Congestion index at 69 \u2014 severe traffic flow degradation",
+          "weight": 68.71
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "57/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 57.2902
+        },
+        {
+          "factor": "Rising Trend",
+          "icon": "\ud83d\udcc8",
+          "value": "62/100",
+          "impact": "MEDIUM",
+          "detail": "Slight upward trend in congestion over past 4 weeks",
+          "weight": 37.2183
+        }
+      ],
+      "total_factors": 3,
+      "assessment": "This zone has moderate risk levels with contributing factors: Congestion, Risk Score. Continue monitoring and schedule review if conditions worsen."
     }
   },
   "telemetry": {
-    "congestion": 100.0,
-    "congestion_delta": 0.0,
-    "average_speed_kmh": 48.3,
-    "speed_delta": 0.0,
-    "vehicle_density": 107.5,
-    "density_delta": 0.0,
-    "population_density": 8500,
-    "red_light_violations": 8,
-    "weather": "CLEAR",
+    "congestion": 68.71,
+    "congestion_delta": 15.56,
+    "average_speed_kmh": 34.46,
+    "speed_delta": -14.15,
+    "vehicle_density": 40.88,
+    "density_delta": -4.91,
+    "population_density": 3320,
+    "red_light_violations": 5,
+    "weather": "Light Rain",
     "special_event": 0
   },
   "signal_optimization": {
-    "base_green_seconds": 35,
-    "recommended_green_seconds": 72,
-    "change_seconds": 37,
-    "change_percent": 105.7,
+    "base_green_seconds": 45,
+    "recommended_green_seconds": 76,
+    "change_seconds": 31,
+    "change_percent": 68.9,
     "urgency": "CRITICAL",
     "reason": "Severe congestion requires significantly extended green phase",
     "factors": {
-      "congestion_factor": 1.8,
-      "density_factor": 1.4,
-      "speed_factor": 0.82,
+      "congestion_factor": 1.55,
+      "density_factor": 1.16,
+      "speed_factor": 0.87,
       "event_boost": 1.0,
-      "weather_boost": 1.0
+      "weather_boost": 1.08
     }
   },
   "environmental_impact": {
-    "total_co2_kg_per_week": 63849.8,
-    "total_co2_tonnes_per_year": 3320.19,
-    "idle_co2_kg": 56373.0,
-    "moving_co2_kg": 7476.8,
-    "potential_savings_kg_per_week": 16911.9,
-    "potential_savings_tonnes_per_year": 879.42,
-    "trees_equivalent_per_year": 41877,
-    "fuel_saved_liters_per_week": 7321.2,
-    "citizens_impacted": 17000,
-    "optimization_factor_pct": 30.0
+    "total_co2_kg_per_week": 28199.7,
+    "total_co2_tonnes_per_year": 1466.38,
+    "idle_co2_kg": 15504.9,
+    "moving_co2_kg": 12694.8,
+    "potential_savings_kg_per_week": 4166.3,
+    "potential_savings_tonnes_per_year": 216.65,
+    "trees_equivalent_per_year": 10316,
+    "fuel_saved_liters_per_week": 1803.6,
+    "citizens_impacted": 6640,
+    "optimization_factor_pct": 26.9
   },
   "interventions": [
     {
-      "title": "Deploy Speed Calming & Signal Synchronization on Broadway & Wilson Ave",
-      "type": "MUNICIPAL_CORRIDOR_CALMING",
-      "priority": "CRITICAL",
-      "target_reduction": "18% collision frequency reduction"
+      "id": "SIGNAL_OPTIMIZATION",
+      "name": "Traffic Signal Optimization",
+      "icon": "\ud83d\udea6",
+      "severity": "HIGH",
+      "description": "High congestion with low throughput speed indicates signal timing inefficiency.",
+      "action": "Review and optimize signal timing at major intersections in this zone."
     },
     {
-      "title": "Pedestrian Crosswalk High-Visibility Illumination & Turn Signal Audit",
-      "type": "INFRASTRUCTURE_SAFETY",
-      "priority": "HIGH",
-      "target_reduction": "Eliminate left-turn crossing conflicts"
+      "id": "ROAD_MAINTENANCE",
+      "name": "Road Maintenance Inspection",
+      "icon": "\ud83d\udee3\ufe0f",
+      "severity": "MEDIUM",
+      "description": "Deteriorated road surface combined with elevated risk indicates infrastructure maintenance need.",
+      "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
     }
   ],
-  "executive_briefing": "Chicago Police Beat 1914 (Uptown - Broadway & Wilson Ave) logged 4 collisions in week 49. Current risk score is 95%, with upcoming risk forecast at 28%.",
+  "executive_briefing": "Zone_34 shows elevated risk at 57%. Signal optimization recommended \u2014 congestion at 69/100 with speeds averaging 34 km/h. Optimizing signals could save 4166 kg CO2/week, equivalent to 10316 trees/year.",
   "civilian_road_safety_radar": {
     "current_week": {
-      "period": "2024-W49",
-      "date_range": "Dec 02 - Dec 08, 2024",
-      "risk_score": 95.0,
-      "risk_percentage": "95%",
-      "risk_badge": "[HIGH RISK ALERT]",
-      "risk_color": "#ef4444",
-      "description": "Elevated collision activity recorded recently. Extra vigilance recommended.",
-      "crashes_reported": 4,
-      "crashes_rolling4w_avg": 6.75,
-      "dominant_weather": "CLEAR"
+      "week": 49,
+      "risk_score": 57.3,
+      "risk_percentage": "57%",
+      "risk_badge": "HIGH RISK",
+      "risk_color": "#f97316",
+      "description": "Elevated collision activity observed.",
+      "crashes_reported": 0
     },
     "upcoming_week": {
-      "period": "2024-W50",
-      "predicted_risk_probability": 0.277,
-      "predicted_risk_percentage": "28%",
-      "predicted_risk_badge": "[PREDICTED: SAFE CORRIDOR]",
-      "risk_color": "#22c55e",
-      "description": "Forecast models project normal baseline traffic conditions.",
-      "trend_label": "[TREND: COOLING DOWN]",
-      "trend_color": "#22c55e",
-      "trend_percentage_change": "-67%"
+      "predicted_risk_probability": 0.7886,
+      "predicted_risk_percentage": "79%",
+      "predicted_risk_badge": "CRITICAL RISK",
+      "risk_color": "#ef4444",
+      "description": "Forecast models project elevated collision probability.",
+      "trend_label": "[TREND: INCREASING HAZARD]"
     },
     "why_accidents_might_happen": {
       "primary_collision_cause": {
-        "title": "Failing to Yield Right-of-Way",
-        "explanation": "Drivers turning left across oncoming traffic or turning on yellow without checking cross-traffic and crossing pedestrians.",
-        "historical_frequency_pct": 34.2
+        "title": "Congestion Bottleneck & Merge Conflicts",
+        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
       },
       "behavior_factor": {
-        "title": "Tailgating & Sudden Braking",
-        "explanation": "High-density commuter queues cause rear-end collisions when drivers follow too closely during rush hours.",
-        "risk_level": "ELEVATED"
+        "title": "Tailgating & Speed Variance",
+        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
       },
       "street_environment": {
-        "posted_speed_limit_mph": 30.0,
-        "intersection_crossroad_density_pct": 48.5,
-        "title": "30 mph Zone | 49% Crossroad Density",
-        "explanation": "Frequent signalized crossroads combined with multi-lane traffic flow increase conflict points at peak times."
+        "zone_type": "Industrial_Corridor",
+        "average_speed_kmh": 34.46,
+        "congestion_level": 68.71
       }
     },
     "civilian_safety_guide": {
       "for_drivers": {
         "action": "Increase Following Distance",
-        "details": "Maintain at least 3 car lengths of space behind the vehicle ahead. Avoid tailgating near transit stops and expressway exit ramps where sudden stops occur.",
-        "key_tip": "Leave 3-4 car lengths buffer on commercial transit corridors"
+        "details": "Maintain 3 car lengths buffer during peak rush hours."
       },
       "for_pedestrians_and_cyclists": {
-        "action": "Double-Check Turning Cars",
-        "details": "Make eye contact with drivers turning right on red before stepping into crosswalks. Use reflective gear or activate bicycle lights after dusk.",
-        "key_tip": "Never assume a turning driver has seen you at green lights"
+        "action": "Double-Check Turning Vehicles",
+        "details": "Make eye contact with turning drivers at intersections before crossing."
       },
       "peak_danger_windows": {
-        "primary_peak": "4:30 PM - 7:30 PM Weekdays (Evening Commute Congestion)",
-        "secondary_peak": "10:00 PM - 2:00 AM Friday & Saturday (Reduced Lighting & Speed Variance)",
-        "details": "Evening rush hours experience 3x higher collision rates than midday. Exercise maximum patience during heavy congestion."
+        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
+        "details": "Congestion peaks during evening travel windows."
       }
     }
   },
   "raw_metrics": {
     "zone_id": "Zone_34",
-    "chicago_beat": "1914",
     "week": 49,
-    "crashes": 4,
-    "rolling4w_avg": 6.75,
-    "speed_mph": 30.0
+    "zone_type": "Industrial_Corridor",
+    "temporal_profile": "GRADUAL_DETERIORATION",
+    "population_density": 3320,
+    "road_capacity": 51,
+    "effective_road_capacity": 42.23,
+    "vehicle_density": 40.88,
+    "traffic_pressure": 0.968,
+    "congestion": 68.71,
+    "average_speed": 34.46,
+    "red_light_violations": 5,
+    "weather": "Light Rain",
+    "road_condition": "Moderate",
+    "special_event": 0,
+    "incident_count": 0,
+    "incident_occurred": 0,
+    "previous_week_vehicle_density": 45.79,
+    "previous_week_congestion": 53.15,
+    "previous_week_average_speed": 48.61,
+    "previous_week_red_light_violations": 2.0,
+    "previous_week_incident_count": 2.0,
+    "previous_week_incident_occurred": 1.0,
+    "previous_week_traffic_pressure": 0.898,
+    "rolling_4_week_avg_vehicle_density": 43.76,
+    "rolling_4_week_avg_congestion": 50.61,
+    "rolling_4_week_avg_speed": 50.02,
+    "rolling_4_week_avg_violations": 4.25,
+    "rolling_4_week_incident_count": 6.0,
+    "rolling_4_week_incident_rate": 1.0,
+    "rolling_4_week_avg_traffic_pressure": 0.858,
+    "vehicle_density_change": -4.91,
+    "congestion_change": 15.56,
+    "speed_change": -14.15,
+    "violations_change": 3.0,
+    "traffic_pressure_change": 0.07,
+    "incident_count_change": 1.0,
+    "vehicle_density_pct_change": -10.72,
+    "congestion_pct_change": 29.28,
+    "speed_pct_change": -29.11,
+    "vehicle_population_ratio": 12.313,
+    "congestion_trend_4w": -0.545,
+    "vehicle_density_trend_4w": 1.141,
+    "speed_trend_4w": 0.847,
+    "incident_trend_4w": 0.0,
+    "location_name_x": "Chinhat",
+    "city_x": "Lucknow",
+    "latitude_x": 26.884,
+    "longitude_x": 81.05,
+    "car_percentage": 41.9,
+    "motorcycle_percentage": 37.7,
+    "bus_percentage": 14.1,
+    "truck_percentage": 6.3,
+    "moving_vehicle_percentage": 17.1,
+    "slow_vehicle_percentage": 39.6,
+    "stopped_vehicle_percentage": 43.3,
+    "location_name_y": "Uptown - Broadway & Wilson Ave",
+    "city_y": "Chicago",
+    "latitude_y": 41.9654,
+    "longitude_y": -87.6582,
+    "predicted_risk_probability": 0.5729,
+    "risk_score": 57.2902,
+    "population_exposure_score": 14.0743,
+    "vehicle_exposure_score": 47.1882,
+    "temporal_trend_score": 62.0305,
+    "priority_score": 45.1769,
+    "priority_rank": 25,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.5729
   }
 }
