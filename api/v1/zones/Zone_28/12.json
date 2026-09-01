@@ -1,213 +1,155 @@
 {
   "zone_id": "Zone_28",
-  "location_name": "Zone_28",
-  "city": "",
-  "zone_type": "Highway_Junction",
+  "location_name": "Rogers Park - Devon Ave & Broadway",
+  "city": "Chicago",
+  "zone_type": "Loyola Lakefront Campus Hub",
   "week": 12,
-  "latitude": 0.0,
-  "longitude": 0.0,
+  "latitude": 41.998,
+  "longitude": -87.6601,
   "risk_analysis": {
-    "predicted_risk_probability": 0.1112,
-    "predicted_risk_percentage": 11.12,
-    "risk_label": "LOW RISK",
-    "risk_color": "#22c55e",
-    "risk_delta_vs_prev_week": -13.7904,
-    "actual_incident": 0
+    "predicted_risk_probability": 0.95,
+    "predicted_risk_percentage": 95.0,
+    "risk_label": "CRITICAL RISK",
+    "risk_color": "#ef4444",
+    "risk_delta_vs_prev_week": -67.2,
+    "actual_incident": 1
   },
   "priority": {
-    "priority_score": 18.8862,
-    "priority_rank": 50,
-    "priority_level": "LOW",
+    "priority_score": 69.09,
+    "priority_rank": 1,
+    "priority_level": "HIGH",
     "components": {
-      "risk_score": 11.1178,
-      "population_exposure_score": 3.4773,
-      "vehicle_exposure_score": 21.8662,
-      "temporal_trend_score": 61.3102
+      "risk_score": 95.0,
+      "population_exposure_score": 65.0,
+      "vehicle_exposure_score": 66.7,
+      "temporal_trend_score": 10.0
     },
     "explanation": {
-      "priority_level": "LOW",
-      "priority_score": 18.9,
-      "top_contributors": [
-        {
-          "factor": "Rising Trend",
-          "icon": "\ud83d\udcc8",
-          "value": "61/100",
-          "impact": "MEDIUM",
-          "detail": "Slight upward trend in congestion over past 4 weeks",
-          "weight": 36.7861
-        },
-        {
-          "factor": "Risk Score",
-          "icon": "\ud83d\udfe2",
-          "value": "11/100",
-          "impact": "LOW",
-          "detail": "Risk score within acceptable range",
-          "weight": 11.1178
-        }
-      ],
-      "total_factors": 2,
-      "assessment": "This zone is currently within acceptable safety parameters. Routine monitoring is sufficient."
+      "priority_level": "HIGH",
+      "priority_score": 69.09,
+      "assessment": "Corridor in 24th District - Rogers Park exhibits high traffic hazard priority driven by Chicago crash history."
     }
   },
   "telemetry": {
-    "congestion": 8.2,
-    "congestion_delta": -3.8,
-    "average_speed_kmh": 63.66,
-    "speed_delta": 2.85,
-    "vehicle_density": 13.99,
-    "density_delta": -1.65,
-    "population_density": 1845,
-    "red_light_violations": 2,
-    "weather": "Normal",
+    "congestion": 89.0,
+    "congestion_delta": 0.0,
+    "average_speed_kmh": 48.3,
+    "speed_delta": 0.0,
+    "vehicle_density": 80.0,
+    "density_delta": 0.0,
+    "population_density": 8500,
+    "red_light_violations": 10,
+    "weather": "CLEAR",
     "special_event": 0
   },
   "signal_optimization": {
-    "base_green_seconds": 50,
-    "recommended_green_seconds": 42,
-    "change_seconds": -8,
-    "change_percent": -16.0,
-    "urgency": "OPTIMIZE",
-    "reason": "Low traffic \u2014 reduce green time to improve cross-traffic flow",
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 64,
+    "change_seconds": 29,
+    "change_percent": 82.9,
+    "urgency": "CRITICAL",
+    "reason": "Severe congestion requires significantly extended green phase",
     "factors": {
-      "congestion_factor": 1.07,
-      "density_factor": 1.06,
-      "speed_factor": 0.76,
+      "congestion_factor": 1.71,
+      "density_factor": 1.32,
+      "speed_factor": 0.82,
       "event_boost": 1.0,
       "weather_boost": 1.0
     }
   },
   "environmental_impact": {
-    "total_co2_kg_per_week": 21824.8,
-    "total_co2_tonnes_per_year": 1134.89,
-    "idle_co2_kg": 633.2,
-    "moving_co2_kg": 21191.5,
-    "potential_savings_kg_per_week": 131.8,
-    "potential_savings_tonnes_per_year": 6.86,
-    "trees_equivalent_per_year": 326,
-    "fuel_saved_liters_per_week": 57.1,
-    "citizens_impacted": 3690,
-    "optimization_factor_pct": 20.8
+    "total_co2_kg_per_week": 51543.6,
+    "total_co2_tonnes_per_year": 2680.26,
+    "idle_co2_kg": 39302.4,
+    "moving_co2_kg": 12241.2,
+    "potential_savings_kg_per_week": 11358.4,
+    "potential_savings_tonnes_per_year": 590.64,
+    "trees_equivalent_per_year": 28125,
+    "fuel_saved_liters_per_week": 4917.1,
+    "citizens_impacted": 17000,
+    "optimization_factor_pct": 28.9
   },
   "interventions": [
     {
-      "id": "BASELINE_MONITORING",
-      "name": "Routine Monitoring",
-      "icon": "\ud83d\udcca",
-      "severity": "LOW",
-      "description": "Zone currently within acceptable risk parameters.",
-      "action": "Continue routine monitoring. No immediate intervention required."
+      "title": "Deploy Speed Calming & Signal Synchronization on Devon Ave & Broadway",
+      "type": "MUNICIPAL_CORRIDOR_CALMING",
+      "priority": "HIGH",
+      "target_reduction": "18% collision frequency reduction"
+    },
+    {
+      "title": "Pedestrian Crosswalk High-Visibility Illumination & Turn Signal Audit",
+      "type": "INFRASTRUCTURE_SAFETY",
+      "priority": "MODERATE",
+      "target_reduction": "Eliminate left-turn crossing conflicts"
     }
   ],
-  "executive_briefing": "Zone_28 is within safe operating parameters (11% risk). Continue routine monitoring. Optimizing signals could save 132 kg CO2/week, equivalent to 326 trees/year.",
+  "executive_briefing": "Chicago Police Beat 2422 (Rogers Park - Devon Ave & Broadway) logged 5 collisions in week 12. Current risk score is 95%, with upcoming risk forecast at 28%.",
   "civilian_road_safety_radar": {
     "current_week": {
-      "week": 12,
-      "risk_score": 11.1,
-      "risk_percentage": "11%",
-      "risk_badge": "LOW RISK",
+      "period": "2024-W12",
+      "date_range": "Mar 18 - Mar 24, 2024",
+      "risk_score": 95.0,
+      "risk_percentage": "95%",
+      "risk_badge": "[HIGH RISK ALERT]",
+      "risk_color": "#ef4444",
+      "description": "Elevated collision activity recorded recently. Extra vigilance recommended.",
+      "crashes_reported": 5,
+      "crashes_rolling4w_avg": 4.0,
+      "dominant_weather": "CLEAR"
+    },
+    "upcoming_week": {
+      "period": "2024-W13",
+      "predicted_risk_probability": 0.278,
+      "predicted_risk_percentage": "28%",
+      "predicted_risk_badge": "[PREDICTED: SAFE CORRIDOR]",
       "risk_color": "#22c55e",
-      "description": "Corridor operating within normal baseline.",
-      "crashes_reported": 0
+      "description": "Forecast models project normal baseline traffic conditions.",
+      "trend_label": "[TREND: COOLING DOWN]",
+      "trend_color": "#22c55e",
+      "trend_percentage_change": "-67%"
     },
     "why_accidents_might_happen": {
       "primary_collision_cause": {
-        "title": "Congestion Bottleneck & Merge Conflicts",
-        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+        "title": "Failing to Yield Right-of-Way",
+        "explanation": "Drivers turning left across oncoming traffic or turning on yellow without checking cross-traffic and crossing pedestrians.",
+        "historical_frequency_pct": 34.2
       },
       "behavior_factor": {
-        "title": "Tailgating & Speed Variance",
-        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+        "title": "Tailgating & Sudden Braking",
+        "explanation": "High-density commuter queues cause rear-end collisions when drivers follow too closely during rush hours.",
+        "risk_level": "ELEVATED"
       },
       "street_environment": {
-        "zone_type": "Highway_Junction",
-        "average_speed_kmh": 63.66,
-        "congestion_level": 8.2
+        "posted_speed_limit_mph": 30.0,
+        "intersection_crossroad_density_pct": 48.5,
+        "title": "30 mph Zone | 49% Crossroad Density",
+        "explanation": "Frequent signalized crossroads combined with multi-lane traffic flow increase conflict points at peak times."
       }
     },
     "civilian_safety_guide": {
       "for_drivers": {
         "action": "Increase Following Distance",
-        "details": "Maintain 3 car lengths buffer during peak rush hours."
+        "details": "Maintain at least 3 car lengths of space behind the vehicle ahead. Avoid tailgating near transit stops and expressway exit ramps where sudden stops occur.",
+        "key_tip": "Leave 3-4 car lengths buffer on commercial transit corridors"
       },
       "for_pedestrians_and_cyclists": {
-        "action": "Double-Check Turning Vehicles",
-        "details": "Make eye contact with turning drivers at intersections before crossing."
+        "action": "Double-Check Turning Cars",
+        "details": "Make eye contact with drivers turning right on red before stepping into crosswalks. Use reflective gear or activate bicycle lights after dusk.",
+        "key_tip": "Never assume a turning driver has seen you at green lights"
       },
       "peak_danger_windows": {
-        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
-        "details": "Congestion peaks during evening travel windows."
+        "primary_peak": "4:30 PM - 7:30 PM Weekdays (Evening Commute Congestion)",
+        "secondary_peak": "10:00 PM - 2:00 AM Friday & Saturday (Reduced Lighting & Speed Variance)",
+        "details": "Evening rush hours experience 3x higher collision rates than midday. Exercise maximum patience during heavy congestion."
       }
     }
   },
   "raw_metrics": {
     "zone_id": "Zone_28",
+    "chicago_beat": "2422",
     "week": 12,
-    "zone_type": "Highway_Junction",
-    "temporal_profile": "PERIODIC_SPIKE",
-    "population_density": 1845,
-    "road_capacity": 83,
-    "effective_road_capacity": 83.0,
-    "vehicle_density": 13.99,
-    "traffic_pressure": 0.169,
-    "congestion": 8.2,
-    "average_speed": 63.66,
-    "red_light_violations": 2,
-    "weather": "Normal",
-    "road_condition": "Good",
-    "special_event": 0,
-    "incident_count": 0,
-    "incident_occurred": 0,
-    "previous_week_vehicle_density": 15.64,
-    "previous_week_congestion": 12.0,
-    "previous_week_average_speed": 60.81,
-    "previous_week_red_light_violations": 10.0,
-    "previous_week_incident_count": 0.0,
-    "previous_week_incident_occurred": 0.0,
-    "previous_week_traffic_pressure": 0.188,
-    "rolling_4_week_avg_vehicle_density": 11.07,
-    "rolling_4_week_avg_congestion": 9.81,
-    "rolling_4_week_avg_speed": 61.13,
-    "rolling_4_week_avg_violations": 4.5,
-    "rolling_4_week_incident_count": 0.0,
-    "rolling_4_week_incident_rate": 0.0,
-    "rolling_4_week_avg_traffic_pressure": 0.138,
-    "vehicle_density_change": -1.65,
-    "congestion_change": -3.8,
-    "speed_change": 2.85,
-    "violations_change": -8.0,
-    "traffic_pressure_change": -0.019,
-    "incident_count_change": 0.0,
-    "vehicle_density_pct_change": -10.55,
-    "congestion_pct_change": -31.67,
-    "speed_pct_change": 4.69,
-    "vehicle_population_ratio": 7.583,
-    "congestion_trend_4w": 1.945,
-    "vehicle_density_trend_4w": 3.585,
-    "speed_trend_4w": -2.032,
-    "incident_trend_4w": 0.0,
-    "location_name_x": "Aliganj",
-    "city_x": "Lucknow",
-    "latitude_x": 26.886,
-    "longitude_x": 80.9462,
-    "car_percentage": 47.4,
-    "motorcycle_percentage": 39.9,
-    "bus_percentage": 10.6,
-    "truck_percentage": 2.1,
-    "moving_vehicle_percentage": 70.9,
-    "slow_vehicle_percentage": 12.0,
-    "stopped_vehicle_percentage": 17.1,
-    "location_name_y": "Aliganj",
-    "city_y": "Lucknow",
-    "latitude_y": 26.886,
-    "longitude_y": 80.9462,
-    "predicted_risk_probability": 0.1112,
-    "risk_score": 11.1178,
-    "population_exposure_score": 3.4773,
-    "vehicle_exposure_score": 21.8662,
-    "temporal_trend_score": 61.3102,
-    "priority_score": 18.8862,
-    "priority_rank": 50,
-    "priority_level": "LOW",
-    "risk_prob": 0.1112
+    "crashes": 5,
+    "rolling4w_avg": 4.0,
+    "speed_mph": 30.0
   }
 }

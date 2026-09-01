@@ -1,237 +1,155 @@
 {
   "zone_id": "Zone_26",
-  "location_name": "Zone_26",
-  "city": "",
-  "zone_type": "University_District",
+  "location_name": "Clearing - 63rd St & Central Ave",
+  "city": "Chicago",
+  "zone_type": "Industrial Logistics Corridor",
   "week": 34,
-  "latitude": 0.0,
-  "longitude": 0.0,
+  "latitude": 41.7785,
+  "longitude": -87.7618,
   "risk_analysis": {
-    "predicted_risk_probability": 0.7278,
-    "predicted_risk_percentage": 72.78,
-    "risk_label": "HIGH RISK",
-    "risk_color": "#f97316",
-    "risk_delta_vs_prev_week": 29.9433,
+    "predicted_risk_probability": 0.95,
+    "predicted_risk_percentage": 95.0,
+    "risk_label": "CRITICAL RISK",
+    "risk_color": "#ef4444",
+    "risk_delta_vs_prev_week": -60.3,
     "actual_incident": 1
   },
   "priority": {
-    "priority_score": 54.9964,
-    "priority_rank": 19,
-    "priority_level": "MODERATE",
+    "priority_score": 75.75,
+    "priority_rank": 1,
+    "priority_level": "CRITICAL",
     "components": {
-      "risk_score": 72.7845,
-      "population_exposure_score": 45.384,
-      "vehicle_exposure_score": 46.5898,
-      "temporal_trend_score": 34.7905
+      "risk_score": 95.0,
+      "population_exposure_score": 65.0,
+      "vehicle_exposure_score": 100.0,
+      "temporal_trend_score": 10.0
     },
     "explanation": {
-      "priority_level": "MODERATE",
-      "priority_score": 55.0,
-      "top_contributors": [
-        {
-          "factor": "Speed Anomaly",
-          "icon": "\ud83d\udc0c",
-          "value": "24 km/h",
-          "impact": "HIGH",
-          "detail": "Average speed of 24 km/h indicates near-gridlock conditions",
-          "weight": 76.07
-        },
-        {
-          "factor": "Risk Score",
-          "icon": "\ud83d\udd34",
-          "value": "73/100",
-          "impact": "HIGH",
-          "detail": "Model-estimated risk score is in the critical range",
-          "weight": 72.7845
-        },
-        {
-          "factor": "Congestion",
-          "icon": "\ud83d\ude97",
-          "value": "64/100",
-          "impact": "MEDIUM",
-          "detail": "Moderate congestion at 64",
-          "weight": 44.849
-        },
-        {
-          "factor": "Population Exposure",
-          "icon": "\ud83d\udc65",
-          "value": "45/100",
-          "impact": "MEDIUM",
-          "detail": "Moderate population exposure",
-          "weight": 31.7688
-        }
-      ],
-      "total_factors": 4,
-      "assessment": "This zone has moderate risk levels with contributing factors: Speed Anomaly, Risk Score. Continue monitoring and schedule review if conditions worsen."
+      "priority_level": "CRITICAL",
+      "priority_score": 75.75,
+      "assessment": "Corridor in 08th District - Chicago Lawn exhibits critical traffic hazard priority driven by Chicago crash history."
     }
   },
   "telemetry": {
-    "congestion": 64.07,
-    "congestion_delta": 39.36,
-    "average_speed_kmh": 23.93,
-    "speed_delta": -24.98,
-    "vehicle_density": 35.88,
-    "density_delta": 0.63,
-    "population_density": 7678,
-    "red_light_violations": 3,
-    "weather": "Heavy Rain",
+    "congestion": 100.0,
+    "congestion_delta": 0.0,
+    "average_speed_kmh": 48.3,
+    "speed_delta": 0.0,
+    "vehicle_density": 120.0,
+    "density_delta": 0.0,
+    "population_density": 8500,
+    "red_light_violations": 26,
+    "weather": "CLEAR",
     "special_event": 0
   },
   "signal_optimization": {
     "base_green_seconds": 35,
-    "recommended_green_seconds": 65,
-    "change_seconds": 30,
-    "change_percent": 85.7,
+    "recommended_green_seconds": 72,
+    "change_seconds": 37,
+    "change_percent": 105.7,
     "urgency": "CRITICAL",
     "reason": "Severe congestion requires significantly extended green phase",
     "factors": {
-      "congestion_factor": 1.51,
-      "density_factor": 1.14,
-      "speed_factor": 0.91,
+      "congestion_factor": 1.8,
+      "density_factor": 1.4,
+      "speed_factor": 0.82,
       "event_boost": 1.0,
-      "weather_boost": 1.18
+      "weather_boost": 1.0
     }
   },
   "environmental_impact": {
-    "total_co2_kg_per_week": 28682.1,
-    "total_co2_tonnes_per_year": 1491.47,
-    "idle_co2_kg": 12689.6,
-    "moving_co2_kg": 15992.5,
-    "potential_savings_kg_per_week": 3350.9,
-    "potential_savings_tonnes_per_year": 174.25,
-    "trees_equivalent_per_year": 8297,
-    "fuel_saved_liters_per_week": 1450.6,
-    "citizens_impacted": 15356,
-    "optimization_factor_pct": 26.4
+    "total_co2_kg_per_week": 71274.2,
+    "total_co2_tonnes_per_year": 3706.26,
+    "idle_co2_kg": 62928.0,
+    "moving_co2_kg": 8346.2,
+    "potential_savings_kg_per_week": 18878.4,
+    "potential_savings_tonnes_per_year": 981.68,
+    "trees_equivalent_per_year": 46746,
+    "fuel_saved_liters_per_week": 8172.5,
+    "citizens_impacted": 17000,
+    "optimization_factor_pct": 30.0
   },
   "interventions": [
     {
-      "id": "SIGNAL_OPTIMIZATION",
-      "name": "Traffic Signal Optimization",
-      "icon": "\ud83d\udea6",
-      "severity": "HIGH",
-      "description": "High congestion with low throughput speed indicates signal timing inefficiency.",
-      "action": "Review and optimize signal timing at major intersections in this zone."
+      "title": "Deploy Speed Calming & Signal Synchronization on 63rd St & Central Ave",
+      "type": "MUNICIPAL_CORRIDOR_CALMING",
+      "priority": "CRITICAL",
+      "target_reduction": "18% collision frequency reduction"
     },
     {
-      "id": "ROAD_MAINTENANCE",
-      "name": "Road Maintenance Inspection",
-      "icon": "\ud83d\udee3\ufe0f",
-      "severity": "MEDIUM",
-      "description": "Deteriorated road surface combined with elevated risk indicates infrastructure maintenance need.",
-      "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
+      "title": "Pedestrian Crosswalk High-Visibility Illumination & Turn Signal Audit",
+      "type": "INFRASTRUCTURE_SAFETY",
+      "priority": "MODERATE",
+      "target_reduction": "Eliminate left-turn crossing conflicts"
     }
   ],
-  "executive_briefing": "Zone_26 is in a critical safety state with 73% incident risk. Signal optimization recommended \u2014 congestion at 64/100 with speeds averaging 24 km/h. Optimizing signals could save 3351 kg CO2/week, equivalent to 8297 trees/year.",
+  "executive_briefing": "Chicago Police Beat 824 (Clearing - 63rd St & Central Ave) logged 13 collisions in week 34. Current risk score is 95%, with upcoming risk forecast at 35%.",
   "civilian_road_safety_radar": {
     "current_week": {
-      "week": 34,
-      "risk_score": 72.8,
-      "risk_percentage": "73%",
-      "risk_badge": "HIGH RISK",
-      "risk_color": "#f97316",
-      "description": "Elevated collision activity observed.",
-      "crashes_reported": 0
+      "period": "2024-W34",
+      "date_range": "Aug 19 - Aug 25, 2024",
+      "risk_score": 95.0,
+      "risk_percentage": "95%",
+      "risk_badge": "[HIGH RISK ALERT]",
+      "risk_color": "#ef4444",
+      "description": "Elevated collision activity recorded recently. Extra vigilance recommended.",
+      "crashes_reported": 13,
+      "crashes_rolling4w_avg": 8.0,
+      "dominant_weather": "CLEAR"
+    },
+    "upcoming_week": {
+      "period": "2024-W35",
+      "predicted_risk_probability": 0.347,
+      "predicted_risk_percentage": "35%",
+      "predicted_risk_badge": "[PREDICTED: SAFE CORRIDOR]",
+      "risk_color": "#22c55e",
+      "description": "Forecast models project normal baseline traffic conditions.",
+      "trend_label": "[TREND: COOLING DOWN]",
+      "trend_color": "#22c55e",
+      "trend_percentage_change": "-60%"
     },
     "why_accidents_might_happen": {
       "primary_collision_cause": {
-        "title": "Congestion Bottleneck & Merge Conflicts",
-        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+        "title": "Failing to Yield Right-of-Way",
+        "explanation": "Drivers turning left across oncoming traffic or turning on yellow without checking cross-traffic and crossing pedestrians.",
+        "historical_frequency_pct": 34.2
       },
       "behavior_factor": {
-        "title": "Tailgating & Speed Variance",
-        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+        "title": "Tailgating & Sudden Braking",
+        "explanation": "High-density commuter queues cause rear-end collisions when drivers follow too closely during rush hours.",
+        "risk_level": "ELEVATED"
       },
       "street_environment": {
-        "zone_type": "University_District",
-        "average_speed_kmh": 23.93,
-        "congestion_level": 64.07
+        "posted_speed_limit_mph": 30.0,
+        "intersection_crossroad_density_pct": 48.5,
+        "title": "30 mph Zone | 49% Crossroad Density",
+        "explanation": "Frequent signalized crossroads combined with multi-lane traffic flow increase conflict points at peak times."
       }
     },
     "civilian_safety_guide": {
       "for_drivers": {
         "action": "Increase Following Distance",
-        "details": "Maintain 3 car lengths buffer during peak rush hours."
+        "details": "Maintain at least 3 car lengths of space behind the vehicle ahead. Avoid tailgating near transit stops and expressway exit ramps where sudden stops occur.",
+        "key_tip": "Leave 3-4 car lengths buffer on commercial transit corridors"
       },
       "for_pedestrians_and_cyclists": {
-        "action": "Double-Check Turning Vehicles",
-        "details": "Make eye contact with turning drivers at intersections before crossing."
+        "action": "Double-Check Turning Cars",
+        "details": "Make eye contact with drivers turning right on red before stepping into crosswalks. Use reflective gear or activate bicycle lights after dusk.",
+        "key_tip": "Never assume a turning driver has seen you at green lights"
       },
       "peak_danger_windows": {
-        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
-        "details": "Congestion peaks during evening travel windows."
+        "primary_peak": "4:30 PM - 7:30 PM Weekdays (Evening Commute Congestion)",
+        "secondary_peak": "10:00 PM - 2:00 AM Friday & Saturday (Reduced Lighting & Speed Variance)",
+        "details": "Evening rush hours experience 3x higher collision rates than midday. Exercise maximum patience during heavy congestion."
       }
     }
   },
   "raw_metrics": {
     "zone_id": "Zone_26",
+    "chicago_beat": "824",
     "week": 34,
-    "zone_type": "University_District",
-    "temporal_profile": "STABLE",
-    "population_density": 7678,
-    "road_capacity": 75,
-    "effective_road_capacity": 43.88,
-    "vehicle_density": 35.88,
-    "traffic_pressure": 0.818,
-    "congestion": 64.07,
-    "average_speed": 23.93,
-    "red_light_violations": 3,
-    "weather": "Heavy Rain",
-    "road_condition": "Poor",
-    "special_event": 0,
-    "incident_count": 2,
-    "incident_occurred": 1,
-    "previous_week_vehicle_density": 35.25,
-    "previous_week_congestion": 24.71,
-    "previous_week_average_speed": 48.91,
-    "previous_week_red_light_violations": 4.0,
-    "previous_week_incident_count": 0.0,
-    "previous_week_incident_occurred": 0.0,
-    "previous_week_traffic_pressure": 0.568,
-    "rolling_4_week_avg_vehicle_density": 28.69,
-    "rolling_4_week_avg_congestion": 21.87,
-    "rolling_4_week_avg_speed": 52.5,
-    "rolling_4_week_avg_violations": 3.25,
-    "rolling_4_week_incident_count": 0.0,
-    "rolling_4_week_incident_rate": 0.0,
-    "rolling_4_week_avg_traffic_pressure": 0.459,
-    "vehicle_density_change": 0.63,
-    "congestion_change": 39.36,
-    "speed_change": -24.98,
-    "violations_change": -1.0,
-    "traffic_pressure_change": 0.25,
-    "incident_count_change": 0.0,
-    "vehicle_density_pct_change": 1.79,
-    "congestion_pct_change": 159.29,
-    "speed_pct_change": -51.07,
-    "vehicle_population_ratio": 4.673,
-    "congestion_trend_4w": -0.053,
-    "vehicle_density_trend_4w": 1.705,
-    "speed_trend_4w": -1.455,
-    "incident_trend_4w": 0.0,
-    "location_name_x": "Hazratganj",
-    "city_x": "Lucknow",
-    "latitude_x": 26.85,
-    "longitude_x": 80.949,
-    "car_percentage": 45.4,
-    "motorcycle_percentage": 42.8,
-    "bus_percentage": 8.0,
-    "truck_percentage": 3.7,
-    "moving_vehicle_percentage": 53.0,
-    "slow_vehicle_percentage": 40.5,
-    "stopped_vehicle_percentage": 6.5,
-    "location_name_y": "Hazratganj",
-    "city_y": "Lucknow",
-    "latitude_y": 26.85,
-    "longitude_y": 80.949,
-    "predicted_risk_probability": 0.7278,
-    "risk_score": 72.7845,
-    "population_exposure_score": 45.384,
-    "vehicle_exposure_score": 46.5898,
-    "temporal_trend_score": 34.7905,
-    "priority_score": 54.9964,
-    "priority_rank": 19,
-    "priority_level": "MODERATE",
-    "risk_prob": 0.7278
+    "crashes": 13,
+    "rolling4w_avg": 8.0,
+    "speed_mph": 30.0
   }
 }

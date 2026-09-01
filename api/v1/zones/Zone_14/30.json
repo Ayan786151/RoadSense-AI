@@ -1,229 +1,155 @@
 {
   "zone_id": "Zone_14",
-  "location_name": "Zone_14",
-  "city": "",
-  "zone_type": "University_District",
+  "location_name": "Bronzeville - 31st St & King Dr Parkway",
+  "city": "Chicago",
+  "zone_type": "Multi-Lane Parkway Corridor",
   "week": 30,
-  "latitude": 0.0,
-  "longitude": 0.0,
+  "latitude": 41.8385,
+  "longitude": -87.6167,
   "risk_analysis": {
-    "predicted_risk_probability": 0.5908,
-    "predicted_risk_percentage": 59.08,
-    "risk_label": "HIGH RISK",
-    "risk_color": "#f97316",
-    "risk_delta_vs_prev_week": 17.5562,
+    "predicted_risk_probability": 0.95,
+    "predicted_risk_percentage": 95.0,
+    "risk_label": "CRITICAL RISK",
+    "risk_color": "#ef4444",
+    "risk_delta_vs_prev_week": -65.0,
     "actual_incident": 1
   },
   "priority": {
-    "priority_score": 61.0456,
-    "priority_rank": 8,
+    "priority_score": 69.09,
+    "priority_rank": 1,
     "priority_level": "HIGH",
     "components": {
-      "risk_score": 59.0788,
-      "population_exposure_score": 66.0249,
-      "vehicle_exposure_score": 89.3772,
-      "temporal_trend_score": 20.2159
+      "risk_score": 95.0,
+      "population_exposure_score": 65.0,
+      "vehicle_exposure_score": 66.7,
+      "temporal_trend_score": 10.0
     },
     "explanation": {
       "priority_level": "HIGH",
-      "priority_score": 61.0,
-      "top_contributors": [
-        {
-          "factor": "Vehicle Density",
-          "icon": "\ud83d\ude99",
-          "value": "89/100",
-          "impact": "HIGH",
-          "detail": "High vehicle density increases collision exposure",
-          "weight": 89.3772
-        },
-        {
-          "factor": "Population Exposure",
-          "icon": "\ud83d\udc65",
-          "value": "66/100",
-          "impact": "HIGH",
-          "detail": "High population density zone \u2014 10551 residents/km\u00b2",
-          "weight": 66.0249
-        },
-        {
-          "factor": "Risk Score",
-          "icon": "\ud83d\udfe1",
-          "value": "59/100",
-          "impact": "MEDIUM",
-          "detail": "Moderate model-estimated risk",
-          "weight": 59.0788
-        },
-        {
-          "factor": "Improving Trend",
-          "icon": "\ud83d\udcc9",
-          "value": "20/100",
-          "impact": "POSITIVE",
-          "detail": "Conditions are improving over past 4 weeks",
-          "weight": -20.2159
-        }
-      ],
-      "total_factors": 4,
-      "assessment": "This zone shows significant risk elevation driven by Vehicle Density, Population Exposure. Proactive intervention should be scheduled within the current planning cycle."
+      "priority_score": 69.09,
+      "assessment": "Corridor in 02nd District - Wentworth exhibits high traffic hazard priority driven by Chicago crash history."
     }
   },
   "telemetry": {
-    "congestion": 32.35,
-    "congestion_delta": 1.19,
-    "average_speed_kmh": 57.85,
-    "speed_delta": 2.87,
-    "vehicle_density": 61.42,
-    "density_delta": 3.33,
-    "population_density": 10551,
-    "red_light_violations": 5,
-    "weather": "Normal",
+    "congestion": 84.0,
+    "congestion_delta": 0.0,
+    "average_speed_kmh": 48.3,
+    "speed_delta": 0.0,
+    "vehicle_density": 80.0,
+    "density_delta": 0.0,
+    "population_density": 8500,
+    "red_light_violations": 8,
+    "weather": "CLEAR",
     "special_event": 0
   },
   "signal_optimization": {
     "base_green_seconds": 35,
-    "recommended_green_seconds": 42,
-    "change_seconds": 7,
-    "change_percent": 20.0,
-    "urgency": "MODERATE",
-    "reason": "Slight adjustment for current conditions",
+    "recommended_green_seconds": 63,
+    "change_seconds": 28,
+    "change_percent": 80.0,
+    "urgency": "CRITICAL",
+    "reason": "Severe congestion requires significantly extended green phase",
     "factors": {
-      "congestion_factor": 1.26,
-      "density_factor": 1.25,
-      "speed_factor": 0.78,
+      "congestion_factor": 1.67,
+      "density_factor": 1.32,
+      "speed_factor": 0.82,
       "event_boost": 1.0,
       "weather_boost": 1.0
     }
   },
   "environmental_impact": {
-    "total_co2_kg_per_week": 73271.9,
-    "total_co2_tonnes_per_year": 3810.14,
-    "idle_co2_kg": 10967.9,
-    "moving_co2_kg": 62304.0,
-    "potential_savings_kg_per_week": 2548.4,
-    "potential_savings_tonnes_per_year": 132.52,
-    "trees_equivalent_per_year": 6310,
-    "fuel_saved_liters_per_week": 1103.2,
-    "citizens_impacted": 21102,
-    "optimization_factor_pct": 23.2
+    "total_co2_kg_per_week": 54899.7,
+    "total_co2_tonnes_per_year": 2854.79,
+    "idle_co2_kg": 37094.4,
+    "moving_co2_kg": 17805.3,
+    "potential_savings_kg_per_week": 10534.8,
+    "potential_savings_tonnes_per_year": 547.81,
+    "trees_equivalent_per_year": 26086,
+    "fuel_saved_liters_per_week": 4560.5,
+    "citizens_impacted": 17000,
+    "optimization_factor_pct": 28.4
   },
   "interventions": [
     {
-      "id": "SPEED_CALMING",
-      "name": "Speed Calming & Enforcement",
-      "icon": "\ud83c\udfce\ufe0f",
-      "severity": "HIGH",
-      "description": "High average speed combined with elevated risk score suggests speed-related hazards.",
-      "action": "Deploy speed calming measures (speed bumps, radar signs) and increase enforcement patrols."
+      "title": "Deploy Speed Calming & Signal Synchronization on 31st St & King Dr Parkway",
+      "type": "MUNICIPAL_CORRIDOR_CALMING",
+      "priority": "HIGH",
+      "target_reduction": "18% collision frequency reduction"
+    },
+    {
+      "title": "Pedestrian Crosswalk High-Visibility Illumination & Turn Signal Audit",
+      "type": "INFRASTRUCTURE_SAFETY",
+      "priority": "MODERATE",
+      "target_reduction": "Eliminate left-turn crossing conflicts"
     }
   ],
-  "executive_briefing": "Zone_14 shows elevated risk at 59%. Continue routine monitoring. Optimizing signals could save 2548 kg CO2/week, equivalent to 6310 trees/year.",
+  "executive_briefing": "Chicago Police Beat 211 (Bronzeville - 31st St & King Dr Parkway) logged 4 collisions in week 30. Current risk score is 95%, with upcoming risk forecast at 30%.",
   "civilian_road_safety_radar": {
     "current_week": {
-      "week": 30,
-      "risk_score": 59.1,
-      "risk_percentage": "59%",
-      "risk_badge": "HIGH RISK",
-      "risk_color": "#f97316",
-      "description": "Elevated collision activity observed.",
-      "crashes_reported": 0
+      "period": "2024-W30",
+      "date_range": "Jul 22 - Jul 28, 2024",
+      "risk_score": 95.0,
+      "risk_percentage": "95%",
+      "risk_badge": "[HIGH RISK ALERT]",
+      "risk_color": "#ef4444",
+      "description": "Elevated collision activity recorded recently. Extra vigilance recommended.",
+      "crashes_reported": 4,
+      "crashes_rolling4w_avg": 4.0,
+      "dominant_weather": "CLEAR"
+    },
+    "upcoming_week": {
+      "period": "2024-W31",
+      "predicted_risk_probability": 0.3,
+      "predicted_risk_percentage": "30%",
+      "predicted_risk_badge": "[PREDICTED: SAFE CORRIDOR]",
+      "risk_color": "#22c55e",
+      "description": "Forecast models project normal baseline traffic conditions.",
+      "trend_label": "[TREND: COOLING DOWN]",
+      "trend_color": "#22c55e",
+      "trend_percentage_change": "-65%"
     },
     "why_accidents_might_happen": {
       "primary_collision_cause": {
-        "title": "Congestion Bottleneck & Merge Conflicts",
-        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+        "title": "Failing to Yield Right-of-Way",
+        "explanation": "Drivers turning left across oncoming traffic or turning on yellow without checking cross-traffic and crossing pedestrians.",
+        "historical_frequency_pct": 34.2
       },
       "behavior_factor": {
-        "title": "Tailgating & Speed Variance",
-        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+        "title": "Tailgating & Sudden Braking",
+        "explanation": "High-density commuter queues cause rear-end collisions when drivers follow too closely during rush hours.",
+        "risk_level": "ELEVATED"
       },
       "street_environment": {
-        "zone_type": "University_District",
-        "average_speed_kmh": 57.85,
-        "congestion_level": 32.35
+        "posted_speed_limit_mph": 30.0,
+        "intersection_crossroad_density_pct": 48.5,
+        "title": "30 mph Zone | 49% Crossroad Density",
+        "explanation": "Frequent signalized crossroads combined with multi-lane traffic flow increase conflict points at peak times."
       }
     },
     "civilian_safety_guide": {
       "for_drivers": {
         "action": "Increase Following Distance",
-        "details": "Maintain 3 car lengths buffer during peak rush hours."
+        "details": "Maintain at least 3 car lengths of space behind the vehicle ahead. Avoid tailgating near transit stops and expressway exit ramps where sudden stops occur.",
+        "key_tip": "Leave 3-4 car lengths buffer on commercial transit corridors"
       },
       "for_pedestrians_and_cyclists": {
-        "action": "Double-Check Turning Vehicles",
-        "details": "Make eye contact with turning drivers at intersections before crossing."
+        "action": "Double-Check Turning Cars",
+        "details": "Make eye contact with drivers turning right on red before stepping into crosswalks. Use reflective gear or activate bicycle lights after dusk.",
+        "key_tip": "Never assume a turning driver has seen you at green lights"
       },
       "peak_danger_windows": {
-        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
-        "details": "Congestion peaks during evening travel windows."
+        "primary_peak": "4:30 PM - 7:30 PM Weekdays (Evening Commute Congestion)",
+        "secondary_peak": "10:00 PM - 2:00 AM Friday & Saturday (Reduced Lighting & Speed Variance)",
+        "details": "Evening rush hours experience 3x higher collision rates than midday. Exercise maximum patience during heavy congestion."
       }
     }
   },
   "raw_metrics": {
     "zone_id": "Zone_14",
+    "chicago_beat": "211",
     "week": 30,
-    "zone_type": "University_District",
-    "temporal_profile": "RECOVERY_AFTER_DISRUPTION",
-    "population_density": 10551,
-    "road_capacity": 99,
-    "effective_road_capacity": 99.0,
-    "vehicle_density": 61.42,
-    "traffic_pressure": 0.62,
-    "congestion": 32.35,
-    "average_speed": 57.85,
-    "red_light_violations": 5,
-    "weather": "Normal",
-    "road_condition": "Good",
-    "special_event": 0,
-    "incident_count": 1,
-    "incident_occurred": 1,
-    "previous_week_vehicle_density": 58.09,
-    "previous_week_congestion": 31.16,
-    "previous_week_average_speed": 54.98,
-    "previous_week_red_light_violations": 2.0,
-    "previous_week_incident_count": 0.0,
-    "previous_week_incident_occurred": 0.0,
-    "previous_week_traffic_pressure": 0.587,
-    "rolling_4_week_avg_vehicle_density": 63.98,
-    "rolling_4_week_avg_congestion": 43.36,
-    "rolling_4_week_avg_speed": 52.96,
-    "rolling_4_week_avg_violations": 5.25,
-    "rolling_4_week_incident_count": 3.0,
-    "rolling_4_week_incident_rate": 0.25,
-    "rolling_4_week_avg_traffic_pressure": 0.756,
-    "vehicle_density_change": 3.33,
-    "congestion_change": 1.19,
-    "speed_change": 2.87,
-    "violations_change": 3.0,
-    "traffic_pressure_change": 0.033,
-    "incident_count_change": 0.0,
-    "vehicle_density_pct_change": 5.73,
-    "congestion_pct_change": 3.82,
-    "speed_pct_change": 5.22,
-    "vehicle_population_ratio": 5.821,
-    "congestion_trend_4w": -7.787,
-    "vehicle_density_trend_4w": -4.202,
-    "speed_trend_4w": 1.541,
-    "incident_trend_4w": -0.3,
-    "location_name_x": "Connaught Place",
-    "city_x": "Delhi",
-    "latitude_x": 28.6315,
-    "longitude_x": 77.2167,
-    "car_percentage": 45.1,
-    "motorcycle_percentage": 42.8,
-    "bus_percentage": 10.0,
-    "truck_percentage": 2.0,
-    "moving_vehicle_percentage": 84.7,
-    "slow_vehicle_percentage": 19.9,
-    "stopped_vehicle_percentage": 0.0,
-    "location_name_y": "Connaught Place",
-    "city_y": "Delhi",
-    "latitude_y": 28.6315,
-    "longitude_y": 77.2167,
-    "predicted_risk_probability": 0.5908,
-    "risk_score": 59.0788,
-    "population_exposure_score": 66.0249,
-    "vehicle_exposure_score": 89.3772,
-    "temporal_trend_score": 20.2159,
-    "priority_score": 61.0456,
-    "priority_rank": 8,
-    "priority_level": "HIGH",
-    "risk_prob": 0.5908
+    "crashes": 4,
+    "rolling4w_avg": 4.0,
+    "speed_mph": 30.0
   }
 }

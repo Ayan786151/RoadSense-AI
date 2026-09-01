@@ -1,229 +1,155 @@
 {
   "zone_id": "Zone_01",
-  "location_name": "Zone_01",
-  "city": "",
-  "zone_type": "Commercial_Downtown",
+  "location_name": "Downtown Loop - N Michigan Ave & N State St",
+  "city": "Chicago",
+  "zone_type": "High-Density Commercial Corridor",
   "week": 52,
-  "latitude": 0.0,
-  "longitude": 0.0,
+  "latitude": 41.8845,
+  "longitude": -87.6243,
   "risk_analysis": {
-    "predicted_risk_probability": 0.6685,
-    "predicted_risk_percentage": 66.85,
-    "risk_label": "HIGH RISK",
-    "risk_color": "#f97316",
-    "risk_delta_vs_prev_week": 17.7833,
+    "predicted_risk_probability": 0.95,
+    "predicted_risk_percentage": 95.0,
+    "risk_label": "CRITICAL RISK",
+    "risk_color": "#ef4444",
+    "risk_delta_vs_prev_week": -39.4,
     "actual_incident": 1
   },
   "priority": {
-    "priority_score": 56.9633,
-    "priority_rank": 10,
-    "priority_level": "HIGH",
+    "priority_score": 75.75,
+    "priority_rank": 1,
+    "priority_level": "CRITICAL",
     "components": {
-      "risk_score": 66.8533,
-      "population_exposure_score": 52.9133,
-      "vehicle_exposure_score": 59.4811,
-      "temporal_trend_score": 33.983
+      "risk_score": 95.0,
+      "population_exposure_score": 65.0,
+      "vehicle_exposure_score": 100.0,
+      "temporal_trend_score": 10.0
     },
     "explanation": {
-      "priority_level": "HIGH",
-      "priority_score": 57.0,
-      "top_contributors": [
-        {
-          "factor": "Risk Score",
-          "icon": "\ud83d\udfe1",
-          "value": "67/100",
-          "impact": "MEDIUM",
-          "detail": "Moderate model-estimated risk",
-          "weight": 66.8533
-        },
-        {
-          "factor": "Congestion",
-          "icon": "\ud83d\ude97",
-          "value": "60/100",
-          "impact": "MEDIUM",
-          "detail": "Moderate congestion at 60",
-          "weight": 42.21
-        },
-        {
-          "factor": "Population Exposure",
-          "icon": "\ud83d\udc65",
-          "value": "53/100",
-          "impact": "MEDIUM",
-          "detail": "Moderate population exposure",
-          "weight": 37.0393
-        }
-      ],
-      "total_factors": 3,
-      "assessment": "This zone shows significant risk elevation driven by elevated risk indicators. Proactive intervention should be scheduled within the current planning cycle."
+      "priority_level": "CRITICAL",
+      "priority_score": 75.75,
+      "assessment": "Corridor in 01st District - Central exhibits critical traffic hazard priority driven by Chicago crash history."
     }
   },
   "telemetry": {
-    "congestion": 60.3,
-    "congestion_delta": 20.81,
-    "average_speed_kmh": 40.72,
-    "speed_delta": -10.33,
-    "vehicle_density": 45.39,
-    "density_delta": 1.57,
-    "population_density": 8726,
-    "red_light_violations": 9,
-    "weather": "Light Rain",
+    "congestion": 100.0,
+    "congestion_delta": 0.0,
+    "average_speed_kmh": 48.3,
+    "speed_delta": 0.0,
+    "vehicle_density": 120.0,
+    "density_delta": 0.0,
+    "population_density": 8500,
+    "red_light_violations": 18,
+    "weather": "RAIN",
     "special_event": 0
   },
   "signal_optimization": {
-    "base_green_seconds": 40,
-    "recommended_green_seconds": 64,
-    "change_seconds": 24,
-    "change_percent": 60.0,
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 72,
+    "change_seconds": 37,
+    "change_percent": 105.7,
     "urgency": "CRITICAL",
     "reason": "Severe congestion requires significantly extended green phase",
     "factors": {
-      "congestion_factor": 1.48,
-      "density_factor": 1.18,
-      "speed_factor": 0.85,
+      "congestion_factor": 1.8,
+      "density_factor": 1.4,
+      "speed_factor": 0.82,
       "event_boost": 1.0,
-      "weather_boost": 1.08
+      "weather_boost": 1.0
     }
   },
   "environmental_impact": {
-    "total_co2_kg_per_week": 36240.8,
-    "total_co2_tonnes_per_year": 1884.52,
-    "idle_co2_kg": 15108.3,
-    "moving_co2_kg": 21132.5,
-    "potential_savings_kg_per_week": 3932.7,
-    "potential_savings_tonnes_per_year": 204.5,
-    "trees_equivalent_per_year": 9738,
-    "fuel_saved_liters_per_week": 1702.5,
-    "citizens_impacted": 17452,
-    "optimization_factor_pct": 26.0
+    "total_co2_kg_per_week": 71274.2,
+    "total_co2_tonnes_per_year": 3706.26,
+    "idle_co2_kg": 62928.0,
+    "moving_co2_kg": 8346.2,
+    "potential_savings_kg_per_week": 18878.4,
+    "potential_savings_tonnes_per_year": 981.68,
+    "trees_equivalent_per_year": 46746,
+    "fuel_saved_liters_per_week": 8172.5,
+    "citizens_impacted": 17000,
+    "optimization_factor_pct": 30.0
   },
   "interventions": [
     {
-      "id": "VIOLATION_ENFORCEMENT",
-      "name": "Red-Light Violation Enforcement",
-      "icon": "\ud83d\udea8",
-      "severity": "HIGH",
-      "description": "Elevated red-light violation count indicates intersection compliance failure.",
-      "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
+      "title": "Deploy Speed Calming & Signal Synchronization on N Michigan Ave & N State St",
+      "type": "MUNICIPAL_CORRIDOR_CALMING",
+      "priority": "CRITICAL",
+      "target_reduction": "18% collision frequency reduction"
     },
     {
-      "id": "ROAD_MAINTENANCE",
-      "name": "Road Maintenance Inspection",
-      "icon": "\ud83d\udee3\ufe0f",
-      "severity": "MEDIUM",
-      "description": "Deteriorated road surface combined with elevated risk indicates infrastructure maintenance need.",
-      "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
+      "title": "Pedestrian Crosswalk High-Visibility Illumination & Turn Signal Audit",
+      "type": "INFRASTRUCTURE_SAFETY",
+      "priority": "HIGH",
+      "target_reduction": "Eliminate left-turn crossing conflicts"
     }
   ],
-  "executive_briefing": "Zone_01 is in a critical safety state with 67% incident risk. Signal optimization recommended \u2014 congestion at 60/100 with speeds averaging 41 km/h. Optimizing signals could save 3933 kg CO2/week, equivalent to 9738 trees/year.",
+  "executive_briefing": "Chicago Police Beat 111 (Downtown Loop - N Michigan Ave & N State St) logged 9 collisions in week 52. Current risk score is 95%, with upcoming risk forecast at 56%.",
   "civilian_road_safety_radar": {
     "current_week": {
-      "week": 52,
-      "risk_score": 66.9,
-      "risk_percentage": "67%",
-      "risk_badge": "HIGH RISK",
-      "risk_color": "#f97316",
-      "description": "Elevated collision activity observed.",
-      "crashes_reported": 0
+      "period": "2024-W52",
+      "date_range": "Dec 23 - Dec 29, 2024",
+      "risk_score": 95.0,
+      "risk_percentage": "95%",
+      "risk_badge": "[HIGH RISK ALERT]",
+      "risk_color": "#ef4444",
+      "description": "Elevated collision activity recorded recently. Extra vigilance recommended.",
+      "crashes_reported": 9,
+      "crashes_rolling4w_avg": 10.5,
+      "dominant_weather": "RAIN"
+    },
+    "upcoming_week": {
+      "period": "2024-W53",
+      "predicted_risk_probability": 0.556,
+      "predicted_risk_percentage": "56%",
+      "predicted_risk_badge": "[PREDICTED: MODERATE CAUTION]",
+      "risk_color": "#f59e0b",
+      "description": "Forecast models project normal baseline traffic conditions.",
+      "trend_label": "[TREND: COOLING DOWN]",
+      "trend_color": "#f59e0b",
+      "trend_percentage_change": "-39%"
     },
     "why_accidents_might_happen": {
       "primary_collision_cause": {
-        "title": "Congestion Bottleneck & Merge Conflicts",
-        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+        "title": "Failing to Yield Right-of-Way",
+        "explanation": "Drivers turning left across oncoming traffic or turning on yellow without checking cross-traffic and crossing pedestrians.",
+        "historical_frequency_pct": 34.2
       },
       "behavior_factor": {
-        "title": "Tailgating & Speed Variance",
-        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+        "title": "Tailgating & Sudden Braking",
+        "explanation": "High-density commuter queues cause rear-end collisions when drivers follow too closely during rush hours.",
+        "risk_level": "ELEVATED"
       },
       "street_environment": {
-        "zone_type": "Commercial_Downtown",
-        "average_speed_kmh": 40.72,
-        "congestion_level": 60.3
+        "posted_speed_limit_mph": 30.0,
+        "intersection_crossroad_density_pct": 48.5,
+        "title": "30 mph Zone | 49% Crossroad Density",
+        "explanation": "Frequent signalized crossroads combined with multi-lane traffic flow increase conflict points at peak times."
       }
     },
     "civilian_safety_guide": {
       "for_drivers": {
         "action": "Increase Following Distance",
-        "details": "Maintain 3 car lengths buffer during peak rush hours."
+        "details": "Maintain at least 3 car lengths of space behind the vehicle ahead. Avoid tailgating near transit stops and expressway exit ramps where sudden stops occur.",
+        "key_tip": "Leave 3-4 car lengths buffer on commercial transit corridors"
       },
       "for_pedestrians_and_cyclists": {
-        "action": "Double-Check Turning Vehicles",
-        "details": "Make eye contact with turning drivers at intersections before crossing."
+        "action": "Double-Check Turning Cars",
+        "details": "Make eye contact with drivers turning right on red before stepping into crosswalks. Use reflective gear or activate bicycle lights after dusk.",
+        "key_tip": "Never assume a turning driver has seen you at green lights"
       },
       "peak_danger_windows": {
-        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
-        "details": "Congestion peaks during evening travel windows."
+        "primary_peak": "4:30 PM - 7:30 PM Weekdays (Evening Commute Congestion)",
+        "secondary_peak": "10:00 PM - 2:00 AM Friday & Saturday (Reduced Lighting & Speed Variance)",
+        "details": "Evening rush hours experience 3x higher collision rates than midday. Exercise maximum patience during heavy congestion."
       }
     }
   },
   "raw_metrics": {
     "zone_id": "Zone_01",
+    "chicago_beat": "111",
     "week": 52,
-    "zone_type": "Commercial_Downtown",
-    "temporal_profile": "RECOVERY_AFTER_DISRUPTION",
-    "population_density": 8726,
-    "road_capacity": 60,
-    "effective_road_capacity": 49.68,
-    "vehicle_density": 45.39,
-    "traffic_pressure": 0.914,
-    "congestion": 60.3,
-    "average_speed": 40.72,
-    "red_light_violations": 9,
-    "weather": "Light Rain",
-    "road_condition": "Moderate",
-    "special_event": 0,
-    "incident_count": 2,
-    "incident_occurred": 1,
-    "previous_week_vehicle_density": 43.82,
-    "previous_week_congestion": 39.49,
-    "previous_week_average_speed": 51.05,
-    "previous_week_red_light_violations": 7.0,
-    "previous_week_incident_count": 0.0,
-    "previous_week_incident_occurred": 0.0,
-    "previous_week_traffic_pressure": 0.73,
-    "rolling_4_week_avg_vehicle_density": 48.77,
-    "rolling_4_week_avg_congestion": 44.51,
-    "rolling_4_week_avg_speed": 50.61,
-    "rolling_4_week_avg_violations": 7.25,
-    "rolling_4_week_incident_count": 2.0,
-    "rolling_4_week_incident_rate": 0.25,
-    "rolling_4_week_avg_traffic_pressure": 0.813,
-    "vehicle_density_change": 1.57,
-    "congestion_change": 20.81,
-    "speed_change": -10.33,
-    "violations_change": 2.0,
-    "traffic_pressure_change": 0.184,
-    "incident_count_change": 0.0,
-    "vehicle_density_pct_change": 3.58,
-    "congestion_pct_change": 52.7,
-    "speed_pct_change": -20.24,
-    "vehicle_population_ratio": 5.202,
-    "congestion_trend_4w": -3.253,
-    "vehicle_density_trend_4w": -2.661,
-    "speed_trend_4w": -0.493,
-    "incident_trend_4w": -0.3,
-    "location_name_x": "Andheri",
-    "city_x": "Mumbai",
-    "latitude_x": 19.1197,
-    "longitude_x": 72.8468,
-    "car_percentage": 42.9,
-    "motorcycle_percentage": 38.9,
-    "bus_percentage": 11.7,
-    "truck_percentage": 6.5,
-    "moving_vehicle_percentage": 50.5,
-    "slow_vehicle_percentage": 29.7,
-    "stopped_vehicle_percentage": 19.8,
-    "location_name_y": "Andheri",
-    "city_y": "Mumbai",
-    "latitude_y": 19.1197,
-    "longitude_y": 72.8468,
-    "predicted_risk_probability": 0.6685,
-    "risk_score": 66.8533,
-    "population_exposure_score": 52.9133,
-    "vehicle_exposure_score": 59.4811,
-    "temporal_trend_score": 33.983,
-    "priority_score": 56.9633,
-    "priority_rank": 10,
-    "priority_level": "HIGH",
-    "risk_prob": 0.6685
+    "crashes": 9,
+    "rolling4w_avg": 10.5,
+    "speed_mph": 30.0
   }
 }

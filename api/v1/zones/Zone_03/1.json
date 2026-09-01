@@ -1,213 +1,155 @@
 {
   "zone_id": "Zone_03",
-  "location_name": "Zone_03",
-  "city": "",
-  "zone_type": "University_District",
+  "location_name": "West Loop - Fulton Market & Randolph St",
+  "city": "Chicago",
+  "zone_type": "Dining & Mixed Transit Corridor",
   "week": 1,
-  "latitude": 0.0,
-  "longitude": 0.0,
+  "latitude": 41.8847,
+  "longitude": -87.6512,
   "risk_analysis": {
-    "predicted_risk_probability": null,
-    "predicted_risk_percentage": null,
-    "risk_label": "BASELINE WARMUP",
-    "risk_color": "#71717a",
-    "risk_delta_vs_prev_week": null,
-    "actual_incident": 0
+    "predicted_risk_probability": 0.95,
+    "predicted_risk_percentage": 95.0,
+    "risk_label": "CRITICAL RISK",
+    "risk_color": "#ef4444",
+    "risk_delta_vs_prev_week": -59.7,
+    "actual_incident": 1
   },
   "priority": {
-    "priority_score": 30.5243,
-    "priority_rank": 24,
-    "priority_level": "LOW",
+    "priority_score": 70.75,
+    "priority_rank": 1,
+    "priority_level": "CRITICAL",
     "components": {
-      "risk_score": 0.0,
-      "population_exposure_score": 45.4343,
-      "vehicle_exposure_score": 58.3287,
-      "temporal_trend_score": 50.0
+      "risk_score": 95.0,
+      "population_exposure_score": 65.0,
+      "vehicle_exposure_score": 75.0,
+      "temporal_trend_score": 10.0
     },
     "explanation": {
-      "priority_level": "LOW",
-      "priority_score": 30.5,
-      "top_contributors": [
-        {
-          "factor": "Population Exposure",
-          "icon": "\ud83d\udc65",
-          "value": "45/100",
-          "impact": "MEDIUM",
-          "detail": "Moderate population exposure",
-          "weight": 31.804
-        },
-        {
-          "factor": "Risk Score",
-          "icon": "\ud83d\udfe2",
-          "value": "0/100",
-          "impact": "LOW",
-          "detail": "Risk score within acceptable range",
-          "weight": 0.0
-        }
-      ],
-      "total_factors": 2,
-      "assessment": "This zone is currently within acceptable safety parameters. Routine monitoring is sufficient."
+      "priority_level": "CRITICAL",
+      "priority_score": 70.75,
+      "assessment": "Corridor in 12th District - Near West exhibits critical traffic hazard priority driven by Chicago crash history."
     }
   },
   "telemetry": {
-    "congestion": 22.73,
-    "congestion_delta": null,
-    "average_speed_kmh": 61.39,
-    "speed_delta": null,
-    "vehicle_density": 34.25,
-    "density_delta": null,
-    "population_density": 7685,
-    "red_light_violations": 4,
-    "weather": "Normal",
+    "congestion": 87.5,
+    "congestion_delta": 0.0,
+    "average_speed_kmh": 48.3,
+    "speed_delta": 0.0,
+    "vehicle_density": 90.0,
+    "density_delta": 0.0,
+    "population_density": 8500,
+    "red_light_violations": 6,
+    "weather": "CLEAR",
     "special_event": 0
   },
   "signal_optimization": {
     "base_green_seconds": 35,
-    "recommended_green_seconds": 36,
-    "change_seconds": 1,
-    "change_percent": 2.9,
-    "urgency": "NOMINAL",
-    "reason": "Current default timing is adequate",
+    "recommended_green_seconds": 66,
+    "change_seconds": 31,
+    "change_percent": 88.6,
+    "urgency": "CRITICAL",
+    "reason": "Severe congestion requires significantly extended green phase",
     "factors": {
-      "congestion_factor": 1.18,
-      "density_factor": 1.14,
-      "speed_factor": 0.77,
+      "congestion_factor": 1.7,
+      "density_factor": 1.36,
+      "speed_factor": 0.82,
       "event_boost": 1.0,
       "weather_boost": 1.0
     }
   },
   "environmental_impact": {
-    "total_co2_kg_per_week": 46409.2,
-    "total_co2_tonnes_per_year": 2413.28,
-    "idle_co2_kg": 4297.3,
-    "moving_co2_kg": 42111.8,
-    "potential_savings_kg_per_week": 957.1,
-    "potential_savings_tonnes_per_year": 49.77,
-    "trees_equivalent_per_year": 2370,
-    "fuel_saved_liters_per_week": 414.3,
-    "citizens_impacted": 15370,
-    "optimization_factor_pct": 22.3
+    "total_co2_kg_per_week": 59119.2,
+    "total_co2_tonnes_per_year": 3074.2,
+    "idle_co2_kg": 43470.0,
+    "moving_co2_kg": 15649.2,
+    "potential_savings_kg_per_week": 12497.6,
+    "potential_savings_tonnes_per_year": 649.88,
+    "trees_equivalent_per_year": 30946,
+    "fuel_saved_liters_per_week": 5410.2,
+    "citizens_impacted": 17000,
+    "optimization_factor_pct": 28.8
   },
   "interventions": [
     {
-      "id": "BASELINE_MONITORING",
-      "name": "Routine Monitoring",
-      "icon": "\ud83d\udcca",
-      "severity": "LOW",
-      "description": "Zone currently within acceptable risk parameters.",
-      "action": "Continue routine monitoring. No immediate intervention required."
+      "title": "Deploy Speed Calming & Signal Synchronization on Fulton Market & Randolph St",
+      "type": "MUNICIPAL_CORRIDOR_CALMING",
+      "priority": "CRITICAL",
+      "target_reduction": "18% collision frequency reduction"
+    },
+    {
+      "title": "Pedestrian Crosswalk High-Visibility Illumination & Turn Signal Audit",
+      "type": "INFRASTRUCTURE_SAFETY",
+      "priority": "HIGH",
+      "target_reduction": "Eliminate left-turn crossing conflicts"
     }
   ],
-  "executive_briefing": "Zone_03 is within safe operating parameters (0% risk). Continue routine monitoring. Optimizing signals could save 957 kg CO2/week, equivalent to 2370 trees/year.",
+  "executive_briefing": "Chicago Police Beat 1211 (West Loop - Fulton Market & Randolph St) logged 3 collisions in week 1. Current risk score is 95%, with upcoming risk forecast at 35%.",
   "civilian_road_safety_radar": {
     "current_week": {
-      "week": 1,
-      "risk_score": null,
-      "risk_percentage": "N/A",
-      "risk_badge": "BASELINE WARMUP",
-      "risk_color": "#71717a",
-      "description": "Corridor operating within normal baseline.",
-      "crashes_reported": 0
+      "period": "2024-W01",
+      "date_range": "Jan 01 - Jan 07, 2024",
+      "risk_score": 95.0,
+      "risk_percentage": "95%",
+      "risk_badge": "[HIGH RISK ALERT]",
+      "risk_color": "#ef4444",
+      "description": "Elevated collision activity recorded recently. Extra vigilance recommended.",
+      "crashes_reported": 3,
+      "crashes_rolling4w_avg": 5.0,
+      "dominant_weather": "CLEAR"
+    },
+    "upcoming_week": {
+      "period": "2024-W02",
+      "predicted_risk_probability": 0.353,
+      "predicted_risk_percentage": "35%",
+      "predicted_risk_badge": "[PREDICTED: SAFE CORRIDOR]",
+      "risk_color": "#22c55e",
+      "description": "Forecast models project normal baseline traffic conditions.",
+      "trend_label": "[TREND: COOLING DOWN]",
+      "trend_color": "#22c55e",
+      "trend_percentage_change": "-60%"
     },
     "why_accidents_might_happen": {
       "primary_collision_cause": {
-        "title": "Congestion Bottleneck & Merge Conflicts",
-        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+        "title": "Failing to Yield Right-of-Way",
+        "explanation": "Drivers turning left across oncoming traffic or turning on yellow without checking cross-traffic and crossing pedestrians.",
+        "historical_frequency_pct": 34.2
       },
       "behavior_factor": {
-        "title": "Tailgating & Speed Variance",
-        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+        "title": "Tailgating & Sudden Braking",
+        "explanation": "High-density commuter queues cause rear-end collisions when drivers follow too closely during rush hours.",
+        "risk_level": "ELEVATED"
       },
       "street_environment": {
-        "zone_type": "University_District",
-        "average_speed_kmh": 61.39,
-        "congestion_level": 22.73
+        "posted_speed_limit_mph": 30.0,
+        "intersection_crossroad_density_pct": 48.5,
+        "title": "30 mph Zone | 49% Crossroad Density",
+        "explanation": "Frequent signalized crossroads combined with multi-lane traffic flow increase conflict points at peak times."
       }
     },
     "civilian_safety_guide": {
       "for_drivers": {
         "action": "Increase Following Distance",
-        "details": "Maintain 3 car lengths buffer during peak rush hours."
+        "details": "Maintain at least 3 car lengths of space behind the vehicle ahead. Avoid tailgating near transit stops and expressway exit ramps where sudden stops occur.",
+        "key_tip": "Leave 3-4 car lengths buffer on commercial transit corridors"
       },
       "for_pedestrians_and_cyclists": {
-        "action": "Double-Check Turning Vehicles",
-        "details": "Make eye contact with turning drivers at intersections before crossing."
+        "action": "Double-Check Turning Cars",
+        "details": "Make eye contact with drivers turning right on red before stepping into crosswalks. Use reflective gear or activate bicycle lights after dusk.",
+        "key_tip": "Never assume a turning driver has seen you at green lights"
       },
       "peak_danger_windows": {
-        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
-        "details": "Congestion peaks during evening travel windows."
+        "primary_peak": "4:30 PM - 7:30 PM Weekdays (Evening Commute Congestion)",
+        "secondary_peak": "10:00 PM - 2:00 AM Friday & Saturday (Reduced Lighting & Speed Variance)",
+        "details": "Evening rush hours experience 3x higher collision rates than midday. Exercise maximum patience during heavy congestion."
       }
     }
   },
   "raw_metrics": {
     "zone_id": "Zone_03",
+    "chicago_beat": "1211",
     "week": 1,
-    "zone_type": "University_District",
-    "temporal_profile": "EVENT_SENSITIVE",
-    "population_density": 7685,
-    "road_capacity": 63,
-    "effective_road_capacity": 63.0,
-    "vehicle_density": 34.25,
-    "traffic_pressure": 0.544,
-    "congestion": 22.73,
-    "average_speed": 61.39,
-    "red_light_violations": 4,
-    "weather": "Normal",
-    "road_condition": "Good",
-    "special_event": 0,
-    "incident_count": 0,
-    "incident_occurred": 0,
-    "previous_week_vehicle_density": null,
-    "previous_week_congestion": null,
-    "previous_week_average_speed": null,
-    "previous_week_red_light_violations": null,
-    "previous_week_incident_count": null,
-    "previous_week_incident_occurred": null,
-    "previous_week_traffic_pressure": null,
-    "rolling_4_week_avg_vehicle_density": null,
-    "rolling_4_week_avg_congestion": null,
-    "rolling_4_week_avg_speed": null,
-    "rolling_4_week_avg_violations": null,
-    "rolling_4_week_incident_count": null,
-    "rolling_4_week_incident_rate": null,
-    "rolling_4_week_avg_traffic_pressure": null,
-    "vehicle_density_change": null,
-    "congestion_change": null,
-    "speed_change": null,
-    "violations_change": null,
-    "traffic_pressure_change": null,
-    "incident_count_change": null,
-    "vehicle_density_pct_change": null,
-    "congestion_pct_change": null,
-    "speed_pct_change": null,
-    "vehicle_population_ratio": 4.457,
-    "congestion_trend_4w": null,
-    "vehicle_density_trend_4w": null,
-    "speed_trend_4w": null,
-    "incident_trend_4w": null,
-    "location_name_x": "Kurla",
-    "city_x": "Mumbai",
-    "latitude_x": 19.0726,
-    "longitude_x": 72.8845,
-    "car_percentage": 45.6,
-    "motorcycle_percentage": 37.6,
-    "bus_percentage": 12.1,
-    "truck_percentage": 4.8,
-    "moving_vehicle_percentage": 82.5,
-    "slow_vehicle_percentage": 10.1,
-    "stopped_vehicle_percentage": 7.4,
-    "location_name_y": "Kurla",
-    "city_y": "Mumbai",
-    "latitude_y": 19.0726,
-    "longitude_y": 72.8845,
-    "predicted_risk_probability": null,
-    "risk_score": 0.0,
-    "population_exposure_score": 45.4343,
-    "vehicle_exposure_score": 58.3287,
-    "temporal_trend_score": 50.0,
-    "priority_score": 30.5243,
-    "priority_rank": 24,
-    "priority_level": "LOW",
-    "risk_prob": null
+    "crashes": 3,
+    "rolling4w_avg": 5.0,
+    "speed_mph": 30.0
   }
 }

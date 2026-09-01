@@ -1,221 +1,155 @@
 {
   "zone_id": "Zone_24",
-  "location_name": "Zone_24",
-  "city": "",
-  "zone_type": "Commercial_Downtown",
+  "location_name": "O'Hare Airport - Mannheim Rd & Higgins Rd",
+  "city": "Chicago",
+  "zone_type": "Commercial Hotel Arterial",
   "week": 31,
-  "latitude": 0.0,
-  "longitude": 0.0,
+  "latitude": 41.9961,
+  "longitude": -87.8828,
   "risk_analysis": {
-    "predicted_risk_probability": 0.6041,
-    "predicted_risk_percentage": 60.41,
-    "risk_label": "HIGH RISK",
-    "risk_color": "#f97316",
-    "risk_delta_vs_prev_week": 30.9868,
+    "predicted_risk_probability": 0.95,
+    "predicted_risk_percentage": 95.0,
+    "risk_label": "CRITICAL RISK",
+    "risk_color": "#ef4444",
+    "risk_delta_vs_prev_week": -75.7,
     "actual_incident": 1
   },
   "priority": {
-    "priority_score": 57.376,
-    "priority_rank": 22,
-    "priority_level": "HIGH",
+    "priority_score": 75.75,
+    "priority_rank": 1,
+    "priority_level": "CRITICAL",
     "components": {
-      "risk_score": 60.4128,
-      "population_exposure_score": 52.2523,
-      "vehicle_exposure_score": 53.073,
-      "temporal_trend_score": 63.5544
+      "risk_score": 95.0,
+      "population_exposure_score": 65.0,
+      "vehicle_exposure_score": 100.0,
+      "temporal_trend_score": 10.0
     },
     "explanation": {
-      "priority_level": "HIGH",
-      "priority_score": 57.4,
-      "top_contributors": [
-        {
-          "factor": "Risk Score",
-          "icon": "\ud83d\udfe1",
-          "value": "60/100",
-          "impact": "MEDIUM",
-          "detail": "Moderate model-estimated risk",
-          "weight": 60.4128
-        },
-        {
-          "factor": "Rising Trend",
-          "icon": "\ud83d\udcc8",
-          "value": "64/100",
-          "impact": "MEDIUM",
-          "detail": "Slight upward trend in congestion over past 4 weeks",
-          "weight": 38.1327
-        },
-        {
-          "factor": "Population Exposure",
-          "icon": "\ud83d\udc65",
-          "value": "52/100",
-          "impact": "MEDIUM",
-          "detail": "Moderate population exposure",
-          "weight": 36.5766
-        }
-      ],
-      "total_factors": 3,
-      "assessment": "This zone shows significant risk elevation driven by elevated risk indicators. Proactive intervention should be scheduled within the current planning cycle."
+      "priority_level": "CRITICAL",
+      "priority_score": 75.75,
+      "assessment": "Corridor in 16th District - Jefferson Park exhibits critical traffic hazard priority driven by Chicago crash history."
     }
   },
   "telemetry": {
-    "congestion": 36.93,
-    "congestion_delta": 21.84,
-    "average_speed_kmh": 35.1,
-    "speed_delta": -24.67,
-    "vehicle_density": 36.01,
-    "density_delta": -1.39,
-    "population_density": 8634,
-    "red_light_violations": 5,
-    "weather": "Heavy Rain",
+    "congestion": 100.0,
+    "congestion_delta": 0.0,
+    "average_speed_kmh": 48.3,
+    "speed_delta": 0.0,
+    "vehicle_density": 120.0,
+    "density_delta": 0.0,
+    "population_density": 8500,
+    "red_light_violations": 20,
+    "weather": "CLEAR",
     "special_event": 0
   },
   "signal_optimization": {
-    "base_green_seconds": 40,
-    "recommended_green_seconds": 60,
-    "change_seconds": 20,
-    "change_percent": 50.0,
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 72,
+    "change_seconds": 37,
+    "change_percent": 105.7,
     "urgency": "CRITICAL",
     "reason": "Severe congestion requires significantly extended green phase",
     "factors": {
-      "congestion_factor": 1.3,
-      "density_factor": 1.14,
-      "speed_factor": 0.87,
+      "congestion_factor": 1.8,
+      "density_factor": 1.4,
+      "speed_factor": 0.82,
       "event_boost": 1.0,
-      "weather_boost": 1.18
+      "weather_boost": 1.0
     }
   },
   "environmental_impact": {
-    "total_co2_kg_per_week": 30299.4,
-    "total_co2_tonnes_per_year": 1575.57,
-    "idle_co2_kg": 7340.8,
-    "moving_co2_kg": 22958.6,
-    "potential_savings_kg_per_week": 1739.2,
-    "potential_savings_tonnes_per_year": 90.44,
-    "trees_equivalent_per_year": 4306,
-    "fuel_saved_liters_per_week": 752.9,
-    "citizens_impacted": 17268,
-    "optimization_factor_pct": 23.7
+    "total_co2_kg_per_week": 71274.2,
+    "total_co2_tonnes_per_year": 3706.26,
+    "idle_co2_kg": 62928.0,
+    "moving_co2_kg": 8346.2,
+    "potential_savings_kg_per_week": 18878.4,
+    "potential_savings_tonnes_per_year": 981.68,
+    "trees_equivalent_per_year": 46746,
+    "fuel_saved_liters_per_week": 8172.5,
+    "citizens_impacted": 17000,
+    "optimization_factor_pct": 30.0
   },
   "interventions": [
     {
-      "id": "ROAD_MAINTENANCE",
-      "name": "Road Maintenance Inspection",
-      "icon": "\ud83d\udee3\ufe0f",
-      "severity": "MEDIUM",
-      "description": "Deteriorated road surface combined with elevated risk indicates infrastructure maintenance need.",
-      "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
+      "title": "Deploy Speed Calming & Signal Synchronization on Mannheim Rd & Higgins Rd",
+      "type": "MUNICIPAL_CORRIDOR_CALMING",
+      "priority": "CRITICAL",
+      "target_reduction": "18% collision frequency reduction"
+    },
+    {
+      "title": "Pedestrian Crosswalk High-Visibility Illumination & Turn Signal Audit",
+      "type": "INFRASTRUCTURE_SAFETY",
+      "priority": "HIGH",
+      "target_reduction": "Eliminate left-turn crossing conflicts"
     }
   ],
-  "executive_briefing": "Zone_24 is in a critical safety state with 60% incident risk. Continue routine monitoring. Optimizing signals could save 1739 kg CO2/week, equivalent to 4306 trees/year.",
+  "executive_briefing": "Chicago Police Beat 1654 (O'Hare Airport - Mannheim Rd & Higgins Rd) logged 10 collisions in week 31. Current risk score is 95%, with upcoming risk forecast at 19%.",
   "civilian_road_safety_radar": {
     "current_week": {
-      "week": 31,
-      "risk_score": 60.4,
-      "risk_percentage": "60%",
-      "risk_badge": "HIGH RISK",
-      "risk_color": "#f97316",
-      "description": "Elevated collision activity observed.",
-      "crashes_reported": 0
+      "period": "2024-W31",
+      "date_range": "Jul 29 - Aug 04, 2024",
+      "risk_score": 95.0,
+      "risk_percentage": "95%",
+      "risk_badge": "[HIGH RISK ALERT]",
+      "risk_color": "#ef4444",
+      "description": "Elevated collision activity recorded recently. Extra vigilance recommended.",
+      "crashes_reported": 10,
+      "crashes_rolling4w_avg": 11.75,
+      "dominant_weather": "CLEAR"
+    },
+    "upcoming_week": {
+      "period": "2024-W32",
+      "predicted_risk_probability": 0.193,
+      "predicted_risk_percentage": "19%",
+      "predicted_risk_badge": "[PREDICTED: SAFE CORRIDOR]",
+      "risk_color": "#22c55e",
+      "description": "Forecast models project normal baseline traffic conditions.",
+      "trend_label": "[TREND: COOLING DOWN]",
+      "trend_color": "#22c55e",
+      "trend_percentage_change": "-76%"
     },
     "why_accidents_might_happen": {
       "primary_collision_cause": {
-        "title": "Congestion Bottleneck & Merge Conflicts",
-        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+        "title": "Failing to Yield Right-of-Way",
+        "explanation": "Drivers turning left across oncoming traffic or turning on yellow without checking cross-traffic and crossing pedestrians.",
+        "historical_frequency_pct": 34.2
       },
       "behavior_factor": {
-        "title": "Tailgating & Speed Variance",
-        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+        "title": "Tailgating & Sudden Braking",
+        "explanation": "High-density commuter queues cause rear-end collisions when drivers follow too closely during rush hours.",
+        "risk_level": "ELEVATED"
       },
       "street_environment": {
-        "zone_type": "Commercial_Downtown",
-        "average_speed_kmh": 35.1,
-        "congestion_level": 36.93
+        "posted_speed_limit_mph": 30.0,
+        "intersection_crossroad_density_pct": 48.5,
+        "title": "30 mph Zone | 49% Crossroad Density",
+        "explanation": "Frequent signalized crossroads combined with multi-lane traffic flow increase conflict points at peak times."
       }
     },
     "civilian_safety_guide": {
       "for_drivers": {
         "action": "Increase Following Distance",
-        "details": "Maintain 3 car lengths buffer during peak rush hours."
+        "details": "Maintain at least 3 car lengths of space behind the vehicle ahead. Avoid tailgating near transit stops and expressway exit ramps where sudden stops occur.",
+        "key_tip": "Leave 3-4 car lengths buffer on commercial transit corridors"
       },
       "for_pedestrians_and_cyclists": {
-        "action": "Double-Check Turning Vehicles",
-        "details": "Make eye contact with turning drivers at intersections before crossing."
+        "action": "Double-Check Turning Cars",
+        "details": "Make eye contact with drivers turning right on red before stepping into crosswalks. Use reflective gear or activate bicycle lights after dusk.",
+        "key_tip": "Never assume a turning driver has seen you at green lights"
       },
       "peak_danger_windows": {
-        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
-        "details": "Congestion peaks during evening travel windows."
+        "primary_peak": "4:30 PM - 7:30 PM Weekdays (Evening Commute Congestion)",
+        "secondary_peak": "10:00 PM - 2:00 AM Friday & Saturday (Reduced Lighting & Speed Variance)",
+        "details": "Evening rush hours experience 3x higher collision rates than midday. Exercise maximum patience during heavy congestion."
       }
     }
   },
   "raw_metrics": {
     "zone_id": "Zone_24",
+    "chicago_beat": "1654",
     "week": 31,
-    "zone_type": "Commercial_Downtown",
-    "temporal_profile": "GRADUAL_IMPROVEMENT",
-    "population_density": 8634,
-    "road_capacity": 99,
-    "effective_road_capacity": 57.91,
-    "vehicle_density": 36.01,
-    "traffic_pressure": 0.622,
-    "congestion": 36.93,
-    "average_speed": 35.1,
-    "red_light_violations": 5,
-    "weather": "Heavy Rain",
-    "road_condition": "Poor",
-    "special_event": 0,
-    "incident_count": 2,
-    "incident_occurred": 1,
-    "previous_week_vehicle_density": 37.4,
-    "previous_week_congestion": 15.09,
-    "previous_week_average_speed": 59.77,
-    "previous_week_red_light_violations": 6.0,
-    "previous_week_incident_count": 0.0,
-    "previous_week_incident_occurred": 0.0,
-    "previous_week_traffic_pressure": 0.378,
-    "rolling_4_week_avg_vehicle_density": 30.94,
-    "rolling_4_week_avg_congestion": 14.98,
-    "rolling_4_week_avg_speed": 60.89,
-    "rolling_4_week_avg_violations": 5.25,
-    "rolling_4_week_incident_count": 1.0,
-    "rolling_4_week_incident_rate": 0.25,
-    "rolling_4_week_avg_traffic_pressure": 0.33,
-    "vehicle_density_change": -1.39,
-    "congestion_change": 21.84,
-    "speed_change": -24.67,
-    "violations_change": -1.0,
-    "traffic_pressure_change": 0.244,
-    "incident_count_change": 0.0,
-    "vehicle_density_pct_change": -3.72,
-    "congestion_pct_change": 144.73,
-    "speed_pct_change": -41.27,
-    "vehicle_population_ratio": 4.171,
-    "congestion_trend_4w": 1.131,
-    "vehicle_density_trend_4w": 3.223,
-    "speed_trend_4w": -1.686,
-    "incident_trend_4w": -0.1,
-    "location_name_x": "Nehru Place",
-    "city_x": "Delhi",
-    "latitude_x": 28.5491,
-    "longitude_x": 77.2519,
-    "car_percentage": 46.7,
-    "motorcycle_percentage": 42.4,
-    "bus_percentage": 8.8,
-    "truck_percentage": 2.1,
-    "moving_vehicle_percentage": 59.4,
-    "slow_vehicle_percentage": 38.6,
-    "stopped_vehicle_percentage": 2.0,
-    "location_name_y": "Nehru Place",
-    "city_y": "Delhi",
-    "latitude_y": 28.5491,
-    "longitude_y": 77.2519,
-    "predicted_risk_probability": 0.6041,
-    "risk_score": 60.4128,
-    "population_exposure_score": 52.2523,
-    "vehicle_exposure_score": 53.073,
-    "temporal_trend_score": 63.5544,
-    "priority_score": 57.376,
-    "priority_rank": 22,
-    "priority_level": "HIGH",
-    "risk_prob": 0.6041
+    "crashes": 10,
+    "rolling4w_avg": 11.75,
+    "speed_mph": 30.0
   }
 }

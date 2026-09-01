@@ -1,205 +1,155 @@
 {
   "zone_id": "Zone_23",
-  "location_name": "Zone_23",
-  "city": "",
-  "zone_type": "Suburban_LowDensity",
+  "location_name": "O'Hare Airport - Main Terminal Core",
+  "city": "Chicago",
+  "zone_type": "Airport Expressway Merge",
   "week": 28,
-  "latitude": 0.0,
-  "longitude": 0.0,
+  "latitude": 41.9742,
+  "longitude": -87.9073,
   "risk_analysis": {
-    "predicted_risk_probability": 0.4311,
-    "predicted_risk_percentage": 43.11,
-    "risk_label": "MODERATE RISK",
-    "risk_color": "#eab308",
-    "risk_delta_vs_prev_week": 8.7425,
+    "predicted_risk_probability": 0.95,
+    "predicted_risk_percentage": 95.0,
+    "risk_label": "CRITICAL RISK",
+    "risk_color": "#ef4444",
+    "risk_delta_vs_prev_week": -90.9,
     "actual_incident": 1
   },
   "priority": {
-    "priority_score": 27.0103,
-    "priority_rank": 36,
-    "priority_level": "LOW",
+    "priority_score": 74.09,
+    "priority_rank": 1,
+    "priority_level": "CRITICAL",
     "components": {
-      "risk_score": 43.1056,
-      "population_exposure_score": 6.2289,
-      "vehicle_exposure_score": 0.0,
-      "temporal_trend_score": 54.7391
+      "risk_score": 95.0,
+      "population_exposure_score": 65.0,
+      "vehicle_exposure_score": 91.7,
+      "temporal_trend_score": 10.0
     },
     "explanation": {
-      "priority_level": "LOW",
-      "priority_score": 27.0,
-      "top_contributors": [
-        {
-          "factor": "Risk Score",
-          "icon": "\ud83d\udfe1",
-          "value": "43/100",
-          "impact": "MEDIUM",
-          "detail": "Moderate model-estimated risk",
-          "weight": 43.1056
-        }
-      ],
-      "total_factors": 1,
-      "assessment": "This zone is currently within acceptable safety parameters. Routine monitoring is sufficient."
+      "priority_level": "CRITICAL",
+      "priority_score": 74.09,
+      "assessment": "Corridor in 16th District - Jefferson Park exhibits critical traffic hazard priority driven by Chicago crash history."
     }
   },
   "telemetry": {
-    "congestion": 7.84,
-    "congestion_delta": -1.67,
-    "average_speed_kmh": 62.77,
-    "speed_delta": 10.38,
-    "vehicle_density": 2.4,
-    "density_delta": -4.54,
-    "population_density": 2228,
-    "red_light_violations": 2,
-    "weather": "Normal",
+    "congestion": 100.0,
+    "congestion_delta": 0.0,
+    "average_speed_kmh": 40.2,
+    "speed_delta": 0.0,
+    "vehicle_density": 110.0,
+    "density_delta": 0.0,
+    "population_density": 8500,
+    "red_light_violations": 10,
+    "weather": "CLEAR",
     "special_event": 0
   },
   "signal_optimization": {
-    "base_green_seconds": 25,
-    "recommended_green_seconds": 20,
-    "change_seconds": -5,
-    "change_percent": -20.0,
-    "urgency": "OPTIMIZE",
-    "reason": "Low traffic \u2014 reduce green time to improve cross-traffic flow",
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 74,
+    "change_seconds": 39,
+    "change_percent": 111.4,
+    "urgency": "CRITICAL",
+    "reason": "Severe congestion requires significantly extended green phase",
     "factors": {
-      "congestion_factor": 1.06,
-      "density_factor": 1.01,
-      "speed_factor": 0.76,
+      "congestion_factor": 1.8,
+      "density_factor": 1.4,
+      "speed_factor": 0.85,
       "event_boost": 1.0,
       "weather_boost": 1.0
     }
   },
   "environmental_impact": {
-    "total_co2_kg_per_week": 3702.5,
-    "total_co2_tonnes_per_year": 192.53,
-    "idle_co2_kg": 103.9,
-    "moving_co2_kg": 3598.7,
-    "potential_savings_kg_per_week": 21.6,
-    "potential_savings_tonnes_per_year": 1.12,
-    "trees_equivalent_per_year": 53,
-    "fuel_saved_liters_per_week": 9.3,
-    "citizens_impacted": 4456,
-    "optimization_factor_pct": 20.8
+    "total_co2_kg_per_week": 64051.7,
+    "total_co2_tonnes_per_year": 3330.69,
+    "idle_co2_kg": 57684.0,
+    "moving_co2_kg": 6367.7,
+    "potential_savings_kg_per_week": 17305.2,
+    "potential_savings_tonnes_per_year": 899.87,
+    "trees_equivalent_per_year": 42850,
+    "fuel_saved_liters_per_week": 7491.4,
+    "citizens_impacted": 17000,
+    "optimization_factor_pct": 30.0
   },
   "interventions": [
     {
-      "id": "BASELINE_MONITORING",
-      "name": "Routine Monitoring",
-      "icon": "\ud83d\udcca",
-      "severity": "LOW",
-      "description": "No specific risk indicators triggered.",
-      "action": "Continue routine monitoring."
+      "title": "Deploy Speed Calming & Signal Synchronization on Main Terminal Core",
+      "type": "MUNICIPAL_CORRIDOR_CALMING",
+      "priority": "CRITICAL",
+      "target_reduction": "18% collision frequency reduction"
+    },
+    {
+      "title": "Pedestrian Crosswalk High-Visibility Illumination & Turn Signal Audit",
+      "type": "INFRASTRUCTURE_SAFETY",
+      "priority": "MODERATE",
+      "target_reduction": "Eliminate left-turn crossing conflicts"
     }
   ],
-  "executive_briefing": "Zone_23 shows elevated risk at 43%. Continue routine monitoring. Optimizing signals could save 22 kg CO2/week, equivalent to 53 trees/year.",
+  "executive_briefing": "Chicago Police Beat 1651 (O'Hare Airport - Main Terminal Core) logged 5 collisions in week 28. Current risk score is 95%, with upcoming risk forecast at 4%.",
   "civilian_road_safety_radar": {
     "current_week": {
-      "week": 28,
-      "risk_score": 43.1,
-      "risk_percentage": "43%",
-      "risk_badge": "MODERATE RISK",
-      "risk_color": "#eab308",
-      "description": "Corridor operating within normal baseline.",
-      "crashes_reported": 0
+      "period": "2024-W28",
+      "date_range": "Jul 08 - Jul 14, 2024",
+      "risk_score": 95.0,
+      "risk_percentage": "95%",
+      "risk_badge": "[HIGH RISK ALERT]",
+      "risk_color": "#ef4444",
+      "description": "Elevated collision activity recorded recently. Extra vigilance recommended.",
+      "crashes_reported": 5,
+      "crashes_rolling4w_avg": 7.0,
+      "dominant_weather": "CLEAR"
+    },
+    "upcoming_week": {
+      "period": "2024-W29",
+      "predicted_risk_probability": 0.041,
+      "predicted_risk_percentage": "4%",
+      "predicted_risk_badge": "[PREDICTED: SAFE CORRIDOR]",
+      "risk_color": "#22c55e",
+      "description": "Forecast models project normal baseline traffic conditions.",
+      "trend_label": "[TREND: COOLING DOWN]",
+      "trend_color": "#22c55e",
+      "trend_percentage_change": "-91%"
     },
     "why_accidents_might_happen": {
       "primary_collision_cause": {
-        "title": "Congestion Bottleneck & Merge Conflicts",
-        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+        "title": "Failing to Yield Right-of-Way",
+        "explanation": "Drivers turning left across oncoming traffic or turning on yellow without checking cross-traffic and crossing pedestrians.",
+        "historical_frequency_pct": 34.2
       },
       "behavior_factor": {
-        "title": "Tailgating & Speed Variance",
-        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+        "title": "Tailgating & Sudden Braking",
+        "explanation": "High-density commuter queues cause rear-end collisions when drivers follow too closely during rush hours.",
+        "risk_level": "ELEVATED"
       },
       "street_environment": {
-        "zone_type": "Suburban_LowDensity",
-        "average_speed_kmh": 62.77,
-        "congestion_level": 7.84
+        "posted_speed_limit_mph": 25.0,
+        "intersection_crossroad_density_pct": 48.5,
+        "title": "25 mph Zone | 49% Crossroad Density",
+        "explanation": "Frequent signalized crossroads combined with multi-lane traffic flow increase conflict points at peak times."
       }
     },
     "civilian_safety_guide": {
       "for_drivers": {
         "action": "Increase Following Distance",
-        "details": "Maintain 3 car lengths buffer during peak rush hours."
+        "details": "Maintain at least 3 car lengths of space behind the vehicle ahead. Avoid tailgating near transit stops and expressway exit ramps where sudden stops occur.",
+        "key_tip": "Leave 3-4 car lengths buffer on commercial transit corridors"
       },
       "for_pedestrians_and_cyclists": {
-        "action": "Double-Check Turning Vehicles",
-        "details": "Make eye contact with turning drivers at intersections before crossing."
+        "action": "Double-Check Turning Cars",
+        "details": "Make eye contact with drivers turning right on red before stepping into crosswalks. Use reflective gear or activate bicycle lights after dusk.",
+        "key_tip": "Never assume a turning driver has seen you at green lights"
       },
       "peak_danger_windows": {
-        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
-        "details": "Congestion peaks during evening travel windows."
+        "primary_peak": "4:30 PM - 7:30 PM Weekdays (Evening Commute Congestion)",
+        "secondary_peak": "10:00 PM - 2:00 AM Friday & Saturday (Reduced Lighting & Speed Variance)",
+        "details": "Evening rush hours experience 3x higher collision rates than midday. Exercise maximum patience during heavy congestion."
       }
     }
   },
   "raw_metrics": {
     "zone_id": "Zone_23",
+    "chicago_beat": "1651",
     "week": 28,
-    "zone_type": "Suburban_LowDensity",
-    "temporal_profile": "EVENT_SENSITIVE",
-    "population_density": 2228,
-    "road_capacity": 53,
-    "effective_road_capacity": 53.0,
-    "vehicle_density": 2.4,
-    "traffic_pressure": 0.045,
-    "congestion": 7.84,
-    "average_speed": 62.77,
-    "red_light_violations": 2,
-    "weather": "Normal",
-    "road_condition": "Good",
-    "special_event": 0,
-    "incident_count": 1,
-    "incident_occurred": 1,
-    "previous_week_vehicle_density": 6.94,
-    "previous_week_congestion": 9.51,
-    "previous_week_average_speed": 52.39,
-    "previous_week_red_light_violations": 1.0,
-    "previous_week_incident_count": 0.0,
-    "previous_week_incident_occurred": 0.0,
-    "previous_week_traffic_pressure": 0.158,
-    "rolling_4_week_avg_vehicle_density": 7.2,
-    "rolling_4_week_avg_congestion": 9.44,
-    "rolling_4_week_avg_speed": 58.3,
-    "rolling_4_week_avg_violations": 2.5,
-    "rolling_4_week_incident_count": 0.0,
-    "rolling_4_week_incident_rate": 0.0,
-    "rolling_4_week_avg_traffic_pressure": 0.158,
-    "vehicle_density_change": -4.54,
-    "congestion_change": -1.67,
-    "speed_change": 10.38,
-    "violations_change": 1.0,
-    "traffic_pressure_change": -0.113,
-    "incident_count_change": 0.0,
-    "vehicle_density_pct_change": -65.42,
-    "congestion_pct_change": -17.56,
-    "speed_pct_change": 19.81,
-    "vehicle_population_ratio": 1.077,
-    "congestion_trend_4w": 0.817,
-    "vehicle_density_trend_4w": -0.542,
-    "speed_trend_4w": -1.462,
-    "incident_trend_4w": 0.0,
-    "location_name_x": "Shahdara",
-    "city_x": "Delhi",
-    "latitude_x": 28.673,
-    "longitude_x": 77.2891,
-    "car_percentage": 44.8,
-    "motorcycle_percentage": 44.0,
-    "bus_percentage": 8.5,
-    "truck_percentage": 2.8,
-    "moving_vehicle_percentage": 77.3,
-    "slow_vehicle_percentage": 18.2,
-    "stopped_vehicle_percentage": 4.5,
-    "location_name_y": "Shahdara",
-    "city_y": "Delhi",
-    "latitude_y": 28.673,
-    "longitude_y": 77.2891,
-    "predicted_risk_probability": 0.4311,
-    "risk_score": 43.1056,
-    "population_exposure_score": 6.2289,
-    "vehicle_exposure_score": 0.0,
-    "temporal_trend_score": 54.7391,
-    "priority_score": 27.0103,
-    "priority_rank": 36,
-    "priority_level": "LOW",
-    "risk_prob": 0.4311
+    "crashes": 5,
+    "rolling4w_avg": 7.0,
+    "speed_mph": 25.0
   }
 }

@@ -1,205 +1,155 @@
 {
   "zone_id": "Zone_16",
-  "location_name": "Zone_16",
-  "city": "",
-  "zone_type": "Highway_Junction",
+  "location_name": "Woodlawn - 63rd St & Cottage Grove Ave",
+  "city": "Chicago",
+  "zone_type": "Green Line Transit Terminal Hub",
   "week": 20,
-  "latitude": 0.0,
-  "longitude": 0.0,
+  "latitude": 41.7801,
+  "longitude": -87.6062,
   "risk_analysis": {
-    "predicted_risk_probability": 0.235,
-    "predicted_risk_percentage": 23.5,
-    "risk_label": "LOW RISK",
-    "risk_color": "#22c55e",
-    "risk_delta_vs_prev_week": 6.7169,
-    "actual_incident": 0
+    "predicted_risk_probability": 0.925,
+    "predicted_risk_percentage": 92.5,
+    "risk_label": "CRITICAL RISK",
+    "risk_color": "#ef4444",
+    "risk_delta_vs_prev_week": -62.1,
+    "actual_incident": 1
   },
   "priority": {
-    "priority_score": 16.3534,
-    "priority_rank": 49,
-    "priority_level": "LOW",
+    "priority_score": 67.25,
+    "priority_rank": 1,
+    "priority_level": "HIGH",
     "components": {
-      "risk_score": 23.5043,
-      "population_exposure_score": 4.325,
-      "vehicle_exposure_score": 5.926,
-      "temporal_trend_score": 31.235
+      "risk_score": 92.5,
+      "population_exposure_score": 65.0,
+      "vehicle_exposure_score": 62.5,
+      "temporal_trend_score": 10.0
     },
     "explanation": {
-      "priority_level": "LOW",
-      "priority_score": 16.4,
-      "top_contributors": [
-        {
-          "factor": "Risk Score",
-          "icon": "\ud83d\udfe2",
-          "value": "24/100",
-          "impact": "LOW",
-          "detail": "Risk score within acceptable range",
-          "weight": 23.5043
-        }
-      ],
-      "total_factors": 1,
-      "assessment": "This zone is currently within acceptable safety parameters. Routine monitoring is sufficient."
+      "priority_level": "HIGH",
+      "priority_score": 67.25,
+      "assessment": "Corridor in 03rd District - Grand Crossing exhibits high traffic hazard priority driven by Chicago crash history."
     }
   },
   "telemetry": {
-    "congestion": 2.89,
-    "congestion_delta": -10.42,
-    "average_speed_kmh": 64.27,
-    "speed_delta": 2.28,
-    "vehicle_density": 6.4,
-    "density_delta": -2.96,
-    "population_density": 1963,
+    "congestion": 74.75,
+    "congestion_delta": 0.0,
+    "average_speed_kmh": 48.3,
+    "speed_delta": 0.0,
+    "vehicle_density": 75.0,
+    "density_delta": 0.0,
+    "population_density": 8500,
     "red_light_violations": 6,
-    "weather": "Normal",
+    "weather": "CLEAR",
     "special_event": 0
   },
   "signal_optimization": {
-    "base_green_seconds": 50,
-    "recommended_green_seconds": 39,
-    "change_seconds": -11,
-    "change_percent": -22.0,
-    "urgency": "OPTIMIZE",
-    "reason": "Low traffic \u2014 reduce green time to improve cross-traffic flow",
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 59,
+    "change_seconds": 24,
+    "change_percent": 68.6,
+    "urgency": "CRITICAL",
+    "reason": "Severe congestion requires significantly extended green phase",
     "factors": {
-      "congestion_factor": 1.02,
-      "density_factor": 1.03,
-      "speed_factor": 0.76,
+      "congestion_factor": 1.6,
+      "density_factor": 1.3,
+      "speed_factor": 0.82,
       "event_boost": 1.0,
       "weather_boost": 1.0
     }
   },
   "environmental_impact": {
-    "total_co2_kg_per_week": 10455.6,
-    "total_co2_tonnes_per_year": 543.69,
-    "idle_co2_kg": 102.1,
-    "moving_co2_kg": 10353.5,
-    "potential_savings_kg_per_week": 20.7,
-    "potential_savings_tonnes_per_year": 1.08,
-    "trees_equivalent_per_year": 51,
-    "fuel_saved_liters_per_week": 9.0,
-    "citizens_impacted": 3926,
-    "optimization_factor_pct": 20.3
+    "total_co2_kg_per_week": 57289.3,
+    "total_co2_tonnes_per_year": 2979.04,
+    "idle_co2_kg": 30946.5,
+    "moving_co2_kg": 26342.8,
+    "potential_savings_kg_per_week": 8502.6,
+    "potential_savings_tonnes_per_year": 442.13,
+    "trees_equivalent_per_year": 21053,
+    "fuel_saved_liters_per_week": 3680.8,
+    "citizens_impacted": 17000,
+    "optimization_factor_pct": 27.5
   },
   "interventions": [
     {
-      "id": "BASELINE_MONITORING",
-      "name": "Routine Monitoring",
-      "icon": "\ud83d\udcca",
-      "severity": "LOW",
-      "description": "Zone currently within acceptable risk parameters.",
-      "action": "Continue routine monitoring. No immediate intervention required."
+      "title": "Deploy Speed Calming & Signal Synchronization on 63rd St & Cottage Grove Ave",
+      "type": "MUNICIPAL_CORRIDOR_CALMING",
+      "priority": "HIGH",
+      "target_reduction": "18% collision frequency reduction"
+    },
+    {
+      "title": "Pedestrian Crosswalk High-Visibility Illumination & Turn Signal Audit",
+      "type": "INFRASTRUCTURE_SAFETY",
+      "priority": "HIGH",
+      "target_reduction": "Eliminate left-turn crossing conflicts"
     }
   ],
-  "executive_briefing": "Zone_16 is within safe operating parameters (24% risk). Continue routine monitoring. Optimizing signals could save 21 kg CO2/week, equivalent to 51 trees/year.",
+  "executive_briefing": "Chicago Police Beat 311 (Woodlawn - 63rd St & Cottage Grove Ave) logged 3 collisions in week 20. Current risk score is 92%, with upcoming risk forecast at 30%.",
   "civilian_road_safety_radar": {
     "current_week": {
-      "week": 20,
-      "risk_score": 23.5,
-      "risk_percentage": "24%",
-      "risk_badge": "LOW RISK",
+      "period": "2024-W20",
+      "date_range": "May 13 - May 19, 2024",
+      "risk_score": 92.5,
+      "risk_percentage": "92%",
+      "risk_badge": "[HIGH RISK ALERT]",
+      "risk_color": "#ef4444",
+      "description": "Elevated collision activity recorded recently. Extra vigilance recommended.",
+      "crashes_reported": 3,
+      "crashes_rolling4w_avg": 3.5,
+      "dominant_weather": "CLEAR"
+    },
+    "upcoming_week": {
+      "period": "2024-W21",
+      "predicted_risk_probability": 0.304,
+      "predicted_risk_percentage": "30%",
+      "predicted_risk_badge": "[PREDICTED: SAFE CORRIDOR]",
       "risk_color": "#22c55e",
-      "description": "Corridor operating within normal baseline.",
-      "crashes_reported": 0
+      "description": "Forecast models project normal baseline traffic conditions.",
+      "trend_label": "[TREND: COOLING DOWN]",
+      "trend_color": "#22c55e",
+      "trend_percentage_change": "-62%"
     },
     "why_accidents_might_happen": {
       "primary_collision_cause": {
-        "title": "Congestion Bottleneck & Merge Conflicts",
-        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+        "title": "Failing to Yield Right-of-Way",
+        "explanation": "Drivers turning left across oncoming traffic or turning on yellow without checking cross-traffic and crossing pedestrians.",
+        "historical_frequency_pct": 34.2
       },
       "behavior_factor": {
-        "title": "Tailgating & Speed Variance",
-        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+        "title": "Tailgating & Sudden Braking",
+        "explanation": "High-density commuter queues cause rear-end collisions when drivers follow too closely during rush hours.",
+        "risk_level": "ELEVATED"
       },
       "street_environment": {
-        "zone_type": "Highway_Junction",
-        "average_speed_kmh": 64.27,
-        "congestion_level": 2.89
+        "posted_speed_limit_mph": 30.0,
+        "intersection_crossroad_density_pct": 48.5,
+        "title": "30 mph Zone | 49% Crossroad Density",
+        "explanation": "Frequent signalized crossroads combined with multi-lane traffic flow increase conflict points at peak times."
       }
     },
     "civilian_safety_guide": {
       "for_drivers": {
         "action": "Increase Following Distance",
-        "details": "Maintain 3 car lengths buffer during peak rush hours."
+        "details": "Maintain at least 3 car lengths of space behind the vehicle ahead. Avoid tailgating near transit stops and expressway exit ramps where sudden stops occur.",
+        "key_tip": "Leave 3-4 car lengths buffer on commercial transit corridors"
       },
       "for_pedestrians_and_cyclists": {
-        "action": "Double-Check Turning Vehicles",
-        "details": "Make eye contact with turning drivers at intersections before crossing."
+        "action": "Double-Check Turning Cars",
+        "details": "Make eye contact with drivers turning right on red before stepping into crosswalks. Use reflective gear or activate bicycle lights after dusk.",
+        "key_tip": "Never assume a turning driver has seen you at green lights"
       },
       "peak_danger_windows": {
-        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
-        "details": "Congestion peaks during evening travel windows."
+        "primary_peak": "4:30 PM - 7:30 PM Weekdays (Evening Commute Congestion)",
+        "secondary_peak": "10:00 PM - 2:00 AM Friday & Saturday (Reduced Lighting & Speed Variance)",
+        "details": "Evening rush hours experience 3x higher collision rates than midday. Exercise maximum patience during heavy congestion."
       }
     }
   },
   "raw_metrics": {
     "zone_id": "Zone_16",
+    "chicago_beat": "311",
     "week": 20,
-    "zone_type": "Highway_Junction",
-    "temporal_profile": "GRADUAL_DETERIORATION",
-    "population_density": 1963,
-    "road_capacity": 84,
-    "effective_road_capacity": 84.0,
-    "vehicle_density": 6.4,
-    "traffic_pressure": 0.076,
-    "congestion": 2.89,
-    "average_speed": 64.27,
-    "red_light_violations": 6,
-    "weather": "Normal",
-    "road_condition": "Good",
-    "special_event": 0,
-    "incident_count": 0,
-    "incident_occurred": 0,
-    "previous_week_vehicle_density": 9.36,
-    "previous_week_congestion": 13.31,
-    "previous_week_average_speed": 61.99,
-    "previous_week_red_light_violations": 3.0,
-    "previous_week_incident_count": 0.0,
-    "previous_week_incident_occurred": 0.0,
-    "previous_week_traffic_pressure": 0.111,
-    "rolling_4_week_avg_vehicle_density": 15.78,
-    "rolling_4_week_avg_congestion": 11.88,
-    "rolling_4_week_avg_speed": 64.15,
-    "rolling_4_week_avg_violations": 4.5,
-    "rolling_4_week_incident_count": 0.0,
-    "rolling_4_week_incident_rate": 0.0,
-    "rolling_4_week_avg_traffic_pressure": 0.188,
-    "vehicle_density_change": -2.96,
-    "congestion_change": -10.42,
-    "speed_change": 2.28,
-    "violations_change": 3.0,
-    "traffic_pressure_change": -0.035,
-    "incident_count_change": 0.0,
-    "vehicle_density_pct_change": -31.62,
-    "congestion_pct_change": -78.29,
-    "speed_pct_change": 3.68,
-    "vehicle_population_ratio": 3.26,
-    "congestion_trend_4w": 1.008,
-    "vehicle_density_trend_4w": -2.793,
-    "speed_trend_4w": -1.139,
-    "incident_trend_4w": 0.0,
-    "location_name_x": "Rohini",
-    "city_x": "Delhi",
-    "latitude_x": 28.7495,
-    "longitude_x": 77.0565,
-    "car_percentage": 48.1,
-    "motorcycle_percentage": 36.3,
-    "bus_percentage": 9.3,
-    "truck_percentage": 6.3,
-    "moving_vehicle_percentage": 79.6,
-    "slow_vehicle_percentage": 18.3,
-    "stopped_vehicle_percentage": 2.1,
-    "location_name_y": "Rohini",
-    "city_y": "Delhi",
-    "latitude_y": 28.7495,
-    "longitude_y": 77.0565,
-    "predicted_risk_probability": 0.235,
-    "risk_score": 23.5043,
-    "population_exposure_score": 4.325,
-    "vehicle_exposure_score": 5.926,
-    "temporal_trend_score": 31.235,
-    "priority_score": 16.3534,
-    "priority_rank": 49,
-    "priority_level": "LOW",
-    "risk_prob": 0.235
+    "crashes": 3,
+    "rolling4w_avg": 3.5,
+    "speed_mph": 30.0
   }
 }

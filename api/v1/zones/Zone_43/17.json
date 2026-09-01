@@ -1,213 +1,155 @@
 {
   "zone_id": "Zone_43",
-  "location_name": "Zone_43",
-  "city": "",
-  "zone_type": "Commercial_Downtown",
+  "location_name": "West Englewood - 63rd St & Ashland Ave",
+  "city": "Chicago",
+  "zone_type": "High-Volume Crossroad Arterial",
   "week": 17,
-  "latitude": 0.0,
-  "longitude": 0.0,
+  "latitude": 41.7792,
+  "longitude": -87.6645,
   "risk_analysis": {
-    "predicted_risk_probability": 0.2326,
-    "predicted_risk_percentage": 23.26,
-    "risk_label": "LOW RISK",
-    "risk_color": "#22c55e",
-    "risk_delta_vs_prev_week": -1.5236,
-    "actual_incident": 0
+    "predicted_risk_probability": 0.8875,
+    "predicted_risk_percentage": 88.75,
+    "risk_label": "CRITICAL RISK",
+    "risk_color": "#ef4444",
+    "risk_delta_vs_prev_week": -64.75,
+    "actual_incident": 1
   },
   "priority": {
-    "priority_score": 30.0447,
-    "priority_rank": 34,
-    "priority_level": "LOW",
+    "priority_score": 65.33,
+    "priority_rank": 1,
+    "priority_level": "HIGH",
     "components": {
-      "risk_score": 23.2649,
-      "population_exposure_score": 18.8735,
-      "vehicle_exposure_score": 32.0701,
-      "temporal_trend_score": 64.0425
+      "risk_score": 88.75,
+      "population_exposure_score": 65.0,
+      "vehicle_exposure_score": 60.4,
+      "temporal_trend_score": 10.0
     },
     "explanation": {
-      "priority_level": "LOW",
-      "priority_score": 30.0,
-      "top_contributors": [
-        {
-          "factor": "Rising Trend",
-          "icon": "\ud83d\udcc8",
-          "value": "64/100",
-          "impact": "MEDIUM",
-          "detail": "Slight upward trend in congestion over past 4 weeks",
-          "weight": 38.4255
-        },
-        {
-          "factor": "Risk Score",
-          "icon": "\ud83d\udfe2",
-          "value": "23/100",
-          "impact": "LOW",
-          "detail": "Risk score within acceptable range",
-          "weight": 23.2649
-        }
-      ],
-      "total_factors": 2,
-      "assessment": "This zone is currently within acceptable safety parameters. Routine monitoring is sufficient."
+      "priority_level": "HIGH",
+      "priority_score": 65.33,
+      "assessment": "Corridor in 07th District - Englewood exhibits high traffic hazard priority driven by Chicago crash history."
     }
   },
   "telemetry": {
-    "congestion": 12.93,
-    "congestion_delta": -3.33,
-    "average_speed_kmh": 64.54,
-    "speed_delta": 5.64,
-    "vehicle_density": 23.03,
-    "density_delta": -3.98,
-    "population_density": 3988,
-    "red_light_violations": 3,
-    "weather": "Normal",
+    "congestion": 77.62,
+    "congestion_delta": 0.0,
+    "average_speed_kmh": 48.3,
+    "speed_delta": 0.0,
+    "vehicle_density": 72.5,
+    "density_delta": 0.0,
+    "population_density": 8500,
+    "red_light_violations": 8,
+    "weather": "CLEAR",
     "special_event": 0
   },
   "signal_optimization": {
-    "base_green_seconds": 40,
-    "recommended_green_seconds": 36,
-    "change_seconds": -4,
-    "change_percent": -10.0,
-    "urgency": "NOMINAL",
-    "reason": "Current default timing is adequate",
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 59,
+    "change_seconds": 24,
+    "change_percent": 68.6,
+    "urgency": "CRITICAL",
+    "reason": "Severe congestion requires significantly extended green phase",
     "factors": {
-      "congestion_factor": 1.1,
-      "density_factor": 1.09,
-      "speed_factor": 0.76,
+      "congestion_factor": 1.62,
+      "density_factor": 1.29,
+      "speed_factor": 0.82,
       "event_boost": 1.0,
       "weather_boost": 1.0
     }
   },
   "environmental_impact": {
-    "total_co2_kg_per_week": 35188.6,
-    "total_co2_tonnes_per_year": 1829.81,
-    "idle_co2_kg": 1643.7,
-    "moving_co2_kg": 33544.9,
-    "potential_savings_kg_per_week": 350.0,
-    "potential_savings_tonnes_per_year": 18.2,
-    "trees_equivalent_per_year": 866,
-    "fuel_saved_liters_per_week": 151.5,
-    "citizens_impacted": 7976,
-    "optimization_factor_pct": 21.3
+    "total_co2_kg_per_week": 53630.8,
+    "total_co2_tonnes_per_year": 2788.8,
+    "idle_co2_kg": 31065.5,
+    "moving_co2_kg": 22565.3,
+    "potential_savings_kg_per_week": 8624.6,
+    "potential_savings_tonnes_per_year": 448.48,
+    "trees_equivalent_per_year": 21356,
+    "fuel_saved_liters_per_week": 3733.6,
+    "citizens_impacted": 17000,
+    "optimization_factor_pct": 27.8
   },
   "interventions": [
     {
-      "id": "BASELINE_MONITORING",
-      "name": "Routine Monitoring",
-      "icon": "\ud83d\udcca",
-      "severity": "LOW",
-      "description": "Zone currently within acceptable risk parameters.",
-      "action": "Continue routine monitoring. No immediate intervention required."
+      "title": "Deploy Speed Calming & Signal Synchronization on 63rd St & Ashland Ave",
+      "type": "MUNICIPAL_CORRIDOR_CALMING",
+      "priority": "HIGH",
+      "target_reduction": "18% collision frequency reduction"
+    },
+    {
+      "title": "Pedestrian Crosswalk High-Visibility Illumination & Turn Signal Audit",
+      "type": "INFRASTRUCTURE_SAFETY",
+      "priority": "MODERATE",
+      "target_reduction": "Eliminate left-turn crossing conflicts"
     }
   ],
-  "executive_briefing": "Zone_43 is within safe operating parameters (23% risk). Continue routine monitoring. Optimizing signals could save 350 kg CO2/week, equivalent to 866 trees/year.",
+  "executive_briefing": "Chicago Police Beat 724 (West Englewood - 63rd St & Ashland Ave) logged 4 collisions in week 17. Current risk score is 89%, with upcoming risk forecast at 24%.",
   "civilian_road_safety_radar": {
     "current_week": {
-      "week": 17,
-      "risk_score": 23.3,
-      "risk_percentage": "23%",
-      "risk_badge": "LOW RISK",
+      "period": "2024-W17",
+      "date_range": "Apr 22 - Apr 28, 2024",
+      "risk_score": 88.8,
+      "risk_percentage": "89%",
+      "risk_badge": "[HIGH RISK ALERT]",
+      "risk_color": "#ef4444",
+      "description": "Elevated collision activity recorded recently. Extra vigilance recommended.",
+      "crashes_reported": 4,
+      "crashes_rolling4w_avg": 3.25,
+      "dominant_weather": "CLEAR"
+    },
+    "upcoming_week": {
+      "period": "2024-W18",
+      "predicted_risk_probability": 0.24,
+      "predicted_risk_percentage": "24%",
+      "predicted_risk_badge": "[PREDICTED: SAFE CORRIDOR]",
       "risk_color": "#22c55e",
-      "description": "Corridor operating within normal baseline.",
-      "crashes_reported": 0
+      "description": "Forecast models project normal baseline traffic conditions.",
+      "trend_label": "[TREND: COOLING DOWN]",
+      "trend_color": "#22c55e",
+      "trend_percentage_change": "-65%"
     },
     "why_accidents_might_happen": {
       "primary_collision_cause": {
-        "title": "Congestion Bottleneck & Merge Conflicts",
-        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+        "title": "Failing to Yield Right-of-Way",
+        "explanation": "Drivers turning left across oncoming traffic or turning on yellow without checking cross-traffic and crossing pedestrians.",
+        "historical_frequency_pct": 34.2
       },
       "behavior_factor": {
-        "title": "Tailgating & Speed Variance",
-        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+        "title": "Tailgating & Sudden Braking",
+        "explanation": "High-density commuter queues cause rear-end collisions when drivers follow too closely during rush hours.",
+        "risk_level": "ELEVATED"
       },
       "street_environment": {
-        "zone_type": "Commercial_Downtown",
-        "average_speed_kmh": 64.54,
-        "congestion_level": 12.93
+        "posted_speed_limit_mph": 30.0,
+        "intersection_crossroad_density_pct": 48.5,
+        "title": "30 mph Zone | 49% Crossroad Density",
+        "explanation": "Frequent signalized crossroads combined with multi-lane traffic flow increase conflict points at peak times."
       }
     },
     "civilian_safety_guide": {
       "for_drivers": {
         "action": "Increase Following Distance",
-        "details": "Maintain 3 car lengths buffer during peak rush hours."
+        "details": "Maintain at least 3 car lengths of space behind the vehicle ahead. Avoid tailgating near transit stops and expressway exit ramps where sudden stops occur.",
+        "key_tip": "Leave 3-4 car lengths buffer on commercial transit corridors"
       },
       "for_pedestrians_and_cyclists": {
-        "action": "Double-Check Turning Vehicles",
-        "details": "Make eye contact with turning drivers at intersections before crossing."
+        "action": "Double-Check Turning Cars",
+        "details": "Make eye contact with drivers turning right on red before stepping into crosswalks. Use reflective gear or activate bicycle lights after dusk.",
+        "key_tip": "Never assume a turning driver has seen you at green lights"
       },
       "peak_danger_windows": {
-        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
-        "details": "Congestion peaks during evening travel windows."
+        "primary_peak": "4:30 PM - 7:30 PM Weekdays (Evening Commute Congestion)",
+        "secondary_peak": "10:00 PM - 2:00 AM Friday & Saturday (Reduced Lighting & Speed Variance)",
+        "details": "Evening rush hours experience 3x higher collision rates than midday. Exercise maximum patience during heavy congestion."
       }
     }
   },
   "raw_metrics": {
     "zone_id": "Zone_43",
+    "chicago_beat": "724",
     "week": 17,
-    "zone_type": "Commercial_Downtown",
-    "temporal_profile": "STABLE",
-    "population_density": 3988,
-    "road_capacity": 78,
-    "effective_road_capacity": 78.0,
-    "vehicle_density": 23.03,
-    "traffic_pressure": 0.295,
-    "congestion": 12.93,
-    "average_speed": 64.54,
-    "red_light_violations": 3,
-    "weather": "Normal",
-    "road_condition": "Good",
-    "special_event": 0,
-    "incident_count": 0,
-    "incident_occurred": 0,
-    "previous_week_vehicle_density": 27.01,
-    "previous_week_congestion": 16.26,
-    "previous_week_average_speed": 58.9,
-    "previous_week_red_light_violations": 2.0,
-    "previous_week_incident_count": 0.0,
-    "previous_week_incident_occurred": 0.0,
-    "previous_week_traffic_pressure": 0.346,
-    "rolling_4_week_avg_vehicle_density": 18.43,
-    "rolling_4_week_avg_congestion": 10.35,
-    "rolling_4_week_avg_speed": 62.53,
-    "rolling_4_week_avg_violations": 2.25,
-    "rolling_4_week_incident_count": 0.0,
-    "rolling_4_week_incident_rate": 0.0,
-    "rolling_4_week_avg_traffic_pressure": 0.236,
-    "vehicle_density_change": -3.98,
-    "congestion_change": -3.33,
-    "speed_change": 5.64,
-    "violations_change": 1.0,
-    "traffic_pressure_change": -0.051,
-    "incident_count_change": 0.0,
-    "vehicle_density_pct_change": -14.74,
-    "congestion_pct_change": -20.48,
-    "speed_pct_change": 9.58,
-    "vehicle_population_ratio": 5.775,
-    "congestion_trend_4w": 2.789,
-    "vehicle_density_trend_4w": 4.577,
-    "speed_trend_4w": -2.113,
-    "incident_trend_4w": 0.0,
-    "location_name_x": "Tambaram",
-    "city_x": "Chennai",
-    "latitude_x": 12.9249,
-    "longitude_x": 80.1,
-    "car_percentage": 43.9,
-    "motorcycle_percentage": 37.9,
-    "bus_percentage": 11.5,
-    "truck_percentage": 6.7,
-    "moving_vehicle_percentage": 80.0,
-    "slow_vehicle_percentage": 12.4,
-    "stopped_vehicle_percentage": 7.5,
-    "location_name_y": "Tambaram",
-    "city_y": "Chennai",
-    "latitude_y": 12.9249,
-    "longitude_y": 80.1,
-    "predicted_risk_probability": 0.2326,
-    "risk_score": 23.2649,
-    "population_exposure_score": 18.8735,
-    "vehicle_exposure_score": 32.0701,
-    "temporal_trend_score": 64.0425,
-    "priority_score": 30.0447,
-    "priority_rank": 34,
-    "priority_level": "LOW",
-    "risk_prob": 0.2326
+    "crashes": 4,
+    "rolling4w_avg": 3.25,
+    "speed_mph": 30.0
   }
 }

@@ -1,285 +1,155 @@
 {
   "zone_id": "Zone_49",
-  "location_name": "Zone_49",
-  "city": "",
-  "zone_type": "University_District",
+  "location_name": "Morgan Park - 111th St & Hale Ave",
+  "city": "Chicago",
+  "zone_type": "Metra Station Transit Center",
   "week": 34,
-  "latitude": 0.0,
-  "longitude": 0.0,
+  "latitude": 41.692,
+  "longitude": -87.6698,
   "risk_analysis": {
-    "predicted_risk_probability": 0.9455,
-    "predicted_risk_percentage": 94.55,
+    "predicted_risk_probability": 0.95,
+    "predicted_risk_percentage": 95.0,
     "risk_label": "CRITICAL RISK",
     "risk_color": "#ef4444",
-    "risk_delta_vs_prev_week": 22.482,
+    "risk_delta_vs_prev_week": -62.8,
     "actual_incident": 1
   },
   "priority": {
-    "priority_score": 86.3859,
-    "priority_rank": 3,
+    "priority_score": 75.75,
+    "priority_rank": 1,
     "priority_level": "CRITICAL",
     "components": {
-      "risk_score": 94.5546,
-      "population_exposure_score": 73.1231,
-      "vehicle_exposure_score": 83.6227,
-      "temporal_trend_score": 90.3919
+      "risk_score": 95.0,
+      "population_exposure_score": 65.0,
+      "vehicle_exposure_score": 100.0,
+      "temporal_trend_score": 10.0
     },
     "explanation": {
       "priority_level": "CRITICAL",
-      "priority_score": 86.4,
-      "top_contributors": [
-        {
-          "factor": "Congestion",
-          "icon": "\ud83d\ude97",
-          "value": "95/100",
-          "impact": "HIGH",
-          "detail": "Congestion index at 95 \u2014 severe traffic flow degradation",
-          "weight": 94.97
-        },
-        {
-          "factor": "Risk Score",
-          "icon": "\ud83d\udd34",
-          "value": "95/100",
-          "impact": "HIGH",
-          "detail": "Model-estimated risk score is in the critical range",
-          "weight": 94.5546
-        },
-        {
-          "factor": "Worsening Trend",
-          "icon": "\ud83d\udcc8",
-          "value": "90/100",
-          "impact": "HIGH",
-          "detail": "4-week congestion trend is actively worsening \u2014 conditions deteriorating",
-          "weight": 90.3919
-        },
-        {
-          "factor": "Vehicle Density",
-          "icon": "\ud83d\ude99",
-          "value": "84/100",
-          "impact": "HIGH",
-          "detail": "High vehicle density increases collision exposure",
-          "weight": 83.6227
-        },
-        {
-          "factor": "Speed Anomaly",
-          "icon": "\ud83d\udc0c",
-          "value": "20 km/h",
-          "impact": "HIGH",
-          "detail": "Average speed of 20 km/h indicates near-gridlock conditions",
-          "weight": 79.66
-        }
-      ],
-      "total_factors": 7,
-      "assessment": "This zone requires URGENT attention. Primary risk drivers: Congestion, Risk Score, Worsening Trend. Immediate field inspection and intervention planning recommended."
+      "priority_score": 75.75,
+      "assessment": "Corridor in 22nd District - Morgan Park exhibits critical traffic hazard priority driven by Chicago crash history."
     }
   },
   "telemetry": {
-    "congestion": 94.97,
-    "congestion_delta": 7.28,
-    "average_speed_kmh": 20.34,
-    "speed_delta": -2.34,
-    "vehicle_density": 62.54,
-    "density_delta": 3.19,
-    "population_density": 11539,
-    "red_light_violations": 11,
-    "weather": "Light Rain",
+    "congestion": 100.0,
+    "congestion_delta": 0.0,
+    "average_speed_kmh": 48.3,
+    "speed_delta": 0.0,
+    "vehicle_density": 120.0,
+    "density_delta": 0.0,
+    "population_density": 8500,
+    "red_light_violations": 22,
+    "weather": "CLEAR",
     "special_event": 0
   },
   "signal_optimization": {
     "base_green_seconds": 35,
-    "recommended_green_seconds": 76,
-    "change_seconds": 41,
-    "change_percent": 117.1,
+    "recommended_green_seconds": 72,
+    "change_seconds": 37,
+    "change_percent": 105.7,
     "urgency": "CRITICAL",
     "reason": "Severe congestion requires significantly extended green phase",
     "factors": {
-      "congestion_factor": 1.76,
-      "density_factor": 1.25,
-      "speed_factor": 0.92,
+      "congestion_factor": 1.8,
+      "density_factor": 1.4,
+      "speed_factor": 0.82,
       "event_boost": 1.0,
-      "weather_boost": 1.08
+      "weather_boost": 1.0
     }
   },
   "environmental_impact": {
-    "total_co2_kg_per_week": 36102.6,
-    "total_co2_tonnes_per_year": 1877.33,
-    "idle_co2_kg": 32785.6,
-    "moving_co2_kg": 3317.0,
-    "potential_savings_kg_per_week": 9670.8,
-    "potential_savings_tonnes_per_year": 502.88,
-    "trees_equivalent_per_year": 23946,
-    "fuel_saved_liters_per_week": 4186.5,
-    "citizens_impacted": 23078,
-    "optimization_factor_pct": 29.5
+    "total_co2_kg_per_week": 71274.2,
+    "total_co2_tonnes_per_year": 3706.26,
+    "idle_co2_kg": 62928.0,
+    "moving_co2_kg": 8346.2,
+    "potential_savings_kg_per_week": 18878.4,
+    "potential_savings_tonnes_per_year": 981.68,
+    "trees_equivalent_per_year": 46746,
+    "fuel_saved_liters_per_week": 8172.5,
+    "citizens_impacted": 17000,
+    "optimization_factor_pct": 30.0
   },
   "interventions": [
     {
-      "id": "CONGESTION_MANAGEMENT",
-      "name": "Congestion Management & Diversion",
-      "icon": "\ud83d\ude97",
-      "severity": "CRITICAL",
-      "description": "Severe congestion with high vehicle density requires active demand management.",
-      "action": "Activate dynamic message signs for route diversion. Consider congestion pricing or access restrictions."
+      "title": "Deploy Speed Calming & Signal Synchronization on 111th St & Hale Ave",
+      "type": "MUNICIPAL_CORRIDOR_CALMING",
+      "priority": "CRITICAL",
+      "target_reduction": "18% collision frequency reduction"
     },
     {
-      "id": "TREND_URGENT_INSPECTION",
-      "name": "Urgent Safety Inspection",
-      "icon": "\u26a0\ufe0f",
-      "severity": "CRITICAL",
-      "description": "Risk is actively worsening (high temporal trend) with already elevated risk score.",
-      "action": "Deploy immediate field inspection team. Identify root cause of deteriorating safety conditions."
-    },
-    {
-      "id": "SIGNAL_OPTIMIZATION",
-      "name": "Traffic Signal Optimization",
-      "icon": "\ud83d\udea6",
-      "severity": "HIGH",
-      "description": "High congestion with low throughput speed indicates signal timing inefficiency.",
-      "action": "Review and optimize signal timing at major intersections in this zone."
-    },
-    {
-      "id": "VIOLATION_ENFORCEMENT",
-      "name": "Red-Light Violation Enforcement",
-      "icon": "\ud83d\udea8",
-      "severity": "HIGH",
-      "description": "Elevated red-light violation count indicates intersection compliance failure.",
-      "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
-    },
-    {
-      "id": "PEDESTRIAN_SAFETY",
-      "name": "Pedestrian Crossing Intervention",
-      "icon": "\ud83d\udeb6",
-      "severity": "MEDIUM",
-      "description": "High population density zone with significant traffic congestion creates pedestrian exposure risk.",
-      "action": "Install protected pedestrian crossings, improve sidewalk infrastructure, and add pedestrian countdown signals."
-    },
-    {
-      "id": "ROAD_MAINTENANCE",
-      "name": "Road Maintenance Inspection",
-      "icon": "\ud83d\udee3\ufe0f",
-      "severity": "MEDIUM",
-      "description": "Deteriorated road surface combined with elevated risk indicates infrastructure maintenance need.",
-      "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
-    },
-    {
-      "id": "MONITORING_UPGRADE",
-      "name": "Enhanced Monitoring & CCTV Coverage",
-      "icon": "\ud83d\udcf9",
-      "severity": "MEDIUM",
-      "description": "High-risk zone with significant population exposure warrants improved surveillance.",
-      "action": "Install additional CCTV cameras and integrate with traffic management center for real-time monitoring."
+      "title": "Pedestrian Crosswalk High-Visibility Illumination & Turn Signal Audit",
+      "type": "INFRASTRUCTURE_SAFETY",
+      "priority": "HIGH",
+      "target_reduction": "Eliminate left-turn crossing conflicts"
     }
   ],
-  "executive_briefing": "Zone_49 is in a critical safety state with 95% incident risk. Signal optimization recommended \u2014 congestion at 95/100 with speeds averaging 20 km/h. Optimizing signals could save 9671 kg CO2/week, equivalent to 23946 trees/year.",
+  "executive_briefing": "Chicago Police Beat 2212 (Morgan Park - 111th St & Hale Ave) logged 11 collisions in week 34. Current risk score is 95%, with upcoming risk forecast at 32%.",
   "civilian_road_safety_radar": {
     "current_week": {
-      "week": 34,
-      "risk_score": 94.6,
+      "period": "2024-W34",
+      "date_range": "Aug 19 - Aug 25, 2024",
+      "risk_score": 95.0,
       "risk_percentage": "95%",
-      "risk_badge": "CRITICAL RISK",
+      "risk_badge": "[HIGH RISK ALERT]",
       "risk_color": "#ef4444",
-      "description": "Elevated collision activity observed.",
-      "crashes_reported": 0
+      "description": "Elevated collision activity recorded recently. Extra vigilance recommended.",
+      "crashes_reported": 11,
+      "crashes_rolling4w_avg": 11.75,
+      "dominant_weather": "CLEAR"
+    },
+    "upcoming_week": {
+      "period": "2024-W35",
+      "predicted_risk_probability": 0.322,
+      "predicted_risk_percentage": "32%",
+      "predicted_risk_badge": "[PREDICTED: SAFE CORRIDOR]",
+      "risk_color": "#22c55e",
+      "description": "Forecast models project normal baseline traffic conditions.",
+      "trend_label": "[TREND: COOLING DOWN]",
+      "trend_color": "#22c55e",
+      "trend_percentage_change": "-63%"
     },
     "why_accidents_might_happen": {
       "primary_collision_cause": {
-        "title": "Congestion Bottleneck & Merge Conflicts",
-        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+        "title": "Failing to Yield Right-of-Way",
+        "explanation": "Drivers turning left across oncoming traffic or turning on yellow without checking cross-traffic and crossing pedestrians.",
+        "historical_frequency_pct": 34.2
       },
       "behavior_factor": {
-        "title": "Tailgating & Speed Variance",
-        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+        "title": "Tailgating & Sudden Braking",
+        "explanation": "High-density commuter queues cause rear-end collisions when drivers follow too closely during rush hours.",
+        "risk_level": "ELEVATED"
       },
       "street_environment": {
-        "zone_type": "University_District",
-        "average_speed_kmh": 20.34,
-        "congestion_level": 94.97
+        "posted_speed_limit_mph": 30.0,
+        "intersection_crossroad_density_pct": 48.5,
+        "title": "30 mph Zone | 49% Crossroad Density",
+        "explanation": "Frequent signalized crossroads combined with multi-lane traffic flow increase conflict points at peak times."
       }
     },
     "civilian_safety_guide": {
       "for_drivers": {
         "action": "Increase Following Distance",
-        "details": "Maintain 3 car lengths buffer during peak rush hours."
+        "details": "Maintain at least 3 car lengths of space behind the vehicle ahead. Avoid tailgating near transit stops and expressway exit ramps where sudden stops occur.",
+        "key_tip": "Leave 3-4 car lengths buffer on commercial transit corridors"
       },
       "for_pedestrians_and_cyclists": {
-        "action": "Double-Check Turning Vehicles",
-        "details": "Make eye contact with turning drivers at intersections before crossing."
+        "action": "Double-Check Turning Cars",
+        "details": "Make eye contact with drivers turning right on red before stepping into crosswalks. Use reflective gear or activate bicycle lights after dusk.",
+        "key_tip": "Never assume a turning driver has seen you at green lights"
       },
       "peak_danger_windows": {
-        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
-        "details": "Congestion peaks during evening travel windows."
+        "primary_peak": "4:30 PM - 7:30 PM Weekdays (Evening Commute Congestion)",
+        "secondary_peak": "10:00 PM - 2:00 AM Friday & Saturday (Reduced Lighting & Speed Variance)",
+        "details": "Evening rush hours experience 3x higher collision rates than midday. Exercise maximum patience during heavy congestion."
       }
     }
   },
   "raw_metrics": {
     "zone_id": "Zone_49",
+    "chicago_beat": "2212",
     "week": 34,
-    "zone_type": "University_District",
-    "temporal_profile": "STABLE",
-    "population_density": 11539,
-    "road_capacity": 59,
-    "effective_road_capacity": 48.85,
-    "vehicle_density": 62.54,
-    "traffic_pressure": 1.28,
-    "congestion": 94.97,
-    "average_speed": 20.34,
-    "red_light_violations": 11,
-    "weather": "Light Rain",
-    "road_condition": "Moderate",
-    "special_event": 0,
-    "incident_count": 4,
-    "incident_occurred": 1,
-    "previous_week_vehicle_density": 59.35,
-    "previous_week_congestion": 87.69,
-    "previous_week_average_speed": 22.68,
-    "previous_week_red_light_violations": 4.0,
-    "previous_week_incident_count": 0.0,
-    "previous_week_incident_occurred": 0.0,
-    "previous_week_traffic_pressure": 1.215,
-    "rolling_4_week_avg_vehicle_density": 55.38,
-    "rolling_4_week_avg_congestion": 73.94,
-    "rolling_4_week_avg_speed": 33.21,
-    "rolling_4_week_avg_violations": 6.75,
-    "rolling_4_week_incident_count": 4.0,
-    "rolling_4_week_incident_rate": 0.5,
-    "rolling_4_week_avg_traffic_pressure": 1.156,
-    "vehicle_density_change": 3.19,
-    "congestion_change": 7.28,
-    "speed_change": -2.34,
-    "violations_change": 7.0,
-    "traffic_pressure_change": 0.065,
-    "incident_count_change": -2.0,
-    "vehicle_density_pct_change": 5.37,
-    "congestion_pct_change": 8.3,
-    "speed_pct_change": -10.32,
-    "vehicle_population_ratio": 5.42,
-    "congestion_trend_4w": 15.184,
-    "vehicle_density_trend_4w": 2.024,
-    "speed_trend_4w": -12.728,
-    "incident_trend_4w": -0.2,
-    "location_name_x": "Sholinganallur",
-    "city_x": "Chennai",
-    "latitude_x": 12.901,
-    "longitude_x": 80.2279,
-    "car_percentage": 47.3,
-    "motorcycle_percentage": 42.1,
-    "bus_percentage": 8.3,
-    "truck_percentage": 2.2,
-    "moving_vehicle_percentage": 8.0,
-    "slow_vehicle_percentage": 36.3,
-    "stopped_vehicle_percentage": 55.7,
-    "location_name_y": "Sholinganallur",
-    "city_y": "Chennai",
-    "latitude_y": 12.901,
-    "longitude_y": 80.2279,
-    "predicted_risk_probability": 0.9455,
-    "risk_score": 94.5546,
-    "population_exposure_score": 73.1231,
-    "vehicle_exposure_score": 83.6227,
-    "temporal_trend_score": 90.3919,
-    "priority_score": 86.3859,
-    "priority_rank": 3,
-    "priority_level": "CRITICAL",
-    "risk_prob": 0.9455
+    "crashes": 11,
+    "rolling4w_avg": 11.75,
+    "speed_mph": 30.0
   }
 }

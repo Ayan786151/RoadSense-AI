@@ -1,221 +1,155 @@
 {
   "zone_id": "Zone_37",
-  "location_name": "Zone_37",
-  "city": "",
-  "zone_type": "Residential",
+  "location_name": "Humboldt Park - Division St & California Ave",
+  "city": "Chicago",
+  "zone_type": "Parkway Commercial Corridor",
   "week": 41,
-  "latitude": 0.0,
-  "longitude": 0.0,
+  "latitude": 41.9032,
+  "longitude": -87.697,
   "risk_analysis": {
-    "predicted_risk_probability": 0.3146,
-    "predicted_risk_percentage": 31.46,
-    "risk_label": "LOW RISK",
-    "risk_color": "#22c55e",
-    "risk_delta_vs_prev_week": 2.4088,
-    "actual_incident": 0
+    "predicted_risk_probability": 0.95,
+    "predicted_risk_percentage": 95.0,
+    "risk_label": "CRITICAL RISK",
+    "risk_color": "#ef4444",
+    "risk_delta_vs_prev_week": -68.0,
+    "actual_incident": 1
   },
   "priority": {
-    "priority_score": 41.495,
-    "priority_rank": 24,
-    "priority_level": "MODERATE",
+    "priority_score": 70.33,
+    "priority_rank": 1,
+    "priority_level": "CRITICAL",
     "components": {
-      "risk_score": 31.4595,
-      "population_exposure_score": 72.6561,
-      "vehicle_exposure_score": 43.6539,
-      "temporal_trend_score": 13.443
+      "risk_score": 95.0,
+      "population_exposure_score": 65.0,
+      "vehicle_exposure_score": 72.9,
+      "temporal_trend_score": 10.0
     },
     "explanation": {
-      "priority_level": "MODERATE",
-      "priority_score": 41.5,
-      "top_contributors": [
-        {
-          "factor": "Population Exposure",
-          "icon": "\ud83d\udc65",
-          "value": "73/100",
-          "impact": "HIGH",
-          "detail": "High population density zone \u2014 11474 residents/km\u00b2",
-          "weight": 72.6561
-        },
-        {
-          "factor": "Risk Score",
-          "icon": "\ud83d\udfe2",
-          "value": "31/100",
-          "impact": "LOW",
-          "detail": "Risk score within acceptable range",
-          "weight": 31.4595
-        },
-        {
-          "factor": "Improving Trend",
-          "icon": "\ud83d\udcc9",
-          "value": "13/100",
-          "impact": "POSITIVE",
-          "detail": "Conditions are improving over past 4 weeks",
-          "weight": -13.443
-        }
-      ],
-      "total_factors": 3,
-      "assessment": "This zone has moderate risk levels with contributing factors: Population Exposure. Continue monitoring and schedule review if conditions worsen."
+      "priority_level": "CRITICAL",
+      "priority_score": 70.33,
+      "assessment": "Corridor in 14th District - Shakespeare exhibits critical traffic hazard priority driven by Chicago crash history."
     }
   },
   "telemetry": {
-    "congestion": 10.29,
-    "congestion_delta": -7.11,
-    "average_speed_kmh": 64.08,
-    "speed_delta": 2.56,
-    "vehicle_density": 34.39,
-    "density_delta": -0.98,
-    "population_density": 11474,
-    "red_light_violations": 2,
-    "weather": "Normal",
+    "congestion": 95.38,
+    "congestion_delta": 0.0,
+    "average_speed_kmh": 48.3,
+    "speed_delta": 0.0,
+    "vehicle_density": 87.5,
+    "density_delta": 0.0,
+    "population_density": 8500,
+    "red_light_violations": 10,
+    "weather": "CLEAR",
     "special_event": 0
   },
   "signal_optimization": {
-    "base_green_seconds": 30,
-    "recommended_green_seconds": 28,
-    "change_seconds": -2,
-    "change_percent": -6.7,
-    "urgency": "NOMINAL",
-    "reason": "Current default timing is adequate",
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 68,
+    "change_seconds": 33,
+    "change_percent": 94.3,
+    "urgency": "CRITICAL",
+    "reason": "Severe congestion requires significantly extended green phase",
     "factors": {
-      "congestion_factor": 1.08,
-      "density_factor": 1.14,
-      "speed_factor": 0.76,
+      "congestion_factor": 1.76,
+      "density_factor": 1.35,
+      "speed_factor": 0.82,
       "event_boost": 1.0,
       "weather_boost": 1.0
     }
   },
   "environmental_impact": {
-    "total_co2_kg_per_week": 53195.9,
-    "total_co2_tonnes_per_year": 2766.19,
-    "idle_co2_kg": 1953.4,
-    "moving_co2_kg": 51242.5,
-    "potential_savings_kg_per_week": 410.8,
-    "potential_savings_tonnes_per_year": 21.36,
-    "trees_equivalent_per_year": 1017,
-    "fuel_saved_liters_per_week": 177.8,
-    "citizens_impacted": 22948,
-    "optimization_factor_pct": 21.0
+    "total_co2_kg_per_week": 51970.8,
+    "total_co2_tonnes_per_year": 2702.48,
+    "idle_co2_kg": 45885.0,
+    "moving_co2_kg": 6085.8,
+    "potential_savings_kg_per_week": 13553.3,
+    "potential_savings_tonnes_per_year": 704.77,
+    "trees_equivalent_per_year": 33560,
+    "fuel_saved_liters_per_week": 5867.2,
+    "citizens_impacted": 17000,
+    "optimization_factor_pct": 29.5
   },
   "interventions": [
     {
-      "id": "BASELINE_MONITORING",
-      "name": "Routine Monitoring",
-      "icon": "\ud83d\udcca",
-      "severity": "LOW",
-      "description": "No specific risk indicators triggered.",
-      "action": "Continue routine monitoring."
+      "title": "Deploy Speed Calming & Signal Synchronization on Division St & California Ave",
+      "type": "MUNICIPAL_CORRIDOR_CALMING",
+      "priority": "CRITICAL",
+      "target_reduction": "18% collision frequency reduction"
+    },
+    {
+      "title": "Pedestrian Crosswalk High-Visibility Illumination & Turn Signal Audit",
+      "type": "INFRASTRUCTURE_SAFETY",
+      "priority": "HIGH",
+      "target_reduction": "Eliminate left-turn crossing conflicts"
     }
   ],
-  "executive_briefing": "Zone_37 is within safe operating parameters (31% risk). Continue routine monitoring. Optimizing signals could save 411 kg CO2/week, equivalent to 1017 trees/year.",
+  "executive_briefing": "Chicago Police Beat 1423 (Humboldt Park - Division St & California Ave) logged 5 collisions in week 41. Current risk score is 95%, with upcoming risk forecast at 27%.",
   "civilian_road_safety_radar": {
     "current_week": {
-      "week": 41,
-      "risk_score": 31.5,
-      "risk_percentage": "31%",
-      "risk_badge": "LOW RISK",
+      "period": "2024-W41",
+      "date_range": "Oct 07 - Oct 13, 2024",
+      "risk_score": 95.0,
+      "risk_percentage": "95%",
+      "risk_badge": "[HIGH RISK ALERT]",
+      "risk_color": "#ef4444",
+      "description": "Elevated collision activity recorded recently. Extra vigilance recommended.",
+      "crashes_reported": 5,
+      "crashes_rolling4w_avg": 4.75,
+      "dominant_weather": "CLEAR"
+    },
+    "upcoming_week": {
+      "period": "2024-W42",
+      "predicted_risk_probability": 0.27,
+      "predicted_risk_percentage": "27%",
+      "predicted_risk_badge": "[PREDICTED: SAFE CORRIDOR]",
       "risk_color": "#22c55e",
-      "description": "Corridor operating within normal baseline.",
-      "crashes_reported": 0
+      "description": "Forecast models project normal baseline traffic conditions.",
+      "trend_label": "[TREND: COOLING DOWN]",
+      "trend_color": "#22c55e",
+      "trend_percentage_change": "-68%"
     },
     "why_accidents_might_happen": {
       "primary_collision_cause": {
-        "title": "Congestion Bottleneck & Merge Conflicts",
-        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+        "title": "Failing to Yield Right-of-Way",
+        "explanation": "Drivers turning left across oncoming traffic or turning on yellow without checking cross-traffic and crossing pedestrians.",
+        "historical_frequency_pct": 34.2
       },
       "behavior_factor": {
-        "title": "Tailgating & Speed Variance",
-        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+        "title": "Tailgating & Sudden Braking",
+        "explanation": "High-density commuter queues cause rear-end collisions when drivers follow too closely during rush hours.",
+        "risk_level": "ELEVATED"
       },
       "street_environment": {
-        "zone_type": "Residential",
-        "average_speed_kmh": 64.08,
-        "congestion_level": 10.29
+        "posted_speed_limit_mph": 30.0,
+        "intersection_crossroad_density_pct": 48.5,
+        "title": "30 mph Zone | 49% Crossroad Density",
+        "explanation": "Frequent signalized crossroads combined with multi-lane traffic flow increase conflict points at peak times."
       }
     },
     "civilian_safety_guide": {
       "for_drivers": {
         "action": "Increase Following Distance",
-        "details": "Maintain 3 car lengths buffer during peak rush hours."
+        "details": "Maintain at least 3 car lengths of space behind the vehicle ahead. Avoid tailgating near transit stops and expressway exit ramps where sudden stops occur.",
+        "key_tip": "Leave 3-4 car lengths buffer on commercial transit corridors"
       },
       "for_pedestrians_and_cyclists": {
-        "action": "Double-Check Turning Vehicles",
-        "details": "Make eye contact with turning drivers at intersections before crossing."
+        "action": "Double-Check Turning Cars",
+        "details": "Make eye contact with drivers turning right on red before stepping into crosswalks. Use reflective gear or activate bicycle lights after dusk.",
+        "key_tip": "Never assume a turning driver has seen you at green lights"
       },
       "peak_danger_windows": {
-        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
-        "details": "Congestion peaks during evening travel windows."
+        "primary_peak": "4:30 PM - 7:30 PM Weekdays (Evening Commute Congestion)",
+        "secondary_peak": "10:00 PM - 2:00 AM Friday & Saturday (Reduced Lighting & Speed Variance)",
+        "details": "Evening rush hours experience 3x higher collision rates than midday. Exercise maximum patience during heavy congestion."
       }
     }
   },
   "raw_metrics": {
     "zone_id": "Zone_37",
+    "chicago_beat": "1423",
     "week": 41,
-    "zone_type": "Residential",
-    "temporal_profile": "RECOVERY_AFTER_DISRUPTION",
-    "population_density": 11474,
-    "road_capacity": 92,
-    "effective_road_capacity": 92.0,
-    "vehicle_density": 34.39,
-    "traffic_pressure": 0.374,
-    "congestion": 10.29,
-    "average_speed": 64.08,
-    "red_light_violations": 2,
-    "weather": "Normal",
-    "road_condition": "Good",
-    "special_event": 0,
-    "incident_count": 0,
-    "incident_occurred": 0,
-    "previous_week_vehicle_density": 35.37,
-    "previous_week_congestion": 17.4,
-    "previous_week_average_speed": 61.52,
-    "previous_week_red_light_violations": 1.0,
-    "previous_week_incident_count": 0.0,
-    "previous_week_incident_occurred": 0.0,
-    "previous_week_traffic_pressure": 0.384,
-    "rolling_4_week_avg_vehicle_density": 39.57,
-    "rolling_4_week_avg_congestion": 21.25,
-    "rolling_4_week_avg_speed": 59.18,
-    "rolling_4_week_avg_violations": 1.25,
-    "rolling_4_week_incident_count": 0.0,
-    "rolling_4_week_incident_rate": 0.0,
-    "rolling_4_week_avg_traffic_pressure": 0.43,
-    "vehicle_density_change": -0.98,
-    "congestion_change": -7.11,
-    "speed_change": 2.56,
-    "violations_change": 1.0,
-    "traffic_pressure_change": -0.01,
-    "incident_count_change": 0.0,
-    "vehicle_density_pct_change": -2.77,
-    "congestion_pct_change": -40.86,
-    "speed_pct_change": 4.16,
-    "vehicle_population_ratio": 2.997,
-    "congestion_trend_4w": -1.935,
-    "vehicle_density_trend_4w": -2.259,
-    "speed_trend_4w": 0.857,
-    "incident_trend_4w": 0.0,
-    "location_name_x": "Vrindavan Yojana",
-    "city_x": "Lucknow",
-    "latitude_x": 26.79,
-    "longitude_x": 81.0,
-    "car_percentage": 32.6,
-    "motorcycle_percentage": 55.2,
-    "bus_percentage": 9.1,
-    "truck_percentage": 3.1,
-    "moving_vehicle_percentage": 87.9,
-    "slow_vehicle_percentage": 18.4,
-    "stopped_vehicle_percentage": 0.0,
-    "location_name_y": "Vrindavan Yojana",
-    "city_y": "Lucknow",
-    "latitude_y": 26.79,
-    "longitude_y": 81.0,
-    "predicted_risk_probability": 0.3146,
-    "risk_score": 31.4595,
-    "population_exposure_score": 72.6561,
-    "vehicle_exposure_score": 43.6539,
-    "temporal_trend_score": 13.443,
-    "priority_score": 41.495,
-    "priority_rank": 24,
-    "priority_level": "MODERATE",
-    "risk_prob": 0.3146
+    "crashes": 5,
+    "rolling4w_avg": 4.75,
+    "speed_mph": 30.0
   }
 }

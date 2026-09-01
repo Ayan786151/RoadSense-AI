@@ -1,237 +1,155 @@
 {
   "zone_id": "Zone_50",
-  "location_name": "Zone_50",
-  "city": "",
-  "zone_type": "University_District",
+  "location_name": "Mount Greenwood - 111th St & Pulaski Rd",
+  "city": "Chicago",
+  "zone_type": "Perimeter Arterial Junction",
   "week": 30,
-  "latitude": 0.0,
-  "longitude": 0.0,
+  "latitude": 41.6917,
+  "longitude": -87.7208,
   "risk_analysis": {
-    "predicted_risk_probability": 0.4853,
-    "predicted_risk_percentage": 48.53,
-    "risk_label": "MODERATE RISK",
-    "risk_color": "#eab308",
-    "risk_delta_vs_prev_week": -0.001,
-    "actual_incident": 0
+    "predicted_risk_probability": 0.95,
+    "predicted_risk_percentage": 95.0,
+    "risk_label": "CRITICAL RISK",
+    "risk_color": "#ef4444",
+    "risk_delta_vs_prev_week": -66.4,
+    "actual_incident": 1
   },
   "priority": {
-    "priority_score": 65.1006,
-    "priority_rank": 7,
-    "priority_level": "HIGH",
+    "priority_score": 75.75,
+    "priority_rank": 1,
+    "priority_level": "CRITICAL",
     "components": {
-      "risk_score": 48.5265,
-      "population_exposure_score": 73.5038,
-      "vehicle_exposure_score": 92.5058,
-      "temporal_trend_score": 58.7528
+      "risk_score": 95.0,
+      "population_exposure_score": 65.0,
+      "vehicle_exposure_score": 100.0,
+      "temporal_trend_score": 10.0
     },
     "explanation": {
-      "priority_level": "HIGH",
-      "priority_score": 65.1,
-      "top_contributors": [
-        {
-          "factor": "Vehicle Density",
-          "icon": "\ud83d\ude99",
-          "value": "93/100",
-          "impact": "HIGH",
-          "detail": "High vehicle density increases collision exposure",
-          "weight": 92.5058
-        },
-        {
-          "factor": "Population Exposure",
-          "icon": "\ud83d\udc65",
-          "value": "74/100",
-          "impact": "HIGH",
-          "detail": "High population density zone \u2014 11592 residents/km\u00b2",
-          "weight": 73.5038
-        },
-        {
-          "factor": "Risk Score",
-          "icon": "\ud83d\udfe1",
-          "value": "49/100",
-          "impact": "MEDIUM",
-          "detail": "Moderate model-estimated risk",
-          "weight": 48.5265
-        },
-        {
-          "factor": "Congestion",
-          "icon": "\ud83d\ude97",
-          "value": "58/100",
-          "impact": "MEDIUM",
-          "detail": "Moderate congestion at 58",
-          "weight": 40.628
-        },
-        {
-          "factor": "Rising Trend",
-          "icon": "\ud83d\udcc8",
-          "value": "59/100",
-          "impact": "MEDIUM",
-          "detail": "Slight upward trend in congestion over past 4 weeks",
-          "weight": 35.2517
-        }
-      ],
-      "total_factors": 5,
-      "assessment": "This zone shows significant risk elevation driven by Vehicle Density, Population Exposure. Proactive intervention should be scheduled within the current planning cycle."
+      "priority_level": "CRITICAL",
+      "priority_score": 75.75,
+      "assessment": "Corridor in 22nd District - Morgan Park exhibits critical traffic hazard priority driven by Chicago crash history."
     }
   },
   "telemetry": {
-    "congestion": 58.04,
-    "congestion_delta": 6.74,
-    "average_speed_kmh": 48.53,
-    "speed_delta": -0.73,
-    "vehicle_density": 63.57,
-    "density_delta": 3.89,
-    "population_density": 11592,
-    "red_light_violations": 5,
-    "weather": "Normal",
+    "congestion": 100.0,
+    "congestion_delta": 0.0,
+    "average_speed_kmh": 48.3,
+    "speed_delta": 0.0,
+    "vehicle_density": 120.0,
+    "density_delta": 0.0,
+    "population_density": 8500,
+    "red_light_violations": 24,
+    "weather": "CLEAR",
     "special_event": 0
   },
   "signal_optimization": {
     "base_green_seconds": 35,
-    "recommended_green_seconds": 52,
-    "change_seconds": 17,
-    "change_percent": 48.6,
+    "recommended_green_seconds": 72,
+    "change_seconds": 37,
+    "change_percent": 105.7,
     "urgency": "CRITICAL",
     "reason": "Severe congestion requires significantly extended green phase",
     "factors": {
-      "congestion_factor": 1.46,
-      "density_factor": 1.25,
+      "congestion_factor": 1.8,
+      "density_factor": 1.4,
       "speed_factor": 0.82,
       "event_boost": 1.0,
       "weather_boost": 1.0
     }
   },
   "environmental_impact": {
-    "total_co2_kg_per_week": 57647.9,
-    "total_co2_tonnes_per_year": 2997.69,
-    "idle_co2_kg": 20366.6,
-    "moving_co2_kg": 37281.3,
-    "potential_savings_kg_per_week": 5255.4,
-    "potential_savings_tonnes_per_year": 273.28,
-    "trees_equivalent_per_year": 13013,
-    "fuel_saved_liters_per_week": 2275.1,
-    "citizens_impacted": 23184,
-    "optimization_factor_pct": 25.8
+    "total_co2_kg_per_week": 71274.2,
+    "total_co2_tonnes_per_year": 3706.26,
+    "idle_co2_kg": 62928.0,
+    "moving_co2_kg": 8346.2,
+    "potential_savings_kg_per_week": 18878.4,
+    "potential_savings_tonnes_per_year": 981.68,
+    "trees_equivalent_per_year": 46746,
+    "fuel_saved_liters_per_week": 8172.5,
+    "citizens_impacted": 17000,
+    "optimization_factor_pct": 30.0
   },
   "interventions": [
     {
-      "id": "PEDESTRIAN_SAFETY",
-      "name": "Pedestrian Crossing Intervention",
-      "icon": "\ud83d\udeb6",
-      "severity": "MEDIUM",
-      "description": "High population density zone with significant traffic congestion creates pedestrian exposure risk.",
-      "action": "Install protected pedestrian crossings, improve sidewalk infrastructure, and add pedestrian countdown signals."
+      "title": "Deploy Speed Calming & Signal Synchronization on 111th St & Pulaski Rd",
+      "type": "MUNICIPAL_CORRIDOR_CALMING",
+      "priority": "CRITICAL",
+      "target_reduction": "18% collision frequency reduction"
+    },
+    {
+      "title": "Pedestrian Crosswalk High-Visibility Illumination & Turn Signal Audit",
+      "type": "INFRASTRUCTURE_SAFETY",
+      "priority": "MODERATE",
+      "target_reduction": "Eliminate left-turn crossing conflicts"
     }
   ],
-  "executive_briefing": "Zone_50 shows elevated risk at 49%. Continue routine monitoring. Optimizing signals could save 5255 kg CO2/week, equivalent to 13013 trees/year.",
+  "executive_briefing": "Chicago Police Beat 2232 (Mount Greenwood - 111th St & Pulaski Rd) logged 12 collisions in week 30. Current risk score is 95%, with upcoming risk forecast at 29%.",
   "civilian_road_safety_radar": {
     "current_week": {
-      "week": 30,
-      "risk_score": 48.5,
-      "risk_percentage": "49%",
-      "risk_badge": "MODERATE RISK",
-      "risk_color": "#eab308",
-      "description": "Corridor operating within normal baseline.",
-      "crashes_reported": 0
+      "period": "2024-W30",
+      "date_range": "Jul 22 - Jul 28, 2024",
+      "risk_score": 95.0,
+      "risk_percentage": "95%",
+      "risk_badge": "[HIGH RISK ALERT]",
+      "risk_color": "#ef4444",
+      "description": "Elevated collision activity recorded recently. Extra vigilance recommended.",
+      "crashes_reported": 12,
+      "crashes_rolling4w_avg": 8.0,
+      "dominant_weather": "CLEAR"
+    },
+    "upcoming_week": {
+      "period": "2024-W31",
+      "predicted_risk_probability": 0.286,
+      "predicted_risk_percentage": "29%",
+      "predicted_risk_badge": "[PREDICTED: SAFE CORRIDOR]",
+      "risk_color": "#22c55e",
+      "description": "Forecast models project normal baseline traffic conditions.",
+      "trend_label": "[TREND: COOLING DOWN]",
+      "trend_color": "#22c55e",
+      "trend_percentage_change": "-66%"
     },
     "why_accidents_might_happen": {
       "primary_collision_cause": {
-        "title": "Congestion Bottleneck & Merge Conflicts",
-        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+        "title": "Failing to Yield Right-of-Way",
+        "explanation": "Drivers turning left across oncoming traffic or turning on yellow without checking cross-traffic and crossing pedestrians.",
+        "historical_frequency_pct": 34.2
       },
       "behavior_factor": {
-        "title": "Tailgating & Speed Variance",
-        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+        "title": "Tailgating & Sudden Braking",
+        "explanation": "High-density commuter queues cause rear-end collisions when drivers follow too closely during rush hours.",
+        "risk_level": "ELEVATED"
       },
       "street_environment": {
-        "zone_type": "University_District",
-        "average_speed_kmh": 48.53,
-        "congestion_level": 58.04
+        "posted_speed_limit_mph": 30.0,
+        "intersection_crossroad_density_pct": 48.5,
+        "title": "30 mph Zone | 49% Crossroad Density",
+        "explanation": "Frequent signalized crossroads combined with multi-lane traffic flow increase conflict points at peak times."
       }
     },
     "civilian_safety_guide": {
       "for_drivers": {
         "action": "Increase Following Distance",
-        "details": "Maintain 3 car lengths buffer during peak rush hours."
+        "details": "Maintain at least 3 car lengths of space behind the vehicle ahead. Avoid tailgating near transit stops and expressway exit ramps where sudden stops occur.",
+        "key_tip": "Leave 3-4 car lengths buffer on commercial transit corridors"
       },
       "for_pedestrians_and_cyclists": {
-        "action": "Double-Check Turning Vehicles",
-        "details": "Make eye contact with turning drivers at intersections before crossing."
+        "action": "Double-Check Turning Cars",
+        "details": "Make eye contact with drivers turning right on red before stepping into crosswalks. Use reflective gear or activate bicycle lights after dusk.",
+        "key_tip": "Never assume a turning driver has seen you at green lights"
       },
       "peak_danger_windows": {
-        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
-        "details": "Congestion peaks during evening travel windows."
+        "primary_peak": "4:30 PM - 7:30 PM Weekdays (Evening Commute Congestion)",
+        "secondary_peak": "10:00 PM - 2:00 AM Friday & Saturday (Reduced Lighting & Speed Variance)",
+        "details": "Evening rush hours experience 3x higher collision rates than midday. Exercise maximum patience during heavy congestion."
       }
     }
   },
   "raw_metrics": {
     "zone_id": "Zone_50",
+    "chicago_beat": "2232",
     "week": 30,
-    "zone_type": "University_District",
-    "temporal_profile": "GRADUAL_DETERIORATION",
-    "population_density": 11592,
-    "road_capacity": 68,
-    "effective_road_capacity": 68.0,
-    "vehicle_density": 63.57,
-    "traffic_pressure": 0.935,
-    "congestion": 58.04,
-    "average_speed": 48.53,
-    "red_light_violations": 5,
-    "weather": "Normal",
-    "road_condition": "Good",
-    "special_event": 0,
-    "incident_count": 0,
-    "incident_occurred": 0,
-    "previous_week_vehicle_density": 59.68,
-    "previous_week_congestion": 51.3,
-    "previous_week_average_speed": 49.26,
-    "previous_week_red_light_violations": 6.0,
-    "previous_week_incident_count": 0.0,
-    "previous_week_incident_occurred": 0.0,
-    "previous_week_traffic_pressure": 0.878,
-    "rolling_4_week_avg_vehicle_density": 62.13,
-    "rolling_4_week_avg_congestion": 54.81,
-    "rolling_4_week_avg_speed": 47.1,
-    "rolling_4_week_avg_violations": 4.75,
-    "rolling_4_week_incident_count": 0.0,
-    "rolling_4_week_incident_rate": 0.0,
-    "rolling_4_week_avg_traffic_pressure": 0.914,
-    "vehicle_density_change": 3.89,
-    "congestion_change": 6.74,
-    "speed_change": -0.73,
-    "violations_change": -1.0,
-    "traffic_pressure_change": 0.057,
-    "incident_count_change": 0.0,
-    "vehicle_density_pct_change": 6.52,
-    "congestion_pct_change": 13.14,
-    "speed_pct_change": -1.48,
-    "vehicle_population_ratio": 5.484,
-    "congestion_trend_4w": -1.218,
-    "vehicle_density_trend_4w": 0.331,
-    "speed_trend_4w": 1.532,
-    "incident_trend_4w": 0.0,
-    "location_name_x": "Egmore",
-    "city_x": "Chennai",
-    "latitude_x": 13.0732,
-    "longitude_x": 80.2609,
-    "car_percentage": 44.5,
-    "motorcycle_percentage": 41.6,
-    "bus_percentage": 10.2,
-    "truck_percentage": 3.7,
-    "moving_vehicle_percentage": 44.7,
-    "slow_vehicle_percentage": 44.2,
-    "stopped_vehicle_percentage": 11.1,
-    "location_name_y": "Egmore",
-    "city_y": "Chennai",
-    "latitude_y": 13.0732,
-    "longitude_y": 80.2609,
-    "predicted_risk_probability": 0.4853,
-    "risk_score": 48.5265,
-    "population_exposure_score": 73.5038,
-    "vehicle_exposure_score": 92.5058,
-    "temporal_trend_score": 58.7528,
-    "priority_score": 65.1006,
-    "priority_rank": 7,
-    "priority_level": "HIGH",
-    "risk_prob": 0.4853
+    "crashes": 12,
+    "rolling4w_avg": 8.0,
+    "speed_mph": 30.0
   }
 }
