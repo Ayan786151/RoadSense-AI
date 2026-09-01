@@ -1,11 +1,11 @@
 {
   "zone_id": "Zone_01",
-  "location_name": "Zone_01",
-  "city": "",
+  "location_name": "Andheri",
+  "city": "Mumbai",
   "zone_type": "Commercial_Downtown",
   "week": 7,
-  "latitude": 0.0,
-  "longitude": 0.0,
+  "latitude": 19.1197,
+  "longitude": 72.8468,
   "risk_analysis": {
     "predicted_risk_probability": 0.6005,
     "predicted_risk_percentage": 60.05,
@@ -122,7 +122,7 @@
       "action": "Deploy immediate field inspection team. Identify root cause of deteriorating safety conditions."
     }
   ],
-  "executive_briefing": "Zone_01 is in a critical safety state with 60% incident risk. Continue routine monitoring. Optimizing signals could save 3131 kg CO2/week, equivalent to 7752 trees/year.",
+  "executive_briefing": "Andheri is in a critical safety state with 60% incident risk. Continue routine monitoring. Optimizing signals could save 3131 kg CO2/week, equivalent to 7752 trees/year.",
   "civilian_road_safety_radar": {
     "current_week": {
       "week": 7,
@@ -217,10 +217,6 @@
     "vehicle_density_trend_4w": 0.492,
     "speed_trend_4w": -9.0,
     "incident_trend_4w": 0.3,
-    "location_name_x": "Andheri",
-    "city_x": "Mumbai",
-    "latitude_x": 19.1197,
-    "longitude_x": 72.8468,
     "car_percentage": 45.0,
     "motorcycle_percentage": 41.5,
     "bus_percentage": 7.3,
@@ -228,10 +224,10 @@
     "moving_vehicle_percentage": 36.8,
     "slow_vehicle_percentage": 36.4,
     "stopped_vehicle_percentage": 26.8,
-    "location_name_y": "Downtown Loop - N Michigan Ave & N State St",
-    "city_y": "Chicago",
-    "latitude_y": 41.8845,
-    "longitude_y": -87.6243,
+    "location_name": "Andheri",
+    "city": "Mumbai",
+    "latitude": 19.1197,
+    "longitude": 72.8468,
     "predicted_risk_probability": 0.6005,
     "risk_score": 60.0478,
     "population_exposure_score": 52.9133,

@@ -1,11 +1,11 @@
 {
   "zone_id": "Zone_25",
-  "location_name": "Zone_25",
-  "city": "",
+  "location_name": "Okhla",
+  "city": "Delhi",
   "zone_type": "Residential",
   "week": 35,
-  "latitude": 0.0,
-  "longitude": 0.0,
+  "latitude": 28.5355,
+  "longitude": 77.264,
   "risk_analysis": {
     "predicted_risk_probability": 0.3538,
     "predicted_risk_percentage": 35.38,
@@ -98,7 +98,7 @@
       "action": "Continue routine monitoring."
     }
   ],
-  "executive_briefing": "Zone_25 shows elevated risk at 35%. Continue routine monitoring. Optimizing signals could save 675 kg CO2/week, equivalent to 1672 trees/year.",
+  "executive_briefing": "Okhla shows elevated risk at 35%. Continue routine monitoring. Optimizing signals could save 675 kg CO2/week, equivalent to 1672 trees/year.",
   "civilian_road_safety_radar": {
     "current_week": {
       "week": 35,
@@ -193,10 +193,6 @@
     "vehicle_density_trend_4w": 2.257,
     "speed_trend_4w": 4.678,
     "incident_trend_4w": 0.0,
-    "location_name_x": "Okhla",
-    "city_x": "Delhi",
-    "latitude_x": 28.5355,
-    "longitude_x": 77.264,
     "car_percentage": 33.1,
     "motorcycle_percentage": 54.2,
     "bus_percentage": 6.8,
@@ -204,10 +200,10 @@
     "moving_vehicle_percentage": 79.4,
     "slow_vehicle_percentage": 17.4,
     "stopped_vehicle_percentage": 3.2,
-    "location_name_y": "Midway Airport - 63rd St & Cicero Ave",
-    "city_y": "Chicago",
-    "latitude_y": 41.7788,
-    "longitude_y": -87.7416,
+    "location_name": "Okhla",
+    "city": "Delhi",
+    "latitude": 28.5355,
+    "longitude": 77.264,
     "predicted_risk_probability": 0.3538,
     "risk_score": 35.3838,
     "population_exposure_score": 67.7419,

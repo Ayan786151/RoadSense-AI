@@ -1,11 +1,11 @@
 {
   "zone_id": "Zone_05",
-  "location_name": "Zone_05",
-  "city": "",
+  "location_name": "Powai",
+  "city": "Mumbai",
   "zone_type": "Commercial_Downtown",
   "week": 9,
-  "latitude": 0.0,
-  "longitude": 0.0,
+  "latitude": 19.1176,
+  "longitude": 72.906,
   "risk_analysis": {
     "predicted_risk_probability": 0.3004,
     "predicted_risk_percentage": 30.04,
@@ -98,7 +98,7 @@
       "action": "Continue routine monitoring."
     }
   ],
-  "executive_briefing": "Zone_05 is within safe operating parameters (30% risk). Continue routine monitoring. Optimizing signals could save 757 kg CO2/week, equivalent to 1874 trees/year.",
+  "executive_briefing": "Powai is within safe operating parameters (30% risk). Continue routine monitoring. Optimizing signals could save 757 kg CO2/week, equivalent to 1874 trees/year.",
   "civilian_road_safety_radar": {
     "current_week": {
       "week": 9,
@@ -193,10 +193,6 @@
     "vehicle_density_trend_4w": -0.293,
     "speed_trend_4w": 0.65,
     "incident_trend_4w": 0.0,
-    "location_name_x": "Powai",
-    "city_x": "Mumbai",
-    "latitude_x": 19.1176,
-    "longitude_x": 72.906,
     "car_percentage": 43.9,
     "motorcycle_percentage": 39.4,
     "bus_percentage": 10.8,
@@ -204,10 +200,10 @@
     "moving_vehicle_percentage": 76.5,
     "slow_vehicle_percentage": 9.6,
     "stopped_vehicle_percentage": 13.9,
-    "location_name_y": "Wrigleyville - N Clark St & W Addison St",
-    "city_y": "Chicago",
-    "latitude_y": 41.9474,
-    "longitude_y": -87.6559,
+    "location_name": "Powai",
+    "city": "Mumbai",
+    "latitude": 19.1176,
+    "longitude": 72.906,
     "predicted_risk_probability": 0.3004,
     "risk_score": 30.0417,
     "population_exposure_score": 50.1616,

@@ -1,11 +1,11 @@
 {
   "zone_id": "Zone_32",
-  "location_name": "Zone_32",
-  "city": "",
+  "location_name": "Mahanagar",
+  "city": "Lucknow",
   "zone_type": "Commercial_Downtown",
   "week": 52,
-  "latitude": 0.0,
-  "longitude": 0.0,
+  "latitude": 26.8755,
+  "longitude": 80.9595,
   "risk_analysis": {
     "predicted_risk_probability": 0.2278,
     "predicted_risk_percentage": 22.78,
@@ -98,7 +98,7 @@
       "action": "Continue routine monitoring. No immediate intervention required."
     }
   ],
-  "executive_briefing": "Zone_32 is within safe operating parameters (23% risk). Continue routine monitoring. Optimizing signals could save 97 kg CO2/week, equivalent to 240 trees/year.",
+  "executive_briefing": "Mahanagar is within safe operating parameters (23% risk). Continue routine monitoring. Optimizing signals could save 97 kg CO2/week, equivalent to 240 trees/year.",
   "civilian_road_safety_radar": {
     "current_week": {
       "week": 52,
@@ -193,10 +193,6 @@
     "vehicle_density_trend_4w": -3.056,
     "speed_trend_4w": 1.572,
     "incident_trend_4w": 0.0,
-    "location_name_x": "Mahanagar",
-    "city_x": "Lucknow",
-    "latitude_x": 26.8755,
-    "longitude_x": 80.9595,
     "car_percentage": 42.2,
     "motorcycle_percentage": 40.0,
     "bus_percentage": 8.5,
@@ -204,10 +200,10 @@
     "moving_vehicle_percentage": 81.8,
     "slow_vehicle_percentage": 12.2,
     "stopped_vehicle_percentage": 5.9,
-    "location_name_y": "Lincoln Square - Lincoln Ave & Western Ave",
-    "city_y": "Chicago",
-    "latitude_y": 41.9691,
-    "longitude_y": -87.689,
+    "location_name": "Mahanagar",
+    "city": "Lucknow",
+    "latitude": 26.8755,
+    "longitude": 80.9595,
     "predicted_risk_probability": 0.2278,
     "risk_score": 22.7816,
     "population_exposure_score": 42.2947,

@@ -1,11 +1,11 @@
 {
   "zone_id": "Zone_04",
-  "location_name": "Zone_04",
-  "city": "",
+  "location_name": "Dadar",
+  "city": "Mumbai",
   "zone_type": "Highway_Junction",
   "week": 27,
-  "latitude": 0.0,
-  "longitude": 0.0,
+  "latitude": 19.0178,
+  "longitude": 72.8478,
   "risk_analysis": {
     "predicted_risk_probability": 0.2806,
     "predicted_risk_percentage": 28.06,
@@ -90,7 +90,7 @@
       "action": "Continue routine monitoring. No immediate intervention required."
     }
   ],
-  "executive_briefing": "Zone_04 is within safe operating parameters (28% risk). Continue routine monitoring. Optimizing signals could save 132 kg CO2/week, equivalent to 326 trees/year.",
+  "executive_briefing": "Dadar is within safe operating parameters (28% risk). Continue routine monitoring. Optimizing signals could save 132 kg CO2/week, equivalent to 326 trees/year.",
   "civilian_road_safety_radar": {
     "current_week": {
       "week": 27,
@@ -185,10 +185,6 @@
     "vehicle_density_trend_4w": -0.09,
     "speed_trend_4w": 0.577,
     "incident_trend_4w": 0.1,
-    "location_name_x": "Dadar",
-    "city_x": "Mumbai",
-    "latitude_x": 19.0178,
-    "longitude_x": 72.8478,
     "car_percentage": 46.1,
     "motorcycle_percentage": 40.2,
     "bus_percentage": 11.1,
@@ -196,10 +192,10 @@
     "moving_vehicle_percentage": 74.4,
     "slow_vehicle_percentage": 16.1,
     "stopped_vehicle_percentage": 9.5,
-    "location_name_y": "South Loop - Roosevelt Rd & Michigan Ave",
-    "city_y": "Chicago",
-    "latitude_y": 41.8675,
-    "longitude_y": -87.6245,
+    "location_name": "Dadar",
+    "city": "Mumbai",
+    "latitude": 19.0178,
+    "longitude": 72.8478,
     "predicted_risk_probability": 0.2806,
     "risk_score": 28.0627,
     "population_exposure_score": 7.5724,

@@ -1,11 +1,11 @@
 {
   "zone_id": "Zone_09",
-  "location_name": "Zone_09",
-  "city": "",
+  "location_name": "Vashi",
+  "city": "Mumbai",
   "zone_type": "Suburban_LowDensity",
   "week": 19,
-  "latitude": 0.0,
-  "longitude": 0.0,
+  "latitude": 19.0771,
+  "longitude": 72.9986,
   "risk_analysis": {
     "predicted_risk_probability": 0.2289,
     "predicted_risk_percentage": 22.89,
@@ -98,7 +98,7 @@
       "action": "Continue routine monitoring. No immediate intervention required."
     }
   ],
-  "executive_briefing": "Zone_09 is within safe operating parameters (23% risk). Continue routine monitoring. Optimizing signals could save 13 kg CO2/week, equivalent to 32 trees/year.",
+  "executive_briefing": "Vashi is within safe operating parameters (23% risk). Continue routine monitoring. Optimizing signals could save 13 kg CO2/week, equivalent to 32 trees/year.",
   "civilian_road_safety_radar": {
     "current_week": {
       "week": 19,
@@ -193,10 +193,6 @@
     "vehicle_density_trend_4w": 3.288,
     "speed_trend_4w": -0.906,
     "incident_trend_4w": 0.0,
-    "location_name_x": "Vashi",
-    "city_x": "Mumbai",
-    "latitude_x": 19.0771,
-    "longitude_x": 72.9986,
     "car_percentage": 41.8,
     "motorcycle_percentage": 36.8,
     "bus_percentage": 12.2,
@@ -204,10 +200,10 @@
     "moving_vehicle_percentage": 88.2,
     "slow_vehicle_percentage": 8.2,
     "stopped_vehicle_percentage": 3.5,
-    "location_name_y": "Little Village - S Pulaski Rd & W 26th St",
-    "city_y": "Chicago",
-    "latitude_y": 41.8444,
-    "longitude_y": -87.7246,
+    "location_name": "Vashi",
+    "city": "Mumbai",
+    "latitude": 19.0771,
+    "longitude": 72.9986,
     "predicted_risk_probability": 0.2289,
     "risk_score": 22.8906,
     "population_exposure_score": 13.5067,

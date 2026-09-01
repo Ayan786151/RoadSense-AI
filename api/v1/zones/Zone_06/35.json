@@ -1,11 +1,11 @@
 {
   "zone_id": "Zone_06",
-  "location_name": "Zone_06",
-  "city": "",
+  "location_name": "Borivali",
+  "city": "Mumbai",
   "zone_type": "University_District",
   "week": 35,
-  "latitude": 0.0,
-  "longitude": 0.0,
+  "latitude": 19.2307,
+  "longitude": 72.8567,
   "risk_analysis": {
     "predicted_risk_probability": 0.312,
     "predicted_risk_percentage": 31.2,
@@ -98,7 +98,7 @@
       "action": "Continue routine monitoring."
     }
   ],
-  "executive_briefing": "Zone_06 is within safe operating parameters (31% risk). Continue routine monitoring. Optimizing signals could save 544 kg CO2/week, equivalent to 1347 trees/year.",
+  "executive_briefing": "Borivali is within safe operating parameters (31% risk). Continue routine monitoring. Optimizing signals could save 544 kg CO2/week, equivalent to 1347 trees/year.",
   "civilian_road_safety_radar": {
     "current_week": {
       "week": 35,
@@ -193,10 +193,6 @@
     "vehicle_density_trend_4w": -0.829,
     "speed_trend_4w": 0.452,
     "incident_trend_4w": 0.0,
-    "location_name_x": "Borivali",
-    "city_x": "Mumbai",
-    "latitude_x": 19.2307,
-    "longitude_x": 72.8567,
     "car_percentage": 45.2,
     "motorcycle_percentage": 44.0,
     "bus_percentage": 8.3,
@@ -204,10 +200,10 @@
     "moving_vehicle_percentage": 85.2,
     "slow_vehicle_percentage": 10.3,
     "stopped_vehicle_percentage": 4.5,
-    "location_name_y": "Lincoln Park - Fullerton Pkwy & Halsted St",
-    "city_y": "Chicago",
-    "latitude_y": 41.9214,
-    "longitude_y": -87.6485,
+    "location_name": "Borivali",
+    "city": "Mumbai",
+    "latitude": 19.2307,
+    "longitude": 72.8567,
     "predicted_risk_probability": 0.312,
     "risk_score": 31.2038,
     "population_exposure_score": 53.0642,

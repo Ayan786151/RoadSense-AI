@@ -1,11 +1,11 @@
 {
   "zone_id": "Zone_34",
-  "location_name": "Zone_34",
-  "city": "",
+  "location_name": "Chinhat",
+  "city": "Lucknow",
   "zone_type": "Industrial_Corridor",
   "week": 52,
-  "latitude": 0.0,
-  "longitude": 0.0,
+  "latitude": 26.884,
+  "longitude": 81.05,
   "risk_analysis": {
     "predicted_risk_probability": 0.7878,
     "predicted_risk_percentage": 78.78,
@@ -114,7 +114,7 @@
       "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
     }
   ],
-  "executive_briefing": "Zone_34 is in a critical safety state with 79% incident risk. Signal optimization recommended \u2014 congestion at 82/100 with speeds averaging 29 km/h. Optimizing signals could save 5692 kg CO2/week, equivalent to 14095 trees/year.",
+  "executive_briefing": "Chinhat is in a critical safety state with 79% incident risk. Signal optimization recommended \u2014 congestion at 82/100 with speeds averaging 29 km/h. Optimizing signals could save 5692 kg CO2/week, equivalent to 14095 trees/year.",
   "civilian_road_safety_radar": {
     "current_week": {
       "week": 52,
@@ -209,10 +209,6 @@
     "vehicle_density_trend_4w": -1.301,
     "speed_trend_4w": 1.224,
     "incident_trend_4w": -0.2,
-    "location_name_x": "Chinhat",
-    "city_x": "Lucknow",
-    "latitude_x": 26.884,
-    "longitude_x": 81.05,
     "car_percentage": 49.3,
     "motorcycle_percentage": 35.0,
     "bus_percentage": 13.1,
@@ -220,10 +216,10 @@
     "moving_vehicle_percentage": 24.1,
     "slow_vehicle_percentage": 48.5,
     "stopped_vehicle_percentage": 27.3,
-    "location_name_y": "Uptown - Broadway & Wilson Ave",
-    "city_y": "Chicago",
-    "latitude_y": 41.9654,
-    "longitude_y": -87.6582,
+    "location_name": "Chinhat",
+    "city": "Lucknow",
+    "latitude": 26.884,
+    "longitude": 81.05,
     "predicted_risk_probability": 0.7878,
     "risk_score": 78.7823,
     "population_exposure_score": 14.0743,

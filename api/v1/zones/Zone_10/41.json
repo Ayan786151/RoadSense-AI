@@ -1,11 +1,11 @@
 {
   "zone_id": "Zone_10",
-  "location_name": "Zone_10",
-  "city": "",
+  "location_name": "Colaba",
+  "city": "Mumbai",
   "zone_type": "Residential",
   "week": 41,
-  "latitude": 0.0,
-  "longitude": 0.0,
+  "latitude": 18.922,
+  "longitude": 72.8347,
   "risk_analysis": {
     "predicted_risk_probability": 0.8348,
     "predicted_risk_percentage": 83.48,
@@ -138,7 +138,7 @@
       "action": "Install additional CCTV cameras and integrate with traffic management center for real-time monitoring."
     }
   ],
-  "executive_briefing": "Zone_10 is in a critical safety state with 83% incident risk. Signal optimization recommended \u2014 congestion at 80/100 with speeds averaging 36 km/h. Optimizing signals could save 7356 kg CO2/week, equivalent to 18214 trees/year.",
+  "executive_briefing": "Colaba is in a critical safety state with 83% incident risk. Signal optimization recommended \u2014 congestion at 80/100 with speeds averaging 36 km/h. Optimizing signals could save 7356 kg CO2/week, equivalent to 18214 trees/year.",
   "civilian_road_safety_radar": {
     "current_week": {
       "week": 41,
@@ -233,10 +233,6 @@
     "vehicle_density_trend_4w": 0.957,
     "speed_trend_4w": -2.607,
     "incident_trend_4w": 0.0,
-    "location_name_x": "Colaba",
-    "city_x": "Mumbai",
-    "latitude_x": 18.922,
-    "longitude_x": 72.8347,
     "car_percentage": 31.4,
     "motorcycle_percentage": 51.1,
     "bus_percentage": 7.7,
@@ -244,10 +240,10 @@
     "moving_vehicle_percentage": 8.1,
     "slow_vehicle_percentage": 45.3,
     "stopped_vehicle_percentage": 46.6,
-    "location_name_y": "Pilsen - 18th St & Ashland Ave",
-    "city_y": "Chicago",
-    "latitude_y": 41.8579,
-    "longitude_y": -87.6663,
+    "location_name": "Colaba",
+    "city": "Mumbai",
+    "latitude": 18.922,
+    "longitude": 72.8347,
     "predicted_risk_probability": 0.8348,
     "risk_score": 83.4769,
     "population_exposure_score": 98.6996,

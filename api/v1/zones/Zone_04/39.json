@@ -1,11 +1,11 @@
 {
   "zone_id": "Zone_04",
-  "location_name": "Zone_04",
-  "city": "",
+  "location_name": "Dadar",
+  "city": "Mumbai",
   "zone_type": "Highway_Junction",
   "week": 39,
-  "latitude": 0.0,
-  "longitude": 0.0,
+  "latitude": 19.0178,
+  "longitude": 72.8478,
   "risk_analysis": {
     "predicted_risk_probability": 0.6072,
     "predicted_risk_percentage": 60.72,
@@ -114,7 +114,7 @@
       "action": "Activate event traffic management plan. Deploy traffic marshals and temporary signage."
     }
   ],
-  "executive_briefing": "Zone_04 is in a critical safety state with 61% incident risk. Enforcement focus needed \u2014 14 red-light violations recorded. Optimizing signals could save 2218 kg CO2/week, equivalent to 5491 trees/year.",
+  "executive_briefing": "Dadar is in a critical safety state with 61% incident risk. Enforcement focus needed \u2014 14 red-light violations recorded. Optimizing signals could save 2218 kg CO2/week, equivalent to 5491 trees/year.",
   "civilian_road_safety_radar": {
     "current_week": {
       "week": 39,
@@ -209,10 +209,6 @@
     "vehicle_density_trend_4w": -0.087,
     "speed_trend_4w": 13.388,
     "incident_trend_4w": -0.4,
-    "location_name_x": "Dadar",
-    "city_x": "Mumbai",
-    "latitude_x": 19.0178,
-    "longitude_x": 72.8478,
     "car_percentage": 43.6,
     "motorcycle_percentage": 39.8,
     "bus_percentage": 9.9,
@@ -220,10 +216,10 @@
     "moving_vehicle_percentage": 58.8,
     "slow_vehicle_percentage": 42.0,
     "stopped_vehicle_percentage": 0.0,
-    "location_name_y": "South Loop - Roosevelt Rd & Michigan Ave",
-    "city_y": "Chicago",
-    "latitude_y": 41.8675,
-    "longitude_y": -87.6245,
+    "location_name": "Dadar",
+    "city": "Mumbai",
+    "latitude": 19.0178,
+    "longitude": 72.8478,
     "predicted_risk_probability": 0.6072,
     "risk_score": 60.7238,
     "population_exposure_score": 7.5724,

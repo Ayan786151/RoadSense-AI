@@ -1,11 +1,11 @@
 {
   "zone_id": "Zone_15",
-  "location_name": "Zone_15",
-  "city": "",
+  "location_name": "Dwarka",
+  "city": "Delhi",
   "zone_type": "Residential",
   "week": 7,
-  "latitude": 0.0,
-  "longitude": 0.0,
+  "latitude": 28.5921,
+  "longitude": 77.046,
   "risk_analysis": {
     "predicted_risk_probability": 0.4033,
     "predicted_risk_percentage": 40.33,
@@ -114,7 +114,7 @@
       "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
     }
   ],
-  "executive_briefing": "Zone_15 shows elevated risk at 40%. Enforcement focus needed \u2014 9 red-light violations recorded. Optimizing signals could save 2926 kg CO2/week, equivalent to 7244 trees/year.",
+  "executive_briefing": "Dwarka shows elevated risk at 40%. Enforcement focus needed \u2014 9 red-light violations recorded. Optimizing signals could save 2926 kg CO2/week, equivalent to 7244 trees/year.",
   "civilian_road_safety_radar": {
     "current_week": {
       "week": 7,
@@ -209,10 +209,6 @@
     "vehicle_density_trend_4w": 3.802,
     "speed_trend_4w": -6.065,
     "incident_trend_4w": 0.2,
-    "location_name_x": "Dwarka",
-    "city_x": "Delhi",
-    "latitude_x": 28.5921,
-    "longitude_x": 77.046,
     "car_percentage": 35.0,
     "motorcycle_percentage": 59.6,
     "bus_percentage": 2.2,
@@ -220,10 +216,10 @@
     "moving_vehicle_percentage": 55.6,
     "slow_vehicle_percentage": 35.9,
     "stopped_vehicle_percentage": 8.5,
-    "location_name_y": "Hyde Park - 53rd St & University Quad",
-    "city_y": "Chicago",
-    "latitude_y": 41.7995,
-    "longitude_y": -87.5878,
+    "location_name": "Dwarka",
+    "city": "Delhi",
+    "latitude": 28.5921,
+    "longitude": 77.046,
     "predicted_risk_probability": 0.4033,
     "risk_score": 40.3263,
     "population_exposure_score": 97.0041,

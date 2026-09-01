@@ -1,11 +1,11 @@
 {
   "zone_id": "Zone_24",
-  "location_name": "Zone_24",
-  "city": "",
+  "location_name": "Nehru Place",
+  "city": "Delhi",
   "zone_type": "Commercial_Downtown",
   "week": 51,
-  "latitude": 0.0,
-  "longitude": 0.0,
+  "latitude": 28.5491,
+  "longitude": 77.2519,
   "risk_analysis": {
     "predicted_risk_probability": 0.2515,
     "predicted_risk_percentage": 25.15,
@@ -98,7 +98,7 @@
       "action": "Continue routine monitoring. No immediate intervention required."
     }
   ],
-  "executive_briefing": "Zone_24 is within safe operating parameters (25% risk). Continue routine monitoring. Optimizing signals could save 448 kg CO2/week, equivalent to 1108 trees/year.",
+  "executive_briefing": "Nehru Place is within safe operating parameters (25% risk). Continue routine monitoring. Optimizing signals could save 448 kg CO2/week, equivalent to 1108 trees/year.",
   "civilian_road_safety_radar": {
     "current_week": {
       "week": 51,
@@ -193,10 +193,6 @@
     "vehicle_density_trend_4w": -1.917,
     "speed_trend_4w": -2.164,
     "incident_trend_4w": 0.0,
-    "location_name_x": "Nehru Place",
-    "city_x": "Delhi",
-    "latitude_x": 28.5491,
-    "longitude_x": 77.2519,
     "car_percentage": 44.2,
     "motorcycle_percentage": 41.9,
     "bus_percentage": 9.0,
@@ -204,10 +200,10 @@
     "moving_vehicle_percentage": 74.0,
     "slow_vehicle_percentage": 17.8,
     "stopped_vehicle_percentage": 8.2,
-    "location_name_y": "O'Hare Airport - Mannheim Rd & Higgins Rd",
-    "city_y": "Chicago",
-    "latitude_y": 41.9961,
-    "longitude_y": -87.8828,
+    "location_name": "Nehru Place",
+    "city": "Delhi",
+    "latitude": 28.5491,
+    "longitude": 77.2519,
     "predicted_risk_probability": 0.2515,
     "risk_score": 25.1525,
     "population_exposure_score": 52.2523,

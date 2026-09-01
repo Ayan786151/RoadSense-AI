@@ -1,11 +1,11 @@
 {
   "zone_id": "Zone_15",
-  "location_name": "Zone_15",
-  "city": "",
+  "location_name": "Dwarka",
+  "city": "Delhi",
   "zone_type": "Residential",
   "week": 15,
-  "latitude": 0.0,
-  "longitude": 0.0,
+  "latitude": 28.5921,
+  "longitude": 77.046,
   "risk_analysis": {
     "predicted_risk_probability": 0.6416,
     "predicted_risk_percentage": 64.16,
@@ -130,7 +130,7 @@
       "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
     }
   ],
-  "executive_briefing": "Zone_15 is in a critical safety state with 64% incident risk. Continue routine monitoring. Optimizing signals could save 3595 kg CO2/week, equivalent to 8901 trees/year.",
+  "executive_briefing": "Dwarka is in a critical safety state with 64% incident risk. Continue routine monitoring. Optimizing signals could save 3595 kg CO2/week, equivalent to 8901 trees/year.",
   "civilian_road_safety_radar": {
     "current_week": {
       "week": 15,
@@ -225,10 +225,6 @@
     "vehicle_density_trend_4w": -1.232,
     "speed_trend_4w": -1.997,
     "incident_trend_4w": 0.0,
-    "location_name_x": "Dwarka",
-    "city_x": "Delhi",
-    "latitude_x": 28.5921,
-    "longitude_x": 77.046,
     "car_percentage": 32.0,
     "motorcycle_percentage": 61.6,
     "bus_percentage": 2.2,
@@ -236,10 +232,10 @@
     "moving_vehicle_percentage": 38.4,
     "slow_vehicle_percentage": 35.8,
     "stopped_vehicle_percentage": 25.8,
-    "location_name_y": "Hyde Park - 53rd St & University Quad",
-    "city_y": "Chicago",
-    "latitude_y": 41.7995,
-    "longitude_y": -87.5878,
+    "location_name": "Dwarka",
+    "city": "Delhi",
+    "latitude": 28.5921,
+    "longitude": 77.046,
     "predicted_risk_probability": 0.6416,
     "risk_score": 64.1638,
     "population_exposure_score": 97.0041,

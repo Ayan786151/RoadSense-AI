@@ -1,11 +1,11 @@
 {
   "zone_id": "Zone_12",
-  "location_name": "Zone_12",
-  "city": "",
+  "location_name": "Malad",
+  "city": "Mumbai",
   "zone_type": "Commercial_Downtown",
   "week": 21,
-  "latitude": 0.0,
-  "longitude": 0.0,
+  "latitude": 19.1874,
+  "longitude": 72.8484,
   "risk_analysis": {
     "predicted_risk_probability": 0.335,
     "predicted_risk_percentage": 33.5,
@@ -106,7 +106,7 @@
       "action": "Continue routine monitoring."
     }
   ],
-  "executive_briefing": "Zone_12 is within safe operating parameters (34% risk). Continue routine monitoring. Optimizing signals could save 963 kg CO2/week, equivalent to 2384 trees/year.",
+  "executive_briefing": "Malad is within safe operating parameters (34% risk). Continue routine monitoring. Optimizing signals could save 963 kg CO2/week, equivalent to 2384 trees/year.",
   "civilian_road_safety_radar": {
     "current_week": {
       "week": 21,
@@ -201,10 +201,6 @@
     "vehicle_density_trend_4w": 2.78,
     "speed_trend_4w": -6.556,
     "incident_trend_4w": -0.1,
-    "location_name_x": "Malad",
-    "city_x": "Mumbai",
-    "latitude_x": 19.1874,
-    "longitude_x": 72.8484,
     "car_percentage": 42.8,
     "motorcycle_percentage": 43.7,
     "bus_percentage": 9.8,
@@ -212,10 +208,10 @@
     "moving_vehicle_percentage": 71.5,
     "slow_vehicle_percentage": 13.6,
     "stopped_vehicle_percentage": 14.9,
-    "location_name_y": "Austin - North Ave & Cicero Ave",
-    "city_y": "Chicago",
-    "latitude_y": 41.9095,
-    "longitude_y": -87.7456,
+    "location_name": "Malad",
+    "city": "Mumbai",
+    "latitude": 19.1874,
+    "longitude": 72.8484,
     "predicted_risk_probability": 0.335,
     "risk_score": 33.503,
     "population_exposure_score": 52.9061,

@@ -1,11 +1,11 @@
 {
   "zone_id": "Zone_12",
-  "location_name": "Zone_12",
-  "city": "",
+  "location_name": "Malad",
+  "city": "Mumbai",
   "zone_type": "Commercial_Downtown",
   "week": 32,
-  "latitude": 0.0,
-  "longitude": 0.0,
+  "latitude": 19.1874,
+  "longitude": 72.8484,
   "risk_analysis": {
     "predicted_risk_probability": 0.9254,
     "predicted_risk_percentage": 92.54,
@@ -138,7 +138,7 @@
       "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
     }
   ],
-  "executive_briefing": "Zone_12 is in a critical safety state with 93% incident risk. Signal optimization recommended \u2014 congestion at 80/100 with speeds averaging 19 km/h. Optimizing signals could save 4968 kg CO2/week, equivalent to 12301 trees/year.",
+  "executive_briefing": "Malad is in a critical safety state with 93% incident risk. Signal optimization recommended \u2014 congestion at 80/100 with speeds averaging 19 km/h. Optimizing signals could save 4968 kg CO2/week, equivalent to 12301 trees/year.",
   "civilian_road_safety_radar": {
     "current_week": {
       "week": 32,
@@ -233,10 +233,6 @@
     "vehicle_density_trend_4w": 1.975,
     "speed_trend_4w": -5.684,
     "incident_trend_4w": -0.1,
-    "location_name_x": "Malad",
-    "city_x": "Mumbai",
-    "latitude_x": 19.1874,
-    "longitude_x": 72.8484,
     "car_percentage": 43.0,
     "motorcycle_percentage": 38.4,
     "bus_percentage": 12.8,
@@ -244,10 +240,10 @@
     "moving_vehicle_percentage": 21.3,
     "slow_vehicle_percentage": 42.9,
     "stopped_vehicle_percentage": 35.8,
-    "location_name_y": "Austin - North Ave & Cicero Ave",
-    "city_y": "Chicago",
-    "latitude_y": 41.9095,
-    "longitude_y": -87.7456,
+    "location_name": "Malad",
+    "city": "Mumbai",
+    "latitude": 19.1874,
+    "longitude": 72.8484,
     "predicted_risk_probability": 0.9254,
     "risk_score": 92.5412,
     "population_exposure_score": 52.9061,

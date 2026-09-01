@@ -1,11 +1,11 @@
 {
   "zone_id": "Zone_02",
-  "location_name": "Zone_02",
-  "city": "",
+  "location_name": "Bandra",
+  "city": "Mumbai",
   "zone_type": "Residential",
   "week": 24,
-  "latitude": 0.0,
-  "longitude": 0.0,
+  "latitude": 19.0596,
+  "longitude": 72.8295,
   "risk_analysis": {
     "predicted_risk_probability": 0.3332,
     "predicted_risk_percentage": 33.32,
@@ -106,7 +106,7 @@
       "action": "Continue routine monitoring."
     }
   ],
-  "executive_briefing": "Zone_02 is within safe operating parameters (33% risk). Continue routine monitoring. Optimizing signals could save 1226 kg CO2/week, equivalent to 3035 trees/year.",
+  "executive_briefing": "Bandra is within safe operating parameters (33% risk). Continue routine monitoring. Optimizing signals could save 1226 kg CO2/week, equivalent to 3035 trees/year.",
   "civilian_road_safety_radar": {
     "current_week": {
       "week": 24,
@@ -201,10 +201,6 @@
     "vehicle_density_trend_4w": 6.102,
     "speed_trend_4w": -3.707,
     "incident_trend_4w": 0.0,
-    "location_name_x": "Bandra",
-    "city_x": "Mumbai",
-    "latitude_x": 19.0596,
-    "longitude_x": 72.8295,
     "car_percentage": 32.0,
     "motorcycle_percentage": 54.6,
     "bus_percentage": 7.9,
@@ -212,10 +208,10 @@
     "moving_vehicle_percentage": 73.7,
     "slow_vehicle_percentage": 11.7,
     "stopped_vehicle_percentage": 14.6,
-    "location_name_y": "River North - Magnificent Mile & Grand Ave",
-    "city_y": "Chicago",
-    "latitude_y": 41.8923,
-    "longitude_y": -87.6244,
+    "location_name": "Bandra",
+    "city": "Mumbai",
+    "latitude": 19.0596,
+    "longitude": 72.8295,
     "predicted_risk_probability": 0.3332,
     "risk_score": 33.3194,
     "population_exposure_score": 79.4957,

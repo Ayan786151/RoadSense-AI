@@ -1,11 +1,11 @@
 {
   "zone_id": "Zone_08",
-  "location_name": "Zone_08",
-  "city": "",
+  "location_name": "Thane",
+  "city": "Mumbai",
   "zone_type": "Highway_Junction",
   "week": 14,
-  "latitude": 0.0,
-  "longitude": 0.0,
+  "latitude": 19.2183,
+  "longitude": 72.9781,
   "risk_analysis": {
     "predicted_risk_probability": 0.2229,
     "predicted_risk_percentage": 22.29,
@@ -98,7 +98,7 @@
       "action": "Continue routine monitoring. No immediate intervention required."
     }
   ],
-  "executive_briefing": "Zone_08 is within safe operating parameters (22% risk). Continue routine monitoring. Optimizing signals could save 190 kg CO2/week, equivalent to 469 trees/year.",
+  "executive_briefing": "Thane is within safe operating parameters (22% risk). Continue routine monitoring. Optimizing signals could save 190 kg CO2/week, equivalent to 469 trees/year.",
   "civilian_road_safety_radar": {
     "current_week": {
       "week": 14,
@@ -193,10 +193,6 @@
     "vehicle_density_trend_4w": 1.163,
     "speed_trend_4w": -0.76,
     "incident_trend_4w": 0.0,
-    "location_name_x": "Thane",
-    "city_x": "Mumbai",
-    "latitude_x": 19.2183,
-    "longitude_x": 72.9781,
     "car_percentage": 45.0,
     "motorcycle_percentage": 43.4,
     "bus_percentage": 7.1,
@@ -204,10 +200,10 @@
     "moving_vehicle_percentage": 82.3,
     "slow_vehicle_percentage": 10.2,
     "stopped_vehicle_percentage": 7.5,
-    "location_name_y": "Logan Square - Logan Blvd & Kedzie Blvd",
-    "city_y": "Chicago",
-    "latitude_y": 41.9288,
-    "longitude_y": -87.7073,
+    "location_name": "Thane",
+    "city": "Mumbai",
+    "latitude": 19.2183,
+    "longitude": 72.9781,
     "predicted_risk_probability": 0.2229,
     "risk_score": 22.2882,
     "population_exposure_score": 4.8782,

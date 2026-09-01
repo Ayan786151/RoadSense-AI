@@ -1,11 +1,11 @@
 {
   "zone_id": "Zone_11",
-  "location_name": "Zone_11",
-  "city": "",
+  "location_name": "Lower Parel",
+  "city": "Mumbai",
   "zone_type": "Residential",
   "week": 37,
-  "latitude": 0.0,
-  "longitude": 0.0,
+  "latitude": 18.9988,
+  "longitude": 72.8258,
   "risk_analysis": {
     "predicted_risk_probability": 0.612,
     "predicted_risk_percentage": 61.2,
@@ -106,7 +106,7 @@
       "action": "Deploy speed calming measures (speed bumps, radar signs) and increase enforcement patrols."
     }
   ],
-  "executive_briefing": "Zone_11 is in a critical safety state with 61% incident risk. Continue routine monitoring. Optimizing signals could save 1588 kg CO2/week, equivalent to 3930 trees/year.",
+  "executive_briefing": "Lower Parel is in a critical safety state with 61% incident risk. Continue routine monitoring. Optimizing signals could save 1588 kg CO2/week, equivalent to 3930 trees/year.",
   "civilian_road_safety_radar": {
     "current_week": {
       "week": 37,
@@ -201,10 +201,6 @@
     "vehicle_density_trend_4w": 0.594,
     "speed_trend_4w": -10.128,
     "incident_trend_4w": 0.1,
-    "location_name_x": "Lower Parel",
-    "city_x": "Mumbai",
-    "latitude_x": 18.9988,
-    "longitude_x": 72.8258,
     "car_percentage": 31.2,
     "motorcycle_percentage": 57.2,
     "bus_percentage": 9.2,
@@ -212,10 +208,10 @@
     "moving_vehicle_percentage": 40.4,
     "slow_vehicle_percentage": 26.3,
     "stopped_vehicle_percentage": 33.3,
-    "location_name_y": "Illinois Medical District - UIC West & Rush Hospital",
-    "city_y": "Chicago",
-    "latitude_y": 41.8722,
-    "longitude_y": -87.674,
+    "location_name": "Lower Parel",
+    "city": "Mumbai",
+    "latitude": 18.9988,
+    "longitude": 72.8258,
     "predicted_risk_probability": 0.612,
     "risk_score": 61.2031,
     "population_exposure_score": 61.7429,

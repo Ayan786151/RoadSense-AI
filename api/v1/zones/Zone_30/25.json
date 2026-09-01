@@ -1,11 +1,11 @@
 {
   "zone_id": "Zone_30",
-  "location_name": "Zone_30",
-  "city": "",
+  "location_name": "Charbagh",
+  "city": "Lucknow",
   "zone_type": "Highway_Junction",
   "week": 25,
-  "latitude": 0.0,
-  "longitude": 0.0,
+  "latitude": 26.8315,
+  "longitude": 80.923,
   "risk_analysis": {
     "predicted_risk_probability": 0.3185,
     "predicted_risk_percentage": 31.85,
@@ -98,7 +98,7 @@
       "action": "Continue routine monitoring."
     }
   ],
-  "executive_briefing": "Zone_30 is within safe operating parameters (32% risk). Continue routine monitoring. Optimizing signals could save 612 kg CO2/week, equivalent to 1514 trees/year.",
+  "executive_briefing": "Charbagh is within safe operating parameters (32% risk). Continue routine monitoring. Optimizing signals could save 612 kg CO2/week, equivalent to 1514 trees/year.",
   "civilian_road_safety_radar": {
     "current_week": {
       "week": 25,
@@ -193,10 +193,6 @@
     "vehicle_density_trend_4w": 0.076,
     "speed_trend_4w": -1.333,
     "incident_trend_4w": 0.0,
-    "location_name_x": "Charbagh",
-    "city_x": "Lucknow",
-    "latitude_x": 26.8315,
-    "longitude_x": 80.923,
     "car_percentage": 45.8,
     "motorcycle_percentage": 38.8,
     "bus_percentage": 11.5,
@@ -204,10 +200,10 @@
     "moving_vehicle_percentage": 80.9,
     "slow_vehicle_percentage": 13.3,
     "stopped_vehicle_percentage": 5.9,
-    "location_name_y": "Portage Park - Six-Corners (Milwaukee / Irving / Cicero)",
-    "city_y": "Chicago",
-    "latitude_y": 41.9542,
-    "longitude_y": -87.7478,
+    "location_name": "Charbagh",
+    "city": "Lucknow",
+    "latitude": 26.8315,
+    "longitude": 80.923,
     "predicted_risk_probability": 0.3185,
     "risk_score": 31.8495,
     "population_exposure_score": 7.8095,

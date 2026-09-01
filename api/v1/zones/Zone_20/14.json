@@ -1,11 +1,11 @@
 {
   "zone_id": "Zone_20",
-  "location_name": "Zone_20",
-  "city": "",
+  "location_name": "Vasant Kunj",
+  "city": "Delhi",
   "zone_type": "Commercial_Downtown",
   "week": 14,
-  "latitude": 0.0,
-  "longitude": 0.0,
+  "latitude": 28.5293,
+  "longitude": 77.1541,
   "risk_analysis": {
     "predicted_risk_probability": 0.2536,
     "predicted_risk_percentage": 25.36,
@@ -98,7 +98,7 @@
       "action": "Continue routine monitoring. No immediate intervention required."
     }
   ],
-  "executive_briefing": "Zone_20 is within safe operating parameters (25% risk). Continue routine monitoring. Optimizing signals could save 313 kg CO2/week, equivalent to 774 trees/year.",
+  "executive_briefing": "Vasant Kunj is within safe operating parameters (25% risk). Continue routine monitoring. Optimizing signals could save 313 kg CO2/week, equivalent to 774 trees/year.",
   "civilian_road_safety_radar": {
     "current_week": {
       "week": 14,
@@ -193,10 +193,6 @@
     "vehicle_density_trend_4w": 0.471,
     "speed_trend_4w": -0.917,
     "incident_trend_4w": 0.0,
-    "location_name_x": "Vasant Kunj",
-    "city_x": "Delhi",
-    "latitude_x": 28.5293,
-    "longitude_x": 77.1541,
     "car_percentage": 46.3,
     "motorcycle_percentage": 46.2,
     "bus_percentage": 3.6,
@@ -204,10 +200,10 @@
     "moving_vehicle_percentage": 85.5,
     "slow_vehicle_percentage": 14.2,
     "stopped_vehicle_percentage": 0.3,
-    "location_name_y": "Auburn Gresham - 87th St & Vincennes Ave",
-    "city_y": "Chicago",
-    "latitude_y": 41.7364,
-    "longitude_y": -87.6438,
+    "location_name": "Vasant Kunj",
+    "city": "Delhi",
+    "latitude": 28.5293,
+    "longitude": 77.1541,
     "predicted_risk_probability": 0.2536,
     "risk_score": 25.3557,
     "population_exposure_score": 16.8044,

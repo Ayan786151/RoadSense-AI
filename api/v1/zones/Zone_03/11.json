@@ -1,11 +1,11 @@
 {
   "zone_id": "Zone_03",
-  "location_name": "Zone_03",
-  "city": "",
+  "location_name": "Kurla",
+  "city": "Mumbai",
   "zone_type": "University_District",
   "week": 11,
-  "latitude": 0.0,
-  "longitude": 0.0,
+  "latitude": 19.0726,
+  "longitude": 72.8845,
   "risk_analysis": {
     "predicted_risk_probability": 0.5364,
     "predicted_risk_percentage": 53.64,
@@ -130,7 +130,7 @@
       "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
     }
   ],
-  "executive_briefing": "Zone_03 shows elevated risk at 54%. Enforcement focus needed \u2014 10 red-light violations recorded. Optimizing signals could save 2933 kg CO2/week, equivalent to 7263 trees/year.",
+  "executive_briefing": "Kurla shows elevated risk at 54%. Enforcement focus needed \u2014 10 red-light violations recorded. Optimizing signals could save 2933 kg CO2/week, equivalent to 7263 trees/year.",
   "civilian_road_safety_radar": {
     "current_week": {
       "week": 11,
@@ -225,10 +225,6 @@
     "vehicle_density_trend_4w": 0.197,
     "speed_trend_4w": 1.424,
     "incident_trend_4w": 0.3,
-    "location_name_x": "Kurla",
-    "city_x": "Mumbai",
-    "latitude_x": 19.0726,
-    "longitude_x": 72.8845,
     "car_percentage": 48.2,
     "motorcycle_percentage": 40.3,
     "bus_percentage": 9.3,
@@ -236,10 +232,10 @@
     "moving_vehicle_percentage": 39.6,
     "slow_vehicle_percentage": 41.8,
     "stopped_vehicle_percentage": 18.6,
-    "location_name_y": "West Loop - Fulton Market & Randolph St",
-    "city_y": "Chicago",
-    "latitude_y": 41.8847,
-    "longitude_y": -87.6512,
+    "location_name": "Kurla",
+    "city": "Mumbai",
+    "latitude": 19.0726,
+    "longitude": 72.8845,
     "predicted_risk_probability": 0.5364,
     "risk_score": 53.64,
     "population_exposure_score": 45.4343,

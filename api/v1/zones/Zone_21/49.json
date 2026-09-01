@@ -1,11 +1,11 @@
 {
   "zone_id": "Zone_21",
-  "location_name": "Zone_21",
-  "city": "",
+  "location_name": "Janakpuri",
+  "city": "Delhi",
   "zone_type": "Residential",
   "week": 49,
-  "latitude": 0.0,
-  "longitude": 0.0,
+  "latitude": 28.6219,
+  "longitude": 77.0878,
   "risk_analysis": {
     "predicted_risk_probability": 0.5757,
     "predicted_risk_percentage": 57.57,
@@ -146,7 +146,7 @@
       "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
     }
   ],
-  "executive_briefing": "Zone_21 shows elevated risk at 58%. Signal optimization recommended \u2014 congestion at 67/100 with speeds averaging 33 km/h. Optimizing signals could save 5834 kg CO2/week, equivalent to 14446 trees/year.",
+  "executive_briefing": "Janakpuri shows elevated risk at 58%. Signal optimization recommended \u2014 congestion at 67/100 with speeds averaging 33 km/h. Optimizing signals could save 5834 kg CO2/week, equivalent to 14446 trees/year.",
   "civilian_road_safety_radar": {
     "current_week": {
       "week": 49,
@@ -241,10 +241,6 @@
     "vehicle_density_trend_4w": 0.19,
     "speed_trend_4w": 0.541,
     "incident_trend_4w": 0.0,
-    "location_name_x": "Janakpuri",
-    "city_x": "Delhi",
-    "latitude_x": 28.6219,
-    "longitude_x": 77.0878,
     "car_percentage": 34.1,
     "motorcycle_percentage": 52.9,
     "bus_percentage": 7.2,
@@ -252,10 +248,10 @@
     "moving_vehicle_percentage": 17.0,
     "slow_vehicle_percentage": 48.5,
     "stopped_vehicle_percentage": 34.5,
-    "location_name_y": "Bridgeport - 31st St & Halsted St",
-    "city_y": "Chicago",
-    "latitude_y": 41.8378,
-    "longitude_y": -87.6461,
+    "location_name": "Janakpuri",
+    "city": "Delhi",
+    "latitude": 28.6219,
+    "longitude": 77.0878,
     "predicted_risk_probability": 0.5757,
     "risk_score": 57.5682,
     "population_exposure_score": 73.8846,

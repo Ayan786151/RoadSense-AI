@@ -1,11 +1,11 @@
 {
   "zone_id": "Zone_45",
-  "location_name": "Zone_45",
-  "city": "",
+  "location_name": "Mylapore",
+  "city": "Chennai",
   "zone_type": "Highway_Junction",
   "week": 36,
-  "latitude": 0.0,
-  "longitude": 0.0,
+  "latitude": 13.0339,
+  "longitude": 80.2676,
   "risk_analysis": {
     "predicted_risk_probability": 0.5573,
     "predicted_risk_percentage": 55.73,
@@ -98,7 +98,7 @@
       "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
     }
   ],
-  "executive_briefing": "Zone_45 shows elevated risk at 56%. Continue routine monitoring. Optimizing signals could save 1721 kg CO2/week, equivalent to 4261 trees/year.",
+  "executive_briefing": "Mylapore shows elevated risk at 56%. Continue routine monitoring. Optimizing signals could save 1721 kg CO2/week, equivalent to 4261 trees/year.",
   "civilian_road_safety_radar": {
     "current_week": {
       "week": 36,
@@ -193,10 +193,6 @@
     "vehicle_density_trend_4w": 1.1,
     "speed_trend_4w": 2.262,
     "incident_trend_4w": -0.1,
-    "location_name_x": "Mylapore",
-    "city_x": "Chennai",
-    "latitude_x": 13.0339,
-    "longitude_x": 80.2676,
     "car_percentage": 41.3,
     "motorcycle_percentage": 41.2,
     "bus_percentage": 15.0,
@@ -204,10 +200,10 @@
     "moving_vehicle_percentage": 40.4,
     "slow_vehicle_percentage": 28.5,
     "stopped_vehicle_percentage": 31.0,
-    "location_name_y": "Pullman - 111th St & Cottage Grove Ave",
-    "city_y": "Chicago",
-    "latitude_y": 41.6926,
-    "longitude_y": -87.6046,
+    "location_name": "Mylapore",
+    "city": "Chennai",
+    "latitude": 13.0339,
+    "longitude": 80.2676,
     "predicted_risk_probability": 0.5573,
     "risk_score": 55.7276,
     "population_exposure_score": 11.6819,

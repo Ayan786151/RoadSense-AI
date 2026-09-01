@@ -1,11 +1,11 @@
 {
   "zone_id": "Zone_40",
-  "location_name": "Zone_40",
-  "city": "",
+  "location_name": "Velachery",
+  "city": "Chennai",
   "zone_type": "University_District",
   "week": 48,
-  "latitude": 0.0,
-  "longitude": 0.0,
+  "latitude": 12.9815,
+  "longitude": 80.218,
   "risk_analysis": {
     "predicted_risk_probability": 0.79,
     "predicted_risk_percentage": 79.0,
@@ -122,7 +122,7 @@
       "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
     }
   ],
-  "executive_briefing": "Zone_40 is in a critical safety state with 79% incident risk. Signal optimization recommended \u2014 congestion at 75/100 with speeds averaging 34 km/h. Optimizing signals could save 5439 kg CO2/week, equivalent to 13467 trees/year.",
+  "executive_briefing": "Velachery is in a critical safety state with 79% incident risk. Signal optimization recommended \u2014 congestion at 75/100 with speeds averaging 34 km/h. Optimizing signals could save 5439 kg CO2/week, equivalent to 13467 trees/year.",
   "civilian_road_safety_radar": {
     "current_week": {
       "week": 48,
@@ -217,10 +217,6 @@
     "vehicle_density_trend_4w": -0.633,
     "speed_trend_4w": 1.088,
     "incident_trend_4w": 0.0,
-    "location_name_x": "Velachery",
-    "city_x": "Chennai",
-    "latitude_x": 12.9815,
-    "longitude_x": 80.218,
     "car_percentage": 48.2,
     "motorcycle_percentage": 38.4,
     "bus_percentage": 8.1,
@@ -228,10 +224,10 @@
     "moving_vehicle_percentage": 19.7,
     "slow_vehicle_percentage": 42.2,
     "stopped_vehicle_percentage": 38.1,
-    "location_name_y": "Gage Park - 51st St & Western Ave",
-    "city_y": "Chicago",
-    "latitude_y": 41.8008,
-    "longitude_y": -87.6845,
+    "location_name": "Velachery",
+    "city": "Chennai",
+    "latitude": 12.9815,
+    "longitude": 80.218,
     "predicted_risk_probability": 0.79,
     "risk_score": 78.9974,
     "population_exposure_score": 47.1945,

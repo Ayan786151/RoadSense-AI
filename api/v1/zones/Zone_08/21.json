@@ -1,11 +1,11 @@
 {
   "zone_id": "Zone_08",
-  "location_name": "Zone_08",
-  "city": "",
+  "location_name": "Thane",
+  "city": "Mumbai",
   "zone_type": "Highway_Junction",
   "week": 21,
-  "latitude": 0.0,
-  "longitude": 0.0,
+  "latitude": 19.2183,
+  "longitude": 72.9781,
   "risk_analysis": {
     "predicted_risk_probability": 0.3298,
     "predicted_risk_percentage": 32.98,
@@ -98,7 +98,7 @@
       "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
     }
   ],
-  "executive_briefing": "Zone_08 is within safe operating parameters (33% risk). Enforcement focus needed \u2014 9 red-light violations recorded. Optimizing signals could save 384 kg CO2/week, equivalent to 951 trees/year.",
+  "executive_briefing": "Thane is within safe operating parameters (33% risk). Enforcement focus needed \u2014 9 red-light violations recorded. Optimizing signals could save 384 kg CO2/week, equivalent to 951 trees/year.",
   "civilian_road_safety_radar": {
     "current_week": {
       "week": 21,
@@ -193,10 +193,6 @@
     "vehicle_density_trend_4w": -1.258,
     "speed_trend_4w": -1.052,
     "incident_trend_4w": -0.3,
-    "location_name_x": "Thane",
-    "city_x": "Mumbai",
-    "latitude_x": 19.2183,
-    "longitude_x": 72.9781,
     "car_percentage": 49.2,
     "motorcycle_percentage": 41.1,
     "bus_percentage": 7.5,
@@ -204,10 +200,10 @@
     "moving_vehicle_percentage": 80.6,
     "slow_vehicle_percentage": 18.8,
     "stopped_vehicle_percentage": 0.6,
-    "location_name_y": "Logan Square - Logan Blvd & Kedzie Blvd",
-    "city_y": "Chicago",
-    "latitude_y": 41.9288,
-    "longitude_y": -87.7073,
+    "location_name": "Thane",
+    "city": "Mumbai",
+    "latitude": 19.2183,
+    "longitude": 72.9781,
     "predicted_risk_probability": 0.3298,
     "risk_score": 32.9836,
     "population_exposure_score": 4.8782,

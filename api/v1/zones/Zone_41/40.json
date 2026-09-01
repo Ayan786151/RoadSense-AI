@@ -1,11 +1,11 @@
 {
   "zone_id": "Zone_41",
-  "location_name": "Zone_41",
-  "city": "",
+  "location_name": "Adyar",
+  "city": "Chennai",
   "zone_type": "Highway_Junction",
   "week": 40,
-  "latitude": 0.0,
-  "longitude": 0.0,
+  "latitude": 13.0063,
+  "longitude": 80.2574,
   "risk_analysis": {
     "predicted_risk_probability": 0.7871,
     "predicted_risk_percentage": 78.71,
@@ -146,7 +146,7 @@
       "action": "Activate event traffic management plan. Deploy traffic marshals and temporary signage."
     }
   ],
-  "executive_briefing": "Zone_41 is in a critical safety state with 79% incident risk. Signal optimization recommended \u2014 congestion at 88/100 with speeds averaging 31 km/h. Optimizing signals could save 6403 kg CO2/week, equivalent to 15855 trees/year.",
+  "executive_briefing": "Adyar is in a critical safety state with 79% incident risk. Signal optimization recommended \u2014 congestion at 88/100 with speeds averaging 31 km/h. Optimizing signals could save 6403 kg CO2/week, equivalent to 15855 trees/year.",
   "civilian_road_safety_radar": {
     "current_week": {
       "week": 40,
@@ -241,10 +241,6 @@
     "vehicle_density_trend_4w": 9.184,
     "speed_trend_4w": 2.343,
     "incident_trend_4w": -0.3,
-    "location_name_x": "Adyar",
-    "city_x": "Chennai",
-    "latitude_x": 13.0063,
-    "longitude_x": 80.2574,
     "car_percentage": 45.8,
     "motorcycle_percentage": 36.5,
     "bus_percentage": 15.7,
@@ -252,10 +248,10 @@
     "moving_vehicle_percentage": 15.7,
     "slow_vehicle_percentage": 42.6,
     "stopped_vehicle_percentage": 41.7,
-    "location_name_y": "Brighton Park - Archer Ave & Kedzie Ave",
-    "city_y": "Chicago",
-    "latitude_y": 41.8152,
-    "longitude_y": -87.7038,
+    "location_name": "Adyar",
+    "city": "Chennai",
+    "latitude": 13.0063,
+    "longitude": 80.2574,
     "predicted_risk_probability": 0.7871,
     "risk_score": 78.7071,
     "population_exposure_score": 8.5351,

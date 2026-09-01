@@ -1,11 +1,11 @@
 {
   "zone_id": "Zone_25",
-  "location_name": "Zone_25",
-  "city": "",
+  "location_name": "Okhla",
+  "city": "Delhi",
   "zone_type": "Residential",
   "week": 33,
-  "latitude": 0.0,
-  "longitude": 0.0,
+  "latitude": 28.5355,
+  "longitude": 77.264,
   "risk_analysis": {
     "predicted_risk_probability": 0.745,
     "predicted_risk_percentage": 74.5,
@@ -114,7 +114,7 @@
       "action": "Install additional CCTV cameras and integrate with traffic management center for real-time monitoring."
     }
   ],
-  "executive_briefing": "Zone_25 is in a critical safety state with 75% incident risk. Continue routine monitoring. Optimizing signals could save 1861 kg CO2/week, equivalent to 4607 trees/year.",
+  "executive_briefing": "Okhla is in a critical safety state with 75% incident risk. Continue routine monitoring. Optimizing signals could save 1861 kg CO2/week, equivalent to 4607 trees/year.",
   "civilian_road_safety_radar": {
     "current_week": {
       "week": 33,
@@ -209,10 +209,6 @@
     "vehicle_density_trend_4w": -2.561,
     "speed_trend_4w": -9.849,
     "incident_trend_4w": 0.2,
-    "location_name_x": "Okhla",
-    "city_x": "Delhi",
-    "latitude_x": 28.5355,
-    "longitude_x": 77.264,
     "car_percentage": 32.3,
     "motorcycle_percentage": 58.0,
     "bus_percentage": 5.7,
@@ -220,10 +216,10 @@
     "moving_vehicle_percentage": 45.1,
     "slow_vehicle_percentage": 39.3,
     "stopped_vehicle_percentage": 15.7,
-    "location_name_y": "Midway Airport - 63rd St & Cicero Ave",
-    "city_y": "Chicago",
-    "latitude_y": 41.7788,
-    "longitude_y": -87.7416,
+    "location_name": "Okhla",
+    "city": "Delhi",
+    "latitude": 28.5355,
+    "longitude": 77.264,
     "predicted_risk_probability": 0.745,
     "risk_score": 74.5032,
     "population_exposure_score": 67.7419,

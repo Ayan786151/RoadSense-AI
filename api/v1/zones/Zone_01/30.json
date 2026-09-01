@@ -1,11 +1,11 @@
 {
   "zone_id": "Zone_01",
-  "location_name": "Zone_01",
-  "city": "",
+  "location_name": "Andheri",
+  "city": "Mumbai",
   "zone_type": "Commercial_Downtown",
   "week": 30,
-  "latitude": 0.0,
-  "longitude": 0.0,
+  "latitude": 19.1197,
+  "longitude": 72.8468,
   "risk_analysis": {
     "predicted_risk_probability": 0.5075,
     "predicted_risk_percentage": 50.75,
@@ -114,7 +114,7 @@
       "action": "Activate dynamic message signs for route diversion. Consider congestion pricing or access restrictions."
     }
   ],
-  "executive_briefing": "Zone_01 shows elevated risk at 51%. Signal optimization recommended \u2014 congestion at 72/100 with speeds averaging 42 km/h. Optimizing signals could save 7070 kg CO2/week, equivalent to 17507 trees/year.",
+  "executive_briefing": "Andheri shows elevated risk at 51%. Signal optimization recommended \u2014 congestion at 72/100 with speeds averaging 42 km/h. Optimizing signals could save 7070 kg CO2/week, equivalent to 17507 trees/year.",
   "civilian_road_safety_radar": {
     "current_week": {
       "week": 30,
@@ -209,10 +209,6 @@
     "vehicle_density_trend_4w": -1.981,
     "speed_trend_4w": 1.716,
     "incident_trend_4w": -0.3,
-    "location_name_x": "Andheri",
-    "city_x": "Mumbai",
-    "latitude_x": 19.1197,
-    "longitude_x": 72.8468,
     "car_percentage": 44.2,
     "motorcycle_percentage": 36.4,
     "bus_percentage": 12.6,
@@ -220,10 +216,10 @@
     "moving_vehicle_percentage": 24.5,
     "slow_vehicle_percentage": 49.2,
     "stopped_vehicle_percentage": 26.3,
-    "location_name_y": "Downtown Loop - N Michigan Ave & N State St",
-    "city_y": "Chicago",
-    "latitude_y": 41.8845,
-    "longitude_y": -87.6243,
+    "location_name": "Andheri",
+    "city": "Mumbai",
+    "latitude": 19.1197,
+    "longitude": 72.8468,
     "predicted_risk_probability": 0.5075,
     "risk_score": 50.7482,
     "population_exposure_score": 52.9133,

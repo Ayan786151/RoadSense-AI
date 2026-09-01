@@ -121,9 +121,10 @@ def build_static_api():
     
     # Merge location metadata if it exists
     if os.path.exists(loc_path):
-        loc_df = pd.read_csv(loc_path)
-        # Drop duplicates if any in loc_df
-        loc_df = loc_df.drop_duplicates(subset=["zone_id"])
+        loc_df = pd.read_csv(loc_path).drop_duplicates(subset=["zone_id"])
+        for col in ["location_name", "city", "latitude", "longitude"]:
+            if col in df.columns:
+                df = df.drop(columns=[col])
         df = pd.merge(df, loc_df, on="zone_id", how="left")
     else:
         df["location_name"] = df["zone_id"]
