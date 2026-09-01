@@ -1,32 +1,32 @@
 {
   "zone_id": "Zone_26",
-  "location_name": "Hazratganj",
-  "city": "Lucknow",
+  "location_name": "Zone_26",
+  "city": "",
   "zone_type": "University_District",
   "week": 14,
-  "latitude": 26.85,
-  "longitude": 80.949,
+  "latitude": 0.0,
+  "longitude": 0.0,
   "risk_analysis": {
-    "predicted_risk_probability": 0.1589,
-    "predicted_risk_percentage": 15.89,
+    "predicted_risk_probability": 0.2491,
+    "predicted_risk_percentage": 24.91,
     "risk_label": "LOW RISK",
     "risk_color": "#22c55e",
-    "risk_delta_vs_prev_week": -6.7922,
+    "risk_delta_vs_prev_week": -6.6722,
     "actual_incident": 0
   },
   "priority": {
-    "priority_score": 39.0486,
+    "priority_score": 42.6553,
     "priority_rank": 28,
     "priority_level": "MODERATE",
     "components": {
-      "risk_score": 15.8945,
+      "risk_score": 24.9113,
       "population_exposure_score": 45.384,
       "vehicle_exposure_score": 43.8824,
       "temporal_trend_score": 83.7889
     },
     "explanation": {
       "priority_level": "MODERATE",
-      "priority_score": 39.0,
+      "priority_score": 42.7,
       "top_contributors": [
         {
           "factor": "Worsening Trend",
@@ -47,10 +47,10 @@
         {
           "factor": "Risk Score",
           "icon": "\ud83d\udfe2",
-          "value": "16/100",
+          "value": "25/100",
           "impact": "LOW",
           "detail": "Risk score within acceptable range",
-          "weight": 15.8945
+          "weight": 24.9113
         }
       ],
       "total_factors": 3,
@@ -106,7 +106,47 @@
       "action": "Continue routine monitoring. No immediate intervention required."
     }
   ],
-  "executive_briefing": "Hazratganj is within safe operating parameters (16% risk). Continue routine monitoring. Optimizing signals could save 467 kg CO2/week, equivalent to 1157 trees/year.",
+  "executive_briefing": "Zone_26 is within safe operating parameters (25% risk). Continue routine monitoring. Optimizing signals could save 467 kg CO2/week, equivalent to 1157 trees/year.",
+  "civilian_road_safety_radar": {
+    "current_week": {
+      "week": 14,
+      "risk_score": 24.9,
+      "risk_percentage": "25%",
+      "risk_badge": "LOW RISK",
+      "risk_color": "#22c55e",
+      "description": "Corridor operating within normal baseline.",
+      "crashes_reported": 0
+    },
+    "why_accidents_might_happen": {
+      "primary_collision_cause": {
+        "title": "Congestion Bottleneck & Merge Conflicts",
+        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+      },
+      "behavior_factor": {
+        "title": "Tailgating & Speed Variance",
+        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+      },
+      "street_environment": {
+        "zone_type": "University_District",
+        "average_speed_kmh": 65.42,
+        "congestion_level": 13.95
+      }
+    },
+    "civilian_safety_guide": {
+      "for_drivers": {
+        "action": "Increase Following Distance",
+        "details": "Maintain 3 car lengths buffer during peak rush hours."
+      },
+      "for_pedestrians_and_cyclists": {
+        "action": "Double-Check Turning Vehicles",
+        "details": "Make eye contact with turning drivers at intersections before crossing."
+      },
+      "peak_danger_windows": {
+        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
+        "details": "Congestion peaks during evening travel windows."
+      }
+    }
+  },
   "raw_metrics": {
     "zone_id": "Zone_26",
     "week": 14,
@@ -153,18 +193,29 @@
     "vehicle_density_trend_4w": 4.533,
     "speed_trend_4w": -1.463,
     "incident_trend_4w": 0.0,
-    "location_name": "Hazratganj",
-    "city": "Lucknow",
-    "latitude": 26.85,
-    "longitude": 80.949,
-    "predicted_risk_probability": 0.1589,
-    "risk_score": 15.8945,
+    "location_name_x": "Hazratganj",
+    "city_x": "Lucknow",
+    "latitude_x": 26.85,
+    "longitude_x": 80.949,
+    "car_percentage": 48.6,
+    "motorcycle_percentage": 40.2,
+    "bus_percentage": 8.8,
+    "truck_percentage": 2.4,
+    "moving_vehicle_percentage": 72.8,
+    "slow_vehicle_percentage": 17.9,
+    "stopped_vehicle_percentage": 9.3,
+    "location_name_y": "Hazratganj",
+    "city_y": "Lucknow",
+    "latitude_y": 26.85,
+    "longitude_y": 80.949,
+    "predicted_risk_probability": 0.2491,
+    "risk_score": 24.9113,
     "population_exposure_score": 45.384,
     "vehicle_exposure_score": 43.8824,
     "temporal_trend_score": 83.7889,
-    "priority_score": 39.0486,
+    "priority_score": 42.6553,
     "priority_rank": 28,
     "priority_level": "MODERATE",
-    "risk_prob": 0.1589
+    "risk_prob": 0.2491
   }
 }

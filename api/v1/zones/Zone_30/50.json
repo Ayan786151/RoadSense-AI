@@ -1,44 +1,44 @@
 {
   "zone_id": "Zone_30",
-  "location_name": "Charbagh",
-  "city": "Lucknow",
+  "location_name": "Zone_30",
+  "city": "",
   "zone_type": "Highway_Junction",
   "week": 50,
-  "latitude": 26.8315,
-  "longitude": 80.923,
+  "latitude": 0.0,
+  "longitude": 0.0,
   "risk_analysis": {
-    "predicted_risk_probability": 0.4322,
-    "predicted_risk_percentage": 43.22,
+    "predicted_risk_probability": 0.4087,
+    "predicted_risk_percentage": 40.87,
     "risk_label": "MODERATE RISK",
     "risk_color": "#eab308",
-    "risk_delta_vs_prev_week": 18.3219,
+    "risk_delta_vs_prev_week": 2.3428,
     "actual_incident": 0
   },
   "priority": {
-    "priority_score": 35.2479,
-    "priority_rank": 28,
-    "priority_level": "MODERATE",
+    "priority_score": 34.3081,
+    "priority_rank": 36,
+    "priority_level": "LOW",
     "components": {
-      "risk_score": 43.217,
+      "risk_score": 40.8674,
       "population_exposure_score": 7.8095,
       "vehicle_exposure_score": 41.4738,
       "temporal_trend_score": 51.4266
     },
     "explanation": {
-      "priority_level": "MODERATE",
-      "priority_score": 35.2,
+      "priority_level": "LOW",
+      "priority_score": 34.3,
       "top_contributors": [
         {
           "factor": "Risk Score",
           "icon": "\ud83d\udfe1",
-          "value": "43/100",
+          "value": "41/100",
           "impact": "MEDIUM",
           "detail": "Moderate model-estimated risk",
-          "weight": 43.217
+          "weight": 40.8674
         }
       ],
       "total_factors": 1,
-      "assessment": "This zone has moderate risk levels with contributing factors: Risk Score. Continue monitoring and schedule review if conditions worsen."
+      "assessment": "This zone is currently within acceptable safety parameters. Routine monitoring is sufficient."
     }
   },
   "telemetry": {
@@ -90,7 +90,47 @@
       "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
     }
   ],
-  "executive_briefing": "Charbagh shows elevated risk at 43%. Continue routine monitoring. Optimizing signals could save 1239 kg CO2/week, equivalent to 3068 trees/year.",
+  "executive_briefing": "Zone_30 shows elevated risk at 41%. Continue routine monitoring. Optimizing signals could save 1239 kg CO2/week, equivalent to 3068 trees/year.",
+  "civilian_road_safety_radar": {
+    "current_week": {
+      "week": 50,
+      "risk_score": 40.9,
+      "risk_percentage": "41%",
+      "risk_badge": "MODERATE RISK",
+      "risk_color": "#eab308",
+      "description": "Corridor operating within normal baseline.",
+      "crashes_reported": 0
+    },
+    "why_accidents_might_happen": {
+      "primary_collision_cause": {
+        "title": "Congestion Bottleneck & Merge Conflicts",
+        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+      },
+      "behavior_factor": {
+        "title": "Tailgating & Speed Variance",
+        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+      },
+      "street_environment": {
+        "zone_type": "Highway_Junction",
+        "average_speed_kmh": 48.95,
+        "congestion_level": 31.15
+      }
+    },
+    "civilian_safety_guide": {
+      "for_drivers": {
+        "action": "Increase Following Distance",
+        "details": "Maintain 3 car lengths buffer during peak rush hours."
+      },
+      "for_pedestrians_and_cyclists": {
+        "action": "Double-Check Turning Vehicles",
+        "details": "Make eye contact with turning drivers at intersections before crossing."
+      },
+      "peak_danger_windows": {
+        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
+        "details": "Congestion peaks during evening travel windows."
+      }
+    }
+  },
   "raw_metrics": {
     "zone_id": "Zone_30",
     "week": 50,
@@ -137,18 +177,29 @@
     "vehicle_density_trend_4w": 3.281,
     "speed_trend_4w": -1.934,
     "incident_trend_4w": 0.0,
-    "location_name": "Charbagh",
-    "city": "Lucknow",
-    "latitude": 26.8315,
-    "longitude": 80.923,
-    "predicted_risk_probability": 0.4322,
-    "risk_score": 43.217,
+    "location_name_x": "Charbagh",
+    "city_x": "Lucknow",
+    "latitude_x": 26.8315,
+    "longitude_x": 80.923,
+    "car_percentage": 46.9,
+    "motorcycle_percentage": 38.3,
+    "bus_percentage": 10.7,
+    "truck_percentage": 4.1,
+    "moving_vehicle_percentage": 75.2,
+    "slow_vehicle_percentage": 11.9,
+    "stopped_vehicle_percentage": 12.9,
+    "location_name_y": "Charbagh",
+    "city_y": "Lucknow",
+    "latitude_y": 26.8315,
+    "longitude_y": 80.923,
+    "predicted_risk_probability": 0.4087,
+    "risk_score": 40.8674,
     "population_exposure_score": 7.8095,
     "vehicle_exposure_score": 41.4738,
     "temporal_trend_score": 51.4266,
-    "priority_score": 35.2479,
-    "priority_rank": 28,
-    "priority_level": "MODERATE",
-    "risk_prob": 0.4322
+    "priority_score": 34.3081,
+    "priority_rank": 36,
+    "priority_level": "LOW",
+    "risk_prob": 0.4087
   }
 }

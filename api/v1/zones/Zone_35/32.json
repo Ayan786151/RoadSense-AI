@@ -1,32 +1,32 @@
 {
   "zone_id": "Zone_35",
-  "location_name": "Jankipuram",
-  "city": "Lucknow",
+  "location_name": "Zone_35",
+  "city": "",
   "zone_type": "Residential",
   "week": 32,
-  "latitude": 26.93,
-  "longitude": 80.94,
+  "latitude": 0.0,
+  "longitude": 0.0,
   "risk_analysis": {
-    "predicted_risk_probability": 0.1814,
-    "predicted_risk_percentage": 18.14,
+    "predicted_risk_probability": 0.2745,
+    "predicted_risk_percentage": 27.45,
     "risk_label": "LOW RISK",
     "risk_color": "#22c55e",
-    "risk_delta_vs_prev_week": -46.2559,
+    "risk_delta_vs_prev_week": -29.4219,
     "actual_incident": 0
   },
   "priority": {
-    "priority_score": 47.29,
-    "priority_rank": 28,
+    "priority_score": 51.0157,
+    "priority_rank": 25,
     "priority_level": "MODERATE",
     "components": {
-      "risk_score": 18.1406,
+      "risk_score": 27.4548,
       "population_exposure_score": 100.0,
       "vehicle_exposure_score": 39.7364,
       "temporal_trend_score": 47.2431
     },
     "explanation": {
       "priority_level": "MODERATE",
-      "priority_score": 47.3,
+      "priority_score": 51.0,
       "top_contributors": [
         {
           "factor": "Population Exposure",
@@ -39,10 +39,10 @@
         {
           "factor": "Risk Score",
           "icon": "\ud83d\udfe2",
-          "value": "18/100",
+          "value": "27/100",
           "impact": "LOW",
           "detail": "Risk score within acceptable range",
-          "weight": 18.1406
+          "weight": 27.4548
         }
       ],
       "total_factors": 2,
@@ -98,7 +98,47 @@
       "action": "Continue routine monitoring. No immediate intervention required."
     }
   ],
-  "executive_briefing": "Jankipuram is within safe operating parameters (18% risk). Continue routine monitoring. Optimizing signals could save 345 kg CO2/week, equivalent to 855 trees/year.",
+  "executive_briefing": "Zone_35 is within safe operating parameters (27% risk). Continue routine monitoring. Optimizing signals could save 345 kg CO2/week, equivalent to 855 trees/year.",
+  "civilian_road_safety_radar": {
+    "current_week": {
+      "week": 32,
+      "risk_score": 27.5,
+      "risk_percentage": "27%",
+      "risk_badge": "LOW RISK",
+      "risk_color": "#22c55e",
+      "description": "Corridor operating within normal baseline.",
+      "crashes_reported": 0
+    },
+    "why_accidents_might_happen": {
+      "primary_collision_cause": {
+        "title": "Congestion Bottleneck & Merge Conflicts",
+        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+      },
+      "behavior_factor": {
+        "title": "Tailgating & Speed Variance",
+        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+      },
+      "street_environment": {
+        "zone_type": "Residential",
+        "average_speed_kmh": 55.92,
+        "congestion_level": 11.05
+      }
+    },
+    "civilian_safety_guide": {
+      "for_drivers": {
+        "action": "Increase Following Distance",
+        "details": "Maintain 3 car lengths buffer during peak rush hours."
+      },
+      "for_pedestrians_and_cyclists": {
+        "action": "Double-Check Turning Vehicles",
+        "details": "Make eye contact with turning drivers at intersections before crossing."
+      },
+      "peak_danger_windows": {
+        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
+        "details": "Congestion peaks during evening travel windows."
+      }
+    }
+  },
   "raw_metrics": {
     "zone_id": "Zone_35",
     "week": 32,
@@ -145,18 +185,29 @@
     "vehicle_density_trend_4w": -1.912,
     "speed_trend_4w": -6.15,
     "incident_trend_4w": 0.3,
-    "location_name": "Jankipuram",
-    "city": "Lucknow",
-    "latitude": 26.93,
-    "longitude": 80.94,
-    "predicted_risk_probability": 0.1814,
-    "risk_score": 18.1406,
+    "location_name_x": "Jankipuram",
+    "city_x": "Lucknow",
+    "latitude_x": 26.93,
+    "longitude_x": 80.94,
+    "car_percentage": 34.0,
+    "motorcycle_percentage": 54.0,
+    "bus_percentage": 10.1,
+    "truck_percentage": 1.9,
+    "moving_vehicle_percentage": 78.3,
+    "slow_vehicle_percentage": 11.8,
+    "stopped_vehicle_percentage": 9.9,
+    "location_name_y": "Jankipuram",
+    "city_y": "Lucknow",
+    "latitude_y": 26.93,
+    "longitude_y": 80.94,
+    "predicted_risk_probability": 0.2745,
+    "risk_score": 27.4548,
     "population_exposure_score": 100.0,
     "vehicle_exposure_score": 39.7364,
     "temporal_trend_score": 47.2431,
-    "priority_score": 47.29,
-    "priority_rank": 28,
+    "priority_score": 51.0157,
+    "priority_rank": 25,
     "priority_level": "MODERATE",
-    "risk_prob": 0.1814
+    "risk_prob": 0.2745
   }
 }

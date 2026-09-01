@@ -1,40 +1,40 @@
 {
   "zone_id": "Zone_13",
-  "location_name": "Chembur",
-  "city": "Mumbai",
+  "location_name": "Zone_13",
+  "city": "",
   "zone_type": "Suburban_LowDensity",
   "week": 16,
-  "latitude": 19.062,
-  "longitude": 72.897,
+  "latitude": 0.0,
+  "longitude": 0.0,
   "risk_analysis": {
-    "predicted_risk_probability": 0.1342,
-    "predicted_risk_percentage": 13.42,
+    "predicted_risk_probability": 0.2212,
+    "predicted_risk_percentage": 22.12,
     "risk_label": "LOW RISK",
     "risk_color": "#22c55e",
-    "risk_delta_vs_prev_week": -0.8772,
+    "risk_delta_vs_prev_week": -5.188,
     "actual_incident": 0
   },
   "priority": {
-    "priority_score": 11.2044,
-    "priority_rank": 48,
+    "priority_score": 14.682,
+    "priority_rank": 49,
     "priority_level": "LOW",
     "components": {
-      "risk_score": 13.4231,
+      "risk_score": 22.117,
       "population_exposure_score": 0.0,
       "vehicle_exposure_score": 1.7341,
       "temporal_trend_score": 36.589
     },
     "explanation": {
       "priority_level": "LOW",
-      "priority_score": 11.2,
+      "priority_score": 14.7,
       "top_contributors": [
         {
           "factor": "Risk Score",
           "icon": "\ud83d\udfe2",
-          "value": "13/100",
+          "value": "22/100",
           "impact": "LOW",
           "detail": "Risk score within acceptable range",
-          "weight": 13.4231
+          "weight": 22.117
         }
       ],
       "total_factors": 1,
@@ -90,7 +90,47 @@
       "action": "Continue routine monitoring. No immediate intervention required."
     }
   ],
-  "executive_briefing": "Chembur is within safe operating parameters (13% risk). Continue routine monitoring. Optimizing signals could save 72 kg CO2/week, equivalent to 177 trees/year.",
+  "executive_briefing": "Zone_13 is within safe operating parameters (22% risk). Continue routine monitoring. Optimizing signals could save 72 kg CO2/week, equivalent to 177 trees/year.",
+  "civilian_road_safety_radar": {
+    "current_week": {
+      "week": 16,
+      "risk_score": 22.1,
+      "risk_percentage": "22%",
+      "risk_badge": "LOW RISK",
+      "risk_color": "#22c55e",
+      "description": "Corridor operating within normal baseline.",
+      "crashes_reported": 0
+    },
+    "why_accidents_might_happen": {
+      "primary_collision_cause": {
+        "title": "Congestion Bottleneck & Merge Conflicts",
+        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+      },
+      "behavior_factor": {
+        "title": "Tailgating & Speed Variance",
+        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+      },
+      "street_environment": {
+        "zone_type": "Suburban_LowDensity",
+        "average_speed_kmh": 63.48,
+        "congestion_level": 9.22
+      }
+    },
+    "civilian_safety_guide": {
+      "for_drivers": {
+        "action": "Increase Following Distance",
+        "details": "Maintain 3 car lengths buffer during peak rush hours."
+      },
+      "for_pedestrians_and_cyclists": {
+        "action": "Double-Check Turning Vehicles",
+        "details": "Make eye contact with turning drivers at intersections before crossing."
+      },
+      "peak_danger_windows": {
+        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
+        "details": "Congestion peaks during evening travel windows."
+      }
+    }
+  },
   "raw_metrics": {
     "zone_id": "Zone_13",
     "week": 16,
@@ -137,18 +177,29 @@
     "vehicle_density_trend_4w": 3.112,
     "speed_trend_4w": -1.364,
     "incident_trend_4w": 0.0,
-    "location_name": "Chembur",
-    "city": "Mumbai",
-    "latitude": 19.062,
-    "longitude": 72.897,
-    "predicted_risk_probability": 0.1342,
-    "risk_score": 13.4231,
+    "location_name_x": "Chembur",
+    "city_x": "Mumbai",
+    "latitude_x": 19.062,
+    "longitude_x": 72.897,
+    "car_percentage": 39.8,
+    "motorcycle_percentage": 41.4,
+    "bus_percentage": 11.2,
+    "truck_percentage": 7.6,
+    "moving_vehicle_percentage": 84.8,
+    "slow_vehicle_percentage": 17.2,
+    "stopped_vehicle_percentage": 0.0,
+    "location_name_y": "Chembur",
+    "city_y": "Mumbai",
+    "latitude_y": 19.062,
+    "longitude_y": 72.897,
+    "predicted_risk_probability": 0.2212,
+    "risk_score": 22.117,
     "population_exposure_score": 0.0,
     "vehicle_exposure_score": 1.7341,
     "temporal_trend_score": 36.589,
-    "priority_score": 11.2044,
-    "priority_rank": 48,
+    "priority_score": 14.682,
+    "priority_rank": 49,
     "priority_level": "LOW",
-    "risk_prob": 0.1342
+    "risk_prob": 0.2212
   }
 }

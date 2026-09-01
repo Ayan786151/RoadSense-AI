@@ -1,32 +1,32 @@
 {
   "zone_id": "Zone_50",
-  "location_name": "Egmore",
-  "city": "Chennai",
+  "location_name": "Zone_50",
+  "city": "",
   "zone_type": "University_District",
   "week": 31,
-  "latitude": 13.0732,
-  "longitude": 80.2609,
+  "latitude": 0.0,
+  "longitude": 0.0,
   "risk_analysis": {
-    "predicted_risk_probability": 0.9648,
-    "predicted_risk_percentage": 96.48,
+    "predicted_risk_probability": 0.9301,
+    "predicted_risk_percentage": 93.01,
     "risk_label": "CRITICAL RISK",
     "risk_color": "#ef4444",
-    "risk_delta_vs_prev_week": 41.7092,
+    "risk_delta_vs_prev_week": 44.4822,
     "actual_incident": 1
   },
   "priority": {
-    "priority_score": 85.4381,
-    "priority_rank": 3,
+    "priority_score": 84.0499,
+    "priority_rank": 2,
     "priority_level": "CRITICAL",
     "components": {
-      "risk_score": 96.4793,
+      "risk_score": 93.0087,
       "population_exposure_score": 73.5038,
       "vehicle_exposure_score": 100.0,
       "temporal_trend_score": 56.4695
     },
     "explanation": {
       "priority_level": "CRITICAL",
-      "priority_score": 85.4,
+      "priority_score": 84.0,
       "top_contributors": [
         {
           "factor": "Congestion",
@@ -47,10 +47,10 @@
         {
           "factor": "Risk Score",
           "icon": "\ud83d\udd34",
-          "value": "96/100",
+          "value": "93/100",
           "impact": "HIGH",
           "detail": "Model-estimated risk score is in the critical range",
-          "weight": 96.4793
+          "weight": 93.0087
         },
         {
           "factor": "Speed Anomaly",
@@ -162,7 +162,47 @@
       "action": "Install additional CCTV cameras and integrate with traffic management center for real-time monitoring."
     }
   ],
-  "executive_briefing": "Egmore is in a critical safety state with 96% incident risk. Signal optimization recommended \u2014 congestion at 100/100 with speeds averaging 10 km/h. Optimizing signals could save 10674 kg CO2/week, equivalent to 26431 trees/year.",
+  "executive_briefing": "Zone_50 is in a critical safety state with 93% incident risk. Signal optimization recommended \u2014 congestion at 100/100 with speeds averaging 10 km/h. Optimizing signals could save 10674 kg CO2/week, equivalent to 26431 trees/year.",
+  "civilian_road_safety_radar": {
+    "current_week": {
+      "week": 31,
+      "risk_score": 93.0,
+      "risk_percentage": "93%",
+      "risk_badge": "CRITICAL RISK",
+      "risk_color": "#ef4444",
+      "description": "Elevated collision activity observed.",
+      "crashes_reported": 0
+    },
+    "why_accidents_might_happen": {
+      "primary_collision_cause": {
+        "title": "Congestion Bottleneck & Merge Conflicts",
+        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+      },
+      "behavior_factor": {
+        "title": "Tailgating & Speed Variance",
+        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+      },
+      "street_environment": {
+        "zone_type": "University_District",
+        "average_speed_kmh": 10.0,
+        "congestion_level": 100.0
+      }
+    },
+    "civilian_safety_guide": {
+      "for_drivers": {
+        "action": "Increase Following Distance",
+        "details": "Maintain 3 car lengths buffer during peak rush hours."
+      },
+      "for_pedestrians_and_cyclists": {
+        "action": "Double-Check Turning Vehicles",
+        "details": "Make eye contact with turning drivers at intersections before crossing."
+      },
+      "peak_danger_windows": {
+        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
+        "details": "Congestion peaks during evening travel windows."
+      }
+    }
+  },
   "raw_metrics": {
     "zone_id": "Zone_50",
     "week": 31,
@@ -209,18 +249,29 @@
     "vehicle_density_trend_4w": -0.794,
     "speed_trend_4w": 1.445,
     "incident_trend_4w": 0.0,
-    "location_name": "Egmore",
-    "city": "Chennai",
-    "latitude": 13.0732,
-    "longitude": 80.2609,
-    "predicted_risk_probability": 0.9648,
-    "risk_score": 96.4793,
+    "location_name_x": "Egmore",
+    "city_x": "Chennai",
+    "latitude_x": 13.0732,
+    "longitude_x": 80.2609,
+    "car_percentage": 43.0,
+    "motorcycle_percentage": 41.5,
+    "bus_percentage": 8.3,
+    "truck_percentage": 7.2,
+    "moving_vehicle_percentage": 20.4,
+    "slow_vehicle_percentage": 34.2,
+    "stopped_vehicle_percentage": 45.5,
+    "location_name_y": "Egmore",
+    "city_y": "Chennai",
+    "latitude_y": 13.0732,
+    "longitude_y": 80.2609,
+    "predicted_risk_probability": 0.9301,
+    "risk_score": 93.0087,
     "population_exposure_score": 73.5038,
     "vehicle_exposure_score": 100.0,
     "temporal_trend_score": 56.4695,
-    "priority_score": 85.4381,
-    "priority_rank": 3,
+    "priority_score": 84.0499,
+    "priority_rank": 2,
     "priority_level": "CRITICAL",
-    "risk_prob": 0.9648
+    "risk_prob": 0.9301
   }
 }

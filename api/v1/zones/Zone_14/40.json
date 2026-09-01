@@ -1,32 +1,32 @@
 {
   "zone_id": "Zone_14",
-  "location_name": "Connaught Place",
-  "city": "Delhi",
+  "location_name": "Zone_14",
+  "city": "",
   "zone_type": "University_District",
   "week": 40,
-  "latitude": 28.6315,
-  "longitude": 77.2167,
+  "latitude": 0.0,
+  "longitude": 0.0,
   "risk_analysis": {
-    "predicted_risk_probability": 0.2577,
-    "predicted_risk_percentage": 25.77,
-    "risk_label": "LOW RISK",
-    "risk_color": "#22c55e",
-    "risk_delta_vs_prev_week": -16.7304,
+    "predicted_risk_probability": 0.4467,
+    "predicted_risk_percentage": 44.67,
+    "risk_label": "MODERATE RISK",
+    "risk_color": "#eab308",
+    "risk_delta_vs_prev_week": 4.8469,
     "actual_incident": 0
   },
   "priority": {
-    "priority_score": 48.9553,
-    "priority_rank": 13,
-    "priority_level": "MODERATE",
+    "priority_score": 56.5173,
+    "priority_rank": 11,
+    "priority_level": "HIGH",
     "components": {
-      "risk_score": 25.7674,
+      "risk_score": 44.6726,
       "population_exposure_score": 66.0249,
       "vehicle_exposure_score": 72.2154,
       "temporal_trend_score": 51.3266
     },
     "explanation": {
-      "priority_level": "MODERATE",
-      "priority_score": 49.0,
+      "priority_level": "HIGH",
+      "priority_score": 56.5,
       "top_contributors": [
         {
           "factor": "Vehicle Density",
@@ -46,15 +46,15 @@
         },
         {
           "factor": "Risk Score",
-          "icon": "\ud83d\udfe2",
-          "value": "26/100",
-          "impact": "LOW",
-          "detail": "Risk score within acceptable range",
-          "weight": 25.7674
+          "icon": "\ud83d\udfe1",
+          "value": "45/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 44.6726
         }
       ],
       "total_factors": 3,
-      "assessment": "This zone has moderate risk levels with contributing factors: Vehicle Density, Population Exposure. Continue monitoring and schedule review if conditions worsen."
+      "assessment": "This zone shows significant risk elevation driven by Vehicle Density, Population Exposure. Proactive intervention should be scheduled within the current planning cycle."
     }
   },
   "telemetry": {
@@ -102,11 +102,51 @@
       "name": "Routine Monitoring",
       "icon": "\ud83d\udcca",
       "severity": "LOW",
-      "description": "Zone currently within acceptable risk parameters.",
-      "action": "Continue routine monitoring. No immediate intervention required."
+      "description": "No specific risk indicators triggered.",
+      "action": "Continue routine monitoring."
     }
   ],
-  "executive_briefing": "Connaught Place is within safe operating parameters (26% risk). Continue routine monitoring. Optimizing signals could save 1851 kg CO2/week, equivalent to 4583 trees/year.",
+  "executive_briefing": "Zone_14 shows elevated risk at 45%. Continue routine monitoring. Optimizing signals could save 1851 kg CO2/week, equivalent to 4583 trees/year.",
+  "civilian_road_safety_radar": {
+    "current_week": {
+      "week": 40,
+      "risk_score": 44.7,
+      "risk_percentage": "45%",
+      "risk_badge": "MODERATE RISK",
+      "risk_color": "#eab308",
+      "description": "Corridor operating within normal baseline.",
+      "crashes_reported": 0
+    },
+    "why_accidents_might_happen": {
+      "primary_collision_cause": {
+        "title": "Congestion Bottleneck & Merge Conflicts",
+        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+      },
+      "behavior_factor": {
+        "title": "Tailgating & Speed Variance",
+        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+      },
+      "street_environment": {
+        "zone_type": "University_District",
+        "average_speed_kmh": 56.5,
+        "congestion_level": 27.64
+      }
+    },
+    "civilian_safety_guide": {
+      "for_drivers": {
+        "action": "Increase Following Distance",
+        "details": "Maintain 3 car lengths buffer during peak rush hours."
+      },
+      "for_pedestrians_and_cyclists": {
+        "action": "Double-Check Turning Vehicles",
+        "details": "Make eye contact with turning drivers at intersections before crossing."
+      },
+      "peak_danger_windows": {
+        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
+        "details": "Congestion peaks during evening travel windows."
+      }
+    }
+  },
   "raw_metrics": {
     "zone_id": "Zone_14",
     "week": 40,
@@ -153,18 +193,29 @@
     "vehicle_density_trend_4w": -0.978,
     "speed_trend_4w": -1.096,
     "incident_trend_4w": -0.3,
-    "location_name": "Connaught Place",
-    "city": "Delhi",
-    "latitude": 28.6315,
-    "longitude": 77.2167,
-    "predicted_risk_probability": 0.2577,
-    "risk_score": 25.7674,
+    "location_name_x": "Connaught Place",
+    "city_x": "Delhi",
+    "latitude_x": 28.6315,
+    "longitude_x": 77.2167,
+    "car_percentage": 44.2,
+    "motorcycle_percentage": 41.7,
+    "bus_percentage": 7.3,
+    "truck_percentage": 6.8,
+    "moving_vehicle_percentage": 77.8,
+    "slow_vehicle_percentage": 18.1,
+    "stopped_vehicle_percentage": 4.1,
+    "location_name_y": "Connaught Place",
+    "city_y": "Delhi",
+    "latitude_y": 28.6315,
+    "longitude_y": 77.2167,
+    "predicted_risk_probability": 0.4467,
+    "risk_score": 44.6726,
     "population_exposure_score": 66.0249,
     "vehicle_exposure_score": 72.2154,
     "temporal_trend_score": 51.3266,
-    "priority_score": 48.9553,
-    "priority_rank": 13,
-    "priority_level": "MODERATE",
-    "risk_prob": 0.2577
+    "priority_score": 56.5173,
+    "priority_rank": 11,
+    "priority_level": "HIGH",
+    "risk_prob": 0.4467
   }
 }

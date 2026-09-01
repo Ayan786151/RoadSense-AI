@@ -1,40 +1,40 @@
 {
   "zone_id": "Zone_16",
-  "location_name": "Rohini",
-  "city": "Delhi",
+  "location_name": "Zone_16",
+  "city": "",
   "zone_type": "Highway_Junction",
   "week": 15,
-  "latitude": 28.7495,
-  "longitude": 77.0565,
+  "latitude": 0.0,
+  "longitude": 0.0,
   "risk_analysis": {
-    "predicted_risk_probability": 0.1273,
-    "predicted_risk_percentage": 12.73,
+    "predicted_risk_probability": 0.1598,
+    "predicted_risk_percentage": 15.98,
     "risk_label": "LOW RISK",
     "risk_color": "#22c55e",
-    "risk_delta_vs_prev_week": -0.2975,
+    "risk_delta_vs_prev_week": -3.1024,
     "actual_incident": 0
   },
   "priority": {
-    "priority_score": 17.3326,
-    "priority_rank": 48,
+    "priority_score": 18.6307,
+    "priority_rank": 49,
     "priority_level": "LOW",
     "components": {
-      "risk_score": 12.7325,
+      "risk_score": 15.9778,
       "population_exposure_score": 4.325,
       "vehicle_exposure_score": 15.4677,
       "temporal_trend_score": 53.7652
     },
     "explanation": {
       "priority_level": "LOW",
-      "priority_score": 17.3,
+      "priority_score": 18.6,
       "top_contributors": [
         {
           "factor": "Risk Score",
           "icon": "\ud83d\udfe2",
-          "value": "13/100",
+          "value": "16/100",
           "impact": "LOW",
           "detail": "Risk score within acceptable range",
-          "weight": 12.7325
+          "weight": 15.9778
         }
       ],
       "total_factors": 1,
@@ -90,7 +90,47 @@
       "action": "Continue routine monitoring. No immediate intervention required."
     }
   ],
-  "executive_briefing": "Rohini is within safe operating parameters (13% risk). Continue routine monitoring. Optimizing signals could save 185 kg CO2/week, equivalent to 458 trees/year.",
+  "executive_briefing": "Zone_16 is within safe operating parameters (16% risk). Continue routine monitoring. Optimizing signals could save 185 kg CO2/week, equivalent to 458 trees/year.",
+  "civilian_road_safety_radar": {
+    "current_week": {
+      "week": 15,
+      "risk_score": 16.0,
+      "risk_percentage": "16%",
+      "risk_badge": "LOW RISK",
+      "risk_color": "#22c55e",
+      "description": "Corridor operating within normal baseline.",
+      "crashes_reported": 0
+    },
+    "why_accidents_might_happen": {
+      "primary_collision_cause": {
+        "title": "Congestion Bottleneck & Merge Conflicts",
+        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+      },
+      "behavior_factor": {
+        "title": "Tailgating & Speed Variance",
+        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+      },
+      "street_environment": {
+        "zone_type": "Highway_Junction",
+        "average_speed_kmh": 59.69,
+        "congestion_level": 12.05
+      }
+    },
+    "civilian_safety_guide": {
+      "for_drivers": {
+        "action": "Increase Following Distance",
+        "details": "Maintain 3 car lengths buffer during peak rush hours."
+      },
+      "for_pedestrians_and_cyclists": {
+        "action": "Double-Check Turning Vehicles",
+        "details": "Make eye contact with turning drivers at intersections before crossing."
+      },
+      "peak_danger_windows": {
+        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
+        "details": "Congestion peaks during evening travel windows."
+      }
+    }
+  },
   "raw_metrics": {
     "zone_id": "Zone_16",
     "week": 15,
@@ -137,18 +177,29 @@
     "vehicle_density_trend_4w": 0.338,
     "speed_trend_4w": 3.091,
     "incident_trend_4w": 0.0,
-    "location_name": "Rohini",
-    "city": "Delhi",
-    "latitude": 28.7495,
-    "longitude": 77.0565,
-    "predicted_risk_probability": 0.1273,
-    "risk_score": 12.7325,
+    "location_name_x": "Rohini",
+    "city_x": "Delhi",
+    "latitude_x": 28.7495,
+    "longitude_x": 77.0565,
+    "car_percentage": 41.8,
+    "motorcycle_percentage": 39.2,
+    "bus_percentage": 12.6,
+    "truck_percentage": 6.4,
+    "moving_vehicle_percentage": 74.0,
+    "slow_vehicle_percentage": 8.8,
+    "stopped_vehicle_percentage": 17.2,
+    "location_name_y": "Rohini",
+    "city_y": "Delhi",
+    "latitude_y": 28.7495,
+    "longitude_y": 77.0565,
+    "predicted_risk_probability": 0.1598,
+    "risk_score": 15.9778,
     "population_exposure_score": 4.325,
     "vehicle_exposure_score": 15.4677,
     "temporal_trend_score": 53.7652,
-    "priority_score": 17.3326,
-    "priority_rank": 48,
+    "priority_score": 18.6307,
+    "priority_rank": 49,
     "priority_level": "LOW",
-    "risk_prob": 0.1273
+    "risk_prob": 0.1598
   }
 }

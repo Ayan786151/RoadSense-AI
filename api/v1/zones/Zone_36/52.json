@@ -1,32 +1,32 @@
 {
   "zone_id": "Zone_36",
-  "location_name": "Rajajipuram",
-  "city": "Lucknow",
+  "location_name": "Zone_36",
+  "city": "",
   "zone_type": "Residential",
   "week": 52,
-  "latitude": 26.833,
-  "longitude": 80.89,
+  "latitude": 0.0,
+  "longitude": 0.0,
   "risk_analysis": {
-    "predicted_risk_probability": 0.7747,
-    "predicted_risk_percentage": 77.47,
-    "risk_label": "CRITICAL RISK",
-    "risk_color": "#ef4444",
-    "risk_delta_vs_prev_week": 3.6022,
+    "predicted_risk_probability": 0.6915,
+    "predicted_risk_percentage": 69.15,
+    "risk_label": "HIGH RISK",
+    "risk_color": "#f97316",
+    "risk_delta_vs_prev_week": 2.7389,
     "actual_incident": 1
   },
   "priority": {
-    "priority_score": 77.1381,
-    "priority_rank": 7,
-    "priority_level": "CRITICAL",
+    "priority_score": 73.8106,
+    "priority_rank": 5,
+    "priority_level": "HIGH",
     "components": {
-      "risk_score": 77.4688,
+      "risk_score": 69.15,
       "population_exposure_score": 81.73,
       "vehicle_exposure_score": 61.984,
       "temporal_trend_score": 88.8083
     },
     "explanation": {
-      "priority_level": "CRITICAL",
-      "priority_score": 77.1,
+      "priority_level": "HIGH",
+      "priority_score": 73.8,
       "top_contributors": [
         {
           "factor": "Worsening Trend",
@@ -46,11 +46,11 @@
         },
         {
           "factor": "Risk Score",
-          "icon": "\ud83d\udd34",
-          "value": "77/100",
-          "impact": "HIGH",
-          "detail": "Model-estimated risk score is in the critical range",
-          "weight": 77.4688
+          "icon": "\ud83d\udfe1",
+          "value": "69/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 69.15
         },
         {
           "factor": "Vehicle Density",
@@ -70,7 +70,7 @@
         }
       ],
       "total_factors": 5,
-      "assessment": "This zone requires URGENT attention. Primary risk drivers: Worsening Trend, Population Exposure, Risk Score. Immediate field inspection and intervention planning recommended."
+      "assessment": "This zone shows significant risk elevation driven by Worsening Trend, Population Exposure. Proactive intervention should be scheduled within the current planning cycle."
     }
   },
   "telemetry": {
@@ -136,17 +136,49 @@
       "severity": "MEDIUM",
       "description": "Deteriorated road surface combined with elevated risk indicates infrastructure maintenance need.",
       "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
-    },
-    {
-      "id": "MONITORING_UPGRADE",
-      "name": "Enhanced Monitoring & CCTV Coverage",
-      "icon": "\ud83d\udcf9",
-      "severity": "MEDIUM",
-      "description": "High-risk zone with significant population exposure warrants improved surveillance.",
-      "action": "Install additional CCTV cameras and integrate with traffic management center for real-time monitoring."
     }
   ],
-  "executive_briefing": "Rajajipuram is in a critical safety state with 77% incident risk. Continue routine monitoring. Optimizing signals could save 3996 kg CO2/week, equivalent to 9893 trees/year.",
+  "executive_briefing": "Zone_36 is in a critical safety state with 69% incident risk. Continue routine monitoring. Optimizing signals could save 3996 kg CO2/week, equivalent to 9893 trees/year.",
+  "civilian_road_safety_radar": {
+    "current_week": {
+      "week": 52,
+      "risk_score": 69.2,
+      "risk_percentage": "69%",
+      "risk_badge": "HIGH RISK",
+      "risk_color": "#f97316",
+      "description": "Elevated collision activity observed.",
+      "crashes_reported": 0
+    },
+    "why_accidents_might_happen": {
+      "primary_collision_cause": {
+        "title": "Congestion Bottleneck & Merge Conflicts",
+        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+      },
+      "behavior_factor": {
+        "title": "Tailgating & Speed Variance",
+        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+      },
+      "street_environment": {
+        "zone_type": "Residential",
+        "average_speed_kmh": 35.71,
+        "congestion_level": 59.07
+      }
+    },
+    "civilian_safety_guide": {
+      "for_drivers": {
+        "action": "Increase Following Distance",
+        "details": "Maintain 3 car lengths buffer during peak rush hours."
+      },
+      "for_pedestrians_and_cyclists": {
+        "action": "Double-Check Turning Vehicles",
+        "details": "Make eye contact with turning drivers at intersections before crossing."
+      },
+      "peak_danger_windows": {
+        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
+        "details": "Congestion peaks during evening travel windows."
+      }
+    }
+  },
   "raw_metrics": {
     "zone_id": "Zone_36",
     "week": 52,
@@ -193,18 +225,29 @@
     "vehicle_density_trend_4w": 1.449,
     "speed_trend_4w": -6.36,
     "incident_trend_4w": 0.4,
-    "location_name": "Rajajipuram",
-    "city": "Lucknow",
-    "latitude": 26.833,
-    "longitude": 80.89,
-    "predicted_risk_probability": 0.7747,
-    "risk_score": 77.4688,
+    "location_name_x": "Rajajipuram",
+    "city_x": "Lucknow",
+    "latitude_x": 26.833,
+    "longitude_x": 80.89,
+    "car_percentage": 32.6,
+    "motorcycle_percentage": 53.5,
+    "bus_percentage": 8.9,
+    "truck_percentage": 5.1,
+    "moving_vehicle_percentage": 53.4,
+    "slow_vehicle_percentage": 39.5,
+    "stopped_vehicle_percentage": 7.1,
+    "location_name_y": "Rajajipuram",
+    "city_y": "Lucknow",
+    "latitude_y": 26.833,
+    "longitude_y": 80.89,
+    "predicted_risk_probability": 0.6915,
+    "risk_score": 69.15,
     "population_exposure_score": 81.73,
     "vehicle_exposure_score": 61.984,
     "temporal_trend_score": 88.8083,
-    "priority_score": 77.1381,
-    "priority_rank": 7,
-    "priority_level": "CRITICAL",
-    "risk_prob": 0.7747
+    "priority_score": 73.8106,
+    "priority_rank": 5,
+    "priority_level": "HIGH",
+    "risk_prob": 0.6915
   }
 }

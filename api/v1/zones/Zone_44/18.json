@@ -1,33 +1,41 @@
 {
   "zone_id": "Zone_44",
-  "location_name": "Porur",
-  "city": "Chennai",
+  "location_name": "Zone_44",
+  "city": "",
   "zone_type": "Suburban_LowDensity",
   "week": 18,
-  "latitude": 13.0358,
-  "longitude": 80.156,
+  "latitude": 0.0,
+  "longitude": 0.0,
   "risk_analysis": {
-    "predicted_risk_probability": 0.1917,
-    "predicted_risk_percentage": 19.17,
+    "predicted_risk_probability": 0.2995,
+    "predicted_risk_percentage": 29.95,
     "risk_label": "LOW RISK",
     "risk_color": "#22c55e",
-    "risk_delta_vs_prev_week": 0.9997,
+    "risk_delta_vs_prev_week": 0.5356,
     "actual_incident": 0
   },
   "priority": {
-    "priority_score": 18.8716,
+    "priority_score": 23.1845,
     "priority_rank": 42,
     "priority_level": "LOW",
     "components": {
-      "risk_score": 19.1673,
+      "risk_score": 29.9493,
       "population_exposure_score": 16.9481,
       "vehicle_exposure_score": 14.3632,
       "temporal_trend_score": 27.3005
     },
     "explanation": {
       "priority_level": "LOW",
-      "priority_score": 18.9,
+      "priority_score": 23.2,
       "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "30/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 29.9493
+        },
         {
           "factor": "Improving Trend",
           "icon": "\ud83d\udcc9",
@@ -35,14 +43,6 @@
           "impact": "POSITIVE",
           "detail": "Conditions are improving over past 4 weeks",
           "weight": -27.3005
-        },
-        {
-          "factor": "Risk Score",
-          "icon": "\ud83d\udfe2",
-          "value": "19/100",
-          "impact": "LOW",
-          "detail": "Risk score within acceptable range",
-          "weight": 19.1673
         }
       ],
       "total_factors": 2,
@@ -98,7 +98,47 @@
       "action": "Continue routine monitoring. No immediate intervention required."
     }
   ],
-  "executive_briefing": "Porur is within safe operating parameters (19% risk). Continue routine monitoring. Optimizing signals could save 125 kg CO2/week, equivalent to 309 trees/year.",
+  "executive_briefing": "Zone_44 is within safe operating parameters (30% risk). Continue routine monitoring. Optimizing signals could save 125 kg CO2/week, equivalent to 309 trees/year.",
+  "civilian_road_safety_radar": {
+    "current_week": {
+      "week": 18,
+      "risk_score": 29.9,
+      "risk_percentage": "30%",
+      "risk_badge": "LOW RISK",
+      "risk_color": "#22c55e",
+      "description": "Corridor operating within normal baseline.",
+      "crashes_reported": 0
+    },
+    "why_accidents_might_happen": {
+      "primary_collision_cause": {
+        "title": "Congestion Bottleneck & Merge Conflicts",
+        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+      },
+      "behavior_factor": {
+        "title": "Tailgating & Speed Variance",
+        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+      },
+      "street_environment": {
+        "zone_type": "Suburban_LowDensity",
+        "average_speed_kmh": 66.34,
+        "congestion_level": 10.18
+      }
+    },
+    "civilian_safety_guide": {
+      "for_drivers": {
+        "action": "Increase Following Distance",
+        "details": "Maintain 3 car lengths buffer during peak rush hours."
+      },
+      "for_pedestrians_and_cyclists": {
+        "action": "Double-Check Turning Vehicles",
+        "details": "Make eye contact with turning drivers at intersections before crossing."
+      },
+      "peak_danger_windows": {
+        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
+        "details": "Congestion peaks during evening travel windows."
+      }
+    }
+  },
   "raw_metrics": {
     "zone_id": "Zone_44",
     "week": 18,
@@ -145,18 +185,29 @@
     "vehicle_density_trend_4w": -1.754,
     "speed_trend_4w": 4.102,
     "incident_trend_4w": 0.0,
-    "location_name": "Porur",
-    "city": "Chennai",
-    "latitude": 13.0358,
-    "longitude": 80.156,
-    "predicted_risk_probability": 0.1917,
-    "risk_score": 19.1673,
+    "location_name_x": "Porur",
+    "city_x": "Chennai",
+    "latitude_x": 13.0358,
+    "longitude_x": 80.156,
+    "car_percentage": 42.5,
+    "motorcycle_percentage": 44.3,
+    "bus_percentage": 10.4,
+    "truck_percentage": 2.8,
+    "moving_vehicle_percentage": 73.1,
+    "slow_vehicle_percentage": 18.2,
+    "stopped_vehicle_percentage": 8.6,
+    "location_name_y": "Porur",
+    "city_y": "Chennai",
+    "latitude_y": 13.0358,
+    "longitude_y": 80.156,
+    "predicted_risk_probability": 0.2995,
+    "risk_score": 29.9493,
     "population_exposure_score": 16.9481,
     "vehicle_exposure_score": 14.3632,
     "temporal_trend_score": 27.3005,
-    "priority_score": 18.8716,
+    "priority_score": 23.1845,
     "priority_rank": 42,
     "priority_level": "LOW",
-    "risk_prob": 0.1917
+    "risk_prob": 0.2995
   }
 }

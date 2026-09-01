@@ -1,33 +1,41 @@
 {
   "zone_id": "Zone_26",
-  "location_name": "Hazratganj",
-  "city": "Lucknow",
+  "location_name": "Zone_26",
+  "city": "",
   "zone_type": "University_District",
   "week": 5,
-  "latitude": 26.85,
-  "longitude": 80.949,
+  "latitude": 0.0,
+  "longitude": 0.0,
   "risk_analysis": {
-    "predicted_risk_probability": 0.2293,
-    "predicted_risk_percentage": 22.93,
+    "predicted_risk_probability": 0.3381,
+    "predicted_risk_percentage": 33.81,
     "risk_label": "LOW RISK",
     "risk_color": "#22c55e",
     "risk_delta_vs_prev_week": null,
     "actual_incident": 0
   },
   "priority": {
-    "priority_score": 39.6177,
-    "priority_rank": 32,
+    "priority_score": 43.9702,
+    "priority_rank": 28,
     "priority_level": "MODERATE",
     "components": {
-      "risk_score": 22.929,
+      "risk_score": 33.8103,
       "population_exposure_score": 45.384,
       "vehicle_exposure_score": 56.6205,
       "temporal_trend_score": 51.8398
     },
     "explanation": {
       "priority_level": "MODERATE",
-      "priority_score": 39.6,
+      "priority_score": 44.0,
       "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "34/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 33.8103
+        },
         {
           "factor": "Population Exposure",
           "icon": "\ud83d\udc65",
@@ -35,14 +43,6 @@
           "impact": "MEDIUM",
           "detail": "Moderate population exposure",
           "weight": 31.7688
-        },
-        {
-          "factor": "Risk Score",
-          "icon": "\ud83d\udfe2",
-          "value": "23/100",
-          "impact": "LOW",
-          "detail": "Risk score within acceptable range",
-          "weight": 22.929
         }
       ],
       "total_factors": 2,
@@ -94,11 +94,51 @@
       "name": "Routine Monitoring",
       "icon": "\ud83d\udcca",
       "severity": "LOW",
-      "description": "Zone currently within acceptable risk parameters.",
-      "action": "Continue routine monitoring. No immediate intervention required."
+      "description": "No specific risk indicators triggered.",
+      "action": "Continue routine monitoring."
     }
   ],
-  "executive_briefing": "Hazratganj is within safe operating parameters (23% risk). Continue routine monitoring. Optimizing signals could save 745 kg CO2/week, equivalent to 1844 trees/year.",
+  "executive_briefing": "Zone_26 is within safe operating parameters (34% risk). Continue routine monitoring. Optimizing signals could save 745 kg CO2/week, equivalent to 1844 trees/year.",
+  "civilian_road_safety_radar": {
+    "current_week": {
+      "week": 5,
+      "risk_score": 33.8,
+      "risk_percentage": "34%",
+      "risk_badge": "LOW RISK",
+      "risk_color": "#22c55e",
+      "description": "Corridor operating within normal baseline.",
+      "crashes_reported": 0
+    },
+    "why_accidents_might_happen": {
+      "primary_collision_cause": {
+        "title": "Congestion Bottleneck & Merge Conflicts",
+        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+      },
+      "behavior_factor": {
+        "title": "Tailgating & Speed Variance",
+        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+      },
+      "street_environment": {
+        "zone_type": "University_District",
+        "average_speed_kmh": 61.17,
+        "congestion_level": 17.08
+      }
+    },
+    "civilian_safety_guide": {
+      "for_drivers": {
+        "action": "Increase Following Distance",
+        "details": "Maintain 3 car lengths buffer during peak rush hours."
+      },
+      "for_pedestrians_and_cyclists": {
+        "action": "Double-Check Turning Vehicles",
+        "details": "Make eye contact with turning drivers at intersections before crossing."
+      },
+      "peak_danger_windows": {
+        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
+        "details": "Congestion peaks during evening travel windows."
+      }
+    }
+  },
   "raw_metrics": {
     "zone_id": "Zone_26",
     "week": 5,
@@ -145,18 +185,29 @@
     "vehicle_density_trend_4w": -0.823,
     "speed_trend_4w": 1.508,
     "incident_trend_4w": 0.0,
-    "location_name": "Hazratganj",
-    "city": "Lucknow",
-    "latitude": 26.85,
-    "longitude": 80.949,
-    "predicted_risk_probability": 0.2293,
-    "risk_score": 22.929,
+    "location_name_x": "Hazratganj",
+    "city_x": "Lucknow",
+    "latitude_x": 26.85,
+    "longitude_x": 80.949,
+    "car_percentage": 48.0,
+    "motorcycle_percentage": 40.7,
+    "bus_percentage": 9.2,
+    "truck_percentage": 2.1,
+    "moving_vehicle_percentage": 76.8,
+    "slow_vehicle_percentage": 19.5,
+    "stopped_vehicle_percentage": 3.7,
+    "location_name_y": "Hazratganj",
+    "city_y": "Lucknow",
+    "latitude_y": 26.85,
+    "longitude_y": 80.949,
+    "predicted_risk_probability": 0.3381,
+    "risk_score": 33.8103,
     "population_exposure_score": 45.384,
     "vehicle_exposure_score": 56.6205,
     "temporal_trend_score": 51.8398,
-    "priority_score": 39.6177,
-    "priority_rank": 32,
+    "priority_score": 43.9702,
+    "priority_rank": 28,
     "priority_level": "MODERATE",
-    "risk_prob": 0.2293
+    "risk_prob": 0.3381
   }
 }

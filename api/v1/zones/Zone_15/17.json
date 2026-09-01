@@ -1,32 +1,32 @@
 {
   "zone_id": "Zone_15",
-  "location_name": "Dwarka",
-  "city": "Delhi",
+  "location_name": "Zone_15",
+  "city": "",
   "zone_type": "Residential",
   "week": 17,
-  "latitude": 28.5921,
-  "longitude": 77.046,
+  "latitude": 0.0,
+  "longitude": 0.0,
   "risk_analysis": {
-    "predicted_risk_probability": 0.286,
-    "predicted_risk_percentage": 28.6,
-    "risk_label": "LOW RISK",
-    "risk_color": "#22c55e",
-    "risk_delta_vs_prev_week": -4.6541,
+    "predicted_risk_probability": 0.3984,
+    "predicted_risk_percentage": 39.84,
+    "risk_label": "MODERATE RISK",
+    "risk_color": "#eab308",
+    "risk_delta_vs_prev_week": -1.063,
     "actual_incident": 0
   },
   "priority": {
-    "priority_score": 58.7693,
-    "priority_rank": 8,
+    "priority_score": 63.2646,
+    "priority_rank": 6,
     "priority_level": "HIGH",
     "components": {
-      "risk_score": 28.6014,
+      "risk_score": 39.8396,
       "population_exposure_score": 97.0041,
       "vehicle_exposure_score": 77.5315,
       "temporal_trend_score": 50.4764
     },
     "explanation": {
       "priority_level": "HIGH",
-      "priority_score": 58.8,
+      "priority_score": 63.3,
       "top_contributors": [
         {
           "factor": "Population Exposure",
@@ -47,10 +47,10 @@
         {
           "factor": "Risk Score",
           "icon": "\ud83d\udfe2",
-          "value": "29/100",
+          "value": "40/100",
           "impact": "LOW",
           "detail": "Risk score within acceptable range",
-          "weight": 28.6014
+          "weight": 39.8396
         }
       ],
       "total_factors": 3,
@@ -102,11 +102,51 @@
       "name": "Routine Monitoring",
       "icon": "\ud83d\udcca",
       "severity": "LOW",
-      "description": "Zone currently within acceptable risk parameters.",
-      "action": "Continue routine monitoring. No immediate intervention required."
+      "description": "No specific risk indicators triggered.",
+      "action": "Continue routine monitoring."
     }
   ],
-  "executive_briefing": "Dwarka is within safe operating parameters (29% risk). Continue routine monitoring. Optimizing signals could save 1939 kg CO2/week, equivalent to 4802 trees/year.",
+  "executive_briefing": "Zone_15 shows elevated risk at 40%. Continue routine monitoring. Optimizing signals could save 1939 kg CO2/week, equivalent to 4802 trees/year.",
+  "civilian_road_safety_radar": {
+    "current_week": {
+      "week": 17,
+      "risk_score": 39.8,
+      "risk_percentage": "40%",
+      "risk_badge": "MODERATE RISK",
+      "risk_color": "#eab308",
+      "description": "Corridor operating within normal baseline.",
+      "crashes_reported": 0
+    },
+    "why_accidents_might_happen": {
+      "primary_collision_cause": {
+        "title": "Congestion Bottleneck & Merge Conflicts",
+        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+      },
+      "behavior_factor": {
+        "title": "Tailgating & Speed Variance",
+        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+      },
+      "street_environment": {
+        "zone_type": "Residential",
+        "average_speed_kmh": 54.31,
+        "congestion_level": 28.77
+      }
+    },
+    "civilian_safety_guide": {
+      "for_drivers": {
+        "action": "Increase Following Distance",
+        "details": "Maintain 3 car lengths buffer during peak rush hours."
+      },
+      "for_pedestrians_and_cyclists": {
+        "action": "Double-Check Turning Vehicles",
+        "details": "Make eye contact with turning drivers at intersections before crossing."
+      },
+      "peak_danger_windows": {
+        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
+        "details": "Congestion peaks during evening travel windows."
+      }
+    }
+  },
   "raw_metrics": {
     "zone_id": "Zone_15",
     "week": 17,
@@ -153,18 +193,29 @@
     "vehicle_density_trend_4w": 2.336,
     "speed_trend_4w": -0.547,
     "incident_trend_4w": 0.1,
-    "location_name": "Dwarka",
-    "city": "Delhi",
-    "latitude": 28.5921,
-    "longitude": 77.046,
-    "predicted_risk_probability": 0.286,
-    "risk_score": 28.6014,
+    "location_name_x": "Dwarka",
+    "city_x": "Delhi",
+    "latitude_x": 28.5921,
+    "longitude_x": 77.046,
+    "car_percentage": 36.1,
+    "motorcycle_percentage": 52.4,
+    "bus_percentage": 7.2,
+    "truck_percentage": 4.4,
+    "moving_vehicle_percentage": 83.0,
+    "slow_vehicle_percentage": 12.7,
+    "stopped_vehicle_percentage": 4.3,
+    "location_name_y": "Dwarka",
+    "city_y": "Delhi",
+    "latitude_y": 28.5921,
+    "longitude_y": 77.046,
+    "predicted_risk_probability": 0.3984,
+    "risk_score": 39.8396,
     "population_exposure_score": 97.0041,
     "vehicle_exposure_score": 77.5315,
     "temporal_trend_score": 50.4764,
-    "priority_score": 58.7693,
-    "priority_rank": 8,
+    "priority_score": 63.2646,
+    "priority_rank": 6,
     "priority_level": "HIGH",
-    "risk_prob": 0.286
+    "risk_prob": 0.3984
   }
 }

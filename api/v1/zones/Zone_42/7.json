@@ -1,32 +1,32 @@
 {
   "zone_id": "Zone_42",
-  "location_name": "Guindy",
-  "city": "Chennai",
+  "location_name": "Zone_42",
+  "city": "",
   "zone_type": "University_District",
   "week": 7,
-  "latitude": 13.0067,
-  "longitude": 80.2206,
+  "latitude": 0.0,
+  "longitude": 0.0,
   "risk_analysis": {
-    "predicted_risk_probability": 0.3732,
-    "predicted_risk_percentage": 37.32,
+    "predicted_risk_probability": 0.3928,
+    "predicted_risk_percentage": 39.28,
     "risk_label": "MODERATE RISK",
     "risk_color": "#eab308",
-    "risk_delta_vs_prev_week": -32.413,
+    "risk_delta_vs_prev_week": -13.8491,
     "actual_incident": 0
   },
   "priority": {
-    "priority_score": 47.6691,
+    "priority_score": 48.4534,
     "priority_rank": 18,
     "priority_level": "MODERATE",
     "components": {
-      "risk_score": 37.322,
+      "risk_score": 39.2826,
       "population_exposure_score": 43.164,
       "vehicle_exposure_score": 66.9719,
       "temporal_trend_score": 57.0329
     },
     "explanation": {
       "priority_level": "MODERATE",
-      "priority_score": 47.7,
+      "priority_score": 48.5,
       "top_contributors": [
         {
           "factor": "Vehicle Density",
@@ -39,10 +39,10 @@
         {
           "factor": "Risk Score",
           "icon": "\ud83d\udfe2",
-          "value": "37/100",
+          "value": "39/100",
           "impact": "LOW",
           "detail": "Risk score within acceptable range",
-          "weight": 37.322
+          "weight": 39.2826
         },
         {
           "factor": "Rising Trend",
@@ -114,7 +114,47 @@
       "action": "Continue routine monitoring."
     }
   ],
-  "executive_briefing": "Guindy shows elevated risk at 37%. Continue routine monitoring. Optimizing signals could save 1903 kg CO2/week, equivalent to 4712 trees/year.",
+  "executive_briefing": "Zone_42 shows elevated risk at 39%. Continue routine monitoring. Optimizing signals could save 1903 kg CO2/week, equivalent to 4712 trees/year.",
+  "civilian_road_safety_radar": {
+    "current_week": {
+      "week": 7,
+      "risk_score": 39.3,
+      "risk_percentage": "39%",
+      "risk_badge": "MODERATE RISK",
+      "risk_color": "#eab308",
+      "description": "Corridor operating within normal baseline.",
+      "crashes_reported": 0
+    },
+    "why_accidents_might_happen": {
+      "primary_collision_cause": {
+        "title": "Congestion Bottleneck & Merge Conflicts",
+        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+      },
+      "behavior_factor": {
+        "title": "Tailgating & Speed Variance",
+        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+      },
+      "street_environment": {
+        "zone_type": "University_District",
+        "average_speed_kmh": 56.24,
+        "congestion_level": 35.71
+      }
+    },
+    "civilian_safety_guide": {
+      "for_drivers": {
+        "action": "Increase Following Distance",
+        "details": "Maintain 3 car lengths buffer during peak rush hours."
+      },
+      "for_pedestrians_and_cyclists": {
+        "action": "Double-Check Turning Vehicles",
+        "details": "Make eye contact with turning drivers at intersections before crossing."
+      },
+      "peak_danger_windows": {
+        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
+        "details": "Congestion peaks during evening travel windows."
+      }
+    }
+  },
   "raw_metrics": {
     "zone_id": "Zone_42",
     "week": 7,
@@ -161,18 +201,29 @@
     "vehicle_density_trend_4w": 0.957,
     "speed_trend_4w": -0.529,
     "incident_trend_4w": 0.0,
-    "location_name": "Guindy",
-    "city": "Chennai",
-    "latitude": 13.0067,
-    "longitude": 80.2206,
-    "predicted_risk_probability": 0.3732,
-    "risk_score": 37.322,
+    "location_name_x": "Guindy",
+    "city_x": "Chennai",
+    "latitude_x": 13.0067,
+    "longitude_x": 80.2206,
+    "car_percentage": 44.5,
+    "motorcycle_percentage": 38.4,
+    "bus_percentage": 11.9,
+    "truck_percentage": 5.2,
+    "moving_vehicle_percentage": 58.7,
+    "slow_vehicle_percentage": 32.8,
+    "stopped_vehicle_percentage": 8.5,
+    "location_name_y": "Guindy",
+    "city_y": "Chennai",
+    "latitude_y": 13.0067,
+    "longitude_y": 80.2206,
+    "predicted_risk_probability": 0.3928,
+    "risk_score": 39.2826,
     "population_exposure_score": 43.164,
     "vehicle_exposure_score": 66.9719,
     "temporal_trend_score": 57.0329,
-    "priority_score": 47.6691,
+    "priority_score": 48.4534,
     "priority_rank": 18,
     "priority_level": "MODERATE",
-    "risk_prob": 0.3732
+    "risk_prob": 0.3928
   }
 }

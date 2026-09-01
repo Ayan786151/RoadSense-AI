@@ -1,32 +1,32 @@
 {
   "zone_id": "Zone_45",
-  "location_name": "Mylapore",
-  "city": "Chennai",
+  "location_name": "Zone_45",
+  "city": "",
   "zone_type": "Highway_Junction",
   "week": 49,
-  "latitude": 13.0339,
-  "longitude": 80.2676,
+  "latitude": 0.0,
+  "longitude": 0.0,
   "risk_analysis": {
-    "predicted_risk_probability": 0.279,
-    "predicted_risk_percentage": 27.9,
+    "predicted_risk_probability": 0.3462,
+    "predicted_risk_percentage": 34.62,
     "risk_label": "LOW RISK",
     "risk_color": "#22c55e",
-    "risk_delta_vs_prev_week": 6.4171,
+    "risk_delta_vs_prev_week": 2.043,
     "actual_incident": 0
   },
   "priority": {
-    "priority_score": 32.9157,
-    "priority_rank": 34,
-    "priority_level": "LOW",
+    "priority_score": 35.601,
+    "priority_rank": 37,
+    "priority_level": "MODERATE",
     "components": {
-      "risk_score": 27.9037,
+      "risk_score": 34.6169,
       "population_exposure_score": 11.6819,
       "vehicle_exposure_score": 42.8377,
       "temporal_trend_score": 68.4415
     },
     "explanation": {
-      "priority_level": "LOW",
-      "priority_score": 32.9,
+      "priority_level": "MODERATE",
+      "priority_score": 35.6,
       "top_contributors": [
         {
           "factor": "Rising Trend",
@@ -39,14 +39,14 @@
         {
           "factor": "Risk Score",
           "icon": "\ud83d\udfe2",
-          "value": "28/100",
+          "value": "35/100",
           "impact": "LOW",
           "detail": "Risk score within acceptable range",
-          "weight": 27.9037
+          "weight": 34.6169
         }
       ],
       "total_factors": 2,
-      "assessment": "This zone is currently within acceptable safety parameters. Routine monitoring is sufficient."
+      "assessment": "This zone has moderate risk levels with contributing factors: Rising Trend. Continue monitoring and schedule review if conditions worsen."
     }
   },
   "telemetry": {
@@ -94,11 +94,51 @@
       "name": "Routine Monitoring",
       "icon": "\ud83d\udcca",
       "severity": "LOW",
-      "description": "Zone currently within acceptable risk parameters.",
-      "action": "Continue routine monitoring. No immediate intervention required."
+      "description": "No specific risk indicators triggered.",
+      "action": "Continue routine monitoring."
     }
   ],
-  "executive_briefing": "Mylapore is within safe operating parameters (28% risk). Continue routine monitoring. Optimizing signals could save 1023 kg CO2/week, equivalent to 2533 trees/year.",
+  "executive_briefing": "Zone_45 is within safe operating parameters (35% risk). Continue routine monitoring. Optimizing signals could save 1023 kg CO2/week, equivalent to 2533 trees/year.",
+  "civilian_road_safety_radar": {
+    "current_week": {
+      "week": 49,
+      "risk_score": 34.6,
+      "risk_percentage": "35%",
+      "risk_badge": "LOW RISK",
+      "risk_color": "#22c55e",
+      "description": "Corridor operating within normal baseline.",
+      "crashes_reported": 0
+    },
+    "why_accidents_might_happen": {
+      "primary_collision_cause": {
+        "title": "Congestion Bottleneck & Merge Conflicts",
+        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+      },
+      "behavior_factor": {
+        "title": "Tailgating & Speed Variance",
+        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+      },
+      "street_environment": {
+        "zone_type": "Highway_Junction",
+        "average_speed_kmh": 59.16,
+        "congestion_level": 22.32
+      }
+    },
+    "civilian_safety_guide": {
+      "for_drivers": {
+        "action": "Increase Following Distance",
+        "details": "Maintain 3 car lengths buffer during peak rush hours."
+      },
+      "for_pedestrians_and_cyclists": {
+        "action": "Double-Check Turning Vehicles",
+        "details": "Make eye contact with turning drivers at intersections before crossing."
+      },
+      "peak_danger_windows": {
+        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
+        "details": "Congestion peaks during evening travel windows."
+      }
+    }
+  },
   "raw_metrics": {
     "zone_id": "Zone_45",
     "week": 49,
@@ -145,18 +185,29 @@
     "vehicle_density_trend_4w": 1.566,
     "speed_trend_4w": 0.029,
     "incident_trend_4w": 0.0,
-    "location_name": "Mylapore",
-    "city": "Chennai",
-    "latitude": 13.0339,
-    "longitude": 80.2676,
-    "predicted_risk_probability": 0.279,
-    "risk_score": 27.9037,
+    "location_name_x": "Mylapore",
+    "city_x": "Chennai",
+    "latitude_x": 13.0339,
+    "longitude_x": 80.2676,
+    "car_percentage": 44.0,
+    "motorcycle_percentage": 38.7,
+    "bus_percentage": 10.6,
+    "truck_percentage": 6.7,
+    "moving_vehicle_percentage": 82.3,
+    "slow_vehicle_percentage": 13.6,
+    "stopped_vehicle_percentage": 4.2,
+    "location_name_y": "Mylapore",
+    "city_y": "Chennai",
+    "latitude_y": 13.0339,
+    "longitude_y": 80.2676,
+    "predicted_risk_probability": 0.3462,
+    "risk_score": 34.6169,
     "population_exposure_score": 11.6819,
     "vehicle_exposure_score": 42.8377,
     "temporal_trend_score": 68.4415,
-    "priority_score": 32.9157,
-    "priority_rank": 34,
-    "priority_level": "LOW",
-    "risk_prob": 0.279
+    "priority_score": 35.601,
+    "priority_rank": 37,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.3462
   }
 }

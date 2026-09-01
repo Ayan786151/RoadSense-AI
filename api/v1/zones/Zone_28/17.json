@@ -1,40 +1,40 @@
 {
   "zone_id": "Zone_28",
-  "location_name": "Aliganj",
-  "city": "Lucknow",
+  "location_name": "Zone_28",
+  "city": "",
   "zone_type": "Highway_Junction",
   "week": 17,
-  "latitude": 26.886,
-  "longitude": 80.9462,
+  "latitude": 0.0,
+  "longitude": 0.0,
   "risk_analysis": {
-    "predicted_risk_probability": 0.1207,
-    "predicted_risk_percentage": 12.07,
+    "predicted_risk_probability": 0.1862,
+    "predicted_risk_percentage": 18.62,
     "risk_label": "LOW RISK",
     "risk_color": "#22c55e",
-    "risk_delta_vs_prev_week": 0.4843,
+    "risk_delta_vs_prev_week": -2.3736,
     "actual_incident": 0
   },
   "priority": {
-    "priority_score": 14.5794,
+    "priority_score": 17.1987,
     "priority_rank": 50,
     "priority_level": "LOW",
     "components": {
-      "risk_score": 12.0677,
+      "risk_score": 18.6159,
       "population_exposure_score": 3.4773,
       "vehicle_exposure_score": 14.6645,
       "temporal_trend_score": 39.6673
     },
     "explanation": {
       "priority_level": "LOW",
-      "priority_score": 14.6,
+      "priority_score": 17.2,
       "top_contributors": [
         {
           "factor": "Risk Score",
           "icon": "\ud83d\udfe2",
-          "value": "12/100",
+          "value": "19/100",
           "impact": "LOW",
           "detail": "Risk score within acceptable range",
-          "weight": 12.0677
+          "weight": 18.6159
         }
       ],
       "total_factors": 1,
@@ -90,7 +90,47 @@
       "action": "Continue routine monitoring. No immediate intervention required."
     }
   ],
-  "executive_briefing": "Aliganj is within safe operating parameters (12% risk). Continue routine monitoring. Optimizing signals could save 78 kg CO2/week, equivalent to 192 trees/year.",
+  "executive_briefing": "Zone_28 is within safe operating parameters (19% risk). Continue routine monitoring. Optimizing signals could save 78 kg CO2/week, equivalent to 192 trees/year.",
+  "civilian_road_safety_radar": {
+    "current_week": {
+      "week": 17,
+      "risk_score": 18.6,
+      "risk_percentage": "19%",
+      "risk_badge": "LOW RISK",
+      "risk_color": "#22c55e",
+      "description": "Corridor operating within normal baseline.",
+      "crashes_reported": 0
+    },
+    "why_accidents_might_happen": {
+      "primary_collision_cause": {
+        "title": "Congestion Bottleneck & Merge Conflicts",
+        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+      },
+      "behavior_factor": {
+        "title": "Tailgating & Speed Variance",
+        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+      },
+      "street_environment": {
+        "zone_type": "Highway_Junction",
+        "average_speed_kmh": 62.94,
+        "congestion_level": 5.98
+      }
+    },
+    "civilian_safety_guide": {
+      "for_drivers": {
+        "action": "Increase Following Distance",
+        "details": "Maintain 3 car lengths buffer during peak rush hours."
+      },
+      "for_pedestrians_and_cyclists": {
+        "action": "Double-Check Turning Vehicles",
+        "details": "Make eye contact with turning drivers at intersections before crossing."
+      },
+      "peak_danger_windows": {
+        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
+        "details": "Congestion peaks during evening travel windows."
+      }
+    }
+  },
   "raw_metrics": {
     "zone_id": "Zone_28",
     "week": 17,
@@ -137,18 +177,29 @@
     "vehicle_density_trend_4w": 1.416,
     "speed_trend_4w": 0.346,
     "incident_trend_4w": 0.0,
-    "location_name": "Aliganj",
-    "city": "Lucknow",
-    "latitude": 26.886,
-    "longitude": 80.9462,
-    "predicted_risk_probability": 0.1207,
-    "risk_score": 12.0677,
+    "location_name_x": "Aliganj",
+    "city_x": "Lucknow",
+    "latitude_x": 26.886,
+    "longitude_x": 80.9462,
+    "car_percentage": 45.2,
+    "motorcycle_percentage": 41.5,
+    "bus_percentage": 7.9,
+    "truck_percentage": 5.4,
+    "moving_vehicle_percentage": 79.8,
+    "slow_vehicle_percentage": 16.4,
+    "stopped_vehicle_percentage": 3.9,
+    "location_name_y": "Aliganj",
+    "city_y": "Lucknow",
+    "latitude_y": 26.886,
+    "longitude_y": 80.9462,
+    "predicted_risk_probability": 0.1862,
+    "risk_score": 18.6159,
     "population_exposure_score": 3.4773,
     "vehicle_exposure_score": 14.6645,
     "temporal_trend_score": 39.6673,
-    "priority_score": 14.5794,
+    "priority_score": 17.1987,
     "priority_rank": 50,
     "priority_level": "LOW",
-    "risk_prob": 0.1207
+    "risk_prob": 0.1862
   }
 }

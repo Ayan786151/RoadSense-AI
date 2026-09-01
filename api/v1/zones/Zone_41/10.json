@@ -1,32 +1,32 @@
 {
   "zone_id": "Zone_41",
-  "location_name": "Adyar",
-  "city": "Chennai",
+  "location_name": "Zone_41",
+  "city": "",
   "zone_type": "Highway_Junction",
   "week": 10,
-  "latitude": 13.0063,
-  "longitude": 80.2574,
+  "latitude": 0.0,
+  "longitude": 0.0,
   "risk_analysis": {
-    "predicted_risk_probability": 0.1125,
-    "predicted_risk_percentage": 11.25,
+    "predicted_risk_probability": 0.3052,
+    "predicted_risk_percentage": 30.52,
     "risk_label": "LOW RISK",
     "risk_color": "#22c55e",
-    "risk_delta_vs_prev_week": -3.8502,
+    "risk_delta_vs_prev_week": 5.7245,
     "actual_incident": 0
   },
   "priority": {
-    "priority_score": 20.3399,
-    "priority_rank": 44,
+    "priority_score": 28.0464,
+    "priority_rank": 39,
     "priority_level": "LOW",
     "components": {
-      "risk_score": 11.2488,
+      "risk_score": 30.515,
       "population_exposure_score": 8.5351,
       "vehicle_exposure_score": 20.8578,
       "temporal_trend_score": 63.5672
     },
     "explanation": {
       "priority_level": "LOW",
-      "priority_score": 20.3,
+      "priority_score": 28.0,
       "top_contributors": [
         {
           "factor": "Rising Trend",
@@ -39,10 +39,10 @@
         {
           "factor": "Risk Score",
           "icon": "\ud83d\udfe2",
-          "value": "11/100",
+          "value": "31/100",
           "impact": "LOW",
           "detail": "Risk score within acceptable range",
-          "weight": 11.2488
+          "weight": 30.515
         }
       ],
       "total_factors": 2,
@@ -96,17 +96,49 @@
       "severity": "HIGH",
       "description": "Elevated red-light violation count indicates intersection compliance failure.",
       "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
-    },
-    {
-      "id": "BASELINE_MONITORING",
-      "name": "Routine Monitoring",
-      "icon": "\ud83d\udcca",
-      "severity": "LOW",
-      "description": "Zone currently within acceptable risk parameters.",
-      "action": "Continue routine monitoring. No immediate intervention required."
     }
   ],
-  "executive_briefing": "Adyar is within safe operating parameters (11% risk). Enforcement focus needed \u2014 9 red-light violations recorded. Optimizing signals could save 166 kg CO2/week, equivalent to 412 trees/year.",
+  "executive_briefing": "Zone_41 is within safe operating parameters (31% risk). Enforcement focus needed \u2014 9 red-light violations recorded. Optimizing signals could save 166 kg CO2/week, equivalent to 412 trees/year.",
+  "civilian_road_safety_radar": {
+    "current_week": {
+      "week": 10,
+      "risk_score": 30.5,
+      "risk_percentage": "31%",
+      "risk_badge": "LOW RISK",
+      "risk_color": "#22c55e",
+      "description": "Corridor operating within normal baseline.",
+      "crashes_reported": 0
+    },
+    "why_accidents_might_happen": {
+      "primary_collision_cause": {
+        "title": "Congestion Bottleneck & Merge Conflicts",
+        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+      },
+      "behavior_factor": {
+        "title": "Tailgating & Speed Variance",
+        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+      },
+      "street_environment": {
+        "zone_type": "Highway_Junction",
+        "average_speed_kmh": 62.58,
+        "congestion_level": 11.17
+      }
+    },
+    "civilian_safety_guide": {
+      "for_drivers": {
+        "action": "Increase Following Distance",
+        "details": "Maintain 3 car lengths buffer during peak rush hours."
+      },
+      "for_pedestrians_and_cyclists": {
+        "action": "Double-Check Turning Vehicles",
+        "details": "Make eye contact with turning drivers at intersections before crossing."
+      },
+      "peak_danger_windows": {
+        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
+        "details": "Congestion peaks during evening travel windows."
+      }
+    }
+  },
   "raw_metrics": {
     "zone_id": "Zone_41",
     "week": 10,
@@ -153,18 +185,29 @@
     "vehicle_density_trend_4w": 0.905,
     "speed_trend_4w": -1.848,
     "incident_trend_4w": 0.0,
-    "location_name": "Adyar",
-    "city": "Chennai",
-    "latitude": 13.0063,
-    "longitude": 80.2574,
-    "predicted_risk_probability": 0.1125,
-    "risk_score": 11.2488,
+    "location_name_x": "Adyar",
+    "city_x": "Chennai",
+    "latitude_x": 13.0063,
+    "longitude_x": 80.2574,
+    "car_percentage": 47.3,
+    "motorcycle_percentage": 39.9,
+    "bus_percentage": 9.1,
+    "truck_percentage": 3.7,
+    "moving_vehicle_percentage": 86.1,
+    "slow_vehicle_percentage": 15.7,
+    "stopped_vehicle_percentage": 0.0,
+    "location_name_y": "Adyar",
+    "city_y": "Chennai",
+    "latitude_y": 13.0063,
+    "longitude_y": 80.2574,
+    "predicted_risk_probability": 0.3052,
+    "risk_score": 30.515,
     "population_exposure_score": 8.5351,
     "vehicle_exposure_score": 20.8578,
     "temporal_trend_score": 63.5672,
-    "priority_score": 20.3399,
-    "priority_rank": 44,
+    "priority_score": 28.0464,
+    "priority_rank": 39,
     "priority_level": "LOW",
-    "risk_prob": 0.1125
+    "risk_prob": 0.3052
   }
 }

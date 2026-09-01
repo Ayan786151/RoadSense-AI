@@ -131,7 +131,11 @@ The system operates across three interconnected operational pipelines:
      ├─► 01. SIMULATION & RISK ENGINE (52-week zone explorer, ML test lab, LLM brief)
      ├─► 02. LIVE CCTV SURVEILLANCE (telemetry graphs, homography overlays, speed ledger)
      ├─► 03. COMPUTER VISION STUDIO (live video processor, violation alerts, e-challans)
-     └─► 04. GEOSPATIAL INCIDENT RADAR (Mapbox city heatmap, risk density radar)
+     ├─► 04. GEOSPATIAL INCIDENT RADAR (Mapbox city heatmap, risk density radar)
+     ├─► 05. RISK FACTOR WEIGHTAGE & HIERARCHY (Intervention weights and hierarchy)
+     ├─► 06. 30-DAY CROSSROAD TRANSFORMATION (Interactive before/after animation)
+     ├─► 07. AREA PREDICTION & TRAJECTORY INTELLIGENCE (City-wide trajectory classification)
+     └─► 08. 4-WEEK ROLLING ML & REINFORCEMENT LAB (4-week feeder, 5th-week risk inference, positive/negative reinforcement scoring)
 
 ================================================================================
 3. COMPLETE DIRECTORY & CODEBASE MAP
@@ -155,11 +159,14 @@ traffic_sim/
 │   ├── simulation_dashboard.py     # 52-Week analytics, ML model card & LLM executive brief
 │   ├── vision_studio.py            # Live video processing studio with YouTube stream support
 │   ├── city_map.py                 # Geospatial Mapbox risk radar & congestion contours
+│   ├── area_prediction.py          # City-wide zone trajectory intelligence
+│   ├── reinforcement_lab.py        # 4-Week feeder -> 5th-week prediction & RL learning lab
 │   └── api_pusher.py               # Static JSON REST API generator (/api/v1/)
 │
 ├── data/                           # Data storage directory
 │   ├── simulation_temporal_features.csv  # 2,600-row engineered temporal dataset
 │   ├── risk_predictions.csv        # ML model risk outputs across test weeks
+│   ├── reinforcement_evaluation.csv# Step-by-step 5th-week prediction & RL rewards log
 │   ├── final_priority_results.csv  # Composite priority scores and intervention triggers
 │   ├── location_mapping.csv        # Real Indian city coordinates (Bengaluru, Mumbai, Delhi)
 │   ├── calibration_config.json     # 4-point perspective homography ground-plane coordinates
@@ -172,6 +179,7 @@ traffic_sim/
 │
 ├── models/                         # Machine learning model artifacts & training
 │   ├── train_model.py              # ML risk model trainer (Random Forest & Logistic Regression)
+│   ├── reinforcement_engine.py     # 4-Week feeder -> 5th-week ML risk forecaster & RL engine
 │   ├── best_risk_model.pkl         # Serialized scikit-learn pipeline artifact
 │   └── MODEL_CARD.md               # Standardized ML model card & ethical disclosure
 │
@@ -458,6 +466,19 @@ traffic_sim/
     * Supports local MP4 video uploads and direct YouTube stream ingestion via `yt-dlp`.
     * Real-time video processing with bounding boxes, vehicle classifications, and speed overlays.
     * Violation Inspector: displays detected infractions with direct links to view generated E-Challan tickets.
+
+• dashboard/reinforcement_lab.py
+  - Purpose: Interactive 4-Week Rolling Input to 5th-Week ML Risk Predictor & Reinforcement Feedback Lab.
+  - Features:
+    * Step Inspector: Select any zone and 4-week feeder window (e.g. Weeks 1-4 -> Week 5; Weeks 12-15 -> Week 16).
+    * Side-by-side Scorecard: ML Predicted Incident Risk Probability vs Actual 5th-Week Ground Truth.
+    * Positive & Negative Reinforcement Signal Meter:
+      - Positive Reinforcement (+R): Rewards True Positives (+10.0 pts for hazard foresight) and True Negatives (+5.0 pts for safe zone confirmation).
+      - Negative Reinforcement (-P): Penalizes False Negatives (-15.0 pts for missed collisions) and False Positives (-5.0 pts for false alarms).
+      - Probability Calibration Score: Continuous reward/penalty (+/- 5.0 pts) based on Brier distance.
+    * Walk-Forward Multi-Month Benchmark: Evaluates all 2,400 sequential 5th-week instances (Weeks 5 to 52 across 50 zones).
+    * Cumulative Reward Curve (\\sum R_t), Rolling Accuracy Trajectory (%), and Monthly Continual Learning Progress.
+    * Custom Database Evaluator: Drag-and-drop ingestion to run the 4-week -> 5th-week RL pipeline on any external CSV.
 
 • dashboard/city_map.py
   - Purpose: Geospatial command radar displaying the 50 municipal zones on an interactive 

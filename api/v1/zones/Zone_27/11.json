@@ -1,40 +1,40 @@
 {
   "zone_id": "Zone_27",
-  "location_name": "Gomti Nagar",
-  "city": "Lucknow",
+  "location_name": "Zone_27",
+  "city": "",
   "zone_type": "Suburban_LowDensity",
   "week": 11,
-  "latitude": 26.8467,
-  "longitude": 81.0078,
+  "latitude": 0.0,
+  "longitude": 0.0,
   "risk_analysis": {
-    "predicted_risk_probability": 0.2392,
-    "predicted_risk_percentage": 23.92,
+    "predicted_risk_probability": 0.2589,
+    "predicted_risk_percentage": 25.89,
     "risk_label": "LOW RISK",
     "risk_color": "#22c55e",
-    "risk_delta_vs_prev_week": 8.7743,
+    "risk_delta_vs_prev_week": -0.0052,
     "actual_incident": 1
   },
   "priority": {
-    "priority_score": 25.5167,
-    "priority_rank": 33,
+    "priority_score": 26.3034,
+    "priority_rank": 35,
     "priority_level": "LOW",
     "components": {
-      "risk_score": 23.9222,
+      "risk_score": 25.889,
       "population_exposure_score": 21.5245,
       "vehicle_exposure_score": 16.6956,
       "temporal_trend_score": 48.1839
     },
     "explanation": {
       "priority_level": "LOW",
-      "priority_score": 25.5,
+      "priority_score": 26.3,
       "top_contributors": [
         {
           "factor": "Risk Score",
           "icon": "\ud83d\udfe2",
-          "value": "24/100",
+          "value": "26/100",
           "impact": "LOW",
           "detail": "Risk score within acceptable range",
-          "weight": 23.9222
+          "weight": 25.889
         }
       ],
       "total_factors": 1,
@@ -90,7 +90,47 @@
       "action": "Continue routine monitoring. No immediate intervention required."
     }
   ],
-  "executive_briefing": "Gomti Nagar is within safe operating parameters (24% risk). Continue routine monitoring. Optimizing signals could save 86 kg CO2/week, equivalent to 213 trees/year.",
+  "executive_briefing": "Zone_27 is within safe operating parameters (26% risk). Continue routine monitoring. Optimizing signals could save 86 kg CO2/week, equivalent to 213 trees/year.",
+  "civilian_road_safety_radar": {
+    "current_week": {
+      "week": 11,
+      "risk_score": 25.9,
+      "risk_percentage": "26%",
+      "risk_badge": "LOW RISK",
+      "risk_color": "#22c55e",
+      "description": "Corridor operating within normal baseline.",
+      "crashes_reported": 0
+    },
+    "why_accidents_might_happen": {
+      "primary_collision_cause": {
+        "title": "Congestion Bottleneck & Merge Conflicts",
+        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+      },
+      "behavior_factor": {
+        "title": "Tailgating & Speed Variance",
+        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+      },
+      "street_environment": {
+        "zone_type": "Suburban_LowDensity",
+        "average_speed_kmh": 63.78,
+        "congestion_level": 7.12
+      }
+    },
+    "civilian_safety_guide": {
+      "for_drivers": {
+        "action": "Increase Following Distance",
+        "details": "Maintain 3 car lengths buffer during peak rush hours."
+      },
+      "for_pedestrians_and_cyclists": {
+        "action": "Double-Check Turning Vehicles",
+        "details": "Make eye contact with turning drivers at intersections before crossing."
+      },
+      "peak_danger_windows": {
+        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
+        "details": "Congestion peaks during evening travel windows."
+      }
+    }
+  },
   "raw_metrics": {
     "zone_id": "Zone_27",
     "week": 11,
@@ -137,18 +177,29 @@
     "vehicle_density_trend_4w": 0.226,
     "speed_trend_4w": 0.359,
     "incident_trend_4w": 0.0,
-    "location_name": "Gomti Nagar",
-    "city": "Lucknow",
-    "latitude": 26.8467,
-    "longitude": 81.0078,
-    "predicted_risk_probability": 0.2392,
-    "risk_score": 23.9222,
+    "location_name_x": "Gomti Nagar",
+    "city_x": "Lucknow",
+    "latitude_x": 26.8467,
+    "longitude_x": 81.0078,
+    "car_percentage": 47.5,
+    "motorcycle_percentage": 37.8,
+    "bus_percentage": 9.2,
+    "truck_percentage": 5.5,
+    "moving_vehicle_percentage": 73.9,
+    "slow_vehicle_percentage": 9.6,
+    "stopped_vehicle_percentage": 16.5,
+    "location_name_y": "Gomti Nagar",
+    "city_y": "Lucknow",
+    "latitude_y": 26.8467,
+    "longitude_y": 81.0078,
+    "predicted_risk_probability": 0.2589,
+    "risk_score": 25.889,
     "population_exposure_score": 21.5245,
     "vehicle_exposure_score": 16.6956,
     "temporal_trend_score": 48.1839,
-    "priority_score": 25.5167,
-    "priority_rank": 33,
+    "priority_score": 26.3034,
+    "priority_rank": 35,
     "priority_level": "LOW",
-    "risk_prob": 0.2392
+    "risk_prob": 0.2589
   }
 }

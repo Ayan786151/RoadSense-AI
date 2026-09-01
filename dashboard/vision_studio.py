@@ -179,7 +179,7 @@ def render_vision_studio():
                 selected_video = st.selectbox(
                     "SELECT INPUT VIDEO",
                     vid_options,
-                    format_func=lambda p: f"📹 {os.path.basename(p)} ({os.path.getsize(p)/(1024*1024):.1f} MB)" if os.path.exists(p) else p,
+                    format_func=lambda p: f" {os.path.basename(p)} ({os.path.getsize(p)/(1024*1024):.1f} MB)" if os.path.exists(p) else p,
                     index=0
                 )
                 

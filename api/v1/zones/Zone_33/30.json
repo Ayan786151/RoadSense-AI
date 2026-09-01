@@ -1,32 +1,32 @@
 {
   "zone_id": "Zone_33",
-  "location_name": "Aminabad",
-  "city": "Lucknow",
+  "location_name": "Zone_33",
+  "city": "",
   "zone_type": "Commercial_Downtown",
   "week": 30,
-  "latitude": 26.8465,
-  "longitude": 80.94,
+  "latitude": 0.0,
+  "longitude": 0.0,
   "risk_analysis": {
-    "predicted_risk_probability": 0.5902,
-    "predicted_risk_percentage": 59.02,
-    "risk_label": "HIGH RISK",
-    "risk_color": "#f97316",
-    "risk_delta_vs_prev_week": -16.6457,
+    "predicted_risk_probability": 0.5436,
+    "predicted_risk_percentage": 54.36,
+    "risk_label": "MODERATE RISK",
+    "risk_color": "#eab308",
+    "risk_delta_vs_prev_week": -3.8856,
     "actual_incident": 0
   },
   "priority": {
-    "priority_score": 51.8178,
-    "priority_rank": 20,
+    "priority_score": 49.9526,
+    "priority_rank": 23,
     "priority_level": "MODERATE",
     "components": {
-      "risk_score": 59.0212,
+      "risk_score": 54.3582,
       "population_exposure_score": 40.1178,
       "vehicle_exposure_score": 76.1641,
       "temporal_trend_score": 19.6468
     },
     "explanation": {
       "priority_level": "MODERATE",
-      "priority_score": 51.8,
+      "priority_score": 50.0,
       "top_contributors": [
         {
           "factor": "Vehicle Density",
@@ -39,10 +39,10 @@
         {
           "factor": "Risk Score",
           "icon": "\ud83d\udfe1",
-          "value": "59/100",
+          "value": "54/100",
           "impact": "MEDIUM",
           "detail": "Moderate model-estimated risk",
-          "weight": 59.0212
+          "weight": 54.3582
         },
         {
           "factor": "Congestion",
@@ -122,7 +122,47 @@
       "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
     }
   ],
-  "executive_briefing": "Aminabad shows elevated risk at 59%. Enforcement focus needed \u2014 9 red-light violations recorded. Optimizing signals could save 3282 kg CO2/week, equivalent to 8126 trees/year.",
+  "executive_briefing": "Zone_33 shows elevated risk at 54%. Enforcement focus needed \u2014 9 red-light violations recorded. Optimizing signals could save 3282 kg CO2/week, equivalent to 8126 trees/year.",
+  "civilian_road_safety_radar": {
+    "current_week": {
+      "week": 30,
+      "risk_score": 54.4,
+      "risk_percentage": "54%",
+      "risk_badge": "MODERATE RISK",
+      "risk_color": "#eab308",
+      "description": "Corridor operating within normal baseline.",
+      "crashes_reported": 0
+    },
+    "why_accidents_might_happen": {
+      "primary_collision_cause": {
+        "title": "Congestion Bottleneck & Merge Conflicts",
+        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+      },
+      "behavior_factor": {
+        "title": "Tailgating & Speed Variance",
+        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+      },
+      "street_environment": {
+        "zone_type": "Commercial_Downtown",
+        "average_speed_kmh": 53.61,
+        "congestion_level": 46.15
+      }
+    },
+    "civilian_safety_guide": {
+      "for_drivers": {
+        "action": "Increase Following Distance",
+        "details": "Maintain 3 car lengths buffer during peak rush hours."
+      },
+      "for_pedestrians_and_cyclists": {
+        "action": "Double-Check Turning Vehicles",
+        "details": "Make eye contact with turning drivers at intersections before crossing."
+      },
+      "peak_danger_windows": {
+        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
+        "details": "Congestion peaks during evening travel windows."
+      }
+    }
+  },
   "raw_metrics": {
     "zone_id": "Zone_33",
     "week": 30,
@@ -169,18 +209,29 @@
     "vehicle_density_trend_4w": -2.215,
     "speed_trend_4w": 3.03,
     "incident_trend_4w": 0.2,
-    "location_name": "Aminabad",
-    "city": "Lucknow",
-    "latitude": 26.8465,
-    "longitude": 80.94,
-    "predicted_risk_probability": 0.5902,
-    "risk_score": 59.0212,
+    "location_name_x": "Aminabad",
+    "city_x": "Lucknow",
+    "latitude_x": 26.8465,
+    "longitude_x": 80.94,
+    "car_percentage": 43.4,
+    "motorcycle_percentage": 40.8,
+    "bus_percentage": 8.0,
+    "truck_percentage": 7.8,
+    "moving_vehicle_percentage": 48.1,
+    "slow_vehicle_percentage": 37.2,
+    "stopped_vehicle_percentage": 14.7,
+    "location_name_y": "Aminabad",
+    "city_y": "Lucknow",
+    "latitude_y": 26.8465,
+    "longitude_y": 80.94,
+    "predicted_risk_probability": 0.5436,
+    "risk_score": 54.3582,
     "population_exposure_score": 40.1178,
     "vehicle_exposure_score": 76.1641,
     "temporal_trend_score": 19.6468,
-    "priority_score": 51.8178,
-    "priority_rank": 20,
+    "priority_score": 49.9526,
+    "priority_rank": 23,
     "priority_level": "MODERATE",
-    "risk_prob": 0.5902
+    "risk_prob": 0.5436
   }
 }

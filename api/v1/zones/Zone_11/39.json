@@ -1,32 +1,32 @@
 {
   "zone_id": "Zone_11",
-  "location_name": "Lower Parel",
-  "city": "Mumbai",
+  "location_name": "Zone_11",
+  "city": "",
   "zone_type": "Residential",
   "week": 39,
-  "latitude": 18.9988,
-  "longitude": 72.8258,
+  "latitude": 0.0,
+  "longitude": 0.0,
   "risk_analysis": {
-    "predicted_risk_probability": 0.3796,
-    "predicted_risk_percentage": 37.96,
+    "predicted_risk_probability": 0.4289,
+    "predicted_risk_percentage": 42.89,
     "risk_label": "MODERATE RISK",
     "risk_color": "#eab308",
-    "risk_delta_vs_prev_week": -16.9505,
+    "risk_delta_vs_prev_week": -4.8684,
     "actual_incident": 0
   },
   "priority": {
-    "priority_score": 39.3377,
-    "priority_rank": 28,
+    "priority_score": 41.3081,
+    "priority_rank": 29,
     "priority_level": "MODERATE",
     "components": {
-      "risk_score": 37.9608,
+      "risk_score": 42.8867,
       "population_exposure_score": 61.7429,
       "vehicle_exposure_score": 32.3151,
       "temporal_trend_score": 15.031
     },
     "explanation": {
       "priority_level": "MODERATE",
-      "priority_score": 39.3,
+      "priority_score": 41.3,
       "top_contributors": [
         {
           "factor": "Population Exposure",
@@ -38,11 +38,11 @@
         },
         {
           "factor": "Risk Score",
-          "icon": "\ud83d\udfe2",
-          "value": "38/100",
-          "impact": "LOW",
-          "detail": "Risk score within acceptable range",
-          "weight": 37.9608
+          "icon": "\ud83d\udfe1",
+          "value": "43/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 42.8867
         },
         {
           "factor": "Improving Trend",
@@ -54,7 +54,7 @@
         }
       ],
       "total_factors": 3,
-      "assessment": "This zone has moderate risk levels with contributing factors: Population Exposure. Continue monitoring and schedule review if conditions worsen."
+      "assessment": "This zone has moderate risk levels with contributing factors: Population Exposure, Risk Score. Continue monitoring and schedule review if conditions worsen."
     }
   },
   "telemetry": {
@@ -106,7 +106,47 @@
       "action": "Continue routine monitoring."
     }
   ],
-  "executive_briefing": "Lower Parel shows elevated risk at 38%. Continue routine monitoring. Optimizing signals could save 955 kg CO2/week, equivalent to 2365 trees/year.",
+  "executive_briefing": "Zone_11 shows elevated risk at 43%. Continue routine monitoring. Optimizing signals could save 955 kg CO2/week, equivalent to 2365 trees/year.",
+  "civilian_road_safety_radar": {
+    "current_week": {
+      "week": 39,
+      "risk_score": 42.9,
+      "risk_percentage": "43%",
+      "risk_badge": "MODERATE RISK",
+      "risk_color": "#eab308",
+      "description": "Corridor operating within normal baseline.",
+      "crashes_reported": 0
+    },
+    "why_accidents_might_happen": {
+      "primary_collision_cause": {
+        "title": "Congestion Bottleneck & Merge Conflicts",
+        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+      },
+      "behavior_factor": {
+        "title": "Tailgating & Speed Variance",
+        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+      },
+      "street_environment": {
+        "zone_type": "Residential",
+        "average_speed_kmh": 58.61,
+        "congestion_level": 28.82
+      }
+    },
+    "civilian_safety_guide": {
+      "for_drivers": {
+        "action": "Increase Following Distance",
+        "details": "Maintain 3 car lengths buffer during peak rush hours."
+      },
+      "for_pedestrians_and_cyclists": {
+        "action": "Double-Check Turning Vehicles",
+        "details": "Make eye contact with turning drivers at intersections before crossing."
+      },
+      "peak_danger_windows": {
+        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
+        "details": "Congestion peaks during evening travel windows."
+      }
+    }
+  },
   "raw_metrics": {
     "zone_id": "Zone_11",
     "week": 39,
@@ -153,18 +193,29 @@
     "vehicle_density_trend_4w": -3.164,
     "speed_trend_4w": 12.866,
     "incident_trend_4w": 0.0,
-    "location_name": "Lower Parel",
-    "city": "Mumbai",
-    "latitude": 18.9988,
-    "longitude": 72.8258,
-    "predicted_risk_probability": 0.3796,
-    "risk_score": 37.9608,
+    "location_name_x": "Lower Parel",
+    "city_x": "Mumbai",
+    "latitude_x": 18.9988,
+    "longitude_x": 72.8258,
+    "car_percentage": 30.3,
+    "motorcycle_percentage": 60.6,
+    "bus_percentage": 3.1,
+    "truck_percentage": 6.1,
+    "moving_vehicle_percentage": 86.3,
+    "slow_vehicle_percentage": 8.1,
+    "stopped_vehicle_percentage": 5.7,
+    "location_name_y": "Lower Parel",
+    "city_y": "Mumbai",
+    "latitude_y": 18.9988,
+    "longitude_y": 72.8258,
+    "predicted_risk_probability": 0.4289,
+    "risk_score": 42.8867,
     "population_exposure_score": 61.7429,
     "vehicle_exposure_score": 32.3151,
     "temporal_trend_score": 15.031,
-    "priority_score": 39.3377,
-    "priority_rank": 28,
+    "priority_score": 41.3081,
+    "priority_rank": 29,
     "priority_level": "MODERATE",
-    "risk_prob": 0.3796
+    "risk_prob": 0.4289
   }
 }

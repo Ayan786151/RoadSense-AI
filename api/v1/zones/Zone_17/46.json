@@ -1,32 +1,32 @@
 {
   "zone_id": "Zone_17",
-  "location_name": "Saket",
-  "city": "Delhi",
+  "location_name": "Zone_17",
+  "city": "",
   "zone_type": "Residential",
   "week": 46,
-  "latitude": 28.5244,
-  "longitude": 77.2066,
+  "latitude": 0.0,
+  "longitude": 0.0,
   "risk_analysis": {
-    "predicted_risk_probability": 0.2287,
-    "predicted_risk_percentage": 22.87,
+    "predicted_risk_probability": 0.2737,
+    "predicted_risk_percentage": 27.37,
     "risk_label": "LOW RISK",
     "risk_color": "#22c55e",
-    "risk_delta_vs_prev_week": 1.4582,
+    "risk_delta_vs_prev_week": -5.0139,
     "actual_incident": 0
   },
   "priority": {
-    "priority_score": 25.821,
-    "priority_rank": 34,
+    "priority_score": 27.6222,
+    "priority_rank": 35,
     "priority_level": "LOW",
     "components": {
-      "risk_score": 22.8672,
+      "risk_score": 27.3703,
       "population_exposure_score": 48.1572,
       "vehicle_exposure_score": 23.1741,
       "temporal_trend_score": 0.0
     },
     "explanation": {
       "priority_level": "LOW",
-      "priority_score": 25.8,
+      "priority_score": 27.6,
       "top_contributors": [
         {
           "factor": "Population Exposure",
@@ -39,10 +39,10 @@
         {
           "factor": "Risk Score",
           "icon": "\ud83d\udfe2",
-          "value": "23/100",
+          "value": "27/100",
           "impact": "LOW",
           "detail": "Risk score within acceptable range",
-          "weight": 22.8672
+          "weight": 27.3703
         },
         {
           "factor": "Improving Trend",
@@ -106,7 +106,47 @@
       "action": "Continue routine monitoring. No immediate intervention required."
     }
   ],
-  "executive_briefing": "Saket is within safe operating parameters (23% risk). Continue routine monitoring. Optimizing signals could save 414 kg CO2/week, equivalent to 1023 trees/year.",
+  "executive_briefing": "Zone_17 is within safe operating parameters (27% risk). Continue routine monitoring. Optimizing signals could save 414 kg CO2/week, equivalent to 1023 trees/year.",
+  "civilian_road_safety_radar": {
+    "current_week": {
+      "week": 46,
+      "risk_score": 27.4,
+      "risk_percentage": "27%",
+      "risk_badge": "LOW RISK",
+      "risk_color": "#22c55e",
+      "description": "Corridor operating within normal baseline.",
+      "crashes_reported": 0
+    },
+    "why_accidents_might_happen": {
+      "primary_collision_cause": {
+        "title": "Congestion Bottleneck & Merge Conflicts",
+        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+      },
+      "behavior_factor": {
+        "title": "Tailgating & Speed Variance",
+        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+      },
+      "street_environment": {
+        "zone_type": "Residential",
+        "average_speed_kmh": 61.38,
+        "congestion_level": 18.5
+      }
+    },
+    "civilian_safety_guide": {
+      "for_drivers": {
+        "action": "Increase Following Distance",
+        "details": "Maintain 3 car lengths buffer during peak rush hours."
+      },
+      "for_pedestrians_and_cyclists": {
+        "action": "Double-Check Turning Vehicles",
+        "details": "Make eye contact with turning drivers at intersections before crossing."
+      },
+      "peak_danger_windows": {
+        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
+        "details": "Congestion peaks during evening travel windows."
+      }
+    }
+  },
   "raw_metrics": {
     "zone_id": "Zone_17",
     "week": 46,
@@ -153,18 +193,29 @@
     "vehicle_density_trend_4w": -3.421,
     "speed_trend_4w": 1.537,
     "incident_trend_4w": 0.0,
-    "location_name": "Saket",
-    "city": "Delhi",
-    "latitude": 28.5244,
-    "longitude": 77.2066,
-    "predicted_risk_probability": 0.2287,
-    "risk_score": 22.8672,
+    "location_name_x": "Saket",
+    "city_x": "Delhi",
+    "latitude_x": 28.5244,
+    "longitude_x": 77.2066,
+    "car_percentage": 34.9,
+    "motorcycle_percentage": 54.1,
+    "bus_percentage": 9.0,
+    "truck_percentage": 2.0,
+    "moving_vehicle_percentage": 71.4,
+    "slow_vehicle_percentage": 19.3,
+    "stopped_vehicle_percentage": 9.2,
+    "location_name_y": "Saket",
+    "city_y": "Delhi",
+    "latitude_y": 28.5244,
+    "longitude_y": 77.2066,
+    "predicted_risk_probability": 0.2737,
+    "risk_score": 27.3703,
     "population_exposure_score": 48.1572,
     "vehicle_exposure_score": 23.1741,
     "temporal_trend_score": 0.0,
-    "priority_score": 25.821,
-    "priority_rank": 34,
+    "priority_score": 27.6222,
+    "priority_rank": 35,
     "priority_level": "LOW",
-    "risk_prob": 0.2287
+    "risk_prob": 0.2737
   }
 }

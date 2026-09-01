@@ -1,32 +1,32 @@
 {
   "zone_id": "Zone_15",
-  "location_name": "Dwarka",
-  "city": "Delhi",
+  "location_name": "Zone_15",
+  "city": "",
   "zone_type": "Residential",
   "week": 27,
-  "latitude": 28.5921,
-  "longitude": 77.046,
+  "latitude": 0.0,
+  "longitude": 0.0,
   "risk_analysis": {
-    "predicted_risk_probability": 0.3803,
-    "predicted_risk_percentage": 38.03,
+    "predicted_risk_probability": 0.4712,
+    "predicted_risk_percentage": 47.12,
     "risk_label": "MODERATE RISK",
     "risk_color": "#eab308",
-    "risk_delta_vs_prev_week": -0.6704,
+    "risk_delta_vs_prev_week": 3.2155,
     "actual_incident": 0
   },
   "priority": {
-    "priority_score": 66.2074,
-    "priority_rank": 8,
+    "priority_score": 69.8443,
+    "priority_rank": 7,
     "priority_level": "HIGH",
     "components": {
-      "risk_score": 38.0284,
+      "risk_score": 47.1206,
       "population_exposure_score": 97.0041,
       "vehicle_exposure_score": 89.5513,
       "temporal_trend_score": 58.8982
     },
     "explanation": {
       "priority_level": "HIGH",
-      "priority_score": 66.2,
+      "priority_score": 69.8,
       "top_contributors": [
         {
           "factor": "Population Exposure",
@@ -46,11 +46,11 @@
         },
         {
           "factor": "Risk Score",
-          "icon": "\ud83d\udfe2",
-          "value": "38/100",
-          "impact": "LOW",
-          "detail": "Risk score within acceptable range",
-          "weight": 38.0284
+          "icon": "\ud83d\udfe1",
+          "value": "47/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 47.1206
         },
         {
           "factor": "Rising Trend",
@@ -122,7 +122,47 @@
       "action": "Continue routine monitoring."
     }
   ],
-  "executive_briefing": "Dwarka shows elevated risk at 38%. Continue routine monitoring. Optimizing signals could save 3917 kg CO2/week, equivalent to 9698 trees/year.",
+  "executive_briefing": "Zone_15 shows elevated risk at 47%. Continue routine monitoring. Optimizing signals could save 3917 kg CO2/week, equivalent to 9698 trees/year.",
+  "civilian_road_safety_radar": {
+    "current_week": {
+      "week": 27,
+      "risk_score": 47.1,
+      "risk_percentage": "47%",
+      "risk_badge": "MODERATE RISK",
+      "risk_color": "#eab308",
+      "description": "Corridor operating within normal baseline.",
+      "crashes_reported": 0
+    },
+    "why_accidents_might_happen": {
+      "primary_collision_cause": {
+        "title": "Congestion Bottleneck & Merge Conflicts",
+        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+      },
+      "behavior_factor": {
+        "title": "Tailgating & Speed Variance",
+        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+      },
+      "street_environment": {
+        "zone_type": "Residential",
+        "average_speed_kmh": 54.93,
+        "congestion_level": 44.36
+      }
+    },
+    "civilian_safety_guide": {
+      "for_drivers": {
+        "action": "Increase Following Distance",
+        "details": "Maintain 3 car lengths buffer during peak rush hours."
+      },
+      "for_pedestrians_and_cyclists": {
+        "action": "Double-Check Turning Vehicles",
+        "details": "Make eye contact with turning drivers at intersections before crossing."
+      },
+      "peak_danger_windows": {
+        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
+        "details": "Congestion peaks during evening travel windows."
+      }
+    }
+  },
   "raw_metrics": {
     "zone_id": "Zone_15",
     "week": 27,
@@ -169,18 +209,29 @@
     "vehicle_density_trend_4w": 3.538,
     "speed_trend_4w": -1.819,
     "incident_trend_4w": 0.0,
-    "location_name": "Dwarka",
-    "city": "Delhi",
-    "latitude": 28.5921,
-    "longitude": 77.046,
-    "predicted_risk_probability": 0.3803,
-    "risk_score": 38.0284,
+    "location_name_x": "Dwarka",
+    "city_x": "Delhi",
+    "latitude_x": 28.5921,
+    "longitude_x": 77.046,
+    "car_percentage": 33.8,
+    "motorcycle_percentage": 54.7,
+    "bus_percentage": 5.5,
+    "truck_percentage": 6.0,
+    "moving_vehicle_percentage": 58.9,
+    "slow_vehicle_percentage": 32.4,
+    "stopped_vehicle_percentage": 8.7,
+    "location_name_y": "Dwarka",
+    "city_y": "Delhi",
+    "latitude_y": 28.5921,
+    "longitude_y": 77.046,
+    "predicted_risk_probability": 0.4712,
+    "risk_score": 47.1206,
     "population_exposure_score": 97.0041,
     "vehicle_exposure_score": 89.5513,
     "temporal_trend_score": 58.8982,
-    "priority_score": 66.2074,
-    "priority_rank": 8,
+    "priority_score": 69.8443,
+    "priority_rank": 7,
     "priority_level": "HIGH",
-    "risk_prob": 0.3803
+    "risk_prob": 0.4712
   }
 }

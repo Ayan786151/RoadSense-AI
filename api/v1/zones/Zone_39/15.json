@@ -1,40 +1,40 @@
 {
   "zone_id": "Zone_39",
-  "location_name": "Anna Nagar",
-  "city": "Chennai",
+  "location_name": "Zone_39",
+  "city": "",
   "zone_type": "Industrial_Corridor",
   "week": 15,
-  "latitude": 13.085,
-  "longitude": 80.2101,
+  "latitude": 0.0,
+  "longitude": 0.0,
   "risk_analysis": {
-    "predicted_risk_probability": 0.1637,
-    "predicted_risk_percentage": 16.37,
+    "predicted_risk_probability": 0.2707,
+    "predicted_risk_percentage": 27.07,
     "risk_label": "LOW RISK",
     "risk_color": "#22c55e",
-    "risk_delta_vs_prev_week": 1.994,
+    "risk_delta_vs_prev_week": 0.2633,
     "actual_incident": 0
   },
   "priority": {
-    "priority_score": 19.1068,
-    "priority_rank": 45,
+    "priority_score": 23.3872,
+    "priority_rank": 46,
     "priority_level": "LOW",
     "components": {
-      "risk_score": 16.3678,
+      "risk_score": 27.0689,
       "population_exposure_score": 8.6572,
       "vehicle_exposure_score": 13.1985,
       "temporal_trend_score": 51.7044
     },
     "explanation": {
       "priority_level": "LOW",
-      "priority_score": 19.1,
+      "priority_score": 23.4,
       "top_contributors": [
         {
           "factor": "Risk Score",
           "icon": "\ud83d\udfe2",
-          "value": "16/100",
+          "value": "27/100",
           "impact": "LOW",
           "detail": "Risk score within acceptable range",
-          "weight": 16.3678
+          "weight": 27.0689
         }
       ],
       "total_factors": 1,
@@ -90,7 +90,47 @@
       "action": "Continue routine monitoring. No immediate intervention required."
     }
   ],
-  "executive_briefing": "Anna Nagar is within safe operating parameters (16% risk). Continue routine monitoring. Optimizing signals could save 222 kg CO2/week, equivalent to 549 trees/year.",
+  "executive_briefing": "Zone_39 is within safe operating parameters (27% risk). Continue routine monitoring. Optimizing signals could save 222 kg CO2/week, equivalent to 549 trees/year.",
+  "civilian_road_safety_radar": {
+    "current_week": {
+      "week": 15,
+      "risk_score": 27.1,
+      "risk_percentage": "27%",
+      "risk_badge": "LOW RISK",
+      "risk_color": "#22c55e",
+      "description": "Corridor operating within normal baseline.",
+      "crashes_reported": 0
+    },
+    "why_accidents_might_happen": {
+      "primary_collision_cause": {
+        "title": "Congestion Bottleneck & Merge Conflicts",
+        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+      },
+      "behavior_factor": {
+        "title": "Tailgating & Speed Variance",
+        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+      },
+      "street_environment": {
+        "zone_type": "Industrial_Corridor",
+        "average_speed_kmh": 61.95,
+        "congestion_level": 15.96
+      }
+    },
+    "civilian_safety_guide": {
+      "for_drivers": {
+        "action": "Increase Following Distance",
+        "details": "Maintain 3 car lengths buffer during peak rush hours."
+      },
+      "for_pedestrians_and_cyclists": {
+        "action": "Double-Check Turning Vehicles",
+        "details": "Make eye contact with turning drivers at intersections before crossing."
+      },
+      "peak_danger_windows": {
+        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
+        "details": "Congestion peaks during evening travel windows."
+      }
+    }
+  },
   "raw_metrics": {
     "zone_id": "Zone_39",
     "week": 15,
@@ -137,18 +177,29 @@
     "vehicle_density_trend_4w": -1.307,
     "speed_trend_4w": 1.675,
     "incident_trend_4w": 0.0,
-    "location_name": "Anna Nagar",
-    "city": "Chennai",
-    "latitude": 13.085,
-    "longitude": 80.2101,
-    "predicted_risk_probability": 0.1637,
-    "risk_score": 16.3678,
+    "location_name_x": "Anna Nagar",
+    "city_x": "Chennai",
+    "latitude_x": 13.085,
+    "longitude_x": 80.2101,
+    "car_percentage": 42.4,
+    "motorcycle_percentage": 43.1,
+    "bus_percentage": 7.9,
+    "truck_percentage": 6.7,
+    "moving_vehicle_percentage": 81.0,
+    "slow_vehicle_percentage": 15.6,
+    "stopped_vehicle_percentage": 3.4,
+    "location_name_y": "Anna Nagar",
+    "city_y": "Chennai",
+    "latitude_y": 13.085,
+    "longitude_y": 80.2101,
+    "predicted_risk_probability": 0.2707,
+    "risk_score": 27.0689,
     "population_exposure_score": 8.6572,
     "vehicle_exposure_score": 13.1985,
     "temporal_trend_score": 51.7044,
-    "priority_score": 19.1068,
-    "priority_rank": 45,
+    "priority_score": 23.3872,
+    "priority_rank": 46,
     "priority_level": "LOW",
-    "risk_prob": 0.1637
+    "risk_prob": 0.2707
   }
 }

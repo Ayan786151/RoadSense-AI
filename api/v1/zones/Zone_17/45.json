@@ -1,32 +1,32 @@
 {
   "zone_id": "Zone_17",
-  "location_name": "Saket",
-  "city": "Delhi",
+  "location_name": "Zone_17",
+  "city": "",
   "zone_type": "Residential",
   "week": 45,
-  "latitude": 28.5244,
-  "longitude": 77.2066,
+  "latitude": 0.0,
+  "longitude": 0.0,
   "risk_analysis": {
-    "predicted_risk_probability": 0.2141,
-    "predicted_risk_percentage": 21.41,
+    "predicted_risk_probability": 0.3238,
+    "predicted_risk_percentage": 32.38,
     "risk_label": "LOW RISK",
     "risk_color": "#22c55e",
-    "risk_delta_vs_prev_week": -27.1192,
+    "risk_delta_vs_prev_week": -11.4852,
     "actual_incident": 0
   },
   "priority": {
-    "priority_score": 33.657,
-    "priority_rank": 32,
-    "priority_level": "LOW",
+    "priority_score": 38.047,
+    "priority_rank": 30,
+    "priority_level": "MODERATE",
     "components": {
-      "risk_score": 21.409,
+      "risk_score": 32.3842,
       "population_exposure_score": 48.1572,
       "vehicle_exposure_score": 22.6047,
       "temporal_trend_score": 56.8875
     },
     "explanation": {
-      "priority_level": "LOW",
-      "priority_score": 33.7,
+      "priority_level": "MODERATE",
+      "priority_score": 38.0,
       "top_contributors": [
         {
           "factor": "Rising Trend",
@@ -47,14 +47,14 @@
         {
           "factor": "Risk Score",
           "icon": "\ud83d\udfe2",
-          "value": "21/100",
+          "value": "32/100",
           "impact": "LOW",
           "detail": "Risk score within acceptable range",
-          "weight": 21.409
+          "weight": 32.3842
         }
       ],
       "total_factors": 3,
-      "assessment": "This zone is currently within acceptable safety parameters. Routine monitoring is sufficient."
+      "assessment": "This zone has moderate risk levels with contributing factors: Rising Trend, Population Exposure. Continue monitoring and schedule review if conditions worsen."
     }
   },
   "telemetry": {
@@ -102,11 +102,51 @@
       "name": "Routine Monitoring",
       "icon": "\ud83d\udcca",
       "severity": "LOW",
-      "description": "Zone currently within acceptable risk parameters.",
-      "action": "Continue routine monitoring. No immediate intervention required."
+      "description": "No specific risk indicators triggered.",
+      "action": "Continue routine monitoring."
     }
   ],
-  "executive_briefing": "Saket is within safe operating parameters (21% risk). Continue routine monitoring. Optimizing signals could save 322 kg CO2/week, equivalent to 796 trees/year.",
+  "executive_briefing": "Zone_17 is within safe operating parameters (32% risk). Continue routine monitoring. Optimizing signals could save 322 kg CO2/week, equivalent to 796 trees/year.",
+  "civilian_road_safety_radar": {
+    "current_week": {
+      "week": 45,
+      "risk_score": 32.4,
+      "risk_percentage": "32%",
+      "risk_badge": "LOW RISK",
+      "risk_color": "#22c55e",
+      "description": "Corridor operating within normal baseline.",
+      "crashes_reported": 0
+    },
+    "why_accidents_might_happen": {
+      "primary_collision_cause": {
+        "title": "Congestion Bottleneck & Merge Conflicts",
+        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+      },
+      "behavior_factor": {
+        "title": "Tailgating & Speed Variance",
+        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+      },
+      "street_environment": {
+        "zone_type": "Residential",
+        "average_speed_kmh": 62.66,
+        "congestion_level": 15.2
+      }
+    },
+    "civilian_safety_guide": {
+      "for_drivers": {
+        "action": "Increase Following Distance",
+        "details": "Maintain 3 car lengths buffer during peak rush hours."
+      },
+      "for_pedestrians_and_cyclists": {
+        "action": "Double-Check Turning Vehicles",
+        "details": "Make eye contact with turning drivers at intersections before crossing."
+      },
+      "peak_danger_windows": {
+        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
+        "details": "Congestion peaks during evening travel windows."
+      }
+    }
+  },
   "raw_metrics": {
     "zone_id": "Zone_17",
     "week": 45,
@@ -153,18 +193,29 @@
     "vehicle_density_trend_4w": -0.34,
     "speed_trend_4w": -3.235,
     "incident_trend_4w": 0.0,
-    "location_name": "Saket",
-    "city": "Delhi",
-    "latitude": 28.5244,
-    "longitude": 77.2066,
-    "predicted_risk_probability": 0.2141,
-    "risk_score": 21.409,
+    "location_name_x": "Saket",
+    "city_x": "Delhi",
+    "latitude_x": 28.5244,
+    "longitude_x": 77.2066,
+    "car_percentage": 34.1,
+    "motorcycle_percentage": 54.8,
+    "bus_percentage": 7.1,
+    "truck_percentage": 4.0,
+    "moving_vehicle_percentage": 81.2,
+    "slow_vehicle_percentage": 12.1,
+    "stopped_vehicle_percentage": 6.7,
+    "location_name_y": "Saket",
+    "city_y": "Delhi",
+    "latitude_y": 28.5244,
+    "longitude_y": 77.2066,
+    "predicted_risk_probability": 0.3238,
+    "risk_score": 32.3842,
     "population_exposure_score": 48.1572,
     "vehicle_exposure_score": 22.6047,
     "temporal_trend_score": 56.8875,
-    "priority_score": 33.657,
-    "priority_rank": 32,
-    "priority_level": "LOW",
-    "risk_prob": 0.2141
+    "priority_score": 38.047,
+    "priority_rank": 30,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.3238
   }
 }

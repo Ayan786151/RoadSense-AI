@@ -1,32 +1,32 @@
 {
   "zone_id": "Zone_37",
-  "location_name": "Vrindavan Yojana",
-  "city": "Lucknow",
+  "location_name": "Zone_37",
+  "city": "",
   "zone_type": "Residential",
   "week": 21,
-  "latitude": 26.79,
-  "longitude": 81.0,
+  "latitude": 0.0,
+  "longitude": 0.0,
   "risk_analysis": {
-    "predicted_risk_probability": 0.2705,
-    "predicted_risk_percentage": 27.05,
+    "predicted_risk_probability": 0.3234,
+    "predicted_risk_percentage": 32.34,
     "risk_label": "LOW RISK",
     "risk_color": "#22c55e",
-    "risk_delta_vs_prev_week": -31.5943,
+    "risk_delta_vs_prev_week": -20.2671,
     "actual_incident": 0
   },
   "priority": {
-    "priority_score": 54.1305,
-    "priority_rank": 15,
-    "priority_level": "MODERATE",
+    "priority_score": 56.248,
+    "priority_rank": 14,
+    "priority_level": "HIGH",
     "components": {
-      "risk_score": 27.0456,
+      "risk_score": 32.3393,
       "population_exposure_score": 72.6561,
       "vehicle_exposure_score": 65.0527,
       "temporal_trend_score": 80.9181
     },
     "explanation": {
-      "priority_level": "MODERATE",
-      "priority_score": 54.1,
+      "priority_level": "HIGH",
+      "priority_score": 56.2,
       "top_contributors": [
         {
           "factor": "Worsening Trend",
@@ -55,14 +55,14 @@
         {
           "factor": "Risk Score",
           "icon": "\ud83d\udfe2",
-          "value": "27/100",
+          "value": "32/100",
           "impact": "LOW",
           "detail": "Risk score within acceptable range",
-          "weight": 27.0456
+          "weight": 32.3393
         }
       ],
       "total_factors": 4,
-      "assessment": "This zone has moderate risk levels with contributing factors: Worsening Trend, Population Exposure. Continue monitoring and schedule review if conditions worsen."
+      "assessment": "This zone shows significant risk elevation driven by Worsening Trend, Population Exposure. Proactive intervention should be scheduled within the current planning cycle."
     }
   },
   "telemetry": {
@@ -110,11 +110,51 @@
       "name": "Routine Monitoring",
       "icon": "\ud83d\udcca",
       "severity": "LOW",
-      "description": "Zone currently within acceptable risk parameters.",
-      "action": "Continue routine monitoring. No immediate intervention required."
+      "description": "No specific risk indicators triggered.",
+      "action": "Continue routine monitoring."
     }
   ],
-  "executive_briefing": "Vrindavan Yojana is within safe operating parameters (27% risk). Continue routine monitoring. Optimizing signals could save 2005 kg CO2/week, equivalent to 4964 trees/year.",
+  "executive_briefing": "Zone_37 is within safe operating parameters (32% risk). Continue routine monitoring. Optimizing signals could save 2005 kg CO2/week, equivalent to 4964 trees/year.",
+  "civilian_road_safety_radar": {
+    "current_week": {
+      "week": 21,
+      "risk_score": 32.3,
+      "risk_percentage": "32%",
+      "risk_badge": "LOW RISK",
+      "risk_color": "#22c55e",
+      "description": "Corridor operating within normal baseline.",
+      "crashes_reported": 0
+    },
+    "why_accidents_might_happen": {
+      "primary_collision_cause": {
+        "title": "Congestion Bottleneck & Merge Conflicts",
+        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+      },
+      "behavior_factor": {
+        "title": "Tailgating & Speed Variance",
+        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+      },
+      "street_environment": {
+        "zone_type": "Residential",
+        "average_speed_kmh": 54.57,
+        "congestion_level": 31.98
+      }
+    },
+    "civilian_safety_guide": {
+      "for_drivers": {
+        "action": "Increase Following Distance",
+        "details": "Maintain 3 car lengths buffer during peak rush hours."
+      },
+      "for_pedestrians_and_cyclists": {
+        "action": "Double-Check Turning Vehicles",
+        "details": "Make eye contact with turning drivers at intersections before crossing."
+      },
+      "peak_danger_windows": {
+        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
+        "details": "Congestion peaks during evening travel windows."
+      }
+    }
+  },
   "raw_metrics": {
     "zone_id": "Zone_37",
     "week": 21,
@@ -161,18 +201,29 @@
     "vehicle_density_trend_4w": 1.601,
     "speed_trend_4w": -5.461,
     "incident_trend_4w": 0.1,
-    "location_name": "Vrindavan Yojana",
-    "city": "Lucknow",
-    "latitude": 26.79,
-    "longitude": 81.0,
-    "predicted_risk_probability": 0.2705,
-    "risk_score": 27.0456,
+    "location_name_x": "Vrindavan Yojana",
+    "city_x": "Lucknow",
+    "latitude_x": 26.79,
+    "longitude_x": 81.0,
+    "car_percentage": 37.4,
+    "motorcycle_percentage": 55.2,
+    "bus_percentage": 3.3,
+    "truck_percentage": 4.1,
+    "moving_vehicle_percentage": 86.5,
+    "slow_vehicle_percentage": 16.2,
+    "stopped_vehicle_percentage": 0.0,
+    "location_name_y": "Vrindavan Yojana",
+    "city_y": "Lucknow",
+    "latitude_y": 26.79,
+    "longitude_y": 81.0,
+    "predicted_risk_probability": 0.3234,
+    "risk_score": 32.3393,
     "population_exposure_score": 72.6561,
     "vehicle_exposure_score": 65.0527,
     "temporal_trend_score": 80.9181,
-    "priority_score": 54.1305,
-    "priority_rank": 15,
-    "priority_level": "MODERATE",
-    "risk_prob": 0.2705
+    "priority_score": 56.248,
+    "priority_rank": 14,
+    "priority_level": "HIGH",
+    "risk_prob": 0.3234
   }
 }

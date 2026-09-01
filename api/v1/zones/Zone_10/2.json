@@ -1,11 +1,11 @@
 {
   "zone_id": "Zone_10",
-  "location_name": "Colaba",
-  "city": "Mumbai",
+  "location_name": "Zone_10",
+  "city": "",
   "zone_type": "Residential",
   "week": 2,
-  "latitude": 18.922,
-  "longitude": 72.8347,
+  "latitude": 0.0,
+  "longitude": 0.0,
   "risk_analysis": {
     "predicted_risk_probability": null,
     "predicted_risk_percentage": null,
@@ -114,7 +114,47 @@
       "action": "Continue routine monitoring. No immediate intervention required."
     }
   ],
-  "executive_briefing": "Colaba is within safe operating parameters (0% risk). Continue routine monitoring. Optimizing signals could save 2616 kg CO2/week, equivalent to 6477 trees/year.",
+  "executive_briefing": "Zone_10 is within safe operating parameters (0% risk). Continue routine monitoring. Optimizing signals could save 2616 kg CO2/week, equivalent to 6477 trees/year.",
+  "civilian_road_safety_radar": {
+    "current_week": {
+      "week": 2,
+      "risk_score": null,
+      "risk_percentage": "N/A",
+      "risk_badge": "BASELINE WARMUP",
+      "risk_color": "#71717a",
+      "description": "Corridor operating within normal baseline.",
+      "crashes_reported": 0
+    },
+    "why_accidents_might_happen": {
+      "primary_collision_cause": {
+        "title": "Congestion Bottleneck & Merge Conflicts",
+        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+      },
+      "behavior_factor": {
+        "title": "Tailgating & Speed Variance",
+        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+      },
+      "street_environment": {
+        "zone_type": "Residential",
+        "average_speed_kmh": 51.26,
+        "congestion_level": 48.43
+      }
+    },
+    "civilian_safety_guide": {
+      "for_drivers": {
+        "action": "Increase Following Distance",
+        "details": "Maintain 3 car lengths buffer during peak rush hours."
+      },
+      "for_pedestrians_and_cyclists": {
+        "action": "Double-Check Turning Vehicles",
+        "details": "Make eye contact with turning drivers at intersections before crossing."
+      },
+      "peak_danger_windows": {
+        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
+        "details": "Congestion peaks during evening travel windows."
+      }
+    }
+  },
   "raw_metrics": {
     "zone_id": "Zone_10",
     "week": 2,
@@ -161,10 +201,21 @@
     "vehicle_density_trend_4w": null,
     "speed_trend_4w": null,
     "incident_trend_4w": null,
-    "location_name": "Colaba",
-    "city": "Mumbai",
-    "latitude": 18.922,
-    "longitude": 72.8347,
+    "location_name_x": "Colaba",
+    "city_x": "Mumbai",
+    "latitude_x": 18.922,
+    "longitude_x": 72.8347,
+    "car_percentage": 35.4,
+    "motorcycle_percentage": 60.3,
+    "bus_percentage": 2.2,
+    "truck_percentage": 2.2,
+    "moving_vehicle_percentage": 59.6,
+    "slow_vehicle_percentage": 25.6,
+    "stopped_vehicle_percentage": 14.7,
+    "location_name_y": "Colaba",
+    "city_y": "Mumbai",
+    "latitude_y": 18.922,
+    "longitude_y": 72.8347,
     "predicted_risk_probability": null,
     "risk_score": 0.0,
     "population_exposure_score": 98.6996,

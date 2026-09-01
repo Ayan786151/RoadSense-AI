@@ -1,32 +1,32 @@
 {
   "zone_id": "Zone_01",
-  "location_name": "Andheri",
-  "city": "Mumbai",
+  "location_name": "Zone_01",
+  "city": "",
   "zone_type": "Commercial_Downtown",
   "week": 22,
-  "latitude": 19.1197,
-  "longitude": 72.8468,
+  "latitude": 0.0,
+  "longitude": 0.0,
   "risk_analysis": {
-    "predicted_risk_probability": 0.9098,
-    "predicted_risk_percentage": 90.98,
+    "predicted_risk_probability": 0.9016,
+    "predicted_risk_percentage": 90.16,
     "risk_label": "CRITICAL RISK",
     "risk_color": "#ef4444",
-    "risk_delta_vs_prev_week": 0.0486,
+    "risk_delta_vs_prev_week": 0.4599,
     "actual_incident": 1
   },
   "priority": {
-    "priority_score": 78.2852,
-    "priority_rank": 3,
+    "priority_score": 77.9591,
+    "priority_rank": 2,
     "priority_level": "CRITICAL",
     "components": {
-      "risk_score": 90.9778,
+      "risk_score": 90.1624,
       "population_exposure_score": 52.9133,
       "vehicle_exposure_score": 94.3977,
       "temporal_trend_score": 65.2417
     },
     "explanation": {
       "priority_level": "CRITICAL",
-      "priority_score": 78.3,
+      "priority_score": 78.0,
       "top_contributors": [
         {
           "factor": "Vehicle Density",
@@ -39,10 +39,10 @@
         {
           "factor": "Risk Score",
           "icon": "\ud83d\udd34",
-          "value": "91/100",
+          "value": "90/100",
           "impact": "HIGH",
           "detail": "Model-estimated risk score is in the critical range",
-          "weight": 90.9778
+          "weight": 90.1624
         },
         {
           "factor": "Congestion",
@@ -138,7 +138,47 @@
       "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
     }
   ],
-  "executive_briefing": "Andheri is in a critical safety state with 91% incident risk. Signal optimization recommended \u2014 congestion at 88/100 with speeds averaging 34 km/h. Optimizing signals could save 9415 kg CO2/week, equivalent to 23313 trees/year.",
+  "executive_briefing": "Zone_01 is in a critical safety state with 90% incident risk. Signal optimization recommended \u2014 congestion at 88/100 with speeds averaging 34 km/h. Optimizing signals could save 9415 kg CO2/week, equivalent to 23313 trees/year.",
+  "civilian_road_safety_radar": {
+    "current_week": {
+      "week": 22,
+      "risk_score": 90.2,
+      "risk_percentage": "90%",
+      "risk_badge": "CRITICAL RISK",
+      "risk_color": "#ef4444",
+      "description": "Elevated collision activity observed.",
+      "crashes_reported": 0
+    },
+    "why_accidents_might_happen": {
+      "primary_collision_cause": {
+        "title": "Congestion Bottleneck & Merge Conflicts",
+        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+      },
+      "behavior_factor": {
+        "title": "Tailgating & Speed Variance",
+        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+      },
+      "street_environment": {
+        "zone_type": "Commercial_Downtown",
+        "average_speed_kmh": 34.01,
+        "congestion_level": 87.54
+      }
+    },
+    "civilian_safety_guide": {
+      "for_drivers": {
+        "action": "Increase Following Distance",
+        "details": "Maintain 3 car lengths buffer during peak rush hours."
+      },
+      "for_pedestrians_and_cyclists": {
+        "action": "Double-Check Turning Vehicles",
+        "details": "Make eye contact with turning drivers at intersections before crossing."
+      },
+      "peak_danger_windows": {
+        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
+        "details": "Congestion peaks during evening travel windows."
+      }
+    }
+  },
   "raw_metrics": {
     "zone_id": "Zone_01",
     "week": 22,
@@ -185,18 +225,29 @@
     "vehicle_density_trend_4w": -0.634,
     "speed_trend_4w": -0.129,
     "incident_trend_4w": 0.0,
-    "location_name": "Andheri",
-    "city": "Mumbai",
-    "latitude": 19.1197,
-    "longitude": 72.8468,
-    "predicted_risk_probability": 0.9098,
-    "risk_score": 90.9778,
+    "location_name_x": "Andheri",
+    "city_x": "Mumbai",
+    "latitude_x": 19.1197,
+    "longitude_x": 72.8468,
+    "car_percentage": 43.0,
+    "motorcycle_percentage": 38.8,
+    "bus_percentage": 12.3,
+    "truck_percentage": 5.8,
+    "moving_vehicle_percentage": 20.7,
+    "slow_vehicle_percentage": 47.9,
+    "stopped_vehicle_percentage": 31.4,
+    "location_name_y": "Andheri",
+    "city_y": "Mumbai",
+    "latitude_y": 19.1197,
+    "longitude_y": 72.8468,
+    "predicted_risk_probability": 0.9016,
+    "risk_score": 90.1624,
     "population_exposure_score": 52.9133,
     "vehicle_exposure_score": 94.3977,
     "temporal_trend_score": 65.2417,
-    "priority_score": 78.2852,
-    "priority_rank": 3,
+    "priority_score": 77.9591,
+    "priority_rank": 2,
     "priority_level": "CRITICAL",
-    "risk_prob": 0.9098
+    "risk_prob": 0.9016
   }
 }

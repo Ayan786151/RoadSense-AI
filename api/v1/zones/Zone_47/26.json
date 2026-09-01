@@ -1,32 +1,32 @@
 {
   "zone_id": "Zone_47",
-  "location_name": "Perambur",
-  "city": "Chennai",
+  "location_name": "Zone_47",
+  "city": "",
   "zone_type": "University_District",
   "week": 26,
-  "latitude": 13.1167,
-  "longitude": 80.2333,
+  "latitude": 0.0,
+  "longitude": 0.0,
   "risk_analysis": {
-    "predicted_risk_probability": 0.8171,
-    "predicted_risk_percentage": 81.71,
-    "risk_label": "CRITICAL RISK",
-    "risk_color": "#ef4444",
-    "risk_delta_vs_prev_week": -6.2584,
+    "predicted_risk_probability": 0.6679,
+    "predicted_risk_percentage": 66.79,
+    "risk_label": "HIGH RISK",
+    "risk_color": "#f97316",
+    "risk_delta_vs_prev_week": -6.7172,
     "actual_incident": 1
   },
   "priority": {
-    "priority_score": 74.591,
-    "priority_rank": 3,
+    "priority_score": 68.6247,
+    "priority_rank": 5,
     "priority_level": "HIGH",
     "components": {
-      "risk_score": 81.7079,
+      "risk_score": 66.792,
       "population_exposure_score": 48.0997,
       "vehicle_exposure_score": 76.0373,
       "temporal_trend_score": 97.8364
     },
     "explanation": {
       "priority_level": "HIGH",
-      "priority_score": 74.6,
+      "priority_score": 68.6,
       "top_contributors": [
         {
           "factor": "Worsening Trend",
@@ -35,14 +35,6 @@
           "impact": "HIGH",
           "detail": "4-week congestion trend is actively worsening \u2014 conditions deteriorating",
           "weight": 97.8364
-        },
-        {
-          "factor": "Risk Score",
-          "icon": "\ud83d\udd34",
-          "value": "82/100",
-          "impact": "HIGH",
-          "detail": "Model-estimated risk score is in the critical range",
-          "weight": 81.7079
         },
         {
           "factor": "Vehicle Density",
@@ -61,6 +53,14 @@
           "weight": 75.03
         },
         {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "67/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 66.792
+        },
+        {
           "factor": "Population Exposure",
           "icon": "\ud83d\udc65",
           "value": "48/100",
@@ -70,7 +70,7 @@
         }
       ],
       "total_factors": 5,
-      "assessment": "This zone shows significant risk elevation driven by Worsening Trend, Risk Score. Proactive intervention should be scheduled within the current planning cycle."
+      "assessment": "This zone shows significant risk elevation driven by Worsening Trend, Vehicle Density. Proactive intervention should be scheduled within the current planning cycle."
     }
   },
   "telemetry": {
@@ -122,7 +122,47 @@
       "action": "Deploy immediate field inspection team. Identify root cause of deteriorating safety conditions."
     }
   ],
-  "executive_briefing": "Perambur is in a critical safety state with 82% incident risk. Signal optimization recommended \u2014 congestion at 75/100 with speeds averaging 41 km/h. Optimizing signals could save 6318 kg CO2/week, equivalent to 15645 trees/year.",
+  "executive_briefing": "Zone_47 is in a critical safety state with 67% incident risk. Signal optimization recommended \u2014 congestion at 75/100 with speeds averaging 41 km/h. Optimizing signals could save 6318 kg CO2/week, equivalent to 15645 trees/year.",
+  "civilian_road_safety_radar": {
+    "current_week": {
+      "week": 26,
+      "risk_score": 66.8,
+      "risk_percentage": "67%",
+      "risk_badge": "HIGH RISK",
+      "risk_color": "#f97316",
+      "description": "Elevated collision activity observed.",
+      "crashes_reported": 0
+    },
+    "why_accidents_might_happen": {
+      "primary_collision_cause": {
+        "title": "Congestion Bottleneck & Merge Conflicts",
+        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+      },
+      "behavior_factor": {
+        "title": "Tailgating & Speed Variance",
+        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+      },
+      "street_environment": {
+        "zone_type": "University_District",
+        "average_speed_kmh": 40.65,
+        "congestion_level": 75.03
+      }
+    },
+    "civilian_safety_guide": {
+      "for_drivers": {
+        "action": "Increase Following Distance",
+        "details": "Maintain 3 car lengths buffer during peak rush hours."
+      },
+      "for_pedestrians_and_cyclists": {
+        "action": "Double-Check Turning Vehicles",
+        "details": "Make eye contact with turning drivers at intersections before crossing."
+      },
+      "peak_danger_windows": {
+        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
+        "details": "Congestion peaks during evening travel windows."
+      }
+    }
+  },
   "raw_metrics": {
     "zone_id": "Zone_47",
     "week": 26,
@@ -169,18 +209,29 @@
     "vehicle_density_trend_4w": 0.916,
     "speed_trend_4w": -7.697,
     "incident_trend_4w": 0.0,
-    "location_name": "Perambur",
-    "city": "Chennai",
-    "latitude": 13.1167,
-    "longitude": 80.2333,
-    "predicted_risk_probability": 0.8171,
-    "risk_score": 81.7079,
+    "location_name_x": "Perambur",
+    "city_x": "Chennai",
+    "latitude_x": 13.1167,
+    "longitude_x": 80.2333,
+    "car_percentage": 42.8,
+    "motorcycle_percentage": 40.8,
+    "bus_percentage": 10.5,
+    "truck_percentage": 6.0,
+    "moving_vehicle_percentage": 9.2,
+    "slow_vehicle_percentage": 47.5,
+    "stopped_vehicle_percentage": 43.3,
+    "location_name_y": "Perambur",
+    "city_y": "Chennai",
+    "latitude_y": 13.1167,
+    "longitude_y": 80.2333,
+    "predicted_risk_probability": 0.6679,
+    "risk_score": 66.792,
     "population_exposure_score": 48.0997,
     "vehicle_exposure_score": 76.0373,
     "temporal_trend_score": 97.8364,
-    "priority_score": 74.591,
-    "priority_rank": 3,
+    "priority_score": 68.6247,
+    "priority_rank": 5,
     "priority_level": "HIGH",
-    "risk_prob": 0.8171
+    "risk_prob": 0.6679
   }
 }

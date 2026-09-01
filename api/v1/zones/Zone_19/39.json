@@ -1,40 +1,40 @@
 {
   "zone_id": "Zone_19",
-  "location_name": "Lajpat Nagar",
-  "city": "Delhi",
+  "location_name": "Zone_19",
+  "city": "",
   "zone_type": "Industrial_Corridor",
   "week": 39,
-  "latitude": 28.5677,
-  "longitude": 77.243,
+  "latitude": 0.0,
+  "longitude": 0.0,
   "risk_analysis": {
-    "predicted_risk_probability": 0.1669,
-    "predicted_risk_percentage": 16.69,
+    "predicted_risk_probability": 0.2505,
+    "predicted_risk_percentage": 25.05,
     "risk_label": "LOW RISK",
     "risk_color": "#22c55e",
-    "risk_delta_vs_prev_week": 1.4976,
+    "risk_delta_vs_prev_week": 2.5694,
     "actual_incident": 0
   },
   "priority": {
-    "priority_score": 24.0943,
-    "priority_rank": 41,
+    "priority_score": 27.4393,
+    "priority_rank": 42,
     "priority_level": "LOW",
     "components": {
-      "risk_score": 16.687,
+      "risk_score": 25.0494,
       "population_exposure_score": 19.9368,
       "vehicle_exposure_score": 24.8392,
       "temporal_trend_score": 49.7833
     },
     "explanation": {
       "priority_level": "LOW",
-      "priority_score": 24.1,
+      "priority_score": 27.4,
       "top_contributors": [
         {
           "factor": "Risk Score",
           "icon": "\ud83d\udfe2",
-          "value": "17/100",
+          "value": "25/100",
           "impact": "LOW",
           "detail": "Risk score within acceptable range",
-          "weight": 16.687
+          "weight": 25.0494
         }
       ],
       "total_factors": 1,
@@ -90,7 +90,47 @@
       "action": "Continue routine monitoring. No immediate intervention required."
     }
   ],
-  "executive_briefing": "Lajpat Nagar is within safe operating parameters (17% risk). Continue routine monitoring. Optimizing signals could save 373 kg CO2/week, equivalent to 923 trees/year.",
+  "executive_briefing": "Zone_19 is within safe operating parameters (25% risk). Continue routine monitoring. Optimizing signals could save 373 kg CO2/week, equivalent to 923 trees/year.",
+  "civilian_road_safety_radar": {
+    "current_week": {
+      "week": 39,
+      "risk_score": 25.0,
+      "risk_percentage": "25%",
+      "risk_badge": "LOW RISK",
+      "risk_color": "#22c55e",
+      "description": "Corridor operating within normal baseline.",
+      "crashes_reported": 0
+    },
+    "why_accidents_might_happen": {
+      "primary_collision_cause": {
+        "title": "Congestion Bottleneck & Merge Conflicts",
+        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+      },
+      "behavior_factor": {
+        "title": "Tailgating & Speed Variance",
+        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+      },
+      "street_environment": {
+        "zone_type": "Industrial_Corridor",
+        "average_speed_kmh": 66.06,
+        "congestion_level": 14.59
+      }
+    },
+    "civilian_safety_guide": {
+      "for_drivers": {
+        "action": "Increase Following Distance",
+        "details": "Maintain 3 car lengths buffer during peak rush hours."
+      },
+      "for_pedestrians_and_cyclists": {
+        "action": "Double-Check Turning Vehicles",
+        "details": "Make eye contact with turning drivers at intersections before crossing."
+      },
+      "peak_danger_windows": {
+        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
+        "details": "Congestion peaks during evening travel windows."
+      }
+    }
+  },
   "raw_metrics": {
     "zone_id": "Zone_19",
     "week": 39,
@@ -137,18 +177,29 @@
     "vehicle_density_trend_4w": 0.112,
     "speed_trend_4w": 8.731,
     "incident_trend_4w": -0.3,
-    "location_name": "Lajpat Nagar",
-    "city": "Delhi",
-    "latitude": 28.5677,
-    "longitude": 77.243,
-    "predicted_risk_probability": 0.1669,
-    "risk_score": 16.687,
+    "location_name_x": "Lajpat Nagar",
+    "city_x": "Delhi",
+    "latitude_x": 28.5677,
+    "longitude_x": 77.243,
+    "car_percentage": 45.2,
+    "motorcycle_percentage": 38.9,
+    "bus_percentage": 10.3,
+    "truck_percentage": 5.5,
+    "moving_vehicle_percentage": 87.2,
+    "slow_vehicle_percentage": 12.1,
+    "stopped_vehicle_percentage": 0.7,
+    "location_name_y": "Lajpat Nagar",
+    "city_y": "Delhi",
+    "latitude_y": 28.5677,
+    "longitude_y": 77.243,
+    "predicted_risk_probability": 0.2505,
+    "risk_score": 25.0494,
     "population_exposure_score": 19.9368,
     "vehicle_exposure_score": 24.8392,
     "temporal_trend_score": 49.7833,
-    "priority_score": 24.0943,
-    "priority_rank": 41,
+    "priority_score": 27.4393,
+    "priority_rank": 42,
     "priority_level": "LOW",
-    "risk_prob": 0.1669
+    "risk_prob": 0.2505
   }
 }

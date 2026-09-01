@@ -1,32 +1,32 @@
 {
   "zone_id": "Zone_38",
-  "location_name": "T. Nagar",
-  "city": "Chennai",
+  "location_name": "Zone_38",
+  "city": "",
   "zone_type": "Commercial_Downtown",
   "week": 5,
-  "latitude": 13.0418,
-  "longitude": 80.2341,
+  "latitude": 0.0,
+  "longitude": 0.0,
   "risk_analysis": {
-    "predicted_risk_probability": 0.1972,
-    "predicted_risk_percentage": 19.72,
+    "predicted_risk_probability": 0.2548,
+    "predicted_risk_percentage": 25.48,
     "risk_label": "LOW RISK",
     "risk_color": "#22c55e",
     "risk_delta_vs_prev_week": null,
     "actual_incident": 0
   },
   "priority": {
-    "priority_score": 44.991,
-    "priority_rank": 20,
+    "priority_score": 47.2967,
+    "priority_rank": 22,
     "priority_level": "MODERATE",
     "components": {
-      "risk_score": 19.7186,
+      "risk_score": 25.4829,
       "population_exposure_score": 55.1333,
       "vehicle_exposure_score": 60.8371,
       "temporal_trend_score": 74.352
     },
     "explanation": {
       "priority_level": "MODERATE",
-      "priority_score": 45.0,
+      "priority_score": 47.3,
       "top_contributors": [
         {
           "factor": "Worsening Trend",
@@ -55,10 +55,10 @@
         {
           "factor": "Risk Score",
           "icon": "\ud83d\udfe2",
-          "value": "20/100",
+          "value": "25/100",
           "impact": "LOW",
           "detail": "Risk score within acceptable range",
-          "weight": 19.7186
+          "weight": 25.4829
         }
       ],
       "total_factors": 4,
@@ -114,7 +114,47 @@
       "action": "Continue routine monitoring. No immediate intervention required."
     }
   ],
-  "executive_briefing": "T. Nagar is within safe operating parameters (20% risk). Continue routine monitoring. Optimizing signals could save 871 kg CO2/week, equivalent to 2156 trees/year.",
+  "executive_briefing": "Zone_38 is within safe operating parameters (25% risk). Continue routine monitoring. Optimizing signals could save 871 kg CO2/week, equivalent to 2156 trees/year.",
+  "civilian_road_safety_radar": {
+    "current_week": {
+      "week": 5,
+      "risk_score": 25.5,
+      "risk_percentage": "25%",
+      "risk_badge": "LOW RISK",
+      "risk_color": "#22c55e",
+      "description": "Corridor operating within normal baseline.",
+      "crashes_reported": 0
+    },
+    "why_accidents_might_happen": {
+      "primary_collision_cause": {
+        "title": "Congestion Bottleneck & Merge Conflicts",
+        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+      },
+      "behavior_factor": {
+        "title": "Tailgating & Speed Variance",
+        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+      },
+      "street_environment": {
+        "zone_type": "Commercial_Downtown",
+        "average_speed_kmh": 60.26,
+        "congestion_level": 18.47
+      }
+    },
+    "civilian_safety_guide": {
+      "for_drivers": {
+        "action": "Increase Following Distance",
+        "details": "Maintain 3 car lengths buffer during peak rush hours."
+      },
+      "for_pedestrians_and_cyclists": {
+        "action": "Double-Check Turning Vehicles",
+        "details": "Make eye contact with turning drivers at intersections before crossing."
+      },
+      "peak_danger_windows": {
+        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
+        "details": "Congestion peaks during evening travel windows."
+      }
+    }
+  },
   "raw_metrics": {
     "zone_id": "Zone_38",
     "week": 5,
@@ -161,18 +201,29 @@
     "vehicle_density_trend_4w": 1.436,
     "speed_trend_4w": -0.729,
     "incident_trend_4w": 0.0,
-    "location_name": "T. Nagar",
-    "city": "Chennai",
-    "latitude": 13.0418,
-    "longitude": 80.2341,
-    "predicted_risk_probability": 0.1972,
-    "risk_score": 19.7186,
+    "location_name_x": "T. Nagar",
+    "city_x": "Chennai",
+    "latitude_x": 13.0418,
+    "longitude_x": 80.2341,
+    "car_percentage": 42.2,
+    "motorcycle_percentage": 38.8,
+    "bus_percentage": 12.6,
+    "truck_percentage": 6.3,
+    "moving_vehicle_percentage": 72.1,
+    "slow_vehicle_percentage": 9.7,
+    "stopped_vehicle_percentage": 18.2,
+    "location_name_y": "T. Nagar",
+    "city_y": "Chennai",
+    "latitude_y": 13.0418,
+    "longitude_y": 80.2341,
+    "predicted_risk_probability": 0.2548,
+    "risk_score": 25.4829,
     "population_exposure_score": 55.1333,
     "vehicle_exposure_score": 60.8371,
     "temporal_trend_score": 74.352,
-    "priority_score": 44.991,
-    "priority_rank": 20,
+    "priority_score": 47.2967,
+    "priority_rank": 22,
     "priority_level": "MODERATE",
-    "risk_prob": 0.1972
+    "risk_prob": 0.2548
   }
 }

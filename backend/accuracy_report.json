@@ -1,0 +1,326 @@
+{
+  "selected_model": "Logistic Regression",
+  "decision_threshold": 0.5,
+  "dataset_stats": {
+    "total_observations": 4000,
+    "train_observations": 2805,
+    "test_observations": 1195,
+    "base_incident_rate_pct": 19.48
+  },
+  "model_comparison": {
+    "logistic_regression": {
+      "accuracy_pct": 48.95,
+      "precision_pct": 24.28,
+      "recall_pct": 74.26,
+      "f1_score": 0.3659,
+      "roc_auc": 0.6262,
+      "pr_auc": 0.3098,
+      "brier_score": 0.2784,
+      "confusion_matrix": {
+        "true_negatives": 409,
+        "false_positives": 549,
+        "false_negatives": 61,
+        "true_positives": 176,
+        "total_tested": 1195
+      }
+    },
+    "random_forest": {
+      "accuracy_pct": 65.44,
+      "precision_pct": 28.54,
+      "recall_pct": 49.37,
+      "f1_score": 0.3617,
+      "roc_auc": 0.6302,
+      "pr_auc": 0.2789,
+      "brier_score": 0.2329,
+      "confusion_matrix": {
+        "true_negatives": 665,
+        "false_positives": 293,
+        "false_negatives": 120,
+        "true_positives": 117,
+        "total_tested": 1195
+      }
+    }
+  },
+  "best_model_metrics": {
+    "accuracy_pct": 48.95,
+    "precision_pct": 24.28,
+    "recall_pct": 74.26,
+    "f1_score": 0.3659,
+    "roc_auc": 0.6262,
+    "pr_auc": 0.3098,
+    "brier_score": 0.2784,
+    "confusion_matrix": {
+      "true_negatives": 409,
+      "false_positives": 549,
+      "false_negatives": 61,
+      "true_positives": 176,
+      "total_tested": 1195
+    }
+  },
+  "day_of_week_accuracy": {
+    "Monday": {
+      "test_records": 184,
+      "actual_incidents": 42,
+      "predicted_incidents": 116,
+      "accuracy_pct": 48.91,
+      "precision_pct": 27.59,
+      "recall_pct": 76.19,
+      "f1_score": 0.4051,
+      "avg_predicted_risk": 0.557
+    },
+    "Tuesday": {
+      "test_records": 183,
+      "actual_incidents": 34,
+      "predicted_incidents": 70,
+      "accuracy_pct": 58.47,
+      "precision_pct": 20.0,
+      "recall_pct": 41.18,
+      "f1_score": 0.2692,
+      "avg_predicted_risk": 0.473
+    },
+    "Wednesday": {
+      "test_records": 179,
+      "actual_incidents": 39,
+      "predicted_incidents": 113,
+      "accuracy_pct": 47.49,
+      "precision_pct": 25.66,
+      "recall_pct": 74.36,
+      "f1_score": 0.3816,
+      "avg_predicted_risk": 0.547
+    },
+    "Thursday": {
+      "test_records": 163,
+      "actual_incidents": 25,
+      "predicted_incidents": 107,
+      "accuracy_pct": 46.01,
+      "precision_pct": 20.56,
+      "recall_pct": 88.0,
+      "f1_score": 0.3333,
+      "avg_predicted_risk": 0.56
+    },
+    "Friday": {
+      "test_records": 155,
+      "actual_incidents": 26,
+      "predicted_incidents": 85,
+      "accuracy_pct": 52.9,
+      "precision_pct": 22.35,
+      "recall_pct": 73.08,
+      "f1_score": 0.3423,
+      "avg_predicted_risk": 0.527
+    },
+    "Saturday": {
+      "test_records": 161,
+      "actual_incidents": 32,
+      "predicted_incidents": 107,
+      "accuracy_pct": 42.24,
+      "precision_pct": 21.5,
+      "recall_pct": 71.88,
+      "f1_score": 0.3309,
+      "avg_predicted_risk": 0.565
+    },
+    "Sunday": {
+      "test_records": 170,
+      "actual_incidents": 39,
+      "predicted_incidents": 127,
+      "accuracy_pct": 45.88,
+      "precision_pct": 29.13,
+      "recall_pct": 94.87,
+      "f1_score": 0.4458,
+      "avg_predicted_risk": 0.598
+    }
+  },
+  "weekly_trajectory": [
+    {
+      "week": 38,
+      "test_records": 67,
+      "actual_incidents": 17,
+      "predicted_incidents": 37,
+      "accuracy_pct": 61.19,
+      "avg_predicted_risk": 0.53
+    },
+    {
+      "week": 39,
+      "test_records": 69,
+      "actual_incidents": 18,
+      "predicted_incidents": 40,
+      "accuracy_pct": 53.62,
+      "avg_predicted_risk": 0.56
+    },
+    {
+      "week": 40,
+      "test_records": 80,
+      "actual_incidents": 21,
+      "predicted_incidents": 52,
+      "accuracy_pct": 56.25,
+      "avg_predicted_risk": 0.534
+    },
+    {
+      "week": 41,
+      "test_records": 87,
+      "actual_incidents": 17,
+      "predicted_incidents": 46,
+      "accuracy_pct": 57.47,
+      "avg_predicted_risk": 0.518
+    },
+    {
+      "week": 42,
+      "test_records": 79,
+      "actual_incidents": 14,
+      "predicted_incidents": 46,
+      "accuracy_pct": 54.43,
+      "avg_predicted_risk": 0.535
+    },
+    {
+      "week": 43,
+      "test_records": 92,
+      "actual_incidents": 16,
+      "predicted_incidents": 54,
+      "accuracy_pct": 50.0,
+      "avg_predicted_risk": 0.535
+    },
+    {
+      "week": 44,
+      "test_records": 82,
+      "actual_incidents": 11,
+      "predicted_incidents": 47,
+      "accuracy_pct": 43.9,
+      "avg_predicted_risk": 0.544
+    },
+    {
+      "week": 45,
+      "test_records": 73,
+      "actual_incidents": 15,
+      "predicted_incidents": 42,
+      "accuracy_pct": 49.32,
+      "avg_predicted_risk": 0.548
+    },
+    {
+      "week": 46,
+      "test_records": 81,
+      "actual_incidents": 16,
+      "predicted_incidents": 51,
+      "accuracy_pct": 46.91,
+      "avg_predicted_risk": 0.554
+    },
+    {
+      "week": 47,
+      "test_records": 89,
+      "actual_incidents": 11,
+      "predicted_incidents": 53,
+      "accuracy_pct": 46.07,
+      "avg_predicted_risk": 0.52
+    },
+    {
+      "week": 48,
+      "test_records": 62,
+      "actual_incidents": 18,
+      "predicted_incidents": 40,
+      "accuracy_pct": 45.16,
+      "avg_predicted_risk": 0.569
+    },
+    {
+      "week": 49,
+      "test_records": 85,
+      "actual_incidents": 13,
+      "predicted_incidents": 54,
+      "accuracy_pct": 40.0,
+      "avg_predicted_risk": 0.553
+    },
+    {
+      "week": 50,
+      "test_records": 77,
+      "actual_incidents": 21,
+      "predicted_incidents": 48,
+      "accuracy_pct": 46.75,
+      "avg_predicted_risk": 0.549
+    },
+    {
+      "week": 51,
+      "test_records": 69,
+      "actual_incidents": 11,
+      "predicted_incidents": 48,
+      "accuracy_pct": 37.68,
+      "avg_predicted_risk": 0.572
+    },
+    {
+      "week": 52,
+      "test_records": 79,
+      "actual_incidents": 11,
+      "predicted_incidents": 52,
+      "accuracy_pct": 43.04,
+      "avg_predicted_risk": 0.572
+    },
+    {
+      "week": 53,
+      "test_records": 24,
+      "actual_incidents": 7,
+      "predicted_incidents": 15,
+      "accuracy_pct": 58.33,
+      "avg_predicted_risk": 0.581
+    }
+  ],
+  "top_feature_importances": [
+    {
+      "feature": "LATITUDE",
+      "importance": 0.0861
+    },
+    {
+      "feature": "LONGITUDE",
+      "importance": 0.083
+    },
+    {
+      "feature": "week",
+      "importance": 0.0597
+    },
+    {
+      "feature": "hour",
+      "importance": 0.054
+    },
+    {
+      "feature": "POSTED_SPEED_LIMIT",
+      "importance": 0.0507
+    },
+    {
+      "feature": "WEATHER_CONDITION_RAIN",
+      "importance": 0.05
+    },
+    {
+      "feature": "WEATHER_CONDITION_CLEAR",
+      "importance": 0.0373
+    },
+    {
+      "feature": "CRASH_MONTH",
+      "importance": 0.0343
+    },
+    {
+      "feature": "month",
+      "importance": 0.0321
+    },
+    {
+      "feature": "INTERSECTION_RELATED_I_Y",
+      "importance": 0.0313
+    },
+    {
+      "feature": "INTERSECTION_RELATED_I_N",
+      "importance": 0.031
+    },
+    {
+      "feature": "CRASH_DAY_OF_WEEK",
+      "importance": 0.0294
+    },
+    {
+      "feature": "day_of_week",
+      "importance": 0.0289
+    },
+    {
+      "feature": "ROADWAY_SURFACE_COND_DRY",
+      "importance": 0.0231
+    },
+    {
+      "feature": "LIGHTING_CONDITION_DAYLIGHT",
+      "importance": 0.0177
+    }
+  ],
+  "model_file": "C:\\Users\\asus\\Downloads\\traffic_sim-main (3)\\traffic_sim-main\\models\\custom_trained_risk_model.pkl",
+  "predictions_file": "C:\\Users\\asus\\Downloads\\traffic_sim-main (3)\\traffic_sim-main\\data\\custom_model_predictions.csv"
+}

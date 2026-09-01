@@ -1,25 +1,25 @@
 {
   "zone_id": "Zone_18",
-  "location_name": "Karol Bagh",
-  "city": "Delhi",
+  "location_name": "Zone_18",
+  "city": "",
   "zone_type": "Industrial_Corridor",
   "week": 31,
-  "latitude": 28.6514,
-  "longitude": 77.1907,
+  "latitude": 0.0,
+  "longitude": 0.0,
   "risk_analysis": {
-    "predicted_risk_probability": 0.4077,
-    "predicted_risk_percentage": 40.77,
+    "predicted_risk_probability": 0.4093,
+    "predicted_risk_percentage": 40.93,
     "risk_label": "MODERATE RISK",
     "risk_color": "#eab308",
-    "risk_delta_vs_prev_week": 20.4339,
+    "risk_delta_vs_prev_week": 10.4092,
     "actual_incident": 0
   },
   "priority": {
-    "priority_score": 29.6778,
-    "priority_rank": 41,
+    "priority_score": 29.741,
+    "priority_rank": 43,
     "priority_level": "LOW",
     "components": {
-      "risk_score": 40.7736,
+      "risk_score": 40.9319,
       "population_exposure_score": 13.8947,
       "vehicle_exposure_score": 10.0074,
       "temporal_trend_score": 52.6211
@@ -34,7 +34,7 @@
           "value": "41/100",
           "impact": "MEDIUM",
           "detail": "Moderate model-estimated risk",
-          "weight": 40.7736
+          "weight": 40.9319
         }
       ],
       "total_factors": 1,
@@ -90,7 +90,47 @@
       "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
     }
   ],
-  "executive_briefing": "Karol Bagh shows elevated risk at 41%. Continue routine monitoring. Optimizing signals could save 70 kg CO2/week, equivalent to 173 trees/year.",
+  "executive_briefing": "Zone_18 shows elevated risk at 41%. Continue routine monitoring. Optimizing signals could save 70 kg CO2/week, equivalent to 173 trees/year.",
+  "civilian_road_safety_radar": {
+    "current_week": {
+      "week": 31,
+      "risk_score": 40.9,
+      "risk_percentage": "41%",
+      "risk_badge": "MODERATE RISK",
+      "risk_color": "#eab308",
+      "description": "Corridor operating within normal baseline.",
+      "crashes_reported": 0
+    },
+    "why_accidents_might_happen": {
+      "primary_collision_cause": {
+        "title": "Congestion Bottleneck & Merge Conflicts",
+        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+      },
+      "behavior_factor": {
+        "title": "Tailgating & Speed Variance",
+        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+      },
+      "street_environment": {
+        "zone_type": "Industrial_Corridor",
+        "average_speed_kmh": 39.48,
+        "congestion_level": 8.93
+      }
+    },
+    "civilian_safety_guide": {
+      "for_drivers": {
+        "action": "Increase Following Distance",
+        "details": "Maintain 3 car lengths buffer during peak rush hours."
+      },
+      "for_pedestrians_and_cyclists": {
+        "action": "Double-Check Turning Vehicles",
+        "details": "Make eye contact with turning drivers at intersections before crossing."
+      },
+      "peak_danger_windows": {
+        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
+        "details": "Congestion peaks during evening travel windows."
+      }
+    }
+  },
   "raw_metrics": {
     "zone_id": "Zone_18",
     "week": 31,
@@ -137,18 +177,29 @@
     "vehicle_density_trend_4w": -2.286,
     "speed_trend_4w": 0.004,
     "incident_trend_4w": 0.0,
-    "location_name": "Karol Bagh",
-    "city": "Delhi",
-    "latitude": 28.6514,
-    "longitude": 77.1907,
-    "predicted_risk_probability": 0.4077,
-    "risk_score": 40.7736,
+    "location_name_x": "Karol Bagh",
+    "city_x": "Delhi",
+    "latitude_x": 28.6514,
+    "longitude_x": 77.1907,
+    "car_percentage": 44.7,
+    "motorcycle_percentage": 34.5,
+    "bus_percentage": 10.3,
+    "truck_percentage": 10.5,
+    "moving_vehicle_percentage": 80.1,
+    "slow_vehicle_percentage": 10.4,
+    "stopped_vehicle_percentage": 9.5,
+    "location_name_y": "Karol Bagh",
+    "city_y": "Delhi",
+    "latitude_y": 28.6514,
+    "longitude_y": 77.1907,
+    "predicted_risk_probability": 0.4093,
+    "risk_score": 40.9319,
     "population_exposure_score": 13.8947,
     "vehicle_exposure_score": 10.0074,
     "temporal_trend_score": 52.6211,
-    "priority_score": 29.6778,
-    "priority_rank": 41,
+    "priority_score": 29.741,
+    "priority_rank": 43,
     "priority_level": "LOW",
-    "risk_prob": 0.4077
+    "risk_prob": 0.4093
   }
 }

@@ -1,40 +1,40 @@
 {
   "zone_id": "Zone_06",
-  "location_name": "Borivali",
-  "city": "Mumbai",
+  "location_name": "Zone_06",
+  "city": "",
   "zone_type": "University_District",
   "week": 34,
-  "latitude": 19.2307,
-  "longitude": 72.8567,
+  "latitude": 0.0,
+  "longitude": 0.0,
   "risk_analysis": {
-    "predicted_risk_probability": 0.6179,
-    "predicted_risk_percentage": 61.79,
-    "risk_label": "HIGH RISK",
-    "risk_color": "#f97316",
-    "risk_delta_vs_prev_week": 41.1199,
+    "predicted_risk_probability": 0.4659,
+    "predicted_risk_percentage": 46.59,
+    "risk_label": "MODERATE RISK",
+    "risk_color": "#eab308",
+    "risk_delta_vs_prev_week": 7.4976,
     "actual_incident": 0
   },
   "priority": {
-    "priority_score": 49.4804,
-    "priority_rank": 24,
+    "priority_score": 43.4037,
+    "priority_rank": 30,
     "priority_level": "MODERATE",
     "components": {
-      "risk_score": 61.7852,
+      "risk_score": 46.5935,
       "population_exposure_score": 53.0642,
       "vehicle_exposure_score": 35.3521,
       "temporal_trend_score": 29.5322
     },
     "explanation": {
       "priority_level": "MODERATE",
-      "priority_score": 49.5,
+      "priority_score": 43.4,
       "top_contributors": [
         {
           "factor": "Risk Score",
           "icon": "\ud83d\udfe1",
-          "value": "62/100",
+          "value": "47/100",
           "impact": "MEDIUM",
           "detail": "Moderate model-estimated risk",
-          "weight": 61.7852
+          "weight": 46.5935
         },
         {
           "factor": "Population Exposure",
@@ -106,7 +106,47 @@
       "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
     }
   ],
-  "executive_briefing": "Borivali is in a critical safety state with 62% incident risk. Continue routine monitoring. Optimizing signals could save 1155 kg CO2/week, equivalent to 2860 trees/year.",
+  "executive_briefing": "Zone_06 shows elevated risk at 47%. Continue routine monitoring. Optimizing signals could save 1155 kg CO2/week, equivalent to 2860 trees/year.",
+  "civilian_road_safety_radar": {
+    "current_week": {
+      "week": 34,
+      "risk_score": 46.6,
+      "risk_percentage": "47%",
+      "risk_badge": "MODERATE RISK",
+      "risk_color": "#eab308",
+      "description": "Corridor operating within normal baseline.",
+      "crashes_reported": 0
+    },
+    "why_accidents_might_happen": {
+      "primary_collision_cause": {
+        "title": "Congestion Bottleneck & Merge Conflicts",
+        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+      },
+      "behavior_factor": {
+        "title": "Tailgating & Speed Variance",
+        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+      },
+      "street_environment": {
+        "zone_type": "University_District",
+        "average_speed_kmh": 34.98,
+        "congestion_level": 32.4
+      }
+    },
+    "civilian_safety_guide": {
+      "for_drivers": {
+        "action": "Increase Following Distance",
+        "details": "Maintain 3 car lengths buffer during peak rush hours."
+      },
+      "for_pedestrians_and_cyclists": {
+        "action": "Double-Check Turning Vehicles",
+        "details": "Make eye contact with turning drivers at intersections before crossing."
+      },
+      "peak_danger_windows": {
+        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
+        "details": "Congestion peaks during evening travel windows."
+      }
+    }
+  },
   "raw_metrics": {
     "zone_id": "Zone_06",
     "week": 34,
@@ -153,18 +193,29 @@
     "vehicle_density_trend_4w": -0.215,
     "speed_trend_4w": 1.664,
     "incident_trend_4w": 0.0,
-    "location_name": "Borivali",
-    "city": "Mumbai",
-    "latitude": 19.2307,
-    "longitude": 72.8567,
-    "predicted_risk_probability": 0.6179,
-    "risk_score": 61.7852,
+    "location_name_x": "Borivali",
+    "city_x": "Mumbai",
+    "latitude_x": 19.2307,
+    "longitude_x": 72.8567,
+    "car_percentage": 46.4,
+    "motorcycle_percentage": 40.9,
+    "bus_percentage": 8.3,
+    "truck_percentage": 4.4,
+    "moving_vehicle_percentage": 71.7,
+    "slow_vehicle_percentage": 15.1,
+    "stopped_vehicle_percentage": 13.2,
+    "location_name_y": "Borivali",
+    "city_y": "Mumbai",
+    "latitude_y": 19.2307,
+    "longitude_y": 72.8567,
+    "predicted_risk_probability": 0.4659,
+    "risk_score": 46.5935,
     "population_exposure_score": 53.0642,
     "vehicle_exposure_score": 35.3521,
     "temporal_trend_score": 29.5322,
-    "priority_score": 49.4804,
-    "priority_rank": 24,
+    "priority_score": 43.4037,
+    "priority_rank": 30,
     "priority_level": "MODERATE",
-    "risk_prob": 0.6179
+    "risk_prob": 0.4659
   }
 }

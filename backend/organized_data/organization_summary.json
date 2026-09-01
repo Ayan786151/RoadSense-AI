@@ -1,0 +1,78 @@
+{
+  "source_file": "benchmark_traffic_crashes.csv",
+  "total_records": 4000,
+  "total_columns": 26,
+  "weeks_count": 53,
+  "min_week": 1,
+  "max_week": 53,
+  "total_incidents": 779,
+  "overall_incident_rate_pct": 19.48,
+  "day_of_week_breakdown": {
+    "Monday": {
+      "records": 592,
+      "incidents": 124,
+      "incident_rate": 20.95
+    },
+    "Tuesday": {
+      "records": 565,
+      "incidents": 92,
+      "incident_rate": 16.28
+    },
+    "Wednesday": {
+      "records": 567,
+      "incidents": 109,
+      "incident_rate": 19.22
+    },
+    "Thursday": {
+      "records": 557,
+      "incidents": 107,
+      "incident_rate": 19.21
+    },
+    "Friday": {
+      "records": 559,
+      "incidents": 101,
+      "incident_rate": 18.07
+    },
+    "Saturday": {
+      "records": 578,
+      "incidents": 120,
+      "incident_rate": 20.76
+    },
+    "Sunday": {
+      "records": 582,
+      "incidents": 126,
+      "incident_rate": 21.65
+    }
+  },
+  "master_csv_path": "C:\\Users\\asus\\Downloads\\traffic_sim-main (3)\\traffic_sim-main\\backend\\organized_data\\master_organized_panel.csv",
+  "by_week_dir": "C:\\Users\\asus\\Downloads\\traffic_sim-main (3)\\traffic_sim-main\\backend\\organized_data\\by_week",
+  "by_day_dir": "C:\\Users\\asus\\Downloads\\traffic_sim-main (3)\\traffic_sim-main\\backend\\organized_data\\by_day_of_week",
+  "columns": [
+    "CRASH_DATE",
+    "POSTED_SPEED_LIMIT",
+    "WEATHER_CONDITION",
+    "LIGHTING_CONDITION",
+    "FIRST_CRASH_TYPE",
+    "TRAFFICWAY_TYPE",
+    "ALIGNMENT",
+    "ROADWAY_SURFACE_COND",
+    "ROAD_DEFECT",
+    "INTERSECTION_RELATED_I",
+    "PRIM_CONTRIBUTORY_CAUSE",
+    "BEAT_OF_OCCURRENCE",
+    "NUM_UNITS",
+    "CRASH_MONTH",
+    "INJURIES_TOTAL",
+    "CRASH_DAY_OF_WEEK",
+    "LATITUDE",
+    "LONGITUDE",
+    "week",
+    "day_of_week",
+    "day_name",
+    "month",
+    "hour",
+    "time_of_day",
+    "is_weekend",
+    "incident_occurred"
+  ]
+}

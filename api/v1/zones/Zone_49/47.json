@@ -1,41 +1,33 @@
 {
   "zone_id": "Zone_49",
-  "location_name": "Sholinganallur",
-  "city": "Chennai",
+  "location_name": "Zone_49",
+  "city": "",
   "zone_type": "University_District",
   "week": 47,
-  "latitude": 12.901,
-  "longitude": 80.2279,
+  "latitude": 0.0,
+  "longitude": 0.0,
   "risk_analysis": {
-    "predicted_risk_probability": 0.7404,
-    "predicted_risk_percentage": 74.04,
-    "risk_label": "HIGH RISK",
-    "risk_color": "#f97316",
-    "risk_delta_vs_prev_week": 15.3907,
+    "predicted_risk_probability": 0.4829,
+    "predicted_risk_percentage": 48.29,
+    "risk_label": "MODERATE RISK",
+    "risk_color": "#eab308",
+    "risk_delta_vs_prev_week": 1.777,
     "actual_incident": 0
   },
   "priority": {
-    "priority_score": 67.098,
-    "priority_rank": 3,
+    "priority_score": 56.7994,
+    "priority_rank": 6,
     "priority_level": "HIGH",
     "components": {
-      "risk_score": 74.0383,
+      "risk_score": 48.2919,
       "population_exposure_score": 73.1231,
       "vehicle_exposure_score": 70.6421,
       "temporal_trend_score": 33.8232
     },
     "explanation": {
       "priority_level": "HIGH",
-      "priority_score": 67.1,
+      "priority_score": 56.8,
       "top_contributors": [
-        {
-          "factor": "Risk Score",
-          "icon": "\ud83d\udd34",
-          "value": "74/100",
-          "impact": "HIGH",
-          "detail": "Model-estimated risk score is in the critical range",
-          "weight": 74.0383
-        },
         {
           "factor": "Population Exposure",
           "icon": "\ud83d\udc65",
@@ -53,6 +45,14 @@
           "weight": 70.6421
         },
         {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "48/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 48.2919
+        },
+        {
           "factor": "Congestion",
           "icon": "\ud83d\ude97",
           "value": "65/100",
@@ -62,7 +62,7 @@
         }
       ],
       "total_factors": 4,
-      "assessment": "This zone shows significant risk elevation driven by Risk Score, Population Exposure. Proactive intervention should be scheduled within the current planning cycle."
+      "assessment": "This zone shows significant risk elevation driven by Population Exposure, Vehicle Density. Proactive intervention should be scheduled within the current planning cycle."
     }
   },
   "telemetry": {
@@ -112,17 +112,49 @@
       "severity": "MEDIUM",
       "description": "High population density zone with significant traffic congestion creates pedestrian exposure risk.",
       "action": "Install protected pedestrian crossings, improve sidewalk infrastructure, and add pedestrian countdown signals."
-    },
-    {
-      "id": "MONITORING_UPGRADE",
-      "name": "Enhanced Monitoring & CCTV Coverage",
-      "icon": "\ud83d\udcf9",
-      "severity": "MEDIUM",
-      "description": "High-risk zone with significant population exposure warrants improved surveillance.",
-      "action": "Install additional CCTV cameras and integrate with traffic management center for real-time monitoring."
     }
   ],
-  "executive_briefing": "Sholinganallur is in a critical safety state with 74% incident risk. Signal optimization recommended \u2014 congestion at 65/100 with speeds averaging 46 km/h. Optimizing signals could save 5720 kg CO2/week, equivalent to 14163 trees/year.",
+  "executive_briefing": "Zone_49 shows elevated risk at 48%. Signal optimization recommended \u2014 congestion at 65/100 with speeds averaging 46 km/h. Optimizing signals could save 5720 kg CO2/week, equivalent to 14163 trees/year.",
+  "civilian_road_safety_radar": {
+    "current_week": {
+      "week": 47,
+      "risk_score": 48.3,
+      "risk_percentage": "48%",
+      "risk_badge": "MODERATE RISK",
+      "risk_color": "#eab308",
+      "description": "Corridor operating within normal baseline.",
+      "crashes_reported": 0
+    },
+    "why_accidents_might_happen": {
+      "primary_collision_cause": {
+        "title": "Congestion Bottleneck & Merge Conflicts",
+        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+      },
+      "behavior_factor": {
+        "title": "Tailgating & Speed Variance",
+        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+      },
+      "street_environment": {
+        "zone_type": "University_District",
+        "average_speed_kmh": 45.61,
+        "congestion_level": 64.98
+      }
+    },
+    "civilian_safety_guide": {
+      "for_drivers": {
+        "action": "Increase Following Distance",
+        "details": "Maintain 3 car lengths buffer during peak rush hours."
+      },
+      "for_pedestrians_and_cyclists": {
+        "action": "Double-Check Turning Vehicles",
+        "details": "Make eye contact with turning drivers at intersections before crossing."
+      },
+      "peak_danger_windows": {
+        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
+        "details": "Congestion peaks during evening travel windows."
+      }
+    }
+  },
   "raw_metrics": {
     "zone_id": "Zone_49",
     "week": 47,
@@ -169,18 +201,29 @@
     "vehicle_density_trend_4w": 0.854,
     "speed_trend_4w": 0.592,
     "incident_trend_4w": -0.4,
-    "location_name": "Sholinganallur",
-    "city": "Chennai",
-    "latitude": 12.901,
-    "longitude": 80.2279,
-    "predicted_risk_probability": 0.7404,
-    "risk_score": 74.0383,
+    "location_name_x": "Sholinganallur",
+    "city_x": "Chennai",
+    "latitude_x": 12.901,
+    "longitude_x": 80.2279,
+    "car_percentage": 41.3,
+    "motorcycle_percentage": 37.6,
+    "bus_percentage": 14.0,
+    "truck_percentage": 7.1,
+    "moving_vehicle_percentage": 48.7,
+    "slow_vehicle_percentage": 40.8,
+    "stopped_vehicle_percentage": 10.5,
+    "location_name_y": "Sholinganallur",
+    "city_y": "Chennai",
+    "latitude_y": 12.901,
+    "longitude_y": 80.2279,
+    "predicted_risk_probability": 0.4829,
+    "risk_score": 48.2919,
     "population_exposure_score": 73.1231,
     "vehicle_exposure_score": 70.6421,
     "temporal_trend_score": 33.8232,
-    "priority_score": 67.098,
-    "priority_rank": 3,
+    "priority_score": 56.7994,
+    "priority_rank": 6,
     "priority_level": "HIGH",
-    "risk_prob": 0.7404
+    "risk_prob": 0.4829
   }
 }

@@ -1,32 +1,32 @@
 {
   "zone_id": "Zone_49",
-  "location_name": "Sholinganallur",
-  "city": "Chennai",
+  "location_name": "Zone_49",
+  "city": "",
   "zone_type": "University_District",
   "week": 23,
-  "latitude": 12.901,
-  "longitude": 80.2279,
+  "latitude": 0.0,
+  "longitude": 0.0,
   "risk_analysis": {
-    "predicted_risk_probability": 0.71,
-    "predicted_risk_percentage": 71.0,
+    "predicted_risk_probability": 0.6773,
+    "predicted_risk_percentage": 67.73,
     "risk_label": "HIGH RISK",
     "risk_color": "#f97316",
-    "risk_delta_vs_prev_week": -10.6011,
+    "risk_delta_vs_prev_week": -1.7051,
     "actual_incident": 1
   },
   "priority": {
-    "priority_score": 67.5947,
-    "priority_rank": 6,
+    "priority_score": 66.286,
+    "priority_rank": 8,
     "priority_level": "HIGH",
     "components": {
-      "risk_score": 71.0001,
+      "risk_score": 67.7282,
       "population_exposure_score": 73.1231,
       "vehicle_exposure_score": 81.1331,
       "temporal_trend_score": 31.2486
     },
     "explanation": {
       "priority_level": "HIGH",
-      "priority_score": 67.6,
+      "priority_score": 66.3,
       "top_contributors": [
         {
           "factor": "Vehicle Density",
@@ -46,11 +46,11 @@
         },
         {
           "factor": "Risk Score",
-          "icon": "\ud83d\udd34",
-          "value": "71/100",
-          "impact": "HIGH",
-          "detail": "Model-estimated risk score is in the critical range",
-          "weight": 71.0001
+          "icon": "\ud83d\udfe1",
+          "value": "68/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 67.7282
         },
         {
           "factor": "Congestion",
@@ -112,17 +112,49 @@
       "severity": "MEDIUM",
       "description": "High population density zone with significant traffic congestion creates pedestrian exposure risk.",
       "action": "Install protected pedestrian crossings, improve sidewalk infrastructure, and add pedestrian countdown signals."
-    },
-    {
-      "id": "MONITORING_UPGRADE",
-      "name": "Enhanced Monitoring & CCTV Coverage",
-      "icon": "\ud83d\udcf9",
-      "severity": "MEDIUM",
-      "description": "High-risk zone with significant population exposure warrants improved surveillance.",
-      "action": "Install additional CCTV cameras and integrate with traffic management center for real-time monitoring."
     }
   ],
-  "executive_briefing": "Sholinganallur is in a critical safety state with 71% incident risk. Continue routine monitoring. Optimizing signals could save 4992 kg CO2/week, equivalent to 12360 trees/year.",
+  "executive_briefing": "Zone_49 is in a critical safety state with 68% incident risk. Continue routine monitoring. Optimizing signals could save 4992 kg CO2/week, equivalent to 12360 trees/year.",
+  "civilian_road_safety_radar": {
+    "current_week": {
+      "week": 23,
+      "risk_score": 67.7,
+      "risk_percentage": "68%",
+      "risk_badge": "HIGH RISK",
+      "risk_color": "#f97316",
+      "description": "Elevated collision activity observed.",
+      "crashes_reported": 0
+    },
+    "why_accidents_might_happen": {
+      "primary_collision_cause": {
+        "title": "Congestion Bottleneck & Merge Conflicts",
+        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+      },
+      "behavior_factor": {
+        "title": "Tailgating & Speed Variance",
+        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+      },
+      "street_environment": {
+        "zone_type": "University_District",
+        "average_speed_kmh": 47.54,
+        "congestion_level": 59.5
+      }
+    },
+    "civilian_safety_guide": {
+      "for_drivers": {
+        "action": "Increase Following Distance",
+        "details": "Maintain 3 car lengths buffer during peak rush hours."
+      },
+      "for_pedestrians_and_cyclists": {
+        "action": "Double-Check Turning Vehicles",
+        "details": "Make eye contact with turning drivers at intersections before crossing."
+      },
+      "peak_danger_windows": {
+        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
+        "details": "Congestion peaks during evening travel windows."
+      }
+    }
+  },
   "raw_metrics": {
     "zone_id": "Zone_49",
     "week": 23,
@@ -169,18 +201,29 @@
     "vehicle_density_trend_4w": -4.375,
     "speed_trend_4w": 4.35,
     "incident_trend_4w": 0.0,
-    "location_name": "Sholinganallur",
-    "city": "Chennai",
-    "latitude": 12.901,
-    "longitude": 80.2279,
-    "predicted_risk_probability": 0.71,
-    "risk_score": 71.0001,
+    "location_name_x": "Sholinganallur",
+    "city_x": "Chennai",
+    "latitude_x": 12.901,
+    "longitude_x": 80.2279,
+    "car_percentage": 45.2,
+    "motorcycle_percentage": 39.1,
+    "bus_percentage": 11.7,
+    "truck_percentage": 4.0,
+    "moving_vehicle_percentage": 50.3,
+    "slow_vehicle_percentage": 26.0,
+    "stopped_vehicle_percentage": 23.6,
+    "location_name_y": "Sholinganallur",
+    "city_y": "Chennai",
+    "latitude_y": 12.901,
+    "longitude_y": 80.2279,
+    "predicted_risk_probability": 0.6773,
+    "risk_score": 67.7282,
     "population_exposure_score": 73.1231,
     "vehicle_exposure_score": 81.1331,
     "temporal_trend_score": 31.2486,
-    "priority_score": 67.5947,
-    "priority_rank": 6,
+    "priority_score": 66.286,
+    "priority_rank": 8,
     "priority_level": "HIGH",
-    "risk_prob": 0.71
+    "risk_prob": 0.6773
   }
 }

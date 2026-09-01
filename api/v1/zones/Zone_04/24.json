@@ -1,40 +1,40 @@
 {
   "zone_id": "Zone_04",
-  "location_name": "Dadar",
-  "city": "Mumbai",
+  "location_name": "Zone_04",
+  "city": "",
   "zone_type": "Highway_Junction",
   "week": 24,
-  "latitude": 19.0178,
-  "longitude": 72.8478,
+  "latitude": 0.0,
+  "longitude": 0.0,
   "risk_analysis": {
-    "predicted_risk_probability": 0.1635,
-    "predicted_risk_percentage": 16.35,
+    "predicted_risk_probability": 0.2718,
+    "predicted_risk_percentage": 27.18,
     "risk_label": "LOW RISK",
     "risk_color": "#22c55e",
-    "risk_delta_vs_prev_week": 3.2083,
+    "risk_delta_vs_prev_week": 8.7459,
     "actual_incident": 0
   },
   "priority": {
-    "priority_score": 14.9713,
-    "priority_rank": 49,
+    "priority_score": 19.3041,
+    "priority_rank": 48,
     "priority_level": "LOW",
     "components": {
-      "risk_score": 16.3519,
+      "risk_score": 27.184,
       "population_exposure_score": 7.5724,
       "vehicle_exposure_score": 3.6181,
       "temporal_trend_score": 38.7586
     },
     "explanation": {
       "priority_level": "LOW",
-      "priority_score": 15.0,
+      "priority_score": 19.3,
       "top_contributors": [
         {
           "factor": "Risk Score",
           "icon": "\ud83d\udfe2",
-          "value": "16/100",
+          "value": "27/100",
           "impact": "LOW",
           "detail": "Risk score within acceptable range",
-          "weight": 16.3519
+          "weight": 27.184
         }
       ],
       "total_factors": 1,
@@ -90,7 +90,47 @@
       "action": "Continue routine monitoring. No immediate intervention required."
     }
   ],
-  "executive_briefing": "Dadar is within safe operating parameters (16% risk). Continue routine monitoring. Optimizing signals could save 38 kg CO2/week, equivalent to 93 trees/year.",
+  "executive_briefing": "Zone_04 is within safe operating parameters (27% risk). Continue routine monitoring. Optimizing signals could save 38 kg CO2/week, equivalent to 93 trees/year.",
+  "civilian_road_safety_radar": {
+    "current_week": {
+      "week": 24,
+      "risk_score": 27.2,
+      "risk_percentage": "27%",
+      "risk_badge": "LOW RISK",
+      "risk_color": "#22c55e",
+      "description": "Corridor operating within normal baseline.",
+      "crashes_reported": 0
+    },
+    "why_accidents_might_happen": {
+      "primary_collision_cause": {
+        "title": "Congestion Bottleneck & Merge Conflicts",
+        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+      },
+      "behavior_factor": {
+        "title": "Tailgating & Speed Variance",
+        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+      },
+      "street_environment": {
+        "zone_type": "Highway_Junction",
+        "average_speed_kmh": 59.62,
+        "congestion_level": 5.57
+      }
+    },
+    "civilian_safety_guide": {
+      "for_drivers": {
+        "action": "Increase Following Distance",
+        "details": "Maintain 3 car lengths buffer during peak rush hours."
+      },
+      "for_pedestrians_and_cyclists": {
+        "action": "Double-Check Turning Vehicles",
+        "details": "Make eye contact with turning drivers at intersections before crossing."
+      },
+      "peak_danger_windows": {
+        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
+        "details": "Congestion peaks during evening travel windows."
+      }
+    }
+  },
   "raw_metrics": {
     "zone_id": "Zone_04",
     "week": 24,
@@ -137,18 +177,29 @@
     "vehicle_density_trend_4w": -2.847,
     "speed_trend_4w": -0.407,
     "incident_trend_4w": 0.0,
-    "location_name": "Dadar",
-    "city": "Mumbai",
-    "latitude": 19.0178,
-    "longitude": 72.8478,
-    "predicted_risk_probability": 0.1635,
-    "risk_score": 16.3519,
+    "location_name_x": "Dadar",
+    "city_x": "Mumbai",
+    "latitude_x": 19.0178,
+    "longitude_x": 72.8478,
+    "car_percentage": 45.5,
+    "motorcycle_percentage": 40.5,
+    "bus_percentage": 9.1,
+    "truck_percentage": 4.9,
+    "moving_vehicle_percentage": 86.7,
+    "slow_vehicle_percentage": 11.7,
+    "stopped_vehicle_percentage": 1.7,
+    "location_name_y": "Dadar",
+    "city_y": "Mumbai",
+    "latitude_y": 19.0178,
+    "longitude_y": 72.8478,
+    "predicted_risk_probability": 0.2718,
+    "risk_score": 27.184,
     "population_exposure_score": 7.5724,
     "vehicle_exposure_score": 3.6181,
     "temporal_trend_score": 38.7586,
-    "priority_score": 14.9713,
-    "priority_rank": 49,
+    "priority_score": 19.3041,
+    "priority_rank": 48,
     "priority_level": "LOW",
-    "risk_prob": 0.1635
+    "risk_prob": 0.2718
   }
 }

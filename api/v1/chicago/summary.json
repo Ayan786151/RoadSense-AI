@@ -1,0 +1,18 @@
+{
+  "status": "OPERATIONAL",
+  "city": "Chicago",
+  "total_zones": 276,
+  "current_period": "2026-W33",
+  "upcoming_period": "2026-W34",
+  "model_accuracy_pct": 89.91,
+  "top_high_risk_zone": {
+    "rank": 1,
+    "zone_id": "1655",
+    "zone_name": "O'Hare Airport - Multi-Modal Facility & Rental Car Concourse",
+    "district": "16th District - Jefferson Park",
+    "forecast_risk_probability": 0.601,
+    "forecast_risk_percentage": "60%",
+    "risk_badge": "[PREDICTED: MODERATE CAUTION]",
+    "civilian_advisory": "Exercise caution at major signalized crossroads and bus transit stops."
+  }
+}

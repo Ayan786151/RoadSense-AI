@@ -20,6 +20,12 @@ venv/
 # Generated data files
 data/*.csv
 data/sessions/
+data/input_csv/
+
+# Large raw portal exports (>50MB / GitHub limits)
+backend/input_csv/Traffic_Crashes_*.csv
+backend/organized_data/*.csv
+!backend/input_csv/benchmark_traffic_crashes.csv
 
 # Video files
 *.mp4

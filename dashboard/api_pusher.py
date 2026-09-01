@@ -288,6 +288,48 @@ def build_static_api():
                 "interventions": interventions,
                 "executive_briefing": briefing,
 
+                # Civilian Road Safety Radar (Preserving all existing keys)
+                "civilian_road_safety_radar": {
+                    "current_week": {
+                        "week": week,
+                        "risk_score": round(risk_prob * 100.0, 1) if risk_prob is not None else None,
+                        "risk_percentage": f"{round(risk_prob * 100.0):.0f}%" if risk_prob is not None else "N/A",
+                        "risk_badge": risk_badge,
+                        "risk_color": risk_color,
+                        "description": "Elevated collision activity observed." if risk_prob and risk_prob >= 0.55 else "Corridor operating within normal baseline.",
+                        "crashes_reported": int(row.get("actual_incident", 0))
+                    },
+                    "why_accidents_might_happen": {
+                        "primary_collision_cause": {
+                            "title": "Congestion Bottleneck & Merge Conflicts",
+                            "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+                        },
+                        "behavior_factor": {
+                            "title": "Tailgating & Speed Variance",
+                            "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+                        },
+                        "street_environment": {
+                            "zone_type": str(row.get("zone_type", "")),
+                            "average_speed_kmh": float(row["average_speed"]),
+                            "congestion_level": float(row["congestion"])
+                        }
+                    },
+                    "civilian_safety_guide": {
+                        "for_drivers": {
+                            "action": "Increase Following Distance",
+                            "details": "Maintain 3 car lengths buffer during peak rush hours."
+                        },
+                        "for_pedestrians_and_cyclists": {
+                            "action": "Double-Check Turning Vehicles",
+                            "details": "Make eye contact with turning drivers at intersections before crossing."
+                        },
+                        "peak_danger_windows": {
+                            "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
+                            "details": "Congestion peaks during evening travel windows."
+                        }
+                    }
+                },
+
                 # Full raw feature vector
                 "raw_metrics": clean_for_json(row_dict)
             }
@@ -361,6 +403,13 @@ def build_static_api():
                 "city_total_co2_savings_kg_per_week": round(total_co2_savings, 2)
             }
         }, f, indent=2)
+
+    # 6. Push Chicago Civilian Road Safety Radar Endpoints
+    try:
+        from backend.civilian_api_builder import push_civilian_safety_radar_to_api
+        push_civilian_safety_radar_to_api()
+    except Exception as e:
+        print(f"[!] Warning: Civilian safety radar API generation: {e}")
 
     print(f"[+] Complete! Rich REST API generated at ./{api_dir}/")
 

@@ -1,32 +1,32 @@
 {
   "zone_id": "Zone_24",
-  "location_name": "Nehru Place",
-  "city": "Delhi",
+  "location_name": "Zone_24",
+  "city": "",
   "zone_type": "Commercial_Downtown",
   "week": 51,
-  "latitude": 28.5491,
-  "longitude": 77.2519,
+  "latitude": 0.0,
+  "longitude": 0.0,
   "risk_analysis": {
-    "predicted_risk_probability": 0.1911,
-    "predicted_risk_percentage": 19.11,
+    "predicted_risk_probability": 0.2515,
+    "predicted_risk_percentage": 25.15,
     "risk_label": "LOW RISK",
     "risk_color": "#22c55e",
-    "risk_delta_vs_prev_week": -3.1011,
+    "risk_delta_vs_prev_week": -7.832,
     "actual_incident": 0
   },
   "priority": {
-    "priority_score": 32.7163,
+    "priority_score": 35.1338,
     "priority_rank": 31,
-    "priority_level": "LOW",
+    "priority_level": "MODERATE",
     "components": {
-      "risk_score": 19.1088,
+      "risk_score": 25.1525,
       "population_exposure_score": 52.2523,
       "vehicle_exposure_score": 27.0428,
       "temporal_trend_score": 44.0077
     },
     "explanation": {
-      "priority_level": "LOW",
-      "priority_score": 32.7,
+      "priority_level": "MODERATE",
+      "priority_score": 35.1,
       "top_contributors": [
         {
           "factor": "Population Exposure",
@@ -39,14 +39,14 @@
         {
           "factor": "Risk Score",
           "icon": "\ud83d\udfe2",
-          "value": "19/100",
+          "value": "25/100",
           "impact": "LOW",
           "detail": "Risk score within acceptable range",
-          "weight": 19.1088
+          "weight": 25.1525
         }
       ],
       "total_factors": 2,
-      "assessment": "This zone is currently within acceptable safety parameters. Routine monitoring is sufficient."
+      "assessment": "This zone has moderate risk levels with contributing factors: Population Exposure. Continue monitoring and schedule review if conditions worsen."
     }
   },
   "telemetry": {
@@ -98,7 +98,47 @@
       "action": "Continue routine monitoring. No immediate intervention required."
     }
   ],
-  "executive_briefing": "Nehru Place is within safe operating parameters (19% risk). Continue routine monitoring. Optimizing signals could save 448 kg CO2/week, equivalent to 1108 trees/year.",
+  "executive_briefing": "Zone_24 is within safe operating parameters (25% risk). Continue routine monitoring. Optimizing signals could save 448 kg CO2/week, equivalent to 1108 trees/year.",
+  "civilian_road_safety_radar": {
+    "current_week": {
+      "week": 51,
+      "risk_score": 25.2,
+      "risk_percentage": "25%",
+      "risk_badge": "LOW RISK",
+      "risk_color": "#22c55e",
+      "description": "Corridor operating within normal baseline.",
+      "crashes_reported": 0
+    },
+    "why_accidents_might_happen": {
+      "primary_collision_cause": {
+        "title": "Congestion Bottleneck & Merge Conflicts",
+        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+      },
+      "behavior_factor": {
+        "title": "Tailgating & Speed Variance",
+        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+      },
+      "street_environment": {
+        "zone_type": "Commercial_Downtown",
+        "average_speed_kmh": 53.99,
+        "congestion_level": 17.45
+      }
+    },
+    "civilian_safety_guide": {
+      "for_drivers": {
+        "action": "Increase Following Distance",
+        "details": "Maintain 3 car lengths buffer during peak rush hours."
+      },
+      "for_pedestrians_and_cyclists": {
+        "action": "Double-Check Turning Vehicles",
+        "details": "Make eye contact with turning drivers at intersections before crossing."
+      },
+      "peak_danger_windows": {
+        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
+        "details": "Congestion peaks during evening travel windows."
+      }
+    }
+  },
   "raw_metrics": {
     "zone_id": "Zone_24",
     "week": 51,
@@ -145,18 +185,29 @@
     "vehicle_density_trend_4w": -1.917,
     "speed_trend_4w": -2.164,
     "incident_trend_4w": 0.0,
-    "location_name": "Nehru Place",
-    "city": "Delhi",
-    "latitude": 28.5491,
-    "longitude": 77.2519,
-    "predicted_risk_probability": 0.1911,
-    "risk_score": 19.1088,
+    "location_name_x": "Nehru Place",
+    "city_x": "Delhi",
+    "latitude_x": 28.5491,
+    "longitude_x": 77.2519,
+    "car_percentage": 44.2,
+    "motorcycle_percentage": 41.9,
+    "bus_percentage": 9.0,
+    "truck_percentage": 4.9,
+    "moving_vehicle_percentage": 74.0,
+    "slow_vehicle_percentage": 17.8,
+    "stopped_vehicle_percentage": 8.2,
+    "location_name_y": "Nehru Place",
+    "city_y": "Delhi",
+    "latitude_y": 28.5491,
+    "longitude_y": 77.2519,
+    "predicted_risk_probability": 0.2515,
+    "risk_score": 25.1525,
     "population_exposure_score": 52.2523,
     "vehicle_exposure_score": 27.0428,
     "temporal_trend_score": 44.0077,
-    "priority_score": 32.7163,
+    "priority_score": 35.1338,
     "priority_rank": 31,
-    "priority_level": "LOW",
-    "risk_prob": 0.1911
+    "priority_level": "MODERATE",
+    "risk_prob": 0.2515
   }
 }

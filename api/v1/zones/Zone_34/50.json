@@ -1,41 +1,33 @@
 {
   "zone_id": "Zone_34",
-  "location_name": "Chinhat",
-  "city": "Lucknow",
+  "location_name": "Zone_34",
+  "city": "",
   "zone_type": "Industrial_Corridor",
   "week": 50,
-  "latitude": 26.884,
-  "longitude": 81.05,
+  "latitude": 0.0,
+  "longitude": 0.0,
   "risk_analysis": {
-    "predicted_risk_probability": 0.861,
-    "predicted_risk_percentage": 86.1,
+    "predicted_risk_probability": 0.7886,
+    "predicted_risk_percentage": 78.86,
     "risk_label": "CRITICAL RISK",
     "risk_color": "#ef4444",
-    "risk_delta_vs_prev_week": 5.769,
+    "risk_delta_vs_prev_week": 21.5698,
     "actual_incident": 1
   },
   "priority": {
-    "priority_score": 60.9626,
-    "priority_rank": 9,
+    "priority_score": 58.0685,
+    "priority_rank": 10,
     "priority_level": "HIGH",
     "components": {
-      "risk_score": 86.0951,
+      "risk_score": 78.8599,
       "population_exposure_score": 14.0743,
       "vehicle_exposure_score": 55.826,
       "temporal_trend_score": 78.9386
     },
     "explanation": {
       "priority_level": "HIGH",
-      "priority_score": 61.0,
+      "priority_score": 58.1,
       "top_contributors": [
-        {
-          "factor": "Risk Score",
-          "icon": "\ud83d\udd34",
-          "value": "86/100",
-          "impact": "HIGH",
-          "detail": "Model-estimated risk score is in the critical range",
-          "weight": 86.0951
-        },
         {
           "factor": "Worsening Trend",
           "icon": "\ud83d\udcc8",
@@ -43,6 +35,14 @@
           "impact": "HIGH",
           "detail": "4-week congestion trend is actively worsening \u2014 conditions deteriorating",
           "weight": 78.9386
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udd34",
+          "value": "79/100",
+          "impact": "HIGH",
+          "detail": "Model-estimated risk score is in the critical range",
+          "weight": 78.8599
         },
         {
           "factor": "Congestion",
@@ -54,7 +54,7 @@
         }
       ],
       "total_factors": 3,
-      "assessment": "This zone shows significant risk elevation driven by Risk Score, Worsening Trend. Proactive intervention should be scheduled within the current planning cycle."
+      "assessment": "This zone shows significant risk elevation driven by Worsening Trend, Risk Score. Proactive intervention should be scheduled within the current planning cycle."
     }
   },
   "telemetry": {
@@ -122,7 +122,47 @@
       "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
     }
   ],
-  "executive_briefing": "Chinhat is in a critical safety state with 86% incident risk. Signal optimization recommended \u2014 congestion at 68/100 with speeds averaging 35 km/h. Optimizing signals could save 4189 kg CO2/week, equivalent to 10371 trees/year.",
+  "executive_briefing": "Zone_34 is in a critical safety state with 79% incident risk. Signal optimization recommended \u2014 congestion at 68/100 with speeds averaging 35 km/h. Optimizing signals could save 4189 kg CO2/week, equivalent to 10371 trees/year.",
+  "civilian_road_safety_radar": {
+    "current_week": {
+      "week": 50,
+      "risk_score": 78.9,
+      "risk_percentage": "79%",
+      "risk_badge": "CRITICAL RISK",
+      "risk_color": "#ef4444",
+      "description": "Elevated collision activity observed.",
+      "crashes_reported": 0
+    },
+    "why_accidents_might_happen": {
+      "primary_collision_cause": {
+        "title": "Congestion Bottleneck & Merge Conflicts",
+        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+      },
+      "behavior_factor": {
+        "title": "Tailgating & Speed Variance",
+        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+      },
+      "street_environment": {
+        "zone_type": "Industrial_Corridor",
+        "average_speed_kmh": 34.58,
+        "congestion_level": 67.57
+      }
+    },
+    "civilian_safety_guide": {
+      "for_drivers": {
+        "action": "Increase Following Distance",
+        "details": "Maintain 3 car lengths buffer during peak rush hours."
+      },
+      "for_pedestrians_and_cyclists": {
+        "action": "Double-Check Turning Vehicles",
+        "details": "Make eye contact with turning drivers at intersections before crossing."
+      },
+      "peak_danger_windows": {
+        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
+        "details": "Congestion peaks during evening travel windows."
+      }
+    }
+  },
   "raw_metrics": {
     "zone_id": "Zone_34",
     "week": 50,
@@ -169,18 +209,29 @@
     "vehicle_density_trend_4w": -0.525,
     "speed_trend_4w": -5.609,
     "incident_trend_4w": -0.3,
-    "location_name": "Chinhat",
-    "city": "Lucknow",
-    "latitude": 26.884,
-    "longitude": 81.05,
-    "predicted_risk_probability": 0.861,
-    "risk_score": 86.0951,
+    "location_name_x": "Chinhat",
+    "city_x": "Lucknow",
+    "latitude_x": 26.884,
+    "longitude_x": 81.05,
+    "car_percentage": 47.0,
+    "motorcycle_percentage": 40.0,
+    "bus_percentage": 7.9,
+    "truck_percentage": 5.1,
+    "moving_vehicle_percentage": 19.8,
+    "slow_vehicle_percentage": 36.6,
+    "stopped_vehicle_percentage": 43.6,
+    "location_name_y": "Chinhat",
+    "city_y": "Lucknow",
+    "latitude_y": 26.884,
+    "longitude_y": 81.05,
+    "predicted_risk_probability": 0.7886,
+    "risk_score": 78.8599,
     "population_exposure_score": 14.0743,
     "vehicle_exposure_score": 55.826,
     "temporal_trend_score": 78.9386,
-    "priority_score": 60.9626,
-    "priority_rank": 9,
+    "priority_score": 58.0685,
+    "priority_rank": 10,
     "priority_level": "HIGH",
-    "risk_prob": 0.861
+    "risk_prob": 0.7886
   }
 }

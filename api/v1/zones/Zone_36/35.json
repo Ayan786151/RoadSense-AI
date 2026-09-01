@@ -1,32 +1,32 @@
 {
   "zone_id": "Zone_36",
-  "location_name": "Rajajipuram",
-  "city": "Lucknow",
+  "location_name": "Zone_36",
+  "city": "",
   "zone_type": "Residential",
   "week": 35,
-  "latitude": 26.833,
-  "longitude": 80.89,
+  "latitude": 0.0,
+  "longitude": 0.0,
   "risk_analysis": {
-    "predicted_risk_probability": 0.6139,
-    "predicted_risk_percentage": 61.39,
-    "risk_label": "HIGH RISK",
-    "risk_color": "#f97316",
-    "risk_delta_vs_prev_week": -35.8206,
+    "predicted_risk_probability": 0.5212,
+    "predicted_risk_percentage": 52.12,
+    "risk_label": "MODERATE RISK",
+    "risk_color": "#eab308",
+    "risk_delta_vs_prev_week": -37.2705,
     "actual_incident": 0
   },
   "priority": {
-    "priority_score": 62.1203,
+    "priority_score": 58.4115,
     "priority_rank": 14,
     "priority_level": "HIGH",
     "components": {
-      "risk_score": 61.389,
+      "risk_score": 52.1169,
       "population_exposure_score": 81.73,
       "vehicle_exposure_score": 71.4405,
       "temporal_trend_score": 18.9605
     },
     "explanation": {
       "priority_level": "HIGH",
-      "priority_score": 62.1,
+      "priority_score": 58.4,
       "top_contributors": [
         {
           "factor": "Population Exposure",
@@ -45,20 +45,20 @@
           "weight": 71.4405
         },
         {
-          "factor": "Risk Score",
-          "icon": "\ud83d\udfe1",
-          "value": "61/100",
-          "impact": "MEDIUM",
-          "detail": "Moderate model-estimated risk",
-          "weight": 61.389
-        },
-        {
           "factor": "Violation Count",
           "icon": "\ud83d\udea8",
           "value": "12",
           "impact": "HIGH",
           "detail": "12 red-light violations recorded \u2014 intersection safety concern",
           "weight": 60
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "52/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 52.1169
         },
         {
           "factor": "Congestion",
@@ -138,7 +138,47 @@
       "action": "Activate event traffic management plan. Deploy traffic marshals and temporary signage."
     }
   ],
-  "executive_briefing": "Rajajipuram is in a critical safety state with 61% incident risk. Enforcement focus needed \u2014 12 red-light violations recorded. Optimizing signals could save 3384 kg CO2/week, equivalent to 8378 trees/year.",
+  "executive_briefing": "Zone_36 shows elevated risk at 52%. Enforcement focus needed \u2014 12 red-light violations recorded. Optimizing signals could save 3384 kg CO2/week, equivalent to 8378 trees/year.",
+  "civilian_road_safety_radar": {
+    "current_week": {
+      "week": 35,
+      "risk_score": 52.1,
+      "risk_percentage": "52%",
+      "risk_badge": "MODERATE RISK",
+      "risk_color": "#eab308",
+      "description": "Corridor operating within normal baseline.",
+      "crashes_reported": 0
+    },
+    "why_accidents_might_happen": {
+      "primary_collision_cause": {
+        "title": "Congestion Bottleneck & Merge Conflicts",
+        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+      },
+      "behavior_factor": {
+        "title": "Tailgating & Speed Variance",
+        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+      },
+      "street_environment": {
+        "zone_type": "Residential",
+        "average_speed_kmh": 52.77,
+        "congestion_level": 50.29
+      }
+    },
+    "civilian_safety_guide": {
+      "for_drivers": {
+        "action": "Increase Following Distance",
+        "details": "Maintain 3 car lengths buffer during peak rush hours."
+      },
+      "for_pedestrians_and_cyclists": {
+        "action": "Double-Check Turning Vehicles",
+        "details": "Make eye contact with turning drivers at intersections before crossing."
+      },
+      "peak_danger_windows": {
+        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
+        "details": "Congestion peaks during evening travel windows."
+      }
+    }
+  },
   "raw_metrics": {
     "zone_id": "Zone_36",
     "week": 35,
@@ -185,18 +225,29 @@
     "vehicle_density_trend_4w": -3.358,
     "speed_trend_4w": 3.313,
     "incident_trend_4w": -0.1,
-    "location_name": "Rajajipuram",
-    "city": "Lucknow",
-    "latitude": 26.833,
-    "longitude": 80.89,
-    "predicted_risk_probability": 0.6139,
-    "risk_score": 61.389,
+    "location_name_x": "Rajajipuram",
+    "city_x": "Lucknow",
+    "latitude_x": 26.833,
+    "longitude_x": 80.89,
+    "car_percentage": 36.3,
+    "motorcycle_percentage": 54.3,
+    "bus_percentage": 6.0,
+    "truck_percentage": 3.4,
+    "moving_vehicle_percentage": 41.3,
+    "slow_vehicle_percentage": 29.6,
+    "stopped_vehicle_percentage": 29.0,
+    "location_name_y": "Rajajipuram",
+    "city_y": "Lucknow",
+    "latitude_y": 26.833,
+    "longitude_y": 80.89,
+    "predicted_risk_probability": 0.5212,
+    "risk_score": 52.1169,
     "population_exposure_score": 81.73,
     "vehicle_exposure_score": 71.4405,
     "temporal_trend_score": 18.9605,
-    "priority_score": 62.1203,
+    "priority_score": 58.4115,
     "priority_rank": 14,
     "priority_level": "HIGH",
-    "risk_prob": 0.6139
+    "risk_prob": 0.5212
   }
 }

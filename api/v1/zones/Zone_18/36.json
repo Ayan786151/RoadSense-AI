@@ -1,40 +1,40 @@
 {
   "zone_id": "Zone_18",
-  "location_name": "Karol Bagh",
-  "city": "Delhi",
+  "location_name": "Zone_18",
+  "city": "",
   "zone_type": "Industrial_Corridor",
   "week": 36,
-  "latitude": 28.6514,
-  "longitude": 77.1907,
+  "latitude": 0.0,
+  "longitude": 0.0,
   "risk_analysis": {
-    "predicted_risk_probability": 0.1468,
-    "predicted_risk_percentage": 14.68,
+    "predicted_risk_probability": 0.2492,
+    "predicted_risk_percentage": 24.92,
     "risk_label": "LOW RISK",
     "risk_color": "#22c55e",
-    "risk_delta_vs_prev_week": 1.0841,
+    "risk_delta_vs_prev_week": -3.5736,
     "actual_incident": 0
   },
   "priority": {
-    "priority_score": 16.9526,
+    "priority_score": 21.0485,
     "priority_rank": 47,
     "priority_level": "LOW",
     "components": {
-      "risk_score": 14.6764,
+      "risk_score": 24.9161,
       "population_exposure_score": 13.8947,
       "vehicle_exposure_score": 0.6935,
       "temporal_trend_score": 49.798
     },
     "explanation": {
       "priority_level": "LOW",
-      "priority_score": 17.0,
+      "priority_score": 21.0,
       "top_contributors": [
         {
           "factor": "Risk Score",
           "icon": "\ud83d\udfe2",
-          "value": "15/100",
+          "value": "25/100",
           "impact": "LOW",
           "detail": "Risk score within acceptable range",
-          "weight": 14.6764
+          "weight": 24.9161
         }
       ],
       "total_factors": 1,
@@ -90,7 +90,47 @@
       "action": "Continue routine monitoring. No immediate intervention required."
     }
   ],
-  "executive_briefing": "Karol Bagh is within safe operating parameters (15% risk). Continue routine monitoring. Optimizing signals could save 79 kg CO2/week, equivalent to 195 trees/year.",
+  "executive_briefing": "Zone_18 is within safe operating parameters (25% risk). Continue routine monitoring. Optimizing signals could save 79 kg CO2/week, equivalent to 195 trees/year.",
+  "civilian_road_safety_radar": {
+    "current_week": {
+      "week": 36,
+      "risk_score": 24.9,
+      "risk_percentage": "25%",
+      "risk_badge": "LOW RISK",
+      "risk_color": "#22c55e",
+      "description": "Corridor operating within normal baseline.",
+      "crashes_reported": 0
+    },
+    "why_accidents_might_happen": {
+      "primary_collision_cause": {
+        "title": "Congestion Bottleneck & Merge Conflicts",
+        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+      },
+      "behavior_factor": {
+        "title": "Tailgating & Speed Variance",
+        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+      },
+      "street_environment": {
+        "zone_type": "Industrial_Corridor",
+        "average_speed_kmh": 66.58,
+        "congestion_level": 9.82
+      }
+    },
+    "civilian_safety_guide": {
+      "for_drivers": {
+        "action": "Increase Following Distance",
+        "details": "Maintain 3 car lengths buffer during peak rush hours."
+      },
+      "for_pedestrians_and_cyclists": {
+        "action": "Double-Check Turning Vehicles",
+        "details": "Make eye contact with turning drivers at intersections before crossing."
+      },
+      "peak_danger_windows": {
+        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
+        "details": "Congestion peaks during evening travel windows."
+      }
+    }
+  },
   "raw_metrics": {
     "zone_id": "Zone_18",
     "week": 36,
@@ -137,18 +177,29 @@
     "vehicle_density_trend_4w": 3.181,
     "speed_trend_4w": -0.115,
     "incident_trend_4w": 0.0,
-    "location_name": "Karol Bagh",
-    "city": "Delhi",
-    "latitude": 28.6514,
-    "longitude": 77.1907,
-    "predicted_risk_probability": 0.1468,
-    "risk_score": 14.6764,
+    "location_name_x": "Karol Bagh",
+    "city_x": "Delhi",
+    "latitude_x": 28.6514,
+    "longitude_x": 77.1907,
+    "car_percentage": 44.0,
+    "motorcycle_percentage": 38.6,
+    "bus_percentage": 12.7,
+    "truck_percentage": 4.7,
+    "moving_vehicle_percentage": 73.9,
+    "slow_vehicle_percentage": 16.3,
+    "stopped_vehicle_percentage": 9.9,
+    "location_name_y": "Karol Bagh",
+    "city_y": "Delhi",
+    "latitude_y": 28.6514,
+    "longitude_y": 77.1907,
+    "predicted_risk_probability": 0.2492,
+    "risk_score": 24.9161,
     "population_exposure_score": 13.8947,
     "vehicle_exposure_score": 0.6935,
     "temporal_trend_score": 49.798,
-    "priority_score": 16.9526,
+    "priority_score": 21.0485,
     "priority_rank": 47,
     "priority_level": "LOW",
-    "risk_prob": 0.1468
+    "risk_prob": 0.2492
   }
 }

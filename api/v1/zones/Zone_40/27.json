@@ -1,40 +1,40 @@
 {
   "zone_id": "Zone_40",
-  "location_name": "Velachery",
-  "city": "Chennai",
+  "location_name": "Zone_40",
+  "city": "",
   "zone_type": "University_District",
   "week": 27,
-  "latitude": 12.9815,
-  "longitude": 80.218,
+  "latitude": 0.0,
+  "longitude": 0.0,
   "risk_analysis": {
-    "predicted_risk_probability": 0.6167,
-    "predicted_risk_percentage": 61.67,
+    "predicted_risk_probability": 0.6014,
+    "predicted_risk_percentage": 60.14,
     "risk_label": "HIGH RISK",
     "risk_color": "#f97316",
-    "risk_delta_vs_prev_week": 9.4223,
+    "risk_delta_vs_prev_week": 15.4374,
     "actual_incident": 1
   },
   "priority": {
-    "priority_score": 53.1898,
-    "priority_rank": 15,
+    "priority_score": 52.5755,
+    "priority_rank": 17,
     "priority_level": "MODERATE",
     "components": {
-      "risk_score": 61.6746,
+      "risk_score": 60.1386,
       "population_exposure_score": 47.1945,
       "vehicle_exposure_score": 51.346,
       "temporal_trend_score": 43.0145
     },
     "explanation": {
       "priority_level": "MODERATE",
-      "priority_score": 53.2,
+      "priority_score": 52.6,
       "top_contributors": [
         {
           "factor": "Risk Score",
           "icon": "\ud83d\udfe1",
-          "value": "62/100",
+          "value": "60/100",
           "impact": "MEDIUM",
           "detail": "Moderate model-estimated risk",
-          "weight": 61.6746
+          "weight": 60.1386
         },
         {
           "factor": "Population Exposure",
@@ -106,7 +106,47 @@
       "action": "Continue routine monitoring."
     }
   ],
-  "executive_briefing": "Velachery is in a critical safety state with 62% incident risk. Continue routine monitoring. Optimizing signals could save 2170 kg CO2/week, equivalent to 5373 trees/year.",
+  "executive_briefing": "Zone_40 is in a critical safety state with 60% incident risk. Continue routine monitoring. Optimizing signals could save 2170 kg CO2/week, equivalent to 5373 trees/year.",
+  "civilian_road_safety_radar": {
+    "current_week": {
+      "week": 27,
+      "risk_score": 60.1,
+      "risk_percentage": "60%",
+      "risk_badge": "HIGH RISK",
+      "risk_color": "#f97316",
+      "description": "Elevated collision activity observed.",
+      "crashes_reported": 0
+    },
+    "why_accidents_might_happen": {
+      "primary_collision_cause": {
+        "title": "Congestion Bottleneck & Merge Conflicts",
+        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+      },
+      "behavior_factor": {
+        "title": "Tailgating & Speed Variance",
+        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+      },
+      "street_environment": {
+        "zone_type": "University_District",
+        "average_speed_kmh": 51.77,
+        "congestion_level": 40.52
+      }
+    },
+    "civilian_safety_guide": {
+      "for_drivers": {
+        "action": "Increase Following Distance",
+        "details": "Maintain 3 car lengths buffer during peak rush hours."
+      },
+      "for_pedestrians_and_cyclists": {
+        "action": "Double-Check Turning Vehicles",
+        "details": "Make eye contact with turning drivers at intersections before crossing."
+      },
+      "peak_danger_windows": {
+        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
+        "details": "Congestion peaks during evening travel windows."
+      }
+    }
+  },
   "raw_metrics": {
     "zone_id": "Zone_40",
     "week": 27,
@@ -153,18 +193,29 @@
     "vehicle_density_trend_4w": 1.816,
     "speed_trend_4w": 1.694,
     "incident_trend_4w": -0.3,
-    "location_name": "Velachery",
-    "city": "Chennai",
-    "latitude": 12.9815,
-    "longitude": 80.218,
-    "predicted_risk_probability": 0.6167,
-    "risk_score": 61.6746,
+    "location_name_x": "Velachery",
+    "city_x": "Chennai",
+    "latitude_x": 12.9815,
+    "longitude_x": 80.218,
+    "car_percentage": 51.3,
+    "motorcycle_percentage": 36.7,
+    "bus_percentage": 9.9,
+    "truck_percentage": 2.1,
+    "moving_vehicle_percentage": 53.0,
+    "slow_vehicle_percentage": 35.9,
+    "stopped_vehicle_percentage": 11.1,
+    "location_name_y": "Velachery",
+    "city_y": "Chennai",
+    "latitude_y": 12.9815,
+    "longitude_y": 80.218,
+    "predicted_risk_probability": 0.6014,
+    "risk_score": 60.1386,
     "population_exposure_score": 47.1945,
     "vehicle_exposure_score": 51.346,
     "temporal_trend_score": 43.0145,
-    "priority_score": 53.1898,
-    "priority_rank": 15,
+    "priority_score": 52.5755,
+    "priority_rank": 17,
     "priority_level": "MODERATE",
-    "risk_prob": 0.6167
+    "risk_prob": 0.6014
   }
 }

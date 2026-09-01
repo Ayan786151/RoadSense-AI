@@ -1,40 +1,40 @@
 {
   "zone_id": "Zone_07",
-  "location_name": "Goregaon",
-  "city": "Mumbai",
+  "location_name": "Zone_07",
+  "city": "",
   "zone_type": "University_District",
   "week": 16,
-  "latitude": 19.1663,
-  "longitude": 72.8526,
+  "latitude": 0.0,
+  "longitude": 0.0,
   "risk_analysis": {
-    "predicted_risk_probability": 0.5652,
-    "predicted_risk_percentage": 56.52,
-    "risk_label": "HIGH RISK",
-    "risk_color": "#f97316",
-    "risk_delta_vs_prev_week": -2.8272,
+    "predicted_risk_probability": 0.5205,
+    "predicted_risk_percentage": 52.05,
+    "risk_label": "MODERATE RISK",
+    "risk_color": "#eab308",
+    "risk_delta_vs_prev_week": 1.3838,
     "actual_incident": 0
   },
   "priority": {
-    "priority_score": 48.7237,
-    "priority_rank": 18,
+    "priority_score": 46.9325,
+    "priority_rank": 22,
     "priority_level": "MODERATE",
     "components": {
-      "risk_score": 56.5234,
+      "risk_score": 52.0454,
       "population_exposure_score": 42.4312,
       "vehicle_exposure_score": 51.4281,
       "temporal_trend_score": 34.8061
     },
     "explanation": {
       "priority_level": "MODERATE",
-      "priority_score": 48.7,
+      "priority_score": 46.9,
       "top_contributors": [
         {
           "factor": "Risk Score",
           "icon": "\ud83d\udfe1",
-          "value": "57/100",
+          "value": "52/100",
           "impact": "MEDIUM",
           "detail": "Moderate model-estimated risk",
-          "weight": 56.5234
+          "weight": 52.0454
         },
         {
           "factor": "Violation Count",
@@ -114,7 +114,47 @@
       "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
     }
   ],
-  "executive_briefing": "Goregaon shows elevated risk at 57%. Enforcement focus needed \u2014 10 red-light violations recorded. Optimizing signals could save 2250 kg CO2/week, equivalent to 5572 trees/year.",
+  "executive_briefing": "Zone_07 shows elevated risk at 52%. Enforcement focus needed \u2014 10 red-light violations recorded. Optimizing signals could save 2250 kg CO2/week, equivalent to 5572 trees/year.",
+  "civilian_road_safety_radar": {
+    "current_week": {
+      "week": 16,
+      "risk_score": 52.0,
+      "risk_percentage": "52%",
+      "risk_badge": "MODERATE RISK",
+      "risk_color": "#eab308",
+      "description": "Corridor operating within normal baseline.",
+      "crashes_reported": 0
+    },
+    "why_accidents_might_happen": {
+      "primary_collision_cause": {
+        "title": "Congestion Bottleneck & Merge Conflicts",
+        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+      },
+      "behavior_factor": {
+        "title": "Tailgating & Speed Variance",
+        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+      },
+      "street_environment": {
+        "zone_type": "University_District",
+        "average_speed_kmh": 51.3,
+        "congestion_level": 46.07
+      }
+    },
+    "civilian_safety_guide": {
+      "for_drivers": {
+        "action": "Increase Following Distance",
+        "details": "Maintain 3 car lengths buffer during peak rush hours."
+      },
+      "for_pedestrians_and_cyclists": {
+        "action": "Double-Check Turning Vehicles",
+        "details": "Make eye contact with turning drivers at intersections before crossing."
+      },
+      "peak_danger_windows": {
+        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
+        "details": "Congestion peaks during evening travel windows."
+      }
+    }
+  },
   "raw_metrics": {
     "zone_id": "Zone_07",
     "week": 16,
@@ -161,18 +201,29 @@
     "vehicle_density_trend_4w": 2.449,
     "speed_trend_4w": 0.708,
     "incident_trend_4w": 0.0,
-    "location_name": "Goregaon",
-    "city": "Mumbai",
-    "latitude": 19.1663,
-    "longitude": 72.8526,
-    "predicted_risk_probability": 0.5652,
-    "risk_score": 56.5234,
+    "location_name_x": "Goregaon",
+    "city_x": "Mumbai",
+    "latitude_x": 19.1663,
+    "longitude_x": 72.8526,
+    "car_percentage": 45.1,
+    "motorcycle_percentage": 38.9,
+    "bus_percentage": 9.4,
+    "truck_percentage": 6.7,
+    "moving_vehicle_percentage": 44.9,
+    "slow_vehicle_percentage": 37.5,
+    "stopped_vehicle_percentage": 17.6,
+    "location_name_y": "Goregaon",
+    "city_y": "Mumbai",
+    "latitude_y": 19.1663,
+    "longitude_y": 72.8526,
+    "predicted_risk_probability": 0.5205,
+    "risk_score": 52.0454,
     "population_exposure_score": 42.4312,
     "vehicle_exposure_score": 51.4281,
     "temporal_trend_score": 34.8061,
-    "priority_score": 48.7237,
-    "priority_rank": 18,
+    "priority_score": 46.9325,
+    "priority_rank": 22,
     "priority_level": "MODERATE",
-    "risk_prob": 0.5652
+    "risk_prob": 0.5205
   }
 }

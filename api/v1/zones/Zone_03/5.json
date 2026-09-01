@@ -1,33 +1,41 @@
 {
   "zone_id": "Zone_03",
-  "location_name": "Kurla",
-  "city": "Mumbai",
+  "location_name": "Zone_03",
+  "city": "",
   "zone_type": "University_District",
   "week": 5,
-  "latitude": 19.0726,
-  "longitude": 72.8845,
+  "latitude": 0.0,
+  "longitude": 0.0,
   "risk_analysis": {
-    "predicted_risk_probability": 0.326,
-    "predicted_risk_percentage": 32.6,
-    "risk_label": "LOW RISK",
-    "risk_color": "#22c55e",
+    "predicted_risk_probability": 0.404,
+    "predicted_risk_percentage": 40.4,
+    "risk_label": "MODERATE RISK",
+    "risk_color": "#eab308",
     "risk_delta_vs_prev_week": null,
     "actual_incident": 0
   },
   "priority": {
-    "priority_score": 40.5618,
-    "priority_rank": 29,
+    "priority_score": 43.6817,
+    "priority_rank": 30,
     "priority_level": "MODERATE",
     "components": {
-      "risk_score": 32.6033,
+      "risk_score": 40.4031,
       "population_exposure_score": 45.4343,
       "vehicle_exposure_score": 37.2802,
       "temporal_trend_score": 58.0388
     },
     "explanation": {
       "priority_level": "MODERATE",
-      "priority_score": 40.6,
+      "priority_score": 43.7,
       "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "40/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 40.4031
+        },
         {
           "factor": "Rising Trend",
           "icon": "\ud83d\udcc8",
@@ -35,14 +43,6 @@
           "impact": "MEDIUM",
           "detail": "Slight upward trend in congestion over past 4 weeks",
           "weight": 34.8233
-        },
-        {
-          "factor": "Risk Score",
-          "icon": "\ud83d\udfe2",
-          "value": "33/100",
-          "impact": "LOW",
-          "detail": "Risk score within acceptable range",
-          "weight": 32.6033
         },
         {
           "factor": "Population Exposure",
@@ -54,7 +54,7 @@
         }
       ],
       "total_factors": 3,
-      "assessment": "This zone has moderate risk levels with contributing factors: Rising Trend, Population Exposure. Continue monitoring and schedule review if conditions worsen."
+      "assessment": "This zone has moderate risk levels with contributing factors: Risk Score, Rising Trend. Continue monitoring and schedule review if conditions worsen."
     }
   },
   "telemetry": {
@@ -98,15 +98,55 @@
   },
   "interventions": [
     {
-      "id": "BASELINE_MONITORING",
-      "name": "Routine Monitoring",
-      "icon": "\ud83d\udcca",
-      "severity": "LOW",
-      "description": "No specific risk indicators triggered.",
-      "action": "Continue routine monitoring."
+      "id": "ROAD_MAINTENANCE",
+      "name": "Road Maintenance Inspection",
+      "icon": "\ud83d\udee3\ufe0f",
+      "severity": "MEDIUM",
+      "description": "Deteriorated road surface combined with elevated risk indicates infrastructure maintenance need.",
+      "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
     }
   ],
-  "executive_briefing": "Kurla is within safe operating parameters (33% risk). Continue routine monitoring. Optimizing signals could save 758 kg CO2/week, equivalent to 1877 trees/year.",
+  "executive_briefing": "Zone_03 shows elevated risk at 40%. Continue routine monitoring. Optimizing signals could save 758 kg CO2/week, equivalent to 1877 trees/year.",
+  "civilian_road_safety_radar": {
+    "current_week": {
+      "week": 5,
+      "risk_score": 40.4,
+      "risk_percentage": "40%",
+      "risk_badge": "MODERATE RISK",
+      "risk_color": "#eab308",
+      "description": "Corridor operating within normal baseline.",
+      "crashes_reported": 0
+    },
+    "why_accidents_might_happen": {
+      "primary_collision_cause": {
+        "title": "Congestion Bottleneck & Merge Conflicts",
+        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+      },
+      "behavior_factor": {
+        "title": "Tailgating & Speed Variance",
+        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+      },
+      "street_environment": {
+        "zone_type": "University_District",
+        "average_speed_kmh": 51.33,
+        "congestion_level": 25.43
+      }
+    },
+    "civilian_safety_guide": {
+      "for_drivers": {
+        "action": "Increase Following Distance",
+        "details": "Maintain 3 car lengths buffer during peak rush hours."
+      },
+      "for_pedestrians_and_cyclists": {
+        "action": "Double-Check Turning Vehicles",
+        "details": "Make eye contact with turning drivers at intersections before crossing."
+      },
+      "peak_danger_windows": {
+        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
+        "details": "Congestion peaks during evening travel windows."
+      }
+    }
+  },
   "raw_metrics": {
     "zone_id": "Zone_03",
     "week": 5,
@@ -153,18 +193,29 @@
     "vehicle_density_trend_4w": -2.027,
     "speed_trend_4w": -0.263,
     "incident_trend_4w": 0.0,
-    "location_name": "Kurla",
-    "city": "Mumbai",
-    "latitude": 19.0726,
-    "longitude": 72.8845,
-    "predicted_risk_probability": 0.326,
-    "risk_score": 32.6033,
+    "location_name_x": "Kurla",
+    "city_x": "Mumbai",
+    "latitude_x": 19.0726,
+    "longitude_x": 72.8845,
+    "car_percentage": 42.2,
+    "motorcycle_percentage": 39.8,
+    "bus_percentage": 13.1,
+    "truck_percentage": 4.9,
+    "moving_vehicle_percentage": 81.0,
+    "slow_vehicle_percentage": 13.8,
+    "stopped_vehicle_percentage": 5.3,
+    "location_name_y": "Kurla",
+    "city_y": "Mumbai",
+    "latitude_y": 19.0726,
+    "longitude_y": 72.8845,
+    "predicted_risk_probability": 0.404,
+    "risk_score": 40.4031,
     "population_exposure_score": 45.4343,
     "vehicle_exposure_score": 37.2802,
     "temporal_trend_score": 58.0388,
-    "priority_score": 40.5618,
-    "priority_rank": 29,
+    "priority_score": 43.6817,
+    "priority_rank": 30,
     "priority_level": "MODERATE",
-    "risk_prob": 0.326
+    "risk_prob": 0.404
   }
 }

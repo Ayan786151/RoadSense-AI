@@ -1,32 +1,32 @@
 {
   "zone_id": "Zone_10",
-  "location_name": "Colaba",
-  "city": "Mumbai",
+  "location_name": "Zone_10",
+  "city": "",
   "zone_type": "Residential",
   "week": 22,
-  "latitude": 18.922,
-  "longitude": 72.8347,
+  "latitude": 0.0,
+  "longitude": 0.0,
   "risk_analysis": {
-    "predicted_risk_probability": 0.9803,
-    "predicted_risk_percentage": 98.03,
+    "predicted_risk_probability": 0.9543,
+    "predicted_risk_percentage": 95.43,
     "risk_label": "CRITICAL RISK",
     "risk_color": "#ef4444",
-    "risk_delta_vs_prev_week": 24.4493,
+    "risk_delta_vs_prev_week": 32.2435,
     "actual_incident": 1
   },
   "priority": {
-    "priority_score": 93.2022,
+    "priority_score": 92.1601,
     "priority_rank": 1,
     "priority_level": "CRITICAL",
     "components": {
-      "risk_score": 98.0346,
+      "risk_score": 95.4294,
       "population_exposure_score": 98.6996,
       "vehicle_exposure_score": 76.6358,
       "temporal_trend_score": 93.2419
     },
     "explanation": {
       "priority_level": "CRITICAL",
-      "priority_score": 93.2,
+      "priority_score": 92.2,
       "top_contributors": [
         {
           "factor": "Population Exposure",
@@ -37,20 +37,20 @@
           "weight": 98.6996
         },
         {
-          "factor": "Risk Score",
-          "icon": "\ud83d\udd34",
-          "value": "98/100",
-          "impact": "HIGH",
-          "detail": "Model-estimated risk score is in the critical range",
-          "weight": 98.0346
-        },
-        {
           "factor": "Congestion",
           "icon": "\ud83d\ude97",
           "value": "97/100",
           "impact": "HIGH",
           "detail": "Congestion index at 97 \u2014 severe traffic flow degradation",
           "weight": 97.46
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udd34",
+          "value": "95/100",
+          "impact": "HIGH",
+          "detail": "Model-estimated risk score is in the critical range",
+          "weight": 95.4294
         },
         {
           "factor": "Worsening Trend",
@@ -70,7 +70,7 @@
         }
       ],
       "total_factors": 6,
-      "assessment": "This zone requires URGENT attention. Primary risk drivers: Population Exposure, Risk Score, Congestion. Immediate field inspection and intervention planning recommended."
+      "assessment": "This zone requires URGENT attention. Primary risk drivers: Population Exposure, Congestion, Risk Score. Immediate field inspection and intervention planning recommended."
     }
   },
   "telemetry": {
@@ -162,7 +162,47 @@
       "action": "Install additional CCTV cameras and integrate with traffic management center for real-time monitoring."
     }
   ],
-  "executive_briefing": "Colaba is in a critical safety state with 98% incident risk. Signal optimization recommended \u2014 congestion at 97/100 with speeds averaging 18 km/h. Optimizing signals could save 8626 kg CO2/week, equivalent to 21359 trees/year.",
+  "executive_briefing": "Zone_10 is in a critical safety state with 95% incident risk. Signal optimization recommended \u2014 congestion at 97/100 with speeds averaging 18 km/h. Optimizing signals could save 8626 kg CO2/week, equivalent to 21359 trees/year.",
+  "civilian_road_safety_radar": {
+    "current_week": {
+      "week": 22,
+      "risk_score": 95.4,
+      "risk_percentage": "95%",
+      "risk_badge": "CRITICAL RISK",
+      "risk_color": "#ef4444",
+      "description": "Elevated collision activity observed.",
+      "crashes_reported": 0
+    },
+    "why_accidents_might_happen": {
+      "primary_collision_cause": {
+        "title": "Congestion Bottleneck & Merge Conflicts",
+        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+      },
+      "behavior_factor": {
+        "title": "Tailgating & Speed Variance",
+        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+      },
+      "street_environment": {
+        "zone_type": "Residential",
+        "average_speed_kmh": 18.26,
+        "congestion_level": 97.46
+      }
+    },
+    "civilian_safety_guide": {
+      "for_drivers": {
+        "action": "Increase Following Distance",
+        "details": "Maintain 3 car lengths buffer during peak rush hours."
+      },
+      "for_pedestrians_and_cyclists": {
+        "action": "Double-Check Turning Vehicles",
+        "details": "Make eye contact with turning drivers at intersections before crossing."
+      },
+      "peak_danger_windows": {
+        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
+        "details": "Congestion peaks during evening travel windows."
+      }
+    }
+  },
   "raw_metrics": {
     "zone_id": "Zone_10",
     "week": 22,
@@ -209,18 +249,29 @@
     "vehicle_density_trend_4w": 2.965,
     "speed_trend_4w": -1.98,
     "incident_trend_4w": 0.0,
-    "location_name": "Colaba",
-    "city": "Mumbai",
-    "latitude": 18.922,
-    "longitude": 72.8347,
-    "predicted_risk_probability": 0.9803,
-    "risk_score": 98.0346,
+    "location_name_x": "Colaba",
+    "city_x": "Mumbai",
+    "latitude_x": 18.922,
+    "longitude_x": 72.8347,
+    "car_percentage": 27.1,
+    "motorcycle_percentage": 60.4,
+    "bus_percentage": 8.2,
+    "truck_percentage": 4.3,
+    "moving_vehicle_percentage": 22.2,
+    "slow_vehicle_percentage": 30.3,
+    "stopped_vehicle_percentage": 47.5,
+    "location_name_y": "Colaba",
+    "city_y": "Mumbai",
+    "latitude_y": 18.922,
+    "longitude_y": 72.8347,
+    "predicted_risk_probability": 0.9543,
+    "risk_score": 95.4294,
     "population_exposure_score": 98.6996,
     "vehicle_exposure_score": 76.6358,
     "temporal_trend_score": 93.2419,
-    "priority_score": 93.2022,
+    "priority_score": 92.1601,
     "priority_rank": 1,
     "priority_level": "CRITICAL",
-    "risk_prob": 0.9803
+    "risk_prob": 0.9543
   }
 }

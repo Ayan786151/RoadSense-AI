@@ -1,40 +1,40 @@
 {
   "zone_id": "Zone_48",
-  "location_name": "Ambattur",
-  "city": "Chennai",
+  "location_name": "Zone_48",
+  "city": "",
   "zone_type": "Industrial_Corridor",
   "week": 35,
-  "latitude": 13.1143,
-  "longitude": 80.1486,
+  "latitude": 0.0,
+  "longitude": 0.0,
   "risk_analysis": {
-    "predicted_risk_probability": 0.6114,
-    "predicted_risk_percentage": 61.14,
-    "risk_label": "HIGH RISK",
-    "risk_color": "#f97316",
-    "risk_delta_vs_prev_week": 37.5087,
+    "predicted_risk_probability": 0.5357,
+    "predicted_risk_percentage": 53.57,
+    "risk_label": "MODERATE RISK",
+    "risk_color": "#eab308",
+    "risk_delta_vs_prev_week": 17.4936,
     "actual_incident": 0
   },
   "priority": {
-    "priority_score": 35.6502,
-    "priority_rank": 33,
-    "priority_level": "MODERATE",
+    "priority_score": 32.6214,
+    "priority_rank": 36,
+    "priority_level": "LOW",
     "components": {
-      "risk_score": 61.1423,
+      "risk_score": 53.5703,
       "population_exposure_score": 18.9525,
       "vehicle_exposure_score": 27.5712,
       "temporal_trend_score": 6.2731
     },
     "explanation": {
-      "priority_level": "MODERATE",
-      "priority_score": 35.7,
+      "priority_level": "LOW",
+      "priority_score": 32.6,
       "top_contributors": [
         {
           "factor": "Risk Score",
           "icon": "\ud83d\udfe1",
-          "value": "61/100",
+          "value": "54/100",
           "impact": "MEDIUM",
           "detail": "Moderate model-estimated risk",
-          "weight": 61.1423
+          "weight": 53.5703
         },
         {
           "factor": "Improving Trend",
@@ -46,7 +46,7 @@
         }
       ],
       "total_factors": 2,
-      "assessment": "This zone has moderate risk levels with contributing factors: Risk Score. Continue monitoring and schedule review if conditions worsen."
+      "assessment": "This zone is currently within acceptable safety parameters. Routine monitoring is sufficient."
     }
   },
   "telemetry": {
@@ -98,7 +98,47 @@
       "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
     }
   ],
-  "executive_briefing": "Ambattur is in a critical safety state with 61% incident risk. Continue routine monitoring. Optimizing signals could save 941 kg CO2/week, equivalent to 2328 trees/year.",
+  "executive_briefing": "Zone_48 shows elevated risk at 54%. Continue routine monitoring. Optimizing signals could save 941 kg CO2/week, equivalent to 2328 trees/year.",
+  "civilian_road_safety_radar": {
+    "current_week": {
+      "week": 35,
+      "risk_score": 53.6,
+      "risk_percentage": "54%",
+      "risk_badge": "MODERATE RISK",
+      "risk_color": "#eab308",
+      "description": "Corridor operating within normal baseline.",
+      "crashes_reported": 0
+    },
+    "why_accidents_might_happen": {
+      "primary_collision_cause": {
+        "title": "Congestion Bottleneck & Merge Conflicts",
+        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+      },
+      "behavior_factor": {
+        "title": "Tailgating & Speed Variance",
+        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+      },
+      "street_environment": {
+        "zone_type": "Industrial_Corridor",
+        "average_speed_kmh": 34.47,
+        "congestion_level": 32.55
+      }
+    },
+    "civilian_safety_guide": {
+      "for_drivers": {
+        "action": "Increase Following Distance",
+        "details": "Maintain 3 car lengths buffer during peak rush hours."
+      },
+      "for_pedestrians_and_cyclists": {
+        "action": "Double-Check Turning Vehicles",
+        "details": "Make eye contact with turning drivers at intersections before crossing."
+      },
+      "peak_danger_windows": {
+        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
+        "details": "Congestion peaks during evening travel windows."
+      }
+    }
+  },
   "raw_metrics": {
     "zone_id": "Zone_48",
     "week": 35,
@@ -145,18 +185,29 @@
     "vehicle_density_trend_4w": -2.428,
     "speed_trend_4w": 8.38,
     "incident_trend_4w": -0.1,
-    "location_name": "Ambattur",
-    "city": "Chennai",
-    "latitude": 13.1143,
-    "longitude": 80.1486,
-    "predicted_risk_probability": 0.6114,
-    "risk_score": 61.1423,
+    "location_name_x": "Ambattur",
+    "city_x": "Chennai",
+    "latitude_x": 13.1143,
+    "longitude_x": 80.1486,
+    "car_percentage": 42.1,
+    "motorcycle_percentage": 40.9,
+    "bus_percentage": 11.3,
+    "truck_percentage": 5.6,
+    "moving_vehicle_percentage": 87.5,
+    "slow_vehicle_percentage": 18.6,
+    "stopped_vehicle_percentage": 0.0,
+    "location_name_y": "Ambattur",
+    "city_y": "Chennai",
+    "latitude_y": 13.1143,
+    "longitude_y": 80.1486,
+    "predicted_risk_probability": 0.5357,
+    "risk_score": 53.5703,
     "population_exposure_score": 18.9525,
     "vehicle_exposure_score": 27.5712,
     "temporal_trend_score": 6.2731,
-    "priority_score": 35.6502,
-    "priority_rank": 33,
-    "priority_level": "MODERATE",
-    "risk_prob": 0.6114
+    "priority_score": 32.6214,
+    "priority_rank": 36,
+    "priority_level": "LOW",
+    "risk_prob": 0.5357
   }
 }

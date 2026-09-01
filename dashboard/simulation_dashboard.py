@@ -35,16 +35,21 @@ def load_simulation_data() -> Tuple[pd.DataFrame, pd.DataFrame]:
 
     sim_df = pd.read_csv(sim_path)
 
-    if os.path.exists(loc_path):
+    if os.path.exists(loc_path) and "location_name" not in sim_df.columns:
         loc_df = pd.read_csv(loc_path)
-        merged = pd.merge(sim_df, loc_df, on="zone_id", how="left")
+        merged = pd.merge(sim_df, loc_df, on="zone_id", how="left", suffixes=("", "_loc"))
     else:
         merged = sim_df.copy()
-        merged["location_name"] = merged["zone_id"]
-        merged["city"] = "Metropolis"
-        merged["latitude"] = 19.0760
-        merged["longitude"] = 72.8777
         loc_df = pd.DataFrame()
+
+    if "location_name" not in merged.columns:
+        merged["location_name"] = merged.get("location_name_loc", merged["zone_id"])
+    if "city" not in merged.columns:
+        merged["city"] = merged.get("city_loc", "Metropolis")
+    if "latitude" not in merged.columns:
+        merged["latitude"] = 19.0760
+    if "longitude" not in merged.columns:
+        merged["longitude"] = 72.8777
 
     return merged, loc_df
 
@@ -77,7 +82,8 @@ def get_zone_risk_timeline(_model, _zone_df: pd.DataFrame) -> list:
             results.append(None)
         else:
             try:
-                p = float(_model.predict_proba(pd.DataFrame([row]))[0, 1])
+                raw_p = _model.predict_proba(pd.DataFrame([row]))
+                p = float(raw_p[0, 1]) if (hasattr(raw_p, "shape") and raw_p.shape[1] > 1) else (1.0 if _model.classes_[0] == 1 else 0.0)
                 results.append(round(p * 100.0, 1))
             except Exception:
                 results.append(None)
@@ -110,7 +116,8 @@ def compute_live_risk(model, row_df: pd.DataFrame) -> float:
         week = row_df["week"].iloc[0]
         if week < 5:
             return np.nan
-        prob = model.predict_proba(row_df)[0, 1]
+        raw_p = model.predict_proba(row_df)
+        prob = float(raw_p[0, 1]) if (hasattr(raw_p, "shape") and raw_p.shape[1] > 1) else (1.0 if model.classes_[0] == 1 else 0.0)
         return float(prob)
     except Exception:
         return float(row_df.get("rolling_4_week_incident_rate", pd.Series([np.nan])).iloc[0])
@@ -182,21 +189,21 @@ def compute_upcoming_weeks_forecast(zone_df: pd.DataFrame, current_week: int, mo
     # Classify Trajectory Health
     if risk_slope >= 1.2 or (cong_slope >= 1.8 and spd_slope <= -0.8):
         status = "DETERIORATING"
-        health_label = "🔴 CORRIDOR DETERIORATING / HIGH RISK SURGE"
+        health_label = " CORRIDOR DETERIORATING / HIGH RISK SURGE"
         health_color = "#ef4444"
         health_summary = f"Risk trajectory is worsening (+{risk_slope:.1f}%/week). Steady congestion buildup and velocity degradation indicate escalating accident probability."
         prognosis_unmitigated = f"If unmitigated, congestion is projected to surge by +{cong_slope * 4:.1f} points over the next 4 weeks. High velocity variance will escalate rear-end collision probability and intersection spillover."
         prognosis_mitigated = "Deploying Dynamic Traffic Signal Control (DTSC) +15s green-phase prioritization and automated stop-line enforcement is projected to cut accident probability by -32.5% and prevent gridlock cascades."
     elif risk_slope <= -1.2 or (cong_slope <= -1.8 and spd_slope >= 0.8):
         status = "IMPROVING"
-        health_label = "🟢 CORRIDOR RECOVERING / ACCIDENT RISK DECLINING"
+        health_label = " CORRIDOR RECOVERING / ACCIDENT RISK DECLINING"
         health_color = "#22c55e"
         health_summary = f"Risk trajectory is improving ({risk_slope:.1f}%/week). Traffic flow is stabilizing with rising mean corridor velocity."
         prognosis_unmitigated = f"Sector is naturally dissipating congestion at {abs(cong_slope):.1f} pts/week. Collision probability is steadily dropping toward baseline."
         prognosis_mitigated = "Maintaining optimal DTSC cycle times will sustain low queue delays and maintain 94%+ stop-line compliance."
     else:
         status = "STABLE"
-        health_label = "🟡 STEADY STATE / NOMINAL DEMAND"
+        health_label = " STEADY STATE / NOMINAL DEMAND"
         health_color = "#eab308"
         health_summary = f"Risk trajectory is stable ({risk_slope:+.1f}%/week). Corridor is operating near equilibrium demand without major variance."
         prognosis_unmitigated = "Corridor will experience moderate localized rush-hour queues, but collision probability will remain within manageable thresholds."
@@ -432,37 +439,41 @@ def render_simulation_dashboard():
     forecast_info = compute_upcoming_weeks_forecast(zone_all_weeks, selected_week, model)
 
     # 4-Week Forward Outlook Banner
-    st.markdown(f"""
-    <div style="background: #18181b; border: 1px solid #27272a; border-left: 4px solid {forecast_info['health_color']}; border-radius: 6px; padding: 16px 20px; margin-bottom: 20px;">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
-            <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: {forecast_info['health_color']}; font-weight: 700; text-transform: uppercase;">
-                TRAJECTORY OUTLOOK: {forecast_info['health_label']}
-            </div>
-            <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #a1a1aa; background: #27272a; padding: 2px 8px; border-radius: 3px;">
-                4-WEEK HORIZON (W{selected_week+1}–W{min(52, selected_week+4)})
-            </div>
-        </div>
-        <div style="font-size: 13px; color: #d4d4d8; line-height: 1.5; margin-bottom: 14px;">
-            {forecast_info['health_summary']}
-        </div>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 10px;">
-            {''.join([f'''
-            <div style="background: #121215; border: 1px solid #27272a; border-top: 2px solid {fw['risk_color']}; padding: 10px 12px; border-radius: 4px;">
-                <div style="display: flex; justify-content: space-between; align-items: center;">
-                    <span style="font-family: 'JetBrains Mono', monospace; font-size: 10px; color: #a1a1aa;">{fw['step']} (W{fw['calendar_week']})</span>
-                    <span style="font-family: 'JetBrains Mono', monospace; font-size: 10px; color: {fw['risk_color']}; font-weight: 700;">{fw['risk_tier']}</span>
-                </div>
-                <div style="font-family: 'JetBrains Mono', monospace; font-size: 18px; font-weight: 800; color: {fw['risk_color']}; margin-top: 4px;">{fw['predicted_risk_pct']}%</div>
-                <div style="font-size: 11px; color: #a1a1aa; margin-top: 4px;">Speed: <b>{fw['projected_speed_kmh']} km/h</b> • Cong: <b>{fw['projected_congestion']}</b></div>
-            </div>
-            ''' for fw in forecast_info['forecast_weeks']])}
-        </div>
-    </div>
-    """, unsafe_allow_html=True)
+    cards_html = "".join([
+        f'<div style="background: #121215; border: 1px solid #27272a; border-top: 2px solid {fw["risk_color"]}; padding: 10px 12px; border-radius: 4px;">'
+        f'<div style="display: flex; justify-content: space-between; align-items: center;">'
+        f'<span style="font-family: \'JetBrains Mono\', monospace; font-size: 10px; color: #a1a1aa;">{fw["step"]} (W{fw["calendar_week"]})</span>'
+        f'<span style="font-family: \'JetBrains Mono\', monospace; font-size: 10px; color: {fw["risk_color"]}; font-weight: 700;">{fw["risk_tier"]}</span>'
+        f'</div>'
+        f'<div style="font-family: \'JetBrains Mono\', monospace; font-size: 18px; font-weight: 800; color: {fw["risk_color"]}; margin-top: 4px;">{fw["predicted_risk_pct"]}%</div>'
+        f'<div style="font-size: 11px; color: #a1a1aa; margin-top: 4px;">Speed: <b>{fw["projected_speed_kmh"]} km/h</b> • Cong: <b>{fw["projected_congestion"]}</b></div>'
+        f'</div>'
+        for fw in forecast_info["forecast_weeks"]
+    ])
+
+    outlook_html = (
+        f'<div style="background: #18181b; border: 1px solid #27272a; border-left: 4px solid {forecast_info["health_color"]}; border-radius: 6px; padding: 16px 20px; margin-bottom: 20px;">'
+        f'<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">'
+        f'<div style="font-family: \'JetBrains Mono\', monospace; font-size: 11px; color: {forecast_info["health_color"]}; font-weight: 700; text-transform: uppercase;">'
+        f'TRAJECTORY OUTLOOK: {forecast_info["health_label"]}'
+        f'</div>'
+        f'<div style="font-family: \'JetBrains Mono\', monospace; font-size: 11px; color: #a1a1aa; background: #27272a; padding: 2px 8px; border-radius: 3px;">'
+        f'4-WEEK HORIZON (W{selected_week+1}–W{min(52, selected_week+4)})'
+        f'</div>'
+        f'</div>'
+        f'<div style="font-size: 13px; color: #d4d4d8; line-height: 1.5; margin-bottom: 14px;">'
+        f'{forecast_info["health_summary"]}'
+        f'</div>'
+        f'<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 10px;">'
+        f'{cards_html}'
+        f'</div>'
+        f'</div>'
+    )
+    st.markdown(outlook_html, unsafe_allow_html=True)
 
     # Tabs
     tab_forecast, tab1, tab2, tab3, tab4, tab5 = st.tabs([
-        "🔮 UPCOMING WEEKS RISK PROGNOSIS",
+        " UPCOMING WEEKS RISK PROGNOSIS",
         "HISTORICAL TIMELINE & FORWARD HORIZON",
         "ADAPTIVE SIGNAL CONTROL & EMISSION SAVINGS",
         "MUNICIPAL 50-ZONE LEADERBOARD & EXECUTIVE SUMMARY",
@@ -477,34 +488,36 @@ def render_simulation_dashboard():
 
         sc_col1, sc_col2 = st.columns(2)
         with sc_col1:
-            st.markdown(f"""
-            <div style="background: #18181b; border: 1px solid #ef444444; border-left: 4px solid #ef4444; border-radius: 6px; padding: 16px; height: 100%;">
-                <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #ef4444; font-weight: 700; text-transform: uppercase;">
-                    SCENARIO A • STATUS QUO (UNMITIGATED TRAJECTORY)
-                </div>
-                <div style="font-size: 13px; color: #d4d4d8; line-height: 1.6; margin-top: 10px;">
-                    {forecast_info['prognosis_unmitigated']}
-                </div>
-                <div style="margin-top: 14px; padding-top: 10px; border-top: 1px solid #27272a; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #ef4444;">
-                    ⚠️ Projected 4-Week Risk Shift: <b>{forecast_info['expected_risk_delta_pct']:+.1f}%</b>
-                </div>
-            </div>
-            """, unsafe_allow_html=True)
+            sc_a_html = (
+                f'<div style="background: #18181b; border: 1px solid rgba(239, 68, 68, 0.3); border-left: 4px solid #ef4444; border-radius: 6px; padding: 16px; height: 100%;">'
+                f'<div style="font-family: \'JetBrains Mono\', monospace; font-size: 11px; color: #ef4444; font-weight: 700; text-transform: uppercase;">'
+                f'SCENARIO A • STATUS QUO (UNMITIGATED TRAJECTORY)'
+                f'</div>'
+                f'<div style="font-size: 13px; color: #d4d4d8; line-height: 1.6; margin-top: 10px;">'
+                f'{forecast_info["prognosis_unmitigated"]}'
+                f'</div>'
+                f'<div style="margin-top: 14px; padding-top: 10px; border-top: 1px solid #27272a; font-family: \'JetBrains Mono\', monospace; font-size: 11px; color: #ef4444;">'
+                f' Projected 4-Week Risk Shift: <b>{forecast_info["expected_risk_delta_pct"]:+.1f}%</b>'
+                f'</div>'
+                f'</div>'
+            )
+            st.markdown(sc_a_html, unsafe_allow_html=True)
 
         with sc_col2:
-            st.markdown(f"""
-            <div style="background: #18181b; border: 1px solid #22c55e44; border-left: 4px solid #22c55e; border-radius: 6px; padding: 16px; height: 100%;">
-                <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #22c55e; font-weight: 700; text-transform: uppercase;">
-                    SCENARIO B • AI-OPTIMIZED DISPATCH & DTSC SIGNAL CONTROL
-                </div>
-                <div style="font-size: 13px; color: #d4d4d8; line-height: 1.6; margin-top: 10px;">
-                    {forecast_info['prognosis_mitigated']}
-                </div>
-                <div style="margin-top: 14px; padding-top: 10px; border-top: 1px solid #27272a; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #22c55e;">
-                    🛡️ Projected Risk Mitigation Dividend: <b>-32.5% Incident Reduction</b>
-                </div>
-            </div>
-            """, unsafe_allow_html=True)
+            sc_b_html = (
+                f'<div style="background: #18181b; border: 1px solid rgba(34, 197, 94, 0.3); border-left: 4px solid #22c55e; border-radius: 6px; padding: 16px; height: 100%;">'
+                f'<div style="font-family: \'JetBrains Mono\', monospace; font-size: 11px; color: #22c55e; font-weight: 700; text-transform: uppercase;">'
+                f'SCENARIO B • AI-OPTIMIZED DISPATCH & DTSC SIGNAL CONTROL'
+                f'</div>'
+                f'<div style="font-size: 13px; color: #d4d4d8; line-height: 1.6; margin-top: 10px;">'
+                f'{forecast_info["prognosis_mitigated"]}'
+                f'</div>'
+                f'<div style="margin-top: 14px; padding-top: 10px; border-top: 1px solid #27272a; font-family: \'JetBrains Mono\', monospace; font-size: 11px; color: #22c55e;">'
+                f' Projected Risk Mitigation Dividend: <b>-32.5% Incident Reduction</b>'
+                f'</div>'
+                f'</div>'
+            )
+            st.markdown(sc_b_html, unsafe_allow_html=True)
 
         st.markdown("<br>", unsafe_allow_html=True)
         st.markdown("##### Multi-Week Horizon Projected Metrics Table")
@@ -565,7 +578,7 @@ def render_simulation_dashboard():
                 x=fc_x,
                 y=fc_y,
                 mode="lines+markers",
-                name="🔮 4-Week Forward Risk Forecast",
+                name=" 4-Week Forward Risk Forecast",
                 line=dict(color=forecast_info["health_color"], width=3, dash="dashdot"),
                 marker=dict(size=6, symbol="diamond")
             ))

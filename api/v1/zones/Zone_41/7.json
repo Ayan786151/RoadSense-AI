@@ -1,40 +1,40 @@
 {
   "zone_id": "Zone_41",
-  "location_name": "Adyar",
-  "city": "Chennai",
+  "location_name": "Zone_41",
+  "city": "",
   "zone_type": "Highway_Junction",
   "week": 7,
-  "latitude": 13.0063,
-  "longitude": 80.2574,
+  "latitude": 0.0,
+  "longitude": 0.0,
   "risk_analysis": {
-    "predicted_risk_probability": 0.1454,
-    "predicted_risk_percentage": 14.54,
+    "predicted_risk_probability": 0.291,
+    "predicted_risk_percentage": 29.1,
     "risk_label": "LOW RISK",
     "risk_color": "#22c55e",
-    "risk_delta_vs_prev_week": 3.1784,
+    "risk_delta_vs_prev_week": 4.2057,
     "actual_incident": 0
   },
   "priority": {
-    "priority_score": 20.0757,
-    "priority_rank": 41,
+    "priority_score": 25.9021,
+    "priority_rank": 37,
     "priority_level": "LOW",
     "components": {
-      "risk_score": 14.5374,
+      "risk_score": 29.1034,
       "population_exposure_score": 8.5351,
       "vehicle_exposure_score": 23.0706,
       "temporal_trend_score": 50.0853
     },
     "explanation": {
       "priority_level": "LOW",
-      "priority_score": 20.1,
+      "priority_score": 25.9,
       "top_contributors": [
         {
           "factor": "Risk Score",
           "icon": "\ud83d\udfe2",
-          "value": "15/100",
+          "value": "29/100",
           "impact": "LOW",
           "detail": "Risk score within acceptable range",
-          "weight": 14.5374
+          "weight": 29.1034
         }
       ],
       "total_factors": 1,
@@ -90,7 +90,47 @@
       "action": "Continue routine monitoring. No immediate intervention required."
     }
   ],
-  "executive_briefing": "Adyar is within safe operating parameters (15% risk). Continue routine monitoring. Optimizing signals could save 267 kg CO2/week, equivalent to 661 trees/year.",
+  "executive_briefing": "Zone_41 is within safe operating parameters (29% risk). Continue routine monitoring. Optimizing signals could save 267 kg CO2/week, equivalent to 661 trees/year.",
+  "civilian_road_safety_radar": {
+    "current_week": {
+      "week": 7,
+      "risk_score": 29.1,
+      "risk_percentage": "29%",
+      "risk_badge": "LOW RISK",
+      "risk_color": "#22c55e",
+      "description": "Corridor operating within normal baseline.",
+      "crashes_reported": 0
+    },
+    "why_accidents_might_happen": {
+      "primary_collision_cause": {
+        "title": "Congestion Bottleneck & Merge Conflicts",
+        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+      },
+      "behavior_factor": {
+        "title": "Tailgating & Speed Variance",
+        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+      },
+      "street_environment": {
+        "zone_type": "Highway_Junction",
+        "average_speed_kmh": 63.98,
+        "congestion_level": 15.89
+      }
+    },
+    "civilian_safety_guide": {
+      "for_drivers": {
+        "action": "Increase Following Distance",
+        "details": "Maintain 3 car lengths buffer during peak rush hours."
+      },
+      "for_pedestrians_and_cyclists": {
+        "action": "Double-Check Turning Vehicles",
+        "details": "Make eye contact with turning drivers at intersections before crossing."
+      },
+      "peak_danger_windows": {
+        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
+        "details": "Congestion peaks during evening travel windows."
+      }
+    }
+  },
   "raw_metrics": {
     "zone_id": "Zone_41",
     "week": 7,
@@ -137,18 +177,29 @@
     "vehicle_density_trend_4w": -0.982,
     "speed_trend_4w": -0.558,
     "incident_trend_4w": -0.1,
-    "location_name": "Adyar",
-    "city": "Chennai",
-    "latitude": 13.0063,
-    "longitude": 80.2574,
-    "predicted_risk_probability": 0.1454,
-    "risk_score": 14.5374,
+    "location_name_x": "Adyar",
+    "city_x": "Chennai",
+    "latitude_x": 13.0063,
+    "longitude_x": 80.2574,
+    "car_percentage": 41.8,
+    "motorcycle_percentage": 42.7,
+    "bus_percentage": 9.5,
+    "truck_percentage": 6.1,
+    "moving_vehicle_percentage": 83.1,
+    "slow_vehicle_percentage": 9.9,
+    "stopped_vehicle_percentage": 7.0,
+    "location_name_y": "Adyar",
+    "city_y": "Chennai",
+    "latitude_y": 13.0063,
+    "longitude_y": 80.2574,
+    "predicted_risk_probability": 0.291,
+    "risk_score": 29.1034,
     "population_exposure_score": 8.5351,
     "vehicle_exposure_score": 23.0706,
     "temporal_trend_score": 50.0853,
-    "priority_score": 20.0757,
-    "priority_rank": 41,
+    "priority_score": 25.9021,
+    "priority_rank": 37,
     "priority_level": "LOW",
-    "risk_prob": 0.1454
+    "risk_prob": 0.291
   }
 }

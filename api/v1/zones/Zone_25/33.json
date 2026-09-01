@@ -1,40 +1,40 @@
 {
   "zone_id": "Zone_25",
-  "location_name": "Okhla",
-  "city": "Delhi",
+  "location_name": "Zone_25",
+  "city": "",
   "zone_type": "Residential",
   "week": 33,
-  "latitude": 28.5355,
-  "longitude": 77.264,
+  "latitude": 0.0,
+  "longitude": 0.0,
   "risk_analysis": {
-    "predicted_risk_probability": 0.8694,
-    "predicted_risk_percentage": 86.94,
-    "risk_label": "CRITICAL RISK",
-    "risk_color": "#ef4444",
-    "risk_delta_vs_prev_week": 5.5934,
+    "predicted_risk_probability": 0.745,
+    "predicted_risk_percentage": 74.5,
+    "risk_label": "HIGH RISK",
+    "risk_color": "#f97316",
+    "risk_delta_vs_prev_week": 3.1566,
     "actual_incident": 1
   },
   "priority": {
-    "priority_score": 66.2147,
-    "priority_rank": 14,
+    "priority_score": 61.2413,
+    "priority_rank": 15,
     "priority_level": "HIGH",
     "components": {
-      "risk_score": 86.9366,
+      "risk_score": 74.5032,
       "population_exposure_score": 67.7419,
       "vehicle_exposure_score": 39.9414,
       "temporal_trend_score": 43.4417
     },
     "explanation": {
       "priority_level": "HIGH",
-      "priority_score": 66.2,
+      "priority_score": 61.2,
       "top_contributors": [
         {
           "factor": "Risk Score",
           "icon": "\ud83d\udd34",
-          "value": "87/100",
+          "value": "75/100",
           "impact": "HIGH",
           "detail": "Model-estimated risk score is in the critical range",
-          "weight": 86.9366
+          "weight": 74.5032
         },
         {
           "factor": "Population Exposure",
@@ -114,7 +114,47 @@
       "action": "Install additional CCTV cameras and integrate with traffic management center for real-time monitoring."
     }
   ],
-  "executive_briefing": "Okhla is in a critical safety state with 87% incident risk. Continue routine monitoring. Optimizing signals could save 1861 kg CO2/week, equivalent to 4607 trees/year.",
+  "executive_briefing": "Zone_25 is in a critical safety state with 75% incident risk. Continue routine monitoring. Optimizing signals could save 1861 kg CO2/week, equivalent to 4607 trees/year.",
+  "civilian_road_safety_radar": {
+    "current_week": {
+      "week": 33,
+      "risk_score": 74.5,
+      "risk_percentage": "75%",
+      "risk_badge": "HIGH RISK",
+      "risk_color": "#f97316",
+      "description": "Elevated collision activity observed.",
+      "crashes_reported": 0
+    },
+    "why_accidents_might_happen": {
+      "primary_collision_cause": {
+        "title": "Congestion Bottleneck & Merge Conflicts",
+        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+      },
+      "behavior_factor": {
+        "title": "Tailgating & Speed Variance",
+        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+      },
+      "street_environment": {
+        "zone_type": "Residential",
+        "average_speed_kmh": 33.45,
+        "congestion_level": 47.27
+      }
+    },
+    "civilian_safety_guide": {
+      "for_drivers": {
+        "action": "Increase Following Distance",
+        "details": "Maintain 3 car lengths buffer during peak rush hours."
+      },
+      "for_pedestrians_and_cyclists": {
+        "action": "Double-Check Turning Vehicles",
+        "details": "Make eye contact with turning drivers at intersections before crossing."
+      },
+      "peak_danger_windows": {
+        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
+        "details": "Congestion peaks during evening travel windows."
+      }
+    }
+  },
   "raw_metrics": {
     "zone_id": "Zone_25",
     "week": 33,
@@ -161,18 +201,29 @@
     "vehicle_density_trend_4w": -2.561,
     "speed_trend_4w": -9.849,
     "incident_trend_4w": 0.2,
-    "location_name": "Okhla",
-    "city": "Delhi",
-    "latitude": 28.5355,
-    "longitude": 77.264,
-    "predicted_risk_probability": 0.8694,
-    "risk_score": 86.9366,
+    "location_name_x": "Okhla",
+    "city_x": "Delhi",
+    "latitude_x": 28.5355,
+    "longitude_x": 77.264,
+    "car_percentage": 32.3,
+    "motorcycle_percentage": 58.0,
+    "bus_percentage": 5.7,
+    "truck_percentage": 4.0,
+    "moving_vehicle_percentage": 45.1,
+    "slow_vehicle_percentage": 39.3,
+    "stopped_vehicle_percentage": 15.7,
+    "location_name_y": "Okhla",
+    "city_y": "Delhi",
+    "latitude_y": 28.5355,
+    "longitude_y": 77.264,
+    "predicted_risk_probability": 0.745,
+    "risk_score": 74.5032,
     "population_exposure_score": 67.7419,
     "vehicle_exposure_score": 39.9414,
     "temporal_trend_score": 43.4417,
-    "priority_score": 66.2147,
-    "priority_rank": 14,
+    "priority_score": 61.2413,
+    "priority_rank": 15,
     "priority_level": "HIGH",
-    "risk_prob": 0.8694
+    "risk_prob": 0.745
   }
 }

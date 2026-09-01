@@ -1,32 +1,32 @@
 {
   "zone_id": "Zone_21",
-  "location_name": "Janakpuri",
-  "city": "Delhi",
+  "location_name": "Zone_21",
+  "city": "",
   "zone_type": "Residential",
   "week": 52,
-  "latitude": 28.6219,
-  "longitude": 77.0878,
+  "latitude": 0.0,
+  "longitude": 0.0,
   "risk_analysis": {
-    "predicted_risk_probability": 0.6559,
-    "predicted_risk_percentage": 65.59,
-    "risk_label": "HIGH RISK",
-    "risk_color": "#f97316",
-    "risk_delta_vs_prev_week": -16.328,
+    "predicted_risk_probability": 0.4849,
+    "predicted_risk_percentage": 48.49,
+    "risk_label": "MODERATE RISK",
+    "risk_color": "#eab308",
+    "risk_delta_vs_prev_week": -27.9332,
     "actual_incident": 0
   },
   "priority": {
-    "priority_score": 77.2138,
+    "priority_score": 70.3763,
     "priority_rank": 6,
-    "priority_level": "CRITICAL",
+    "priority_level": "HIGH",
     "components": {
-      "risk_score": 65.5878,
+      "risk_score": 48.494,
       "population_exposure_score": 73.8846,
       "vehicle_exposure_score": 87.5377,
       "temporal_trend_score": 100.0
     },
     "explanation": {
-      "priority_level": "CRITICAL",
-      "priority_score": 77.2,
+      "priority_level": "HIGH",
+      "priority_score": 70.4,
       "top_contributors": [
         {
           "factor": "Worsening Trend",
@@ -55,10 +55,10 @@
         {
           "factor": "Risk Score",
           "icon": "\ud83d\udfe1",
-          "value": "66/100",
+          "value": "48/100",
           "impact": "MEDIUM",
           "detail": "Moderate model-estimated risk",
-          "weight": 65.5878
+          "weight": 48.494
         },
         {
           "factor": "Congestion",
@@ -70,7 +70,7 @@
         }
       ],
       "total_factors": 5,
-      "assessment": "This zone requires URGENT attention. Primary risk drivers: Worsening Trend, Vehicle Density, Population Exposure. Immediate field inspection and intervention planning recommended."
+      "assessment": "This zone shows significant risk elevation driven by Worsening Trend, Vehicle Density. Proactive intervention should be scheduled within the current planning cycle."
     }
   },
   "telemetry": {
@@ -114,14 +114,6 @@
   },
   "interventions": [
     {
-      "id": "TREND_URGENT_INSPECTION",
-      "name": "Urgent Safety Inspection",
-      "icon": "\u26a0\ufe0f",
-      "severity": "CRITICAL",
-      "description": "Risk is actively worsening (high temporal trend) with already elevated risk score.",
-      "action": "Deploy immediate field inspection team. Identify root cause of deteriorating safety conditions."
-    },
-    {
       "id": "PEDESTRIAN_SAFETY",
       "name": "Pedestrian Crossing Intervention",
       "icon": "\ud83d\udeb6",
@@ -130,7 +122,47 @@
       "action": "Install protected pedestrian crossings, improve sidewalk infrastructure, and add pedestrian countdown signals."
     }
   ],
-  "executive_briefing": "Janakpuri is in a critical safety state with 66% incident risk. Continue routine monitoring. Optimizing signals could save 5232 kg CO2/week, equivalent to 12955 trees/year.",
+  "executive_briefing": "Zone_21 shows elevated risk at 48%. Continue routine monitoring. Optimizing signals could save 5232 kg CO2/week, equivalent to 12955 trees/year.",
+  "civilian_road_safety_radar": {
+    "current_week": {
+      "week": 52,
+      "risk_score": 48.5,
+      "risk_percentage": "48%",
+      "risk_badge": "MODERATE RISK",
+      "risk_color": "#eab308",
+      "description": "Corridor operating within normal baseline.",
+      "crashes_reported": 0
+    },
+    "why_accidents_might_happen": {
+      "primary_collision_cause": {
+        "title": "Congestion Bottleneck & Merge Conflicts",
+        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+      },
+      "behavior_factor": {
+        "title": "Tailgating & Speed Variance",
+        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+      },
+      "street_environment": {
+        "zone_type": "Residential",
+        "average_speed_kmh": 45.21,
+        "congestion_level": 55.53
+      }
+    },
+    "civilian_safety_guide": {
+      "for_drivers": {
+        "action": "Increase Following Distance",
+        "details": "Maintain 3 car lengths buffer during peak rush hours."
+      },
+      "for_pedestrians_and_cyclists": {
+        "action": "Double-Check Turning Vehicles",
+        "details": "Make eye contact with turning drivers at intersections before crossing."
+      },
+      "peak_danger_windows": {
+        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
+        "details": "Congestion peaks during evening travel windows."
+      }
+    }
+  },
   "raw_metrics": {
     "zone_id": "Zone_21",
     "week": 52,
@@ -177,18 +209,29 @@
     "vehicle_density_trend_4w": 3.212,
     "speed_trend_4w": -7.485,
     "incident_trend_4w": 0.4,
-    "location_name": "Janakpuri",
-    "city": "Delhi",
-    "latitude": 28.6219,
-    "longitude": 77.0878,
-    "predicted_risk_probability": 0.6559,
-    "risk_score": 65.5878,
+    "location_name_x": "Janakpuri",
+    "city_x": "Delhi",
+    "latitude_x": 28.6219,
+    "longitude_x": 77.0878,
+    "car_percentage": 31.7,
+    "motorcycle_percentage": 59.7,
+    "bus_percentage": 4.6,
+    "truck_percentage": 4.0,
+    "moving_vehicle_percentage": 38.4,
+    "slow_vehicle_percentage": 26.6,
+    "stopped_vehicle_percentage": 34.9,
+    "location_name_y": "Janakpuri",
+    "city_y": "Delhi",
+    "latitude_y": 28.6219,
+    "longitude_y": 77.0878,
+    "predicted_risk_probability": 0.4849,
+    "risk_score": 48.494,
     "population_exposure_score": 73.8846,
     "vehicle_exposure_score": 87.5377,
     "temporal_trend_score": 100.0,
-    "priority_score": 77.2138,
+    "priority_score": 70.3763,
     "priority_rank": 6,
-    "priority_level": "CRITICAL",
-    "risk_prob": 0.6559
+    "priority_level": "HIGH",
+    "risk_prob": 0.4849
   }
 }

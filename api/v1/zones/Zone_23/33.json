@@ -1,40 +1,40 @@
 {
   "zone_id": "Zone_23",
-  "location_name": "Shahdara",
-  "city": "Delhi",
+  "location_name": "Zone_23",
+  "city": "",
   "zone_type": "Suburban_LowDensity",
   "week": 33,
-  "latitude": 28.673,
-  "longitude": 77.2891,
+  "latitude": 0.0,
+  "longitude": 0.0,
   "risk_analysis": {
-    "predicted_risk_probability": 0.4768,
-    "predicted_risk_percentage": 47.68,
-    "risk_label": "MODERATE RISK",
-    "risk_color": "#eab308",
-    "risk_delta_vs_prev_week": 26.6045,
+    "predicted_risk_probability": 0.5967,
+    "predicted_risk_percentage": 59.67,
+    "risk_label": "HIGH RISK",
+    "risk_color": "#f97316",
+    "risk_delta_vs_prev_week": 28.0588,
     "actual_incident": 0
   },
   "priority": {
-    "priority_score": 26.0143,
+    "priority_score": 30.8107,
     "priority_rank": 39,
     "priority_level": "LOW",
     "components": {
-      "risk_score": 47.6757,
+      "risk_score": 59.6667,
       "population_exposure_score": 6.2289,
       "vehicle_exposure_score": 6.4498,
       "temporal_trend_score": 27.312
     },
     "explanation": {
       "priority_level": "LOW",
-      "priority_score": 26.0,
+      "priority_score": 30.8,
       "top_contributors": [
         {
           "factor": "Risk Score",
           "icon": "\ud83d\udfe1",
-          "value": "48/100",
+          "value": "60/100",
           "impact": "MEDIUM",
           "detail": "Moderate model-estimated risk",
-          "weight": 47.6757
+          "weight": 59.6667
         },
         {
           "factor": "Improving Trend",
@@ -98,7 +98,47 @@
       "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
     }
   ],
-  "executive_briefing": "Shahdara shows elevated risk at 48%. Continue routine monitoring. Optimizing signals could save 101 kg CO2/week, equivalent to 250 trees/year.",
+  "executive_briefing": "Zone_23 shows elevated risk at 60%. Continue routine monitoring. Optimizing signals could save 101 kg CO2/week, equivalent to 250 trees/year.",
+  "civilian_road_safety_radar": {
+    "current_week": {
+      "week": 33,
+      "risk_score": 59.7,
+      "risk_percentage": "60%",
+      "risk_badge": "HIGH RISK",
+      "risk_color": "#f97316",
+      "description": "Elevated collision activity observed.",
+      "crashes_reported": 0
+    },
+    "why_accidents_might_happen": {
+      "primary_collision_cause": {
+        "title": "Congestion Bottleneck & Merge Conflicts",
+        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+      },
+      "behavior_factor": {
+        "title": "Tailgating & Speed Variance",
+        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+      },
+      "street_environment": {
+        "zone_type": "Suburban_LowDensity",
+        "average_speed_kmh": 40.99,
+        "congestion_level": 17.38
+      }
+    },
+    "civilian_safety_guide": {
+      "for_drivers": {
+        "action": "Increase Following Distance",
+        "details": "Maintain 3 car lengths buffer during peak rush hours."
+      },
+      "for_pedestrians_and_cyclists": {
+        "action": "Double-Check Turning Vehicles",
+        "details": "Make eye contact with turning drivers at intersections before crossing."
+      },
+      "peak_danger_windows": {
+        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
+        "details": "Congestion peaks during evening travel windows."
+      }
+    }
+  },
   "raw_metrics": {
     "zone_id": "Zone_23",
     "week": 33,
@@ -145,18 +185,29 @@
     "vehicle_density_trend_4w": 1.161,
     "speed_trend_4w": -3.725,
     "incident_trend_4w": 0.0,
-    "location_name": "Shahdara",
-    "city": "Delhi",
-    "latitude": 28.673,
-    "longitude": 77.2891,
-    "predicted_risk_probability": 0.4768,
-    "risk_score": 47.6757,
+    "location_name_x": "Shahdara",
+    "city_x": "Delhi",
+    "latitude_x": 28.673,
+    "longitude_x": 77.2891,
+    "car_percentage": 44.9,
+    "motorcycle_percentage": 38.4,
+    "bus_percentage": 13.1,
+    "truck_percentage": 3.7,
+    "moving_vehicle_percentage": 88.2,
+    "slow_vehicle_percentage": 9.1,
+    "stopped_vehicle_percentage": 2.7,
+    "location_name_y": "Shahdara",
+    "city_y": "Delhi",
+    "latitude_y": 28.673,
+    "longitude_y": 77.2891,
+    "predicted_risk_probability": 0.5967,
+    "risk_score": 59.6667,
     "population_exposure_score": 6.2289,
     "vehicle_exposure_score": 6.4498,
     "temporal_trend_score": 27.312,
-    "priority_score": 26.0143,
+    "priority_score": 30.8107,
     "priority_rank": 39,
     "priority_level": "LOW",
-    "risk_prob": 0.4768
+    "risk_prob": 0.5967
   }
 }

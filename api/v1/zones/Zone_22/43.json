@@ -1,33 +1,41 @@
 {
   "zone_id": "Zone_22",
-  "location_name": "Pitampura",
-  "city": "Delhi",
+  "location_name": "Zone_22",
+  "city": "",
   "zone_type": "University_District",
   "week": 43,
-  "latitude": 28.7033,
-  "longitude": 77.1322,
+  "latitude": 0.0,
+  "longitude": 0.0,
   "risk_analysis": {
-    "predicted_risk_probability": 0.2993,
-    "predicted_risk_percentage": 29.93,
-    "risk_label": "LOW RISK",
-    "risk_color": "#22c55e",
-    "risk_delta_vs_prev_week": 4.5209,
+    "predicted_risk_probability": 0.3596,
+    "predicted_risk_percentage": 35.96,
+    "risk_label": "MODERATE RISK",
+    "risk_color": "#eab308",
+    "risk_delta_vs_prev_week": -4.0778,
     "actual_incident": 0
   },
   "priority": {
-    "priority_score": 42.1572,
-    "priority_rank": 22,
+    "priority_score": 44.569,
+    "priority_rank": 26,
     "priority_level": "MODERATE",
     "components": {
-      "risk_score": 29.9343,
+      "risk_score": 35.9638,
       "population_exposure_score": 44.6081,
       "vehicle_exposure_score": 54.4693,
       "temporal_trend_score": 54.2508
     },
     "explanation": {
       "priority_level": "MODERATE",
-      "priority_score": 42.2,
+      "priority_score": 44.6,
       "top_contributors": [
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "36/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 35.9638
+        },
         {
           "factor": "Population Exposure",
           "icon": "\ud83d\udc65",
@@ -35,14 +43,6 @@
           "impact": "MEDIUM",
           "detail": "Moderate population exposure",
           "weight": 31.2257
-        },
-        {
-          "factor": "Risk Score",
-          "icon": "\ud83d\udfe2",
-          "value": "30/100",
-          "impact": "LOW",
-          "detail": "Risk score within acceptable range",
-          "weight": 29.9343
         }
       ],
       "total_factors": 2,
@@ -94,11 +94,51 @@
       "name": "Routine Monitoring",
       "icon": "\ud83d\udcca",
       "severity": "LOW",
-      "description": "Zone currently within acceptable risk parameters.",
-      "action": "Continue routine monitoring. No immediate intervention required."
+      "description": "No specific risk indicators triggered.",
+      "action": "Continue routine monitoring."
     }
   ],
-  "executive_briefing": "Pitampura is within safe operating parameters (30% risk). Continue routine monitoring. Optimizing signals could save 1208 kg CO2/week, equivalent to 2991 trees/year.",
+  "executive_briefing": "Zone_22 shows elevated risk at 36%. Continue routine monitoring. Optimizing signals could save 1208 kg CO2/week, equivalent to 2991 trees/year.",
+  "civilian_road_safety_radar": {
+    "current_week": {
+      "week": 43,
+      "risk_score": 36.0,
+      "risk_percentage": "36%",
+      "risk_badge": "MODERATE RISK",
+      "risk_color": "#eab308",
+      "description": "Corridor operating within normal baseline.",
+      "crashes_reported": 0
+    },
+    "why_accidents_might_happen": {
+      "primary_collision_cause": {
+        "title": "Congestion Bottleneck & Merge Conflicts",
+        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+      },
+      "behavior_factor": {
+        "title": "Tailgating & Speed Variance",
+        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+      },
+      "street_environment": {
+        "zone_type": "University_District",
+        "average_speed_kmh": 59.23,
+        "congestion_level": 24.09
+      }
+    },
+    "civilian_safety_guide": {
+      "for_drivers": {
+        "action": "Increase Following Distance",
+        "details": "Maintain 3 car lengths buffer during peak rush hours."
+      },
+      "for_pedestrians_and_cyclists": {
+        "action": "Double-Check Turning Vehicles",
+        "details": "Make eye contact with turning drivers at intersections before crossing."
+      },
+      "peak_danger_windows": {
+        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
+        "details": "Congestion peaks during evening travel windows."
+      }
+    }
+  },
   "raw_metrics": {
     "zone_id": "Zone_22",
     "week": 43,
@@ -145,18 +185,29 @@
     "vehicle_density_trend_4w": -1.8,
     "speed_trend_4w": -0.047,
     "incident_trend_4w": 0.0,
-    "location_name": "Pitampura",
-    "city": "Delhi",
-    "latitude": 28.7033,
-    "longitude": 77.1322,
-    "predicted_risk_probability": 0.2993,
-    "risk_score": 29.9343,
+    "location_name_x": "Pitampura",
+    "city_x": "Delhi",
+    "latitude_x": 28.7033,
+    "longitude_x": 77.1322,
+    "car_percentage": 45.0,
+    "motorcycle_percentage": 38.8,
+    "bus_percentage": 9.3,
+    "truck_percentage": 6.8,
+    "moving_vehicle_percentage": 78.8,
+    "slow_vehicle_percentage": 12.3,
+    "stopped_vehicle_percentage": 8.9,
+    "location_name_y": "Pitampura",
+    "city_y": "Delhi",
+    "latitude_y": 28.7033,
+    "longitude_y": 77.1322,
+    "predicted_risk_probability": 0.3596,
+    "risk_score": 35.9638,
     "population_exposure_score": 44.6081,
     "vehicle_exposure_score": 54.4693,
     "temporal_trend_score": 54.2508,
-    "priority_score": 42.1572,
-    "priority_rank": 22,
+    "priority_score": 44.569,
+    "priority_rank": 26,
     "priority_level": "MODERATE",
-    "risk_prob": 0.2993
+    "risk_prob": 0.3596
   }
 }

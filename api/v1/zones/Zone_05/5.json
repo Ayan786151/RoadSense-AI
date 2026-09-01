@@ -1,32 +1,32 @@
 {
   "zone_id": "Zone_05",
-  "location_name": "Powai",
-  "city": "Mumbai",
+  "location_name": "Zone_05",
+  "city": "",
   "zone_type": "Commercial_Downtown",
   "week": 5,
-  "latitude": 19.1176,
-  "longitude": 72.906,
+  "latitude": 0.0,
+  "longitude": 0.0,
   "risk_analysis": {
-    "predicted_risk_probability": 0.2611,
-    "predicted_risk_percentage": 26.11,
-    "risk_label": "LOW RISK",
-    "risk_color": "#22c55e",
+    "predicted_risk_probability": 0.3819,
+    "predicted_risk_percentage": 38.19,
+    "risk_label": "MODERATE RISK",
+    "risk_color": "#eab308",
     "risk_delta_vs_prev_week": null,
     "actual_incident": 0
   },
   "priority": {
-    "priority_score": 45.3239,
-    "priority_rank": 18,
+    "priority_score": 50.158,
+    "priority_rank": 16,
     "priority_level": "MODERATE",
     "components": {
-      "risk_score": 26.1066,
+      "risk_score": 38.192,
       "population_exposure_score": 50.1616,
       "vehicle_exposure_score": 53.1352,
       "temporal_trend_score": 78.092
     },
     "explanation": {
       "priority_level": "MODERATE",
-      "priority_score": 45.3,
+      "priority_score": 50.2,
       "top_contributors": [
         {
           "factor": "Worsening Trend",
@@ -37,20 +37,20 @@
           "weight": 78.092
         },
         {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "38/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 38.192
+        },
+        {
           "factor": "Population Exposure",
           "icon": "\ud83d\udc65",
           "value": "50/100",
           "impact": "MEDIUM",
           "detail": "Moderate population exposure",
           "weight": 35.1132
-        },
-        {
-          "factor": "Risk Score",
-          "icon": "\ud83d\udfe2",
-          "value": "26/100",
-          "impact": "LOW",
-          "detail": "Risk score within acceptable range",
-          "weight": 26.1066
         }
       ],
       "total_factors": 3,
@@ -102,11 +102,51 @@
       "name": "Routine Monitoring",
       "icon": "\ud83d\udcca",
       "severity": "LOW",
-      "description": "Zone currently within acceptable risk parameters.",
-      "action": "Continue routine monitoring. No immediate intervention required."
+      "description": "No specific risk indicators triggered.",
+      "action": "Continue routine monitoring."
     }
   ],
-  "executive_briefing": "Powai is within safe operating parameters (26% risk). Continue routine monitoring. Optimizing signals could save 948 kg CO2/week, equivalent to 2348 trees/year.",
+  "executive_briefing": "Zone_05 shows elevated risk at 38%. Continue routine monitoring. Optimizing signals could save 948 kg CO2/week, equivalent to 2348 trees/year.",
+  "civilian_road_safety_radar": {
+    "current_week": {
+      "week": 5,
+      "risk_score": 38.2,
+      "risk_percentage": "38%",
+      "risk_badge": "MODERATE RISK",
+      "risk_color": "#eab308",
+      "description": "Corridor operating within normal baseline.",
+      "crashes_reported": 0
+    },
+    "why_accidents_might_happen": {
+      "primary_collision_cause": {
+        "title": "Congestion Bottleneck & Merge Conflicts",
+        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+      },
+      "behavior_factor": {
+        "title": "Tailgating & Speed Variance",
+        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+      },
+      "street_environment": {
+        "zone_type": "Commercial_Downtown",
+        "average_speed_kmh": 58.52,
+        "congestion_level": 22.6
+      }
+    },
+    "civilian_safety_guide": {
+      "for_drivers": {
+        "action": "Increase Following Distance",
+        "details": "Maintain 3 car lengths buffer during peak rush hours."
+      },
+      "for_pedestrians_and_cyclists": {
+        "action": "Double-Check Turning Vehicles",
+        "details": "Make eye contact with turning drivers at intersections before crossing."
+      },
+      "peak_danger_windows": {
+        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
+        "details": "Congestion peaks during evening travel windows."
+      }
+    }
+  },
   "raw_metrics": {
     "zone_id": "Zone_05",
     "week": 5,
@@ -153,18 +193,29 @@
     "vehicle_density_trend_4w": 3.086,
     "speed_trend_4w": -1.947,
     "incident_trend_4w": 0.0,
-    "location_name": "Powai",
-    "city": "Mumbai",
-    "latitude": 19.1176,
-    "longitude": 72.906,
-    "predicted_risk_probability": 0.2611,
-    "risk_score": 26.1066,
+    "location_name_x": "Powai",
+    "city_x": "Mumbai",
+    "latitude_x": 19.1176,
+    "longitude_x": 72.906,
+    "car_percentage": 46.1,
+    "motorcycle_percentage": 41.1,
+    "bus_percentage": 9.0,
+    "truck_percentage": 3.8,
+    "moving_vehicle_percentage": 70.4,
+    "slow_vehicle_percentage": 9.8,
+    "stopped_vehicle_percentage": 19.9,
+    "location_name_y": "Powai",
+    "city_y": "Mumbai",
+    "latitude_y": 19.1176,
+    "longitude_y": 72.906,
+    "predicted_risk_probability": 0.3819,
+    "risk_score": 38.192,
     "population_exposure_score": 50.1616,
     "vehicle_exposure_score": 53.1352,
     "temporal_trend_score": 78.092,
-    "priority_score": 45.3239,
-    "priority_rank": 18,
+    "priority_score": 50.158,
+    "priority_rank": 16,
     "priority_level": "MODERATE",
-    "risk_prob": 0.2611
+    "risk_prob": 0.3819
   }
 }

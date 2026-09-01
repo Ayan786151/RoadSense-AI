@@ -1,32 +1,32 @@
 {
   "zone_id": "Zone_36",
-  "location_name": "Rajajipuram",
-  "city": "Lucknow",
+  "location_name": "Zone_36",
+  "city": "",
   "zone_type": "Residential",
   "week": 43,
-  "latitude": 26.833,
-  "longitude": 80.89,
+  "latitude": 0.0,
+  "longitude": 0.0,
   "risk_analysis": {
-    "predicted_risk_probability": 0.3937,
-    "predicted_risk_percentage": 39.37,
+    "predicted_risk_probability": 0.4557,
+    "predicted_risk_percentage": 45.57,
     "risk_label": "MODERATE RISK",
     "risk_color": "#eab308",
-    "risk_delta_vs_prev_week": 3.6235,
+    "risk_delta_vs_prev_week": 6.1201,
     "actual_incident": 0
   },
   "priority": {
-    "priority_score": 59.2521,
-    "priority_rank": 9,
+    "priority_score": 61.7311,
+    "priority_rank": 6,
     "priority_level": "HIGH",
     "components": {
-      "risk_score": 39.3746,
+      "risk_score": 45.572,
       "population_exposure_score": 81.73,
       "vehicle_exposure_score": 52.1464,
       "temporal_trend_score": 84.2699
     },
     "explanation": {
       "priority_level": "HIGH",
-      "priority_score": 59.3,
+      "priority_score": 61.7,
       "top_contributors": [
         {
           "factor": "Worsening Trend",
@@ -46,11 +46,11 @@
         },
         {
           "factor": "Risk Score",
-          "icon": "\ud83d\udfe2",
-          "value": "39/100",
-          "impact": "LOW",
-          "detail": "Risk score within acceptable range",
-          "weight": 39.3746
+          "icon": "\ud83d\udfe1",
+          "value": "46/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 45.572
         }
       ],
       "total_factors": 3,
@@ -106,7 +106,47 @@
       "action": "Continue routine monitoring."
     }
   ],
-  "executive_briefing": "Rajajipuram shows elevated risk at 39%. Continue routine monitoring. Optimizing signals could save 1758 kg CO2/week, equivalent to 4352 trees/year.",
+  "executive_briefing": "Zone_36 shows elevated risk at 46%. Continue routine monitoring. Optimizing signals could save 1758 kg CO2/week, equivalent to 4352 trees/year.",
+  "civilian_road_safety_radar": {
+    "current_week": {
+      "week": 43,
+      "risk_score": 45.6,
+      "risk_percentage": "46%",
+      "risk_badge": "MODERATE RISK",
+      "risk_color": "#eab308",
+      "description": "Corridor operating within normal baseline.",
+      "crashes_reported": 0
+    },
+    "why_accidents_might_happen": {
+      "primary_collision_cause": {
+        "title": "Congestion Bottleneck & Merge Conflicts",
+        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+      },
+      "behavior_factor": {
+        "title": "Tailgating & Speed Variance",
+        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+      },
+      "street_environment": {
+        "zone_type": "Residential",
+        "average_speed_kmh": 56.11,
+        "congestion_level": 34.81
+      }
+    },
+    "civilian_safety_guide": {
+      "for_drivers": {
+        "action": "Increase Following Distance",
+        "details": "Maintain 3 car lengths buffer during peak rush hours."
+      },
+      "for_pedestrians_and_cyclists": {
+        "action": "Double-Check Turning Vehicles",
+        "details": "Make eye contact with turning drivers at intersections before crossing."
+      },
+      "peak_danger_windows": {
+        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
+        "details": "Congestion peaks during evening travel windows."
+      }
+    }
+  },
   "raw_metrics": {
     "zone_id": "Zone_36",
     "week": 43,
@@ -153,18 +193,29 @@
     "vehicle_density_trend_4w": 3.301,
     "speed_trend_4w": -2.262,
     "incident_trend_4w": -0.2,
-    "location_name": "Rajajipuram",
-    "city": "Lucknow",
-    "latitude": 26.833,
-    "longitude": 80.89,
-    "predicted_risk_probability": 0.3937,
-    "risk_score": 39.3746,
+    "location_name_x": "Rajajipuram",
+    "city_x": "Lucknow",
+    "latitude_x": 26.833,
+    "longitude_x": 80.89,
+    "car_percentage": 36.2,
+    "motorcycle_percentage": 54.0,
+    "bus_percentage": 4.7,
+    "truck_percentage": 5.1,
+    "moving_vehicle_percentage": 83.6,
+    "slow_vehicle_percentage": 19.6,
+    "stopped_vehicle_percentage": 0.0,
+    "location_name_y": "Rajajipuram",
+    "city_y": "Lucknow",
+    "latitude_y": 26.833,
+    "longitude_y": 80.89,
+    "predicted_risk_probability": 0.4557,
+    "risk_score": 45.572,
     "population_exposure_score": 81.73,
     "vehicle_exposure_score": 52.1464,
     "temporal_trend_score": 84.2699,
-    "priority_score": 59.2521,
-    "priority_rank": 9,
+    "priority_score": 61.7311,
+    "priority_rank": 6,
     "priority_level": "HIGH",
-    "risk_prob": 0.3937
+    "risk_prob": 0.4557
   }
 }

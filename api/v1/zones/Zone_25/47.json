@@ -1,32 +1,32 @@
 {
   "zone_id": "Zone_25",
-  "location_name": "Okhla",
-  "city": "Delhi",
+  "location_name": "Zone_25",
+  "city": "",
   "zone_type": "Residential",
   "week": 47,
-  "latitude": 28.5355,
-  "longitude": 77.264,
+  "latitude": 0.0,
+  "longitude": 0.0,
   "risk_analysis": {
-    "predicted_risk_probability": 0.3178,
-    "predicted_risk_percentage": 31.78,
-    "risk_label": "LOW RISK",
-    "risk_color": "#22c55e",
-    "risk_delta_vs_prev_week": -10.9693,
+    "predicted_risk_probability": 0.5761,
+    "predicted_risk_percentage": 57.61,
+    "risk_label": "HIGH RISK",
+    "risk_color": "#f97316",
+    "risk_delta_vs_prev_week": 14.4606,
     "actual_incident": 1
   },
   "priority": {
-    "priority_score": 47.9776,
-    "priority_rank": 13,
-    "priority_level": "MODERATE",
+    "priority_score": 58.3086,
+    "priority_rank": 5,
+    "priority_level": "HIGH",
     "components": {
-      "risk_score": 31.7792,
+      "risk_score": 57.6068,
       "population_exposure_score": 67.7419,
       "vehicle_exposure_score": 45.827,
       "temporal_trend_score": 61.1003
     },
     "explanation": {
-      "priority_level": "MODERATE",
-      "priority_score": 48.0,
+      "priority_level": "HIGH",
+      "priority_score": 58.3,
       "top_contributors": [
         {
           "factor": "Population Exposure",
@@ -37,24 +37,24 @@
           "weight": 67.7419
         },
         {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "58/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 57.6068
+        },
+        {
           "factor": "Rising Trend",
           "icon": "\ud83d\udcc8",
           "value": "61/100",
           "impact": "MEDIUM",
           "detail": "Slight upward trend in congestion over past 4 weeks",
           "weight": 36.6602
-        },
-        {
-          "factor": "Risk Score",
-          "icon": "\ud83d\udfe2",
-          "value": "32/100",
-          "impact": "LOW",
-          "detail": "Risk score within acceptable range",
-          "weight": 31.7792
         }
       ],
       "total_factors": 3,
-      "assessment": "This zone has moderate risk levels with contributing factors: Population Exposure, Rising Trend. Continue monitoring and schedule review if conditions worsen."
+      "assessment": "This zone shows significant risk elevation driven by Population Exposure. Proactive intervention should be scheduled within the current planning cycle."
     }
   },
   "telemetry": {
@@ -98,15 +98,55 @@
   },
   "interventions": [
     {
-      "id": "BASELINE_MONITORING",
-      "name": "Routine Monitoring",
-      "icon": "\ud83d\udcca",
-      "severity": "LOW",
-      "description": "No specific risk indicators triggered.",
-      "action": "Continue routine monitoring."
+      "id": "SPEED_CALMING",
+      "name": "Speed Calming & Enforcement",
+      "icon": "\ud83c\udfce\ufe0f",
+      "severity": "HIGH",
+      "description": "High average speed combined with elevated risk score suggests speed-related hazards.",
+      "action": "Deploy speed calming measures (speed bumps, radar signs) and increase enforcement patrols."
     }
   ],
-  "executive_briefing": "Okhla is within safe operating parameters (32% risk). Continue routine monitoring. Optimizing signals could save 1545 kg CO2/week, equivalent to 3825 trees/year.",
+  "executive_briefing": "Zone_25 shows elevated risk at 58%. Continue routine monitoring. Optimizing signals could save 1545 kg CO2/week, equivalent to 3825 trees/year.",
+  "civilian_road_safety_radar": {
+    "current_week": {
+      "week": 47,
+      "risk_score": 57.6,
+      "risk_percentage": "58%",
+      "risk_badge": "HIGH RISK",
+      "risk_color": "#f97316",
+      "description": "Elevated collision activity observed.",
+      "crashes_reported": 0
+    },
+    "why_accidents_might_happen": {
+      "primary_collision_cause": {
+        "title": "Congestion Bottleneck & Merge Conflicts",
+        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+      },
+      "behavior_factor": {
+        "title": "Tailgating & Speed Variance",
+        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+      },
+      "street_environment": {
+        "zone_type": "Residential",
+        "average_speed_kmh": 58.37,
+        "congestion_level": 31.03
+      }
+    },
+    "civilian_safety_guide": {
+      "for_drivers": {
+        "action": "Increase Following Distance",
+        "details": "Maintain 3 car lengths buffer during peak rush hours."
+      },
+      "for_pedestrians_and_cyclists": {
+        "action": "Double-Check Turning Vehicles",
+        "details": "Make eye contact with turning drivers at intersections before crossing."
+      },
+      "peak_danger_windows": {
+        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
+        "details": "Congestion peaks during evening travel windows."
+      }
+    }
+  },
   "raw_metrics": {
     "zone_id": "Zone_25",
     "week": 47,
@@ -153,18 +193,29 @@
     "vehicle_density_trend_4w": 1.104,
     "speed_trend_4w": -0.708,
     "incident_trend_4w": 0.0,
-    "location_name": "Okhla",
-    "city": "Delhi",
-    "latitude": 28.5355,
-    "longitude": 77.264,
-    "predicted_risk_probability": 0.3178,
-    "risk_score": 31.7792,
+    "location_name_x": "Okhla",
+    "city_x": "Delhi",
+    "latitude_x": 28.5355,
+    "longitude_x": 77.264,
+    "car_percentage": 33.5,
+    "motorcycle_percentage": 55.9,
+    "bus_percentage": 6.2,
+    "truck_percentage": 4.4,
+    "moving_vehicle_percentage": 81.0,
+    "slow_vehicle_percentage": 11.0,
+    "stopped_vehicle_percentage": 8.0,
+    "location_name_y": "Okhla",
+    "city_y": "Delhi",
+    "latitude_y": 28.5355,
+    "longitude_y": 77.264,
+    "predicted_risk_probability": 0.5761,
+    "risk_score": 57.6068,
     "population_exposure_score": 67.7419,
     "vehicle_exposure_score": 45.827,
     "temporal_trend_score": 61.1003,
-    "priority_score": 47.9776,
-    "priority_rank": 13,
-    "priority_level": "MODERATE",
-    "risk_prob": 0.3178
+    "priority_score": 58.3086,
+    "priority_rank": 5,
+    "priority_level": "HIGH",
+    "risk_prob": 0.5761
   }
 }

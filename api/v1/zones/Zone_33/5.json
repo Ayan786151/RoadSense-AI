@@ -1,40 +1,40 @@
 {
   "zone_id": "Zone_33",
-  "location_name": "Aminabad",
-  "city": "Lucknow",
+  "location_name": "Zone_33",
+  "city": "",
   "zone_type": "Commercial_Downtown",
   "week": 5,
-  "latitude": 26.8465,
-  "longitude": 80.94,
+  "latitude": 0.0,
+  "longitude": 0.0,
   "risk_analysis": {
-    "predicted_risk_probability": 0.3111,
-    "predicted_risk_percentage": 31.11,
-    "risk_label": "LOW RISK",
-    "risk_color": "#22c55e",
+    "predicted_risk_probability": 0.4065,
+    "predicted_risk_percentage": 40.65,
+    "risk_label": "MODERATE RISK",
+    "risk_color": "#eab308",
     "risk_delta_vs_prev_week": null,
     "actual_incident": 0
   },
   "priority": {
-    "priority_score": 38.8395,
-    "priority_rank": 33,
+    "priority_score": 42.6579,
+    "priority_rank": 31,
     "priority_level": "MODERATE",
     "components": {
-      "risk_score": 31.1079,
+      "risk_score": 40.654,
       "population_exposure_score": 40.1178,
       "vehicle_exposure_score": 45.4333,
       "temporal_trend_score": 48.5348
     },
     "explanation": {
       "priority_level": "MODERATE",
-      "priority_score": 38.8,
+      "priority_score": 42.7,
       "top_contributors": [
         {
           "factor": "Risk Score",
-          "icon": "\ud83d\udfe2",
-          "value": "31/100",
-          "impact": "LOW",
-          "detail": "Risk score within acceptable range",
-          "weight": 31.1079
+          "icon": "\ud83d\udfe1",
+          "value": "41/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 40.654
         },
         {
           "factor": "Population Exposure",
@@ -46,7 +46,7 @@
         }
       ],
       "total_factors": 2,
-      "assessment": "This zone has moderate risk levels with contributing factors: Population Exposure. Continue monitoring and schedule review if conditions worsen."
+      "assessment": "This zone has moderate risk levels with contributing factors: Risk Score, Population Exposure. Continue monitoring and schedule review if conditions worsen."
     }
   },
   "telemetry": {
@@ -98,7 +98,47 @@
       "action": "Continue routine monitoring."
     }
   ],
-  "executive_briefing": "Aminabad is within safe operating parameters (31% risk). Continue routine monitoring. Optimizing signals could save 899 kg CO2/week, equivalent to 2227 trees/year.",
+  "executive_briefing": "Zone_33 shows elevated risk at 41%. Continue routine monitoring. Optimizing signals could save 899 kg CO2/week, equivalent to 2227 trees/year.",
+  "civilian_road_safety_radar": {
+    "current_week": {
+      "week": 5,
+      "risk_score": 40.7,
+      "risk_percentage": "41%",
+      "risk_badge": "MODERATE RISK",
+      "risk_color": "#eab308",
+      "description": "Corridor operating within normal baseline.",
+      "crashes_reported": 0
+    },
+    "why_accidents_might_happen": {
+      "primary_collision_cause": {
+        "title": "Congestion Bottleneck & Merge Conflicts",
+        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+      },
+      "behavior_factor": {
+        "title": "Tailgating & Speed Variance",
+        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+      },
+      "street_environment": {
+        "zone_type": "Commercial_Downtown",
+        "average_speed_kmh": 56.23,
+        "congestion_level": 24.82
+      }
+    },
+    "civilian_safety_guide": {
+      "for_drivers": {
+        "action": "Increase Following Distance",
+        "details": "Maintain 3 car lengths buffer during peak rush hours."
+      },
+      "for_pedestrians_and_cyclists": {
+        "action": "Double-Check Turning Vehicles",
+        "details": "Make eye contact with turning drivers at intersections before crossing."
+      },
+      "peak_danger_windows": {
+        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
+        "details": "Congestion peaks during evening travel windows."
+      }
+    }
+  },
   "raw_metrics": {
     "zone_id": "Zone_33",
     "week": 5,
@@ -145,18 +185,29 @@
     "vehicle_density_trend_4w": 0.558,
     "speed_trend_4w": 0.671,
     "incident_trend_4w": 0.4,
-    "location_name": "Aminabad",
-    "city": "Lucknow",
-    "latitude": 26.8465,
-    "longitude": 80.94,
-    "predicted_risk_probability": 0.3111,
-    "risk_score": 31.1079,
+    "location_name_x": "Aminabad",
+    "city_x": "Lucknow",
+    "latitude_x": 26.8465,
+    "longitude_x": 80.94,
+    "car_percentage": 43.5,
+    "motorcycle_percentage": 38.2,
+    "bus_percentage": 11.7,
+    "truck_percentage": 6.6,
+    "moving_vehicle_percentage": 79.6,
+    "slow_vehicle_percentage": 19.1,
+    "stopped_vehicle_percentage": 1.3,
+    "location_name_y": "Aminabad",
+    "city_y": "Lucknow",
+    "latitude_y": 26.8465,
+    "longitude_y": 80.94,
+    "predicted_risk_probability": 0.4065,
+    "risk_score": 40.654,
     "population_exposure_score": 40.1178,
     "vehicle_exposure_score": 45.4333,
     "temporal_trend_score": 48.5348,
-    "priority_score": 38.8395,
-    "priority_rank": 33,
+    "priority_score": 42.6579,
+    "priority_rank": 31,
     "priority_level": "MODERATE",
-    "risk_prob": 0.3111
+    "risk_prob": 0.4065
   }
 }

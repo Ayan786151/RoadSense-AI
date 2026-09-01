@@ -1,32 +1,32 @@
 {
   "zone_id": "Zone_50",
-  "location_name": "Egmore",
-  "city": "Chennai",
+  "location_name": "Zone_50",
+  "city": "",
   "zone_type": "University_District",
   "week": 42,
-  "latitude": 13.0732,
-  "longitude": 80.2609,
+  "latitude": 0.0,
+  "longitude": 0.0,
   "risk_analysis": {
-    "predicted_risk_probability": 0.8267,
-    "predicted_risk_percentage": 82.67,
-    "risk_label": "CRITICAL RISK",
-    "risk_color": "#ef4444",
-    "risk_delta_vs_prev_week": 10.0446,
+    "predicted_risk_probability": 0.6864,
+    "predicted_risk_percentage": 68.64,
+    "risk_label": "HIGH RISK",
+    "risk_color": "#f97316",
+    "risk_delta_vs_prev_week": 18.5551,
     "actual_incident": 1
   },
   "priority": {
-    "priority_score": 80.7662,
+    "priority_score": 75.1512,
     "priority_rank": 2,
     "priority_level": "CRITICAL",
     "components": {
-      "risk_score": 82.673,
+      "risk_score": 68.6356,
       "population_exposure_score": 73.5038,
       "vehicle_exposure_score": 100.0,
       "temporal_trend_score": 62.1401
     },
     "explanation": {
       "priority_level": "CRITICAL",
-      "priority_score": 80.8,
+      "priority_score": 75.2,
       "top_contributors": [
         {
           "factor": "Vehicle Density",
@@ -35,14 +35,6 @@
           "impact": "HIGH",
           "detail": "High vehicle density increases collision exposure",
           "weight": 100.0
-        },
-        {
-          "factor": "Risk Score",
-          "icon": "\ud83d\udd34",
-          "value": "83/100",
-          "impact": "HIGH",
-          "detail": "Model-estimated risk score is in the critical range",
-          "weight": 82.673
         },
         {
           "factor": "Population Exposure",
@@ -61,6 +53,14 @@
           "weight": 70.43
         },
         {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "69/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 68.6356
+        },
+        {
           "factor": "Violation Count",
           "icon": "\ud83d\udea8",
           "value": "11",
@@ -70,7 +70,7 @@
         }
       ],
       "total_factors": 6,
-      "assessment": "This zone requires URGENT attention. Primary risk drivers: Vehicle Density, Risk Score, Population Exposure. Immediate field inspection and intervention planning recommended."
+      "assessment": "This zone requires URGENT attention. Primary risk drivers: Vehicle Density, Population Exposure, Congestion. Immediate field inspection and intervention planning recommended."
     }
   },
   "telemetry": {
@@ -136,17 +136,49 @@
       "severity": "MEDIUM",
       "description": "High population density zone with significant traffic congestion creates pedestrian exposure risk.",
       "action": "Install protected pedestrian crossings, improve sidewalk infrastructure, and add pedestrian countdown signals."
-    },
-    {
-      "id": "MONITORING_UPGRADE",
-      "name": "Enhanced Monitoring & CCTV Coverage",
-      "icon": "\ud83d\udcf9",
-      "severity": "MEDIUM",
-      "description": "High-risk zone with significant population exposure warrants improved surveillance.",
-      "action": "Install additional CCTV cameras and integrate with traffic management center for real-time monitoring."
     }
   ],
-  "executive_briefing": "Egmore is in a critical safety state with 83% incident risk. Signal optimization recommended \u2014 congestion at 70/100 with speeds averaging 41 km/h. Optimizing signals could save 7561 kg CO2/week, equivalent to 18723 trees/year.",
+  "executive_briefing": "Zone_50 is in a critical safety state with 69% incident risk. Signal optimization recommended \u2014 congestion at 70/100 with speeds averaging 41 km/h. Optimizing signals could save 7561 kg CO2/week, equivalent to 18723 trees/year.",
+  "civilian_road_safety_radar": {
+    "current_week": {
+      "week": 42,
+      "risk_score": 68.6,
+      "risk_percentage": "69%",
+      "risk_badge": "HIGH RISK",
+      "risk_color": "#f97316",
+      "description": "Elevated collision activity observed.",
+      "crashes_reported": 0
+    },
+    "why_accidents_might_happen": {
+      "primary_collision_cause": {
+        "title": "Congestion Bottleneck & Merge Conflicts",
+        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+      },
+      "behavior_factor": {
+        "title": "Tailgating & Speed Variance",
+        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+      },
+      "street_environment": {
+        "zone_type": "University_District",
+        "average_speed_kmh": 40.58,
+        "congestion_level": 70.43
+      }
+    },
+    "civilian_safety_guide": {
+      "for_drivers": {
+        "action": "Increase Following Distance",
+        "details": "Maintain 3 car lengths buffer during peak rush hours."
+      },
+      "for_pedestrians_and_cyclists": {
+        "action": "Double-Check Turning Vehicles",
+        "details": "Make eye contact with turning drivers at intersections before crossing."
+      },
+      "peak_danger_windows": {
+        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
+        "details": "Congestion peaks during evening travel windows."
+      }
+    }
+  },
   "raw_metrics": {
     "zone_id": "Zone_50",
     "week": 42,
@@ -193,18 +225,29 @@
     "vehicle_density_trend_4w": 1.457,
     "speed_trend_4w": -1.371,
     "incident_trend_4w": 0.1,
-    "location_name": "Egmore",
-    "city": "Chennai",
-    "latitude": 13.0732,
-    "longitude": 80.2609,
-    "predicted_risk_probability": 0.8267,
-    "risk_score": 82.673,
+    "location_name_x": "Egmore",
+    "city_x": "Chennai",
+    "latitude_x": 13.0732,
+    "longitude_x": 80.2609,
+    "car_percentage": 48.3,
+    "motorcycle_percentage": 36.6,
+    "bus_percentage": 9.5,
+    "truck_percentage": 5.5,
+    "moving_vehicle_percentage": 8.1,
+    "slow_vehicle_percentage": 32.6,
+    "stopped_vehicle_percentage": 59.3,
+    "location_name_y": "Egmore",
+    "city_y": "Chennai",
+    "latitude_y": 13.0732,
+    "longitude_y": 80.2609,
+    "predicted_risk_probability": 0.6864,
+    "risk_score": 68.6356,
     "population_exposure_score": 73.5038,
     "vehicle_exposure_score": 100.0,
     "temporal_trend_score": 62.1401,
-    "priority_score": 80.7662,
+    "priority_score": 75.1512,
     "priority_rank": 2,
     "priority_level": "CRITICAL",
-    "risk_prob": 0.8267
+    "risk_prob": 0.6864
   }
 }

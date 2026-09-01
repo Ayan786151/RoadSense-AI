@@ -1,41 +1,33 @@
 {
   "zone_id": "Zone_07",
-  "location_name": "Goregaon",
-  "city": "Mumbai",
+  "location_name": "Zone_07",
+  "city": "",
   "zone_type": "University_District",
   "week": 41,
-  "latitude": 19.1663,
-  "longitude": 72.8526,
+  "latitude": 0.0,
+  "longitude": 0.0,
   "risk_analysis": {
-    "predicted_risk_probability": 0.7739,
-    "predicted_risk_percentage": 77.39,
-    "risk_label": "CRITICAL RISK",
-    "risk_color": "#ef4444",
-    "risk_delta_vs_prev_week": -3.4405,
+    "predicted_risk_probability": 0.6793,
+    "predicted_risk_percentage": 67.93,
+    "risk_label": "HIGH RISK",
+    "risk_color": "#f97316",
+    "risk_delta_vs_prev_week": 5.5066,
     "actual_incident": 1
   },
   "priority": {
-    "priority_score": 53.4647,
-    "priority_rank": 10,
+    "priority_score": 49.6814,
+    "priority_rank": 14,
     "priority_level": "MODERATE",
     "components": {
-      "risk_score": 77.3925,
+      "risk_score": 67.9341,
       "population_exposure_score": 42.4312,
       "vehicle_exposure_score": 59.4998,
       "temporal_trend_score": 0.0
     },
     "explanation": {
       "priority_level": "MODERATE",
-      "priority_score": 53.5,
+      "priority_score": 49.7,
       "top_contributors": [
-        {
-          "factor": "Risk Score",
-          "icon": "\ud83d\udd34",
-          "value": "77/100",
-          "impact": "HIGH",
-          "detail": "Model-estimated risk score is in the critical range",
-          "weight": 77.3925
-        },
         {
           "factor": "Congestion",
           "icon": "\ud83d\ude97",
@@ -43,6 +35,14 @@
           "impact": "HIGH",
           "detail": "Congestion index at 70 \u2014 severe traffic flow degradation",
           "weight": 70.03
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe1",
+          "value": "68/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 67.9341
         },
         {
           "factor": "Population Exposure",
@@ -62,7 +62,7 @@
         }
       ],
       "total_factors": 4,
-      "assessment": "This zone has moderate risk levels with contributing factors: Risk Score, Congestion. Continue monitoring and schedule review if conditions worsen."
+      "assessment": "This zone has moderate risk levels with contributing factors: Congestion, Risk Score. Continue monitoring and schedule review if conditions worsen."
     }
   },
   "telemetry": {
@@ -114,7 +114,47 @@
       "action": "Continue routine monitoring."
     }
   ],
-  "executive_briefing": "Goregaon is in a critical safety state with 77% incident risk. Signal optimization recommended \u2014 congestion at 70/100 with speeds averaging 43 km/h. Optimizing signals could save 4654 kg CO2/week, equivalent to 11525 trees/year.",
+  "executive_briefing": "Zone_07 is in a critical safety state with 68% incident risk. Signal optimization recommended \u2014 congestion at 70/100 with speeds averaging 43 km/h. Optimizing signals could save 4654 kg CO2/week, equivalent to 11525 trees/year.",
+  "civilian_road_safety_radar": {
+    "current_week": {
+      "week": 41,
+      "risk_score": 67.9,
+      "risk_percentage": "68%",
+      "risk_badge": "HIGH RISK",
+      "risk_color": "#f97316",
+      "description": "Elevated collision activity observed.",
+      "crashes_reported": 0
+    },
+    "why_accidents_might_happen": {
+      "primary_collision_cause": {
+        "title": "Congestion Bottleneck & Merge Conflicts",
+        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+      },
+      "behavior_factor": {
+        "title": "Tailgating & Speed Variance",
+        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+      },
+      "street_environment": {
+        "zone_type": "University_District",
+        "average_speed_kmh": 43.26,
+        "congestion_level": 70.03
+      }
+    },
+    "civilian_safety_guide": {
+      "for_drivers": {
+        "action": "Increase Following Distance",
+        "details": "Maintain 3 car lengths buffer during peak rush hours."
+      },
+      "for_pedestrians_and_cyclists": {
+        "action": "Double-Check Turning Vehicles",
+        "details": "Make eye contact with turning drivers at intersections before crossing."
+      },
+      "peak_danger_windows": {
+        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
+        "details": "Congestion peaks during evening travel windows."
+      }
+    }
+  },
   "raw_metrics": {
     "zone_id": "Zone_07",
     "week": 41,
@@ -161,18 +201,29 @@
     "vehicle_density_trend_4w": 1.142,
     "speed_trend_4w": 5.117,
     "incident_trend_4w": -0.3,
-    "location_name": "Goregaon",
-    "city": "Mumbai",
-    "latitude": 19.1663,
-    "longitude": 72.8526,
-    "predicted_risk_probability": 0.7739,
-    "risk_score": 77.3925,
+    "location_name_x": "Goregaon",
+    "city_x": "Mumbai",
+    "latitude_x": 19.1663,
+    "longitude_x": 72.8526,
+    "car_percentage": 42.8,
+    "motorcycle_percentage": 38.1,
+    "bus_percentage": 12.9,
+    "truck_percentage": 6.2,
+    "moving_vehicle_percentage": 10.1,
+    "slow_vehicle_percentage": 48.4,
+    "stopped_vehicle_percentage": 41.6,
+    "location_name_y": "Goregaon",
+    "city_y": "Mumbai",
+    "latitude_y": 19.1663,
+    "longitude_y": 72.8526,
+    "predicted_risk_probability": 0.6793,
+    "risk_score": 67.9341,
     "population_exposure_score": 42.4312,
     "vehicle_exposure_score": 59.4998,
     "temporal_trend_score": 0.0,
-    "priority_score": 53.4647,
-    "priority_rank": 10,
+    "priority_score": 49.6814,
+    "priority_rank": 14,
     "priority_level": "MODERATE",
-    "risk_prob": 0.7739
+    "risk_prob": 0.6793
   }
 }

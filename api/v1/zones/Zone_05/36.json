@@ -1,40 +1,40 @@
 {
   "zone_id": "Zone_05",
-  "location_name": "Powai",
-  "city": "Mumbai",
+  "location_name": "Zone_05",
+  "city": "",
   "zone_type": "Commercial_Downtown",
   "week": 36,
-  "latitude": 19.1176,
-  "longitude": 72.906,
+  "latitude": 0.0,
+  "longitude": 0.0,
   "risk_analysis": {
-    "predicted_risk_probability": 0.9254,
-    "predicted_risk_percentage": 92.54,
+    "predicted_risk_probability": 0.8457,
+    "predicted_risk_percentage": 84.57,
     "risk_label": "CRITICAL RISK",
     "risk_color": "#ef4444",
-    "risk_delta_vs_prev_week": 58.6946,
+    "risk_delta_vs_prev_week": 41.184,
     "actual_incident": 1
   },
   "priority": {
-    "priority_score": 64.4804,
-    "priority_rank": 15,
+    "priority_score": 61.29,
+    "priority_rank": 16,
     "priority_level": "HIGH",
     "components": {
-      "risk_score": 92.5443,
+      "risk_score": 84.5682,
       "population_exposure_score": 50.1616,
       "vehicle_exposure_score": 35.1458,
       "temporal_trend_score": 52.6207
     },
     "explanation": {
       "priority_level": "HIGH",
-      "priority_score": 64.5,
+      "priority_score": 61.3,
       "top_contributors": [
         {
           "factor": "Risk Score",
           "icon": "\ud83d\udd34",
-          "value": "93/100",
+          "value": "85/100",
           "impact": "HIGH",
           "detail": "Model-estimated risk score is in the critical range",
-          "weight": 92.5443
+          "weight": 84.5682
         },
         {
           "factor": "Congestion",
@@ -106,7 +106,47 @@
       "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
     }
   ],
-  "executive_briefing": "Powai is in a critical safety state with 93% incident risk. Continue routine monitoring. Optimizing signals could save 2222 kg CO2/week, equivalent to 5502 trees/year.",
+  "executive_briefing": "Zone_05 is in a critical safety state with 85% incident risk. Continue routine monitoring. Optimizing signals could save 2222 kg CO2/week, equivalent to 5502 trees/year.",
+  "civilian_road_safety_radar": {
+    "current_week": {
+      "week": 36,
+      "risk_score": 84.6,
+      "risk_percentage": "85%",
+      "risk_badge": "CRITICAL RISK",
+      "risk_color": "#ef4444",
+      "description": "Elevated collision activity observed.",
+      "crashes_reported": 0
+    },
+    "why_accidents_might_happen": {
+      "primary_collision_cause": {
+        "title": "Congestion Bottleneck & Merge Conflicts",
+        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+      },
+      "behavior_factor": {
+        "title": "Tailgating & Speed Variance",
+        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+      },
+      "street_environment": {
+        "zone_type": "Commercial_Downtown",
+        "average_speed_kmh": 25.91,
+        "congestion_level": 54.85
+      }
+    },
+    "civilian_safety_guide": {
+      "for_drivers": {
+        "action": "Increase Following Distance",
+        "details": "Maintain 3 car lengths buffer during peak rush hours."
+      },
+      "for_pedestrians_and_cyclists": {
+        "action": "Double-Check Turning Vehicles",
+        "details": "Make eye contact with turning drivers at intersections before crossing."
+      },
+      "peak_danger_windows": {
+        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
+        "details": "Congestion peaks during evening travel windows."
+      }
+    }
+  },
   "raw_metrics": {
     "zone_id": "Zone_05",
     "week": 36,
@@ -153,18 +193,29 @@
     "vehicle_density_trend_4w": -0.283,
     "speed_trend_4w": -0.521,
     "incident_trend_4w": -0.1,
-    "location_name": "Powai",
-    "city": "Mumbai",
-    "latitude": 19.1176,
-    "longitude": 72.906,
-    "predicted_risk_probability": 0.9254,
-    "risk_score": 92.5443,
+    "location_name_x": "Powai",
+    "city_x": "Mumbai",
+    "latitude_x": 19.1176,
+    "longitude_x": 72.906,
+    "car_percentage": 48.9,
+    "motorcycle_percentage": 39.8,
+    "bus_percentage": 9.2,
+    "truck_percentage": 2.1,
+    "moving_vehicle_percentage": 46.1,
+    "slow_vehicle_percentage": 30.7,
+    "stopped_vehicle_percentage": 23.2,
+    "location_name_y": "Powai",
+    "city_y": "Mumbai",
+    "latitude_y": 19.1176,
+    "longitude_y": 72.906,
+    "predicted_risk_probability": 0.8457,
+    "risk_score": 84.5682,
     "population_exposure_score": 50.1616,
     "vehicle_exposure_score": 35.1458,
     "temporal_trend_score": 52.6207,
-    "priority_score": 64.4804,
-    "priority_rank": 15,
+    "priority_score": 61.29,
+    "priority_rank": 16,
     "priority_level": "HIGH",
-    "risk_prob": 0.9254
+    "risk_prob": 0.8457
   }
 }

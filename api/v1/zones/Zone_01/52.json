@@ -1,40 +1,40 @@
 {
   "zone_id": "Zone_01",
-  "location_name": "Andheri",
-  "city": "Mumbai",
+  "location_name": "Zone_01",
+  "city": "",
   "zone_type": "Commercial_Downtown",
   "week": 52,
-  "latitude": 19.1197,
-  "longitude": 72.8468,
+  "latitude": 0.0,
+  "longitude": 0.0,
   "risk_analysis": {
-    "predicted_risk_probability": 0.8406,
-    "predicted_risk_percentage": 84.06,
-    "risk_label": "CRITICAL RISK",
-    "risk_color": "#ef4444",
-    "risk_delta_vs_prev_week": 25.0156,
+    "predicted_risk_probability": 0.6685,
+    "predicted_risk_percentage": 66.85,
+    "risk_label": "HIGH RISK",
+    "risk_color": "#f97316",
+    "risk_delta_vs_prev_week": 17.7833,
     "actual_incident": 1
   },
   "priority": {
-    "priority_score": 63.8444,
-    "priority_rank": 9,
+    "priority_score": 56.9633,
+    "priority_rank": 10,
     "priority_level": "HIGH",
     "components": {
-      "risk_score": 84.056,
+      "risk_score": 66.8533,
       "population_exposure_score": 52.9133,
       "vehicle_exposure_score": 59.4811,
       "temporal_trend_score": 33.983
     },
     "explanation": {
       "priority_level": "HIGH",
-      "priority_score": 63.8,
+      "priority_score": 57.0,
       "top_contributors": [
         {
           "factor": "Risk Score",
-          "icon": "\ud83d\udd34",
-          "value": "84/100",
-          "impact": "HIGH",
-          "detail": "Model-estimated risk score is in the critical range",
-          "weight": 84.056
+          "icon": "\ud83d\udfe1",
+          "value": "67/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 66.8533
         },
         {
           "factor": "Congestion",
@@ -54,7 +54,7 @@
         }
       ],
       "total_factors": 3,
-      "assessment": "This zone shows significant risk elevation driven by Risk Score. Proactive intervention should be scheduled within the current planning cycle."
+      "assessment": "This zone shows significant risk elevation driven by elevated risk indicators. Proactive intervention should be scheduled within the current planning cycle."
     }
   },
   "telemetry": {
@@ -114,7 +114,47 @@
       "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
     }
   ],
-  "executive_briefing": "Andheri is in a critical safety state with 84% incident risk. Signal optimization recommended \u2014 congestion at 60/100 with speeds averaging 41 km/h. Optimizing signals could save 3933 kg CO2/week, equivalent to 9738 trees/year.",
+  "executive_briefing": "Zone_01 is in a critical safety state with 67% incident risk. Signal optimization recommended \u2014 congestion at 60/100 with speeds averaging 41 km/h. Optimizing signals could save 3933 kg CO2/week, equivalent to 9738 trees/year.",
+  "civilian_road_safety_radar": {
+    "current_week": {
+      "week": 52,
+      "risk_score": 66.9,
+      "risk_percentage": "67%",
+      "risk_badge": "HIGH RISK",
+      "risk_color": "#f97316",
+      "description": "Elevated collision activity observed.",
+      "crashes_reported": 0
+    },
+    "why_accidents_might_happen": {
+      "primary_collision_cause": {
+        "title": "Congestion Bottleneck & Merge Conflicts",
+        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+      },
+      "behavior_factor": {
+        "title": "Tailgating & Speed Variance",
+        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+      },
+      "street_environment": {
+        "zone_type": "Commercial_Downtown",
+        "average_speed_kmh": 40.72,
+        "congestion_level": 60.3
+      }
+    },
+    "civilian_safety_guide": {
+      "for_drivers": {
+        "action": "Increase Following Distance",
+        "details": "Maintain 3 car lengths buffer during peak rush hours."
+      },
+      "for_pedestrians_and_cyclists": {
+        "action": "Double-Check Turning Vehicles",
+        "details": "Make eye contact with turning drivers at intersections before crossing."
+      },
+      "peak_danger_windows": {
+        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
+        "details": "Congestion peaks during evening travel windows."
+      }
+    }
+  },
   "raw_metrics": {
     "zone_id": "Zone_01",
     "week": 52,
@@ -161,18 +201,29 @@
     "vehicle_density_trend_4w": -2.661,
     "speed_trend_4w": -0.493,
     "incident_trend_4w": -0.3,
-    "location_name": "Andheri",
-    "city": "Mumbai",
-    "latitude": 19.1197,
-    "longitude": 72.8468,
-    "predicted_risk_probability": 0.8406,
-    "risk_score": 84.056,
+    "location_name_x": "Andheri",
+    "city_x": "Mumbai",
+    "latitude_x": 19.1197,
+    "longitude_x": 72.8468,
+    "car_percentage": 42.9,
+    "motorcycle_percentage": 38.9,
+    "bus_percentage": 11.7,
+    "truck_percentage": 6.5,
+    "moving_vehicle_percentage": 50.5,
+    "slow_vehicle_percentage": 29.7,
+    "stopped_vehicle_percentage": 19.8,
+    "location_name_y": "Andheri",
+    "city_y": "Mumbai",
+    "latitude_y": 19.1197,
+    "longitude_y": 72.8468,
+    "predicted_risk_probability": 0.6685,
+    "risk_score": 66.8533,
     "population_exposure_score": 52.9133,
     "vehicle_exposure_score": 59.4811,
     "temporal_trend_score": 33.983,
-    "priority_score": 63.8444,
-    "priority_rank": 9,
+    "priority_score": 56.9633,
+    "priority_rank": 10,
     "priority_level": "HIGH",
-    "risk_prob": 0.8406
+    "risk_prob": 0.6685
   }
 }

@@ -1,41 +1,33 @@
 {
   "zone_id": "Zone_31",
-  "location_name": "Alambagh",
-  "city": "Lucknow",
+  "location_name": "Zone_31",
+  "city": "",
   "zone_type": "Commercial_Downtown",
   "week": 49,
-  "latitude": 26.813,
-  "longitude": 80.918,
+  "latitude": 0.0,
+  "longitude": 0.0,
   "risk_analysis": {
-    "predicted_risk_probability": 0.9348,
-    "predicted_risk_percentage": 93.48,
+    "predicted_risk_probability": 0.9023,
+    "predicted_risk_percentage": 90.23,
     "risk_label": "CRITICAL RISK",
     "risk_color": "#ef4444",
-    "risk_delta_vs_prev_week": 16.6427,
+    "risk_delta_vs_prev_week": 26.5858,
     "actual_incident": 1
   },
   "priority": {
-    "priority_score": 68.2521,
-    "priority_rank": 8,
+    "priority_score": 66.9521,
+    "priority_rank": 7,
     "priority_level": "HIGH",
     "components": {
-      "risk_score": 93.4774,
+      "risk_score": 90.2275,
       "population_exposure_score": 57.4969,
       "vehicle_exposure_score": 54.2207,
       "temporal_trend_score": 37.6182
     },
     "explanation": {
       "priority_level": "HIGH",
-      "priority_score": 68.3,
+      "priority_score": 67.0,
       "top_contributors": [
-        {
-          "factor": "Risk Score",
-          "icon": "\ud83d\udd34",
-          "value": "93/100",
-          "impact": "HIGH",
-          "detail": "Model-estimated risk score is in the critical range",
-          "weight": 93.4774
-        },
         {
           "factor": "Congestion",
           "icon": "\ud83d\ude97",
@@ -43,6 +35,14 @@
           "impact": "HIGH",
           "detail": "Congestion index at 91 \u2014 severe traffic flow degradation",
           "weight": 90.7
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udd34",
+          "value": "90/100",
+          "impact": "HIGH",
+          "detail": "Model-estimated risk score is in the critical range",
+          "weight": 90.2275
         },
         {
           "factor": "Speed Anomaly",
@@ -62,7 +62,7 @@
         }
       ],
       "total_factors": 4,
-      "assessment": "This zone shows significant risk elevation driven by Risk Score, Congestion. Proactive intervention should be scheduled within the current planning cycle."
+      "assessment": "This zone shows significant risk elevation driven by Congestion, Risk Score. Proactive intervention should be scheduled within the current planning cycle."
     }
   },
   "telemetry": {
@@ -122,7 +122,47 @@
       "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
     }
   ],
-  "executive_briefing": "Alambagh is in a critical safety state with 93% incident risk. Signal optimization recommended \u2014 congestion at 91/100 with speeds averaging 24 km/h. Optimizing signals could save 6778 kg CO2/week, equivalent to 16783 trees/year.",
+  "executive_briefing": "Zone_31 is in a critical safety state with 90% incident risk. Signal optimization recommended \u2014 congestion at 91/100 with speeds averaging 24 km/h. Optimizing signals could save 6778 kg CO2/week, equivalent to 16783 trees/year.",
+  "civilian_road_safety_radar": {
+    "current_week": {
+      "week": 49,
+      "risk_score": 90.2,
+      "risk_percentage": "90%",
+      "risk_badge": "CRITICAL RISK",
+      "risk_color": "#ef4444",
+      "description": "Elevated collision activity observed.",
+      "crashes_reported": 0
+    },
+    "why_accidents_might_happen": {
+      "primary_collision_cause": {
+        "title": "Congestion Bottleneck & Merge Conflicts",
+        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+      },
+      "behavior_factor": {
+        "title": "Tailgating & Speed Variance",
+        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+      },
+      "street_environment": {
+        "zone_type": "Commercial_Downtown",
+        "average_speed_kmh": 24.27,
+        "congestion_level": 90.7
+      }
+    },
+    "civilian_safety_guide": {
+      "for_drivers": {
+        "action": "Increase Following Distance",
+        "details": "Maintain 3 car lengths buffer during peak rush hours."
+      },
+      "for_pedestrians_and_cyclists": {
+        "action": "Double-Check Turning Vehicles",
+        "details": "Make eye contact with turning drivers at intersections before crossing."
+      },
+      "peak_danger_windows": {
+        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
+        "details": "Congestion peaks during evening travel windows."
+      }
+    }
+  },
   "raw_metrics": {
     "zone_id": "Zone_31",
     "week": 49,
@@ -169,18 +209,29 @@
     "vehicle_density_trend_4w": -3.218,
     "speed_trend_4w": 1.436,
     "incident_trend_4w": 0.0,
-    "location_name": "Alambagh",
-    "city": "Lucknow",
-    "latitude": 26.813,
-    "longitude": 80.918,
-    "predicted_risk_probability": 0.9348,
-    "risk_score": 93.4774,
+    "location_name_x": "Alambagh",
+    "city_x": "Lucknow",
+    "latitude_x": 26.813,
+    "longitude_x": 80.918,
+    "car_percentage": 44.7,
+    "motorcycle_percentage": 39.6,
+    "bus_percentage": 11.2,
+    "truck_percentage": 4.5,
+    "moving_vehicle_percentage": 14.2,
+    "slow_vehicle_percentage": 49.5,
+    "stopped_vehicle_percentage": 36.3,
+    "location_name_y": "Alambagh",
+    "city_y": "Lucknow",
+    "latitude_y": 26.813,
+    "longitude_y": 80.918,
+    "predicted_risk_probability": 0.9023,
+    "risk_score": 90.2275,
     "population_exposure_score": 57.4969,
     "vehicle_exposure_score": 54.2207,
     "temporal_trend_score": 37.6182,
-    "priority_score": 68.2521,
-    "priority_rank": 8,
+    "priority_score": 66.9521,
+    "priority_rank": 7,
     "priority_level": "HIGH",
-    "risk_prob": 0.9348
+    "risk_prob": 0.9023
   }
 }

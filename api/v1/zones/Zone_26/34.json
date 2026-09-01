@@ -1,41 +1,33 @@
 {
   "zone_id": "Zone_26",
-  "location_name": "Hazratganj",
-  "city": "Lucknow",
+  "location_name": "Zone_26",
+  "city": "",
   "zone_type": "University_District",
   "week": 34,
-  "latitude": 26.85,
-  "longitude": 80.949,
+  "latitude": 0.0,
+  "longitude": 0.0,
   "risk_analysis": {
-    "predicted_risk_probability": 0.8705,
-    "predicted_risk_percentage": 87.05,
-    "risk_label": "CRITICAL RISK",
-    "risk_color": "#ef4444",
-    "risk_delta_vs_prev_week": 45.3934,
+    "predicted_risk_probability": 0.7278,
+    "predicted_risk_percentage": 72.78,
+    "risk_label": "HIGH RISK",
+    "risk_color": "#f97316",
+    "risk_delta_vs_prev_week": 29.9433,
     "actual_incident": 1
   },
   "priority": {
-    "priority_score": 60.7008,
-    "priority_rank": 17,
-    "priority_level": "HIGH",
+    "priority_score": 54.9964,
+    "priority_rank": 19,
+    "priority_level": "MODERATE",
     "components": {
-      "risk_score": 87.0456,
+      "risk_score": 72.7845,
       "population_exposure_score": 45.384,
       "vehicle_exposure_score": 46.5898,
       "temporal_trend_score": 34.7905
     },
     "explanation": {
-      "priority_level": "HIGH",
-      "priority_score": 60.7,
+      "priority_level": "MODERATE",
+      "priority_score": 55.0,
       "top_contributors": [
-        {
-          "factor": "Risk Score",
-          "icon": "\ud83d\udd34",
-          "value": "87/100",
-          "impact": "HIGH",
-          "detail": "Model-estimated risk score is in the critical range",
-          "weight": 87.0456
-        },
         {
           "factor": "Speed Anomaly",
           "icon": "\ud83d\udc0c",
@@ -43,6 +35,14 @@
           "impact": "HIGH",
           "detail": "Average speed of 24 km/h indicates near-gridlock conditions",
           "weight": 76.07
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udd34",
+          "value": "73/100",
+          "impact": "HIGH",
+          "detail": "Model-estimated risk score is in the critical range",
+          "weight": 72.7845
         },
         {
           "factor": "Congestion",
@@ -62,7 +62,7 @@
         }
       ],
       "total_factors": 4,
-      "assessment": "This zone shows significant risk elevation driven by Risk Score, Speed Anomaly. Proactive intervention should be scheduled within the current planning cycle."
+      "assessment": "This zone has moderate risk levels with contributing factors: Speed Anomaly, Risk Score. Continue monitoring and schedule review if conditions worsen."
     }
   },
   "telemetry": {
@@ -122,7 +122,47 @@
       "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
     }
   ],
-  "executive_briefing": "Hazratganj is in a critical safety state with 87% incident risk. Signal optimization recommended \u2014 congestion at 64/100 with speeds averaging 24 km/h. Optimizing signals could save 3351 kg CO2/week, equivalent to 8297 trees/year.",
+  "executive_briefing": "Zone_26 is in a critical safety state with 73% incident risk. Signal optimization recommended \u2014 congestion at 64/100 with speeds averaging 24 km/h. Optimizing signals could save 3351 kg CO2/week, equivalent to 8297 trees/year.",
+  "civilian_road_safety_radar": {
+    "current_week": {
+      "week": 34,
+      "risk_score": 72.8,
+      "risk_percentage": "73%",
+      "risk_badge": "HIGH RISK",
+      "risk_color": "#f97316",
+      "description": "Elevated collision activity observed.",
+      "crashes_reported": 0
+    },
+    "why_accidents_might_happen": {
+      "primary_collision_cause": {
+        "title": "Congestion Bottleneck & Merge Conflicts",
+        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+      },
+      "behavior_factor": {
+        "title": "Tailgating & Speed Variance",
+        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+      },
+      "street_environment": {
+        "zone_type": "University_District",
+        "average_speed_kmh": 23.93,
+        "congestion_level": 64.07
+      }
+    },
+    "civilian_safety_guide": {
+      "for_drivers": {
+        "action": "Increase Following Distance",
+        "details": "Maintain 3 car lengths buffer during peak rush hours."
+      },
+      "for_pedestrians_and_cyclists": {
+        "action": "Double-Check Turning Vehicles",
+        "details": "Make eye contact with turning drivers at intersections before crossing."
+      },
+      "peak_danger_windows": {
+        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
+        "details": "Congestion peaks during evening travel windows."
+      }
+    }
+  },
   "raw_metrics": {
     "zone_id": "Zone_26",
     "week": 34,
@@ -169,18 +209,29 @@
     "vehicle_density_trend_4w": 1.705,
     "speed_trend_4w": -1.455,
     "incident_trend_4w": 0.0,
-    "location_name": "Hazratganj",
-    "city": "Lucknow",
-    "latitude": 26.85,
-    "longitude": 80.949,
-    "predicted_risk_probability": 0.8705,
-    "risk_score": 87.0456,
+    "location_name_x": "Hazratganj",
+    "city_x": "Lucknow",
+    "latitude_x": 26.85,
+    "longitude_x": 80.949,
+    "car_percentage": 45.4,
+    "motorcycle_percentage": 42.8,
+    "bus_percentage": 8.0,
+    "truck_percentage": 3.7,
+    "moving_vehicle_percentage": 53.0,
+    "slow_vehicle_percentage": 40.5,
+    "stopped_vehicle_percentage": 6.5,
+    "location_name_y": "Hazratganj",
+    "city_y": "Lucknow",
+    "latitude_y": 26.85,
+    "longitude_y": 80.949,
+    "predicted_risk_probability": 0.7278,
+    "risk_score": 72.7845,
     "population_exposure_score": 45.384,
     "vehicle_exposure_score": 46.5898,
     "temporal_trend_score": 34.7905,
-    "priority_score": 60.7008,
-    "priority_rank": 17,
-    "priority_level": "HIGH",
-    "risk_prob": 0.8705
+    "priority_score": 54.9964,
+    "priority_rank": 19,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.7278
   }
 }

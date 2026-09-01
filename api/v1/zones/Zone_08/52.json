@@ -1,40 +1,40 @@
 {
   "zone_id": "Zone_08",
-  "location_name": "Thane",
-  "city": "Mumbai",
+  "location_name": "Zone_08",
+  "city": "",
   "zone_type": "Highway_Junction",
   "week": 52,
-  "latitude": 19.2183,
-  "longitude": 72.9781,
+  "latitude": 0.0,
+  "longitude": 0.0,
   "risk_analysis": {
-    "predicted_risk_probability": 0.1851,
-    "predicted_risk_percentage": 18.51,
+    "predicted_risk_probability": 0.2918,
+    "predicted_risk_percentage": 29.18,
     "risk_label": "LOW RISK",
     "risk_color": "#22c55e",
-    "risk_delta_vs_prev_week": 5.3625,
+    "risk_delta_vs_prev_week": 8.7901,
     "actual_incident": 0
   },
   "priority": {
-    "priority_score": 16.3103,
-    "priority_rank": 49,
+    "priority_score": 20.5783,
+    "priority_rank": 48,
     "priority_level": "LOW",
     "components": {
-      "risk_score": 18.506,
+      "risk_score": 29.1759,
       "population_exposure_score": 4.8782,
       "vehicle_exposure_score": 5.3597,
       "temporal_trend_score": 44.1095
     },
     "explanation": {
       "priority_level": "LOW",
-      "priority_score": 16.3,
+      "priority_score": 20.6,
       "top_contributors": [
         {
           "factor": "Risk Score",
           "icon": "\ud83d\udfe2",
-          "value": "19/100",
+          "value": "29/100",
           "impact": "LOW",
           "detail": "Risk score within acceptable range",
-          "weight": 18.506
+          "weight": 29.1759
         }
       ],
       "total_factors": 1,
@@ -90,7 +90,47 @@
       "action": "Continue routine monitoring. No immediate intervention required."
     }
   ],
-  "executive_briefing": "Thane is within safe operating parameters (19% risk). Continue routine monitoring. Optimizing signals could save 25 kg CO2/week, equivalent to 60 trees/year.",
+  "executive_briefing": "Zone_08 is within safe operating parameters (29% risk). Continue routine monitoring. Optimizing signals could save 25 kg CO2/week, equivalent to 60 trees/year.",
+  "civilian_road_safety_radar": {
+    "current_week": {
+      "week": 52,
+      "risk_score": 29.2,
+      "risk_percentage": "29%",
+      "risk_badge": "LOW RISK",
+      "risk_color": "#22c55e",
+      "description": "Corridor operating within normal baseline.",
+      "crashes_reported": 0
+    },
+    "why_accidents_might_happen": {
+      "primary_collision_cause": {
+        "title": "Congestion Bottleneck & Merge Conflicts",
+        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+      },
+      "behavior_factor": {
+        "title": "Tailgating & Speed Variance",
+        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+      },
+      "street_environment": {
+        "zone_type": "Highway_Junction",
+        "average_speed_kmh": 57.52,
+        "congestion_level": 5.31
+      }
+    },
+    "civilian_safety_guide": {
+      "for_drivers": {
+        "action": "Increase Following Distance",
+        "details": "Maintain 3 car lengths buffer during peak rush hours."
+      },
+      "for_pedestrians_and_cyclists": {
+        "action": "Double-Check Turning Vehicles",
+        "details": "Make eye contact with turning drivers at intersections before crossing."
+      },
+      "peak_danger_windows": {
+        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
+        "details": "Congestion peaks during evening travel windows."
+      }
+    }
+  },
   "raw_metrics": {
     "zone_id": "Zone_08",
     "week": 52,
@@ -137,18 +177,29 @@
     "vehicle_density_trend_4w": -1.39,
     "speed_trend_4w": -0.303,
     "incident_trend_4w": 0.1,
-    "location_name": "Thane",
-    "city": "Mumbai",
-    "latitude": 19.2183,
-    "longitude": 72.9781,
-    "predicted_risk_probability": 0.1851,
-    "risk_score": 18.506,
+    "location_name_x": "Thane",
+    "city_x": "Mumbai",
+    "latitude_x": 19.2183,
+    "longitude_x": 72.9781,
+    "car_percentage": 50.2,
+    "motorcycle_percentage": 41.3,
+    "bus_percentage": 4.9,
+    "truck_percentage": 3.6,
+    "moving_vehicle_percentage": 86.6,
+    "slow_vehicle_percentage": 18.9,
+    "stopped_vehicle_percentage": 0.0,
+    "location_name_y": "Thane",
+    "city_y": "Mumbai",
+    "latitude_y": 19.2183,
+    "longitude_y": 72.9781,
+    "predicted_risk_probability": 0.2918,
+    "risk_score": 29.1759,
     "population_exposure_score": 4.8782,
     "vehicle_exposure_score": 5.3597,
     "temporal_trend_score": 44.1095,
-    "priority_score": 16.3103,
-    "priority_rank": 49,
+    "priority_score": 20.5783,
+    "priority_rank": 48,
     "priority_level": "LOW",
-    "risk_prob": 0.1851
+    "risk_prob": 0.2918
   }
 }

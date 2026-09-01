@@ -1,40 +1,40 @@
 {
   "zone_id": "Zone_32",
-  "location_name": "Mahanagar",
-  "city": "Lucknow",
+  "location_name": "Zone_32",
+  "city": "",
   "zone_type": "Commercial_Downtown",
   "week": 17,
-  "latitude": 26.8755,
-  "longitude": 80.9595,
+  "latitude": 0.0,
+  "longitude": 0.0,
   "risk_analysis": {
-    "predicted_risk_probability": 0.4606,
-    "predicted_risk_percentage": 46.06,
+    "predicted_risk_probability": 0.5107,
+    "predicted_risk_percentage": 51.07,
     "risk_label": "MODERATE RISK",
     "risk_color": "#eab308",
-    "risk_delta_vs_prev_week": 17.7654,
+    "risk_delta_vs_prev_week": 12.8943,
     "actual_incident": 1
   },
   "priority": {
-    "priority_score": 44.6712,
-    "priority_rank": 21,
+    "priority_score": 46.6737,
+    "priority_rank": 24,
     "priority_level": "MODERATE",
     "components": {
-      "risk_score": 46.0628,
+      "risk_score": 51.069,
       "population_exposure_score": 42.2947,
       "vehicle_exposure_score": 47.9029,
       "temporal_trend_score": 40.6123
     },
     "explanation": {
       "priority_level": "MODERATE",
-      "priority_score": 44.7,
+      "priority_score": 46.7,
       "top_contributors": [
         {
           "factor": "Risk Score",
           "icon": "\ud83d\udfe1",
-          "value": "46/100",
+          "value": "51/100",
           "impact": "MEDIUM",
           "detail": "Moderate model-estimated risk",
-          "weight": 46.0628
+          "weight": 51.069
         },
         {
           "factor": "Population Exposure",
@@ -90,6 +90,14 @@
   },
   "interventions": [
     {
+      "id": "SPEED_CALMING",
+      "name": "Speed Calming & Enforcement",
+      "icon": "\ud83c\udfce\ufe0f",
+      "severity": "HIGH",
+      "description": "High average speed combined with elevated risk score suggests speed-related hazards.",
+      "action": "Deploy speed calming measures (speed bumps, radar signs) and increase enforcement patrols."
+    },
+    {
       "id": "ROAD_MAINTENANCE",
       "name": "Road Maintenance Inspection",
       "icon": "\ud83d\udee3\ufe0f",
@@ -98,7 +106,47 @@
       "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
     }
   ],
-  "executive_briefing": "Mahanagar shows elevated risk at 46%. Continue routine monitoring. Optimizing signals could save 1100 kg CO2/week, equivalent to 2722 trees/year.",
+  "executive_briefing": "Zone_32 shows elevated risk at 51%. Continue routine monitoring. Optimizing signals could save 1100 kg CO2/week, equivalent to 2722 trees/year.",
+  "civilian_road_safety_radar": {
+    "current_week": {
+      "week": 17,
+      "risk_score": 51.1,
+      "risk_percentage": "51%",
+      "risk_badge": "MODERATE RISK",
+      "risk_color": "#eab308",
+      "description": "Corridor operating within normal baseline.",
+      "crashes_reported": 0
+    },
+    "why_accidents_might_happen": {
+      "primary_collision_cause": {
+        "title": "Congestion Bottleneck & Merge Conflicts",
+        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+      },
+      "behavior_factor": {
+        "title": "Tailgating & Speed Variance",
+        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+      },
+      "street_environment": {
+        "zone_type": "Commercial_Downtown",
+        "average_speed_kmh": 55.51,
+        "congestion_level": 26.21
+      }
+    },
+    "civilian_safety_guide": {
+      "for_drivers": {
+        "action": "Increase Following Distance",
+        "details": "Maintain 3 car lengths buffer during peak rush hours."
+      },
+      "for_pedestrians_and_cyclists": {
+        "action": "Double-Check Turning Vehicles",
+        "details": "Make eye contact with turning drivers at intersections before crossing."
+      },
+      "peak_danger_windows": {
+        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
+        "details": "Congestion peaks during evening travel windows."
+      }
+    }
+  },
   "raw_metrics": {
     "zone_id": "Zone_32",
     "week": 17,
@@ -145,18 +193,29 @@
     "vehicle_density_trend_4w": -2.325,
     "speed_trend_4w": 0.351,
     "incident_trend_4w": 0.0,
-    "location_name": "Mahanagar",
-    "city": "Lucknow",
-    "latitude": 26.8755,
-    "longitude": 80.9595,
-    "predicted_risk_probability": 0.4606,
-    "risk_score": 46.0628,
+    "location_name_x": "Mahanagar",
+    "city_x": "Lucknow",
+    "latitude_x": 26.8755,
+    "longitude_x": 80.9595,
+    "car_percentage": 44.9,
+    "motorcycle_percentage": 40.9,
+    "bus_percentage": 10.8,
+    "truck_percentage": 3.4,
+    "moving_vehicle_percentage": 83.9,
+    "slow_vehicle_percentage": 16.4,
+    "stopped_vehicle_percentage": 0.0,
+    "location_name_y": "Mahanagar",
+    "city_y": "Lucknow",
+    "latitude_y": 26.8755,
+    "longitude_y": 80.9595,
+    "predicted_risk_probability": 0.5107,
+    "risk_score": 51.069,
     "population_exposure_score": 42.2947,
     "vehicle_exposure_score": 47.9029,
     "temporal_trend_score": 40.6123,
-    "priority_score": 44.6712,
-    "priority_rank": 21,
+    "priority_score": 46.6737,
+    "priority_rank": 24,
     "priority_level": "MODERATE",
-    "risk_prob": 0.4606
+    "risk_prob": 0.5107
   }
 }

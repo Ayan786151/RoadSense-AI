@@ -1,32 +1,32 @@
 {
   "zone_id": "Zone_12",
-  "location_name": "Malad",
-  "city": "Mumbai",
+  "location_name": "Zone_12",
+  "city": "",
   "zone_type": "Commercial_Downtown",
   "week": 7,
-  "latitude": 19.1874,
-  "longitude": 72.8484,
+  "latitude": 0.0,
+  "longitude": 0.0,
   "risk_analysis": {
-    "predicted_risk_probability": 0.6213,
-    "predicted_risk_percentage": 62.13,
-    "risk_label": "HIGH RISK",
-    "risk_color": "#f97316",
-    "risk_delta_vs_prev_week": 23.8091,
+    "predicted_risk_probability": 0.5405,
+    "predicted_risk_percentage": 54.05,
+    "risk_label": "MODERATE RISK",
+    "risk_color": "#eab308",
+    "risk_delta_vs_prev_week": 7.7799,
     "actual_incident": 0
   },
   "priority": {
-    "priority_score": 55.544,
-    "priority_rank": 11,
-    "priority_level": "HIGH",
+    "priority_score": 52.313,
+    "priority_rank": 14,
+    "priority_level": "MODERATE",
     "components": {
-      "risk_score": 62.1311,
+      "risk_score": 54.0536,
       "population_exposure_score": 52.9061,
       "vehicle_exposure_score": 66.2852,
       "temporal_trend_score": 28.0536
     },
     "explanation": {
-      "priority_level": "HIGH",
-      "priority_score": 55.5,
+      "priority_level": "MODERATE",
+      "priority_score": 52.3,
       "top_contributors": [
         {
           "factor": "Vehicle Density",
@@ -39,10 +39,10 @@
         {
           "factor": "Risk Score",
           "icon": "\ud83d\udfe1",
-          "value": "62/100",
+          "value": "54/100",
           "impact": "MEDIUM",
           "detail": "Moderate model-estimated risk",
-          "weight": 62.1311
+          "weight": 54.0536
         },
         {
           "factor": "Population Exposure",
@@ -70,7 +70,7 @@
         }
       ],
       "total_factors": 5,
-      "assessment": "This zone shows significant risk elevation driven by Vehicle Density. Proactive intervention should be scheduled within the current planning cycle."
+      "assessment": "This zone has moderate risk levels with contributing factors: Vehicle Density, Risk Score. Continue monitoring and schedule review if conditions worsen."
     }
   },
   "telemetry": {
@@ -122,7 +122,47 @@
       "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
     }
   ],
-  "executive_briefing": "Malad is in a critical safety state with 62% incident risk. Continue routine monitoring. Optimizing signals could save 2336 kg CO2/week, equivalent to 5785 trees/year.",
+  "executive_briefing": "Zone_12 shows elevated risk at 54%. Continue routine monitoring. Optimizing signals could save 2336 kg CO2/week, equivalent to 5785 trees/year.",
+  "civilian_road_safety_radar": {
+    "current_week": {
+      "week": 7,
+      "risk_score": 54.1,
+      "risk_percentage": "54%",
+      "risk_badge": "MODERATE RISK",
+      "risk_color": "#eab308",
+      "description": "Corridor operating within normal baseline.",
+      "crashes_reported": 0
+    },
+    "why_accidents_might_happen": {
+      "primary_collision_cause": {
+        "title": "Congestion Bottleneck & Merge Conflicts",
+        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+      },
+      "behavior_factor": {
+        "title": "Tailgating & Speed Variance",
+        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+      },
+      "street_environment": {
+        "zone_type": "Commercial_Downtown",
+        "average_speed_kmh": 44.8,
+        "congestion_level": 42.97
+      }
+    },
+    "civilian_safety_guide": {
+      "for_drivers": {
+        "action": "Increase Following Distance",
+        "details": "Maintain 3 car lengths buffer during peak rush hours."
+      },
+      "for_pedestrians_and_cyclists": {
+        "action": "Double-Check Turning Vehicles",
+        "details": "Make eye contact with turning drivers at intersections before crossing."
+      },
+      "peak_danger_windows": {
+        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
+        "details": "Congestion peaks during evening travel windows."
+      }
+    }
+  },
   "raw_metrics": {
     "zone_id": "Zone_12",
     "week": 7,
@@ -169,18 +209,29 @@
     "vehicle_density_trend_4w": 0.445,
     "speed_trend_4w": 3.71,
     "incident_trend_4w": -0.3,
-    "location_name": "Malad",
-    "city": "Mumbai",
-    "latitude": 19.1874,
-    "longitude": 72.8484,
-    "predicted_risk_probability": 0.6213,
-    "risk_score": 62.1311,
+    "location_name_x": "Malad",
+    "city_x": "Mumbai",
+    "latitude_x": 19.1874,
+    "longitude_x": 72.8484,
+    "car_percentage": 43.6,
+    "motorcycle_percentage": 39.5,
+    "bus_percentage": 11.2,
+    "truck_percentage": 5.8,
+    "moving_vehicle_percentage": 49.5,
+    "slow_vehicle_percentage": 44.8,
+    "stopped_vehicle_percentage": 5.8,
+    "location_name_y": "Malad",
+    "city_y": "Mumbai",
+    "latitude_y": 19.1874,
+    "longitude_y": 72.8484,
+    "predicted_risk_probability": 0.5405,
+    "risk_score": 54.0536,
     "population_exposure_score": 52.9061,
     "vehicle_exposure_score": 66.2852,
     "temporal_trend_score": 28.0536,
-    "priority_score": 55.544,
-    "priority_rank": 11,
-    "priority_level": "HIGH",
-    "risk_prob": 0.6213
+    "priority_score": 52.313,
+    "priority_rank": 14,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.5405
   }
 }

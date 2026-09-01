@@ -1,0 +1,870 @@
+{
+  "zone_id": {
+    "name": "zone_id",
+    "category": "Spatial Identification",
+    "data_type": "Categorical",
+    "unit": "ID",
+    "description": "Unique municipal traffic zone identifier (Zone_01 to Zone_50).",
+    "statistics": {
+      "unique_values": [
+        "Zone_01",
+        "Zone_02",
+        "Zone_03",
+        "Zone_04",
+        "Zone_05",
+        "Zone_06",
+        "Zone_07",
+        "Zone_08",
+        "Zone_09",
+        "Zone_10"
+      ],
+      "unique_count": 50,
+      "null_count": 0
+    }
+  },
+  "week": {
+    "name": "week",
+    "category": "Temporal Dimension",
+    "data_type": "Integer",
+    "unit": "Weeks (1-52)",
+    "description": "Chronological calendar observation week.",
+    "statistics": {
+      "min": 1.0,
+      "max": 52.0,
+      "mean": 26.5,
+      "std": 15.011,
+      "median": 26.5,
+      "null_count": 0
+    }
+  },
+  "zone_type": {
+    "name": "zone_type",
+    "category": "Urban Characterization",
+    "data_type": "Categorical",
+    "unit": "Archetype",
+    "description": "Urban archetype: Commercial, Residential, Highway Corridor, Transit Hub, School Zone, Industrial.",
+    "statistics": {
+      "unique_values": [
+        "Commercial_Downtown",
+        "Residential",
+        "University_District",
+        "Highway_Junction",
+        "Suburban_LowDensity",
+        "Industrial_Corridor"
+      ],
+      "unique_count": 6,
+      "null_count": 0
+    }
+  },
+  "temporal_profile": {
+    "name": "temporal_profile",
+    "category": "Urban Characterization",
+    "data_type": "Categorical",
+    "unit": "Pattern",
+    "description": "Simulated multi-week temporal profile (High Momentum, Volatile, Steady High Risk, Calm).",
+    "statistics": {
+      "unique_values": [
+        "RECOVERY_AFTER_DISRUPTION",
+        "STABLE",
+        "EVENT_SENSITIVE",
+        "GRADUAL_DETERIORATION",
+        "GRADUAL_IMPROVEMENT",
+        "PERIODIC_SPIKE"
+      ],
+      "unique_count": 6,
+      "null_count": 0
+    }
+  },
+  "population_density": {
+    "name": "population_density",
+    "category": "Infrastructure & Pressure",
+    "data_type": "Numeric",
+    "unit": "persons/km\u00b2",
+    "description": "Residential and commercial human density surrounding the corridor.",
+    "statistics": {
+      "min": 1361.0,
+      "max": 15280.0,
+      "mean": 7259.88,
+      "std": 3923.114,
+      "median": 7681.5,
+      "null_count": 0
+    }
+  },
+  "road_capacity": {
+    "name": "road_capacity",
+    "category": "Infrastructure & Pressure",
+    "data_type": "Numeric",
+    "unit": "Index (0-100)",
+    "description": "Design vehicle throughput capacity of the physical roadway.",
+    "statistics": {
+      "min": 42.0,
+      "max": 99.0,
+      "mean": 70.14,
+      "std": 16.921,
+      "median": 71.5,
+      "null_count": 0
+    }
+  },
+  "effective_road_capacity": {
+    "name": "effective_road_capacity",
+    "category": "Infrastructure & Pressure",
+    "data_type": "Numeric",
+    "unit": "Index (0-100)",
+    "description": "Active road capacity after adjusting for adverse weather, potholes, and construction bottlenecks.",
+    "statistics": {
+      "min": 24.57,
+      "max": 99.0,
+      "mean": 65.517,
+      "std": 17.731,
+      "median": 66.0,
+      "null_count": 0
+    }
+  },
+  "vehicle_density": {
+    "name": "vehicle_density",
+    "category": "Infrastructure & Pressure",
+    "data_type": "Numeric",
+    "unit": "veh/km\u00b2",
+    "description": "Active vehicular concentration on the roadway.",
+    "statistics": {
+      "min": 0.0,
+      "max": 85.19,
+      "mean": 31.972,
+      "std": 17.6,
+      "median": 32.175,
+      "null_count": 0
+    }
+  },
+  "traffic_pressure": {
+    "name": "traffic_pressure",
+    "category": "Infrastructure & Pressure",
+    "data_type": "Numeric",
+    "unit": "Ratio",
+    "description": "Vehicle density divided by effective road capacity. Pressure > 1.0 indicates severe capacity breach.",
+    "statistics": {
+      "min": 0.0,
+      "max": 2.204,
+      "mean": 0.533,
+      "std": 0.348,
+      "median": 0.478,
+      "null_count": 0
+    }
+  },
+  "congestion": {
+    "name": "congestion",
+    "category": "Traffic Flow & Kinematics",
+    "data_type": "Numeric",
+    "unit": "Index (0-100)",
+    "description": "Non-linear sigmoid traffic saturation index.",
+    "statistics": {
+      "min": 0.0,
+      "max": 100.0,
+      "mean": 30.273,
+      "std": 23.113,
+      "median": 22.78,
+      "null_count": 0
+    }
+  },
+  "average_speed": {
+    "name": "average_speed",
+    "category": "Traffic Flow & Kinematics",
+    "data_type": "Numeric",
+    "unit": "km/h",
+    "description": "Mean vehicular speed across the observation corridor.",
+    "statistics": {
+      "min": 10.0,
+      "max": 68.81,
+      "mean": 54.04,
+      "std": 11.533,
+      "median": 58.045,
+      "null_count": 0
+    }
+  },
+  "red_light_violations": {
+    "name": "red_light_violations",
+    "category": "Traffic Flow & Kinematics",
+    "data_type": "Numeric",
+    "unit": "Violations/wk",
+    "description": "Number of stop-line and optical traffic signal violations detected.",
+    "statistics": {
+      "min": 0.0,
+      "max": 20.0,
+      "mean": 4.644,
+      "std": 3.222,
+      "median": 4.0,
+      "null_count": 0
+    }
+  },
+  "weather": {
+    "name": "weather",
+    "category": "Environmental & Climate",
+    "data_type": "Categorical",
+    "unit": "State",
+    "description": "Atmospheric condition: Clear, Light Rain, Heavy Rain, Fog, Storm, Heatwave.",
+    "statistics": {
+      "unique_values": [
+        "Normal",
+        "Light Rain",
+        "Heavy Rain"
+      ],
+      "unique_count": 3,
+      "null_count": 0
+    }
+  },
+  "road_condition": {
+    "name": "road_condition",
+    "category": "Environmental & Climate",
+    "data_type": "Categorical",
+    "unit": "Quality",
+    "description": "Road surface state: Good, Wet, Potholes, Under Construction, Slippery.",
+    "statistics": {
+      "unique_values": [
+        "Good",
+        "Moderate",
+        "Poor"
+      ],
+      "unique_count": 3,
+      "null_count": 0
+    }
+  },
+  "special_event": {
+    "name": "special_event",
+    "category": "Environmental & Climate",
+    "data_type": "Binary (0/1)",
+    "unit": "Flag",
+    "description": "Whether a major festival, sports match, or political rally surged traffic demand.",
+    "statistics": {
+      "min": 0.0,
+      "max": 1.0,
+      "mean": 0.07,
+      "std": 0.255,
+      "median": 0.0,
+      "null_count": 0
+    }
+  },
+  "incident_count": {
+    "name": "incident_count",
+    "category": "Safety Target",
+    "data_type": "Integer",
+    "unit": "Count",
+    "description": "Total number of recorded incidents during the week.",
+    "statistics": {
+      "min": 0.0,
+      "max": 6.0,
+      "mean": 0.363,
+      "std": 0.799,
+      "median": 0.0,
+      "null_count": 0
+    }
+  },
+  "incident_occurred": {
+    "name": "incident_occurred",
+    "category": "Safety Target",
+    "data_type": "Binary (0/1)",
+    "unit": "Target",
+    "description": "Ground-truth occurrence of a traffic collision, injury, or severe disruption.",
+    "statistics": {
+      "min": 0.0,
+      "max": 1.0,
+      "mean": 0.22,
+      "std": 0.414,
+      "median": 0.0,
+      "null_count": 0
+    }
+  },
+  "previous_week_vehicle_density": {
+    "name": "previous_week_vehicle_density",
+    "category": "Temporal / Derived Factor",
+    "data_type": "Numeric",
+    "unit": "Score / Delta",
+    "description": "Feature variable: previous_week_vehicle_density",
+    "statistics": {
+      "min": 0.0,
+      "max": 85.19,
+      "mean": 31.955,
+      "std": 17.584,
+      "median": 32.16,
+      "null_count": 50
+    }
+  },
+  "previous_week_congestion": {
+    "name": "previous_week_congestion",
+    "category": "Temporal / Derived Factor",
+    "data_type": "Numeric",
+    "unit": "Score / Delta",
+    "description": "Feature variable: previous_week_congestion",
+    "statistics": {
+      "min": 0.0,
+      "max": 100.0,
+      "mean": 30.226,
+      "std": 23.051,
+      "median": 22.765,
+      "null_count": 50
+    }
+  },
+  "previous_week_average_speed": {
+    "name": "previous_week_average_speed",
+    "category": "Temporal / Derived Factor",
+    "data_type": "Numeric",
+    "unit": "Score / Delta",
+    "description": "Feature variable: previous_week_average_speed",
+    "statistics": {
+      "min": 10.0,
+      "max": 68.81,
+      "mean": 54.094,
+      "std": 11.518,
+      "median": 58.08,
+      "null_count": 50
+    }
+  },
+  "previous_week_red_light_violations": {
+    "name": "previous_week_red_light_violations",
+    "category": "Temporal / Derived Factor",
+    "data_type": "Numeric",
+    "unit": "Score / Delta",
+    "description": "Feature variable: previous_week_red_light_violations",
+    "statistics": {
+      "min": 0.0,
+      "max": 20.0,
+      "mean": 4.643,
+      "std": 3.224,
+      "median": 4.0,
+      "null_count": 50
+    }
+  },
+  "previous_week_incident_count": {
+    "name": "previous_week_incident_count",
+    "category": "Temporal / Derived Factor",
+    "data_type": "Numeric",
+    "unit": "Score / Delta",
+    "description": "Feature variable: previous_week_incident_count",
+    "statistics": {
+      "min": 0.0,
+      "max": 6.0,
+      "mean": 0.362,
+      "std": 0.799,
+      "median": 0.0,
+      "null_count": 50
+    }
+  },
+  "previous_week_incident_occurred": {
+    "name": "previous_week_incident_occurred",
+    "category": "Temporal / Derived Factor",
+    "data_type": "Numeric",
+    "unit": "Score / Delta",
+    "description": "Feature variable: previous_week_incident_occurred",
+    "statistics": {
+      "min": 0.0,
+      "max": 1.0,
+      "mean": 0.219,
+      "std": 0.414,
+      "median": 0.0,
+      "null_count": 50
+    }
+  },
+  "previous_week_traffic_pressure": {
+    "name": "previous_week_traffic_pressure",
+    "category": "Temporal / Derived Factor",
+    "data_type": "Numeric",
+    "unit": "Score / Delta",
+    "description": "Feature variable: previous_week_traffic_pressure",
+    "statistics": {
+      "min": 0.0,
+      "max": 2.204,
+      "mean": 0.533,
+      "std": 0.348,
+      "median": 0.478,
+      "null_count": 50
+    }
+  },
+  "rolling_4_week_avg_vehicle_density": {
+    "name": "rolling_4_week_avg_vehicle_density",
+    "category": "Temporal / Derived Factor",
+    "data_type": "Numeric",
+    "unit": "Score / Delta",
+    "description": "Feature variable: rolling_4_week_avg_vehicle_density",
+    "statistics": {
+      "min": 0.0,
+      "max": 81.65,
+      "mean": 32.07,
+      "std": 17.246,
+      "median": 32.345,
+      "null_count": 200
+    }
+  },
+  "rolling_4_week_avg_congestion": {
+    "name": "rolling_4_week_avg_congestion",
+    "category": "Temporal / Derived Factor",
+    "data_type": "Numeric",
+    "unit": "Score / Delta",
+    "description": "Feature variable: rolling_4_week_avg_congestion",
+    "statistics": {
+      "min": 2.99,
+      "max": 100.0,
+      "mean": 30.414,
+      "std": 21.609,
+      "median": 23.965,
+      "null_count": 200
+    }
+  },
+  "rolling_4_week_avg_speed": {
+    "name": "rolling_4_week_avg_speed",
+    "category": "Temporal / Derived Factor",
+    "data_type": "Numeric",
+    "unit": "Score / Delta",
+    "description": "Feature variable: rolling_4_week_avg_speed",
+    "statistics": {
+      "min": 13.4,
+      "max": 66.84,
+      "mean": 54.002,
+      "std": 9.501,
+      "median": 57.13,
+      "null_count": 200
+    }
+  },
+  "rolling_4_week_avg_violations": {
+    "name": "rolling_4_week_avg_violations",
+    "category": "Temporal / Derived Factor",
+    "data_type": "Numeric",
+    "unit": "Score / Delta",
+    "description": "Feature variable: rolling_4_week_avg_violations",
+    "statistics": {
+      "min": 0.5,
+      "max": 15.25,
+      "mean": 4.672,
+      "std": 2.458,
+      "median": 4.25,
+      "null_count": 200
+    }
+  },
+  "rolling_4_week_incident_count": {
+    "name": "rolling_4_week_incident_count",
+    "category": "Temporal / Derived Factor",
+    "data_type": "Numeric",
+    "unit": "Score / Delta",
+    "description": "Feature variable: rolling_4_week_incident_count",
+    "statistics": {
+      "min": 0.0,
+      "max": 12.0,
+      "mean": 1.455,
+      "std": 2.097,
+      "median": 1.0,
+      "null_count": 200
+    }
+  },
+  "rolling_4_week_incident_rate": {
+    "name": "rolling_4_week_incident_rate",
+    "category": "Temporal / Derived Factor",
+    "data_type": "Numeric",
+    "unit": "Score / Delta",
+    "description": "Feature variable: rolling_4_week_incident_rate",
+    "statistics": {
+      "min": 0.0,
+      "max": 1.0,
+      "mean": 0.22,
+      "std": 0.264,
+      "median": 0.25,
+      "null_count": 200
+    }
+  },
+  "rolling_4_week_avg_traffic_pressure": {
+    "name": "rolling_4_week_avg_traffic_pressure",
+    "category": "Temporal / Derived Factor",
+    "data_type": "Numeric",
+    "unit": "Score / Delta",
+    "description": "Feature variable: rolling_4_week_avg_traffic_pressure",
+    "statistics": {
+      "min": 0.0,
+      "max": 1.932,
+      "mean": 0.535,
+      "std": 0.334,
+      "median": 0.489,
+      "null_count": 200
+    }
+  },
+  "vehicle_density_change": {
+    "name": "vehicle_density_change",
+    "category": "Temporal / Derived Factor",
+    "data_type": "Numeric",
+    "unit": "Score / Delta",
+    "description": "Feature variable: vehicle_density_change",
+    "statistics": {
+      "min": -15.28,
+      "max": 22.78,
+      "mean": 0.1,
+      "std": 4.688,
+      "median": 0.0,
+      "null_count": 50
+    }
+  },
+  "congestion_change": {
+    "name": "congestion_change",
+    "category": "Temporal / Derived Factor",
+    "data_type": "Numeric",
+    "unit": "Score / Delta",
+    "description": "Feature variable: congestion_change",
+    "statistics": {
+      "min": -64.54,
+      "max": 69.63,
+      "mean": 0.195,
+      "std": 12.369,
+      "median": -0.01,
+      "null_count": 50
+    }
+  },
+  "speed_change": {
+    "name": "speed_change",
+    "category": "Temporal / Derived Factor",
+    "data_type": "Numeric",
+    "unit": "Score / Delta",
+    "description": "Feature variable: speed_change",
+    "statistics": {
+      "min": -47.97,
+      "max": 52.36,
+      "mean": -0.145,
+      "std": 10.307,
+      "median": 0.065,
+      "null_count": 50
+    }
+  },
+  "violations_change": {
+    "name": "violations_change",
+    "category": "Temporal / Derived Factor",
+    "data_type": "Numeric",
+    "unit": "Score / Delta",
+    "description": "Feature variable: violations_change",
+    "statistics": {
+      "min": -13.0,
+      "max": 13.0,
+      "mean": 0.02,
+      "std": 3.342,
+      "median": 0.0,
+      "null_count": 50
+    }
+  },
+  "traffic_pressure_change": {
+    "name": "traffic_pressure_change",
+    "category": "Temporal / Derived Factor",
+    "data_type": "Numeric",
+    "unit": "Score / Delta",
+    "description": "Feature variable: traffic_pressure_change",
+    "statistics": {
+      "min": -0.845,
+      "max": 0.886,
+      "mean": 0.003,
+      "std": 0.142,
+      "median": 0.0,
+      "null_count": 50
+    }
+  },
+  "incident_count_change": {
+    "name": "incident_count_change",
+    "category": "Temporal / Derived Factor",
+    "data_type": "Numeric",
+    "unit": "Score / Delta",
+    "description": "Feature variable: incident_count_change",
+    "statistics": {
+      "min": -5.0,
+      "max": 5.0,
+      "mean": 0.006,
+      "std": 0.981,
+      "median": 0.0,
+      "null_count": 100
+    }
+  },
+  "vehicle_density_pct_change": {
+    "name": "vehicle_density_pct_change",
+    "category": "Temporal / Derived Factor",
+    "data_type": "Numeric",
+    "unit": "Score / Delta",
+    "description": "Feature variable: vehicle_density_pct_change",
+    "statistics": {
+      "min": -100.0,
+      "max": 8480000.0,
+      "mean": 28672.011,
+      "std": 406316.688,
+      "median": 0.0,
+      "null_count": 50
+    }
+  },
+  "congestion_pct_change": {
+    "name": "congestion_pct_change",
+    "category": "Temporal / Derived Factor",
+    "data_type": "Numeric",
+    "unit": "Score / Delta",
+    "description": "Feature variable: congestion_pct_change",
+    "statistics": {
+      "min": -100.0,
+      "max": 11360000.0,
+      "mean": 7540.309,
+      "std": 273284.247,
+      "median": -0.025,
+      "null_count": 50
+    }
+  },
+  "speed_pct_change": {
+    "name": "speed_pct_change",
+    "category": "Temporal / Derived Factor",
+    "data_type": "Numeric",
+    "unit": "Score / Delta",
+    "description": "Feature variable: speed_pct_change",
+    "statistics": {
+      "min": -80.68,
+      "max": 506.38,
+      "mean": 4.379,
+      "std": 40.469,
+      "median": 0.105,
+      "null_count": 50
+    }
+  },
+  "vehicle_population_ratio": {
+    "name": "vehicle_population_ratio",
+    "category": "Infrastructure & Pressure",
+    "data_type": "Numeric",
+    "unit": "Ratio",
+    "description": "Ratio of vehicle concentration to human population density.",
+    "statistics": {
+      "min": 0.0,
+      "max": 18.356,
+      "mean": 4.76,
+      "std": 2.444,
+      "median": 4.381,
+      "null_count": 0
+    }
+  },
+  "congestion_trend_4w": {
+    "name": "congestion_trend_4w",
+    "category": "Temporal / Derived Factor",
+    "data_type": "Numeric",
+    "unit": "Score / Delta",
+    "description": "Feature variable: congestion_trend_4w",
+    "statistics": {
+      "min": -24.288,
+      "max": 24.708,
+      "mean": 0.166,
+      "std": 4.832,
+      "median": 0.095,
+      "null_count": 200
+    }
+  },
+  "vehicle_density_trend_4w": {
+    "name": "vehicle_density_trend_4w",
+    "category": "Temporal / Derived Factor",
+    "data_type": "Numeric",
+    "unit": "Score / Delta",
+    "description": "Feature variable: vehicle_density_trend_4w",
+    "statistics": {
+      "min": -9.358,
+      "max": 10.512,
+      "mean": 0.092,
+      "std": 2.434,
+      "median": 0.048,
+      "null_count": 200
+    }
+  },
+  "speed_trend_4w": {
+    "name": "speed_trend_4w",
+    "category": "Temporal / Derived Factor",
+    "data_type": "Numeric",
+    "unit": "Score / Delta",
+    "description": "Feature variable: speed_trend_4w",
+    "statistics": {
+      "min": -18.398,
+      "max": 18.631,
+      "mean": -0.116,
+      "std": 3.707,
+      "median": -0.051,
+      "null_count": 200
+    }
+  },
+  "incident_trend_4w": {
+    "name": "incident_trend_4w",
+    "category": "Temporal / Derived Factor",
+    "data_type": "Numeric",
+    "unit": "Score / Delta",
+    "description": "Feature variable: incident_trend_4w",
+    "statistics": {
+      "min": -0.4,
+      "max": 0.4,
+      "mean": 0.004,
+      "std": 0.166,
+      "median": 0.0,
+      "null_count": 200
+    }
+  },
+  "location_name": {
+    "name": "location_name",
+    "category": "Spatial Identification",
+    "data_type": "Categorical",
+    "unit": "Name",
+    "description": "Real-world neighborhood/corridor name.",
+    "statistics": {
+      "unique_values": [
+        "Andheri",
+        "Bandra",
+        "Kurla",
+        "Dadar",
+        "Powai",
+        "Borivali",
+        "Goregaon",
+        "Thane",
+        "Vashi",
+        "Colaba"
+      ],
+      "unique_count": 50,
+      "null_count": 0
+    }
+  },
+  "city": {
+    "name": "city",
+    "category": "Spatial Identification",
+    "data_type": "Categorical",
+    "unit": "City",
+    "description": "Metropolitan municipality (e.g. Bengaluru, Mumbai, Delhi, Chennai).",
+    "statistics": {
+      "unique_values": [
+        "Mumbai",
+        "Delhi",
+        "Lucknow",
+        "Chennai"
+      ],
+      "unique_count": 4,
+      "null_count": 0
+    }
+  },
+  "latitude": {
+    "name": "latitude",
+    "category": "Spatial Identification",
+    "data_type": "Float",
+    "unit": "Degrees N",
+    "description": "Geographic latitude coordinate.",
+    "statistics": {
+      "min": 12.901,
+      "max": 28.7495,
+      "mean": 21.664,
+      "std": 6.259,
+      "median": 19.224,
+      "null_count": 0
+    }
+  },
+  "longitude": {
+    "name": "longitude",
+    "category": "Spatial Identification",
+    "data_type": "Float",
+    "unit": "Degrees E",
+    "description": "Geographic longitude coordinate.",
+    "statistics": {
+      "min": 72.8258,
+      "max": 81.05,
+      "mean": 77.757,
+      "std": 3.211,
+      "median": 78.695,
+      "null_count": 0
+    }
+  },
+  "car_percentage": {
+    "name": "car_percentage",
+    "category": "Vehicle Modal Mix",
+    "data_type": "Numeric",
+    "unit": "Percentage (%)",
+    "description": "Share of 4-wheeler passenger cars in the traffic stream.",
+    "statistics": {
+      "min": 26.3,
+      "max": 53.8,
+      "mean": 42.583,
+      "std": 5.145,
+      "median": 44.1,
+      "null_count": 0
+    }
+  },
+  "motorcycle_percentage": {
+    "name": "motorcycle_percentage",
+    "category": "Vehicle Modal Mix",
+    "data_type": "Numeric",
+    "unit": "Percentage (%)",
+    "description": "Share of vulnerable 2-wheelers (motorcycles/scooters) in the traffic stream.",
+    "statistics": {
+      "min": 32.7,
+      "max": 63.6,
+      "mean": 43.444,
+      "std": 6.991,
+      "median": 40.7,
+      "null_count": 0
+    }
+  },
+  "bus_percentage": {
+    "name": "bus_percentage",
+    "category": "Vehicle Modal Mix",
+    "data_type": "Numeric",
+    "unit": "Percentage (%)",
+    "description": "Share of public transit and private buses.",
+    "statistics": {
+      "min": 1.9,
+      "max": 17.0,
+      "mean": 9.023,
+      "std": 2.795,
+      "median": 9.2,
+      "null_count": 0
+    }
+  },
+  "truck_percentage": {
+    "name": "truck_percentage",
+    "category": "Vehicle Modal Mix",
+    "data_type": "Numeric",
+    "unit": "Percentage (%)",
+    "description": "Share of heavy commercial freight trucks.",
+    "statistics": {
+      "min": 1.8,
+      "max": 13.0,
+      "mean": 4.95,
+      "std": 2.147,
+      "median": 4.8,
+      "null_count": 0
+    }
+  },
+  "moving_vehicle_percentage": {
+    "name": "moving_vehicle_percentage",
+    "category": "Kinematic States",
+    "data_type": "Numeric",
+    "unit": "Percentage (%)",
+    "description": "Share of vehicles moving at fluid free-flow speeds (> 30 km/h).",
+    "statistics": {
+      "min": 5.0,
+      "max": 90.0,
+      "mean": 66.403,
+      "std": 22.92,
+      "median": 75.6,
+      "null_count": 0
+    }
+  },
+  "slow_vehicle_percentage": {
+    "name": "slow_vehicle_percentage",
+    "category": "Kinematic States",
+    "data_type": "Numeric",
+    "unit": "Percentage (%)",
+    "description": "Share of vehicles experiencing crawling stop-and-go speeds (10-30 km/h).",
+    "statistics": {
+      "min": 8.0,
+      "max": 49.8,
+      "mean": 21.162,
+      "std": 11.527,
+      "median": 16.8,
+      "null_count": 0
+    }
+  },
+  "stopped_vehicle_percentage": {
+    "name": "stopped_vehicle_percentage",
+    "category": "Kinematic States",
+    "data_type": "Numeric",
+    "unit": "Percentage (%)",
+    "description": "Share of completely stationary/gridlocked vehicles (< 10 km/h).",
+    "statistics": {
+      "min": 0.0,
+      "max": 62.6,
+      "mean": 12.94,
+      "std": 13.751,
+      "median": 9.2,
+      "null_count": 0
+    }
+  }
+}

@@ -1,32 +1,32 @@
 {
   "zone_id": "Zone_03",
-  "location_name": "Kurla",
-  "city": "Mumbai",
+  "location_name": "Zone_03",
+  "city": "",
   "zone_type": "University_District",
   "week": 13,
-  "latitude": 19.0726,
-  "longitude": 72.8845,
+  "latitude": 0.0,
+  "longitude": 0.0,
   "risk_analysis": {
-    "predicted_risk_probability": 0.2305,
-    "predicted_risk_percentage": 23.05,
+    "predicted_risk_probability": 0.3356,
+    "predicted_risk_percentage": 33.56,
     "risk_label": "LOW RISK",
     "risk_color": "#22c55e",
-    "risk_delta_vs_prev_week": -6.9128,
+    "risk_delta_vs_prev_week": 1.0123,
     "actual_incident": 0
   },
   "priority": {
-    "priority_score": 45.6556,
-    "priority_rank": 19,
+    "priority_score": 49.86,
+    "priority_rank": 18,
     "priority_level": "MODERATE",
     "components": {
-      "risk_score": 23.0484,
+      "risk_score": 33.5595,
       "population_exposure_score": 45.4343,
       "vehicle_exposure_score": 50.3882,
       "temporal_trend_score": 100.0
     },
     "explanation": {
       "priority_level": "MODERATE",
-      "priority_score": 45.7,
+      "priority_score": 49.9,
       "top_contributors": [
         {
           "factor": "Worsening Trend",
@@ -37,20 +37,20 @@
           "weight": 100.0
         },
         {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udfe2",
+          "value": "34/100",
+          "impact": "LOW",
+          "detail": "Risk score within acceptable range",
+          "weight": 33.5595
+        },
+        {
           "factor": "Population Exposure",
           "icon": "\ud83d\udc65",
           "value": "45/100",
           "impact": "MEDIUM",
           "detail": "Moderate population exposure",
           "weight": 31.804
-        },
-        {
-          "factor": "Risk Score",
-          "icon": "\ud83d\udfe2",
-          "value": "23/100",
-          "impact": "LOW",
-          "detail": "Risk score within acceptable range",
-          "weight": 23.0484
         }
       ],
       "total_factors": 3,
@@ -102,11 +102,51 @@
       "name": "Routine Monitoring",
       "icon": "\ud83d\udcca",
       "severity": "LOW",
-      "description": "Zone currently within acceptable risk parameters.",
-      "action": "Continue routine monitoring. No immediate intervention required."
+      "description": "No specific risk indicators triggered.",
+      "action": "Continue routine monitoring."
     }
   ],
-  "executive_briefing": "Kurla is within safe operating parameters (23% risk). Continue routine monitoring. Optimizing signals could save 1099 kg CO2/week, equivalent to 2721 trees/year.",
+  "executive_briefing": "Zone_03 is within safe operating parameters (34% risk). Continue routine monitoring. Optimizing signals could save 1099 kg CO2/week, equivalent to 2721 trees/year.",
+  "civilian_road_safety_radar": {
+    "current_week": {
+      "week": 13,
+      "risk_score": 33.6,
+      "risk_percentage": "34%",
+      "risk_badge": "LOW RISK",
+      "risk_color": "#22c55e",
+      "description": "Corridor operating within normal baseline.",
+      "crashes_reported": 0
+    },
+    "why_accidents_might_happen": {
+      "primary_collision_cause": {
+        "title": "Congestion Bottleneck & Merge Conflicts",
+        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+      },
+      "behavior_factor": {
+        "title": "Tailgating & Speed Variance",
+        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+      },
+      "street_environment": {
+        "zone_type": "University_District",
+        "average_speed_kmh": 58.49,
+        "congestion_level": 27.03
+      }
+    },
+    "civilian_safety_guide": {
+      "for_drivers": {
+        "action": "Increase Following Distance",
+        "details": "Maintain 3 car lengths buffer during peak rush hours."
+      },
+      "for_pedestrians_and_cyclists": {
+        "action": "Double-Check Turning Vehicles",
+        "details": "Make eye contact with turning drivers at intersections before crossing."
+      },
+      "peak_danger_windows": {
+        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
+        "details": "Congestion peaks during evening travel windows."
+      }
+    }
+  },
   "raw_metrics": {
     "zone_id": "Zone_03",
     "week": 13,
@@ -153,18 +193,29 @@
     "vehicle_density_trend_4w": 2.846,
     "speed_trend_4w": -5.078,
     "incident_trend_4w": -0.1,
-    "location_name": "Kurla",
-    "city": "Mumbai",
-    "latitude": 19.0726,
-    "longitude": 72.8845,
-    "predicted_risk_probability": 0.2305,
-    "risk_score": 23.0484,
+    "location_name_x": "Kurla",
+    "city_x": "Mumbai",
+    "latitude_x": 19.0726,
+    "longitude_x": 72.8845,
+    "car_percentage": 43.6,
+    "motorcycle_percentage": 38.4,
+    "bus_percentage": 11.2,
+    "truck_percentage": 6.7,
+    "moving_vehicle_percentage": 70.7,
+    "slow_vehicle_percentage": 9.7,
+    "stopped_vehicle_percentage": 19.6,
+    "location_name_y": "Kurla",
+    "city_y": "Mumbai",
+    "latitude_y": 19.0726,
+    "longitude_y": 72.8845,
+    "predicted_risk_probability": 0.3356,
+    "risk_score": 33.5595,
     "population_exposure_score": 45.4343,
     "vehicle_exposure_score": 50.3882,
     "temporal_trend_score": 100.0,
-    "priority_score": 45.6556,
-    "priority_rank": 19,
+    "priority_score": 49.86,
+    "priority_rank": 18,
     "priority_level": "MODERATE",
-    "risk_prob": 0.2305
+    "risk_prob": 0.3356
   }
 }

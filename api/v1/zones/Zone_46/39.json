@@ -1,40 +1,40 @@
 {
   "zone_id": "Zone_46",
-  "location_name": "Nungambakkam",
-  "city": "Chennai",
+  "location_name": "Zone_46",
+  "city": "",
   "zone_type": "University_District",
   "week": 39,
-  "latitude": 13.0569,
-  "longitude": 80.2425,
+  "latitude": 0.0,
+  "longitude": 0.0,
   "risk_analysis": {
-    "predicted_risk_probability": 0.7649,
-    "predicted_risk_percentage": 76.49,
-    "risk_label": "CRITICAL RISK",
-    "risk_color": "#ef4444",
-    "risk_delta_vs_prev_week": 18.7355,
+    "predicted_risk_probability": 0.6058,
+    "predicted_risk_percentage": 60.58,
+    "risk_label": "HIGH RISK",
+    "risk_color": "#f97316",
+    "risk_delta_vs_prev_week": 15.7332,
     "actual_incident": 1
   },
   "priority": {
-    "priority_score": 57.1152,
-    "priority_rank": 12,
-    "priority_level": "HIGH",
+    "priority_score": 50.7527,
+    "priority_rank": 19,
+    "priority_level": "MODERATE",
     "components": {
-      "risk_score": 76.4884,
+      "risk_score": 60.5821,
       "population_exposure_score": 48.0494,
       "vehicle_exposure_score": 40.3376,
       "temporal_trend_score": 42.9333
     },
     "explanation": {
-      "priority_level": "HIGH",
-      "priority_score": 57.1,
+      "priority_level": "MODERATE",
+      "priority_score": 50.8,
       "top_contributors": [
         {
           "factor": "Risk Score",
-          "icon": "\ud83d\udd34",
-          "value": "76/100",
-          "impact": "HIGH",
-          "detail": "Model-estimated risk score is in the critical range",
-          "weight": 76.4884
+          "icon": "\ud83d\udfe1",
+          "value": "61/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 60.5821
         },
         {
           "factor": "Population Exposure",
@@ -54,7 +54,7 @@
         }
       ],
       "total_factors": 3,
-      "assessment": "This zone shows significant risk elevation driven by Risk Score. Proactive intervention should be scheduled within the current planning cycle."
+      "assessment": "This zone has moderate risk levels with contributing factors: Risk Score, Population Exposure. Continue monitoring and schedule review if conditions worsen."
     }
   },
   "telemetry": {
@@ -114,7 +114,47 @@
       "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
     }
   ],
-  "executive_briefing": "Nungambakkam is in a critical safety state with 76% incident risk. Continue routine monitoring. Optimizing signals could save 1776 kg CO2/week, equivalent to 4398 trees/year.",
+  "executive_briefing": "Zone_46 is in a critical safety state with 61% incident risk. Continue routine monitoring. Optimizing signals could save 1776 kg CO2/week, equivalent to 4398 trees/year.",
+  "civilian_road_safety_radar": {
+    "current_week": {
+      "week": 39,
+      "risk_score": 60.6,
+      "risk_percentage": "61%",
+      "risk_badge": "HIGH RISK",
+      "risk_color": "#f97316",
+      "description": "Elevated collision activity observed.",
+      "crashes_reported": 0
+    },
+    "why_accidents_might_happen": {
+      "primary_collision_cause": {
+        "title": "Congestion Bottleneck & Merge Conflicts",
+        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+      },
+      "behavior_factor": {
+        "title": "Tailgating & Speed Variance",
+        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+      },
+      "street_environment": {
+        "zone_type": "University_District",
+        "average_speed_kmh": 44.1,
+        "congestion_level": 42.49
+      }
+    },
+    "civilian_safety_guide": {
+      "for_drivers": {
+        "action": "Increase Following Distance",
+        "details": "Maintain 3 car lengths buffer during peak rush hours."
+      },
+      "for_pedestrians_and_cyclists": {
+        "action": "Double-Check Turning Vehicles",
+        "details": "Make eye contact with turning drivers at intersections before crossing."
+      },
+      "peak_danger_windows": {
+        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
+        "details": "Congestion peaks during evening travel windows."
+      }
+    }
+  },
   "raw_metrics": {
     "zone_id": "Zone_46",
     "week": 39,
@@ -161,18 +201,29 @@
     "vehicle_density_trend_4w": -0.924,
     "speed_trend_4w": 5.244,
     "incident_trend_4w": -0.4,
-    "location_name": "Nungambakkam",
-    "city": "Chennai",
-    "latitude": 13.0569,
-    "longitude": 80.2425,
-    "predicted_risk_probability": 0.7649,
-    "risk_score": 76.4884,
+    "location_name_x": "Nungambakkam",
+    "city_x": "Chennai",
+    "latitude_x": 13.0569,
+    "longitude_x": 80.2425,
+    "car_percentage": 47.8,
+    "motorcycle_percentage": 39.6,
+    "bus_percentage": 10.6,
+    "truck_percentage": 2.0,
+    "moving_vehicle_percentage": 51.4,
+    "slow_vehicle_percentage": 34.3,
+    "stopped_vehicle_percentage": 14.3,
+    "location_name_y": "Nungambakkam",
+    "city_y": "Chennai",
+    "latitude_y": 13.0569,
+    "longitude_y": 80.2425,
+    "predicted_risk_probability": 0.6058,
+    "risk_score": 60.5821,
     "population_exposure_score": 48.0494,
     "vehicle_exposure_score": 40.3376,
     "temporal_trend_score": 42.9333,
-    "priority_score": 57.1152,
-    "priority_rank": 12,
-    "priority_level": "HIGH",
-    "risk_prob": 0.7649
+    "priority_score": 50.7527,
+    "priority_rank": 19,
+    "priority_level": "MODERATE",
+    "risk_prob": 0.6058
   }
 }

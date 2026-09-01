@@ -1,40 +1,40 @@
 {
   "zone_id": "Zone_43",
-  "location_name": "Tambaram",
-  "city": "Chennai",
+  "location_name": "Zone_43",
+  "city": "",
   "zone_type": "Commercial_Downtown",
   "week": 11,
-  "latitude": 12.9249,
-  "longitude": 80.1,
+  "latitude": 0.0,
+  "longitude": 0.0,
   "risk_analysis": {
-    "predicted_risk_probability": 0.1085,
-    "predicted_risk_percentage": 10.85,
+    "predicted_risk_probability": 0.2309,
+    "predicted_risk_percentage": 23.09,
     "risk_label": "LOW RISK",
     "risk_color": "#22c55e",
-    "risk_delta_vs_prev_week": -16.457,
+    "risk_delta_vs_prev_week": -23.4096,
     "actual_incident": 0
   },
   "priority": {
-    "priority_score": 20.718,
-    "priority_rank": 37,
+    "priority_score": 25.615,
+    "priority_rank": 38,
     "priority_level": "LOW",
     "components": {
-      "risk_score": 10.8488,
+      "risk_score": 23.0914,
       "population_exposure_score": 18.8735,
       "vehicle_exposure_score": 23.1594,
       "temporal_trend_score": 46.8546
     },
     "explanation": {
       "priority_level": "LOW",
-      "priority_score": 20.7,
+      "priority_score": 25.6,
       "top_contributors": [
         {
           "factor": "Risk Score",
           "icon": "\ud83d\udfe2",
-          "value": "11/100",
+          "value": "23/100",
           "impact": "LOW",
           "detail": "Risk score within acceptable range",
-          "weight": 10.8488
+          "weight": 23.0914
         }
       ],
       "total_factors": 1,
@@ -90,7 +90,47 @@
       "action": "Continue routine monitoring. No immediate intervention required."
     }
   ],
-  "executive_briefing": "Tambaram is within safe operating parameters (11% risk). Continue routine monitoring. Optimizing signals could save 196 kg CO2/week, equivalent to 484 trees/year.",
+  "executive_briefing": "Zone_43 is within safe operating parameters (23% risk). Continue routine monitoring. Optimizing signals could save 196 kg CO2/week, equivalent to 484 trees/year.",
+  "civilian_road_safety_radar": {
+    "current_week": {
+      "week": 11,
+      "risk_score": 23.1,
+      "risk_percentage": "23%",
+      "risk_badge": "LOW RISK",
+      "risk_color": "#22c55e",
+      "description": "Corridor operating within normal baseline.",
+      "crashes_reported": 0
+    },
+    "why_accidents_might_happen": {
+      "primary_collision_cause": {
+        "title": "Congestion Bottleneck & Merge Conflicts",
+        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+      },
+      "behavior_factor": {
+        "title": "Tailgating & Speed Variance",
+        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+      },
+      "street_environment": {
+        "zone_type": "Commercial_Downtown",
+        "average_speed_kmh": 64.77,
+        "congestion_level": 11.42
+      }
+    },
+    "civilian_safety_guide": {
+      "for_drivers": {
+        "action": "Increase Following Distance",
+        "details": "Maintain 3 car lengths buffer during peak rush hours."
+      },
+      "for_pedestrians_and_cyclists": {
+        "action": "Double-Check Turning Vehicles",
+        "details": "Make eye contact with turning drivers at intersections before crossing."
+      },
+      "peak_danger_windows": {
+        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
+        "details": "Congestion peaks during evening travel windows."
+      }
+    }
+  },
   "raw_metrics": {
     "zone_id": "Zone_43",
     "week": 11,
@@ -137,18 +177,29 @@
     "vehicle_density_trend_4w": 0.519,
     "speed_trend_4w": -3.696,
     "incident_trend_4w": -0.1,
-    "location_name": "Tambaram",
-    "city": "Chennai",
-    "latitude": 12.9249,
-    "longitude": 80.1,
-    "predicted_risk_probability": 0.1085,
-    "risk_score": 10.8488,
+    "location_name_x": "Tambaram",
+    "city_x": "Chennai",
+    "latitude_x": 12.9249,
+    "longitude_x": 80.1,
+    "car_percentage": 42.3,
+    "motorcycle_percentage": 41.0,
+    "bus_percentage": 12.3,
+    "truck_percentage": 4.4,
+    "moving_vehicle_percentage": 85.7,
+    "slow_vehicle_percentage": 17.4,
+    "stopped_vehicle_percentage": 0.0,
+    "location_name_y": "Tambaram",
+    "city_y": "Chennai",
+    "latitude_y": 12.9249,
+    "longitude_y": 80.1,
+    "predicted_risk_probability": 0.2309,
+    "risk_score": 23.0914,
     "population_exposure_score": 18.8735,
     "vehicle_exposure_score": 23.1594,
     "temporal_trend_score": 46.8546,
-    "priority_score": 20.718,
-    "priority_rank": 37,
+    "priority_score": 25.615,
+    "priority_rank": 38,
     "priority_level": "LOW",
-    "risk_prob": 0.1085
+    "risk_prob": 0.2309
   }
 }

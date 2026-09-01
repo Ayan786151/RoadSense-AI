@@ -1,40 +1,40 @@
 {
   "zone_id": "Zone_20",
-  "location_name": "Vasant Kunj",
-  "city": "Delhi",
+  "location_name": "Zone_20",
+  "city": "",
   "zone_type": "Commercial_Downtown",
   "week": 42,
-  "latitude": 28.5293,
-  "longitude": 77.1541,
+  "latitude": 0.0,
+  "longitude": 0.0,
   "risk_analysis": {
-    "predicted_risk_probability": 0.1968,
-    "predicted_risk_percentage": 19.68,
+    "predicted_risk_probability": 0.2558,
+    "predicted_risk_percentage": 25.58,
     "risk_label": "LOW RISK",
     "risk_color": "#22c55e",
-    "risk_delta_vs_prev_week": 4.0466,
+    "risk_delta_vs_prev_week": -13.3273,
     "actual_incident": 0
   },
   "priority": {
-    "priority_score": 24.5132,
-    "priority_rank": 41,
+    "priority_score": 26.8743,
+    "priority_rank": 42,
     "priority_level": "LOW",
     "components": {
-      "risk_score": 19.68,
+      "risk_score": 25.5826,
       "population_exposure_score": 16.8044,
       "vehicle_exposure_score": 21.7917,
       "temporal_trend_score": 53.8787
     },
     "explanation": {
       "priority_level": "LOW",
-      "priority_score": 24.5,
+      "priority_score": 26.9,
       "top_contributors": [
         {
           "factor": "Risk Score",
           "icon": "\ud83d\udfe2",
-          "value": "20/100",
+          "value": "26/100",
           "impact": "LOW",
           "detail": "Risk score within acceptable range",
-          "weight": 19.68
+          "weight": 25.5826
         }
       ],
       "total_factors": 1,
@@ -90,7 +90,47 @@
       "action": "Continue routine monitoring. No immediate intervention required."
     }
   ],
-  "executive_briefing": "Vasant Kunj is within safe operating parameters (20% risk). Continue routine monitoring. Optimizing signals could save 322 kg CO2/week, equivalent to 798 trees/year.",
+  "executive_briefing": "Zone_20 is within safe operating parameters (26% risk). Continue routine monitoring. Optimizing signals could save 322 kg CO2/week, equivalent to 798 trees/year.",
+  "civilian_road_safety_radar": {
+    "current_week": {
+      "week": 42,
+      "risk_score": 25.6,
+      "risk_percentage": "26%",
+      "risk_badge": "LOW RISK",
+      "risk_color": "#22c55e",
+      "description": "Corridor operating within normal baseline.",
+      "crashes_reported": 0
+    },
+    "why_accidents_might_happen": {
+      "primary_collision_cause": {
+        "title": "Congestion Bottleneck & Merge Conflicts",
+        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+      },
+      "behavior_factor": {
+        "title": "Tailgating & Speed Variance",
+        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+      },
+      "street_environment": {
+        "zone_type": "Commercial_Downtown",
+        "average_speed_kmh": 65.77,
+        "congestion_level": 13.14
+      }
+    },
+    "civilian_safety_guide": {
+      "for_drivers": {
+        "action": "Increase Following Distance",
+        "details": "Maintain 3 car lengths buffer during peak rush hours."
+      },
+      "for_pedestrians_and_cyclists": {
+        "action": "Double-Check Turning Vehicles",
+        "details": "Make eye contact with turning drivers at intersections before crossing."
+      },
+      "peak_danger_windows": {
+        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
+        "details": "Congestion peaks during evening travel windows."
+      }
+    }
+  },
   "raw_metrics": {
     "zone_id": "Zone_20",
     "week": 42,
@@ -137,18 +177,29 @@
     "vehicle_density_trend_4w": 3.842,
     "speed_trend_4w": 0.683,
     "incident_trend_4w": 0.3,
-    "location_name": "Vasant Kunj",
-    "city": "Delhi",
-    "latitude": 28.5293,
-    "longitude": 77.1541,
-    "predicted_risk_probability": 0.1968,
-    "risk_score": 19.68,
+    "location_name_x": "Vasant Kunj",
+    "city_x": "Delhi",
+    "latitude_x": 28.5293,
+    "longitude_x": 77.1541,
+    "car_percentage": 48.8,
+    "motorcycle_percentage": 38.8,
+    "bus_percentage": 9.7,
+    "truck_percentage": 2.6,
+    "moving_vehicle_percentage": 78.8,
+    "slow_vehicle_percentage": 8.2,
+    "stopped_vehicle_percentage": 13.0,
+    "location_name_y": "Vasant Kunj",
+    "city_y": "Delhi",
+    "latitude_y": 28.5293,
+    "longitude_y": 77.1541,
+    "predicted_risk_probability": 0.2558,
+    "risk_score": 25.5826,
     "population_exposure_score": 16.8044,
     "vehicle_exposure_score": 21.7917,
     "temporal_trend_score": 53.8787,
-    "priority_score": 24.5132,
-    "priority_rank": 41,
+    "priority_score": 26.8743,
+    "priority_rank": 42,
     "priority_level": "LOW",
-    "risk_prob": 0.1968
+    "risk_prob": 0.2558
   }
 }

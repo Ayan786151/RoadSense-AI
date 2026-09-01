@@ -220,15 +220,24 @@ div[data-baseweb="select"] > div, div[data-baseweb="input"] > div {
 </style>
 """, unsafe_allow_html=True)
 
-# Import simulation dashboard, vision studio, and city map modules
+# Import simulation dashboard, vision studio, city map, reinforcement lab, and chicago module
 try:
     from dashboard.simulation_dashboard import render_simulation_dashboard
     from dashboard.vision_studio import render_vision_studio
     from dashboard.city_map import render_city_command_map
+    from dashboard.area_prediction import render_area_prediction_dashboard
+    from dashboard.reinforcement_lab import render_reinforcement_lab
+    from dashboard.chicago_module import render_chicago_crash_module
 except ImportError:
     from simulation_dashboard import render_simulation_dashboard
     from vision_studio import render_vision_studio
     from city_map import render_city_command_map
+    from area_prediction import render_area_prediction_dashboard
+    from reinforcement_lab import render_reinforcement_lab
+    try:
+        from chicago_module import render_chicago_crash_module
+    except ImportError:
+        render_chicago_crash_module = None
 
 from intelligence.signal_co2 import compute_optimal_signal_timing
 
@@ -258,7 +267,10 @@ def main():
             "03. COMPUTER VISION STUDIO",
             "04. GEOSPATIAL INCIDENT RADAR",
             "05. RISK FACTOR WEIGHTAGE & HIERARCHY",
-            "06. 30-DAY CROSSROAD TRANSFORMATION"
+            "06. 30-DAY CROSSROAD TRANSFORMATION",
+            "07. AREA PREDICTION & TRAJECTORY INTELLIGENCE",
+            "08. 4-WEEK ROLLING ML & REINFORCEMENT LAB",
+            "09. CHICAGO POLICE CRASH INTELLIGENCE & ZONE RADAR"
         ],
         index=0
     )
@@ -275,8 +287,14 @@ def main():
         render_city_command_map()
     elif app_mode.startswith("05"):
         render_risk_factors_module()
-    else:
+    elif app_mode.startswith("06"):
         render_crossroad_animation_tab()
+    elif app_mode.startswith("07"):
+        render_area_prediction_dashboard()
+    elif app_mode.startswith("08"):
+        render_reinforcement_lab()
+    elif app_mode.startswith("09") and render_chicago_crash_module:
+        render_chicago_crash_module()
 
     # Sidebar Footer
     st.sidebar.markdown("""
@@ -306,8 +324,8 @@ def render_live_vision_dashboard():
     """, unsafe_allow_html=True)
 
     tab_live_cctv, tab_historical_session = st.tabs([
-        "📹 LIVE CCTV VIDEO DETECTION & TRACKING",
-        "📊 RECORDED SESSION INTELLIGENCE & KINEMATICS"
+        " LIVE CCTV VIDEO DETECTION & TRACKING",
+        " RECORDED SESSION INTELLIGENCE & KINEMATICS"
     ])
 
     with tab_live_cctv:
@@ -321,7 +339,7 @@ def render_live_vision_dashboard():
             selected_vid = st.selectbox(
                 "SELECT FOOTAGE ARCHIVE",
                 vid_options,
-                format_func=lambda p: f"📹 {os.path.basename(p)} ({os.path.getsize(p)/(1024*1024):.1f} MB)" if os.path.exists(p) else p,
+                format_func=lambda p: f" {os.path.basename(p)} ({os.path.getsize(p)/(1024*1024):.1f} MB)" if os.path.exists(p) else p,
                 index=0
             )
             
@@ -340,9 +358,9 @@ def render_live_vision_dashboard():
 
             act_col1, act_col2 = st.columns([1, 1])
             with act_col1:
-                run_detect_btn = st.button("▶️ RUN YOLOv11 LIVE DETECTION", type="primary", use_container_width=True)
+                run_detect_btn = st.button(" RUN YOLOv11 LIVE DETECTION", type="primary", use_container_width=True)
             with act_col2:
-                frame_limit_choice = st.selectbox("DETECTION DURATION", ["⚡ Fast Sample (60 Frames)", "Medium (150 Frames)", "Full Video Stream"], index=0)
+                frame_limit_choice = st.selectbox("DETECTION DURATION", [" Fast Sample (60 Frames)", "Medium (150 Frames)", "Full Video Stream"], index=0)
 
             video_preview_slot = st.empty()
             progress_slot = st.empty()
@@ -579,7 +597,7 @@ def render_live_vision_dashboard():
                             st.plotly_chart(fig_c, width="stretch")
 
                 cap.release()
-                status_slot.success(f"✅ Ingestion Complete! Extracted {frame_idx} frames from '{os.path.basename(selected_vid)}'. Detected {len(tracked_unique_ids) or peak_density} unique vehicles.")
+                status_slot.success(f" Ingestion Complete! Extracted {frame_idx} frames from '{os.path.basename(selected_vid)}'. Detected {len(tracked_unique_ids) or peak_density} unique vehicles.")
                 
                 # Save session state so values stay rendered
                 final_spd = round(float(np.mean(speed_samples[-50:])), 1) if speed_samples else (round(float(np.mean(speed_samples)), 1) if speed_samples else 0.0)
@@ -628,7 +646,7 @@ def render_live_vision_dashboard():
                     </div>
                     """, unsafe_allow_html=True)
                     
-                    st.info("👆 Click **'RUN YOLOv11 LIVE DETECTION'** above to run computer vision extraction on this video and compute live telemetry.")
+                    st.info(" Click **'RUN YOLOv11 LIVE DETECTION'** above to run computer vision extraction on this video and compute live telemetry.")
 
     with tab_historical_session:
         st.markdown("#### Recorded Session Archives & Kinematics")
@@ -893,7 +911,7 @@ def render_risk_factors_module():
                     <span style="font-family: 'JetBrains Mono', monospace; font-size: 10px; color: #ef4444; font-weight: 700;">TIER 1 • CRITICAL</span>
                     <span style="font-family: 'JetBrains Mono', monospace; font-size: 18px; font-weight: 800; color: #ef4444;">38%</span>
                 </div>
-                <div style="font-size: 14px; font-weight: 700; color: #fafafa; margin-top: 6px;">⚡ Over-Speeding & Velocity Variance</div>
+                <div style="font-size: 14px; font-weight: 700; color: #fafafa; margin-top: 6px;"> Over-Speeding & Velocity Variance</div>
                 <div style="font-size: 11px; color: #a1a1aa; margin-top: 4px;">Corridor speed spikes and erratic braking waves.</div>
             </div>
             <div style="background: #121215; border: 1px solid #f59e0b; border-left: 4px solid #f59e0b; padding: 14px 16px; border-radius: 4px;">
@@ -901,7 +919,7 @@ def render_risk_factors_module():
                     <span style="font-family: 'JetBrains Mono', monospace; font-size: 10px; color: #f59e0b; font-weight: 700;">TIER 2 • HIGH</span>
                     <span style="font-family: 'JetBrains Mono', monospace; font-size: 18px; font-weight: 800; color: #f59e0b;">26%</span>
                 </div>
-                <div style="font-size: 14px; font-weight: 700; color: #fafafa; margin-top: 6px;">🚦 Red-Light & Stop-Line Violations</div>
+                <div style="font-size: 14px; font-weight: 700; color: #fafafa; margin-top: 6px;"> Red-Light & Stop-Line Violations</div>
                 <div style="font-size: 11px; color: #a1a1aa; margin-top: 4px;">Intersection intrusions triggering perpendicular collision conflicts.</div>
             </div>
             <div style="background: #121215; border: 1px solid #818cf8; border-left: 4px solid #818cf8; padding: 14px 16px; border-radius: 4px;">
@@ -909,7 +927,7 @@ def render_risk_factors_module():
                     <span style="font-family: 'JetBrains Mono', monospace; font-size: 10px; color: #818cf8; font-weight: 700;">TIER 3 • MODERATE-HIGH</span>
                     <span style="font-family: 'JetBrains Mono', monospace; font-size: 18px; font-weight: 800; color: #818cf8;">20%</span>
                 </div>
-                <div style="font-size: 14px; font-weight: 700; color: #fafafa; margin-top: 6px;">🛡️ Helmet Absence & Triple-Riding</div>
+                <div style="font-size: 14px; font-weight: 700; color: #fafafa; margin-top: 6px;"> Helmet Absence & Triple-Riding</div>
                 <div style="font-size: 11px; color: #a1a1aa; margin-top: 4px;">Vulnerable two-wheeler passenger exposure and stability risks.</div>
             </div>
             <div style="background: #121215; border: 1px solid #27272a; border-left: 4px solid #38bdf8; padding: 14px 16px; border-radius: 4px;">
@@ -917,7 +935,7 @@ def render_risk_factors_module():
                     <span style="font-family: 'JetBrains Mono', monospace; font-size: 10px; color: #38bdf8; font-weight: 700;">TIER 4 • MODERATE</span>
                     <span style="font-family: 'JetBrains Mono', monospace; font-size: 18px; font-weight: 800; color: #38bdf8;">11%</span>
                 </div>
-                <div style="font-size: 14px; font-weight: 700; color: #fafafa; margin-top: 6px;">🚗 Road Congestion & Queue Backlog</div>
+                <div style="font-size: 14px; font-weight: 700; color: #fafafa; margin-top: 6px;"> Road Congestion & Queue Backlog</div>
                 <div style="font-size: 11px; color: #a1a1aa; margin-top: 4px;">Corridor gridlock index, queue delays, and flow bottlenecks.</div>
             </div>
             <div style="background: #121215; border: 1px solid #27272a; border-left: 4px solid #71717a; padding: 14px 16px; border-radius: 4px;">
@@ -925,7 +943,7 @@ def render_risk_factors_module():
                     <span style="font-family: 'JetBrains Mono', monospace; font-size: 10px; color: #a1a1aa; font-weight: 700;">TIER 5 • BASELINE</span>
                     <span style="font-family: 'JetBrains Mono', monospace; font-size: 18px; font-weight: 800; color: #a1a1aa;">5%</span>
                 </div>
-                <div style="font-size: 14px; font-weight: 700; color: #fafafa; margin-top: 6px;">🌧️ Weather & Low-Light Visibility</div>
+                <div style="font-size: 14px; font-weight: 700; color: #fafafa; margin-top: 6px;"> Weather & Low-Light Visibility</div>
                 <div style="font-size: 11px; color: #a1a1aa; margin-top: 4px;">Surface friction modifier, monsoon rainfall, and night glare.</div>
             </div>
         </div>
@@ -933,9 +951,9 @@ def render_risk_factors_module():
     """, unsafe_allow_html=True)
 
     tab_breakdown, tab_all_features, tab_feature_importance = st.tabs([
-        "📊 RISK WEIGHTAGE DISTRIBUTION",
-        "📋 ALL 35 MODEL PREDICTION PARAMETERS",
-        "📈 ML FEATURE IMPORTANCE RANKING"
+        " RISK WEIGHTAGE DISTRIBUTION",
+        " ALL 35 MODEL PREDICTION PARAMETERS",
+        " ML FEATURE IMPORTANCE RANKING"
     ])
 
     with tab_breakdown:
@@ -943,11 +961,11 @@ def render_risk_factors_module():
         with b_col1:
             tier_df = pd.DataFrame({
                 "Risk Hazard Factor": [
-                    "⚡ Over-Speeding & Velocity Volatility",
-                    "🚦 Red-Light & Stop-Line Violations",
-                    "🛡️ 2-Wheeler Non-Compliance (No-Helmet / Triple)",
-                    "🚗 Road Congestion & Queue Backlog",
-                    "🌧️ Ambient Weather & Surface Friction"
+                    " Over-Speeding & Velocity Volatility",
+                    " Red-Light & Stop-Line Violations",
+                    " 2-Wheeler Non-Compliance (No-Helmet / Triple)",
+                    " Road Congestion & Queue Backlog",
+                    " Ambient Weather & Surface Friction"
                 ],
                 "Relative Weight (%)": [38, 26, 20, 11, 5],
                 "Risk Classification": ["Tier 1 (Critical)", "Tier 2 (High)", "Tier 3 (Moderate-High)", "Tier 4 (Moderate)", "Tier 5 (Baseline)"]

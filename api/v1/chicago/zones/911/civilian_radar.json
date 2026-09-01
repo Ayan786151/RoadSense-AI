@@ -1,0 +1,71 @@
+{
+  "api_version": "v1",
+  "endpoint": "/api/v1/chicago/zones/911/civilian_radar.json",
+  "status": "OPERATIONAL",
+  "civilian_road_safety_radar": {
+    "zone_id": "911",
+    "zone_name": "Bridgeport - 31st St / Halsted St Arts District",
+    "district": "09th District - Deering",
+    "zone_type": "Industrial, Rail & Arts Corridor",
+    "posted_speed_limit_mph": 30.0,
+    "intersection_crossroad_density_pct": 32.0,
+    "current_week": {
+      "period": "2026-W33",
+      "date_range": "Aug 10 - Aug 16, 2026",
+      "risk_score": 26.0,
+      "risk_percentage": "26%",
+      "risk_badge": "[LOW RISK / SAFE]",
+      "risk_color": "#22c55e",
+      "description": "Corridor is currently operating below historical collision thresholds.",
+      "crashes_reported": 0,
+      "crashes_rolling4w_avg": 0.75,
+      "dominant_weather": "nan"
+    },
+    "upcoming_week": {
+      "period": "2026-W34",
+      "predicted_risk_probability": 0.304,
+      "predicted_risk_percentage": "30%",
+      "predicted_risk_badge": "[PREDICTED: SAFE CORRIDOR]",
+      "risk_color": "#22c55e",
+      "description": "Forecast models project clear, low-risk conditions next week.",
+      "trend_label": "[TREND: STABLE]",
+      "trend_color": "#a1a1aa",
+      "trend_percentage_change": "0%"
+    },
+    "why_accidents_might_happen": {
+      "primary_collision_cause": {
+        "title": "Failing to Yield Right-of-Way",
+        "explanation": "Drivers turning left across oncoming traffic or turning on yellow without checking cross-traffic and crossing pedestrians.",
+        "historical_frequency_pct": 34.2
+      },
+      "behavior_factor": {
+        "title": "Tailgating & Sudden Braking",
+        "explanation": "High-density commuter queues cause rear-end collisions when drivers follow too closely during rush hours.",
+        "risk_level": "MODERATE"
+      },
+      "street_environment": {
+        "posted_speed_limit_mph": 30.0,
+        "intersection_crossroad_density_pct": 32.0,
+        "title": "30 mph Zone | 32% Crossroad Density",
+        "explanation": "Frequent signalized crossroads combined with multi-lane traffic flow increase conflict points at peak times."
+      }
+    },
+    "civilian_safety_guide": {
+      "for_drivers": {
+        "action": "Increase Following Distance",
+        "details": "Maintain at least 3 car lengths of space behind the vehicle ahead. Avoid tailgating near transit stops and expressway exit ramps where sudden stops occur.",
+        "key_tip": "Leave 3-4 car lengths buffer on commercial transit corridors"
+      },
+      "for_pedestrians_and_cyclists": {
+        "action": "Double-Check Turning Cars",
+        "details": "Make eye contact with drivers turning right on red before stepping into crosswalks. Use reflective gear or activate bicycle lights after dusk.",
+        "key_tip": "Never assume a turning driver has seen you at green lights"
+      },
+      "peak_danger_windows": {
+        "primary_peak": "4:30 PM - 7:30 PM Weekdays (Evening Commute Congestion)",
+        "secondary_peak": "10:00 PM - 2:00 AM Friday & Saturday (Reduced Lighting & Speed Variance)",
+        "details": "Evening rush hours experience 3x higher collision rates than midday. Exercise maximum patience during heavy congestion."
+      }
+    }
+  }
+}

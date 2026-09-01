@@ -1,11 +1,11 @@
 {
   "zone_id": "Zone_34",
-  "location_name": "Chinhat",
-  "city": "Lucknow",
+  "location_name": "Zone_34",
+  "city": "",
   "zone_type": "Industrial_Corridor",
   "week": 1,
-  "latitude": 26.884,
-  "longitude": 81.05,
+  "latitude": 0.0,
+  "longitude": 0.0,
   "risk_analysis": {
     "predicted_risk_probability": null,
     "predicted_risk_percentage": null,
@@ -90,7 +90,47 @@
       "action": "Continue routine monitoring. No immediate intervention required."
     }
   ],
-  "executive_briefing": "Chinhat is within safe operating parameters (0% risk). Continue routine monitoring. Optimizing signals could save 201 kg CO2/week, equivalent to 497 trees/year.",
+  "executive_briefing": "Zone_34 is within safe operating parameters (0% risk). Continue routine monitoring. Optimizing signals could save 201 kg CO2/week, equivalent to 497 trees/year.",
+  "civilian_road_safety_radar": {
+    "current_week": {
+      "week": 1,
+      "risk_score": null,
+      "risk_percentage": "N/A",
+      "risk_badge": "BASELINE WARMUP",
+      "risk_color": "#71717a",
+      "description": "Corridor operating within normal baseline.",
+      "crashes_reported": 0
+    },
+    "why_accidents_might_happen": {
+      "primary_collision_cause": {
+        "title": "Congestion Bottleneck & Merge Conflicts",
+        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+      },
+      "behavior_factor": {
+        "title": "Tailgating & Speed Variance",
+        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+      },
+      "street_environment": {
+        "zone_type": "Industrial_Corridor",
+        "average_speed_kmh": 62.17,
+        "congestion_level": 11.94
+      }
+    },
+    "civilian_safety_guide": {
+      "for_drivers": {
+        "action": "Increase Following Distance",
+        "details": "Maintain 3 car lengths buffer during peak rush hours."
+      },
+      "for_pedestrians_and_cyclists": {
+        "action": "Double-Check Turning Vehicles",
+        "details": "Make eye contact with turning drivers at intersections before crossing."
+      },
+      "peak_danger_windows": {
+        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
+        "details": "Congestion peaks during evening travel windows."
+      }
+    }
+  },
   "raw_metrics": {
     "zone_id": "Zone_34",
     "week": 1,
@@ -137,10 +177,21 @@
     "vehicle_density_trend_4w": null,
     "speed_trend_4w": null,
     "incident_trend_4w": null,
-    "location_name": "Chinhat",
-    "city": "Lucknow",
-    "latitude": 26.884,
-    "longitude": 81.05,
+    "location_name_x": "Chinhat",
+    "city_x": "Lucknow",
+    "latitude_x": 26.884,
+    "longitude_x": 81.05,
+    "car_percentage": 43.5,
+    "motorcycle_percentage": 41.2,
+    "bus_percentage": 12.3,
+    "truck_percentage": 2.9,
+    "moving_vehicle_percentage": 74.6,
+    "slow_vehicle_percentage": 8.6,
+    "stopped_vehicle_percentage": 16.8,
+    "location_name_y": "Chinhat",
+    "city_y": "Lucknow",
+    "latitude_y": 26.884,
+    "longitude_y": 81.05,
     "predicted_risk_probability": null,
     "risk_score": 0.0,
     "population_exposure_score": 14.0743,

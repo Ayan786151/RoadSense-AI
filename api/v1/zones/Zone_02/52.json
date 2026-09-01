@@ -1,32 +1,32 @@
 {
   "zone_id": "Zone_02",
-  "location_name": "Bandra",
-  "city": "Mumbai",
+  "location_name": "Zone_02",
+  "city": "",
   "zone_type": "Residential",
   "week": 52,
-  "latitude": 19.0596,
-  "longitude": 72.8295,
+  "latitude": 0.0,
+  "longitude": 0.0,
   "risk_analysis": {
-    "predicted_risk_probability": 0.2828,
-    "predicted_risk_percentage": 28.28,
+    "predicted_risk_probability": 0.3441,
+    "predicted_risk_percentage": 34.41,
     "risk_label": "LOW RISK",
     "risk_color": "#22c55e",
-    "risk_delta_vs_prev_week": 6.8621,
+    "risk_delta_vs_prev_week": 3.4586,
     "actual_incident": 0
   },
   "priority": {
-    "priority_score": 45.7774,
+    "priority_score": 48.2269,
     "priority_rank": 20,
     "priority_level": "MODERATE",
     "components": {
-      "risk_score": 28.2813,
+      "risk_score": 34.405,
       "population_exposure_score": 79.4957,
       "vehicle_exposure_score": 45.5773,
       "temporal_trend_score": 36.5033
     },
     "explanation": {
       "priority_level": "MODERATE",
-      "priority_score": 45.8,
+      "priority_score": 48.2,
       "top_contributors": [
         {
           "factor": "Population Exposure",
@@ -39,10 +39,10 @@
         {
           "factor": "Risk Score",
           "icon": "\ud83d\udfe2",
-          "value": "28/100",
+          "value": "34/100",
           "impact": "LOW",
           "detail": "Risk score within acceptable range",
-          "weight": 28.2813
+          "weight": 34.405
         }
       ],
       "total_factors": 2,
@@ -94,11 +94,51 @@
       "name": "Routine Monitoring",
       "icon": "\ud83d\udcca",
       "severity": "LOW",
-      "description": "Zone currently within acceptable risk parameters.",
-      "action": "Continue routine monitoring. No immediate intervention required."
+      "description": "No specific risk indicators triggered.",
+      "action": "Continue routine monitoring."
     }
   ],
-  "executive_briefing": "Bandra is within safe operating parameters (28% risk). Continue routine monitoring. Optimizing signals could save 871 kg CO2/week, equivalent to 2155 trees/year.",
+  "executive_briefing": "Zone_02 is within safe operating parameters (34% risk). Continue routine monitoring. Optimizing signals could save 871 kg CO2/week, equivalent to 2155 trees/year.",
+  "civilian_road_safety_radar": {
+    "current_week": {
+      "week": 52,
+      "risk_score": 34.4,
+      "risk_percentage": "34%",
+      "risk_badge": "LOW RISK",
+      "risk_color": "#22c55e",
+      "description": "Corridor operating within normal baseline.",
+      "crashes_reported": 0
+    },
+    "why_accidents_might_happen": {
+      "primary_collision_cause": {
+        "title": "Congestion Bottleneck & Merge Conflicts",
+        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+      },
+      "behavior_factor": {
+        "title": "Tailgating & Speed Variance",
+        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+      },
+      "street_environment": {
+        "zone_type": "Residential",
+        "average_speed_kmh": 54.06,
+        "congestion_level": 20.56
+      }
+    },
+    "civilian_safety_guide": {
+      "for_drivers": {
+        "action": "Increase Following Distance",
+        "details": "Maintain 3 car lengths buffer during peak rush hours."
+      },
+      "for_pedestrians_and_cyclists": {
+        "action": "Double-Check Turning Vehicles",
+        "details": "Make eye contact with turning drivers at intersections before crossing."
+      },
+      "peak_danger_windows": {
+        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
+        "details": "Congestion peaks during evening travel windows."
+      }
+    }
+  },
   "raw_metrics": {
     "zone_id": "Zone_02",
     "week": 52,
@@ -145,18 +185,29 @@
     "vehicle_density_trend_4w": -3.055,
     "speed_trend_4w": 1.223,
     "incident_trend_4w": 0.0,
-    "location_name": "Bandra",
-    "city": "Mumbai",
-    "latitude": 19.0596,
-    "longitude": 72.8295,
-    "predicted_risk_probability": 0.2828,
-    "risk_score": 28.2813,
+    "location_name_x": "Bandra",
+    "city_x": "Mumbai",
+    "latitude_x": 19.0596,
+    "longitude_x": 72.8295,
+    "car_percentage": 30.7,
+    "motorcycle_percentage": 60.2,
+    "bus_percentage": 6.9,
+    "truck_percentage": 2.2,
+    "moving_vehicle_percentage": 82.1,
+    "slow_vehicle_percentage": 10.2,
+    "stopped_vehicle_percentage": 7.6,
+    "location_name_y": "Bandra",
+    "city_y": "Mumbai",
+    "latitude_y": 19.0596,
+    "longitude_y": 72.8295,
+    "predicted_risk_probability": 0.3441,
+    "risk_score": 34.405,
     "population_exposure_score": 79.4957,
     "vehicle_exposure_score": 45.5773,
     "temporal_trend_score": 36.5033,
-    "priority_score": 45.7774,
+    "priority_score": 48.2269,
     "priority_rank": 20,
     "priority_level": "MODERATE",
-    "risk_prob": 0.2828
+    "risk_prob": 0.3441
   }
 }

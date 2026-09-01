@@ -1,32 +1,32 @@
 {
   "zone_id": "Zone_47",
-  "location_name": "Perambur",
-  "city": "Chennai",
+  "location_name": "Zone_47",
+  "city": "",
   "zone_type": "University_District",
   "week": 27,
-  "latitude": 13.1167,
-  "longitude": 80.2333,
+  "latitude": 0.0,
+  "longitude": 0.0,
   "risk_analysis": {
-    "predicted_risk_probability": 0.9718,
-    "predicted_risk_percentage": 97.18,
+    "predicted_risk_probability": 0.9428,
+    "predicted_risk_percentage": 94.28,
     "risk_label": "CRITICAL RISK",
     "risk_color": "#ef4444",
-    "risk_delta_vs_prev_week": 15.4705,
+    "risk_delta_vs_prev_week": 27.4868,
     "actual_incident": 1
   },
   "priority": {
-    "priority_score": 80.634,
+    "priority_score": 79.4741,
     "priority_rank": 2,
     "priority_level": "CRITICAL",
     "components": {
-      "risk_score": 97.1785,
+      "risk_score": 94.2789,
       "population_exposure_score": 48.0997,
       "vehicle_exposure_score": 73.6882,
       "temporal_trend_score": 100.0
     },
     "explanation": {
       "priority_level": "CRITICAL",
-      "priority_score": 80.6,
+      "priority_score": 79.5,
       "top_contributors": [
         {
           "factor": "Worsening Trend",
@@ -47,10 +47,10 @@
         {
           "factor": "Risk Score",
           "icon": "\ud83d\udd34",
-          "value": "97/100",
+          "value": "94/100",
           "impact": "HIGH",
           "detail": "Model-estimated risk score is in the critical range",
-          "weight": 97.1785
+          "weight": 94.2789
         },
         {
           "factor": "Speed Anomaly",
@@ -138,7 +138,47 @@
       "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
     }
   ],
-  "executive_briefing": "Perambur is in a critical safety state with 97% incident risk. Signal optimization recommended \u2014 congestion at 98/100 with speeds averaging 21 km/h. Optimizing signals could save 8609 kg CO2/week, equivalent to 21316 trees/year.",
+  "executive_briefing": "Zone_47 is in a critical safety state with 94% incident risk. Signal optimization recommended \u2014 congestion at 98/100 with speeds averaging 21 km/h. Optimizing signals could save 8609 kg CO2/week, equivalent to 21316 trees/year.",
+  "civilian_road_safety_radar": {
+    "current_week": {
+      "week": 27,
+      "risk_score": 94.3,
+      "risk_percentage": "94%",
+      "risk_badge": "CRITICAL RISK",
+      "risk_color": "#ef4444",
+      "description": "Elevated collision activity observed.",
+      "crashes_reported": 0
+    },
+    "why_accidents_might_happen": {
+      "primary_collision_cause": {
+        "title": "Congestion Bottleneck & Merge Conflicts",
+        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+      },
+      "behavior_factor": {
+        "title": "Tailgating & Speed Variance",
+        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+      },
+      "street_environment": {
+        "zone_type": "University_District",
+        "average_speed_kmh": 21.47,
+        "congestion_level": 98.31
+      }
+    },
+    "civilian_safety_guide": {
+      "for_drivers": {
+        "action": "Increase Following Distance",
+        "details": "Maintain 3 car lengths buffer during peak rush hours."
+      },
+      "for_pedestrians_and_cyclists": {
+        "action": "Double-Check Turning Vehicles",
+        "details": "Make eye contact with turning drivers at intersections before crossing."
+      },
+      "peak_danger_windows": {
+        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
+        "details": "Congestion peaks during evening travel windows."
+      }
+    }
+  },
   "raw_metrics": {
     "zone_id": "Zone_47",
     "week": 27,
@@ -185,18 +225,29 @@
     "vehicle_density_trend_4w": 4.06,
     "speed_trend_4w": -5.158,
     "incident_trend_4w": -0.1,
-    "location_name": "Perambur",
-    "city": "Chennai",
-    "latitude": 13.1167,
-    "longitude": 80.2333,
-    "predicted_risk_probability": 0.9718,
-    "risk_score": 97.1785,
+    "location_name_x": "Perambur",
+    "city_x": "Chennai",
+    "latitude_x": 13.1167,
+    "longitude_x": 80.2333,
+    "car_percentage": 43.0,
+    "motorcycle_percentage": 36.5,
+    "bus_percentage": 11.7,
+    "truck_percentage": 8.8,
+    "moving_vehicle_percentage": 15.5,
+    "slow_vehicle_percentage": 47.8,
+    "stopped_vehicle_percentage": 36.7,
+    "location_name_y": "Perambur",
+    "city_y": "Chennai",
+    "latitude_y": 13.1167,
+    "longitude_y": 80.2333,
+    "predicted_risk_probability": 0.9428,
+    "risk_score": 94.2789,
     "population_exposure_score": 48.0997,
     "vehicle_exposure_score": 73.6882,
     "temporal_trend_score": 100.0,
-    "priority_score": 80.634,
+    "priority_score": 79.4741,
     "priority_rank": 2,
     "priority_level": "CRITICAL",
-    "risk_prob": 0.9718
+    "risk_prob": 0.9428
   }
 }

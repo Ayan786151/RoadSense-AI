@@ -1,32 +1,32 @@
 {
   "zone_id": "Zone_29",
-  "location_name": "Indira Nagar",
-  "city": "Lucknow",
+  "location_name": "Zone_29",
+  "city": "",
   "zone_type": "Residential",
   "week": 7,
-  "latitude": 26.88,
-  "longitude": 81.0,
+  "latitude": 0.0,
+  "longitude": 0.0,
   "risk_analysis": {
-    "predicted_risk_probability": 0.2183,
-    "predicted_risk_percentage": 21.83,
+    "predicted_risk_probability": 0.3002,
+    "predicted_risk_percentage": 30.02,
     "risk_label": "LOW RISK",
     "risk_color": "#22c55e",
-    "risk_delta_vs_prev_week": -2.1954,
+    "risk_delta_vs_prev_week": -2.3449,
     "actual_incident": 0
   },
   "priority": {
-    "priority_score": 48.5165,
-    "priority_rank": 16,
+    "priority_score": 51.7923,
+    "priority_rank": 15,
     "priority_level": "MODERATE",
     "components": {
-      "risk_score": 21.8265,
+      "risk_score": 30.016,
       "population_exposure_score": 86.8525,
       "vehicle_exposure_score": 55.6246,
       "temporal_trend_score": 46.3191
     },
     "explanation": {
       "priority_level": "MODERATE",
-      "priority_score": 48.5,
+      "priority_score": 51.8,
       "top_contributors": [
         {
           "factor": "Population Exposure",
@@ -39,10 +39,10 @@
         {
           "factor": "Risk Score",
           "icon": "\ud83d\udfe2",
-          "value": "22/100",
+          "value": "30/100",
           "impact": "LOW",
           "detail": "Risk score within acceptable range",
-          "weight": 21.8265
+          "weight": 30.016
         }
       ],
       "total_factors": 2,
@@ -94,11 +94,51 @@
       "name": "Routine Monitoring",
       "icon": "\ud83d\udcca",
       "severity": "LOW",
-      "description": "Zone currently within acceptable risk parameters.",
-      "action": "Continue routine monitoring. No immediate intervention required."
+      "description": "No specific risk indicators triggered.",
+      "action": "Continue routine monitoring."
     }
   ],
-  "executive_briefing": "Indira Nagar is within safe operating parameters (22% risk). Continue routine monitoring. Optimizing signals could save 620 kg CO2/week, equivalent to 1534 trees/year.",
+  "executive_briefing": "Zone_29 is within safe operating parameters (30% risk). Continue routine monitoring. Optimizing signals could save 620 kg CO2/week, equivalent to 1534 trees/year.",
+  "civilian_road_safety_radar": {
+    "current_week": {
+      "week": 7,
+      "risk_score": 30.0,
+      "risk_percentage": "30%",
+      "risk_badge": "LOW RISK",
+      "risk_color": "#22c55e",
+      "description": "Corridor operating within normal baseline.",
+      "crashes_reported": 0
+    },
+    "why_accidents_might_happen": {
+      "primary_collision_cause": {
+        "title": "Congestion Bottleneck & Merge Conflicts",
+        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+      },
+      "behavior_factor": {
+        "title": "Tailgating & Speed Variance",
+        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+      },
+      "street_environment": {
+        "zone_type": "Residential",
+        "average_speed_kmh": 61.39,
+        "congestion_level": 15.33
+      }
+    },
+    "civilian_safety_guide": {
+      "for_drivers": {
+        "action": "Increase Following Distance",
+        "details": "Maintain 3 car lengths buffer during peak rush hours."
+      },
+      "for_pedestrians_and_cyclists": {
+        "action": "Double-Check Turning Vehicles",
+        "details": "Make eye contact with turning drivers at intersections before crossing."
+      },
+      "peak_danger_windows": {
+        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
+        "details": "Congestion peaks during evening travel windows."
+      }
+    }
+  },
   "raw_metrics": {
     "zone_id": "Zone_29",
     "week": 7,
@@ -145,18 +185,29 @@
     "vehicle_density_trend_4w": -2.063,
     "speed_trend_4w": 0.061,
     "incident_trend_4w": 0.0,
-    "location_name": "Indira Nagar",
-    "city": "Lucknow",
-    "latitude": 26.88,
-    "longitude": 81.0,
-    "predicted_risk_probability": 0.2183,
-    "risk_score": 21.8265,
+    "location_name_x": "Indira Nagar",
+    "city_x": "Lucknow",
+    "latitude_x": 26.88,
+    "longitude_x": 81.0,
+    "car_percentage": 33.1,
+    "motorcycle_percentage": 57.0,
+    "bus_percentage": 6.9,
+    "truck_percentage": 3.0,
+    "moving_vehicle_percentage": 85.6,
+    "slow_vehicle_percentage": 11.9,
+    "stopped_vehicle_percentage": 2.5,
+    "location_name_y": "Indira Nagar",
+    "city_y": "Lucknow",
+    "latitude_y": 26.88,
+    "longitude_y": 81.0,
+    "predicted_risk_probability": 0.3002,
+    "risk_score": 30.016,
     "population_exposure_score": 86.8525,
     "vehicle_exposure_score": 55.6246,
     "temporal_trend_score": 46.3191,
-    "priority_score": 48.5165,
-    "priority_rank": 16,
+    "priority_score": 51.7923,
+    "priority_rank": 15,
     "priority_level": "MODERATE",
-    "risk_prob": 0.2183
+    "risk_prob": 0.3002
   }
 }

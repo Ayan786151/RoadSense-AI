@@ -1,32 +1,32 @@
 {
   "zone_id": "Zone_14",
-  "location_name": "Connaught Place",
-  "city": "Delhi",
+  "location_name": "Zone_14",
+  "city": "",
   "zone_type": "University_District",
   "week": 25,
-  "latitude": 28.6315,
-  "longitude": 77.2167,
+  "latitude": 0.0,
+  "longitude": 0.0,
   "risk_analysis": {
-    "predicted_risk_probability": 0.652,
-    "predicted_risk_percentage": 65.2,
-    "risk_label": "HIGH RISK",
-    "risk_color": "#f97316",
-    "risk_delta_vs_prev_week": 14.3844,
+    "predicted_risk_probability": 0.5345,
+    "predicted_risk_percentage": 53.45,
+    "risk_label": "MODERATE RISK",
+    "risk_color": "#eab308",
+    "risk_delta_vs_prev_week": 1.837,
     "actual_incident": 1
   },
   "priority": {
-    "priority_score": 70.2222,
-    "priority_rank": 5,
+    "priority_score": 65.5229,
+    "priority_rank": 7,
     "priority_level": "HIGH",
     "components": {
-      "risk_score": 65.2012,
+      "risk_score": 53.453,
       "population_exposure_score": 66.0249,
       "vehicle_exposure_score": 100.0,
       "temporal_trend_score": 50.9035
     },
     "explanation": {
       "priority_level": "HIGH",
-      "priority_score": 70.2,
+      "priority_score": 65.5,
       "top_contributors": [
         {
           "factor": "Vehicle Density",
@@ -47,10 +47,10 @@
         {
           "factor": "Risk Score",
           "icon": "\ud83d\udfe1",
-          "value": "65/100",
+          "value": "53/100",
           "impact": "MEDIUM",
           "detail": "Moderate model-estimated risk",
-          "weight": 65.2012
+          "weight": 53.453
         },
         {
           "factor": "Congestion",
@@ -114,7 +114,47 @@
       "action": "Install protected pedestrian crossings, improve sidewalk infrastructure, and add pedestrian countdown signals."
     }
   ],
-  "executive_briefing": "Connaught Place is in a critical safety state with 65% incident risk. Continue routine monitoring. Optimizing signals could save 6352 kg CO2/week, equivalent to 15727 trees/year.",
+  "executive_briefing": "Zone_14 shows elevated risk at 53%. Continue routine monitoring. Optimizing signals could save 6352 kg CO2/week, equivalent to 15727 trees/year.",
+  "civilian_road_safety_radar": {
+    "current_week": {
+      "week": 25,
+      "risk_score": 53.5,
+      "risk_percentage": "53%",
+      "risk_badge": "MODERATE RISK",
+      "risk_color": "#eab308",
+      "description": "Corridor operating within normal baseline.",
+      "crashes_reported": 0
+    },
+    "why_accidents_might_happen": {
+      "primary_collision_cause": {
+        "title": "Congestion Bottleneck & Merge Conflicts",
+        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+      },
+      "behavior_factor": {
+        "title": "Tailgating & Speed Variance",
+        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+      },
+      "street_environment": {
+        "zone_type": "University_District",
+        "average_speed_kmh": 49.97,
+        "congestion_level": 57.8
+      }
+    },
+    "civilian_safety_guide": {
+      "for_drivers": {
+        "action": "Increase Following Distance",
+        "details": "Maintain 3 car lengths buffer during peak rush hours."
+      },
+      "for_pedestrians_and_cyclists": {
+        "action": "Double-Check Turning Vehicles",
+        "details": "Make eye contact with turning drivers at intersections before crossing."
+      },
+      "peak_danger_windows": {
+        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
+        "details": "Congestion peaks during evening travel windows."
+      }
+    }
+  },
   "raw_metrics": {
     "zone_id": "Zone_14",
     "week": 25,
@@ -161,18 +201,29 @@
     "vehicle_density_trend_4w": 0.831,
     "speed_trend_4w": 0.237,
     "incident_trend_4w": -0.3,
-    "location_name": "Connaught Place",
-    "city": "Delhi",
-    "latitude": 28.6315,
-    "longitude": 77.2167,
-    "predicted_risk_probability": 0.652,
-    "risk_score": 65.2012,
+    "location_name_x": "Connaught Place",
+    "city_x": "Delhi",
+    "latitude_x": 28.6315,
+    "longitude_x": 77.2167,
+    "car_percentage": 43.1,
+    "motorcycle_percentage": 44.3,
+    "bus_percentage": 10.3,
+    "truck_percentage": 2.4,
+    "moving_vehicle_percentage": 47.0,
+    "slow_vehicle_percentage": 25.8,
+    "stopped_vehicle_percentage": 27.1,
+    "location_name_y": "Connaught Place",
+    "city_y": "Delhi",
+    "latitude_y": 28.6315,
+    "longitude_y": 77.2167,
+    "predicted_risk_probability": 0.5345,
+    "risk_score": 53.453,
     "population_exposure_score": 66.0249,
     "vehicle_exposure_score": 100.0,
     "temporal_trend_score": 50.9035,
-    "priority_score": 70.2222,
-    "priority_rank": 5,
+    "priority_score": 65.5229,
+    "priority_rank": 7,
     "priority_level": "HIGH",
-    "risk_prob": 0.652
+    "risk_prob": 0.5345
   }
 }

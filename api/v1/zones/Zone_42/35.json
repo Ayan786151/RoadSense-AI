@@ -1,41 +1,33 @@
 {
   "zone_id": "Zone_42",
-  "location_name": "Guindy",
-  "city": "Chennai",
+  "location_name": "Zone_42",
+  "city": "",
   "zone_type": "University_District",
   "week": 35,
-  "latitude": 13.0067,
-  "longitude": 80.2206,
+  "latitude": 0.0,
+  "longitude": 0.0,
   "risk_analysis": {
-    "predicted_risk_probability": 0.8443,
-    "predicted_risk_percentage": 84.43,
-    "risk_label": "CRITICAL RISK",
-    "risk_color": "#ef4444",
-    "risk_delta_vs_prev_week": 20.3989,
+    "predicted_risk_probability": 0.7413,
+    "predicted_risk_percentage": 74.13,
+    "risk_label": "HIGH RISK",
+    "risk_color": "#f97316",
+    "risk_delta_vs_prev_week": 17.7084,
     "actual_incident": 1
   },
   "priority": {
-    "priority_score": 64.352,
-    "priority_rank": 11,
+    "priority_score": 60.2331,
+    "priority_rank": 12,
     "priority_level": "HIGH",
     "components": {
-      "risk_score": 84.4283,
+      "risk_score": 74.131,
       "population_exposure_score": 43.164,
       "vehicle_exposure_score": 67.3869,
       "temporal_trend_score": 42.0821
     },
     "explanation": {
       "priority_level": "HIGH",
-      "priority_score": 64.4,
+      "priority_score": 60.2,
       "top_contributors": [
-        {
-          "factor": "Risk Score",
-          "icon": "\ud83d\udd34",
-          "value": "84/100",
-          "impact": "HIGH",
-          "detail": "Model-estimated risk score is in the critical range",
-          "weight": 84.4283
-        },
         {
           "factor": "Violation Count",
           "icon": "\ud83d\udea8",
@@ -51,6 +43,14 @@
           "impact": "HIGH",
           "detail": "Congestion index at 74 \u2014 severe traffic flow degradation",
           "weight": 74.33
+        },
+        {
+          "factor": "Risk Score",
+          "icon": "\ud83d\udd34",
+          "value": "74/100",
+          "impact": "HIGH",
+          "detail": "Model-estimated risk score is in the critical range",
+          "weight": 74.131
         },
         {
           "factor": "Vehicle Density",
@@ -70,7 +70,7 @@
         }
       ],
       "total_factors": 5,
-      "assessment": "This zone shows significant risk elevation driven by Risk Score, Violation Count. Proactive intervention should be scheduled within the current planning cycle."
+      "assessment": "This zone shows significant risk elevation driven by Violation Count, Congestion. Proactive intervention should be scheduled within the current planning cycle."
     }
   },
   "telemetry": {
@@ -146,7 +146,47 @@
       "action": "Activate event traffic management plan. Deploy traffic marshals and temporary signage."
     }
   ],
-  "executive_briefing": "Guindy is in a critical safety state with 84% incident risk. Signal optimization recommended \u2014 congestion at 74/100 with speeds averaging 30 km/h. Optimizing signals could save 5209 kg CO2/week, equivalent to 12898 trees/year.",
+  "executive_briefing": "Zone_42 is in a critical safety state with 74% incident risk. Signal optimization recommended \u2014 congestion at 74/100 with speeds averaging 30 km/h. Optimizing signals could save 5209 kg CO2/week, equivalent to 12898 trees/year.",
+  "civilian_road_safety_radar": {
+    "current_week": {
+      "week": 35,
+      "risk_score": 74.1,
+      "risk_percentage": "74%",
+      "risk_badge": "HIGH RISK",
+      "risk_color": "#f97316",
+      "description": "Elevated collision activity observed.",
+      "crashes_reported": 0
+    },
+    "why_accidents_might_happen": {
+      "primary_collision_cause": {
+        "title": "Congestion Bottleneck & Merge Conflicts",
+        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+      },
+      "behavior_factor": {
+        "title": "Tailgating & Speed Variance",
+        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+      },
+      "street_environment": {
+        "zone_type": "University_District",
+        "average_speed_kmh": 30.09,
+        "congestion_level": 74.33
+      }
+    },
+    "civilian_safety_guide": {
+      "for_drivers": {
+        "action": "Increase Following Distance",
+        "details": "Maintain 3 car lengths buffer during peak rush hours."
+      },
+      "for_pedestrians_and_cyclists": {
+        "action": "Double-Check Turning Vehicles",
+        "details": "Make eye contact with turning drivers at intersections before crossing."
+      },
+      "peak_danger_windows": {
+        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
+        "details": "Congestion peaks during evening travel windows."
+      }
+    }
+  },
   "raw_metrics": {
     "zone_id": "Zone_42",
     "week": 35,
@@ -193,18 +233,29 @@
     "vehicle_density_trend_4w": 0.652,
     "speed_trend_4w": -0.489,
     "incident_trend_4w": -0.3,
-    "location_name": "Guindy",
-    "city": "Chennai",
-    "latitude": 13.0067,
-    "longitude": 80.2206,
-    "predicted_risk_probability": 0.8443,
-    "risk_score": 84.4283,
+    "location_name_x": "Guindy",
+    "city_x": "Chennai",
+    "latitude_x": 13.0067,
+    "longitude_x": 80.2206,
+    "car_percentage": 45.5,
+    "motorcycle_percentage": 43.4,
+    "bus_percentage": 7.8,
+    "truck_percentage": 3.4,
+    "moving_vehicle_percentage": 6.5,
+    "slow_vehicle_percentage": 40.9,
+    "stopped_vehicle_percentage": 52.6,
+    "location_name_y": "Guindy",
+    "city_y": "Chennai",
+    "latitude_y": 13.0067,
+    "longitude_y": 80.2206,
+    "predicted_risk_probability": 0.7413,
+    "risk_score": 74.131,
     "population_exposure_score": 43.164,
     "vehicle_exposure_score": 67.3869,
     "temporal_trend_score": 42.0821,
-    "priority_score": 64.352,
-    "priority_rank": 11,
+    "priority_score": 60.2331,
+    "priority_rank": 12,
     "priority_level": "HIGH",
-    "risk_prob": 0.8443
+    "risk_prob": 0.7413
   }
 }

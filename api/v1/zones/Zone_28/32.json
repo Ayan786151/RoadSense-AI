@@ -1,40 +1,40 @@
 {
   "zone_id": "Zone_28",
-  "location_name": "Aliganj",
-  "city": "Lucknow",
+  "location_name": "Zone_28",
+  "city": "",
   "zone_type": "Highway_Junction",
   "week": 32,
-  "latitude": 26.886,
-  "longitude": 80.9462,
+  "latitude": 0.0,
+  "longitude": 0.0,
   "risk_analysis": {
-    "predicted_risk_probability": 0.384,
-    "predicted_risk_percentage": 38.4,
+    "predicted_risk_probability": 0.4646,
+    "predicted_risk_percentage": 46.46,
     "risk_label": "MODERATE RISK",
     "risk_color": "#eab308",
-    "risk_delta_vs_prev_week": 27.7307,
+    "risk_delta_vs_prev_week": 29.2914,
     "actual_incident": 0
   },
   "priority": {
-    "priority_score": 22.92,
-    "priority_rank": 41,
+    "priority_score": 26.1414,
+    "priority_rank": 42,
     "priority_level": "LOW",
     "components": {
-      "risk_score": 38.4037,
+      "risk_score": 46.4574,
       "population_exposure_score": 3.4773,
       "vehicle_exposure_score": 9.3306,
       "temporal_trend_score": 32.1536
     },
     "explanation": {
       "priority_level": "LOW",
-      "priority_score": 22.9,
+      "priority_score": 26.1,
       "top_contributors": [
         {
           "factor": "Risk Score",
-          "icon": "\ud83d\udfe2",
-          "value": "38/100",
-          "impact": "LOW",
-          "detail": "Risk score within acceptable range",
-          "weight": 38.4037
+          "icon": "\ud83d\udfe1",
+          "value": "46/100",
+          "impact": "MEDIUM",
+          "detail": "Moderate model-estimated risk",
+          "weight": 46.4574
         }
       ],
       "total_factors": 1,
@@ -82,15 +82,55 @@
   },
   "interventions": [
     {
-      "id": "BASELINE_MONITORING",
-      "name": "Routine Monitoring",
-      "icon": "\ud83d\udcca",
-      "severity": "LOW",
-      "description": "No specific risk indicators triggered.",
-      "action": "Continue routine monitoring."
+      "id": "ROAD_MAINTENANCE",
+      "name": "Road Maintenance Inspection",
+      "icon": "\ud83d\udee3\ufe0f",
+      "severity": "MEDIUM",
+      "description": "Deteriorated road surface combined with elevated risk indicates infrastructure maintenance need.",
+      "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
     }
   ],
-  "executive_briefing": "Aliganj shows elevated risk at 38%. Continue routine monitoring. Optimizing signals could save 82 kg CO2/week, equivalent to 203 trees/year.",
+  "executive_briefing": "Zone_28 shows elevated risk at 46%. Continue routine monitoring. Optimizing signals could save 82 kg CO2/week, equivalent to 203 trees/year.",
+  "civilian_road_safety_radar": {
+    "current_week": {
+      "week": 32,
+      "risk_score": 46.5,
+      "risk_percentage": "46%",
+      "risk_badge": "MODERATE RISK",
+      "risk_color": "#eab308",
+      "description": "Corridor operating within normal baseline.",
+      "crashes_reported": 0
+    },
+    "why_accidents_might_happen": {
+      "primary_collision_cause": {
+        "title": "Congestion Bottleneck & Merge Conflicts",
+        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+      },
+      "behavior_factor": {
+        "title": "Tailgating & Speed Variance",
+        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+      },
+      "street_environment": {
+        "zone_type": "Highway_Junction",
+        "average_speed_kmh": 43.05,
+        "congestion_level": 11.18
+      }
+    },
+    "civilian_safety_guide": {
+      "for_drivers": {
+        "action": "Increase Following Distance",
+        "details": "Maintain 3 car lengths buffer during peak rush hours."
+      },
+      "for_pedestrians_and_cyclists": {
+        "action": "Double-Check Turning Vehicles",
+        "details": "Make eye contact with turning drivers at intersections before crossing."
+      },
+      "peak_danger_windows": {
+        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
+        "details": "Congestion peaks during evening travel windows."
+      }
+    }
+  },
   "raw_metrics": {
     "zone_id": "Zone_28",
     "week": 32,
@@ -137,18 +177,29 @@
     "vehicle_density_trend_4w": -0.961,
     "speed_trend_4w": -2.396,
     "incident_trend_4w": 0.0,
-    "location_name": "Aliganj",
-    "city": "Lucknow",
-    "latitude": 26.886,
-    "longitude": 80.9462,
-    "predicted_risk_probability": 0.384,
-    "risk_score": 38.4037,
+    "location_name_x": "Aliganj",
+    "city_x": "Lucknow",
+    "latitude_x": 26.886,
+    "longitude_x": 80.9462,
+    "car_percentage": 48.0,
+    "motorcycle_percentage": 39.3,
+    "bus_percentage": 10.5,
+    "truck_percentage": 2.1,
+    "moving_vehicle_percentage": 85.2,
+    "slow_vehicle_percentage": 14.3,
+    "stopped_vehicle_percentage": 0.5,
+    "location_name_y": "Aliganj",
+    "city_y": "Lucknow",
+    "latitude_y": 26.886,
+    "longitude_y": 80.9462,
+    "predicted_risk_probability": 0.4646,
+    "risk_score": 46.4574,
     "population_exposure_score": 3.4773,
     "vehicle_exposure_score": 9.3306,
     "temporal_trend_score": 32.1536,
-    "priority_score": 22.92,
-    "priority_rank": 41,
+    "priority_score": 26.1414,
+    "priority_rank": 42,
     "priority_level": "LOW",
-    "risk_prob": 0.384
+    "risk_prob": 0.4646
   }
 }
