@@ -1,225 +1,155 @@
 {
   "zone_id": "Zone_03",
-  "location_name": "Kurla",
-  "city": "Mumbai",
-  "zone_type": "University_District",
+  "location_name": "Gage Park - S Cicero Ave & W 63Rd St",
+  "city": "Chicago",
+  "zone_type": "Airport Logistics & Dense Commercial",
   "week": 13,
-  "latitude": 19.0726,
-  "longitude": 72.8845,
+  "latitude": 41.7831,
+  "longitude": -87.7368,
   "risk_analysis": {
-    "predicted_risk_probability": 0.3356,
-    "predicted_risk_percentage": 33.56,
-    "risk_label": "LOW RISK",
-    "risk_color": "#22c55e",
-    "risk_delta_vs_prev_week": 1.0123,
+    "predicted_risk_probability": 0.3563,
+    "predicted_risk_percentage": 35.63,
+    "risk_label": "MODERATE RISK",
+    "risk_color": "#eab308",
+    "risk_delta_vs_prev_week": 1.68,
     "actual_incident": 0
   },
   "priority": {
-    "priority_score": 49.86,
-    "priority_rank": 18,
+    "priority_score": 46.3,
+    "priority_rank": 1,
     "priority_level": "MODERATE",
     "components": {
-      "risk_score": 33.5595,
-      "population_exposure_score": 45.4343,
-      "vehicle_exposure_score": 50.3882,
-      "temporal_trend_score": 100.0
+      "risk_score": 35.63,
+      "population_exposure_score": 65.0,
+      "vehicle_exposure_score": 39.6,
+      "temporal_trend_score": 52.5
     },
     "explanation": {
       "priority_level": "MODERATE",
-      "priority_score": 49.9,
-      "top_contributors": [
-        {
-          "factor": "Worsening Trend",
-          "icon": "\ud83d\udcc8",
-          "value": "100/100",
-          "impact": "HIGH",
-          "detail": "4-week congestion trend is actively worsening \u2014 conditions deteriorating",
-          "weight": 100.0
-        },
-        {
-          "factor": "Risk Score",
-          "icon": "\ud83d\udfe2",
-          "value": "34/100",
-          "impact": "LOW",
-          "detail": "Risk score within acceptable range",
-          "weight": 33.5595
-        },
-        {
-          "factor": "Population Exposure",
-          "icon": "\ud83d\udc65",
-          "value": "45/100",
-          "impact": "MEDIUM",
-          "detail": "Moderate population exposure",
-          "weight": 31.804
-        }
-      ],
-      "total_factors": 3,
-      "assessment": "This zone has moderate risk levels with contributing factors: Worsening Trend, Population Exposure. Continue monitoring and schedule review if conditions worsen."
+      "priority_score": 46.3,
+      "assessment": "Chicago corridor in 08th District - Chicago Lawn exhibits moderate traffic hazard priority driven by Chicago crash history."
     }
   },
   "telemetry": {
-    "congestion": 27.03,
-    "congestion_delta": -5.67,
-    "average_speed_kmh": 58.49,
-    "speed_delta": 3.68,
-    "vehicle_density": 32.45,
-    "density_delta": -5.52,
-    "population_density": 7685,
+    "congestion": 38.3,
+    "congestion_delta": 0.0,
+    "average_speed_kmh": 48.3,
+    "speed_delta": 0.0,
+    "vehicle_density": 45.5,
+    "density_delta": 0.0,
+    "population_density": 8500,
     "red_light_violations": 0,
-    "weather": "Normal",
+    "weather": "CLEAR",
     "special_event": 0
   },
   "signal_optimization": {
     "base_green_seconds": 35,
-    "recommended_green_seconds": 37,
-    "change_seconds": 2,
-    "change_percent": 5.7,
-    "urgency": "MODERATE",
-    "reason": "Slight adjustment for current conditions",
+    "recommended_green_seconds": 44,
+    "change_seconds": 9,
+    "change_percent": 25.7,
+    "urgency": "HIGH",
+    "reason": "Elevated traffic density needs extended clearance time",
     "factors": {
-      "congestion_factor": 1.22,
-      "density_factor": 1.13,
-      "speed_factor": 0.78,
+      "congestion_factor": 1.31,
+      "density_factor": 1.18,
+      "speed_factor": 0.82,
       "event_boost": 1.0,
       "weather_boost": 1.0
     }
   },
   "environmental_impact": {
-    "total_co2_kg_per_week": 40740.2,
-    "total_co2_tonnes_per_year": 2118.49,
-    "idle_co2_kg": 4841.7,
-    "moving_co2_kg": 35898.4,
-    "potential_savings_kg_per_week": 1099.2,
-    "potential_savings_tonnes_per_year": 57.16,
-    "trees_equivalent_per_year": 2721,
-    "fuel_saved_liters_per_week": 475.9,
-    "citizens_impacted": 15370,
-    "optimization_factor_pct": 22.7
+    "total_co2_kg_per_week": 48670.8,
+    "total_co2_tonnes_per_year": 2530.88,
+    "idle_co2_kg": 9619.4,
+    "moving_co2_kg": 39051.4,
+    "potential_savings_kg_per_week": 2292.3,
+    "potential_savings_tonnes_per_year": 119.2,
+    "trees_equivalent_per_year": 5676,
+    "fuel_saved_liters_per_week": 992.3,
+    "citizens_impacted": 17000,
+    "optimization_factor_pct": 23.8
   },
   "interventions": [
     {
-      "id": "BASELINE_MONITORING",
-      "name": "Routine Monitoring",
-      "icon": "\ud83d\udcca",
-      "severity": "LOW",
-      "description": "No specific risk indicators triggered.",
-      "action": "Continue routine monitoring."
+      "title": "Deploy Speed Calming & Signal Synchronization on S Cicero Ave & W 63Rd St",
+      "type": "MUNICIPAL_CORRIDOR_CALMING",
+      "priority": "MODERATE",
+      "target_reduction": "18% collision frequency reduction"
+    },
+    {
+      "title": "Pedestrian Crosswalk High-Visibility Illumination & Turn Signal Audit",
+      "type": "INFRASTRUCTURE_SAFETY",
+      "priority": "HIGH",
+      "target_reduction": "Eliminate left-turn crossing conflicts"
     }
   ],
-  "executive_briefing": "Kurla is within safe operating parameters (34% risk). Continue routine monitoring. Optimizing signals could save 1099 kg CO2/week, equivalent to 2721 trees/year.",
+  "executive_briefing": "Chicago Police Beat 813 (Gage Park - S Cicero Ave & W 63Rd St) logged 0 collisions in week 13. Machine learning incident risk is 35.6%, forecasted at 37.3% for next week.",
   "civilian_road_safety_radar": {
     "current_week": {
-      "week": 13,
-      "risk_score": 33.6,
-      "risk_percentage": "34%",
-      "risk_badge": "LOW RISK",
-      "risk_color": "#22c55e",
-      "description": "Corridor operating within normal baseline.",
-      "crashes_reported": 0
+      "period": "2024-W13",
+      "date_range": "Week 13, 2024",
+      "risk_score": 35.6,
+      "risk_percentage": "36%",
+      "risk_badge": "[ELEVATED TRAFFIC]",
+      "risk_color": "#eab308",
+      "description": "Corridor is operating within historical baseline.",
+      "crashes_reported": 0,
+      "crashes_rolling4w_avg": 1.5,
+      "dominant_weather": "CLEAR"
     },
     "upcoming_week": {
-      "predicted_risk_probability": 0.3159,
-      "predicted_risk_percentage": "32%",
-      "predicted_risk_badge": "LOW RISK",
-      "risk_color": "#22c55e",
+      "period": "2024-W14",
+      "predicted_risk_probability": 0.3731,
+      "predicted_risk_percentage": "37%",
+      "predicted_risk_badge": "[ELEVATED TRAFFIC]",
+      "risk_color": "#eab308",
       "description": "Forecast models project normal baseline traffic conditions.",
-      "trend_label": "[TREND: STABLE]"
+      "trend_label": "[TREND: STABLE]",
+      "trend_color": "#eab308",
+      "trend_percentage_change": "0%"
     },
     "why_accidents_might_happen": {
       "primary_collision_cause": {
-        "title": "Congestion Bottleneck & Merge Conflicts",
-        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+        "title": "Failing to Yield Right-of-Way",
+        "explanation": "Drivers turning left across oncoming traffic or turning on yellow without checking cross-traffic and crossing pedestrians.",
+        "historical_frequency_pct": 34.2
       },
       "behavior_factor": {
-        "title": "Tailgating & Speed Variance",
-        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+        "title": "Tailgating & Sudden Braking",
+        "explanation": "High-density commuter queues cause rear-end collisions when drivers follow too closely during rush hours.",
+        "risk_level": "MODERATE"
       },
       "street_environment": {
-        "zone_type": "University_District",
-        "average_speed_kmh": 58.49,
-        "congestion_level": 27.03
+        "posted_speed_limit_mph": 30.0,
+        "intersection_crossroad_density_pct": 15.5,
+        "title": "30 mph Zone | 16% Crossroad Density",
+        "explanation": "Frequent signalized crossroads combined with multi-lane traffic flow increase conflict points at peak times."
       }
     },
     "civilian_safety_guide": {
       "for_drivers": {
         "action": "Increase Following Distance",
-        "details": "Maintain 3 car lengths buffer during peak rush hours."
+        "details": "Maintain at least 3 car lengths of space behind the vehicle ahead. Avoid tailgating near transit stops and expressway exit ramps where sudden stops occur.",
+        "key_tip": "Leave 3-4 car lengths buffer on commercial transit corridors"
       },
       "for_pedestrians_and_cyclists": {
-        "action": "Double-Check Turning Vehicles",
-        "details": "Make eye contact with turning drivers at intersections before crossing."
+        "action": "Double-Check Turning Cars",
+        "details": "Make eye contact with drivers turning right on red before stepping into crosswalks. Use reflective gear or activate bicycle lights after dusk.",
+        "key_tip": "Never assume a turning driver has seen you at green lights"
       },
       "peak_danger_windows": {
-        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
-        "details": "Congestion peaks during evening travel windows."
+        "primary_peak": "4:30 PM - 7:30 PM Weekdays (Evening Commute Congestion)",
+        "secondary_peak": "10:00 PM - 2:00 AM Friday & Saturday (Reduced Lighting & Speed Variance)",
+        "details": "Evening rush hours experience 3x higher collision rates than midday. Exercise maximum patience during heavy congestion."
       }
     }
   },
   "raw_metrics": {
     "zone_id": "Zone_03",
+    "chicago_beat": "813",
     "week": 13,
-    "zone_type": "University_District",
-    "temporal_profile": "EVENT_SENSITIVE",
-    "population_density": 7685,
-    "road_capacity": 63,
-    "effective_road_capacity": 63.0,
-    "vehicle_density": 32.45,
-    "traffic_pressure": 0.515,
-    "congestion": 27.03,
-    "average_speed": 58.49,
-    "red_light_violations": 0,
-    "weather": "Normal",
-    "road_condition": "Good",
-    "special_event": 0,
-    "incident_count": 0,
-    "incident_occurred": 0,
-    "previous_week_vehicle_density": 37.97,
-    "previous_week_congestion": 32.7,
-    "previous_week_average_speed": 54.81,
-    "previous_week_red_light_violations": 1.0,
-    "previous_week_incident_count": 0.0,
-    "previous_week_incident_occurred": 0.0,
-    "previous_week_traffic_pressure": 0.603,
-    "rolling_4_week_avg_vehicle_density": 35.93,
-    "rolling_4_week_avg_congestion": 31.22,
-    "rolling_4_week_avg_speed": 55.84,
-    "rolling_4_week_avg_violations": 4.5,
-    "rolling_4_week_incident_count": 1.0,
-    "rolling_4_week_incident_rate": 0.25,
-    "rolling_4_week_avg_traffic_pressure": 0.605,
-    "vehicle_density_change": -5.52,
-    "congestion_change": -5.67,
-    "speed_change": 3.68,
-    "violations_change": -1.0,
-    "traffic_pressure_change": -0.088,
-    "incident_count_change": 0.0,
-    "vehicle_density_pct_change": -14.54,
-    "congestion_pct_change": -17.34,
-    "speed_pct_change": 6.71,
-    "vehicle_population_ratio": 4.223,
-    "congestion_trend_4w": 7.571,
-    "vehicle_density_trend_4w": 2.846,
-    "speed_trend_4w": -5.078,
-    "incident_trend_4w": -0.1,
-    "car_percentage": 43.6,
-    "motorcycle_percentage": 38.4,
-    "bus_percentage": 11.2,
-    "truck_percentage": 6.7,
-    "moving_vehicle_percentage": 70.7,
-    "slow_vehicle_percentage": 9.7,
-    "stopped_vehicle_percentage": 19.6,
-    "location_name": "Kurla",
-    "city": "Mumbai",
-    "latitude": 19.0726,
-    "longitude": 72.8845,
-    "predicted_risk_probability": 0.3356,
-    "risk_score": 33.5595,
-    "population_exposure_score": 45.4343,
-    "vehicle_exposure_score": 50.3882,
-    "temporal_trend_score": 100.0,
-    "priority_score": 49.86,
-    "priority_rank": 18,
-    "priority_level": "MODERATE",
-    "risk_prob": 0.3356
+    "crashes": 0,
+    "rolling4w_avg": 1.5,
+    "speed_mph": 30.0
   }
 }

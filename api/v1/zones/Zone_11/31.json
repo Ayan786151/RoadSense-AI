@@ -1,257 +1,155 @@
 {
   "zone_id": "Zone_11",
-  "location_name": "Lower Parel",
-  "city": "Mumbai",
-  "zone_type": "Residential",
+  "location_name": "Galewood North - W North Ave & N Cicero Ave",
+  "city": "Chicago",
+  "zone_type": "High-Density Commercial & Freight Rail",
   "week": 31,
-  "latitude": 18.9988,
-  "longitude": 72.8258,
+  "latitude": 41.9097,
+  "longitude": -87.7461,
   "risk_analysis": {
-    "predicted_risk_probability": 0.8044,
-    "predicted_risk_percentage": 80.44,
+    "predicted_risk_probability": 0.803,
+    "predicted_risk_percentage": 80.3,
     "risk_label": "CRITICAL RISK",
     "risk_color": "#ef4444",
-    "risk_delta_vs_prev_week": 24.3997,
-    "actual_incident": 1
+    "risk_delta_vs_prev_week": 5.2,
+    "actual_incident": 0
   },
   "priority": {
-    "priority_score": 64.991,
-    "priority_rank": 12,
+    "priority_score": 64.96,
+    "priority_rank": 1,
     "priority_level": "HIGH",
     "components": {
-      "risk_score": 80.444,
-      "population_exposure_score": 61.7429,
-      "vehicle_exposure_score": 58.2019,
-      "temporal_trend_score": 38.2484
+      "risk_score": 80.3,
+      "population_exposure_score": 65.0,
+      "vehicle_exposure_score": 39.6,
+      "temporal_trend_score": 57.8
     },
     "explanation": {
       "priority_level": "HIGH",
-      "priority_score": 65.0,
-      "top_contributors": [
-        {
-          "factor": "Risk Score",
-          "icon": "\ud83d\udd34",
-          "value": "80/100",
-          "impact": "HIGH",
-          "detail": "Model-estimated risk score is in the critical range",
-          "weight": 80.444
-        },
-        {
-          "factor": "Congestion",
-          "icon": "\ud83d\ude97",
-          "value": "77/100",
-          "impact": "HIGH",
-          "detail": "Congestion index at 77 \u2014 severe traffic flow degradation",
-          "weight": 76.67
-        },
-        {
-          "factor": "Population Exposure",
-          "icon": "\ud83d\udc65",
-          "value": "62/100",
-          "impact": "HIGH",
-          "detail": "High population density zone \u2014 9955 residents/km\u00b2",
-          "weight": 61.7429
-        },
-        {
-          "factor": "Violation Count",
-          "icon": "\ud83d\udea8",
-          "value": "11",
-          "impact": "HIGH",
-          "detail": "11 red-light violations recorded \u2014 intersection safety concern",
-          "weight": 55
-        }
-      ],
-      "total_factors": 4,
-      "assessment": "This zone shows significant risk elevation driven by Risk Score, Congestion. Proactive intervention should be scheduled within the current planning cycle."
+      "priority_score": 64.96,
+      "assessment": "Chicago corridor in 25th District - Grand Central exhibits high traffic hazard priority driven by Chicago crash history."
     }
   },
   "telemetry": {
-    "congestion": 76.67,
-    "congestion_delta": 12.48,
-    "average_speed_kmh": 29.78,
-    "speed_delta": -14.56,
-    "vehicle_density": 39.49,
-    "density_delta": -3.29,
-    "population_density": 9955,
-    "red_light_violations": 11,
-    "weather": "Light Rain",
+    "congestion": 38.3,
+    "congestion_delta": 0.0,
+    "average_speed_kmh": 48.3,
+    "speed_delta": 0.0,
+    "vehicle_density": 45.5,
+    "density_delta": 0.0,
+    "population_density": 8500,
+    "red_light_violations": 0,
+    "weather": "CLEAR",
     "special_event": 0
   },
   "signal_optimization": {
-    "base_green_seconds": 30,
-    "recommended_green_seconds": 53,
-    "change_seconds": 23,
-    "change_percent": 76.7,
-    "urgency": "CRITICAL",
-    "reason": "Severe congestion requires significantly extended green phase",
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 44,
+    "change_seconds": 9,
+    "change_percent": 25.7,
+    "urgency": "HIGH",
+    "reason": "Elevated traffic density needs extended clearance time",
     "factors": {
-      "congestion_factor": 1.61,
-      "density_factor": 1.16,
-      "speed_factor": 0.89,
+      "congestion_factor": 1.31,
+      "density_factor": 1.18,
+      "speed_factor": 0.82,
       "event_boost": 1.0,
-      "weather_boost": 1.08
+      "weather_boost": 1.0
     }
   },
   "environmental_impact": {
-    "total_co2_kg_per_week": 30935.9,
-    "total_co2_tonnes_per_year": 1608.67,
-    "idle_co2_kg": 16712.9,
-    "moving_co2_kg": 14223.0,
-    "potential_savings_kg_per_week": 4624.0,
-    "potential_savings_tonnes_per_year": 240.45,
-    "trees_equivalent_per_year": 11449,
-    "fuel_saved_liters_per_week": 2001.7,
-    "citizens_impacted": 19910,
-    "optimization_factor_pct": 27.7
+    "total_co2_kg_per_week": 48670.8,
+    "total_co2_tonnes_per_year": 2530.88,
+    "idle_co2_kg": 9619.4,
+    "moving_co2_kg": 39051.4,
+    "potential_savings_kg_per_week": 2292.3,
+    "potential_savings_tonnes_per_year": 119.2,
+    "trees_equivalent_per_year": 5676,
+    "fuel_saved_liters_per_week": 992.3,
+    "citizens_impacted": 17000,
+    "optimization_factor_pct": 23.8
   },
   "interventions": [
     {
-      "id": "SIGNAL_OPTIMIZATION",
-      "name": "Traffic Signal Optimization",
-      "icon": "\ud83d\udea6",
-      "severity": "HIGH",
-      "description": "High congestion with low throughput speed indicates signal timing inefficiency.",
-      "action": "Review and optimize signal timing at major intersections in this zone."
+      "title": "Deploy Speed Calming & Signal Synchronization on W North Ave & N Cicero Ave",
+      "type": "MUNICIPAL_CORRIDOR_CALMING",
+      "priority": "HIGH",
+      "target_reduction": "18% collision frequency reduction"
     },
     {
-      "id": "VIOLATION_ENFORCEMENT",
-      "name": "Red-Light Violation Enforcement",
-      "icon": "\ud83d\udea8",
-      "severity": "HIGH",
-      "description": "Elevated red-light violation count indicates intersection compliance failure.",
-      "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
-    },
-    {
-      "id": "ROAD_MAINTENANCE",
-      "name": "Road Maintenance Inspection",
-      "icon": "\ud83d\udee3\ufe0f",
-      "severity": "MEDIUM",
-      "description": "Deteriorated road surface combined with elevated risk indicates infrastructure maintenance need.",
-      "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
-    },
-    {
-      "id": "MONITORING_UPGRADE",
-      "name": "Enhanced Monitoring & CCTV Coverage",
-      "icon": "\ud83d\udcf9",
-      "severity": "MEDIUM",
-      "description": "High-risk zone with significant population exposure warrants improved surveillance.",
-      "action": "Install additional CCTV cameras and integrate with traffic management center for real-time monitoring."
+      "title": "Pedestrian Crosswalk High-Visibility Illumination & Turn Signal Audit",
+      "type": "INFRASTRUCTURE_SAFETY",
+      "priority": "HIGH",
+      "target_reduction": "Eliminate left-turn crossing conflicts"
     }
   ],
-  "executive_briefing": "Lower Parel is in a critical safety state with 80% incident risk. Signal optimization recommended \u2014 congestion at 77/100 with speeds averaging 30 km/h. Optimizing signals could save 4624 kg CO2/week, equivalent to 11449 trees/year.",
+  "executive_briefing": "Chicago Police Beat 2533 (Galewood North - W North Ave & N Cicero Ave) logged 0 collisions in week 31. Machine learning incident risk is 80.3%, forecasted at 85.5% for next week.",
   "civilian_road_safety_radar": {
     "current_week": {
-      "week": 31,
-      "risk_score": 80.4,
+      "period": "2024-W31",
+      "date_range": "Week 31, 2024",
+      "risk_score": 80.3,
       "risk_percentage": "80%",
-      "risk_badge": "CRITICAL RISK",
+      "risk_badge": "[HIGH RISK ALERT]",
       "risk_color": "#ef4444",
-      "description": "Elevated collision activity observed.",
-      "crashes_reported": 0
+      "description": "Elevated collision hazard recorded. Extra vigilance recommended.",
+      "crashes_reported": 0,
+      "crashes_rolling4w_avg": 1.5,
+      "dominant_weather": "CLEAR"
     },
     "upcoming_week": {
-      "predicted_risk_probability": 0.9617,
-      "predicted_risk_percentage": "96%",
-      "predicted_risk_badge": "CRITICAL RISK",
+      "period": "2024-W32",
+      "predicted_risk_probability": 0.855,
+      "predicted_risk_percentage": "86%",
+      "predicted_risk_badge": "[HIGH RISK ALERT]",
       "risk_color": "#ef4444",
       "description": "Forecast models project elevated collision probability.",
-      "trend_label": "[TREND: INCREASING HAZARD]"
+      "trend_label": "[TREND: INCREASING HAZARD]",
+      "trend_color": "#ef4444",
+      "trend_percentage_change": "+5%"
     },
     "why_accidents_might_happen": {
       "primary_collision_cause": {
-        "title": "Congestion Bottleneck & Merge Conflicts",
-        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+        "title": "Failing to Yield Right-of-Way",
+        "explanation": "Drivers turning left across oncoming traffic or turning on yellow without checking cross-traffic and crossing pedestrians.",
+        "historical_frequency_pct": 34.2
       },
       "behavior_factor": {
-        "title": "Tailgating & Speed Variance",
-        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+        "title": "Tailgating & Sudden Braking",
+        "explanation": "High-density commuter queues cause rear-end collisions when drivers follow too closely during rush hours.",
+        "risk_level": "ELEVATED"
       },
       "street_environment": {
-        "zone_type": "Residential",
-        "average_speed_kmh": 29.78,
-        "congestion_level": 76.67
+        "posted_speed_limit_mph": 30.0,
+        "intersection_crossroad_density_pct": 18.1,
+        "title": "30 mph Zone | 18% Crossroad Density",
+        "explanation": "Frequent signalized crossroads combined with multi-lane traffic flow increase conflict points at peak times."
       }
     },
     "civilian_safety_guide": {
       "for_drivers": {
         "action": "Increase Following Distance",
-        "details": "Maintain 3 car lengths buffer during peak rush hours."
+        "details": "Maintain at least 3 car lengths of space behind the vehicle ahead. Avoid tailgating near transit stops and expressway exit ramps where sudden stops occur.",
+        "key_tip": "Leave 3-4 car lengths buffer on commercial transit corridors"
       },
       "for_pedestrians_and_cyclists": {
-        "action": "Double-Check Turning Vehicles",
-        "details": "Make eye contact with turning drivers at intersections before crossing."
+        "action": "Double-Check Turning Cars",
+        "details": "Make eye contact with drivers turning right on red before stepping into crosswalks. Use reflective gear or activate bicycle lights after dusk.",
+        "key_tip": "Never assume a turning driver has seen you at green lights"
       },
       "peak_danger_windows": {
-        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
-        "details": "Congestion peaks during evening travel windows."
+        "primary_peak": "4:30 PM - 7:30 PM Weekdays (Evening Commute Congestion)",
+        "secondary_peak": "10:00 PM - 2:00 AM Friday & Saturday (Reduced Lighting & Speed Variance)",
+        "details": "Evening rush hours experience 3x higher collision rates than midday. Exercise maximum patience during heavy congestion."
       }
     }
   },
   "raw_metrics": {
     "zone_id": "Zone_11",
+    "chicago_beat": "2533",
     "week": 31,
-    "zone_type": "Residential",
-    "temporal_profile": "RECOVERY_AFTER_DISRUPTION",
-    "population_density": 9955,
-    "road_capacity": 43,
-    "effective_road_capacity": 35.6,
-    "vehicle_density": 39.49,
-    "traffic_pressure": 1.109,
-    "congestion": 76.67,
-    "average_speed": 29.78,
-    "red_light_violations": 11,
-    "weather": "Light Rain",
-    "road_condition": "Moderate",
-    "special_event": 0,
-    "incident_count": 3,
-    "incident_occurred": 1,
-    "previous_week_vehicle_density": 42.78,
-    "previous_week_congestion": 64.19,
-    "previous_week_average_speed": 44.34,
-    "previous_week_red_light_violations": 7.0,
-    "previous_week_incident_count": 0.0,
-    "previous_week_incident_occurred": 0.0,
-    "previous_week_traffic_pressure": 0.995,
-    "rolling_4_week_avg_vehicle_density": 49.52,
-    "rolling_4_week_avg_congestion": 84.97,
-    "rolling_4_week_avg_speed": 32.6,
-    "rolling_4_week_avg_violations": 8.75,
-    "rolling_4_week_incident_count": 3.0,
-    "rolling_4_week_incident_rate": 0.25,
-    "rolling_4_week_avg_traffic_pressure": 1.346,
-    "vehicle_density_change": -3.29,
-    "congestion_change": 12.48,
-    "speed_change": -14.56,
-    "violations_change": 4.0,
-    "traffic_pressure_change": 0.114,
-    "incident_count_change": -3.0,
-    "vehicle_density_pct_change": -7.69,
-    "congestion_pct_change": 19.44,
-    "speed_pct_change": -32.84,
-    "vehicle_population_ratio": 3.967,
-    "congestion_trend_4w": -6.477,
-    "vehicle_density_trend_4w": -3.006,
-    "speed_trend_4w": 2.227,
-    "incident_trend_4w": 0.1,
-    "car_percentage": 37.1,
-    "motorcycle_percentage": 53.5,
-    "bus_percentage": 7.5,
-    "truck_percentage": 1.9,
-    "moving_vehicle_percentage": 22.9,
-    "slow_vehicle_percentage": 42.7,
-    "stopped_vehicle_percentage": 34.4,
-    "location_name": "Lower Parel",
-    "city": "Mumbai",
-    "latitude": 18.9988,
-    "longitude": 72.8258,
-    "predicted_risk_probability": 0.8044,
-    "risk_score": 80.444,
-    "population_exposure_score": 61.7429,
-    "vehicle_exposure_score": 58.2019,
-    "temporal_trend_score": 38.2484,
-    "priority_score": 64.991,
-    "priority_rank": 12,
-    "priority_level": "HIGH",
-    "risk_prob": 0.8044
+    "crashes": 0,
+    "rolling4w_avg": 1.5,
+    "speed_mph": 30.0
   }
 }

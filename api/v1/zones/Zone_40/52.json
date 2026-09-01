@@ -1,233 +1,155 @@
 {
   "zone_id": "Zone_40",
-  "location_name": "Velachery",
-  "city": "Chennai",
-  "zone_type": "University_District",
+  "location_name": "University Village - W Madison St & W Randolph St",
+  "city": "Chicago",
+  "zone_type": "Dining, Medical District & Arts Hub",
   "week": 52,
-  "latitude": 12.9815,
-  "longitude": 80.218,
+  "latitude": 41.8832,
+  "longitude": -87.6554,
   "risk_analysis": {
-    "predicted_risk_probability": 0.7768,
-    "predicted_risk_percentage": 77.68,
+    "predicted_risk_probability": 0.835,
+    "predicted_risk_percentage": 83.5,
     "risk_label": "CRITICAL RISK",
     "risk_color": "#ef4444",
-    "risk_delta_vs_prev_week": 16.2912,
-    "actual_incident": 1
+    "risk_delta_vs_prev_week": 0.0,
+    "actual_incident": 0
   },
   "priority": {
-    "priority_score": 54.0282,
-    "priority_rank": 13,
-    "priority_level": "MODERATE",
+    "priority_score": 65.07,
+    "priority_rank": 1,
+    "priority_level": "HIGH",
     "components": {
-      "risk_score": 77.6811,
-      "population_exposure_score": 47.1945,
-      "vehicle_exposure_score": 55.7856,
-      "temporal_trend_score": 0.0
+      "risk_score": 83.5,
+      "population_exposure_score": 65.0,
+      "vehicle_exposure_score": 39.6,
+      "temporal_trend_score": 50.0
     },
     "explanation": {
-      "priority_level": "MODERATE",
-      "priority_score": 54.0,
-      "top_contributors": [
-        {
-          "factor": "Risk Score",
-          "icon": "\ud83d\udd34",
-          "value": "78/100",
-          "impact": "HIGH",
-          "detail": "Model-estimated risk score is in the critical range",
-          "weight": 77.6811
-        },
-        {
-          "factor": "Congestion",
-          "icon": "\ud83d\ude97",
-          "value": "67/100",
-          "impact": "HIGH",
-          "detail": "Congestion index at 67 \u2014 severe traffic flow degradation",
-          "weight": 67.03
-        },
-        {
-          "factor": "Population Exposure",
-          "icon": "\ud83d\udc65",
-          "value": "47/100",
-          "impact": "MEDIUM",
-          "detail": "Moderate population exposure",
-          "weight": 33.0361
-        },
-        {
-          "factor": "Improving Trend",
-          "icon": "\ud83d\udcc9",
-          "value": "0/100",
-          "impact": "POSITIVE",
-          "detail": "Conditions are improving over past 4 weeks",
-          "weight": -0.0
-        }
-      ],
-      "total_factors": 4,
-      "assessment": "This zone has moderate risk levels with contributing factors: Risk Score, Congestion. Continue monitoring and schedule review if conditions worsen."
+      "priority_level": "HIGH",
+      "priority_score": 65.07,
+      "assessment": "Chicago corridor in 12th District - Near West exhibits high traffic hazard priority driven by Chicago crash history."
     }
   },
   "telemetry": {
-    "congestion": 67.03,
-    "congestion_delta": 25.31,
-    "average_speed_kmh": 35.51,
-    "speed_delta": -20.52,
-    "vehicle_density": 42.57,
-    "density_delta": 2.51,
-    "population_density": 7930,
-    "red_light_violations": 7,
-    "weather": "Light Rain",
+    "congestion": 38.3,
+    "congestion_delta": 0.0,
+    "average_speed_kmh": 48.3,
+    "speed_delta": 0.0,
+    "vehicle_density": 45.5,
+    "density_delta": 0.0,
+    "population_density": 8500,
+    "red_light_violations": 0,
+    "weather": "CLEAR",
     "special_event": 0
   },
   "signal_optimization": {
     "base_green_seconds": 35,
-    "recommended_green_seconds": 58,
-    "change_seconds": 23,
-    "change_percent": 65.7,
-    "urgency": "CRITICAL",
-    "reason": "Severe congestion requires significantly extended green phase",
+    "recommended_green_seconds": 44,
+    "change_seconds": 9,
+    "change_percent": 25.7,
+    "urgency": "HIGH",
+    "reason": "Elevated traffic density needs extended clearance time",
     "factors": {
-      "congestion_factor": 1.54,
-      "density_factor": 1.17,
-      "speed_factor": 0.87,
+      "congestion_factor": 1.31,
+      "density_factor": 1.18,
+      "speed_factor": 0.82,
       "event_boost": 1.0,
-      "weather_boost": 1.08
+      "weather_boost": 1.0
     }
   },
   "environmental_impact": {
-    "total_co2_kg_per_week": 30104.9,
-    "total_co2_tonnes_per_year": 1565.45,
-    "idle_co2_kg": 15751.1,
-    "moving_co2_kg": 14353.8,
-    "potential_savings_kg_per_week": 4206.0,
-    "potential_savings_tonnes_per_year": 218.71,
-    "trees_equivalent_per_year": 10414,
-    "fuel_saved_liters_per_week": 1820.8,
-    "citizens_impacted": 15860,
-    "optimization_factor_pct": 26.7
+    "total_co2_kg_per_week": 48670.8,
+    "total_co2_tonnes_per_year": 2530.88,
+    "idle_co2_kg": 9619.4,
+    "moving_co2_kg": 39051.4,
+    "potential_savings_kg_per_week": 2292.3,
+    "potential_savings_tonnes_per_year": 119.2,
+    "trees_equivalent_per_year": 5676,
+    "fuel_saved_liters_per_week": 992.3,
+    "citizens_impacted": 17000,
+    "optimization_factor_pct": 23.8
   },
   "interventions": [
     {
-      "id": "ROAD_MAINTENANCE",
-      "name": "Road Maintenance Inspection",
-      "icon": "\ud83d\udee3\ufe0f",
-      "severity": "MEDIUM",
-      "description": "Deteriorated road surface combined with elevated risk indicates infrastructure maintenance need.",
-      "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
+      "title": "Deploy Speed Calming & Signal Synchronization on W Madison St & W Randolph St",
+      "type": "MUNICIPAL_CORRIDOR_CALMING",
+      "priority": "HIGH",
+      "target_reduction": "18% collision frequency reduction"
+    },
+    {
+      "title": "Pedestrian Crosswalk High-Visibility Illumination & Turn Signal Audit",
+      "type": "INFRASTRUCTURE_SAFETY",
+      "priority": "MODERATE",
+      "target_reduction": "Eliminate left-turn crossing conflicts"
     }
   ],
-  "executive_briefing": "Velachery is in a critical safety state with 78% incident risk. Signal optimization recommended \u2014 congestion at 67/100 with speeds averaging 36 km/h. Optimizing signals could save 4206 kg CO2/week, equivalent to 10414 trees/year.",
+  "executive_briefing": "Chicago Police Beat 1224 (University Village - W Madison St & W Randolph St) logged 0 collisions in week 52. Machine learning incident risk is 83.5%, forecasted at 83.5% for next week.",
   "civilian_road_safety_radar": {
     "current_week": {
-      "week": 52,
-      "risk_score": 77.7,
-      "risk_percentage": "78%",
-      "risk_badge": "CRITICAL RISK",
+      "period": "2024-W52",
+      "date_range": "Week 52, 2024",
+      "risk_score": 83.5,
+      "risk_percentage": "84%",
+      "risk_badge": "[HIGH RISK ALERT]",
       "risk_color": "#ef4444",
-      "description": "Elevated collision activity observed.",
-      "crashes_reported": 0
+      "description": "Elevated collision hazard recorded. Extra vigilance recommended.",
+      "crashes_reported": 0,
+      "crashes_rolling4w_avg": 1.5,
+      "dominant_weather": "CLEAR"
     },
     "upcoming_week": {
-      "predicted_risk_probability": 0.7768,
-      "predicted_risk_percentage": "78%",
-      "predicted_risk_badge": "CRITICAL RISK",
+      "period": "2024-W52",
+      "predicted_risk_probability": 0.835,
+      "predicted_risk_percentage": "84%",
+      "predicted_risk_badge": "[HIGH RISK ALERT]",
       "risk_color": "#ef4444",
       "description": "Forecast models project elevated collision probability.",
-      "trend_label": "[TREND: STABLE]"
+      "trend_label": "[TREND: STABLE]",
+      "trend_color": "#ef4444",
+      "trend_percentage_change": "0%"
     },
     "why_accidents_might_happen": {
       "primary_collision_cause": {
-        "title": "Congestion Bottleneck & Merge Conflicts",
-        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+        "title": "Failing to Yield Right-of-Way",
+        "explanation": "Drivers turning left across oncoming traffic or turning on yellow without checking cross-traffic and crossing pedestrians.",
+        "historical_frequency_pct": 34.2
       },
       "behavior_factor": {
-        "title": "Tailgating & Speed Variance",
-        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+        "title": "Tailgating & Sudden Braking",
+        "explanation": "High-density commuter queues cause rear-end collisions when drivers follow too closely during rush hours.",
+        "risk_level": "ELEVATED"
       },
       "street_environment": {
-        "zone_type": "University_District",
-        "average_speed_kmh": 35.51,
-        "congestion_level": 67.03
+        "posted_speed_limit_mph": 30.0,
+        "intersection_crossroad_density_pct": 28.0,
+        "title": "30 mph Zone | 28% Crossroad Density",
+        "explanation": "Frequent signalized crossroads combined with multi-lane traffic flow increase conflict points at peak times."
       }
     },
     "civilian_safety_guide": {
       "for_drivers": {
         "action": "Increase Following Distance",
-        "details": "Maintain 3 car lengths buffer during peak rush hours."
+        "details": "Maintain at least 3 car lengths of space behind the vehicle ahead. Avoid tailgating near transit stops and expressway exit ramps where sudden stops occur.",
+        "key_tip": "Leave 3-4 car lengths buffer on commercial transit corridors"
       },
       "for_pedestrians_and_cyclists": {
-        "action": "Double-Check Turning Vehicles",
-        "details": "Make eye contact with turning drivers at intersections before crossing."
+        "action": "Double-Check Turning Cars",
+        "details": "Make eye contact with drivers turning right on red before stepping into crosswalks. Use reflective gear or activate bicycle lights after dusk.",
+        "key_tip": "Never assume a turning driver has seen you at green lights"
       },
       "peak_danger_windows": {
-        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
-        "details": "Congestion peaks during evening travel windows."
+        "primary_peak": "4:30 PM - 7:30 PM Weekdays (Evening Commute Congestion)",
+        "secondary_peak": "10:00 PM - 2:00 AM Friday & Saturday (Reduced Lighting & Speed Variance)",
+        "details": "Evening rush hours experience 3x higher collision rates than midday. Exercise maximum patience during heavy congestion."
       }
     }
   },
   "raw_metrics": {
     "zone_id": "Zone_40",
+    "chicago_beat": "1224",
     "week": 52,
-    "zone_type": "University_District",
-    "temporal_profile": "PERIODIC_SPIKE",
-    "population_density": 7930,
-    "road_capacity": 55,
-    "effective_road_capacity": 45.54,
-    "vehicle_density": 42.57,
-    "traffic_pressure": 0.935,
-    "congestion": 67.03,
-    "average_speed": 35.51,
-    "red_light_violations": 7,
-    "weather": "Light Rain",
-    "road_condition": "Moderate",
-    "special_event": 0,
-    "incident_count": 2,
-    "incident_occurred": 1,
-    "previous_week_vehicle_density": 40.06,
-    "previous_week_congestion": 41.72,
-    "previous_week_average_speed": 56.03,
-    "previous_week_red_light_violations": 4.0,
-    "previous_week_incident_count": 1.0,
-    "previous_week_incident_occurred": 1.0,
-    "previous_week_traffic_pressure": 0.728,
-    "rolling_4_week_avg_vehicle_density": 44.82,
-    "rolling_4_week_avg_congestion": 65.35,
-    "rolling_4_week_avg_speed": 38.93,
-    "rolling_4_week_avg_violations": 8.0,
-    "rolling_4_week_incident_count": 5.0,
-    "rolling_4_week_incident_rate": 1.0,
-    "rolling_4_week_avg_traffic_pressure": 0.972,
-    "vehicle_density_change": 2.51,
-    "congestion_change": 25.31,
-    "speed_change": -20.52,
-    "violations_change": 3.0,
-    "traffic_pressure_change": 0.207,
-    "incident_count_change": 0.0,
-    "vehicle_density_pct_change": 6.27,
-    "congestion_pct_change": 60.67,
-    "speed_pct_change": -36.62,
-    "vehicle_population_ratio": 5.368,
-    "congestion_trend_4w": -10.75,
-    "vehicle_density_trend_4w": -2.94,
-    "speed_trend_4w": 6.773,
-    "incident_trend_4w": 0.0,
-    "car_percentage": 45.3,
-    "motorcycle_percentage": 42.8,
-    "bus_percentage": 8.1,
-    "truck_percentage": 3.8,
-    "moving_vehicle_percentage": 9.0,
-    "slow_vehicle_percentage": 30.3,
-    "stopped_vehicle_percentage": 60.7,
-    "location_name": "Velachery",
-    "city": "Chennai",
-    "latitude": 12.9815,
-    "longitude": 80.218,
-    "predicted_risk_probability": 0.7768,
-    "risk_score": 77.6811,
-    "population_exposure_score": 47.1945,
-    "vehicle_exposure_score": 55.7856,
-    "temporal_trend_score": 0.0,
-    "priority_score": 54.0282,
-    "priority_rank": 13,
-    "priority_level": "MODERATE",
-    "risk_prob": 0.7768
+    "crashes": 0,
+    "rolling4w_avg": 1.5,
+    "speed_mph": 30.0
   }
 }

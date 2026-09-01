@@ -1,249 +1,155 @@
 {
   "zone_id": "Zone_07",
-  "location_name": "Goregaon",
-  "city": "Mumbai",
-  "zone_type": "University_District",
+  "location_name": "Ashburn - S Pulaski Rd & S Cicero Ave",
+  "city": "Chicago",
+  "zone_type": "Airport Logistics & Dense Commercial",
   "week": 10,
-  "latitude": 19.1663,
-  "longitude": 72.8526,
+  "latitude": 41.7669,
+  "longitude": -87.7227,
   "risk_analysis": {
-    "predicted_risk_probability": 0.7812,
-    "predicted_risk_percentage": 78.12,
-    "risk_label": "CRITICAL RISK",
-    "risk_color": "#ef4444",
-    "risk_delta_vs_prev_week": 29.7776,
-    "actual_incident": 1
+    "predicted_risk_probability": 0.3563,
+    "predicted_risk_percentage": 35.63,
+    "risk_label": "MODERATE RISK",
+    "risk_color": "#eab308",
+    "risk_delta_vs_prev_week": -2.18,
+    "actual_incident": 0
   },
   "priority": {
-    "priority_score": 63.0588,
-    "priority_rank": 7,
-    "priority_level": "HIGH",
+    "priority_score": 45.43,
+    "priority_rank": 1,
+    "priority_level": "MODERATE",
     "components": {
-      "risk_score": 78.1219,
-      "population_exposure_score": 42.4312,
-      "vehicle_exposure_score": 55.2348,
-      "temporal_trend_score": 67.702
+      "risk_score": 35.63,
+      "population_exposure_score": 65.0,
+      "vehicle_exposure_score": 39.6,
+      "temporal_trend_score": 46.7
     },
     "explanation": {
-      "priority_level": "HIGH",
-      "priority_score": 63.1,
-      "top_contributors": [
-        {
-          "factor": "Risk Score",
-          "icon": "\ud83d\udd34",
-          "value": "78/100",
-          "impact": "HIGH",
-          "detail": "Model-estimated risk score is in the critical range",
-          "weight": 78.1219
-        },
-        {
-          "factor": "Congestion",
-          "icon": "\ud83d\ude97",
-          "value": "68/100",
-          "impact": "HIGH",
-          "detail": "Congestion index at 68 \u2014 severe traffic flow degradation",
-          "weight": 67.97
-        },
-        {
-          "factor": "Rising Trend",
-          "icon": "\ud83d\udcc8",
-          "value": "68/100",
-          "impact": "MEDIUM",
-          "detail": "Slight upward trend in congestion over past 4 weeks",
-          "weight": 40.6212
-        },
-        {
-          "factor": "Population Exposure",
-          "icon": "\ud83d\udc65",
-          "value": "42/100",
-          "impact": "MEDIUM",
-          "detail": "Moderate population exposure",
-          "weight": 29.7018
-        }
-      ],
-      "total_factors": 4,
-      "assessment": "This zone shows significant risk elevation driven by Risk Score, Congestion. Proactive intervention should be scheduled within the current planning cycle."
+      "priority_level": "MODERATE",
+      "priority_score": 45.43,
+      "assessment": "Chicago corridor in 08th District - Chicago Lawn exhibits moderate traffic hazard priority driven by Chicago crash history."
     }
   },
   "telemetry": {
-    "congestion": 67.97,
-    "congestion_delta": 24.9,
-    "average_speed_kmh": 32.68,
-    "speed_delta": -22.22,
-    "vehicle_density": 33.87,
-    "density_delta": 3.0,
-    "population_density": 7267,
-    "red_light_violations": 8,
-    "weather": "Light Rain",
+    "congestion": 38.3,
+    "congestion_delta": 0.0,
+    "average_speed_kmh": 48.3,
+    "speed_delta": 0.0,
+    "vehicle_density": 45.5,
+    "density_delta": 0.0,
+    "population_density": 8500,
+    "red_light_violations": 0,
+    "weather": "CLEAR",
     "special_event": 0
   },
   "signal_optimization": {
     "base_green_seconds": 35,
-    "recommended_green_seconds": 58,
-    "change_seconds": 23,
-    "change_percent": 65.7,
-    "urgency": "CRITICAL",
-    "reason": "Severe congestion requires significantly extended green phase",
+    "recommended_green_seconds": 44,
+    "change_seconds": 9,
+    "change_percent": 25.7,
+    "urgency": "HIGH",
+    "reason": "Elevated traffic density needs extended clearance time",
     "factors": {
-      "congestion_factor": 1.54,
-      "density_factor": 1.14,
-      "speed_factor": 0.88,
+      "congestion_factor": 1.31,
+      "density_factor": 1.18,
+      "speed_factor": 0.82,
       "event_boost": 1.0,
-      "weather_boost": 1.08
+      "weather_boost": 1.0
     }
   },
   "environmental_impact": {
-    "total_co2_kg_per_week": 22918.3,
-    "total_co2_tonnes_per_year": 1191.75,
-    "idle_co2_kg": 12707.8,
-    "moving_co2_kg": 10210.5,
-    "potential_savings_kg_per_week": 3405.3,
-    "potential_savings_tonnes_per_year": 177.08,
-    "trees_equivalent_per_year": 8432,
-    "fuel_saved_liters_per_week": 1474.2,
-    "citizens_impacted": 14534,
-    "optimization_factor_pct": 26.8
+    "total_co2_kg_per_week": 48670.8,
+    "total_co2_tonnes_per_year": 2530.88,
+    "idle_co2_kg": 9619.4,
+    "moving_co2_kg": 39051.4,
+    "potential_savings_kg_per_week": 2292.3,
+    "potential_savings_tonnes_per_year": 119.2,
+    "trees_equivalent_per_year": 5676,
+    "fuel_saved_liters_per_week": 992.3,
+    "citizens_impacted": 17000,
+    "optimization_factor_pct": 23.8
   },
   "interventions": [
     {
-      "id": "SIGNAL_OPTIMIZATION",
-      "name": "Traffic Signal Optimization",
-      "icon": "\ud83d\udea6",
-      "severity": "HIGH",
-      "description": "High congestion with low throughput speed indicates signal timing inefficiency.",
-      "action": "Review and optimize signal timing at major intersections in this zone."
+      "title": "Deploy Speed Calming & Signal Synchronization on S Pulaski Rd & S Cicero Ave",
+      "type": "MUNICIPAL_CORRIDOR_CALMING",
+      "priority": "MODERATE",
+      "target_reduction": "18% collision frequency reduction"
     },
     {
-      "id": "VIOLATION_ENFORCEMENT",
-      "name": "Red-Light Violation Enforcement",
-      "icon": "\ud83d\udea8",
-      "severity": "HIGH",
-      "description": "Elevated red-light violation count indicates intersection compliance failure.",
-      "action": "Install or activate red-light enforcement cameras. Review signal visibility and timing."
-    },
-    {
-      "id": "ROAD_MAINTENANCE",
-      "name": "Road Maintenance Inspection",
-      "icon": "\ud83d\udee3\ufe0f",
-      "severity": "MEDIUM",
-      "description": "Deteriorated road surface combined with elevated risk indicates infrastructure maintenance need.",
-      "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
+      "title": "Pedestrian Crosswalk High-Visibility Illumination & Turn Signal Audit",
+      "type": "INFRASTRUCTURE_SAFETY",
+      "priority": "HIGH",
+      "target_reduction": "Eliminate left-turn crossing conflicts"
     }
   ],
-  "executive_briefing": "Goregaon is in a critical safety state with 78% incident risk. Signal optimization recommended \u2014 congestion at 68/100 with speeds averaging 33 km/h. Optimizing signals could save 3405 kg CO2/week, equivalent to 8432 trees/year.",
+  "executive_briefing": "Chicago Police Beat 833 (Ashburn - S Pulaski Rd & S Cicero Ave) logged 0 collisions in week 10. Machine learning incident risk is 35.6%, forecasted at 33.5% for next week.",
   "civilian_road_safety_radar": {
     "current_week": {
-      "week": 10,
-      "risk_score": 78.1,
-      "risk_percentage": "78%",
-      "risk_badge": "CRITICAL RISK",
-      "risk_color": "#ef4444",
-      "description": "Elevated collision activity observed.",
-      "crashes_reported": 0
+      "period": "2024-W10",
+      "date_range": "Week 10, 2024",
+      "risk_score": 35.6,
+      "risk_percentage": "36%",
+      "risk_badge": "[ELEVATED TRAFFIC]",
+      "risk_color": "#eab308",
+      "description": "Corridor is operating within historical baseline.",
+      "crashes_reported": 0,
+      "crashes_rolling4w_avg": 1.5,
+      "dominant_weather": "CLEAR"
     },
     "upcoming_week": {
-      "predicted_risk_probability": 0.5495,
-      "predicted_risk_percentage": "55%",
-      "predicted_risk_badge": "MODERATE RISK",
+      "period": "2024-W11",
+      "predicted_risk_probability": 0.3345,
+      "predicted_risk_percentage": "33%",
+      "predicted_risk_badge": "[ELEVATED TRAFFIC]",
       "risk_color": "#eab308",
       "description": "Forecast models project normal baseline traffic conditions.",
-      "trend_label": "[TREND: COOLING DOWN]"
+      "trend_label": "[TREND: STABLE]",
+      "trend_color": "#eab308",
+      "trend_percentage_change": "0%"
     },
     "why_accidents_might_happen": {
       "primary_collision_cause": {
-        "title": "Congestion Bottleneck & Merge Conflicts",
-        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+        "title": "Failing to Yield Right-of-Way",
+        "explanation": "Drivers turning left across oncoming traffic or turning on yellow without checking cross-traffic and crossing pedestrians.",
+        "historical_frequency_pct": 34.2
       },
       "behavior_factor": {
-        "title": "Tailgating & Speed Variance",
-        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+        "title": "Tailgating & Sudden Braking",
+        "explanation": "High-density commuter queues cause rear-end collisions when drivers follow too closely during rush hours.",
+        "risk_level": "MODERATE"
       },
       "street_environment": {
-        "zone_type": "University_District",
-        "average_speed_kmh": 32.68,
-        "congestion_level": 67.97
+        "posted_speed_limit_mph": 30.0,
+        "intersection_crossroad_density_pct": 15.2,
+        "title": "30 mph Zone | 15% Crossroad Density",
+        "explanation": "Frequent signalized crossroads combined with multi-lane traffic flow increase conflict points at peak times."
       }
     },
     "civilian_safety_guide": {
       "for_drivers": {
         "action": "Increase Following Distance",
-        "details": "Maintain 3 car lengths buffer during peak rush hours."
+        "details": "Maintain at least 3 car lengths of space behind the vehicle ahead. Avoid tailgating near transit stops and expressway exit ramps where sudden stops occur.",
+        "key_tip": "Leave 3-4 car lengths buffer on commercial transit corridors"
       },
       "for_pedestrians_and_cyclists": {
-        "action": "Double-Check Turning Vehicles",
-        "details": "Make eye contact with turning drivers at intersections before crossing."
+        "action": "Double-Check Turning Cars",
+        "details": "Make eye contact with drivers turning right on red before stepping into crosswalks. Use reflective gear or activate bicycle lights after dusk.",
+        "key_tip": "Never assume a turning driver has seen you at green lights"
       },
       "peak_danger_windows": {
-        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
-        "details": "Congestion peaks during evening travel windows."
+        "primary_peak": "4:30 PM - 7:30 PM Weekdays (Evening Commute Congestion)",
+        "secondary_peak": "10:00 PM - 2:00 AM Friday & Saturday (Reduced Lighting & Speed Variance)",
+        "details": "Evening rush hours experience 3x higher collision rates than midday. Exercise maximum patience during heavy congestion."
       }
     }
   },
   "raw_metrics": {
     "zone_id": "Zone_07",
+    "chicago_beat": "833",
     "week": 10,
-    "zone_type": "University_District",
-    "temporal_profile": "GRADUAL_DETERIORATION",
-    "population_density": 7267,
-    "road_capacity": 42,
-    "effective_road_capacity": 34.78,
-    "vehicle_density": 33.87,
-    "traffic_pressure": 0.974,
-    "congestion": 67.97,
-    "average_speed": 32.68,
-    "red_light_violations": 8,
-    "weather": "Light Rain",
-    "road_condition": "Moderate",
-    "special_event": 0,
-    "incident_count": 1,
-    "incident_occurred": 1,
-    "previous_week_vehicle_density": 30.87,
-    "previous_week_congestion": 43.07,
-    "previous_week_average_speed": 54.9,
-    "previous_week_red_light_violations": 7.0,
-    "previous_week_incident_count": 0.0,
-    "previous_week_incident_occurred": 0.0,
-    "previous_week_traffic_pressure": 0.735,
-    "rolling_4_week_avg_vehicle_density": 33.22,
-    "rolling_4_week_avg_congestion": 51.36,
-    "rolling_4_week_avg_speed": 49.05,
-    "rolling_4_week_avg_violations": 4.5,
-    "rolling_4_week_incident_count": 1.0,
-    "rolling_4_week_incident_rate": 0.25,
-    "rolling_4_week_avg_traffic_pressure": 0.832,
-    "vehicle_density_change": 3.0,
-    "congestion_change": 24.9,
-    "speed_change": -22.22,
-    "violations_change": 1.0,
-    "traffic_pressure_change": 0.239,
-    "incident_count_change": -1.0,
-    "vehicle_density_pct_change": 9.72,
-    "congestion_pct_change": 57.81,
-    "speed_pct_change": -40.47,
-    "vehicle_population_ratio": 4.661,
-    "congestion_trend_4w": 1.636,
-    "vehicle_density_trend_4w": -0.806,
-    "speed_trend_4w": -1.521,
-    "incident_trend_4w": 0.1,
-    "car_percentage": 47.1,
-    "motorcycle_percentage": 40.1,
-    "bus_percentage": 5.9,
-    "truck_percentage": 6.9,
-    "moving_vehicle_percentage": 24.5,
-    "slow_vehicle_percentage": 37.9,
-    "stopped_vehicle_percentage": 37.6,
-    "location_name": "Goregaon",
-    "city": "Mumbai",
-    "latitude": 19.1663,
-    "longitude": 72.8526,
-    "predicted_risk_probability": 0.7812,
-    "risk_score": 78.1219,
-    "population_exposure_score": 42.4312,
-    "vehicle_exposure_score": 55.2348,
-    "temporal_trend_score": 67.702,
-    "priority_score": 63.0588,
-    "priority_rank": 7,
-    "priority_level": "HIGH",
-    "risk_prob": 0.7812
+    "crashes": 0,
+    "rolling4w_avg": 1.5,
+    "speed_mph": 30.0
   }
 }

@@ -1,233 +1,155 @@
 {
   "zone_id": "Zone_10",
-  "location_name": "Colaba",
-  "city": "Mumbai",
-  "zone_type": "Residential",
+  "location_name": "Belmont Cragin - W Grand Ave & N Narragansett Ave",
+  "city": "Chicago",
+  "zone_type": "High-Density Commercial & Freight Rail",
   "week": 17,
-  "latitude": 18.922,
-  "longitude": 72.8347,
+  "latitude": 41.9238,
+  "longitude": -87.7879,
   "risk_analysis": {
-    "predicted_risk_probability": 0.5961,
-    "predicted_risk_percentage": 59.61,
-    "risk_label": "HIGH RISK",
-    "risk_color": "#f97316",
-    "risk_delta_vs_prev_week": 4.2075,
+    "predicted_risk_probability": 0.3563,
+    "predicted_risk_percentage": 35.63,
+    "risk_label": "MODERATE RISK",
+    "risk_color": "#eab308",
+    "risk_delta_vs_prev_week": -3.85,
     "actual_incident": 0
   },
   "priority": {
-    "priority_score": 69.7478,
+    "priority_score": 45.05,
     "priority_rank": 1,
-    "priority_level": "HIGH",
+    "priority_level": "MODERATE",
     "components": {
-      "risk_score": 59.6093,
-      "population_exposure_score": 98.6996,
-      "vehicle_exposure_score": 67.3457,
-      "temporal_trend_score": 51.7338
+      "risk_score": 35.63,
+      "population_exposure_score": 65.0,
+      "vehicle_exposure_score": 39.6,
+      "temporal_trend_score": 44.2
     },
     "explanation": {
-      "priority_level": "HIGH",
-      "priority_score": 69.7,
-      "top_contributors": [
-        {
-          "factor": "Population Exposure",
-          "icon": "\ud83d\udc65",
-          "value": "99/100",
-          "impact": "HIGH",
-          "detail": "High population density zone \u2014 15099 residents/km\u00b2",
-          "weight": 98.6996
-        },
-        {
-          "factor": "Vehicle Density",
-          "icon": "\ud83d\ude99",
-          "value": "67/100",
-          "impact": "HIGH",
-          "detail": "High vehicle density increases collision exposure",
-          "weight": 67.3457
-        },
-        {
-          "factor": "Risk Score",
-          "icon": "\ud83d\udfe1",
-          "value": "60/100",
-          "impact": "MEDIUM",
-          "detail": "Moderate model-estimated risk",
-          "weight": 59.6093
-        },
-        {
-          "factor": "Congestion",
-          "icon": "\ud83d\ude97",
-          "value": "64/100",
-          "impact": "MEDIUM",
-          "detail": "Moderate congestion at 64",
-          "weight": 44.954
-        }
-      ],
-      "total_factors": 4,
-      "assessment": "This zone shows significant risk elevation driven by Population Exposure, Vehicle Density. Proactive intervention should be scheduled within the current planning cycle."
+      "priority_level": "MODERATE",
+      "priority_score": 45.05,
+      "assessment": "Chicago corridor in 25th District - Grand Central exhibits moderate traffic hazard priority driven by Chicago crash history."
     }
   },
   "telemetry": {
-    "congestion": 64.22,
-    "congestion_delta": -7.18,
-    "average_speed_kmh": 45.04,
-    "speed_delta": 1.27,
-    "vehicle_density": 46.58,
-    "density_delta": -9.0,
-    "population_density": 15099,
-    "red_light_violations": 7,
-    "weather": "Normal",
+    "congestion": 38.3,
+    "congestion_delta": 0.0,
+    "average_speed_kmh": 48.3,
+    "speed_delta": 0.0,
+    "vehicle_density": 45.5,
+    "density_delta": 0.0,
+    "population_density": 8500,
+    "red_light_violations": 0,
+    "weather": "CLEAR",
     "special_event": 0
   },
   "signal_optimization": {
-    "base_green_seconds": 30,
+    "base_green_seconds": 35,
     "recommended_green_seconds": 44,
-    "change_seconds": 14,
-    "change_percent": 46.7,
-    "urgency": "CRITICAL",
-    "reason": "Severe congestion requires significantly extended green phase",
+    "change_seconds": 9,
+    "change_percent": 25.7,
+    "urgency": "HIGH",
+    "reason": "Elevated traffic density needs extended clearance time",
     "factors": {
-      "congestion_factor": 1.51,
-      "density_factor": 1.19,
-      "speed_factor": 0.83,
+      "congestion_factor": 1.31,
+      "density_factor": 1.18,
+      "speed_factor": 0.82,
       "event_boost": 1.0,
       "weather_boost": 1.0
     }
   },
   "environmental_impact": {
-    "total_co2_kg_per_week": 38131.1,
-    "total_co2_tonnes_per_year": 1982.82,
-    "idle_co2_kg": 16512.3,
-    "moving_co2_kg": 21618.8,
-    "potential_savings_kg_per_week": 4362.9,
-    "potential_savings_tonnes_per_year": 226.87,
-    "trees_equivalent_per_year": 10803,
-    "fuel_saved_liters_per_week": 1888.7,
-    "citizens_impacted": 30198,
-    "optimization_factor_pct": 26.4
+    "total_co2_kg_per_week": 48670.8,
+    "total_co2_tonnes_per_year": 2530.88,
+    "idle_co2_kg": 9619.4,
+    "moving_co2_kg": 39051.4,
+    "potential_savings_kg_per_week": 2292.3,
+    "potential_savings_tonnes_per_year": 119.2,
+    "trees_equivalent_per_year": 5676,
+    "fuel_saved_liters_per_week": 992.3,
+    "citizens_impacted": 17000,
+    "optimization_factor_pct": 23.8
   },
   "interventions": [
     {
-      "id": "PEDESTRIAN_SAFETY",
-      "name": "Pedestrian Crossing Intervention",
-      "icon": "\ud83d\udeb6",
-      "severity": "MEDIUM",
-      "description": "High population density zone with significant traffic congestion creates pedestrian exposure risk.",
-      "action": "Install protected pedestrian crossings, improve sidewalk infrastructure, and add pedestrian countdown signals."
+      "title": "Deploy Speed Calming & Signal Synchronization on W Grand Ave & N Narragansett Ave",
+      "type": "MUNICIPAL_CORRIDOR_CALMING",
+      "priority": "MODERATE",
+      "target_reduction": "18% collision frequency reduction"
+    },
+    {
+      "title": "Pedestrian Crosswalk High-Visibility Illumination & Turn Signal Audit",
+      "type": "INFRASTRUCTURE_SAFETY",
+      "priority": "HIGH",
+      "target_reduction": "Eliminate left-turn crossing conflicts"
     }
   ],
-  "executive_briefing": "Colaba shows elevated risk at 60%. Signal optimization recommended \u2014 congestion at 64/100 with speeds averaging 45 km/h. Optimizing signals could save 4363 kg CO2/week, equivalent to 10803 trees/year.",
+  "executive_briefing": "Chicago Police Beat 2512 (Belmont Cragin - W Grand Ave & N Narragansett Ave) logged 0 collisions in week 17. Machine learning incident risk is 35.6%, forecasted at 31.8% for next week.",
   "civilian_road_safety_radar": {
     "current_week": {
-      "week": 17,
-      "risk_score": 59.6,
-      "risk_percentage": "60%",
-      "risk_badge": "HIGH RISK",
-      "risk_color": "#f97316",
-      "description": "Elevated collision activity observed.",
-      "crashes_reported": 0
+      "period": "2024-W17",
+      "date_range": "Week 17, 2024",
+      "risk_score": 35.6,
+      "risk_percentage": "36%",
+      "risk_badge": "[ELEVATED TRAFFIC]",
+      "risk_color": "#eab308",
+      "description": "Corridor is operating within historical baseline.",
+      "crashes_reported": 0,
+      "crashes_rolling4w_avg": 1.5,
+      "dominant_weather": "CLEAR"
     },
     "upcoming_week": {
-      "predicted_risk_probability": 0.484,
-      "predicted_risk_percentage": "48%",
-      "predicted_risk_badge": "MODERATE RISK",
+      "period": "2024-W18",
+      "predicted_risk_probability": 0.3178,
+      "predicted_risk_percentage": "32%",
+      "predicted_risk_badge": "[ELEVATED TRAFFIC]",
       "risk_color": "#eab308",
       "description": "Forecast models project normal baseline traffic conditions.",
-      "trend_label": "[TREND: COOLING DOWN]"
+      "trend_label": "[TREND: STABLE]",
+      "trend_color": "#eab308",
+      "trend_percentage_change": "0%"
     },
     "why_accidents_might_happen": {
       "primary_collision_cause": {
-        "title": "Congestion Bottleneck & Merge Conflicts",
-        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+        "title": "Failing to Yield Right-of-Way",
+        "explanation": "Drivers turning left across oncoming traffic or turning on yellow without checking cross-traffic and crossing pedestrians.",
+        "historical_frequency_pct": 34.2
       },
       "behavior_factor": {
-        "title": "Tailgating & Speed Variance",
-        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+        "title": "Tailgating & Sudden Braking",
+        "explanation": "High-density commuter queues cause rear-end collisions when drivers follow too closely during rush hours.",
+        "risk_level": "MODERATE"
       },
       "street_environment": {
-        "zone_type": "Residential",
-        "average_speed_kmh": 45.04,
-        "congestion_level": 64.22
+        "posted_speed_limit_mph": 30.0,
+        "intersection_crossroad_density_pct": 19.3,
+        "title": "30 mph Zone | 19% Crossroad Density",
+        "explanation": "Frequent signalized crossroads combined with multi-lane traffic flow increase conflict points at peak times."
       }
     },
     "civilian_safety_guide": {
       "for_drivers": {
         "action": "Increase Following Distance",
-        "details": "Maintain 3 car lengths buffer during peak rush hours."
+        "details": "Maintain at least 3 car lengths of space behind the vehicle ahead. Avoid tailgating near transit stops and expressway exit ramps where sudden stops occur.",
+        "key_tip": "Leave 3-4 car lengths buffer on commercial transit corridors"
       },
       "for_pedestrians_and_cyclists": {
-        "action": "Double-Check Turning Vehicles",
-        "details": "Make eye contact with turning drivers at intersections before crossing."
+        "action": "Double-Check Turning Cars",
+        "details": "Make eye contact with drivers turning right on red before stepping into crosswalks. Use reflective gear or activate bicycle lights after dusk.",
+        "key_tip": "Never assume a turning driver has seen you at green lights"
       },
       "peak_danger_windows": {
-        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
-        "details": "Congestion peaks during evening travel windows."
+        "primary_peak": "4:30 PM - 7:30 PM Weekdays (Evening Commute Congestion)",
+        "secondary_peak": "10:00 PM - 2:00 AM Friday & Saturday (Reduced Lighting & Speed Variance)",
+        "details": "Evening rush hours experience 3x higher collision rates than midday. Exercise maximum patience during heavy congestion."
       }
     }
   },
   "raw_metrics": {
     "zone_id": "Zone_10",
+    "chicago_beat": "2512",
     "week": 17,
-    "zone_type": "Residential",
-    "temporal_profile": "GRADUAL_DETERIORATION",
-    "population_density": 15099,
-    "road_capacity": 47,
-    "effective_road_capacity": 47.0,
-    "vehicle_density": 46.58,
-    "traffic_pressure": 0.991,
-    "congestion": 64.22,
-    "average_speed": 45.04,
-    "red_light_violations": 7,
-    "weather": "Normal",
-    "road_condition": "Good",
-    "special_event": 0,
-    "incident_count": 0,
-    "incident_occurred": 0,
-    "previous_week_vehicle_density": 55.58,
-    "previous_week_congestion": 71.4,
-    "previous_week_average_speed": 43.77,
-    "previous_week_red_light_violations": 9.0,
-    "previous_week_incident_count": 0.0,
-    "previous_week_incident_occurred": 0.0,
-    "previous_week_traffic_pressure": 1.183,
-    "rolling_4_week_avg_vehicle_density": 52.14,
-    "rolling_4_week_avg_congestion": 70.69,
-    "rolling_4_week_avg_speed": 41.47,
-    "rolling_4_week_avg_violations": 6.75,
-    "rolling_4_week_incident_count": 3.0,
-    "rolling_4_week_incident_rate": 0.5,
-    "rolling_4_week_avg_traffic_pressure": 1.11,
-    "vehicle_density_change": -9.0,
-    "congestion_change": -7.18,
-    "speed_change": 1.27,
-    "violations_change": -2.0,
-    "traffic_pressure_change": -0.192,
-    "incident_count_change": -1.0,
-    "vehicle_density_pct_change": -16.19,
-    "congestion_pct_change": -10.06,
-    "speed_pct_change": 2.9,
-    "vehicle_population_ratio": 3.085,
-    "congestion_trend_4w": 1.213,
-    "vehicle_density_trend_4w": 1.959,
-    "speed_trend_4w": 0.504,
-    "incident_trend_4w": -0.2,
-    "car_percentage": 33.1,
-    "motorcycle_percentage": 54.6,
-    "bus_percentage": 8.3,
-    "truck_percentage": 4.1,
-    "moving_vehicle_percentage": 38.5,
-    "slow_vehicle_percentage": 28.1,
-    "stopped_vehicle_percentage": 33.3,
-    "location_name": "Colaba",
-    "city": "Mumbai",
-    "latitude": 18.922,
-    "longitude": 72.8347,
-    "predicted_risk_probability": 0.5961,
-    "risk_score": 59.6093,
-    "population_exposure_score": 98.6996,
-    "vehicle_exposure_score": 67.3457,
-    "temporal_trend_score": 51.7338,
-    "priority_score": 69.7478,
-    "priority_rank": 1,
-    "priority_level": "HIGH",
-    "risk_prob": 0.5961
+    "crashes": 0,
+    "rolling4w_avg": 1.5,
+    "speed_mph": 30.0
   }
 }

@@ -1,217 +1,155 @@
 {
   "zone_id": "Zone_24",
-  "location_name": "Nehru Place",
-  "city": "Delhi",
-  "zone_type": "Commercial_Downtown",
+  "location_name": "Clearing - W 63Rd St & S Kedzie Ave",
+  "city": "Chicago",
+  "zone_type": "Airport Logistics & Dense Commercial",
   "week": 43,
-  "latitude": 28.5491,
-  "longitude": 77.2519,
+  "latitude": 41.779,
+  "longitude": -87.7034,
   "risk_analysis": {
-    "predicted_risk_probability": 0.2934,
-    "predicted_risk_percentage": 29.34,
-    "risk_label": "LOW RISK",
-    "risk_color": "#22c55e",
-    "risk_delta_vs_prev_week": -0.251,
+    "predicted_risk_probability": 0.923,
+    "predicted_risk_percentage": 92.3,
+    "risk_label": "CRITICAL RISK",
+    "risk_color": "#ef4444",
+    "risk_delta_vs_prev_week": 0.3,
     "actual_incident": 0
   },
   "priority": {
-    "priority_score": 39.2449,
-    "priority_rank": 32,
-    "priority_level": "MODERATE",
+    "priority_score": 68.67,
+    "priority_rank": 1,
+    "priority_level": "HIGH",
     "components": {
-      "risk_score": 29.3431,
-      "population_exposure_score": 52.2523,
-      "vehicle_exposure_score": 36.5187,
-      "temporal_trend_score": 47.6053
+      "risk_score": 92.3,
+      "population_exposure_score": 65.0,
+      "vehicle_exposure_score": 39.6,
+      "temporal_trend_score": 50.5
     },
     "explanation": {
-      "priority_level": "MODERATE",
-      "priority_score": 39.2,
-      "top_contributors": [
-        {
-          "factor": "Population Exposure",
-          "icon": "\ud83d\udc65",
-          "value": "52/100",
-          "impact": "MEDIUM",
-          "detail": "Moderate population exposure",
-          "weight": 36.5766
-        },
-        {
-          "factor": "Risk Score",
-          "icon": "\ud83d\udfe2",
-          "value": "29/100",
-          "impact": "LOW",
-          "detail": "Risk score within acceptable range",
-          "weight": 29.3431
-        }
-      ],
-      "total_factors": 2,
-      "assessment": "This zone has moderate risk levels with contributing factors: Population Exposure. Continue monitoring and schedule review if conditions worsen."
+      "priority_level": "HIGH",
+      "priority_score": 68.67,
+      "assessment": "Chicago corridor in 08th District - Chicago Lawn exhibits high traffic hazard priority driven by Chicago crash history."
     }
   },
   "telemetry": {
-    "congestion": 16.54,
-    "congestion_delta": 1.86,
-    "average_speed_kmh": 63.67,
-    "speed_delta": 1.91,
-    "vehicle_density": 28.33,
-    "density_delta": -1.81,
-    "population_density": 8634,
+    "congestion": 38.3,
+    "congestion_delta": 0.0,
+    "average_speed_kmh": 48.3,
+    "speed_delta": 0.0,
+    "vehicle_density": 45.5,
+    "density_delta": 0.0,
+    "population_density": 8500,
     "red_light_violations": 0,
-    "weather": "Normal",
+    "weather": "CLEAR",
     "special_event": 0
   },
   "signal_optimization": {
-    "base_green_seconds": 40,
-    "recommended_green_seconds": 38,
-    "change_seconds": -2,
-    "change_percent": -5.0,
-    "urgency": "NOMINAL",
-    "reason": "Current default timing is adequate",
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 44,
+    "change_seconds": 9,
+    "change_percent": 25.7,
+    "urgency": "HIGH",
+    "reason": "Elevated traffic density needs extended clearance time",
     "factors": {
-      "congestion_factor": 1.13,
-      "density_factor": 1.11,
-      "speed_factor": 0.76,
+      "congestion_factor": 1.31,
+      "density_factor": 1.18,
+      "speed_factor": 0.82,
       "event_boost": 1.0,
       "weather_boost": 1.0
     }
   },
   "environmental_impact": {
-    "total_co2_kg_per_week": 41607.2,
-    "total_co2_tonnes_per_year": 2163.58,
-    "idle_co2_kg": 2586.6,
-    "moving_co2_kg": 39020.7,
-    "potential_savings_kg_per_week": 560.1,
-    "potential_savings_tonnes_per_year": 29.12,
-    "trees_equivalent_per_year": 1386,
-    "fuel_saved_liters_per_week": 242.5,
-    "citizens_impacted": 17268,
-    "optimization_factor_pct": 21.7
+    "total_co2_kg_per_week": 48670.8,
+    "total_co2_tonnes_per_year": 2530.88,
+    "idle_co2_kg": 9619.4,
+    "moving_co2_kg": 39051.4,
+    "potential_savings_kg_per_week": 2292.3,
+    "potential_savings_tonnes_per_year": 119.2,
+    "trees_equivalent_per_year": 5676,
+    "fuel_saved_liters_per_week": 992.3,
+    "citizens_impacted": 17000,
+    "optimization_factor_pct": 23.8
   },
   "interventions": [
     {
-      "id": "BASELINE_MONITORING",
-      "name": "Routine Monitoring",
-      "icon": "\ud83d\udcca",
-      "severity": "LOW",
-      "description": "Zone currently within acceptable risk parameters.",
-      "action": "Continue routine monitoring. No immediate intervention required."
+      "title": "Deploy Speed Calming & Signal Synchronization on W 63Rd St & S Kedzie Ave",
+      "type": "MUNICIPAL_CORRIDOR_CALMING",
+      "priority": "HIGH",
+      "target_reduction": "18% collision frequency reduction"
+    },
+    {
+      "title": "Pedestrian Crosswalk High-Visibility Illumination & Turn Signal Audit",
+      "type": "INFRASTRUCTURE_SAFETY",
+      "priority": "HIGH",
+      "target_reduction": "Eliminate left-turn crossing conflicts"
     }
   ],
-  "executive_briefing": "Nehru Place is within safe operating parameters (29% risk). Continue routine monitoring. Optimizing signals could save 560 kg CO2/week, equivalent to 1386 trees/year.",
+  "executive_briefing": "Chicago Police Beat 823 (Clearing - W 63Rd St & S Kedzie Ave) logged 0 collisions in week 43. Machine learning incident risk is 92.3%, forecasted at 92.6% for next week.",
   "civilian_road_safety_radar": {
     "current_week": {
-      "week": 43,
-      "risk_score": 29.3,
-      "risk_percentage": "29%",
-      "risk_badge": "LOW RISK",
-      "risk_color": "#22c55e",
-      "description": "Corridor operating within normal baseline.",
-      "crashes_reported": 0
+      "period": "2024-W43",
+      "date_range": "Week 43, 2024",
+      "risk_score": 92.3,
+      "risk_percentage": "92%",
+      "risk_badge": "[HIGH RISK ALERT]",
+      "risk_color": "#ef4444",
+      "description": "Elevated collision hazard recorded. Extra vigilance recommended.",
+      "crashes_reported": 0,
+      "crashes_rolling4w_avg": 1.5,
+      "dominant_weather": "CLEAR"
     },
     "upcoming_week": {
-      "predicted_risk_probability": 0.261,
-      "predicted_risk_percentage": "26%",
-      "predicted_risk_badge": "LOW RISK",
-      "risk_color": "#22c55e",
-      "description": "Forecast models project normal baseline traffic conditions.",
-      "trend_label": "[TREND: STABLE]"
+      "period": "2024-W44",
+      "predicted_risk_probability": 0.926,
+      "predicted_risk_percentage": "93%",
+      "predicted_risk_badge": "[HIGH RISK ALERT]",
+      "risk_color": "#ef4444",
+      "description": "Forecast models project elevated collision probability.",
+      "trend_label": "[TREND: STABLE]",
+      "trend_color": "#ef4444",
+      "trend_percentage_change": "0%"
     },
     "why_accidents_might_happen": {
       "primary_collision_cause": {
-        "title": "Congestion Bottleneck & Merge Conflicts",
-        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+        "title": "Failing to Yield Right-of-Way",
+        "explanation": "Drivers turning left across oncoming traffic or turning on yellow without checking cross-traffic and crossing pedestrians.",
+        "historical_frequency_pct": 34.2
       },
       "behavior_factor": {
-        "title": "Tailgating & Speed Variance",
-        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+        "title": "Tailgating & Sudden Braking",
+        "explanation": "High-density commuter queues cause rear-end collisions when drivers follow too closely during rush hours.",
+        "risk_level": "ELEVATED"
       },
       "street_environment": {
-        "zone_type": "Commercial_Downtown",
-        "average_speed_kmh": 63.67,
-        "congestion_level": 16.54
+        "posted_speed_limit_mph": 30.0,
+        "intersection_crossroad_density_pct": 12.2,
+        "title": "30 mph Zone | 12% Crossroad Density",
+        "explanation": "Frequent signalized crossroads combined with multi-lane traffic flow increase conflict points at peak times."
       }
     },
     "civilian_safety_guide": {
       "for_drivers": {
         "action": "Increase Following Distance",
-        "details": "Maintain 3 car lengths buffer during peak rush hours."
+        "details": "Maintain at least 3 car lengths of space behind the vehicle ahead. Avoid tailgating near transit stops and expressway exit ramps where sudden stops occur.",
+        "key_tip": "Leave 3-4 car lengths buffer on commercial transit corridors"
       },
       "for_pedestrians_and_cyclists": {
-        "action": "Double-Check Turning Vehicles",
-        "details": "Make eye contact with turning drivers at intersections before crossing."
+        "action": "Double-Check Turning Cars",
+        "details": "Make eye contact with drivers turning right on red before stepping into crosswalks. Use reflective gear or activate bicycle lights after dusk.",
+        "key_tip": "Never assume a turning driver has seen you at green lights"
       },
       "peak_danger_windows": {
-        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
-        "details": "Congestion peaks during evening travel windows."
+        "primary_peak": "4:30 PM - 7:30 PM Weekdays (Evening Commute Congestion)",
+        "secondary_peak": "10:00 PM - 2:00 AM Friday & Saturday (Reduced Lighting & Speed Variance)",
+        "details": "Evening rush hours experience 3x higher collision rates than midday. Exercise maximum patience during heavy congestion."
       }
     }
   },
   "raw_metrics": {
     "zone_id": "Zone_24",
+    "chicago_beat": "823",
     "week": 43,
-    "zone_type": "Commercial_Downtown",
-    "temporal_profile": "GRADUAL_IMPROVEMENT",
-    "population_density": 8634,
-    "road_capacity": 99,
-    "effective_road_capacity": 99.0,
-    "vehicle_density": 28.33,
-    "traffic_pressure": 0.286,
-    "congestion": 16.54,
-    "average_speed": 63.67,
-    "red_light_violations": 0,
-    "weather": "Normal",
-    "road_condition": "Good",
-    "special_event": 0,
-    "incident_count": 0,
-    "incident_occurred": 0,
-    "previous_week_vehicle_density": 30.14,
-    "previous_week_congestion": 14.68,
-    "previous_week_average_speed": 61.76,
-    "previous_week_red_light_violations": 5.0,
-    "previous_week_incident_count": 0.0,
-    "previous_week_incident_occurred": 0.0,
-    "previous_week_traffic_pressure": 0.304,
-    "rolling_4_week_avg_vehicle_density": 35.28,
-    "rolling_4_week_avg_congestion": 22.65,
-    "rolling_4_week_avg_speed": 59.68,
-    "rolling_4_week_avg_violations": 6.0,
-    "rolling_4_week_incident_count": 0.0,
-    "rolling_4_week_incident_rate": 0.0,
-    "rolling_4_week_avg_traffic_pressure": 0.404,
-    "vehicle_density_change": -1.81,
-    "congestion_change": 1.86,
-    "speed_change": 1.91,
-    "violations_change": -5.0,
-    "traffic_pressure_change": -0.018,
-    "incident_count_change": 0.0,
-    "vehicle_density_pct_change": -6.01,
-    "congestion_pct_change": 12.67,
-    "speed_pct_change": 3.09,
-    "vehicle_population_ratio": 3.281,
-    "congestion_trend_4w": -3.38,
-    "vehicle_density_trend_4w": -1.923,
-    "speed_trend_4w": 0.284,
-    "incident_trend_4w": 0.0,
-    "car_percentage": 46.0,
-    "motorcycle_percentage": 41.5,
-    "bus_percentage": 10.6,
-    "truck_percentage": 2.0,
-    "moving_vehicle_percentage": 77.9,
-    "slow_vehicle_percentage": 19.8,
-    "stopped_vehicle_percentage": 2.3,
-    "location_name": "Nehru Place",
-    "city": "Delhi",
-    "latitude": 28.5491,
-    "longitude": 77.2519,
-    "predicted_risk_probability": 0.2934,
-    "risk_score": 29.3431,
-    "population_exposure_score": 52.2523,
-    "vehicle_exposure_score": 36.5187,
-    "temporal_trend_score": 47.6053,
-    "priority_score": 39.2449,
-    "priority_rank": 32,
-    "priority_level": "MODERATE",
-    "risk_prob": 0.2934
+    "crashes": 0,
+    "rolling4w_avg": 1.5,
+    "speed_mph": 30.0
   }
 }

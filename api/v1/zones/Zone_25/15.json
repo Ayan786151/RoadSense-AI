@@ -1,225 +1,155 @@
 {
   "zone_id": "Zone_25",
-  "location_name": "Okhla",
-  "city": "Delhi",
-  "zone_type": "Residential",
+  "location_name": "Gage Park - W Archer Ave & S Archer Ave",
+  "city": "Chicago",
+  "zone_type": "Airport Logistics & Dense Commercial",
   "week": 15,
-  "latitude": 28.5355,
-  "longitude": 77.264,
+  "latitude": 41.7924,
+  "longitude": -87.7819,
   "risk_analysis": {
-    "predicted_risk_probability": 0.3606,
-    "predicted_risk_percentage": 36.06,
+    "predicted_risk_probability": 0.3563,
+    "predicted_risk_percentage": 35.63,
     "risk_label": "MODERATE RISK",
     "risk_color": "#eab308",
-    "risk_delta_vs_prev_week": -6.4556,
+    "risk_delta_vs_prev_week": 2.6,
     "actual_incident": 0
   },
   "priority": {
-    "priority_score": 49.4791,
-    "priority_rank": 21,
+    "priority_score": 46.51,
+    "priority_rank": 1,
     "priority_level": "MODERATE",
     "components": {
-      "risk_score": 36.0588,
-      "population_exposure_score": 67.7419,
-      "vehicle_exposure_score": 43.6709,
-      "temporal_trend_score": 62.573
+      "risk_score": 35.63,
+      "population_exposure_score": 65.0,
+      "vehicle_exposure_score": 39.6,
+      "temporal_trend_score": 53.9
     },
     "explanation": {
       "priority_level": "MODERATE",
-      "priority_score": 49.5,
-      "top_contributors": [
-        {
-          "factor": "Population Exposure",
-          "icon": "\ud83d\udc65",
-          "value": "68/100",
-          "impact": "HIGH",
-          "detail": "High population density zone \u2014 10790 residents/km\u00b2",
-          "weight": 67.7419
-        },
-        {
-          "factor": "Rising Trend",
-          "icon": "\ud83d\udcc8",
-          "value": "63/100",
-          "impact": "MEDIUM",
-          "detail": "Slight upward trend in congestion over past 4 weeks",
-          "weight": 37.5438
-        },
-        {
-          "factor": "Risk Score",
-          "icon": "\ud83d\udfe2",
-          "value": "36/100",
-          "impact": "LOW",
-          "detail": "Risk score within acceptable range",
-          "weight": 36.0588
-        }
-      ],
-      "total_factors": 3,
-      "assessment": "This zone has moderate risk levels with contributing factors: Population Exposure, Rising Trend. Continue monitoring and schedule review if conditions worsen."
+      "priority_score": 46.51,
+      "assessment": "Chicago corridor in 08th District - Chicago Lawn exhibits moderate traffic hazard priority driven by Chicago crash history."
     }
   },
   "telemetry": {
-    "congestion": 22.68,
-    "congestion_delta": -0.67,
-    "average_speed_kmh": 57.81,
-    "speed_delta": 6.14,
-    "vehicle_density": 31.41,
-    "density_delta": 0.76,
-    "population_density": 10790,
-    "red_light_violations": 4,
-    "weather": "Normal",
+    "congestion": 38.3,
+    "congestion_delta": 0.0,
+    "average_speed_kmh": 48.3,
+    "speed_delta": 0.0,
+    "vehicle_density": 45.5,
+    "density_delta": 0.0,
+    "population_density": 8500,
+    "red_light_violations": 0,
+    "weather": "CLEAR",
     "special_event": 0
   },
   "signal_optimization": {
-    "base_green_seconds": 30,
-    "recommended_green_seconds": 31,
-    "change_seconds": 1,
-    "change_percent": 3.3,
-    "urgency": "NOMINAL",
-    "reason": "Current default timing is adequate",
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 44,
+    "change_seconds": 9,
+    "change_percent": 25.7,
+    "urgency": "HIGH",
+    "reason": "Elevated traffic density needs extended clearance time",
     "factors": {
-      "congestion_factor": 1.18,
-      "density_factor": 1.13,
-      "speed_factor": 0.78,
+      "congestion_factor": 1.31,
+      "density_factor": 1.18,
+      "speed_factor": 0.82,
       "event_boost": 1.0,
       "weather_boost": 1.0
     }
   },
   "environmental_impact": {
-    "total_co2_kg_per_week": 40323.6,
-    "total_co2_tonnes_per_year": 2096.83,
-    "idle_co2_kg": 3932.3,
-    "moving_co2_kg": 36391.3,
-    "potential_savings_kg_per_week": 875.7,
-    "potential_savings_tonnes_per_year": 45.53,
-    "trees_equivalent_per_year": 2168,
-    "fuel_saved_liters_per_week": 379.1,
-    "citizens_impacted": 21580,
-    "optimization_factor_pct": 22.3
+    "total_co2_kg_per_week": 48670.8,
+    "total_co2_tonnes_per_year": 2530.88,
+    "idle_co2_kg": 9619.4,
+    "moving_co2_kg": 39051.4,
+    "potential_savings_kg_per_week": 2292.3,
+    "potential_savings_tonnes_per_year": 119.2,
+    "trees_equivalent_per_year": 5676,
+    "fuel_saved_liters_per_week": 992.3,
+    "citizens_impacted": 17000,
+    "optimization_factor_pct": 23.8
   },
   "interventions": [
     {
-      "id": "BASELINE_MONITORING",
-      "name": "Routine Monitoring",
-      "icon": "\ud83d\udcca",
-      "severity": "LOW",
-      "description": "No specific risk indicators triggered.",
-      "action": "Continue routine monitoring."
+      "title": "Deploy Speed Calming & Signal Synchronization on W Archer Ave & S Archer Ave",
+      "type": "MUNICIPAL_CORRIDOR_CALMING",
+      "priority": "MODERATE",
+      "target_reduction": "18% collision frequency reduction"
+    },
+    {
+      "title": "Pedestrian Crosswalk High-Visibility Illumination & Turn Signal Audit",
+      "type": "INFRASTRUCTURE_SAFETY",
+      "priority": "HIGH",
+      "target_reduction": "Eliminate left-turn crossing conflicts"
     }
   ],
-  "executive_briefing": "Okhla shows elevated risk at 36%. Continue routine monitoring. Optimizing signals could save 876 kg CO2/week, equivalent to 2168 trees/year.",
+  "executive_briefing": "Chicago Police Beat 811 (Gage Park - W Archer Ave & S Archer Ave) logged 0 collisions in week 15. Machine learning incident risk is 35.6%, forecasted at 38.2% for next week.",
   "civilian_road_safety_radar": {
     "current_week": {
-      "week": 15,
-      "risk_score": 36.1,
+      "period": "2024-W15",
+      "date_range": "Week 15, 2024",
+      "risk_score": 35.6,
       "risk_percentage": "36%",
-      "risk_badge": "MODERATE RISK",
+      "risk_badge": "[ELEVATED TRAFFIC]",
       "risk_color": "#eab308",
-      "description": "Corridor operating within normal baseline.",
-      "crashes_reported": 0
+      "description": "Corridor is operating within historical baseline.",
+      "crashes_reported": 0,
+      "crashes_rolling4w_avg": 1.5,
+      "dominant_weather": "CLEAR"
     },
     "upcoming_week": {
-      "predicted_risk_probability": 0.3116,
-      "predicted_risk_percentage": "31%",
-      "predicted_risk_badge": "LOW RISK",
-      "risk_color": "#22c55e",
+      "period": "2024-W16",
+      "predicted_risk_probability": 0.3823,
+      "predicted_risk_percentage": "38%",
+      "predicted_risk_badge": "[ELEVATED TRAFFIC]",
+      "risk_color": "#eab308",
       "description": "Forecast models project normal baseline traffic conditions.",
-      "trend_label": "[TREND: STABLE]"
+      "trend_label": "[TREND: STABLE]",
+      "trend_color": "#eab308",
+      "trend_percentage_change": "0%"
     },
     "why_accidents_might_happen": {
       "primary_collision_cause": {
-        "title": "Congestion Bottleneck & Merge Conflicts",
-        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+        "title": "Failing to Yield Right-of-Way",
+        "explanation": "Drivers turning left across oncoming traffic or turning on yellow without checking cross-traffic and crossing pedestrians.",
+        "historical_frequency_pct": 34.2
       },
       "behavior_factor": {
-        "title": "Tailgating & Speed Variance",
-        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+        "title": "Tailgating & Sudden Braking",
+        "explanation": "High-density commuter queues cause rear-end collisions when drivers follow too closely during rush hours.",
+        "risk_level": "MODERATE"
       },
       "street_environment": {
-        "zone_type": "Residential",
-        "average_speed_kmh": 57.81,
-        "congestion_level": 22.68
+        "posted_speed_limit_mph": 30.0,
+        "intersection_crossroad_density_pct": 18.6,
+        "title": "30 mph Zone | 19% Crossroad Density",
+        "explanation": "Frequent signalized crossroads combined with multi-lane traffic flow increase conflict points at peak times."
       }
     },
     "civilian_safety_guide": {
       "for_drivers": {
         "action": "Increase Following Distance",
-        "details": "Maintain 3 car lengths buffer during peak rush hours."
+        "details": "Maintain at least 3 car lengths of space behind the vehicle ahead. Avoid tailgating near transit stops and expressway exit ramps where sudden stops occur.",
+        "key_tip": "Leave 3-4 car lengths buffer on commercial transit corridors"
       },
       "for_pedestrians_and_cyclists": {
-        "action": "Double-Check Turning Vehicles",
-        "details": "Make eye contact with turning drivers at intersections before crossing."
+        "action": "Double-Check Turning Cars",
+        "details": "Make eye contact with drivers turning right on red before stepping into crosswalks. Use reflective gear or activate bicycle lights after dusk.",
+        "key_tip": "Never assume a turning driver has seen you at green lights"
       },
       "peak_danger_windows": {
-        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
-        "details": "Congestion peaks during evening travel windows."
+        "primary_peak": "4:30 PM - 7:30 PM Weekdays (Evening Commute Congestion)",
+        "secondary_peak": "10:00 PM - 2:00 AM Friday & Saturday (Reduced Lighting & Speed Variance)",
+        "details": "Evening rush hours experience 3x higher collision rates than midday. Exercise maximum patience during heavy congestion."
       }
     }
   },
   "raw_metrics": {
     "zone_id": "Zone_25",
+    "chicago_beat": "811",
     "week": 15,
-    "zone_type": "Residential",
-    "temporal_profile": "STABLE",
-    "population_density": 10790,
-    "road_capacity": 71,
-    "effective_road_capacity": 71.0,
-    "vehicle_density": 31.41,
-    "traffic_pressure": 0.442,
-    "congestion": 22.68,
-    "average_speed": 57.81,
-    "red_light_violations": 4,
-    "weather": "Normal",
-    "road_condition": "Good",
-    "special_event": 0,
-    "incident_count": 0,
-    "incident_occurred": 0,
-    "previous_week_vehicle_density": 30.65,
-    "previous_week_congestion": 23.35,
-    "previous_week_average_speed": 51.67,
-    "previous_week_red_light_violations": 5.0,
-    "previous_week_incident_count": 0.0,
-    "previous_week_incident_occurred": 0.0,
-    "previous_week_traffic_pressure": 0.521,
-    "rolling_4_week_avg_vehicle_density": 34.18,
-    "rolling_4_week_avg_congestion": 26.7,
-    "rolling_4_week_avg_speed": 54.34,
-    "rolling_4_week_avg_violations": 2.75,
-    "rolling_4_week_incident_count": 2.0,
-    "rolling_4_week_incident_rate": 0.25,
-    "rolling_4_week_avg_traffic_pressure": 0.529,
-    "vehicle_density_change": 0.76,
-    "congestion_change": -0.67,
-    "speed_change": 6.14,
-    "violations_change": -1.0,
-    "traffic_pressure_change": -0.079,
-    "incident_count_change": -2.0,
-    "vehicle_density_pct_change": 2.48,
-    "congestion_pct_change": -2.87,
-    "speed_pct_change": 11.88,
-    "vehicle_population_ratio": 2.911,
-    "congestion_trend_4w": -0.222,
-    "vehicle_density_trend_4w": -0.794,
-    "speed_trend_4w": -1.175,
-    "incident_trend_4w": 0.1,
-    "car_percentage": 35.0,
-    "motorcycle_percentage": 52.9,
-    "bus_percentage": 7.4,
-    "truck_percentage": 4.6,
-    "moving_vehicle_percentage": 74.2,
-    "slow_vehicle_percentage": 13.2,
-    "stopped_vehicle_percentage": 12.6,
-    "location_name": "Okhla",
-    "city": "Delhi",
-    "latitude": 28.5355,
-    "longitude": 77.264,
-    "predicted_risk_probability": 0.3606,
-    "risk_score": 36.0588,
-    "population_exposure_score": 67.7419,
-    "vehicle_exposure_score": 43.6709,
-    "temporal_trend_score": 62.573,
-    "priority_score": 49.4791,
-    "priority_rank": 21,
-    "priority_level": "MODERATE",
-    "risk_prob": 0.3606
+    "crashes": 0,
+    "rolling4w_avg": 1.5,
+    "speed_mph": 30.0
   }
 }

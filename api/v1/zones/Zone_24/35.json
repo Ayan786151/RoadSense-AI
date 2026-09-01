@@ -1,225 +1,155 @@
 {
   "zone_id": "Zone_24",
-  "location_name": "Nehru Place",
-  "city": "Delhi",
-  "zone_type": "Commercial_Downtown",
+  "location_name": "Clearing - W 63Rd St & S Kedzie Ave",
+  "city": "Chicago",
+  "zone_type": "Airport Logistics & Dense Commercial",
   "week": 35,
-  "latitude": 28.5491,
-  "longitude": 77.2519,
+  "latitude": 41.779,
+  "longitude": -87.7034,
   "risk_analysis": {
-    "predicted_risk_probability": 0.505,
-    "predicted_risk_percentage": 50.5,
-    "risk_label": "MODERATE RISK",
-    "risk_color": "#eab308",
-    "risk_delta_vs_prev_week": 21.7547,
+    "predicted_risk_probability": 0.896,
+    "predicted_risk_percentage": 89.6,
+    "risk_label": "CRITICAL RISK",
+    "risk_color": "#ef4444",
+    "risk_delta_vs_prev_week": 1.0,
     "actual_incident": 0
   },
   "priority": {
-    "priority_score": 43.4551,
-    "priority_rank": 28,
-    "priority_level": "MODERATE",
+    "priority_score": 67.73,
+    "priority_rank": 1,
+    "priority_level": "HIGH",
     "components": {
-      "risk_score": 50.5002,
-      "population_exposure_score": 52.2523,
-      "vehicle_exposure_score": 35.6616,
-      "temporal_trend_score": 20.3973
+      "risk_score": 89.6,
+      "population_exposure_score": 65.0,
+      "vehicle_exposure_score": 39.6,
+      "temporal_trend_score": 51.5
     },
     "explanation": {
-      "priority_level": "MODERATE",
-      "priority_score": 43.5,
-      "top_contributors": [
-        {
-          "factor": "Risk Score",
-          "icon": "\ud83d\udfe1",
-          "value": "51/100",
-          "impact": "MEDIUM",
-          "detail": "Moderate model-estimated risk",
-          "weight": 50.5002
-        },
-        {
-          "factor": "Population Exposure",
-          "icon": "\ud83d\udc65",
-          "value": "52/100",
-          "impact": "MEDIUM",
-          "detail": "Moderate population exposure",
-          "weight": 36.5766
-        },
-        {
-          "factor": "Improving Trend",
-          "icon": "\ud83d\udcc9",
-          "value": "20/100",
-          "impact": "POSITIVE",
-          "detail": "Conditions are improving over past 4 weeks",
-          "weight": -20.3973
-        }
-      ],
-      "total_factors": 3,
-      "assessment": "This zone has moderate risk levels with contributing factors: Risk Score, Population Exposure. Continue monitoring and schedule review if conditions worsen."
+      "priority_level": "HIGH",
+      "priority_score": 67.73,
+      "assessment": "Chicago corridor in 08th District - Chicago Lawn exhibits high traffic hazard priority driven by Chicago crash history."
     }
   },
   "telemetry": {
-    "congestion": 30.21,
-    "congestion_delta": 14.37,
-    "average_speed_kmh": 34.81,
-    "speed_delta": -19.62,
-    "vehicle_density": 27.34,
-    "density_delta": 2.05,
-    "population_density": 8634,
-    "red_light_violations": 4,
-    "weather": "Heavy Rain",
+    "congestion": 38.3,
+    "congestion_delta": 0.0,
+    "average_speed_kmh": 48.3,
+    "speed_delta": 0.0,
+    "vehicle_density": 45.5,
+    "density_delta": 0.0,
+    "population_density": 8500,
+    "red_light_violations": 0,
+    "weather": "CLEAR",
     "special_event": 0
   },
   "signal_optimization": {
-    "base_green_seconds": 40,
-    "recommended_green_seconds": 56,
-    "change_seconds": 16,
-    "change_percent": 40.0,
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 44,
+    "change_seconds": 9,
+    "change_percent": 25.7,
     "urgency": "HIGH",
     "reason": "Elevated traffic density needs extended clearance time",
     "factors": {
-      "congestion_factor": 1.24,
-      "density_factor": 1.11,
-      "speed_factor": 0.87,
+      "congestion_factor": 1.31,
+      "density_factor": 1.18,
+      "speed_factor": 0.82,
       "event_boost": 1.0,
-      "weather_boost": 1.18
+      "weather_boost": 1.0
     }
   },
   "environmental_impact": {
-    "total_co2_kg_per_week": 23688.0,
-    "total_co2_tonnes_per_year": 1231.78,
-    "idle_co2_kg": 4559.2,
-    "moving_co2_kg": 19128.8,
-    "potential_savings_kg_per_week": 1049.6,
-    "potential_savings_tonnes_per_year": 54.58,
-    "trees_equivalent_per_year": 2598,
-    "fuel_saved_liters_per_week": 454.4,
-    "citizens_impacted": 17268,
-    "optimization_factor_pct": 23.0
+    "total_co2_kg_per_week": 48670.8,
+    "total_co2_tonnes_per_year": 2530.88,
+    "idle_co2_kg": 9619.4,
+    "moving_co2_kg": 39051.4,
+    "potential_savings_kg_per_week": 2292.3,
+    "potential_savings_tonnes_per_year": 119.2,
+    "trees_equivalent_per_year": 5676,
+    "fuel_saved_liters_per_week": 992.3,
+    "citizens_impacted": 17000,
+    "optimization_factor_pct": 23.8
   },
   "interventions": [
     {
-      "id": "ROAD_MAINTENANCE",
-      "name": "Road Maintenance Inspection",
-      "icon": "\ud83d\udee3\ufe0f",
-      "severity": "MEDIUM",
-      "description": "Deteriorated road surface combined with elevated risk indicates infrastructure maintenance need.",
-      "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
+      "title": "Deploy Speed Calming & Signal Synchronization on W 63Rd St & S Kedzie Ave",
+      "type": "MUNICIPAL_CORRIDOR_CALMING",
+      "priority": "HIGH",
+      "target_reduction": "18% collision frequency reduction"
+    },
+    {
+      "title": "Pedestrian Crosswalk High-Visibility Illumination & Turn Signal Audit",
+      "type": "INFRASTRUCTURE_SAFETY",
+      "priority": "HIGH",
+      "target_reduction": "Eliminate left-turn crossing conflicts"
     }
   ],
-  "executive_briefing": "Nehru Place shows elevated risk at 51%. Continue routine monitoring. Optimizing signals could save 1050 kg CO2/week, equivalent to 2598 trees/year.",
+  "executive_briefing": "Chicago Police Beat 823 (Clearing - W 63Rd St & S Kedzie Ave) logged 0 collisions in week 35. Machine learning incident risk is 89.6%, forecasted at 90.6% for next week.",
   "civilian_road_safety_radar": {
     "current_week": {
-      "week": 35,
-      "risk_score": 50.5,
-      "risk_percentage": "51%",
-      "risk_badge": "MODERATE RISK",
-      "risk_color": "#eab308",
-      "description": "Corridor operating within normal baseline.",
-      "crashes_reported": 0
+      "period": "2024-W35",
+      "date_range": "Week 35, 2024",
+      "risk_score": 89.6,
+      "risk_percentage": "90%",
+      "risk_badge": "[HIGH RISK ALERT]",
+      "risk_color": "#ef4444",
+      "description": "Elevated collision hazard recorded. Extra vigilance recommended.",
+      "crashes_reported": 0,
+      "crashes_rolling4w_avg": 1.5,
+      "dominant_weather": "CLEAR"
     },
     "upcoming_week": {
-      "predicted_risk_probability": 0.7568,
-      "predicted_risk_percentage": "76%",
-      "predicted_risk_badge": "CRITICAL RISK",
+      "period": "2024-W36",
+      "predicted_risk_probability": 0.906,
+      "predicted_risk_percentage": "91%",
+      "predicted_risk_badge": "[HIGH RISK ALERT]",
       "risk_color": "#ef4444",
       "description": "Forecast models project elevated collision probability.",
-      "trend_label": "[TREND: INCREASING HAZARD]"
+      "trend_label": "[TREND: STABLE]",
+      "trend_color": "#ef4444",
+      "trend_percentage_change": "0%"
     },
     "why_accidents_might_happen": {
       "primary_collision_cause": {
-        "title": "Congestion Bottleneck & Merge Conflicts",
-        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+        "title": "Failing to Yield Right-of-Way",
+        "explanation": "Drivers turning left across oncoming traffic or turning on yellow without checking cross-traffic and crossing pedestrians.",
+        "historical_frequency_pct": 34.2
       },
       "behavior_factor": {
-        "title": "Tailgating & Speed Variance",
-        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+        "title": "Tailgating & Sudden Braking",
+        "explanation": "High-density commuter queues cause rear-end collisions when drivers follow too closely during rush hours.",
+        "risk_level": "ELEVATED"
       },
       "street_environment": {
-        "zone_type": "Commercial_Downtown",
-        "average_speed_kmh": 34.81,
-        "congestion_level": 30.21
+        "posted_speed_limit_mph": 30.0,
+        "intersection_crossroad_density_pct": 12.2,
+        "title": "30 mph Zone | 12% Crossroad Density",
+        "explanation": "Frequent signalized crossroads combined with multi-lane traffic flow increase conflict points at peak times."
       }
     },
     "civilian_safety_guide": {
       "for_drivers": {
         "action": "Increase Following Distance",
-        "details": "Maintain 3 car lengths buffer during peak rush hours."
+        "details": "Maintain at least 3 car lengths of space behind the vehicle ahead. Avoid tailgating near transit stops and expressway exit ramps where sudden stops occur.",
+        "key_tip": "Leave 3-4 car lengths buffer on commercial transit corridors"
       },
       "for_pedestrians_and_cyclists": {
-        "action": "Double-Check Turning Vehicles",
-        "details": "Make eye contact with turning drivers at intersections before crossing."
+        "action": "Double-Check Turning Cars",
+        "details": "Make eye contact with drivers turning right on red before stepping into crosswalks. Use reflective gear or activate bicycle lights after dusk.",
+        "key_tip": "Never assume a turning driver has seen you at green lights"
       },
       "peak_danger_windows": {
-        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
-        "details": "Congestion peaks during evening travel windows."
+        "primary_peak": "4:30 PM - 7:30 PM Weekdays (Evening Commute Congestion)",
+        "secondary_peak": "10:00 PM - 2:00 AM Friday & Saturday (Reduced Lighting & Speed Variance)",
+        "details": "Evening rush hours experience 3x higher collision rates than midday. Exercise maximum patience during heavy congestion."
       }
     }
   },
   "raw_metrics": {
     "zone_id": "Zone_24",
+    "chicago_beat": "823",
     "week": 35,
-    "zone_type": "Commercial_Downtown",
-    "temporal_profile": "GRADUAL_IMPROVEMENT",
-    "population_density": 8634,
-    "road_capacity": 99,
-    "effective_road_capacity": 57.91,
-    "vehicle_density": 27.34,
-    "traffic_pressure": 0.472,
-    "congestion": 30.21,
-    "average_speed": 34.81,
-    "red_light_violations": 4,
-    "weather": "Heavy Rain",
-    "road_condition": "Poor",
-    "special_event": 0,
-    "incident_count": 0,
-    "incident_occurred": 0,
-    "previous_week_vehicle_density": 25.29,
-    "previous_week_congestion": 15.84,
-    "previous_week_average_speed": 54.43,
-    "previous_week_red_light_violations": 3.0,
-    "previous_week_incident_count": 0.0,
-    "previous_week_incident_occurred": 0.0,
-    "previous_week_traffic_pressure": 0.309,
-    "rolling_4_week_avg_vehicle_density": 32.35,
-    "rolling_4_week_avg_congestion": 22.78,
-    "rolling_4_week_avg_speed": 50.93,
-    "rolling_4_week_avg_violations": 4.5,
-    "rolling_4_week_incident_count": 2.0,
-    "rolling_4_week_incident_rate": 0.25,
-    "rolling_4_week_avg_traffic_pressure": 0.423,
-    "vehicle_density_change": 2.05,
-    "congestion_change": 14.37,
-    "speed_change": -19.62,
-    "violations_change": 1.0,
-    "traffic_pressure_change": 0.163,
-    "incident_count_change": 0.0,
-    "vehicle_density_pct_change": 8.11,
-    "congestion_pct_change": 90.72,
-    "speed_pct_change": -36.05,
-    "vehicle_population_ratio": 3.167,
-    "congestion_trend_4w": -5.709,
-    "vehicle_density_trend_4w": -2.986,
-    "speed_trend_4w": 4.814,
-    "incident_trend_4w": -0.3,
-    "car_percentage": 44.7,
-    "motorcycle_percentage": 37.1,
-    "bus_percentage": 10.4,
-    "truck_percentage": 7.8,
-    "moving_vehicle_percentage": 79.2,
-    "slow_vehicle_percentage": 13.2,
-    "stopped_vehicle_percentage": 7.6,
-    "location_name": "Nehru Place",
-    "city": "Delhi",
-    "latitude": 28.5491,
-    "longitude": 77.2519,
-    "predicted_risk_probability": 0.505,
-    "risk_score": 50.5002,
-    "population_exposure_score": 52.2523,
-    "vehicle_exposure_score": 35.6616,
-    "temporal_trend_score": 20.3973,
-    "priority_score": 43.4551,
-    "priority_rank": 28,
-    "priority_level": "MODERATE",
-    "risk_prob": 0.505
+    "crashes": 0,
+    "rolling4w_avg": 1.5,
+    "speed_mph": 30.0
   }
 }

@@ -1,217 +1,155 @@
 {
   "zone_id": "Zone_48",
-  "location_name": "Ambattur",
-  "city": "Chennai",
-  "zone_type": "Industrial_Corridor",
+  "location_name": "Galewood - S Cicero Ave & W Madison St",
+  "city": "Chicago",
+  "zone_type": "High-Volume Commercial Arterials",
   "week": 35,
-  "latitude": 13.1143,
-  "longitude": 80.1486,
+  "latitude": 41.8766,
+  "longitude": -87.7466,
   "risk_analysis": {
-    "predicted_risk_probability": 0.5357,
-    "predicted_risk_percentage": 53.57,
-    "risk_label": "MODERATE RISK",
-    "risk_color": "#eab308",
-    "risk_delta_vs_prev_week": 17.4936,
+    "predicted_risk_probability": 0.817,
+    "predicted_risk_percentage": 81.7,
+    "risk_label": "CRITICAL RISK",
+    "risk_color": "#ef4444",
+    "risk_delta_vs_prev_week": -2.0,
     "actual_incident": 0
   },
   "priority": {
-    "priority_score": 32.6214,
-    "priority_rank": 36,
-    "priority_level": "LOW",
+    "priority_score": 63.9,
+    "priority_rank": 1,
+    "priority_level": "HIGH",
     "components": {
-      "risk_score": 53.5703,
-      "population_exposure_score": 18.9525,
-      "vehicle_exposure_score": 27.5712,
-      "temporal_trend_score": 6.2731
+      "risk_score": 81.7,
+      "population_exposure_score": 65.0,
+      "vehicle_exposure_score": 39.6,
+      "temporal_trend_score": 47.0
     },
     "explanation": {
-      "priority_level": "LOW",
-      "priority_score": 32.6,
-      "top_contributors": [
-        {
-          "factor": "Risk Score",
-          "icon": "\ud83d\udfe1",
-          "value": "54/100",
-          "impact": "MEDIUM",
-          "detail": "Moderate model-estimated risk",
-          "weight": 53.5703
-        },
-        {
-          "factor": "Improving Trend",
-          "icon": "\ud83d\udcc9",
-          "value": "6/100",
-          "impact": "POSITIVE",
-          "detail": "Conditions are improving over past 4 weeks",
-          "weight": -6.2731
-        }
-      ],
-      "total_factors": 2,
-      "assessment": "This zone is currently within acceptable safety parameters. Routine monitoring is sufficient."
+      "priority_level": "HIGH",
+      "priority_score": 63.9,
+      "assessment": "Chicago corridor in 15th District - Austin exhibits high traffic hazard priority driven by Chicago crash history."
     }
   },
   "telemetry": {
-    "congestion": 32.55,
-    "congestion_delta": 11.4,
-    "average_speed_kmh": 34.47,
-    "speed_delta": -17.68,
-    "vehicle_density": 22.51,
-    "density_delta": -2.69,
-    "population_density": 3999,
-    "red_light_violations": 4,
-    "weather": "Heavy Rain",
+    "congestion": 38.3,
+    "congestion_delta": 0.0,
+    "average_speed_kmh": 48.3,
+    "speed_delta": 0.0,
+    "vehicle_density": 45.5,
+    "density_delta": 0.0,
+    "population_density": 8500,
+    "red_light_violations": 0,
+    "weather": "CLEAR",
     "special_event": 0
   },
   "signal_optimization": {
-    "base_green_seconds": 45,
-    "recommended_green_seconds": 63,
-    "change_seconds": 18,
-    "change_percent": 40.0,
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 44,
+    "change_seconds": 9,
+    "change_percent": 25.7,
     "urgency": "HIGH",
     "reason": "Elevated traffic density needs extended clearance time",
     "factors": {
-      "congestion_factor": 1.26,
-      "density_factor": 1.09,
-      "speed_factor": 0.87,
+      "congestion_factor": 1.31,
+      "density_factor": 1.18,
+      "speed_factor": 0.82,
       "event_boost": 1.0,
-      "weather_boost": 1.18
+      "weather_boost": 1.0
     }
   },
   "environmental_impact": {
-    "total_co2_kg_per_week": 19117.2,
-    "total_co2_tonnes_per_year": 994.1,
-    "idle_co2_kg": 4044.5,
-    "moving_co2_kg": 15072.7,
-    "potential_savings_kg_per_week": 940.6,
-    "potential_savings_tonnes_per_year": 48.91,
-    "trees_equivalent_per_year": 2328,
-    "fuel_saved_liters_per_week": 407.2,
-    "citizens_impacted": 7998,
-    "optimization_factor_pct": 23.3
+    "total_co2_kg_per_week": 48670.8,
+    "total_co2_tonnes_per_year": 2530.88,
+    "idle_co2_kg": 9619.4,
+    "moving_co2_kg": 39051.4,
+    "potential_savings_kg_per_week": 2292.3,
+    "potential_savings_tonnes_per_year": 119.2,
+    "trees_equivalent_per_year": 5676,
+    "fuel_saved_liters_per_week": 992.3,
+    "citizens_impacted": 17000,
+    "optimization_factor_pct": 23.8
   },
   "interventions": [
     {
-      "id": "ROAD_MAINTENANCE",
-      "name": "Road Maintenance Inspection",
-      "icon": "\ud83d\udee3\ufe0f",
-      "severity": "MEDIUM",
-      "description": "Deteriorated road surface combined with elevated risk indicates infrastructure maintenance need.",
-      "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
+      "title": "Deploy Speed Calming & Signal Synchronization on S Cicero Ave & W Madison St",
+      "type": "MUNICIPAL_CORRIDOR_CALMING",
+      "priority": "HIGH",
+      "target_reduction": "18% collision frequency reduction"
+    },
+    {
+      "title": "Pedestrian Crosswalk High-Visibility Illumination & Turn Signal Audit",
+      "type": "INFRASTRUCTURE_SAFETY",
+      "priority": "HIGH",
+      "target_reduction": "Eliminate left-turn crossing conflicts"
     }
   ],
-  "executive_briefing": "Ambattur shows elevated risk at 54%. Continue routine monitoring. Optimizing signals could save 941 kg CO2/week, equivalent to 2328 trees/year.",
+  "executive_briefing": "Chicago Police Beat 1533 (Galewood - S Cicero Ave & W Madison St) logged 0 collisions in week 35. Machine learning incident risk is 81.7%, forecasted at 79.7% for next week.",
   "civilian_road_safety_radar": {
     "current_week": {
-      "week": 35,
-      "risk_score": 53.6,
-      "risk_percentage": "54%",
-      "risk_badge": "MODERATE RISK",
-      "risk_color": "#eab308",
-      "description": "Corridor operating within normal baseline.",
-      "crashes_reported": 0
+      "period": "2024-W35",
+      "date_range": "Week 35, 2024",
+      "risk_score": 81.7,
+      "risk_percentage": "82%",
+      "risk_badge": "[HIGH RISK ALERT]",
+      "risk_color": "#ef4444",
+      "description": "Elevated collision hazard recorded. Extra vigilance recommended.",
+      "crashes_reported": 0,
+      "crashes_rolling4w_avg": 1.5,
+      "dominant_weather": "CLEAR"
     },
     "upcoming_week": {
-      "predicted_risk_probability": 0.2443,
-      "predicted_risk_percentage": "24%",
-      "predicted_risk_badge": "LOW RISK",
-      "risk_color": "#22c55e",
-      "description": "Forecast models project normal baseline traffic conditions.",
-      "trend_label": "[TREND: COOLING DOWN]"
+      "period": "2024-W36",
+      "predicted_risk_probability": 0.797,
+      "predicted_risk_percentage": "80%",
+      "predicted_risk_badge": "[HIGH RISK ALERT]",
+      "risk_color": "#ef4444",
+      "description": "Forecast models project elevated collision probability.",
+      "trend_label": "[TREND: STABLE]",
+      "trend_color": "#ef4444",
+      "trend_percentage_change": "0%"
     },
     "why_accidents_might_happen": {
       "primary_collision_cause": {
-        "title": "Congestion Bottleneck & Merge Conflicts",
-        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+        "title": "Failing to Yield Right-of-Way",
+        "explanation": "Drivers turning left across oncoming traffic or turning on yellow without checking cross-traffic and crossing pedestrians.",
+        "historical_frequency_pct": 34.2
       },
       "behavior_factor": {
-        "title": "Tailgating & Speed Variance",
-        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+        "title": "Tailgating & Sudden Braking",
+        "explanation": "High-density commuter queues cause rear-end collisions when drivers follow too closely during rush hours.",
+        "risk_level": "ELEVATED"
       },
       "street_environment": {
-        "zone_type": "Industrial_Corridor",
-        "average_speed_kmh": 34.47,
-        "congestion_level": 32.55
+        "posted_speed_limit_mph": 30.0,
+        "intersection_crossroad_density_pct": 23.8,
+        "title": "30 mph Zone | 24% Crossroad Density",
+        "explanation": "Frequent signalized crossroads combined with multi-lane traffic flow increase conflict points at peak times."
       }
     },
     "civilian_safety_guide": {
       "for_drivers": {
         "action": "Increase Following Distance",
-        "details": "Maintain 3 car lengths buffer during peak rush hours."
+        "details": "Maintain at least 3 car lengths of space behind the vehicle ahead. Avoid tailgating near transit stops and expressway exit ramps where sudden stops occur.",
+        "key_tip": "Leave 3-4 car lengths buffer on commercial transit corridors"
       },
       "for_pedestrians_and_cyclists": {
-        "action": "Double-Check Turning Vehicles",
-        "details": "Make eye contact with turning drivers at intersections before crossing."
+        "action": "Double-Check Turning Cars",
+        "details": "Make eye contact with drivers turning right on red before stepping into crosswalks. Use reflective gear or activate bicycle lights after dusk.",
+        "key_tip": "Never assume a turning driver has seen you at green lights"
       },
       "peak_danger_windows": {
-        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
-        "details": "Congestion peaks during evening travel windows."
+        "primary_peak": "4:30 PM - 7:30 PM Weekdays (Evening Commute Congestion)",
+        "secondary_peak": "10:00 PM - 2:00 AM Friday & Saturday (Reduced Lighting & Speed Variance)",
+        "details": "Evening rush hours experience 3x higher collision rates than midday. Exercise maximum patience during heavy congestion."
       }
     }
   },
   "raw_metrics": {
     "zone_id": "Zone_48",
+    "chicago_beat": "1533",
     "week": 35,
-    "zone_type": "Industrial_Corridor",
-    "temporal_profile": "RECOVERY_AFTER_DISRUPTION",
-    "population_density": 3999,
-    "road_capacity": 72,
-    "effective_road_capacity": 42.12,
-    "vehicle_density": 22.51,
-    "traffic_pressure": 0.534,
-    "congestion": 32.55,
-    "average_speed": 34.47,
-    "red_light_violations": 4,
-    "weather": "Heavy Rain",
-    "road_condition": "Poor",
-    "special_event": 0,
-    "incident_count": 0,
-    "incident_occurred": 0,
-    "previous_week_vehicle_density": 25.2,
-    "previous_week_congestion": 21.15,
-    "previous_week_average_speed": 52.15,
-    "previous_week_red_light_violations": 2.0,
-    "previous_week_incident_count": 0.0,
-    "previous_week_incident_occurred": 0.0,
-    "previous_week_traffic_pressure": 0.423,
-    "rolling_4_week_avg_vehicle_density": 27.36,
-    "rolling_4_week_avg_congestion": 39.1,
-    "rolling_4_week_avg_speed": 35.94,
-    "rolling_4_week_avg_violations": 4.75,
-    "rolling_4_week_incident_count": 1.0,
-    "rolling_4_week_incident_rate": 0.25,
-    "rolling_4_week_avg_traffic_pressure": 0.606,
-    "vehicle_density_change": -2.69,
-    "congestion_change": 11.4,
-    "speed_change": -17.68,
-    "violations_change": 2.0,
-    "traffic_pressure_change": 0.111,
-    "incident_count_change": 0.0,
-    "vehicle_density_pct_change": -10.67,
-    "congestion_pct_change": 53.9,
-    "speed_pct_change": -33.9,
-    "vehicle_population_ratio": 5.629,
-    "congestion_trend_4w": -11.106,
-    "vehicle_density_trend_4w": -2.428,
-    "speed_trend_4w": 8.38,
-    "incident_trend_4w": -0.1,
-    "car_percentage": 42.1,
-    "motorcycle_percentage": 40.9,
-    "bus_percentage": 11.3,
-    "truck_percentage": 5.6,
-    "moving_vehicle_percentage": 87.5,
-    "slow_vehicle_percentage": 18.6,
-    "stopped_vehicle_percentage": 0.0,
-    "location_name": "Ambattur",
-    "city": "Chennai",
-    "latitude": 13.1143,
-    "longitude": 80.1486,
-    "predicted_risk_probability": 0.5357,
-    "risk_score": 53.5703,
-    "population_exposure_score": 18.9525,
-    "vehicle_exposure_score": 27.5712,
-    "temporal_trend_score": 6.2731,
-    "priority_score": 32.6214,
-    "priority_rank": 36,
-    "priority_level": "LOW",
-    "risk_prob": 0.5357
+    "crashes": 0,
+    "rolling4w_avg": 1.5,
+    "speed_mph": 30.0
   }
 }

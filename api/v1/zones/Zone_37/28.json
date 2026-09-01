@@ -1,241 +1,155 @@
 {
   "zone_id": "Zone_37",
-  "location_name": "Vrindavan Yojana",
-  "city": "Lucknow",
-  "zone_type": "Residential",
+  "location_name": "North Park - W Addison St & N Elston Ave",
+  "city": "Chicago",
+  "zone_type": "Global Transit Corridor & River Junction",
   "week": 28,
-  "latitude": 26.79,
-  "longitude": 81.0,
+  "latitude": 41.9465,
+  "longitude": -87.7077,
   "risk_analysis": {
-    "predicted_risk_probability": 0.45,
-    "predicted_risk_percentage": 45.0,
-    "risk_label": "MODERATE RISK",
-    "risk_color": "#eab308",
-    "risk_delta_vs_prev_week": -33.5043,
+    "predicted_risk_probability": 0.833,
+    "predicted_risk_percentage": 83.3,
+    "risk_label": "CRITICAL RISK",
+    "risk_color": "#ef4444",
+    "risk_delta_vs_prev_week": -0.5,
     "actual_incident": 0
   },
   "priority": {
-    "priority_score": 70.9738,
-    "priority_rank": 4,
+    "priority_score": 64.87,
+    "priority_rank": 1,
     "priority_level": "HIGH",
     "components": {
-      "risk_score": 45.0004,
-      "population_exposure_score": 72.6561,
-      "vehicle_exposure_score": 99.0479,
-      "temporal_trend_score": 100.0
+      "risk_score": 83.3,
+      "population_exposure_score": 65.0,
+      "vehicle_exposure_score": 39.6,
+      "temporal_trend_score": 49.2
     },
     "explanation": {
       "priority_level": "HIGH",
-      "priority_score": 71.0,
-      "top_contributors": [
-        {
-          "factor": "Worsening Trend",
-          "icon": "\ud83d\udcc8",
-          "value": "100/100",
-          "impact": "HIGH",
-          "detail": "4-week congestion trend is actively worsening \u2014 conditions deteriorating",
-          "weight": 100.0
-        },
-        {
-          "factor": "Vehicle Density",
-          "icon": "\ud83d\ude99",
-          "value": "99/100",
-          "impact": "HIGH",
-          "detail": "High vehicle density increases collision exposure",
-          "weight": 99.0479
-        },
-        {
-          "factor": "Population Exposure",
-          "icon": "\ud83d\udc65",
-          "value": "73/100",
-          "impact": "HIGH",
-          "detail": "High population density zone \u2014 11474 residents/km\u00b2",
-          "weight": 72.6561
-        },
-        {
-          "factor": "Risk Score",
-          "icon": "\ud83d\udfe1",
-          "value": "45/100",
-          "impact": "MEDIUM",
-          "detail": "Moderate model-estimated risk",
-          "weight": 45.0004
-        },
-        {
-          "factor": "Congestion",
-          "icon": "\ud83d\ude97",
-          "value": "57/100",
-          "impact": "MEDIUM",
-          "detail": "Moderate congestion at 57",
-          "weight": 40.068
-        }
-      ],
-      "total_factors": 5,
-      "assessment": "This zone shows significant risk elevation driven by Worsening Trend, Vehicle Density. Proactive intervention should be scheduled within the current planning cycle."
+      "priority_score": 64.87,
+      "assessment": "Chicago corridor in 17th District - Albany Park exhibits high traffic hazard priority driven by Chicago crash history."
     }
   },
   "telemetry": {
-    "congestion": 57.24,
-    "congestion_delta": -17.65,
-    "average_speed_kmh": 44.99,
-    "speed_delta": 16.1,
-    "vehicle_density": 70.02,
-    "density_delta": 3.98,
-    "population_density": 11474,
-    "red_light_violations": 6,
-    "weather": "Normal",
+    "congestion": 38.3,
+    "congestion_delta": 0.0,
+    "average_speed_kmh": 48.3,
+    "speed_delta": 0.0,
+    "vehicle_density": 45.5,
+    "density_delta": 0.0,
+    "population_density": 8500,
+    "red_light_violations": 0,
+    "weather": "CLEAR",
     "special_event": 0
   },
   "signal_optimization": {
-    "base_green_seconds": 30,
-    "recommended_green_seconds": 46,
-    "change_seconds": 16,
-    "change_percent": 53.3,
-    "urgency": "CRITICAL",
-    "reason": "Severe congestion requires significantly extended green phase",
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 44,
+    "change_seconds": 9,
+    "change_percent": 25.7,
+    "urgency": "HIGH",
+    "reason": "Elevated traffic density needs extended clearance time",
     "factors": {
-      "congestion_factor": 1.46,
-      "density_factor": 1.28,
-      "speed_factor": 0.83,
+      "congestion_factor": 1.31,
+      "density_factor": 1.18,
+      "speed_factor": 0.82,
       "event_boost": 1.0,
       "weather_boost": 1.0
     }
   },
   "environmental_impact": {
-    "total_co2_kg_per_week": 60918.2,
-    "total_co2_tonnes_per_year": 3167.75,
-    "idle_co2_kg": 22123.9,
-    "moving_co2_kg": 38794.3,
-    "potential_savings_kg_per_week": 5691.1,
-    "potential_savings_tonnes_per_year": 295.94,
-    "trees_equivalent_per_year": 14092,
-    "fuel_saved_liters_per_week": 2463.7,
-    "citizens_impacted": 22948,
-    "optimization_factor_pct": 25.7
+    "total_co2_kg_per_week": 48670.8,
+    "total_co2_tonnes_per_year": 2530.88,
+    "idle_co2_kg": 9619.4,
+    "moving_co2_kg": 39051.4,
+    "potential_savings_kg_per_week": 2292.3,
+    "potential_savings_tonnes_per_year": 119.2,
+    "trees_equivalent_per_year": 5676,
+    "fuel_saved_liters_per_week": 992.3,
+    "citizens_impacted": 17000,
+    "optimization_factor_pct": 23.8
   },
   "interventions": [
     {
-      "id": "PEDESTRIAN_SAFETY",
-      "name": "Pedestrian Crossing Intervention",
-      "icon": "\ud83d\udeb6",
-      "severity": "MEDIUM",
-      "description": "High population density zone with significant traffic congestion creates pedestrian exposure risk.",
-      "action": "Install protected pedestrian crossings, improve sidewalk infrastructure, and add pedestrian countdown signals."
+      "title": "Deploy Speed Calming & Signal Synchronization on W Addison St & N Elston Ave",
+      "type": "MUNICIPAL_CORRIDOR_CALMING",
+      "priority": "HIGH",
+      "target_reduction": "18% collision frequency reduction"
+    },
+    {
+      "title": "Pedestrian Crosswalk High-Visibility Illumination & Turn Signal Audit",
+      "type": "INFRASTRUCTURE_SAFETY",
+      "priority": "HIGH",
+      "target_reduction": "Eliminate left-turn crossing conflicts"
     }
   ],
-  "executive_briefing": "Vrindavan Yojana shows elevated risk at 45%. Continue routine monitoring. Optimizing signals could save 5691 kg CO2/week, equivalent to 14092 trees/year.",
+  "executive_briefing": "Chicago Police Beat 1733 (North Park - W Addison St & N Elston Ave) logged 0 collisions in week 28. Machine learning incident risk is 83.3%, forecasted at 82.8% for next week.",
   "civilian_road_safety_radar": {
     "current_week": {
-      "week": 28,
-      "risk_score": 45.0,
-      "risk_percentage": "45%",
-      "risk_badge": "MODERATE RISK",
-      "risk_color": "#eab308",
-      "description": "Corridor operating within normal baseline.",
-      "crashes_reported": 0
+      "period": "2024-W28",
+      "date_range": "Week 28, 2024",
+      "risk_score": 83.3,
+      "risk_percentage": "83%",
+      "risk_badge": "[HIGH RISK ALERT]",
+      "risk_color": "#ef4444",
+      "description": "Elevated collision hazard recorded. Extra vigilance recommended.",
+      "crashes_reported": 0,
+      "crashes_rolling4w_avg": 1.5,
+      "dominant_weather": "CLEAR"
     },
     "upcoming_week": {
-      "predicted_risk_probability": 0.3879,
-      "predicted_risk_percentage": "39%",
-      "predicted_risk_badge": "MODERATE RISK",
-      "risk_color": "#eab308",
-      "description": "Forecast models project normal baseline traffic conditions.",
-      "trend_label": "[TREND: COOLING DOWN]"
+      "period": "2024-W29",
+      "predicted_risk_probability": 0.828,
+      "predicted_risk_percentage": "83%",
+      "predicted_risk_badge": "[HIGH RISK ALERT]",
+      "risk_color": "#ef4444",
+      "description": "Forecast models project elevated collision probability.",
+      "trend_label": "[TREND: STABLE]",
+      "trend_color": "#ef4444",
+      "trend_percentage_change": "0%"
     },
     "why_accidents_might_happen": {
       "primary_collision_cause": {
-        "title": "Congestion Bottleneck & Merge Conflicts",
-        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+        "title": "Failing to Yield Right-of-Way",
+        "explanation": "Drivers turning left across oncoming traffic or turning on yellow without checking cross-traffic and crossing pedestrians.",
+        "historical_frequency_pct": 34.2
       },
       "behavior_factor": {
-        "title": "Tailgating & Speed Variance",
-        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+        "title": "Tailgating & Sudden Braking",
+        "explanation": "High-density commuter queues cause rear-end collisions when drivers follow too closely during rush hours.",
+        "risk_level": "ELEVATED"
       },
       "street_environment": {
-        "zone_type": "Residential",
-        "average_speed_kmh": 44.99,
-        "congestion_level": 57.24
+        "posted_speed_limit_mph": 30.0,
+        "intersection_crossroad_density_pct": 22.1,
+        "title": "30 mph Zone | 22% Crossroad Density",
+        "explanation": "Frequent signalized crossroads combined with multi-lane traffic flow increase conflict points at peak times."
       }
     },
     "civilian_safety_guide": {
       "for_drivers": {
         "action": "Increase Following Distance",
-        "details": "Maintain 3 car lengths buffer during peak rush hours."
+        "details": "Maintain at least 3 car lengths of space behind the vehicle ahead. Avoid tailgating near transit stops and expressway exit ramps where sudden stops occur.",
+        "key_tip": "Leave 3-4 car lengths buffer on commercial transit corridors"
       },
       "for_pedestrians_and_cyclists": {
-        "action": "Double-Check Turning Vehicles",
-        "details": "Make eye contact with turning drivers at intersections before crossing."
+        "action": "Double-Check Turning Cars",
+        "details": "Make eye contact with drivers turning right on red before stepping into crosswalks. Use reflective gear or activate bicycle lights after dusk.",
+        "key_tip": "Never assume a turning driver has seen you at green lights"
       },
       "peak_danger_windows": {
-        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
-        "details": "Congestion peaks during evening travel windows."
+        "primary_peak": "4:30 PM - 7:30 PM Weekdays (Evening Commute Congestion)",
+        "secondary_peak": "10:00 PM - 2:00 AM Friday & Saturday (Reduced Lighting & Speed Variance)",
+        "details": "Evening rush hours experience 3x higher collision rates than midday. Exercise maximum patience during heavy congestion."
       }
     }
   },
   "raw_metrics": {
     "zone_id": "Zone_37",
+    "chicago_beat": "1733",
     "week": 28,
-    "zone_type": "Residential",
-    "temporal_profile": "RECOVERY_AFTER_DISRUPTION",
-    "population_density": 11474,
-    "road_capacity": 92,
-    "effective_road_capacity": 75.44,
-    "vehicle_density": 70.02,
-    "traffic_pressure": 0.928,
-    "congestion": 57.24,
-    "average_speed": 44.99,
-    "red_light_violations": 6,
-    "weather": "Normal",
-    "road_condition": "Good",
-    "special_event": 0,
-    "incident_count": 0,
-    "incident_occurred": 0,
-    "previous_week_vehicle_density": 66.04,
-    "previous_week_congestion": 74.89,
-    "previous_week_average_speed": 28.89,
-    "previous_week_red_light_violations": 7.0,
-    "previous_week_incident_count": 2.0,
-    "previous_week_incident_occurred": 1.0,
-    "previous_week_traffic_pressure": 1.057,
-    "rolling_4_week_avg_vehicle_density": 59.74,
-    "rolling_4_week_avg_congestion": 54.73,
-    "rolling_4_week_avg_speed": 44.61,
-    "rolling_4_week_avg_violations": 4.0,
-    "rolling_4_week_incident_count": 3.0,
-    "rolling_4_week_incident_rate": 0.5,
-    "rolling_4_week_avg_traffic_pressure": 0.878,
-    "vehicle_density_change": 3.98,
-    "congestion_change": -17.65,
-    "speed_change": 16.1,
-    "violations_change": -1.0,
-    "traffic_pressure_change": -0.129,
-    "incident_count_change": 1.0,
-    "vehicle_density_pct_change": 6.03,
-    "congestion_pct_change": -23.57,
-    "speed_pct_change": 55.73,
-    "vehicle_population_ratio": 6.102,
-    "congestion_trend_4w": 11.695,
-    "vehicle_density_trend_4w": 2.453,
-    "speed_trend_4w": -9.732,
-    "incident_trend_4w": 0.4,
-    "car_percentage": 31.1,
-    "motorcycle_percentage": 55.3,
-    "bus_percentage": 8.8,
-    "truck_percentage": 4.8,
-    "moving_vehicle_percentage": 37.5,
-    "slow_vehicle_percentage": 38.1,
-    "stopped_vehicle_percentage": 24.4,
-    "location_name": "Vrindavan Yojana",
-    "city": "Lucknow",
-    "latitude": 26.79,
-    "longitude": 81.0,
-    "predicted_risk_probability": 0.45,
-    "risk_score": 45.0004,
-    "population_exposure_score": 72.6561,
-    "vehicle_exposure_score": 99.0479,
-    "temporal_trend_score": 100.0,
-    "priority_score": 70.9738,
-    "priority_rank": 4,
-    "priority_level": "HIGH",
-    "risk_prob": 0.45
+    "crashes": 0,
+    "rolling4w_avg": 1.5,
+    "speed_mph": 30.0
   }
 }

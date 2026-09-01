@@ -1,233 +1,155 @@
 {
   "zone_id": "Zone_49",
-  "location_name": "Sholinganallur",
-  "city": "Chennai",
-  "zone_type": "University_District",
+  "location_name": "Avalon Park - S Stony Island Ave & E 87Th St",
+  "city": "Chicago",
+  "zone_type": "Industrial, Freight & Lakefront Corridor",
   "week": 48,
-  "latitude": 12.901,
-  "longitude": 80.2279,
+  "latitude": 41.7371,
+  "longitude": -87.5851,
   "risk_analysis": {
-    "predicted_risk_probability": 0.4753,
-    "predicted_risk_percentage": 47.53,
-    "risk_label": "MODERATE RISK",
-    "risk_color": "#eab308",
-    "risk_delta_vs_prev_week": -0.757,
+    "predicted_risk_probability": 0.794,
+    "predicted_risk_percentage": 79.4,
+    "risk_label": "CRITICAL RISK",
+    "risk_color": "#ef4444",
+    "risk_delta_vs_prev_week": -0.2,
     "actual_incident": 0
   },
   "priority": {
-    "priority_score": 56.8441,
-    "priority_rank": 12,
+    "priority_score": 63.39,
+    "priority_rank": 1,
     "priority_level": "HIGH",
     "components": {
-      "risk_score": 47.5348,
-      "population_exposure_score": 73.1231,
-      "vehicle_exposure_score": 72.1737,
-      "temporal_trend_score": 34.0974
+      "risk_score": 79.4,
+      "population_exposure_score": 65.0,
+      "vehicle_exposure_score": 39.6,
+      "temporal_trend_score": 49.7
     },
     "explanation": {
       "priority_level": "HIGH",
-      "priority_score": 56.8,
-      "top_contributors": [
-        {
-          "factor": "Population Exposure",
-          "icon": "\ud83d\udc65",
-          "value": "73/100",
-          "impact": "HIGH",
-          "detail": "High population density zone \u2014 11539 residents/km\u00b2",
-          "weight": 73.1231
-        },
-        {
-          "factor": "Vehicle Density",
-          "icon": "\ud83d\ude99",
-          "value": "72/100",
-          "impact": "HIGH",
-          "detail": "High vehicle density increases collision exposure",
-          "weight": 72.1737
-        },
-        {
-          "factor": "Risk Score",
-          "icon": "\ud83d\udfe1",
-          "value": "48/100",
-          "impact": "MEDIUM",
-          "detail": "Moderate model-estimated risk",
-          "weight": 47.5348
-        },
-        {
-          "factor": "Congestion",
-          "icon": "\ud83d\ude97",
-          "value": "61/100",
-          "impact": "MEDIUM",
-          "detail": "Moderate congestion at 61",
-          "weight": 42.406
-        }
-      ],
-      "total_factors": 4,
-      "assessment": "This zone shows significant risk elevation driven by Population Exposure, Vehicle Density. Proactive intervention should be scheduled within the current planning cycle."
+      "priority_score": 63.39,
+      "assessment": "Chicago corridor in 04th District - South Chicago exhibits high traffic hazard priority driven by Chicago crash history."
     }
   },
   "telemetry": {
-    "congestion": 60.58,
-    "congestion_delta": -4.4,
-    "average_speed_kmh": 43.61,
-    "speed_delta": -2.0,
-    "vehicle_density": 56.18,
-    "density_delta": -4.0,
-    "population_density": 11539,
-    "red_light_violations": 4,
-    "weather": "Normal",
+    "congestion": 38.3,
+    "congestion_delta": 0.0,
+    "average_speed_kmh": 48.3,
+    "speed_delta": 0.0,
+    "vehicle_density": 45.5,
+    "density_delta": 0.0,
+    "population_density": 8500,
+    "red_light_violations": 0,
+    "weather": "CLEAR",
     "special_event": 0
   },
   "signal_optimization": {
     "base_green_seconds": 35,
-    "recommended_green_seconds": 53,
-    "change_seconds": 18,
-    "change_percent": 51.4,
-    "urgency": "CRITICAL",
-    "reason": "Severe congestion requires significantly extended green phase",
+    "recommended_green_seconds": 44,
+    "change_seconds": 9,
+    "change_percent": 25.7,
+    "urgency": "HIGH",
+    "reason": "Elevated traffic density needs extended clearance time",
     "factors": {
-      "congestion_factor": 1.48,
-      "density_factor": 1.22,
-      "speed_factor": 0.84,
+      "congestion_factor": 1.31,
+      "density_factor": 1.18,
+      "speed_factor": 0.82,
       "event_boost": 1.0,
       "weather_boost": 1.0
     }
   },
   "environmental_impact": {
-    "total_co2_kg_per_week": 46601.5,
-    "total_co2_tonnes_per_year": 2423.28,
-    "idle_co2_kg": 18786.7,
-    "moving_co2_kg": 27814.9,
-    "potential_savings_kg_per_week": 4895.4,
-    "potential_savings_tonnes_per_year": 254.56,
-    "trees_equivalent_per_year": 12122,
-    "fuel_saved_liters_per_week": 2119.2,
-    "citizens_impacted": 23078,
-    "optimization_factor_pct": 26.1
+    "total_co2_kg_per_week": 48670.8,
+    "total_co2_tonnes_per_year": 2530.88,
+    "idle_co2_kg": 9619.4,
+    "moving_co2_kg": 39051.4,
+    "potential_savings_kg_per_week": 2292.3,
+    "potential_savings_tonnes_per_year": 119.2,
+    "trees_equivalent_per_year": 5676,
+    "fuel_saved_liters_per_week": 992.3,
+    "citizens_impacted": 17000,
+    "optimization_factor_pct": 23.8
   },
   "interventions": [
     {
-      "id": "PEDESTRIAN_SAFETY",
-      "name": "Pedestrian Crossing Intervention",
-      "icon": "\ud83d\udeb6",
-      "severity": "MEDIUM",
-      "description": "High population density zone with significant traffic congestion creates pedestrian exposure risk.",
-      "action": "Install protected pedestrian crossings, improve sidewalk infrastructure, and add pedestrian countdown signals."
+      "title": "Deploy Speed Calming & Signal Synchronization on S Stony Island Ave & E 87Th St",
+      "type": "MUNICIPAL_CORRIDOR_CALMING",
+      "priority": "HIGH",
+      "target_reduction": "18% collision frequency reduction"
+    },
+    {
+      "title": "Pedestrian Crosswalk High-Visibility Illumination & Turn Signal Audit",
+      "type": "INFRASTRUCTURE_SAFETY",
+      "priority": "MODERATE",
+      "target_reduction": "Eliminate left-turn crossing conflicts"
     }
   ],
-  "executive_briefing": "Sholinganallur shows elevated risk at 48%. Signal optimization recommended \u2014 congestion at 61/100 with speeds averaging 44 km/h. Optimizing signals could save 4895 kg CO2/week, equivalent to 12122 trees/year.",
+  "executive_briefing": "Chicago Police Beat 412 (Avalon Park - S Stony Island Ave & E 87Th St) logged 0 collisions in week 48. Machine learning incident risk is 79.4%, forecasted at 79.2% for next week.",
   "civilian_road_safety_radar": {
     "current_week": {
-      "week": 48,
-      "risk_score": 47.5,
-      "risk_percentage": "48%",
-      "risk_badge": "MODERATE RISK",
-      "risk_color": "#eab308",
-      "description": "Corridor operating within normal baseline.",
-      "crashes_reported": 0
+      "period": "2024-W48",
+      "date_range": "Week 48, 2024",
+      "risk_score": 79.4,
+      "risk_percentage": "79%",
+      "risk_badge": "[HIGH RISK ALERT]",
+      "risk_color": "#ef4444",
+      "description": "Elevated collision hazard recorded. Extra vigilance recommended.",
+      "crashes_reported": 0,
+      "crashes_rolling4w_avg": 1.5,
+      "dominant_weather": "CLEAR"
     },
     "upcoming_week": {
-      "predicted_risk_probability": 0.9166,
-      "predicted_risk_percentage": "92%",
-      "predicted_risk_badge": "CRITICAL RISK",
+      "period": "2024-W49",
+      "predicted_risk_probability": 0.792,
+      "predicted_risk_percentage": "79%",
+      "predicted_risk_badge": "[HIGH RISK ALERT]",
       "risk_color": "#ef4444",
       "description": "Forecast models project elevated collision probability.",
-      "trend_label": "[TREND: INCREASING HAZARD]"
+      "trend_label": "[TREND: STABLE]",
+      "trend_color": "#ef4444",
+      "trend_percentage_change": "0%"
     },
     "why_accidents_might_happen": {
       "primary_collision_cause": {
-        "title": "Congestion Bottleneck & Merge Conflicts",
-        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+        "title": "Failing to Yield Right-of-Way",
+        "explanation": "Drivers turning left across oncoming traffic or turning on yellow without checking cross-traffic and crossing pedestrians.",
+        "historical_frequency_pct": 34.2
       },
       "behavior_factor": {
-        "title": "Tailgating & Speed Variance",
-        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+        "title": "Tailgating & Sudden Braking",
+        "explanation": "High-density commuter queues cause rear-end collisions when drivers follow too closely during rush hours.",
+        "risk_level": "ELEVATED"
       },
       "street_environment": {
-        "zone_type": "University_District",
-        "average_speed_kmh": 43.61,
-        "congestion_level": 60.58
+        "posted_speed_limit_mph": 30.0,
+        "intersection_crossroad_density_pct": 22.8,
+        "title": "30 mph Zone | 23% Crossroad Density",
+        "explanation": "Frequent signalized crossroads combined with multi-lane traffic flow increase conflict points at peak times."
       }
     },
     "civilian_safety_guide": {
       "for_drivers": {
         "action": "Increase Following Distance",
-        "details": "Maintain 3 car lengths buffer during peak rush hours."
+        "details": "Maintain at least 3 car lengths of space behind the vehicle ahead. Avoid tailgating near transit stops and expressway exit ramps where sudden stops occur.",
+        "key_tip": "Leave 3-4 car lengths buffer on commercial transit corridors"
       },
       "for_pedestrians_and_cyclists": {
-        "action": "Double-Check Turning Vehicles",
-        "details": "Make eye contact with turning drivers at intersections before crossing."
+        "action": "Double-Check Turning Cars",
+        "details": "Make eye contact with drivers turning right on red before stepping into crosswalks. Use reflective gear or activate bicycle lights after dusk.",
+        "key_tip": "Never assume a turning driver has seen you at green lights"
       },
       "peak_danger_windows": {
-        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
-        "details": "Congestion peaks during evening travel windows."
+        "primary_peak": "4:30 PM - 7:30 PM Weekdays (Evening Commute Congestion)",
+        "secondary_peak": "10:00 PM - 2:00 AM Friday & Saturday (Reduced Lighting & Speed Variance)",
+        "details": "Evening rush hours experience 3x higher collision rates than midday. Exercise maximum patience during heavy congestion."
       }
     }
   },
   "raw_metrics": {
     "zone_id": "Zone_49",
+    "chicago_beat": "412",
     "week": 48,
-    "zone_type": "University_District",
-    "temporal_profile": "STABLE",
-    "population_density": 11539,
-    "road_capacity": 59,
-    "effective_road_capacity": 59.0,
-    "vehicle_density": 56.18,
-    "traffic_pressure": 0.952,
-    "congestion": 60.58,
-    "average_speed": 43.61,
-    "red_light_violations": 4,
-    "weather": "Normal",
-    "road_condition": "Good",
-    "special_event": 0,
-    "incident_count": 0,
-    "incident_occurred": 0,
-    "previous_week_vehicle_density": 60.18,
-    "previous_week_congestion": 64.98,
-    "previous_week_average_speed": 45.61,
-    "previous_week_red_light_violations": 7.0,
-    "previous_week_incident_count": 0.0,
-    "previous_week_incident_occurred": 0.0,
-    "previous_week_traffic_pressure": 1.02,
-    "rolling_4_week_avg_vehicle_density": 55.13,
-    "rolling_4_week_avg_congestion": 61.9,
-    "rolling_4_week_avg_speed": 42.94,
-    "rolling_4_week_avg_violations": 5.5,
-    "rolling_4_week_incident_count": 2.0,
-    "rolling_4_week_incident_rate": 0.25,
-    "rolling_4_week_avg_traffic_pressure": 0.982,
-    "vehicle_density_change": -4.0,
-    "congestion_change": -4.4,
-    "speed_change": -2.0,
-    "violations_change": -3.0,
-    "traffic_pressure_change": -0.068,
-    "incident_count_change": 0.0,
-    "vehicle_density_pct_change": -6.65,
-    "congestion_pct_change": -6.77,
-    "speed_pct_change": -4.38,
-    "vehicle_population_ratio": 4.869,
-    "congestion_trend_4w": -4.359,
-    "vehicle_density_trend_4w": 1.721,
-    "speed_trend_4w": 4.81,
-    "incident_trend_4w": -0.3,
-    "car_percentage": 46.4,
-    "motorcycle_percentage": 40.8,
-    "bus_percentage": 8.3,
-    "truck_percentage": 4.5,
-    "moving_vehicle_percentage": 51.5,
-    "slow_vehicle_percentage": 35.3,
-    "stopped_vehicle_percentage": 13.3,
-    "location_name": "Sholinganallur",
-    "city": "Chennai",
-    "latitude": 12.901,
-    "longitude": 80.2279,
-    "predicted_risk_probability": 0.4753,
-    "risk_score": 47.5348,
-    "population_exposure_score": 73.1231,
-    "vehicle_exposure_score": 72.1737,
-    "temporal_trend_score": 34.0974,
-    "priority_score": 56.8441,
-    "priority_rank": 12,
-    "priority_level": "HIGH",
-    "risk_prob": 0.4753
+    "crashes": 0,
+    "rolling4w_avg": 1.5,
+    "speed_mph": 30.0
   }
 }

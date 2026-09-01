@@ -1,233 +1,155 @@
 {
   "zone_id": "Zone_50",
-  "location_name": "Egmore",
-  "city": "Chennai",
-  "zone_type": "University_District",
+  "location_name": "Brighton Park - S Western Ave & W 47Th St",
+  "city": "Chicago",
+  "zone_type": "Industrial, Rail & Arts Corridor",
   "week": 39,
-  "latitude": 13.0732,
-  "longitude": 80.2609,
+  "latitude": 41.8099,
+  "longitude": -87.6929,
   "risk_analysis": {
-    "predicted_risk_probability": 0.4474,
-    "predicted_risk_percentage": 44.74,
-    "risk_label": "MODERATE RISK",
-    "risk_color": "#eab308",
-    "risk_delta_vs_prev_week": -1.0979,
+    "predicted_risk_probability": 0.854,
+    "predicted_risk_percentage": 85.4,
+    "risk_label": "CRITICAL RISK",
+    "risk_color": "#ef4444",
+    "risk_delta_vs_prev_week": -4.6,
     "actual_incident": 0
   },
   "priority": {
-    "priority_score": 61.0578,
-    "priority_rank": 9,
+    "priority_score": 64.8,
+    "priority_rank": 1,
     "priority_level": "HIGH",
     "components": {
-      "risk_score": 44.7413,
-      "population_exposure_score": 73.5038,
-      "vehicle_exposure_score": 100.0,
-      "temporal_trend_score": 31.9024
+      "risk_score": 85.4,
+      "population_exposure_score": 65.0,
+      "vehicle_exposure_score": 39.6,
+      "temporal_trend_score": 43.1
     },
     "explanation": {
       "priority_level": "HIGH",
-      "priority_score": 61.1,
-      "top_contributors": [
-        {
-          "factor": "Vehicle Density",
-          "icon": "\ud83d\ude99",
-          "value": "100/100",
-          "impact": "HIGH",
-          "detail": "High vehicle density increases collision exposure",
-          "weight": 100.0
-        },
-        {
-          "factor": "Population Exposure",
-          "icon": "\ud83d\udc65",
-          "value": "74/100",
-          "impact": "HIGH",
-          "detail": "High population density zone \u2014 11592 residents/km\u00b2",
-          "weight": 73.5038
-        },
-        {
-          "factor": "Risk Score",
-          "icon": "\ud83d\udfe1",
-          "value": "45/100",
-          "impact": "MEDIUM",
-          "detail": "Moderate model-estimated risk",
-          "weight": 44.7413
-        },
-        {
-          "factor": "Congestion",
-          "icon": "\ud83d\ude97",
-          "value": "59/100",
-          "impact": "MEDIUM",
-          "detail": "Moderate congestion at 59",
-          "weight": 41.069
-        }
-      ],
-      "total_factors": 4,
-      "assessment": "This zone shows significant risk elevation driven by Vehicle Density, Population Exposure. Proactive intervention should be scheduled within the current planning cycle."
+      "priority_score": 64.8,
+      "assessment": "Chicago corridor in 09th District - Deering exhibits high traffic hazard priority driven by Chicago crash history."
     }
   },
   "telemetry": {
-    "congestion": 58.67,
-    "congestion_delta": -3.76,
-    "average_speed_kmh": 44.43,
-    "speed_delta": -4.11,
-    "vehicle_density": 68.34,
-    "density_delta": 2.48,
-    "population_density": 11592,
-    "red_light_violations": 4,
-    "weather": "Normal",
+    "congestion": 38.3,
+    "congestion_delta": 0.0,
+    "average_speed_kmh": 48.3,
+    "speed_delta": 0.0,
+    "vehicle_density": 45.5,
+    "density_delta": 0.0,
+    "population_density": 8500,
+    "red_light_violations": 0,
+    "weather": "CLEAR",
     "special_event": 0
   },
   "signal_optimization": {
     "base_green_seconds": 35,
-    "recommended_green_seconds": 54,
-    "change_seconds": 19,
-    "change_percent": 54.3,
-    "urgency": "CRITICAL",
-    "reason": "Severe congestion requires significantly extended green phase",
+    "recommended_green_seconds": 44,
+    "change_seconds": 9,
+    "change_percent": 25.7,
+    "urgency": "HIGH",
+    "reason": "Elevated traffic density needs extended clearance time",
     "factors": {
-      "congestion_factor": 1.47,
-      "density_factor": 1.27,
-      "speed_factor": 0.83,
+      "congestion_factor": 1.31,
+      "density_factor": 1.18,
+      "speed_factor": 0.82,
       "event_boost": 1.0,
       "weather_boost": 1.0
     }
   },
   "environmental_impact": {
-    "total_co2_kg_per_week": 58274.2,
-    "total_co2_tonnes_per_year": 3030.26,
-    "idle_co2_kg": 22132.5,
-    "moving_co2_kg": 36141.8,
-    "potential_savings_kg_per_week": 5725.0,
-    "potential_savings_tonnes_per_year": 297.7,
-    "trees_equivalent_per_year": 14176,
-    "fuel_saved_liters_per_week": 2478.4,
-    "citizens_impacted": 23184,
-    "optimization_factor_pct": 25.9
+    "total_co2_kg_per_week": 48670.8,
+    "total_co2_tonnes_per_year": 2530.88,
+    "idle_co2_kg": 9619.4,
+    "moving_co2_kg": 39051.4,
+    "potential_savings_kg_per_week": 2292.3,
+    "potential_savings_tonnes_per_year": 119.2,
+    "trees_equivalent_per_year": 5676,
+    "fuel_saved_liters_per_week": 992.3,
+    "citizens_impacted": 17000,
+    "optimization_factor_pct": 23.8
   },
   "interventions": [
     {
-      "id": "PEDESTRIAN_SAFETY",
-      "name": "Pedestrian Crossing Intervention",
-      "icon": "\ud83d\udeb6",
-      "severity": "MEDIUM",
-      "description": "High population density zone with significant traffic congestion creates pedestrian exposure risk.",
-      "action": "Install protected pedestrian crossings, improve sidewalk infrastructure, and add pedestrian countdown signals."
+      "title": "Deploy Speed Calming & Signal Synchronization on S Western Ave & W 47Th St",
+      "type": "MUNICIPAL_CORRIDOR_CALMING",
+      "priority": "HIGH",
+      "target_reduction": "18% collision frequency reduction"
+    },
+    {
+      "title": "Pedestrian Crosswalk High-Visibility Illumination & Turn Signal Audit",
+      "type": "INFRASTRUCTURE_SAFETY",
+      "priority": "MODERATE",
+      "target_reduction": "Eliminate left-turn crossing conflicts"
     }
   ],
-  "executive_briefing": "Egmore shows elevated risk at 45%. Continue routine monitoring. Optimizing signals could save 5725 kg CO2/week, equivalent to 14176 trees/year.",
+  "executive_briefing": "Chicago Police Beat 922 (Brighton Park - S Western Ave & W 47Th St) logged 0 collisions in week 39. Machine learning incident risk is 85.4%, forecasted at 80.8% for next week.",
   "civilian_road_safety_radar": {
     "current_week": {
-      "week": 39,
-      "risk_score": 44.7,
-      "risk_percentage": "45%",
-      "risk_badge": "MODERATE RISK",
-      "risk_color": "#eab308",
-      "description": "Corridor operating within normal baseline.",
-      "crashes_reported": 0
+      "period": "2024-W39",
+      "date_range": "Week 39, 2024",
+      "risk_score": 85.4,
+      "risk_percentage": "85%",
+      "risk_badge": "[HIGH RISK ALERT]",
+      "risk_color": "#ef4444",
+      "description": "Elevated collision hazard recorded. Extra vigilance recommended.",
+      "crashes_reported": 0,
+      "crashes_rolling4w_avg": 1.5,
+      "dominant_weather": "CLEAR"
     },
     "upcoming_week": {
-      "predicted_risk_probability": 0.6107,
-      "predicted_risk_percentage": "61%",
-      "predicted_risk_badge": "HIGH RISK",
-      "risk_color": "#f97316",
+      "period": "2024-W40",
+      "predicted_risk_probability": 0.808,
+      "predicted_risk_percentage": "81%",
+      "predicted_risk_badge": "[HIGH RISK ALERT]",
+      "risk_color": "#ef4444",
       "description": "Forecast models project elevated collision probability.",
-      "trend_label": "[TREND: INCREASING HAZARD]"
+      "trend_label": "[TREND: STABLE]",
+      "trend_color": "#ef4444",
+      "trend_percentage_change": "0%"
     },
     "why_accidents_might_happen": {
       "primary_collision_cause": {
-        "title": "Congestion Bottleneck & Merge Conflicts",
-        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+        "title": "Failing to Yield Right-of-Way",
+        "explanation": "Drivers turning left across oncoming traffic or turning on yellow without checking cross-traffic and crossing pedestrians.",
+        "historical_frequency_pct": 34.2
       },
       "behavior_factor": {
-        "title": "Tailgating & Speed Variance",
-        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+        "title": "Tailgating & Sudden Braking",
+        "explanation": "High-density commuter queues cause rear-end collisions when drivers follow too closely during rush hours.",
+        "risk_level": "ELEVATED"
       },
       "street_environment": {
-        "zone_type": "University_District",
-        "average_speed_kmh": 44.43,
-        "congestion_level": 58.67
+        "posted_speed_limit_mph": 30.0,
+        "intersection_crossroad_density_pct": 22.1,
+        "title": "30 mph Zone | 22% Crossroad Density",
+        "explanation": "Frequent signalized crossroads combined with multi-lane traffic flow increase conflict points at peak times."
       }
     },
     "civilian_safety_guide": {
       "for_drivers": {
         "action": "Increase Following Distance",
-        "details": "Maintain 3 car lengths buffer during peak rush hours."
+        "details": "Maintain at least 3 car lengths of space behind the vehicle ahead. Avoid tailgating near transit stops and expressway exit ramps where sudden stops occur.",
+        "key_tip": "Leave 3-4 car lengths buffer on commercial transit corridors"
       },
       "for_pedestrians_and_cyclists": {
-        "action": "Double-Check Turning Vehicles",
-        "details": "Make eye contact with turning drivers at intersections before crossing."
+        "action": "Double-Check Turning Cars",
+        "details": "Make eye contact with drivers turning right on red before stepping into crosswalks. Use reflective gear or activate bicycle lights after dusk.",
+        "key_tip": "Never assume a turning driver has seen you at green lights"
       },
       "peak_danger_windows": {
-        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
-        "details": "Congestion peaks during evening travel windows."
+        "primary_peak": "4:30 PM - 7:30 PM Weekdays (Evening Commute Congestion)",
+        "secondary_peak": "10:00 PM - 2:00 AM Friday & Saturday (Reduced Lighting & Speed Variance)",
+        "details": "Evening rush hours experience 3x higher collision rates than midday. Exercise maximum patience during heavy congestion."
       }
     }
   },
   "raw_metrics": {
     "zone_id": "Zone_50",
+    "chicago_beat": "922",
     "week": 39,
-    "zone_type": "University_District",
-    "temporal_profile": "GRADUAL_DETERIORATION",
-    "population_density": 11592,
-    "road_capacity": 68,
-    "effective_road_capacity": 68.0,
-    "vehicle_density": 68.34,
-    "traffic_pressure": 1.005,
-    "congestion": 58.67,
-    "average_speed": 44.43,
-    "red_light_violations": 4,
-    "weather": "Normal",
-    "road_condition": "Good",
-    "special_event": 0,
-    "incident_count": 0,
-    "incident_occurred": 0,
-    "previous_week_vehicle_density": 65.86,
-    "previous_week_congestion": 62.43,
-    "previous_week_average_speed": 48.54,
-    "previous_week_red_light_violations": 6.0,
-    "previous_week_incident_count": 0.0,
-    "previous_week_incident_occurred": 0.0,
-    "previous_week_traffic_pressure": 0.969,
-    "rolling_4_week_avg_vehicle_density": 64.46,
-    "rolling_4_week_avg_congestion": 68.8,
-    "rolling_4_week_avg_speed": 38.44,
-    "rolling_4_week_avg_violations": 7.5,
-    "rolling_4_week_incident_count": 5.0,
-    "rolling_4_week_incident_rate": 0.5,
-    "rolling_4_week_avg_traffic_pressure": 1.12,
-    "vehicle_density_change": 2.48,
-    "congestion_change": -3.76,
-    "speed_change": -4.11,
-    "violations_change": -2.0,
-    "traffic_pressure_change": 0.036,
-    "incident_count_change": -3.0,
-    "vehicle_density_pct_change": 3.77,
-    "congestion_pct_change": -6.02,
-    "speed_pct_change": -8.47,
-    "vehicle_population_ratio": 5.895,
-    "congestion_trend_4w": -10.889,
-    "vehicle_density_trend_4w": -0.176,
-    "speed_trend_4w": 11.382,
-    "incident_trend_4w": -0.2,
-    "car_percentage": 44.1,
-    "motorcycle_percentage": 36.3,
-    "bus_percentage": 11.6,
-    "truck_percentage": 8.0,
-    "moving_vehicle_percentage": 54.3,
-    "slow_vehicle_percentage": 43.5,
-    "stopped_vehicle_percentage": 2.2,
-    "location_name": "Egmore",
-    "city": "Chennai",
-    "latitude": 13.0732,
-    "longitude": 80.2609,
-    "predicted_risk_probability": 0.4474,
-    "risk_score": 44.7413,
-    "population_exposure_score": 73.5038,
-    "vehicle_exposure_score": 100.0,
-    "temporal_trend_score": 31.9024,
-    "priority_score": 61.0578,
-    "priority_rank": 9,
-    "priority_level": "HIGH",
-    "risk_prob": 0.4474
+    "crashes": 0,
+    "rolling4w_avg": 1.5,
+    "speed_mph": 30.0
   }
 }

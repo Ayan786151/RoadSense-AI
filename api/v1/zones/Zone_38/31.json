@@ -1,257 +1,155 @@
 {
   "zone_id": "Zone_38",
-  "location_name": "T. Nagar",
-  "city": "Chennai",
-  "zone_type": "Commercial_Downtown",
+  "location_name": "River North - N Lake Shore Dr Sb & N Lake Shore Dr",
+  "city": "Chicago",
+  "zone_type": "Luxury Commercial & Waterfront",
   "week": 31,
-  "latitude": 13.0418,
-  "longitude": 80.2341,
+  "latitude": 41.9025,
+  "longitude": -87.6261,
   "risk_analysis": {
-    "predicted_risk_probability": 0.9247,
-    "predicted_risk_percentage": 92.47,
+    "predicted_risk_probability": 0.808,
+    "predicted_risk_percentage": 80.8,
     "risk_label": "CRITICAL RISK",
     "risk_color": "#ef4444",
-    "risk_delta_vs_prev_week": 48.9905,
-    "actual_incident": 1
+    "risk_delta_vs_prev_week": -0.3,
+    "actual_incident": 0
   },
   "priority": {
-    "priority_score": 72.2467,
-    "priority_rank": 7,
+    "priority_score": 63.91,
+    "priority_rank": 1,
     "priority_level": "HIGH",
     "components": {
-      "risk_score": 92.4722,
-      "population_exposure_score": 55.1333,
-      "vehicle_exposure_score": 93.0582,
-      "temporal_trend_score": 19.0859
+      "risk_score": 80.8,
+      "population_exposure_score": 65.0,
+      "vehicle_exposure_score": 39.6,
+      "temporal_trend_score": 49.5
     },
     "explanation": {
       "priority_level": "HIGH",
-      "priority_score": 72.2,
-      "top_contributors": [
-        {
-          "factor": "Vehicle Density",
-          "icon": "\ud83d\ude99",
-          "value": "93/100",
-          "impact": "HIGH",
-          "detail": "High vehicle density increases collision exposure",
-          "weight": 93.0582
-        },
-        {
-          "factor": "Congestion",
-          "icon": "\ud83d\ude97",
-          "value": "93/100",
-          "impact": "HIGH",
-          "detail": "Congestion index at 93 \u2014 severe traffic flow degradation",
-          "weight": 92.67
-        },
-        {
-          "factor": "Risk Score",
-          "icon": "\ud83d\udd34",
-          "value": "92/100",
-          "impact": "HIGH",
-          "detail": "Model-estimated risk score is in the critical range",
-          "weight": 92.4722
-        },
-        {
-          "factor": "Speed Anomaly",
-          "icon": "\ud83d\udc0c",
-          "value": "13 km/h",
-          "impact": "HIGH",
-          "detail": "Average speed of 13 km/h indicates near-gridlock conditions",
-          "weight": 87.24
-        },
-        {
-          "factor": "Population Exposure",
-          "icon": "\ud83d\udc65",
-          "value": "55/100",
-          "impact": "MEDIUM",
-          "detail": "Moderate population exposure",
-          "weight": 38.5933
-        }
-      ],
-      "total_factors": 6,
-      "assessment": "This zone shows significant risk elevation driven by Vehicle Density, Congestion. Proactive intervention should be scheduled within the current planning cycle."
+      "priority_score": 63.91,
+      "assessment": "Chicago corridor in 18th District - Near North exhibits high traffic hazard priority driven by Chicago crash history."
     }
   },
   "telemetry": {
-    "congestion": 92.67,
-    "congestion_delta": 50.25,
-    "average_speed_kmh": 12.76,
-    "speed_delta": -42.5,
-    "vehicle_density": 63.14,
-    "density_delta": -5.58,
-    "population_density": 9035,
-    "red_light_violations": 7,
-    "weather": "Heavy Rain",
+    "congestion": 38.3,
+    "congestion_delta": 0.0,
+    "average_speed_kmh": 48.3,
+    "speed_delta": 0.0,
+    "vehicle_density": 45.5,
+    "density_delta": 0.0,
+    "population_density": 8500,
+    "red_light_violations": 0,
+    "weather": "CLEAR",
     "special_event": 0
   },
   "signal_optimization": {
-    "base_green_seconds": 40,
-    "recommended_green_seconds": 98,
-    "change_seconds": 58,
-    "change_percent": 145.0,
-    "urgency": "CRITICAL",
-    "reason": "Severe congestion requires significantly extended green phase",
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 44,
+    "change_seconds": 9,
+    "change_percent": 25.7,
+    "urgency": "HIGH",
+    "reason": "Elevated traffic density needs extended clearance time",
     "factors": {
-      "congestion_factor": 1.74,
-      "density_factor": 1.25,
-      "speed_factor": 0.95,
+      "congestion_factor": 1.31,
+      "density_factor": 1.18,
+      "speed_factor": 0.82,
       "event_boost": 1.0,
-      "weather_boost": 1.18
+      "weather_boost": 1.0
     }
   },
   "environmental_impact": {
-    "total_co2_kg_per_week": 36550.5,
-    "total_co2_tonnes_per_year": 1900.63,
-    "idle_co2_kg": 32298.5,
-    "moving_co2_kg": 4252.0,
-    "potential_savings_kg_per_week": 9452.8,
-    "potential_savings_tonnes_per_year": 491.55,
-    "trees_equivalent_per_year": 23406,
-    "fuel_saved_liters_per_week": 4092.1,
-    "citizens_impacted": 18070,
-    "optimization_factor_pct": 29.3
+    "total_co2_kg_per_week": 48670.8,
+    "total_co2_tonnes_per_year": 2530.88,
+    "idle_co2_kg": 9619.4,
+    "moving_co2_kg": 39051.4,
+    "potential_savings_kg_per_week": 2292.3,
+    "potential_savings_tonnes_per_year": 119.2,
+    "trees_equivalent_per_year": 5676,
+    "fuel_saved_liters_per_week": 992.3,
+    "citizens_impacted": 17000,
+    "optimization_factor_pct": 23.8
   },
   "interventions": [
     {
-      "id": "CONGESTION_MANAGEMENT",
-      "name": "Congestion Management & Diversion",
-      "icon": "\ud83d\ude97",
-      "severity": "CRITICAL",
-      "description": "Severe congestion with high vehicle density requires active demand management.",
-      "action": "Activate dynamic message signs for route diversion. Consider congestion pricing or access restrictions."
+      "title": "Deploy Speed Calming & Signal Synchronization on N Lake Shore Dr Sb & N Lake Shore Dr",
+      "type": "MUNICIPAL_CORRIDOR_CALMING",
+      "priority": "HIGH",
+      "target_reduction": "18% collision frequency reduction"
     },
     {
-      "id": "SIGNAL_OPTIMIZATION",
-      "name": "Traffic Signal Optimization",
-      "icon": "\ud83d\udea6",
-      "severity": "HIGH",
-      "description": "High congestion with low throughput speed indicates signal timing inefficiency.",
-      "action": "Review and optimize signal timing at major intersections in this zone."
-    },
-    {
-      "id": "ROAD_MAINTENANCE",
-      "name": "Road Maintenance Inspection",
-      "icon": "\ud83d\udee3\ufe0f",
-      "severity": "MEDIUM",
-      "description": "Deteriorated road surface combined with elevated risk indicates infrastructure maintenance need.",
-      "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
+      "title": "Pedestrian Crosswalk High-Visibility Illumination & Turn Signal Audit",
+      "type": "INFRASTRUCTURE_SAFETY",
+      "priority": "HIGH",
+      "target_reduction": "Eliminate left-turn crossing conflicts"
     }
   ],
-  "executive_briefing": "T. Nagar is in a critical safety state with 92% incident risk. Signal optimization recommended \u2014 congestion at 93/100 with speeds averaging 13 km/h. Optimizing signals could save 9453 kg CO2/week, equivalent to 23406 trees/year.",
+  "executive_briefing": "Chicago Police Beat 1824 (River North - N Lake Shore Dr Sb & N Lake Shore Dr) logged 0 collisions in week 31. Machine learning incident risk is 80.8%, forecasted at 80.5% for next week.",
   "civilian_road_safety_radar": {
     "current_week": {
-      "week": 31,
-      "risk_score": 92.5,
-      "risk_percentage": "92%",
-      "risk_badge": "CRITICAL RISK",
+      "period": "2024-W31",
+      "date_range": "Week 31, 2024",
+      "risk_score": 80.8,
+      "risk_percentage": "81%",
+      "risk_badge": "[HIGH RISK ALERT]",
       "risk_color": "#ef4444",
-      "description": "Elevated collision activity observed.",
-      "crashes_reported": 0
+      "description": "Elevated collision hazard recorded. Extra vigilance recommended.",
+      "crashes_reported": 0,
+      "crashes_rolling4w_avg": 1.5,
+      "dominant_weather": "CLEAR"
     },
     "upcoming_week": {
-      "predicted_risk_probability": 0.9092,
-      "predicted_risk_percentage": "91%",
-      "predicted_risk_badge": "CRITICAL RISK",
+      "period": "2024-W32",
+      "predicted_risk_probability": 0.805,
+      "predicted_risk_percentage": "80%",
+      "predicted_risk_badge": "[HIGH RISK ALERT]",
       "risk_color": "#ef4444",
       "description": "Forecast models project elevated collision probability.",
-      "trend_label": "[TREND: STABLE]"
+      "trend_label": "[TREND: STABLE]",
+      "trend_color": "#ef4444",
+      "trend_percentage_change": "0%"
     },
     "why_accidents_might_happen": {
       "primary_collision_cause": {
-        "title": "Congestion Bottleneck & Merge Conflicts",
-        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+        "title": "Failing to Yield Right-of-Way",
+        "explanation": "Drivers turning left across oncoming traffic or turning on yellow without checking cross-traffic and crossing pedestrians.",
+        "historical_frequency_pct": 34.2
       },
       "behavior_factor": {
-        "title": "Tailgating & Speed Variance",
-        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+        "title": "Tailgating & Sudden Braking",
+        "explanation": "High-density commuter queues cause rear-end collisions when drivers follow too closely during rush hours.",
+        "risk_level": "ELEVATED"
       },
       "street_environment": {
-        "zone_type": "Commercial_Downtown",
-        "average_speed_kmh": 12.76,
-        "congestion_level": 92.67
+        "posted_speed_limit_mph": 30.0,
+        "intersection_crossroad_density_pct": 12.8,
+        "title": "30 mph Zone | 13% Crossroad Density",
+        "explanation": "Frequent signalized crossroads combined with multi-lane traffic flow increase conflict points at peak times."
       }
     },
     "civilian_safety_guide": {
       "for_drivers": {
         "action": "Increase Following Distance",
-        "details": "Maintain 3 car lengths buffer during peak rush hours."
+        "details": "Maintain at least 3 car lengths of space behind the vehicle ahead. Avoid tailgating near transit stops and expressway exit ramps where sudden stops occur.",
+        "key_tip": "Leave 3-4 car lengths buffer on commercial transit corridors"
       },
       "for_pedestrians_and_cyclists": {
-        "action": "Double-Check Turning Vehicles",
-        "details": "Make eye contact with turning drivers at intersections before crossing."
+        "action": "Double-Check Turning Cars",
+        "details": "Make eye contact with drivers turning right on red before stepping into crosswalks. Use reflective gear or activate bicycle lights after dusk.",
+        "key_tip": "Never assume a turning driver has seen you at green lights"
       },
       "peak_danger_windows": {
-        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
-        "details": "Congestion peaks during evening travel windows."
+        "primary_peak": "4:30 PM - 7:30 PM Weekdays (Evening Commute Congestion)",
+        "secondary_peak": "10:00 PM - 2:00 AM Friday & Saturday (Reduced Lighting & Speed Variance)",
+        "details": "Evening rush hours experience 3x higher collision rates than midday. Exercise maximum patience during heavy congestion."
       }
     }
   },
   "raw_metrics": {
     "zone_id": "Zone_38",
+    "chicago_beat": "1824",
     "week": 31,
-    "zone_type": "Commercial_Downtown",
-    "temporal_profile": "RECOVERY_AFTER_DISRUPTION",
-    "population_density": 9035,
-    "road_capacity": 94,
-    "effective_road_capacity": 54.99,
-    "vehicle_density": 63.14,
-    "traffic_pressure": 1.148,
-    "congestion": 92.67,
-    "average_speed": 12.76,
-    "red_light_violations": 7,
-    "weather": "Heavy Rain",
-    "road_condition": "Poor",
-    "special_event": 0,
-    "incident_count": 2,
-    "incident_occurred": 1,
-    "previous_week_vehicle_density": 68.72,
-    "previous_week_congestion": 42.42,
-    "previous_week_average_speed": 55.26,
-    "previous_week_red_light_violations": 3.0,
-    "previous_week_incident_count": 0.0,
-    "previous_week_incident_occurred": 0.0,
-    "previous_week_traffic_pressure": 0.731,
-    "rolling_4_week_avg_vehicle_density": 67.42,
-    "rolling_4_week_avg_congestion": 52.66,
-    "rolling_4_week_avg_speed": 46.35,
-    "rolling_4_week_avg_violations": 9.0,
-    "rolling_4_week_incident_count": 1.0,
-    "rolling_4_week_incident_rate": 0.25,
-    "rolling_4_week_avg_traffic_pressure": 0.842,
-    "vehicle_density_change": -5.58,
-    "congestion_change": 50.25,
-    "speed_change": -42.5,
-    "violations_change": 4.0,
-    "traffic_pressure_change": 0.417,
-    "incident_count_change": 0.0,
-    "vehicle_density_pct_change": -8.12,
-    "congestion_pct_change": 118.46,
-    "speed_pct_change": -76.91,
-    "vehicle_population_ratio": 6.988,
-    "congestion_trend_4w": -12.238,
-    "vehicle_density_trend_4w": -0.141,
-    "speed_trend_4w": 8.759,
-    "incident_trend_4w": -0.3,
-    "car_percentage": 45.5,
-    "motorcycle_percentage": 39.4,
-    "bus_percentage": 9.3,
-    "truck_percentage": 5.8,
-    "moving_vehicle_percentage": 15.6,
-    "slow_vehicle_percentage": 49.2,
-    "stopped_vehicle_percentage": 35.2,
-    "location_name": "T. Nagar",
-    "city": "Chennai",
-    "latitude": 13.0418,
-    "longitude": 80.2341,
-    "predicted_risk_probability": 0.9247,
-    "risk_score": 92.4722,
-    "population_exposure_score": 55.1333,
-    "vehicle_exposure_score": 93.0582,
-    "temporal_trend_score": 19.0859,
-    "priority_score": 72.2467,
-    "priority_rank": 7,
-    "priority_level": "HIGH",
-    "risk_prob": 0.9247
+    "crashes": 0,
+    "rolling4w_avg": 1.5,
+    "speed_mph": 30.0
   }
 }

@@ -1,217 +1,155 @@
 {
   "zone_id": "Zone_30",
-  "location_name": "Charbagh",
-  "city": "Lucknow",
-  "zone_type": "Highway_Junction",
+  "location_name": "South Lawndale - S Western Ave & W Cermak Rd",
+  "city": "Chicago",
+  "zone_type": "Dense Commercial Corridor (26th St)",
   "week": 46,
-  "latitude": 26.8315,
-  "longitude": 80.923,
+  "latitude": 41.8483,
+  "longitude": -87.6854,
   "risk_analysis": {
-    "predicted_risk_probability": 0.2631,
-    "predicted_risk_percentage": 26.31,
-    "risk_label": "LOW RISK",
-    "risk_color": "#22c55e",
-    "risk_delta_vs_prev_week": 6.759,
+    "predicted_risk_probability": 0.803,
+    "predicted_risk_percentage": 80.3,
+    "risk_label": "CRITICAL RISK",
+    "risk_color": "#ef4444",
+    "risk_delta_vs_prev_week": 5.3,
     "actual_incident": 0
   },
   "priority": {
-    "priority_score": 21.5754,
-    "priority_rank": 43,
-    "priority_level": "LOW",
+    "priority_score": 64.97,
+    "priority_rank": 1,
+    "priority_level": "HIGH",
     "components": {
-      "risk_score": 26.3092,
-      "population_exposure_score": 7.8095,
-      "vehicle_exposure_score": 25.7129,
-      "temporal_trend_score": 26.3783
+      "risk_score": 80.3,
+      "population_exposure_score": 65.0,
+      "vehicle_exposure_score": 39.6,
+      "temporal_trend_score": 57.9
     },
     "explanation": {
-      "priority_level": "LOW",
-      "priority_score": 21.6,
-      "top_contributors": [
-        {
-          "factor": "Improving Trend",
-          "icon": "\ud83d\udcc9",
-          "value": "26/100",
-          "impact": "POSITIVE",
-          "detail": "Conditions are improving over past 4 weeks",
-          "weight": -26.3783
-        },
-        {
-          "factor": "Risk Score",
-          "icon": "\ud83d\udfe2",
-          "value": "26/100",
-          "impact": "LOW",
-          "detail": "Risk score within acceptable range",
-          "weight": 26.3092
-        }
-      ],
-      "total_factors": 2,
-      "assessment": "This zone is currently within acceptable safety parameters. Routine monitoring is sufficient."
+      "priority_level": "HIGH",
+      "priority_score": 64.97,
+      "assessment": "Chicago corridor in 10th District - Ogden exhibits high traffic hazard priority driven by Chicago crash history."
     }
   },
   "telemetry": {
-    "congestion": 19.39,
-    "congestion_delta": 8.42,
-    "average_speed_kmh": 63.61,
-    "speed_delta": 0.61,
-    "vehicle_density": 20.56,
-    "density_delta": -0.05,
-    "population_density": 2448,
-    "red_light_violations": 2,
-    "weather": "Normal",
+    "congestion": 38.3,
+    "congestion_delta": 0.0,
+    "average_speed_kmh": 48.3,
+    "speed_delta": 0.0,
+    "vehicle_density": 45.5,
+    "density_delta": 0.0,
+    "population_density": 8500,
+    "red_light_violations": 0,
+    "weather": "CLEAR",
     "special_event": 0
   },
   "signal_optimization": {
-    "base_green_seconds": 50,
-    "recommended_green_seconds": 47,
-    "change_seconds": -3,
-    "change_percent": -6.0,
-    "urgency": "NOMINAL",
-    "reason": "Current default timing is adequate",
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 44,
+    "change_seconds": 9,
+    "change_percent": 25.7,
+    "urgency": "HIGH",
+    "reason": "Elevated traffic density needs extended clearance time",
     "factors": {
-      "congestion_factor": 1.16,
-      "density_factor": 1.08,
-      "speed_factor": 0.76,
+      "congestion_factor": 1.31,
+      "density_factor": 1.18,
+      "speed_factor": 0.82,
       "event_boost": 1.0,
       "weather_boost": 1.0
     }
   },
   "environmental_impact": {
-    "total_co2_kg_per_week": 29526.4,
-    "total_co2_tonnes_per_year": 1535.37,
-    "idle_co2_kg": 2200.6,
-    "moving_co2_kg": 27325.8,
-    "potential_savings_kg_per_week": 482.8,
-    "potential_savings_tonnes_per_year": 25.1,
-    "trees_equivalent_per_year": 1195,
-    "fuel_saved_liters_per_week": 209.0,
-    "citizens_impacted": 4896,
-    "optimization_factor_pct": 21.9
+    "total_co2_kg_per_week": 48670.8,
+    "total_co2_tonnes_per_year": 2530.88,
+    "idle_co2_kg": 9619.4,
+    "moving_co2_kg": 39051.4,
+    "potential_savings_kg_per_week": 2292.3,
+    "potential_savings_tonnes_per_year": 119.2,
+    "trees_equivalent_per_year": 5676,
+    "fuel_saved_liters_per_week": 992.3,
+    "citizens_impacted": 17000,
+    "optimization_factor_pct": 23.8
   },
   "interventions": [
     {
-      "id": "BASELINE_MONITORING",
-      "name": "Routine Monitoring",
-      "icon": "\ud83d\udcca",
-      "severity": "LOW",
-      "description": "Zone currently within acceptable risk parameters.",
-      "action": "Continue routine monitoring. No immediate intervention required."
+      "title": "Deploy Speed Calming & Signal Synchronization on S Western Ave & W Cermak Rd",
+      "type": "MUNICIPAL_CORRIDOR_CALMING",
+      "priority": "HIGH",
+      "target_reduction": "18% collision frequency reduction"
+    },
+    {
+      "title": "Pedestrian Crosswalk High-Visibility Illumination & Turn Signal Audit",
+      "type": "INFRASTRUCTURE_SAFETY",
+      "priority": "HIGH",
+      "target_reduction": "Eliminate left-turn crossing conflicts"
     }
   ],
-  "executive_briefing": "Charbagh is within safe operating parameters (26% risk). Continue routine monitoring. Optimizing signals could save 483 kg CO2/week, equivalent to 1195 trees/year.",
+  "executive_briefing": "Chicago Police Beat 1034 (South Lawndale - S Western Ave & W Cermak Rd) logged 0 collisions in week 46. Machine learning incident risk is 80.3%, forecasted at 85.6% for next week.",
   "civilian_road_safety_radar": {
     "current_week": {
-      "week": 46,
-      "risk_score": 26.3,
-      "risk_percentage": "26%",
-      "risk_badge": "LOW RISK",
-      "risk_color": "#22c55e",
-      "description": "Corridor operating within normal baseline.",
-      "crashes_reported": 0
+      "period": "2024-W46",
+      "date_range": "Week 46, 2024",
+      "risk_score": 80.3,
+      "risk_percentage": "80%",
+      "risk_badge": "[HIGH RISK ALERT]",
+      "risk_color": "#ef4444",
+      "description": "Elevated collision hazard recorded. Extra vigilance recommended.",
+      "crashes_reported": 0,
+      "crashes_rolling4w_avg": 1.5,
+      "dominant_weather": "CLEAR"
     },
     "upcoming_week": {
-      "predicted_risk_probability": 0.2077,
-      "predicted_risk_percentage": "21%",
-      "predicted_risk_badge": "LOW RISK",
-      "risk_color": "#22c55e",
-      "description": "Forecast models project normal baseline traffic conditions.",
-      "trend_label": "[TREND: COOLING DOWN]"
+      "period": "2024-W47",
+      "predicted_risk_probability": 0.856,
+      "predicted_risk_percentage": "86%",
+      "predicted_risk_badge": "[HIGH RISK ALERT]",
+      "risk_color": "#ef4444",
+      "description": "Forecast models project elevated collision probability.",
+      "trend_label": "[TREND: INCREASING HAZARD]",
+      "trend_color": "#ef4444",
+      "trend_percentage_change": "+5%"
     },
     "why_accidents_might_happen": {
       "primary_collision_cause": {
-        "title": "Congestion Bottleneck & Merge Conflicts",
-        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+        "title": "Failing to Yield Right-of-Way",
+        "explanation": "Drivers turning left across oncoming traffic or turning on yellow without checking cross-traffic and crossing pedestrians.",
+        "historical_frequency_pct": 34.2
       },
       "behavior_factor": {
-        "title": "Tailgating & Speed Variance",
-        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+        "title": "Tailgating & Sudden Braking",
+        "explanation": "High-density commuter queues cause rear-end collisions when drivers follow too closely during rush hours.",
+        "risk_level": "ELEVATED"
       },
       "street_environment": {
-        "zone_type": "Highway_Junction",
-        "average_speed_kmh": 63.61,
-        "congestion_level": 19.39
+        "posted_speed_limit_mph": 30.0,
+        "intersection_crossroad_density_pct": 19.6,
+        "title": "30 mph Zone | 20% Crossroad Density",
+        "explanation": "Frequent signalized crossroads combined with multi-lane traffic flow increase conflict points at peak times."
       }
     },
     "civilian_safety_guide": {
       "for_drivers": {
         "action": "Increase Following Distance",
-        "details": "Maintain 3 car lengths buffer during peak rush hours."
+        "details": "Maintain at least 3 car lengths of space behind the vehicle ahead. Avoid tailgating near transit stops and expressway exit ramps where sudden stops occur.",
+        "key_tip": "Leave 3-4 car lengths buffer on commercial transit corridors"
       },
       "for_pedestrians_and_cyclists": {
-        "action": "Double-Check Turning Vehicles",
-        "details": "Make eye contact with turning drivers at intersections before crossing."
+        "action": "Double-Check Turning Cars",
+        "details": "Make eye contact with drivers turning right on red before stepping into crosswalks. Use reflective gear or activate bicycle lights after dusk.",
+        "key_tip": "Never assume a turning driver has seen you at green lights"
       },
       "peak_danger_windows": {
-        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
-        "details": "Congestion peaks during evening travel windows."
+        "primary_peak": "4:30 PM - 7:30 PM Weekdays (Evening Commute Congestion)",
+        "secondary_peak": "10:00 PM - 2:00 AM Friday & Saturday (Reduced Lighting & Speed Variance)",
+        "details": "Evening rush hours experience 3x higher collision rates than midday. Exercise maximum patience during heavy congestion."
       }
     }
   },
   "raw_metrics": {
     "zone_id": "Zone_30",
+    "chicago_beat": "1034",
     "week": 46,
-    "zone_type": "Highway_Junction",
-    "temporal_profile": "GRADUAL_DETERIORATION",
-    "population_density": 2448,
-    "road_capacity": 66,
-    "effective_road_capacity": 66.0,
-    "vehicle_density": 20.56,
-    "traffic_pressure": 0.312,
-    "congestion": 19.39,
-    "average_speed": 63.61,
-    "red_light_violations": 2,
-    "weather": "Normal",
-    "road_condition": "Good",
-    "special_event": 0,
-    "incident_count": 0,
-    "incident_occurred": 0,
-    "previous_week_vehicle_density": 20.61,
-    "previous_week_congestion": 10.97,
-    "previous_week_average_speed": 63.0,
-    "previous_week_red_light_violations": 4.0,
-    "previous_week_incident_count": 0.0,
-    "previous_week_incident_occurred": 0.0,
-    "previous_week_traffic_pressure": 0.312,
-    "rolling_4_week_avg_vehicle_density": 23.97,
-    "rolling_4_week_avg_congestion": 13.21,
-    "rolling_4_week_avg_speed": 63.8,
-    "rolling_4_week_avg_violations": 7.5,
-    "rolling_4_week_incident_count": 0.0,
-    "rolling_4_week_incident_rate": 0.0,
-    "rolling_4_week_avg_traffic_pressure": 0.363,
-    "vehicle_density_change": -0.05,
-    "congestion_change": 8.42,
-    "speed_change": 0.61,
-    "violations_change": -2.0,
-    "traffic_pressure_change": 0.0,
-    "incident_count_change": 0.0,
-    "vehicle_density_pct_change": -0.24,
-    "congestion_pct_change": 76.75,
-    "speed_pct_change": 0.97,
-    "vehicle_population_ratio": 8.399,
-    "congestion_trend_4w": -1.591,
-    "vehicle_density_trend_4w": -1.482,
-    "speed_trend_4w": -0.433,
-    "incident_trend_4w": 0.0,
-    "car_percentage": 48.5,
-    "motorcycle_percentage": 40.7,
-    "bus_percentage": 8.6,
-    "truck_percentage": 2.2,
-    "moving_vehicle_percentage": 89.9,
-    "slow_vehicle_percentage": 15.5,
-    "stopped_vehicle_percentage": 0.0,
-    "location_name": "Charbagh",
-    "city": "Lucknow",
-    "latitude": 26.8315,
-    "longitude": 80.923,
-    "predicted_risk_probability": 0.2631,
-    "risk_score": 26.3092,
-    "population_exposure_score": 7.8095,
-    "vehicle_exposure_score": 25.7129,
-    "temporal_trend_score": 26.3783,
-    "priority_score": 21.5754,
-    "priority_rank": 43,
-    "priority_level": "LOW",
-    "risk_prob": 0.2631
+    "crashes": 0,
+    "rolling4w_avg": 1.5,
+    "speed_mph": 30.0
   }
 }

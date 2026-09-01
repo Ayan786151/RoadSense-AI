@@ -1,233 +1,155 @@
 {
   "zone_id": "Zone_15",
-  "location_name": "Dwarka",
-  "city": "Delhi",
-  "zone_type": "Residential",
+  "location_name": "South Shore - S Lake Shore Dr & S South Shore Dr",
+  "city": "Chicago",
+  "zone_type": "Lakefront Arterial & Mixed Residential",
   "week": 13,
-  "latitude": 28.5921,
-  "longitude": 77.046,
+  "latitude": 41.7758,
+  "longitude": -87.5763,
   "risk_analysis": {
-    "predicted_risk_probability": 0.3699,
-    "predicted_risk_percentage": 36.99,
+    "predicted_risk_probability": 0.3563,
+    "predicted_risk_percentage": 35.63,
     "risk_label": "MODERATE RISK",
     "risk_color": "#eab308",
-    "risk_delta_vs_prev_week": -14.1623,
+    "risk_delta_vs_prev_week": 1.68,
     "actual_incident": 0
   },
   "priority": {
-    "priority_score": 68.1296,
-    "priority_rank": 3,
-    "priority_level": "HIGH",
+    "priority_score": 46.3,
+    "priority_rank": 1,
+    "priority_level": "MODERATE",
     "components": {
-      "risk_score": 36.9882,
-      "population_exposure_score": 97.0041,
-      "vehicle_exposure_score": 84.0994,
-      "temporal_trend_score": 81.7563
+      "risk_score": 35.63,
+      "population_exposure_score": 65.0,
+      "vehicle_exposure_score": 39.6,
+      "temporal_trend_score": 52.5
     },
     "explanation": {
-      "priority_level": "HIGH",
-      "priority_score": 68.1,
-      "top_contributors": [
-        {
-          "factor": "Population Exposure",
-          "icon": "\ud83d\udc65",
-          "value": "97/100",
-          "impact": "HIGH",
-          "detail": "High population density zone \u2014 14863 residents/km\u00b2",
-          "weight": 97.0041
-        },
-        {
-          "factor": "Vehicle Density",
-          "icon": "\ud83d\ude99",
-          "value": "84/100",
-          "impact": "HIGH",
-          "detail": "High vehicle density increases collision exposure",
-          "weight": 84.0994
-        },
-        {
-          "factor": "Worsening Trend",
-          "icon": "\ud83d\udcc8",
-          "value": "82/100",
-          "impact": "HIGH",
-          "detail": "4-week congestion trend is actively worsening \u2014 conditions deteriorating",
-          "weight": 81.7563
-        },
-        {
-          "factor": "Risk Score",
-          "icon": "\ud83d\udfe2",
-          "value": "37/100",
-          "impact": "LOW",
-          "detail": "Risk score within acceptable range",
-          "weight": 36.9882
-        }
-      ],
-      "total_factors": 4,
-      "assessment": "This zone shows significant risk elevation driven by Population Exposure, Vehicle Density. Proactive intervention should be scheduled within the current planning cycle."
+      "priority_level": "MODERATE",
+      "priority_score": 46.3,
+      "assessment": "Chicago corridor in 03rd District - Grand Crossing exhibits moderate traffic hazard priority driven by Chicago crash history."
     }
   },
   "telemetry": {
-    "congestion": 35.25,
-    "congestion_delta": -14.37,
-    "average_speed_kmh": 56.08,
-    "speed_delta": 14.35,
-    "vehicle_density": 54.16,
-    "density_delta": 0.25,
-    "population_density": 14863,
-    "red_light_violations": 5,
-    "weather": "Normal",
+    "congestion": 38.3,
+    "congestion_delta": 0.0,
+    "average_speed_kmh": 48.3,
+    "speed_delta": 0.0,
+    "vehicle_density": 45.5,
+    "density_delta": 0.0,
+    "population_density": 8500,
+    "red_light_violations": 0,
+    "weather": "CLEAR",
     "special_event": 0
   },
   "signal_optimization": {
-    "base_green_seconds": 30,
-    "recommended_green_seconds": 36,
-    "change_seconds": 6,
-    "change_percent": 20.0,
-    "urgency": "MODERATE",
-    "reason": "Slight adjustment for current conditions",
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 44,
+    "change_seconds": 9,
+    "change_percent": 25.7,
+    "urgency": "HIGH",
+    "reason": "Elevated traffic density needs extended clearance time",
     "factors": {
-      "congestion_factor": 1.28,
-      "density_factor": 1.22,
-      "speed_factor": 0.79,
+      "congestion_factor": 1.31,
+      "density_factor": 1.18,
+      "speed_factor": 0.82,
       "event_boost": 1.0,
       "weather_boost": 1.0
     }
   },
   "environmental_impact": {
-    "total_co2_kg_per_week": 61513.9,
-    "total_co2_tonnes_per_year": 3198.73,
-    "idle_co2_kg": 10538.5,
-    "moving_co2_kg": 50975.5,
-    "potential_savings_kg_per_week": 2479.2,
-    "potential_savings_tonnes_per_year": 128.92,
-    "trees_equivalent_per_year": 6138,
-    "fuel_saved_liters_per_week": 1073.2,
-    "citizens_impacted": 29726,
-    "optimization_factor_pct": 23.5
+    "total_co2_kg_per_week": 48670.8,
+    "total_co2_tonnes_per_year": 2530.88,
+    "idle_co2_kg": 9619.4,
+    "moving_co2_kg": 39051.4,
+    "potential_savings_kg_per_week": 2292.3,
+    "potential_savings_tonnes_per_year": 119.2,
+    "trees_equivalent_per_year": 5676,
+    "fuel_saved_liters_per_week": 992.3,
+    "citizens_impacted": 17000,
+    "optimization_factor_pct": 23.8
   },
   "interventions": [
     {
-      "id": "BASELINE_MONITORING",
-      "name": "Routine Monitoring",
-      "icon": "\ud83d\udcca",
-      "severity": "LOW",
-      "description": "No specific risk indicators triggered.",
-      "action": "Continue routine monitoring."
+      "title": "Deploy Speed Calming & Signal Synchronization on S Lake Shore Dr & S South Shore Dr",
+      "type": "MUNICIPAL_CORRIDOR_CALMING",
+      "priority": "MODERATE",
+      "target_reduction": "18% collision frequency reduction"
+    },
+    {
+      "title": "Pedestrian Crosswalk High-Visibility Illumination & Turn Signal Audit",
+      "type": "INFRASTRUCTURE_SAFETY",
+      "priority": "MODERATE",
+      "target_reduction": "Eliminate left-turn crossing conflicts"
     }
   ],
-  "executive_briefing": "Dwarka shows elevated risk at 37%. Continue routine monitoring. Optimizing signals could save 2479 kg CO2/week, equivalent to 6138 trees/year.",
+  "executive_briefing": "Chicago Police Beat 331 (South Shore - S Lake Shore Dr & S South Shore Dr) logged 0 collisions in week 13. Machine learning incident risk is 35.6%, forecasted at 37.3% for next week.",
   "civilian_road_safety_radar": {
     "current_week": {
-      "week": 13,
-      "risk_score": 37.0,
-      "risk_percentage": "37%",
-      "risk_badge": "MODERATE RISK",
+      "period": "2024-W13",
+      "date_range": "Week 13, 2024",
+      "risk_score": 35.6,
+      "risk_percentage": "36%",
+      "risk_badge": "[ELEVATED TRAFFIC]",
       "risk_color": "#eab308",
-      "description": "Corridor operating within normal baseline.",
-      "crashes_reported": 0
+      "description": "Corridor is operating within historical baseline.",
+      "crashes_reported": 0,
+      "crashes_rolling4w_avg": 1.5,
+      "dominant_weather": "CLEAR"
     },
     "upcoming_week": {
-      "predicted_risk_probability": 0.5028,
-      "predicted_risk_percentage": "50%",
-      "predicted_risk_badge": "MODERATE RISK",
+      "period": "2024-W14",
+      "predicted_risk_probability": 0.3731,
+      "predicted_risk_percentage": "37%",
+      "predicted_risk_badge": "[ELEVATED TRAFFIC]",
       "risk_color": "#eab308",
       "description": "Forecast models project normal baseline traffic conditions.",
-      "trend_label": "[TREND: INCREASING HAZARD]"
+      "trend_label": "[TREND: STABLE]",
+      "trend_color": "#eab308",
+      "trend_percentage_change": "0%"
     },
     "why_accidents_might_happen": {
       "primary_collision_cause": {
-        "title": "Congestion Bottleneck & Merge Conflicts",
-        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+        "title": "Failing to Yield Right-of-Way",
+        "explanation": "Drivers turning left across oncoming traffic or turning on yellow without checking cross-traffic and crossing pedestrians.",
+        "historical_frequency_pct": 34.2
       },
       "behavior_factor": {
-        "title": "Tailgating & Speed Variance",
-        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+        "title": "Tailgating & Sudden Braking",
+        "explanation": "High-density commuter queues cause rear-end collisions when drivers follow too closely during rush hours.",
+        "risk_level": "MODERATE"
       },
       "street_environment": {
-        "zone_type": "Residential",
-        "average_speed_kmh": 56.08,
-        "congestion_level": 35.25
+        "posted_speed_limit_mph": 30.0,
+        "intersection_crossroad_density_pct": 22.7,
+        "title": "30 mph Zone | 23% Crossroad Density",
+        "explanation": "Frequent signalized crossroads combined with multi-lane traffic flow increase conflict points at peak times."
       }
     },
     "civilian_safety_guide": {
       "for_drivers": {
         "action": "Increase Following Distance",
-        "details": "Maintain 3 car lengths buffer during peak rush hours."
+        "details": "Maintain at least 3 car lengths of space behind the vehicle ahead. Avoid tailgating near transit stops and expressway exit ramps where sudden stops occur.",
+        "key_tip": "Leave 3-4 car lengths buffer on commercial transit corridors"
       },
       "for_pedestrians_and_cyclists": {
-        "action": "Double-Check Turning Vehicles",
-        "details": "Make eye contact with turning drivers at intersections before crossing."
+        "action": "Double-Check Turning Cars",
+        "details": "Make eye contact with drivers turning right on red before stepping into crosswalks. Use reflective gear or activate bicycle lights after dusk.",
+        "key_tip": "Never assume a turning driver has seen you at green lights"
       },
       "peak_danger_windows": {
-        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
-        "details": "Congestion peaks during evening travel windows."
+        "primary_peak": "4:30 PM - 7:30 PM Weekdays (Evening Commute Congestion)",
+        "secondary_peak": "10:00 PM - 2:00 AM Friday & Saturday (Reduced Lighting & Speed Variance)",
+        "details": "Evening rush hours experience 3x higher collision rates than midday. Exercise maximum patience during heavy congestion."
       }
     }
   },
   "raw_metrics": {
     "zone_id": "Zone_15",
+    "chicago_beat": "331",
     "week": 13,
-    "zone_type": "Residential",
-    "temporal_profile": "GRADUAL_DETERIORATION",
-    "population_density": 14863,
-    "road_capacity": 86,
-    "effective_road_capacity": 86.0,
-    "vehicle_density": 54.16,
-    "traffic_pressure": 0.63,
-    "congestion": 35.25,
-    "average_speed": 56.08,
-    "red_light_violations": 5,
-    "weather": "Normal",
-    "road_condition": "Good",
-    "special_event": 0,
-    "incident_count": 0,
-    "incident_occurred": 0,
-    "previous_week_vehicle_density": 53.91,
-    "previous_week_congestion": 49.62,
-    "previous_week_average_speed": 41.73,
-    "previous_week_red_light_violations": 6.0,
-    "previous_week_incident_count": 0.0,
-    "previous_week_incident_occurred": 0.0,
-    "previous_week_traffic_pressure": 0.757,
-    "rolling_4_week_avg_vehicle_density": 54.67,
-    "rolling_4_week_avg_congestion": 35.66,
-    "rolling_4_week_avg_speed": 52.77,
-    "rolling_4_week_avg_violations": 4.5,
-    "rolling_4_week_incident_count": 0.0,
-    "rolling_4_week_incident_rate": 0.0,
-    "rolling_4_week_avg_traffic_pressure": 0.668,
-    "vehicle_density_change": 0.25,
-    "congestion_change": -14.37,
-    "speed_change": 14.35,
-    "violations_change": -1.0,
-    "traffic_pressure_change": -0.127,
-    "incident_count_change": 0.0,
-    "vehicle_density_pct_change": 0.46,
-    "congestion_pct_change": -28.96,
-    "speed_pct_change": 34.39,
-    "vehicle_population_ratio": 3.644,
-    "congestion_trend_4w": 4.916,
-    "vehicle_density_trend_4w": 0.313,
-    "speed_trend_4w": -5.819,
-    "incident_trend_4w": 0.0,
-    "car_percentage": 34.3,
-    "motorcycle_percentage": 58.5,
-    "bus_percentage": 5.0,
-    "truck_percentage": 2.1,
-    "moving_vehicle_percentage": 56.0,
-    "slow_vehicle_percentage": 40.8,
-    "stopped_vehicle_percentage": 3.2,
-    "location_name": "Dwarka",
-    "city": "Delhi",
-    "latitude": 28.5921,
-    "longitude": 77.046,
-    "predicted_risk_probability": 0.3699,
-    "risk_score": 36.9882,
-    "population_exposure_score": 97.0041,
-    "vehicle_exposure_score": 84.0994,
-    "temporal_trend_score": 81.7563,
-    "priority_score": 68.1296,
-    "priority_rank": 3,
-    "priority_level": "HIGH",
-    "risk_prob": 0.3699
+    "crashes": 0,
+    "rolling4w_avg": 1.5,
+    "speed_mph": 30.0
   }
 }

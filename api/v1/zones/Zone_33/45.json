@@ -1,217 +1,155 @@
 {
   "zone_id": "Zone_33",
-  "location_name": "Aminabad",
-  "city": "Lucknow",
-  "zone_type": "Commercial_Downtown",
+  "location_name": "Beverly - W 111Th St & S Kedzie Ave",
+  "city": "Chicago",
+  "zone_type": "Historic Residential & Ridge Arterial",
   "week": 45,
-  "latitude": 26.8465,
-  "longitude": 80.94,
+  "latitude": 41.6964,
+  "longitude": -87.7021,
   "risk_analysis": {
-    "predicted_risk_probability": 0.3088,
-    "predicted_risk_percentage": 30.88,
-    "risk_label": "LOW RISK",
-    "risk_color": "#22c55e",
-    "risk_delta_vs_prev_week": -2.3596,
+    "predicted_risk_probability": 0.801,
+    "predicted_risk_percentage": 80.1,
+    "risk_label": "CRITICAL RISK",
+    "risk_color": "#ef4444",
+    "risk_delta_vs_prev_week": 0.0,
     "actual_incident": 0
   },
   "priority": {
-    "priority_score": 32.5062,
-    "priority_rank": 37,
-    "priority_level": "LOW",
+    "priority_score": 63.71,
+    "priority_rank": 1,
+    "priority_level": "HIGH",
     "components": {
-      "risk_score": 30.8765,
-      "population_exposure_score": 40.1178,
-      "vehicle_exposure_score": 27.3331,
-      "temporal_trend_score": 31.0632
+      "risk_score": 80.1,
+      "population_exposure_score": 65.0,
+      "vehicle_exposure_score": 39.6,
+      "temporal_trend_score": 50.0
     },
     "explanation": {
-      "priority_level": "LOW",
-      "priority_score": 32.5,
-      "top_contributors": [
-        {
-          "factor": "Risk Score",
-          "icon": "\ud83d\udfe2",
-          "value": "31/100",
-          "impact": "LOW",
-          "detail": "Risk score within acceptable range",
-          "weight": 30.8765
-        },
-        {
-          "factor": "Population Exposure",
-          "icon": "\ud83d\udc65",
-          "value": "40/100",
-          "impact": "MEDIUM",
-          "detail": "Moderate population exposure",
-          "weight": 28.0825
-        }
-      ],
-      "total_factors": 2,
-      "assessment": "This zone is currently within acceptable safety parameters. Routine monitoring is sufficient."
+      "priority_level": "HIGH",
+      "priority_score": 63.71,
+      "assessment": "Chicago corridor in 22nd District - Morgan Park exhibits high traffic hazard priority driven by Chicago crash history."
     }
   },
   "telemetry": {
-    "congestion": 18.53,
-    "congestion_delta": 0.93,
-    "average_speed_kmh": 52.15,
-    "speed_delta": -10.71,
-    "vehicle_density": 21.24,
-    "density_delta": -3.97,
-    "population_density": 6945,
-    "red_light_violations": 2,
-    "weather": "Light Rain",
+    "congestion": 38.3,
+    "congestion_delta": 0.0,
+    "average_speed_kmh": 48.3,
+    "speed_delta": 0.0,
+    "vehicle_density": 45.5,
+    "density_delta": 0.0,
+    "population_density": 8500,
+    "red_light_violations": 0,
+    "weather": "CLEAR",
     "special_event": 0
   },
   "signal_optimization": {
-    "base_green_seconds": 40,
-    "recommended_green_seconds": 43,
-    "change_seconds": 3,
-    "change_percent": 7.5,
-    "urgency": "MODERATE",
-    "reason": "Slight adjustment for current conditions",
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 44,
+    "change_seconds": 9,
+    "change_percent": 25.7,
+    "urgency": "HIGH",
+    "reason": "Elevated traffic density needs extended clearance time",
     "factors": {
-      "congestion_factor": 1.15,
-      "density_factor": 1.08,
-      "speed_factor": 0.8,
+      "congestion_factor": 1.31,
+      "density_factor": 1.18,
+      "speed_factor": 0.82,
       "event_boost": 1.0,
-      "weather_boost": 1.08
+      "weather_boost": 1.0
     }
   },
   "environmental_impact": {
-    "total_co2_kg_per_week": 25563.2,
-    "total_co2_tonnes_per_year": 1329.28,
-    "idle_co2_kg": 2172.5,
-    "moving_co2_kg": 23390.6,
-    "potential_savings_kg_per_week": 474.8,
-    "potential_savings_tonnes_per_year": 24.69,
-    "trees_equivalent_per_year": 1175,
-    "fuel_saved_liters_per_week": 205.5,
-    "citizens_impacted": 13890,
-    "optimization_factor_pct": 21.9
+    "total_co2_kg_per_week": 48670.8,
+    "total_co2_tonnes_per_year": 2530.88,
+    "idle_co2_kg": 9619.4,
+    "moving_co2_kg": 39051.4,
+    "potential_savings_kg_per_week": 2292.3,
+    "potential_savings_tonnes_per_year": 119.2,
+    "trees_equivalent_per_year": 5676,
+    "fuel_saved_liters_per_week": 992.3,
+    "citizens_impacted": 17000,
+    "optimization_factor_pct": 23.8
   },
   "interventions": [
     {
-      "id": "BASELINE_MONITORING",
-      "name": "Routine Monitoring",
-      "icon": "\ud83d\udcca",
-      "severity": "LOW",
-      "description": "No specific risk indicators triggered.",
-      "action": "Continue routine monitoring."
+      "title": "Deploy Speed Calming & Signal Synchronization on W 111Th St & S Kedzie Ave",
+      "type": "MUNICIPAL_CORRIDOR_CALMING",
+      "priority": "HIGH",
+      "target_reduction": "18% collision frequency reduction"
+    },
+    {
+      "title": "Pedestrian Crosswalk High-Visibility Illumination & Turn Signal Audit",
+      "type": "INFRASTRUCTURE_SAFETY",
+      "priority": "MODERATE",
+      "target_reduction": "Eliminate left-turn crossing conflicts"
     }
   ],
-  "executive_briefing": "Aminabad is within safe operating parameters (31% risk). Continue routine monitoring. Optimizing signals could save 475 kg CO2/week, equivalent to 1175 trees/year.",
+  "executive_briefing": "Chicago Police Beat 2211 (Beverly - W 111Th St & S Kedzie Ave) logged 0 collisions in week 45. Machine learning incident risk is 80.1%, forecasted at 80.1% for next week.",
   "civilian_road_safety_radar": {
     "current_week": {
-      "week": 45,
-      "risk_score": 30.9,
-      "risk_percentage": "31%",
-      "risk_badge": "LOW RISK",
-      "risk_color": "#22c55e",
-      "description": "Corridor operating within normal baseline.",
-      "crashes_reported": 0
+      "period": "2024-W45",
+      "date_range": "Week 45, 2024",
+      "risk_score": 80.1,
+      "risk_percentage": "80%",
+      "risk_badge": "[HIGH RISK ALERT]",
+      "risk_color": "#ef4444",
+      "description": "Elevated collision hazard recorded. Extra vigilance recommended.",
+      "crashes_reported": 0,
+      "crashes_rolling4w_avg": 1.5,
+      "dominant_weather": "CLEAR"
     },
     "upcoming_week": {
-      "predicted_risk_probability": 0.4139,
-      "predicted_risk_percentage": "41%",
-      "predicted_risk_badge": "MODERATE RISK",
-      "risk_color": "#eab308",
-      "description": "Forecast models project normal baseline traffic conditions.",
-      "trend_label": "[TREND: INCREASING HAZARD]"
+      "period": "2024-W46",
+      "predicted_risk_probability": 0.801,
+      "predicted_risk_percentage": "80%",
+      "predicted_risk_badge": "[HIGH RISK ALERT]",
+      "risk_color": "#ef4444",
+      "description": "Forecast models project elevated collision probability.",
+      "trend_label": "[TREND: STABLE]",
+      "trend_color": "#ef4444",
+      "trend_percentage_change": "0%"
     },
     "why_accidents_might_happen": {
       "primary_collision_cause": {
-        "title": "Congestion Bottleneck & Merge Conflicts",
-        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+        "title": "Failing to Yield Right-of-Way",
+        "explanation": "Drivers turning left across oncoming traffic or turning on yellow without checking cross-traffic and crossing pedestrians.",
+        "historical_frequency_pct": 34.2
       },
       "behavior_factor": {
-        "title": "Tailgating & Speed Variance",
-        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+        "title": "Tailgating & Sudden Braking",
+        "explanation": "High-density commuter queues cause rear-end collisions when drivers follow too closely during rush hours.",
+        "risk_level": "ELEVATED"
       },
       "street_environment": {
-        "zone_type": "Commercial_Downtown",
-        "average_speed_kmh": 52.15,
-        "congestion_level": 18.53
+        "posted_speed_limit_mph": 30.0,
+        "intersection_crossroad_density_pct": 19.9,
+        "title": "30 mph Zone | 20% Crossroad Density",
+        "explanation": "Frequent signalized crossroads combined with multi-lane traffic flow increase conflict points at peak times."
       }
     },
     "civilian_safety_guide": {
       "for_drivers": {
         "action": "Increase Following Distance",
-        "details": "Maintain 3 car lengths buffer during peak rush hours."
+        "details": "Maintain at least 3 car lengths of space behind the vehicle ahead. Avoid tailgating near transit stops and expressway exit ramps where sudden stops occur.",
+        "key_tip": "Leave 3-4 car lengths buffer on commercial transit corridors"
       },
       "for_pedestrians_and_cyclists": {
-        "action": "Double-Check Turning Vehicles",
-        "details": "Make eye contact with turning drivers at intersections before crossing."
+        "action": "Double-Check Turning Cars",
+        "details": "Make eye contact with drivers turning right on red before stepping into crosswalks. Use reflective gear or activate bicycle lights after dusk.",
+        "key_tip": "Never assume a turning driver has seen you at green lights"
       },
       "peak_danger_windows": {
-        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
-        "details": "Congestion peaks during evening travel windows."
+        "primary_peak": "4:30 PM - 7:30 PM Weekdays (Evening Commute Congestion)",
+        "secondary_peak": "10:00 PM - 2:00 AM Friday & Saturday (Reduced Lighting & Speed Variance)",
+        "details": "Evening rush hours experience 3x higher collision rates than midday. Exercise maximum patience during heavy congestion."
       }
     }
   },
   "raw_metrics": {
     "zone_id": "Zone_33",
+    "chicago_beat": "2211",
     "week": 45,
-    "zone_type": "Commercial_Downtown",
-    "temporal_profile": "RECOVERY_AFTER_DISRUPTION",
-    "population_density": 6945,
-    "road_capacity": 63,
-    "effective_road_capacity": 52.16,
-    "vehicle_density": 21.24,
-    "traffic_pressure": 0.407,
-    "congestion": 18.53,
-    "average_speed": 52.15,
-    "red_light_violations": 2,
-    "weather": "Light Rain",
-    "road_condition": "Moderate",
-    "special_event": 0,
-    "incident_count": 0,
-    "incident_occurred": 0,
-    "previous_week_vehicle_density": 25.21,
-    "previous_week_congestion": 17.6,
-    "previous_week_average_speed": 62.86,
-    "previous_week_red_light_violations": 6.0,
-    "previous_week_incident_count": 0.0,
-    "previous_week_incident_occurred": 0.0,
-    "previous_week_traffic_pressure": 0.4,
-    "rolling_4_week_avg_vehicle_density": 31.24,
-    "rolling_4_week_avg_congestion": 26.72,
-    "rolling_4_week_avg_speed": 57.23,
-    "rolling_4_week_avg_violations": 7.5,
-    "rolling_4_week_incident_count": 1.0,
-    "rolling_4_week_incident_rate": 0.25,
-    "rolling_4_week_avg_traffic_pressure": 0.521,
-    "vehicle_density_change": -3.97,
-    "congestion_change": 0.93,
-    "speed_change": -10.71,
-    "violations_change": -4.0,
-    "traffic_pressure_change": 0.007,
-    "incident_count_change": -1.0,
-    "vehicle_density_pct_change": -15.75,
-    "congestion_pct_change": 5.28,
-    "speed_pct_change": -17.04,
-    "vehicle_population_ratio": 3.058,
-    "congestion_trend_4w": -2.636,
-    "vehicle_density_trend_4w": -2.997,
-    "speed_trend_4w": 1.194,
-    "incident_trend_4w": 0.1,
-    "car_percentage": 44.1,
-    "motorcycle_percentage": 42.2,
-    "bus_percentage": 11.5,
-    "truck_percentage": 2.2,
-    "moving_vehicle_percentage": 73.6,
-    "slow_vehicle_percentage": 15.5,
-    "stopped_vehicle_percentage": 10.9,
-    "location_name": "Aminabad",
-    "city": "Lucknow",
-    "latitude": 26.8465,
-    "longitude": 80.94,
-    "predicted_risk_probability": 0.3088,
-    "risk_score": 30.8765,
-    "population_exposure_score": 40.1178,
-    "vehicle_exposure_score": 27.3331,
-    "temporal_trend_score": 31.0632,
-    "priority_score": 32.5062,
-    "priority_rank": 37,
-    "priority_level": "LOW",
-    "risk_prob": 0.3088
+    "crashes": 0,
+    "rolling4w_avg": 1.5,
+    "speed_mph": 30.0
   }
 }

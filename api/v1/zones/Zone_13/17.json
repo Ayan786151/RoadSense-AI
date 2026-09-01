@@ -1,209 +1,155 @@
 {
   "zone_id": "Zone_13",
-  "location_name": "Chembur",
-  "city": "Mumbai",
-  "zone_type": "Suburban_LowDensity",
+  "location_name": "Edison Park - N Milwaukee Ave & W Lawrence Ave",
+  "city": "Chicago",
+  "zone_type": "Airport Terminal Core & Expressway Hub",
   "week": 17,
-  "latitude": 19.062,
-  "longitude": 72.897,
+  "latitude": 41.9681,
+  "longitude": -87.759,
   "risk_analysis": {
-    "predicted_risk_probability": 0.4169,
-    "predicted_risk_percentage": 41.69,
+    "predicted_risk_probability": 0.3563,
+    "predicted_risk_percentage": 35.63,
     "risk_label": "MODERATE RISK",
     "risk_color": "#eab308",
-    "risk_delta_vs_prev_week": 19.5719,
-    "actual_incident": 1
+    "risk_delta_vs_prev_week": -3.85,
+    "actual_incident": 0
   },
   "priority": {
-    "priority_score": 23.5804,
-    "priority_rank": 38,
-    "priority_level": "LOW",
+    "priority_score": 45.05,
+    "priority_rank": 1,
+    "priority_level": "MODERATE",
     "components": {
-      "risk_score": 41.6889,
-      "population_exposure_score": 0.0,
-      "vehicle_exposure_score": 0.0,
-      "temporal_trend_score": 46.0325
+      "risk_score": 35.63,
+      "population_exposure_score": 65.0,
+      "vehicle_exposure_score": 39.6,
+      "temporal_trend_score": 44.2
     },
     "explanation": {
-      "priority_level": "LOW",
-      "priority_score": 23.6,
-      "top_contributors": [
-        {
-          "factor": "Risk Score",
-          "icon": "\ud83d\udfe1",
-          "value": "42/100",
-          "impact": "MEDIUM",
-          "detail": "Moderate model-estimated risk",
-          "weight": 41.6889
-        }
-      ],
-      "total_factors": 1,
-      "assessment": "This zone is currently within acceptable safety parameters. Routine monitoring is sufficient."
+      "priority_level": "MODERATE",
+      "priority_score": 45.05,
+      "assessment": "Chicago corridor in 16th District - Jefferson Park exhibits moderate traffic hazard priority driven by Chicago crash history."
     }
   },
   "telemetry": {
-    "congestion": 1.69,
-    "congestion_delta": -7.53,
-    "average_speed_kmh": 67.12,
-    "speed_delta": 3.64,
-    "vehicle_density": 1.62,
-    "density_delta": -5.11,
-    "population_density": 1361,
-    "red_light_violations": 2,
-    "weather": "Normal",
+    "congestion": 38.3,
+    "congestion_delta": 0.0,
+    "average_speed_kmh": 48.3,
+    "speed_delta": 0.0,
+    "vehicle_density": 45.5,
+    "density_delta": 0.0,
+    "population_density": 8500,
+    "red_light_violations": 0,
+    "weather": "CLEAR",
     "special_event": 0
   },
   "signal_optimization": {
-    "base_green_seconds": 25,
-    "recommended_green_seconds": 19,
-    "change_seconds": -6,
-    "change_percent": -24.0,
-    "urgency": "OPTIMIZE",
-    "reason": "Low traffic \u2014 reduce green time to improve cross-traffic flow",
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 44,
+    "change_seconds": 9,
+    "change_percent": 25.7,
+    "urgency": "HIGH",
+    "reason": "Elevated traffic density needs extended clearance time",
     "factors": {
-      "congestion_factor": 1.01,
-      "density_factor": 1.01,
-      "speed_factor": 0.75,
+      "congestion_factor": 1.31,
+      "density_factor": 1.18,
+      "speed_factor": 0.82,
       "event_boost": 1.0,
       "weather_boost": 1.0
     }
   },
   "environmental_impact": {
-    "total_co2_kg_per_week": 2785.9,
-    "total_co2_tonnes_per_year": 144.87,
-    "idle_co2_kg": 15.1,
-    "moving_co2_kg": 2770.8,
-    "potential_savings_kg_per_week": 3.0,
-    "potential_savings_tonnes_per_year": 0.16,
-    "trees_equivalent_per_year": 7,
-    "fuel_saved_liters_per_week": 1.3,
-    "citizens_impacted": 2722,
-    "optimization_factor_pct": 20.2
+    "total_co2_kg_per_week": 48670.8,
+    "total_co2_tonnes_per_year": 2530.88,
+    "idle_co2_kg": 9619.4,
+    "moving_co2_kg": 39051.4,
+    "potential_savings_kg_per_week": 2292.3,
+    "potential_savings_tonnes_per_year": 119.2,
+    "trees_equivalent_per_year": 5676,
+    "fuel_saved_liters_per_week": 992.3,
+    "citizens_impacted": 17000,
+    "optimization_factor_pct": 23.8
   },
   "interventions": [
     {
-      "id": "BASELINE_MONITORING",
-      "name": "Routine Monitoring",
-      "icon": "\ud83d\udcca",
-      "severity": "LOW",
-      "description": "No specific risk indicators triggered.",
-      "action": "Continue routine monitoring."
+      "title": "Deploy Speed Calming & Signal Synchronization on N Milwaukee Ave & W Lawrence Ave",
+      "type": "MUNICIPAL_CORRIDOR_CALMING",
+      "priority": "MODERATE",
+      "target_reduction": "18% collision frequency reduction"
+    },
+    {
+      "title": "Pedestrian Crosswalk High-Visibility Illumination & Turn Signal Audit",
+      "type": "INFRASTRUCTURE_SAFETY",
+      "priority": "MODERATE",
+      "target_reduction": "Eliminate left-turn crossing conflicts"
     }
   ],
-  "executive_briefing": "Chembur shows elevated risk at 42%. Continue routine monitoring.",
+  "executive_briefing": "Chicago Police Beat 1623 (Edison Park - N Milwaukee Ave & W Lawrence Ave) logged 0 collisions in week 17. Machine learning incident risk is 35.6%, forecasted at 31.8% for next week.",
   "civilian_road_safety_radar": {
     "current_week": {
-      "week": 17,
-      "risk_score": 41.7,
-      "risk_percentage": "42%",
-      "risk_badge": "MODERATE RISK",
+      "period": "2024-W17",
+      "date_range": "Week 17, 2024",
+      "risk_score": 35.6,
+      "risk_percentage": "36%",
+      "risk_badge": "[ELEVATED TRAFFIC]",
       "risk_color": "#eab308",
-      "description": "Corridor operating within normal baseline.",
-      "crashes_reported": 0
+      "description": "Corridor is operating within historical baseline.",
+      "crashes_reported": 0,
+      "crashes_rolling4w_avg": 1.5,
+      "dominant_weather": "CLEAR"
     },
     "upcoming_week": {
-      "predicted_risk_probability": 0.2728,
-      "predicted_risk_percentage": "27%",
-      "predicted_risk_badge": "LOW RISK",
-      "risk_color": "#22c55e",
+      "period": "2024-W18",
+      "predicted_risk_probability": 0.3178,
+      "predicted_risk_percentage": "32%",
+      "predicted_risk_badge": "[ELEVATED TRAFFIC]",
+      "risk_color": "#eab308",
       "description": "Forecast models project normal baseline traffic conditions.",
-      "trend_label": "[TREND: COOLING DOWN]"
+      "trend_label": "[TREND: STABLE]",
+      "trend_color": "#eab308",
+      "trend_percentage_change": "0%"
     },
     "why_accidents_might_happen": {
       "primary_collision_cause": {
-        "title": "Congestion Bottleneck & Merge Conflicts",
-        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+        "title": "Failing to Yield Right-of-Way",
+        "explanation": "Drivers turning left across oncoming traffic or turning on yellow without checking cross-traffic and crossing pedestrians.",
+        "historical_frequency_pct": 34.2
       },
       "behavior_factor": {
-        "title": "Tailgating & Speed Variance",
-        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+        "title": "Tailgating & Sudden Braking",
+        "explanation": "High-density commuter queues cause rear-end collisions when drivers follow too closely during rush hours.",
+        "risk_level": "MODERATE"
       },
       "street_environment": {
-        "zone_type": "Suburban_LowDensity",
-        "average_speed_kmh": 67.12,
-        "congestion_level": 1.69
+        "posted_speed_limit_mph": 30.0,
+        "intersection_crossroad_density_pct": 20.1,
+        "title": "30 mph Zone | 20% Crossroad Density",
+        "explanation": "Frequent signalized crossroads combined with multi-lane traffic flow increase conflict points at peak times."
       }
     },
     "civilian_safety_guide": {
       "for_drivers": {
         "action": "Increase Following Distance",
-        "details": "Maintain 3 car lengths buffer during peak rush hours."
+        "details": "Maintain at least 3 car lengths of space behind the vehicle ahead. Avoid tailgating near transit stops and expressway exit ramps where sudden stops occur.",
+        "key_tip": "Leave 3-4 car lengths buffer on commercial transit corridors"
       },
       "for_pedestrians_and_cyclists": {
-        "action": "Double-Check Turning Vehicles",
-        "details": "Make eye contact with turning drivers at intersections before crossing."
+        "action": "Double-Check Turning Cars",
+        "details": "Make eye contact with drivers turning right on red before stepping into crosswalks. Use reflective gear or activate bicycle lights after dusk.",
+        "key_tip": "Never assume a turning driver has seen you at green lights"
       },
       "peak_danger_windows": {
-        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
-        "details": "Congestion peaks during evening travel windows."
+        "primary_peak": "4:30 PM - 7:30 PM Weekdays (Evening Commute Congestion)",
+        "secondary_peak": "10:00 PM - 2:00 AM Friday & Saturday (Reduced Lighting & Speed Variance)",
+        "details": "Evening rush hours experience 3x higher collision rates than midday. Exercise maximum patience during heavy congestion."
       }
     }
   },
   "raw_metrics": {
     "zone_id": "Zone_13",
+    "chicago_beat": "1623",
     "week": 17,
-    "zone_type": "Suburban_LowDensity",
-    "temporal_profile": "EVENT_SENSITIVE",
-    "population_density": 1361,
-    "road_capacity": 75,
-    "effective_road_capacity": 75.0,
-    "vehicle_density": 1.62,
-    "traffic_pressure": 0.022,
-    "congestion": 1.69,
-    "average_speed": 67.12,
-    "red_light_violations": 2,
-    "weather": "Normal",
-    "road_condition": "Good",
-    "special_event": 0,
-    "incident_count": 1,
-    "incident_occurred": 1,
-    "previous_week_vehicle_density": 6.73,
-    "previous_week_congestion": 9.22,
-    "previous_week_average_speed": 63.48,
-    "previous_week_red_light_violations": 0.0,
-    "previous_week_incident_count": 0.0,
-    "previous_week_incident_occurred": 0.0,
-    "previous_week_traffic_pressure": 0.09,
-    "rolling_4_week_avg_vehicle_density": 8.64,
-    "rolling_4_week_avg_congestion": 8.54,
-    "rolling_4_week_avg_speed": 60.06,
-    "rolling_4_week_avg_violations": 0.75,
-    "rolling_4_week_incident_count": 0.0,
-    "rolling_4_week_incident_rate": 0.0,
-    "rolling_4_week_avg_traffic_pressure": 0.128,
-    "vehicle_density_change": -5.11,
-    "congestion_change": -7.53,
-    "speed_change": 3.64,
-    "violations_change": 2.0,
-    "traffic_pressure_change": -0.068,
-    "incident_count_change": 0.0,
-    "vehicle_density_pct_change": -75.93,
-    "congestion_pct_change": -81.67,
-    "speed_pct_change": 5.73,
-    "vehicle_population_ratio": 1.19,
-    "congestion_trend_4w": 0.483,
-    "vehicle_density_trend_4w": -0.437,
-    "speed_trend_4w": 1.43,
-    "incident_trend_4w": 0.0,
-    "car_percentage": 44.2,
-    "motorcycle_percentage": 41.9,
-    "bus_percentage": 8.0,
-    "truck_percentage": 5.9,
-    "moving_vehicle_percentage": 89.4,
-    "slow_vehicle_percentage": 17.3,
-    "stopped_vehicle_percentage": 0.0,
-    "location_name": "Chembur",
-    "city": "Mumbai",
-    "latitude": 19.062,
-    "longitude": 72.897,
-    "predicted_risk_probability": 0.4169,
-    "risk_score": 41.6889,
-    "population_exposure_score": 0.0,
-    "vehicle_exposure_score": 0.0,
-    "temporal_trend_score": 46.0325,
-    "priority_score": 23.5804,
-    "priority_rank": 38,
-    "priority_level": "LOW",
-    "risk_prob": 0.4169
+    "crashes": 0,
+    "rolling4w_avg": 1.5,
+    "speed_mph": 30.0
   }
 }

@@ -1,217 +1,155 @@
 {
   "zone_id": "Zone_35",
-  "location_name": "Jankipuram",
-  "city": "Lucknow",
-  "zone_type": "Residential",
+  "location_name": "Irving Park - W Irving Park Rd & W Montrose Ave",
+  "city": "Chicago",
+  "zone_type": "Global Transit Corridor & River Junction",
   "week": 17,
-  "latitude": 26.93,
-  "longitude": 80.94,
+  "latitude": 41.9608,
+  "longitude": -87.7347,
   "risk_analysis": {
-    "predicted_risk_probability": 0.3578,
-    "predicted_risk_percentage": 35.78,
+    "predicted_risk_probability": 0.3563,
+    "predicted_risk_percentage": 35.63,
     "risk_label": "MODERATE RISK",
     "risk_color": "#eab308",
-    "risk_delta_vs_prev_week": 0.0922,
+    "risk_delta_vs_prev_week": -3.85,
     "actual_incident": 0
   },
   "priority": {
-    "priority_score": 55.7371,
-    "priority_rank": 14,
-    "priority_level": "HIGH",
+    "priority_score": 45.05,
+    "priority_rank": 1,
+    "priority_level": "MODERATE",
     "components": {
-      "risk_score": 35.7815,
-      "population_exposure_score": 100.0,
-      "vehicle_exposure_score": 57.4446,
-      "temporal_trend_score": 32.9038
+      "risk_score": 35.63,
+      "population_exposure_score": 65.0,
+      "vehicle_exposure_score": 39.6,
+      "temporal_trend_score": 44.2
     },
     "explanation": {
-      "priority_level": "HIGH",
-      "priority_score": 55.7,
-      "top_contributors": [
-        {
-          "factor": "Population Exposure",
-          "icon": "\ud83d\udc65",
-          "value": "100/100",
-          "impact": "HIGH",
-          "detail": "High population density zone \u2014 15280 residents/km\u00b2",
-          "weight": 100.0
-        },
-        {
-          "factor": "Risk Score",
-          "icon": "\ud83d\udfe2",
-          "value": "36/100",
-          "impact": "LOW",
-          "detail": "Risk score within acceptable range",
-          "weight": 35.7815
-        }
-      ],
-      "total_factors": 2,
-      "assessment": "This zone shows significant risk elevation driven by Population Exposure. Proactive intervention should be scheduled within the current planning cycle."
+      "priority_level": "MODERATE",
+      "priority_score": 45.05,
+      "assessment": "Chicago corridor in 17th District - Albany Park exhibits moderate traffic hazard priority driven by Chicago crash history."
     }
   },
   "telemetry": {
-    "congestion": 19.25,
-    "congestion_delta": 1.35,
-    "average_speed_kmh": 58.35,
-    "speed_delta": -1.65,
-    "vehicle_density": 39.97,
-    "density_delta": -2.76,
-    "population_density": 15280,
-    "red_light_violations": 4,
-    "weather": "Normal",
+    "congestion": 38.3,
+    "congestion_delta": 0.0,
+    "average_speed_kmh": 48.3,
+    "speed_delta": 0.0,
+    "vehicle_density": 45.5,
+    "density_delta": 0.0,
+    "population_density": 8500,
+    "red_light_violations": 0,
+    "weather": "CLEAR",
     "special_event": 0
   },
   "signal_optimization": {
-    "base_green_seconds": 30,
-    "recommended_green_seconds": 31,
-    "change_seconds": 1,
-    "change_percent": 3.3,
-    "urgency": "NOMINAL",
-    "reason": "Current default timing is adequate",
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 44,
+    "change_seconds": 9,
+    "change_percent": 25.7,
+    "urgency": "HIGH",
+    "reason": "Elevated traffic density needs extended clearance time",
     "factors": {
-      "congestion_factor": 1.15,
-      "density_factor": 1.16,
-      "speed_factor": 0.78,
+      "congestion_factor": 1.31,
+      "density_factor": 1.18,
+      "speed_factor": 0.82,
       "event_boost": 1.0,
       "weather_boost": 1.0
     }
   },
   "environmental_impact": {
-    "total_co2_kg_per_week": 53062.1,
-    "total_co2_tonnes_per_year": 2759.23,
-    "idle_co2_kg": 4247.2,
-    "moving_co2_kg": 48814.9,
-    "potential_savings_kg_per_week": 931.2,
-    "potential_savings_tonnes_per_year": 48.42,
-    "trees_equivalent_per_year": 2305,
-    "fuel_saved_liters_per_week": 403.1,
-    "citizens_impacted": 30560,
-    "optimization_factor_pct": 21.9
+    "total_co2_kg_per_week": 48670.8,
+    "total_co2_tonnes_per_year": 2530.88,
+    "idle_co2_kg": 9619.4,
+    "moving_co2_kg": 39051.4,
+    "potential_savings_kg_per_week": 2292.3,
+    "potential_savings_tonnes_per_year": 119.2,
+    "trees_equivalent_per_year": 5676,
+    "fuel_saved_liters_per_week": 992.3,
+    "citizens_impacted": 17000,
+    "optimization_factor_pct": 23.8
   },
   "interventions": [
     {
-      "id": "BASELINE_MONITORING",
-      "name": "Routine Monitoring",
-      "icon": "\ud83d\udcca",
-      "severity": "LOW",
-      "description": "No specific risk indicators triggered.",
-      "action": "Continue routine monitoring."
+      "title": "Deploy Speed Calming & Signal Synchronization on W Irving Park Rd & W Montrose Ave",
+      "type": "MUNICIPAL_CORRIDOR_CALMING",
+      "priority": "MODERATE",
+      "target_reduction": "18% collision frequency reduction"
+    },
+    {
+      "title": "Pedestrian Crosswalk High-Visibility Illumination & Turn Signal Audit",
+      "type": "INFRASTRUCTURE_SAFETY",
+      "priority": "HIGH",
+      "target_reduction": "Eliminate left-turn crossing conflicts"
     }
   ],
-  "executive_briefing": "Jankipuram shows elevated risk at 36%. Continue routine monitoring. Optimizing signals could save 931 kg CO2/week, equivalent to 2305 trees/year.",
+  "executive_briefing": "Chicago Police Beat 1722 (Irving Park - W Irving Park Rd & W Montrose Ave) logged 0 collisions in week 17. Machine learning incident risk is 35.6%, forecasted at 31.8% for next week.",
   "civilian_road_safety_radar": {
     "current_week": {
-      "week": 17,
-      "risk_score": 35.8,
+      "period": "2024-W17",
+      "date_range": "Week 17, 2024",
+      "risk_score": 35.6,
       "risk_percentage": "36%",
-      "risk_badge": "MODERATE RISK",
+      "risk_badge": "[ELEVATED TRAFFIC]",
       "risk_color": "#eab308",
-      "description": "Corridor operating within normal baseline.",
-      "crashes_reported": 0
+      "description": "Corridor is operating within historical baseline.",
+      "crashes_reported": 0,
+      "crashes_rolling4w_avg": 1.5,
+      "dominant_weather": "CLEAR"
     },
     "upcoming_week": {
-      "predicted_risk_probability": 0.394,
-      "predicted_risk_percentage": "39%",
-      "predicted_risk_badge": "MODERATE RISK",
+      "period": "2024-W18",
+      "predicted_risk_probability": 0.3178,
+      "predicted_risk_percentage": "32%",
+      "predicted_risk_badge": "[ELEVATED TRAFFIC]",
       "risk_color": "#eab308",
       "description": "Forecast models project normal baseline traffic conditions.",
-      "trend_label": "[TREND: STABLE]"
+      "trend_label": "[TREND: STABLE]",
+      "trend_color": "#eab308",
+      "trend_percentage_change": "0%"
     },
     "why_accidents_might_happen": {
       "primary_collision_cause": {
-        "title": "Congestion Bottleneck & Merge Conflicts",
-        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+        "title": "Failing to Yield Right-of-Way",
+        "explanation": "Drivers turning left across oncoming traffic or turning on yellow without checking cross-traffic and crossing pedestrians.",
+        "historical_frequency_pct": 34.2
       },
       "behavior_factor": {
-        "title": "Tailgating & Speed Variance",
-        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+        "title": "Tailgating & Sudden Braking",
+        "explanation": "High-density commuter queues cause rear-end collisions when drivers follow too closely during rush hours.",
+        "risk_level": "MODERATE"
       },
       "street_environment": {
-        "zone_type": "Residential",
-        "average_speed_kmh": 58.35,
-        "congestion_level": 19.25
+        "posted_speed_limit_mph": 30.0,
+        "intersection_crossroad_density_pct": 18.8,
+        "title": "30 mph Zone | 19% Crossroad Density",
+        "explanation": "Frequent signalized crossroads combined with multi-lane traffic flow increase conflict points at peak times."
       }
     },
     "civilian_safety_guide": {
       "for_drivers": {
         "action": "Increase Following Distance",
-        "details": "Maintain 3 car lengths buffer during peak rush hours."
+        "details": "Maintain at least 3 car lengths of space behind the vehicle ahead. Avoid tailgating near transit stops and expressway exit ramps where sudden stops occur.",
+        "key_tip": "Leave 3-4 car lengths buffer on commercial transit corridors"
       },
       "for_pedestrians_and_cyclists": {
-        "action": "Double-Check Turning Vehicles",
-        "details": "Make eye contact with turning drivers at intersections before crossing."
+        "action": "Double-Check Turning Cars",
+        "details": "Make eye contact with drivers turning right on red before stepping into crosswalks. Use reflective gear or activate bicycle lights after dusk.",
+        "key_tip": "Never assume a turning driver has seen you at green lights"
       },
       "peak_danger_windows": {
-        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
-        "details": "Congestion peaks during evening travel windows."
+        "primary_peak": "4:30 PM - 7:30 PM Weekdays (Evening Commute Congestion)",
+        "secondary_peak": "10:00 PM - 2:00 AM Friday & Saturday (Reduced Lighting & Speed Variance)",
+        "details": "Evening rush hours experience 3x higher collision rates than midday. Exercise maximum patience during heavy congestion."
       }
     }
   },
   "raw_metrics": {
     "zone_id": "Zone_35",
+    "chicago_beat": "1722",
     "week": 17,
-    "zone_type": "Residential",
-    "temporal_profile": "GRADUAL_IMPROVEMENT",
-    "population_density": 15280,
-    "road_capacity": 95,
-    "effective_road_capacity": 95.0,
-    "vehicle_density": 39.97,
-    "traffic_pressure": 0.421,
-    "congestion": 19.25,
-    "average_speed": 58.35,
-    "red_light_violations": 4,
-    "weather": "Normal",
-    "road_condition": "Good",
-    "special_event": 0,
-    "incident_count": 0,
-    "incident_occurred": 0,
-    "previous_week_vehicle_density": 42.73,
-    "previous_week_congestion": 17.9,
-    "previous_week_average_speed": 60.0,
-    "previous_week_red_light_violations": 3.0,
-    "previous_week_incident_count": 0.0,
-    "previous_week_incident_occurred": 0.0,
-    "previous_week_traffic_pressure": 0.45,
-    "rolling_4_week_avg_vehicle_density": 42.62,
-    "rolling_4_week_avg_congestion": 19.05,
-    "rolling_4_week_avg_speed": 60.06,
-    "rolling_4_week_avg_violations": 2.75,
-    "rolling_4_week_incident_count": 0.0,
-    "rolling_4_week_incident_rate": 0.0,
-    "rolling_4_week_avg_traffic_pressure": 0.449,
-    "vehicle_density_change": -2.76,
-    "congestion_change": 1.35,
-    "speed_change": -1.65,
-    "violations_change": 1.0,
-    "traffic_pressure_change": -0.029,
-    "incident_count_change": 0.0,
-    "vehicle_density_pct_change": -6.46,
-    "congestion_pct_change": 7.54,
-    "speed_pct_change": -2.75,
-    "vehicle_population_ratio": 2.616,
-    "congestion_trend_4w": -1.198,
-    "vehicle_density_trend_4w": 0.292,
-    "speed_trend_4w": 0.05,
-    "incident_trend_4w": 0.0,
-    "car_percentage": 32.7,
-    "motorcycle_percentage": 55.1,
-    "bus_percentage": 4.7,
-    "truck_percentage": 7.5,
-    "moving_vehicle_percentage": 85.9,
-    "slow_vehicle_percentage": 10.2,
-    "stopped_vehicle_percentage": 3.9,
-    "location_name": "Jankipuram",
-    "city": "Lucknow",
-    "latitude": 26.93,
-    "longitude": 80.94,
-    "predicted_risk_probability": 0.3578,
-    "risk_score": 35.7815,
-    "population_exposure_score": 100.0,
-    "vehicle_exposure_score": 57.4446,
-    "temporal_trend_score": 32.9038,
-    "priority_score": 55.7371,
-    "priority_rank": 14,
-    "priority_level": "HIGH",
-    "risk_prob": 0.3578
+    "crashes": 0,
+    "rolling4w_avg": 1.5,
+    "speed_mph": 30.0
   }
 }

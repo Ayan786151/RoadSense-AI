@@ -1,225 +1,155 @@
 {
   "zone_id": "Zone_39",
-  "location_name": "Anna Nagar",
-  "city": "Chennai",
-  "zone_type": "Industrial_Corridor",
+  "location_name": "Roseland - S Stony Island Ave & E 103Rd St",
+  "city": "Chicago",
+  "zone_type": "Historic Industrial & Transit Corridor",
   "week": 22,
-  "latitude": 13.085,
-  "longitude": 80.2101,
+  "latitude": 41.7159,
+  "longitude": -87.6154,
   "risk_analysis": {
-    "predicted_risk_probability": 0.384,
-    "predicted_risk_percentage": 38.4,
+    "predicted_risk_probability": 0.3563,
+    "predicted_risk_percentage": 35.63,
     "risk_label": "MODERATE RISK",
     "risk_color": "#eab308",
-    "risk_delta_vs_prev_week": 12.1182,
+    "risk_delta_vs_prev_week": -0.04,
     "actual_incident": 0
   },
   "priority": {
-    "priority_score": 37.7588,
-    "priority_rank": 32,
+    "priority_score": 45.91,
+    "priority_rank": 1,
     "priority_level": "MODERATE",
     "components": {
-      "risk_score": 38.4,
-      "population_exposure_score": 8.6572,
-      "vehicle_exposure_score": 38.8168,
-      "temporal_trend_score": 83.1409
+      "risk_score": 35.63,
+      "population_exposure_score": 65.0,
+      "vehicle_exposure_score": 39.6,
+      "temporal_trend_score": 49.9
     },
     "explanation": {
       "priority_level": "MODERATE",
-      "priority_score": 37.8,
-      "top_contributors": [
-        {
-          "factor": "Worsening Trend",
-          "icon": "\ud83d\udcc8",
-          "value": "83/100",
-          "impact": "HIGH",
-          "detail": "4-week congestion trend is actively worsening \u2014 conditions deteriorating",
-          "weight": 83.1409
-        },
-        {
-          "factor": "Risk Score",
-          "icon": "\ud83d\udfe2",
-          "value": "38/100",
-          "impact": "LOW",
-          "detail": "Risk score within acceptable range",
-          "weight": 38.4
-        },
-        {
-          "factor": "Congestion",
-          "icon": "\ud83d\ude97",
-          "value": "40/100",
-          "impact": "MEDIUM",
-          "detail": "Moderate congestion at 40",
-          "weight": 28.098
-        }
-      ],
-      "total_factors": 3,
-      "assessment": "This zone has moderate risk levels with contributing factors: Worsening Trend, Congestion. Continue monitoring and schedule review if conditions worsen."
+      "priority_score": 45.91,
+      "assessment": "Chicago corridor in 05th District - Calumet exhibits moderate traffic hazard priority driven by Chicago crash history."
     }
   },
   "telemetry": {
-    "congestion": 40.14,
-    "congestion_delta": 24.35,
-    "average_speed_kmh": 54.96,
-    "speed_delta": -5.8,
-    "vehicle_density": 28.77,
-    "density_delta": 11.12,
-    "population_density": 2566,
-    "red_light_violations": 5,
-    "weather": "Normal",
+    "congestion": 38.3,
+    "congestion_delta": 0.0,
+    "average_speed_kmh": 48.3,
+    "speed_delta": 0.0,
+    "vehicle_density": 45.5,
+    "density_delta": 0.0,
+    "population_density": 8500,
+    "red_light_violations": 0,
+    "weather": "CLEAR",
     "special_event": 0
   },
   "signal_optimization": {
-    "base_green_seconds": 45,
-    "recommended_green_seconds": 52,
-    "change_seconds": 7,
-    "change_percent": 15.6,
-    "urgency": "MODERATE",
-    "reason": "Slight adjustment for current conditions",
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 44,
+    "change_seconds": 9,
+    "change_percent": 25.7,
+    "urgency": "HIGH",
+    "reason": "Elevated traffic density needs extended clearance time",
     "factors": {
-      "congestion_factor": 1.32,
-      "density_factor": 1.12,
-      "speed_factor": 0.79,
+      "congestion_factor": 1.31,
+      "density_factor": 1.18,
+      "speed_factor": 0.82,
       "event_boost": 1.0,
       "weather_boost": 1.0
     }
   },
   "environmental_impact": {
-    "total_co2_kg_per_week": 30908.1,
-    "total_co2_tonnes_per_year": 1607.22,
-    "idle_co2_kg": 6374.6,
-    "moving_co2_kg": 24533.4,
-    "potential_savings_kg_per_week": 1530.8,
-    "potential_savings_tonnes_per_year": 79.6,
-    "trees_equivalent_per_year": 3790,
-    "fuel_saved_liters_per_week": 662.7,
-    "citizens_impacted": 5132,
-    "optimization_factor_pct": 24.0
+    "total_co2_kg_per_week": 48670.8,
+    "total_co2_tonnes_per_year": 2530.88,
+    "idle_co2_kg": 9619.4,
+    "moving_co2_kg": 39051.4,
+    "potential_savings_kg_per_week": 2292.3,
+    "potential_savings_tonnes_per_year": 119.2,
+    "trees_equivalent_per_year": 5676,
+    "fuel_saved_liters_per_week": 992.3,
+    "citizens_impacted": 17000,
+    "optimization_factor_pct": 23.8
   },
   "interventions": [
     {
-      "id": "BASELINE_MONITORING",
-      "name": "Routine Monitoring",
-      "icon": "\ud83d\udcca",
-      "severity": "LOW",
-      "description": "No specific risk indicators triggered.",
-      "action": "Continue routine monitoring."
+      "title": "Deploy Speed Calming & Signal Synchronization on S Stony Island Ave & E 103Rd St",
+      "type": "MUNICIPAL_CORRIDOR_CALMING",
+      "priority": "MODERATE",
+      "target_reduction": "18% collision frequency reduction"
+    },
+    {
+      "title": "Pedestrian Crosswalk High-Visibility Illumination & Turn Signal Audit",
+      "type": "INFRASTRUCTURE_SAFETY",
+      "priority": "HIGH",
+      "target_reduction": "Eliminate left-turn crossing conflicts"
     }
   ],
-  "executive_briefing": "Anna Nagar shows elevated risk at 38%. Continue routine monitoring. Optimizing signals could save 1531 kg CO2/week, equivalent to 3790 trees/year.",
+  "executive_briefing": "Chicago Police Beat 511 (Roseland - S Stony Island Ave & E 103Rd St) logged 0 collisions in week 22. Machine learning incident risk is 35.6%, forecasted at 35.6% for next week.",
   "civilian_road_safety_radar": {
     "current_week": {
-      "week": 22,
-      "risk_score": 38.4,
-      "risk_percentage": "38%",
-      "risk_badge": "MODERATE RISK",
+      "period": "2024-W22",
+      "date_range": "Week 22, 2024",
+      "risk_score": 35.6,
+      "risk_percentage": "36%",
+      "risk_badge": "[ELEVATED TRAFFIC]",
       "risk_color": "#eab308",
-      "description": "Corridor operating within normal baseline.",
-      "crashes_reported": 0
+      "description": "Corridor is operating within historical baseline.",
+      "crashes_reported": 0,
+      "crashes_rolling4w_avg": 1.5,
+      "dominant_weather": "CLEAR"
     },
     "upcoming_week": {
-      "predicted_risk_probability": 0.3694,
-      "predicted_risk_percentage": "37%",
-      "predicted_risk_badge": "MODERATE RISK",
+      "period": "2024-W23",
+      "predicted_risk_probability": 0.3559,
+      "predicted_risk_percentage": "36%",
+      "predicted_risk_badge": "[ELEVATED TRAFFIC]",
       "risk_color": "#eab308",
       "description": "Forecast models project normal baseline traffic conditions.",
-      "trend_label": "[TREND: STABLE]"
+      "trend_label": "[TREND: STABLE]",
+      "trend_color": "#eab308",
+      "trend_percentage_change": "0%"
     },
     "why_accidents_might_happen": {
       "primary_collision_cause": {
-        "title": "Congestion Bottleneck & Merge Conflicts",
-        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+        "title": "Failing to Yield Right-of-Way",
+        "explanation": "Drivers turning left across oncoming traffic or turning on yellow without checking cross-traffic and crossing pedestrians.",
+        "historical_frequency_pct": 34.2
       },
       "behavior_factor": {
-        "title": "Tailgating & Speed Variance",
-        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+        "title": "Tailgating & Sudden Braking",
+        "explanation": "High-density commuter queues cause rear-end collisions when drivers follow too closely during rush hours.",
+        "risk_level": "MODERATE"
       },
       "street_environment": {
-        "zone_type": "Industrial_Corridor",
-        "average_speed_kmh": 54.96,
-        "congestion_level": 40.14
+        "posted_speed_limit_mph": 30.0,
+        "intersection_crossroad_density_pct": 22.4,
+        "title": "30 mph Zone | 22% Crossroad Density",
+        "explanation": "Frequent signalized crossroads combined with multi-lane traffic flow increase conflict points at peak times."
       }
     },
     "civilian_safety_guide": {
       "for_drivers": {
         "action": "Increase Following Distance",
-        "details": "Maintain 3 car lengths buffer during peak rush hours."
+        "details": "Maintain at least 3 car lengths of space behind the vehicle ahead. Avoid tailgating near transit stops and expressway exit ramps where sudden stops occur.",
+        "key_tip": "Leave 3-4 car lengths buffer on commercial transit corridors"
       },
       "for_pedestrians_and_cyclists": {
-        "action": "Double-Check Turning Vehicles",
-        "details": "Make eye contact with turning drivers at intersections before crossing."
+        "action": "Double-Check Turning Cars",
+        "details": "Make eye contact with drivers turning right on red before stepping into crosswalks. Use reflective gear or activate bicycle lights after dusk.",
+        "key_tip": "Never assume a turning driver has seen you at green lights"
       },
       "peak_danger_windows": {
-        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
-        "details": "Congestion peaks during evening travel windows."
+        "primary_peak": "4:30 PM - 7:30 PM Weekdays (Evening Commute Congestion)",
+        "secondary_peak": "10:00 PM - 2:00 AM Friday & Saturday (Reduced Lighting & Speed Variance)",
+        "details": "Evening rush hours experience 3x higher collision rates than midday. Exercise maximum patience during heavy congestion."
       }
     }
   },
   "raw_metrics": {
     "zone_id": "Zone_39",
+    "chicago_beat": "511",
     "week": 22,
-    "zone_type": "Industrial_Corridor",
-    "temporal_profile": "GRADUAL_DETERIORATION",
-    "population_density": 2566,
-    "road_capacity": 44,
-    "effective_road_capacity": 44.0,
-    "vehicle_density": 28.77,
-    "traffic_pressure": 0.654,
-    "congestion": 40.14,
-    "average_speed": 54.96,
-    "red_light_violations": 5,
-    "weather": "Normal",
-    "road_condition": "Good",
-    "special_event": 0,
-    "incident_count": 0,
-    "incident_occurred": 0,
-    "previous_week_vehicle_density": 17.65,
-    "previous_week_congestion": 15.79,
-    "previous_week_average_speed": 60.76,
-    "previous_week_red_light_violations": 4.0,
-    "previous_week_incident_count": 0.0,
-    "previous_week_incident_occurred": 0.0,
-    "previous_week_traffic_pressure": 0.401,
-    "rolling_4_week_avg_vehicle_density": 14.58,
-    "rolling_4_week_avg_congestion": 17.04,
-    "rolling_4_week_avg_speed": 58.7,
-    "rolling_4_week_avg_violations": 3.25,
-    "rolling_4_week_incident_count": 1.0,
-    "rolling_4_week_incident_rate": 0.25,
-    "rolling_4_week_avg_traffic_pressure": 0.364,
-    "vehicle_density_change": 11.12,
-    "congestion_change": 24.35,
-    "speed_change": -5.8,
-    "violations_change": 1.0,
-    "traffic_pressure_change": 0.253,
-    "incident_count_change": -1.0,
-    "vehicle_density_pct_change": 63.0,
-    "congestion_pct_change": 154.21,
-    "speed_pct_change": -9.55,
-    "vehicle_population_ratio": 11.212,
-    "congestion_trend_4w": 2.33,
-    "vehicle_density_trend_4w": 2.998,
-    "speed_trend_4w": 0.443,
-    "incident_trend_4w": 0.1,
-    "car_percentage": 43.5,
-    "motorcycle_percentage": 39.4,
-    "bus_percentage": 12.4,
-    "truck_percentage": 4.7,
-    "moving_vehicle_percentage": 35.1,
-    "slow_vehicle_percentage": 39.4,
-    "stopped_vehicle_percentage": 25.5,
-    "location_name": "Anna Nagar",
-    "city": "Chennai",
-    "latitude": 13.085,
-    "longitude": 80.2101,
-    "predicted_risk_probability": 0.384,
-    "risk_score": 38.4,
-    "population_exposure_score": 8.6572,
-    "vehicle_exposure_score": 38.8168,
-    "temporal_trend_score": 83.1409,
-    "priority_score": 37.7588,
-    "priority_rank": 32,
-    "priority_level": "MODERATE",
-    "risk_prob": 0.384
+    "crashes": 0,
+    "rolling4w_avg": 1.5,
+    "speed_mph": 30.0
   }
 }

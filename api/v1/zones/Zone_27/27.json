@@ -1,209 +1,155 @@
 {
   "zone_id": "Zone_27",
-  "location_name": "Gomti Nagar",
-  "city": "Lucknow",
-  "zone_type": "Suburban_LowDensity",
+  "location_name": "West Loop - N Halsted St & W Grand Ave",
+  "city": "Chicago",
+  "zone_type": "Dining, Medical District & Arts Hub",
   "week": 27,
-  "latitude": 26.8467,
-  "longitude": 81.0078,
+  "latitude": 41.8901,
+  "longitude": -87.6478,
   "risk_analysis": {
-    "predicted_risk_probability": 0.2456,
-    "predicted_risk_percentage": 24.56,
-    "risk_label": "LOW RISK",
-    "risk_color": "#22c55e",
-    "risk_delta_vs_prev_week": -9.8683,
+    "predicted_risk_probability": 0.848,
+    "predicted_risk_percentage": 84.8,
+    "risk_label": "CRITICAL RISK",
+    "risk_color": "#ef4444",
+    "risk_delta_vs_prev_week": 0.2,
     "actual_incident": 0
   },
   "priority": {
-    "priority_score": 21.6966,
-    "priority_rank": 37,
-    "priority_level": "LOW",
+    "priority_score": 65.64,
+    "priority_rank": 1,
+    "priority_level": "HIGH",
     "components": {
-      "risk_score": 24.5635,
-      "population_exposure_score": 21.5245,
-      "vehicle_exposure_score": 6.327,
-      "temporal_trend_score": 34.8313
+      "risk_score": 84.8,
+      "population_exposure_score": 65.0,
+      "vehicle_exposure_score": 39.6,
+      "temporal_trend_score": 50.3
     },
     "explanation": {
-      "priority_level": "LOW",
-      "priority_score": 21.7,
-      "top_contributors": [
-        {
-          "factor": "Risk Score",
-          "icon": "\ud83d\udfe2",
-          "value": "25/100",
-          "impact": "LOW",
-          "detail": "Risk score within acceptable range",
-          "weight": 24.5635
-        }
-      ],
-      "total_factors": 1,
-      "assessment": "This zone is currently within acceptable safety parameters. Routine monitoring is sufficient."
+      "priority_level": "HIGH",
+      "priority_score": 65.64,
+      "assessment": "Chicago corridor in 12th District - Near West exhibits high traffic hazard priority driven by Chicago crash history."
     }
   },
   "telemetry": {
-    "congestion": 12.1,
-    "congestion_delta": 0.95,
-    "average_speed_kmh": 63.05,
-    "speed_delta": 7.99,
-    "vehicle_density": 10.74,
-    "density_delta": -5.03,
-    "population_density": 4357,
-    "red_light_violations": 3,
-    "weather": "Normal",
+    "congestion": 38.3,
+    "congestion_delta": 0.0,
+    "average_speed_kmh": 48.3,
+    "speed_delta": 0.0,
+    "vehicle_density": 45.5,
+    "density_delta": 0.0,
+    "population_density": 8500,
+    "red_light_violations": 0,
+    "weather": "CLEAR",
     "special_event": 0
   },
   "signal_optimization": {
-    "base_green_seconds": 25,
-    "recommended_green_seconds": 21,
-    "change_seconds": -4,
-    "change_percent": -16.0,
-    "urgency": "OPTIMIZE",
-    "reason": "Low traffic \u2014 reduce green time to improve cross-traffic flow",
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 44,
+    "change_seconds": 9,
+    "change_percent": 25.7,
+    "urgency": "HIGH",
+    "reason": "Elevated traffic density needs extended clearance time",
     "factors": {
-      "congestion_factor": 1.1,
-      "density_factor": 1.04,
-      "speed_factor": 0.76,
+      "congestion_factor": 1.31,
+      "density_factor": 1.18,
+      "speed_factor": 0.82,
       "event_boost": 1.0,
       "weather_boost": 1.0
     }
   },
   "environmental_impact": {
-    "total_co2_kg_per_week": 16145.5,
-    "total_co2_tonnes_per_year": 839.56,
-    "idle_co2_kg": 717.3,
-    "moving_co2_kg": 15428.1,
-    "potential_savings_kg_per_week": 152.1,
-    "potential_savings_tonnes_per_year": 7.91,
-    "trees_equivalent_per_year": 376,
-    "fuel_saved_liters_per_week": 65.9,
-    "citizens_impacted": 8714,
-    "optimization_factor_pct": 21.2
+    "total_co2_kg_per_week": 48670.8,
+    "total_co2_tonnes_per_year": 2530.88,
+    "idle_co2_kg": 9619.4,
+    "moving_co2_kg": 39051.4,
+    "potential_savings_kg_per_week": 2292.3,
+    "potential_savings_tonnes_per_year": 119.2,
+    "trees_equivalent_per_year": 5676,
+    "fuel_saved_liters_per_week": 992.3,
+    "citizens_impacted": 17000,
+    "optimization_factor_pct": 23.8
   },
   "interventions": [
     {
-      "id": "BASELINE_MONITORING",
-      "name": "Routine Monitoring",
-      "icon": "\ud83d\udcca",
-      "severity": "LOW",
-      "description": "Zone currently within acceptable risk parameters.",
-      "action": "Continue routine monitoring. No immediate intervention required."
+      "title": "Deploy Speed Calming & Signal Synchronization on N Halsted St & W Grand Ave",
+      "type": "MUNICIPAL_CORRIDOR_CALMING",
+      "priority": "HIGH",
+      "target_reduction": "18% collision frequency reduction"
+    },
+    {
+      "title": "Pedestrian Crosswalk High-Visibility Illumination & Turn Signal Audit",
+      "type": "INFRASTRUCTURE_SAFETY",
+      "priority": "MODERATE",
+      "target_reduction": "Eliminate left-turn crossing conflicts"
     }
   ],
-  "executive_briefing": "Gomti Nagar is within safe operating parameters (25% risk). Continue routine monitoring. Optimizing signals could save 152 kg CO2/week, equivalent to 376 trees/year.",
+  "executive_briefing": "Chicago Police Beat 1214 (West Loop - N Halsted St & W Grand Ave) logged 0 collisions in week 27. Machine learning incident risk is 84.8%, forecasted at 85.0% for next week.",
   "civilian_road_safety_radar": {
     "current_week": {
-      "week": 27,
-      "risk_score": 24.6,
-      "risk_percentage": "25%",
-      "risk_badge": "LOW RISK",
-      "risk_color": "#22c55e",
-      "description": "Corridor operating within normal baseline.",
-      "crashes_reported": 0
+      "period": "2024-W27",
+      "date_range": "Week 27, 2024",
+      "risk_score": 84.8,
+      "risk_percentage": "85%",
+      "risk_badge": "[HIGH RISK ALERT]",
+      "risk_color": "#ef4444",
+      "description": "Elevated collision hazard recorded. Extra vigilance recommended.",
+      "crashes_reported": 0,
+      "crashes_rolling4w_avg": 1.5,
+      "dominant_weather": "CLEAR"
     },
     "upcoming_week": {
-      "predicted_risk_probability": 0.2264,
-      "predicted_risk_percentage": "23%",
-      "predicted_risk_badge": "LOW RISK",
-      "risk_color": "#22c55e",
-      "description": "Forecast models project normal baseline traffic conditions.",
-      "trend_label": "[TREND: STABLE]"
+      "period": "2024-W28",
+      "predicted_risk_probability": 0.85,
+      "predicted_risk_percentage": "85%",
+      "predicted_risk_badge": "[HIGH RISK ALERT]",
+      "risk_color": "#ef4444",
+      "description": "Forecast models project elevated collision probability.",
+      "trend_label": "[TREND: STABLE]",
+      "trend_color": "#ef4444",
+      "trend_percentage_change": "0%"
     },
     "why_accidents_might_happen": {
       "primary_collision_cause": {
-        "title": "Congestion Bottleneck & Merge Conflicts",
-        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+        "title": "Failing to Yield Right-of-Way",
+        "explanation": "Drivers turning left across oncoming traffic or turning on yellow without checking cross-traffic and crossing pedestrians.",
+        "historical_frequency_pct": 34.2
       },
       "behavior_factor": {
-        "title": "Tailgating & Speed Variance",
-        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+        "title": "Tailgating & Sudden Braking",
+        "explanation": "High-density commuter queues cause rear-end collisions when drivers follow too closely during rush hours.",
+        "risk_level": "ELEVATED"
       },
       "street_environment": {
-        "zone_type": "Suburban_LowDensity",
-        "average_speed_kmh": 63.05,
-        "congestion_level": 12.1
+        "posted_speed_limit_mph": 30.0,
+        "intersection_crossroad_density_pct": 35.2,
+        "title": "30 mph Zone | 35% Crossroad Density",
+        "explanation": "Frequent signalized crossroads combined with multi-lane traffic flow increase conflict points at peak times."
       }
     },
     "civilian_safety_guide": {
       "for_drivers": {
         "action": "Increase Following Distance",
-        "details": "Maintain 3 car lengths buffer during peak rush hours."
+        "details": "Maintain at least 3 car lengths of space behind the vehicle ahead. Avoid tailgating near transit stops and expressway exit ramps where sudden stops occur.",
+        "key_tip": "Leave 3-4 car lengths buffer on commercial transit corridors"
       },
       "for_pedestrians_and_cyclists": {
-        "action": "Double-Check Turning Vehicles",
-        "details": "Make eye contact with turning drivers at intersections before crossing."
+        "action": "Double-Check Turning Cars",
+        "details": "Make eye contact with drivers turning right on red before stepping into crosswalks. Use reflective gear or activate bicycle lights after dusk.",
+        "key_tip": "Never assume a turning driver has seen you at green lights"
       },
       "peak_danger_windows": {
-        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
-        "details": "Congestion peaks during evening travel windows."
+        "primary_peak": "4:30 PM - 7:30 PM Weekdays (Evening Commute Congestion)",
+        "secondary_peak": "10:00 PM - 2:00 AM Friday & Saturday (Reduced Lighting & Speed Variance)",
+        "details": "Evening rush hours experience 3x higher collision rates than midday. Exercise maximum patience during heavy congestion."
       }
     }
   },
   "raw_metrics": {
     "zone_id": "Zone_27",
+    "chicago_beat": "1214",
     "week": 27,
-    "zone_type": "Suburban_LowDensity",
-    "temporal_profile": "PERIODIC_SPIKE",
-    "population_density": 4357,
-    "road_capacity": 81,
-    "effective_road_capacity": 81.0,
-    "vehicle_density": 10.74,
-    "traffic_pressure": 0.133,
-    "congestion": 12.1,
-    "average_speed": 63.05,
-    "red_light_violations": 3,
-    "weather": "Normal",
-    "road_condition": "Good",
-    "special_event": 0,
-    "incident_count": 0,
-    "incident_occurred": 0,
-    "previous_week_vehicle_density": 15.77,
-    "previous_week_congestion": 11.15,
-    "previous_week_average_speed": 55.06,
-    "previous_week_red_light_violations": 4.0,
-    "previous_week_incident_count": 0.0,
-    "previous_week_incident_occurred": 0.0,
-    "previous_week_traffic_pressure": 0.235,
-    "rolling_4_week_avg_vehicle_density": 14.93,
-    "rolling_4_week_avg_congestion": 10.7,
-    "rolling_4_week_avg_speed": 61.55,
-    "rolling_4_week_avg_violations": 4.75,
-    "rolling_4_week_incident_count": 0.0,
-    "rolling_4_week_incident_rate": 0.0,
-    "rolling_4_week_avg_traffic_pressure": 0.2,
-    "vehicle_density_change": -5.03,
-    "congestion_change": 0.95,
-    "speed_change": 7.99,
-    "violations_change": -1.0,
-    "traffic_pressure_change": -0.102,
-    "incident_count_change": 0.0,
-    "vehicle_density_pct_change": -31.9,
-    "congestion_pct_change": 8.52,
-    "speed_pct_change": 14.51,
-    "vehicle_population_ratio": 2.465,
-    "congestion_trend_4w": -0.363,
-    "vehicle_density_trend_4w": 1.187,
-    "speed_trend_4w": -2.478,
-    "incident_trend_4w": 0.0,
-    "car_percentage": 45.6,
-    "motorcycle_percentage": 39.8,
-    "bus_percentage": 12.7,
-    "truck_percentage": 2.0,
-    "moving_vehicle_percentage": 77.4,
-    "slow_vehicle_percentage": 10.1,
-    "stopped_vehicle_percentage": 12.5,
-    "location_name": "Gomti Nagar",
-    "city": "Lucknow",
-    "latitude": 26.8467,
-    "longitude": 81.0078,
-    "predicted_risk_probability": 0.2456,
-    "risk_score": 24.5635,
-    "population_exposure_score": 21.5245,
-    "vehicle_exposure_score": 6.327,
-    "temporal_trend_score": 34.8313,
-    "priority_score": 21.6966,
-    "priority_rank": 37,
-    "priority_level": "LOW",
-    "risk_prob": 0.2456
+    "crashes": 0,
+    "rolling4w_avg": 1.5,
+    "speed_mph": 30.0
   }
 }

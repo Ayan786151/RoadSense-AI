@@ -1,209 +1,155 @@
 {
   "zone_id": "Zone_28",
-  "location_name": "Aliganj",
-  "city": "Lucknow",
-  "zone_type": "Highway_Junction",
+  "location_name": "Auburn Gresham - S State St & W 79Th St",
+  "city": "Chicago",
+  "zone_type": "Major Arterial Crossroad Commercial",
   "week": 9,
-  "latitude": 26.886,
-  "longitude": 80.9462,
+  "latitude": 41.7528,
+  "longitude": -87.6247,
   "risk_analysis": {
-    "predicted_risk_probability": 0.3473,
-    "predicted_risk_percentage": 34.73,
-    "risk_label": "LOW RISK",
-    "risk_color": "#22c55e",
-    "risk_delta_vs_prev_week": 9.2571,
+    "predicted_risk_probability": 0.3563,
+    "predicted_risk_percentage": 35.63,
+    "risk_label": "MODERATE RISK",
+    "risk_color": "#eab308",
+    "risk_delta_vs_prev_week": 1.65,
     "actual_incident": 0
   },
   "priority": {
-    "priority_score": 22.5348,
-    "priority_rank": 40,
-    "priority_level": "LOW",
+    "priority_score": 46.3,
+    "priority_rank": 1,
+    "priority_level": "MODERATE",
     "components": {
-      "risk_score": 34.7325,
-      "population_exposure_score": 3.4773,
-      "vehicle_exposure_score": 11.0121,
-      "temporal_trend_score": 37.1341
+      "risk_score": 35.63,
+      "population_exposure_score": 65.0,
+      "vehicle_exposure_score": 39.6,
+      "temporal_trend_score": 52.5
     },
     "explanation": {
-      "priority_level": "LOW",
-      "priority_score": 22.5,
-      "top_contributors": [
-        {
-          "factor": "Risk Score",
-          "icon": "\ud83d\udfe2",
-          "value": "35/100",
-          "impact": "LOW",
-          "detail": "Risk score within acceptable range",
-          "weight": 34.7325
-        }
-      ],
-      "total_factors": 1,
-      "assessment": "This zone is currently within acceptable safety parameters. Routine monitoring is sufficient."
+      "priority_level": "MODERATE",
+      "priority_score": 46.3,
+      "assessment": "Chicago corridor in 06th District - Gresham exhibits moderate traffic hazard priority driven by Chicago crash history."
     }
   },
   "telemetry": {
-    "congestion": 13.82,
-    "congestion_delta": 9.78,
-    "average_speed_kmh": 58.29,
-    "speed_delta": -9.18,
-    "vehicle_density": 9.49,
-    "density_delta": 4.31,
-    "population_density": 1845,
-    "red_light_violations": 2,
-    "weather": "Normal",
+    "congestion": 38.3,
+    "congestion_delta": 0.0,
+    "average_speed_kmh": 48.3,
+    "speed_delta": 0.0,
+    "vehicle_density": 45.5,
+    "density_delta": 0.0,
+    "population_density": 8500,
+    "red_light_violations": 0,
+    "weather": "CLEAR",
     "special_event": 0
   },
   "signal_optimization": {
-    "base_green_seconds": 50,
-    "recommended_green_seconds": 45,
-    "change_seconds": -5,
-    "change_percent": -10.0,
-    "urgency": "NOMINAL",
-    "reason": "Current default timing is adequate",
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 44,
+    "change_seconds": 9,
+    "change_percent": 25.7,
+    "urgency": "HIGH",
+    "reason": "Elevated traffic density needs extended clearance time",
     "factors": {
-      "congestion_factor": 1.11,
-      "density_factor": 1.04,
-      "speed_factor": 0.78,
+      "congestion_factor": 1.31,
+      "density_factor": 1.18,
+      "speed_factor": 0.82,
       "event_boost": 1.0,
       "weather_boost": 1.0
     }
   },
   "environmental_impact": {
-    "total_co2_kg_per_week": 13080.6,
-    "total_co2_tonnes_per_year": 680.19,
-    "idle_co2_kg": 724.0,
-    "moving_co2_kg": 12356.7,
-    "potential_savings_kg_per_week": 154.8,
-    "potential_savings_tonnes_per_year": 8.05,
-    "trees_equivalent_per_year": 383,
-    "fuel_saved_liters_per_week": 67.0,
-    "citizens_impacted": 3690,
-    "optimization_factor_pct": 21.4
+    "total_co2_kg_per_week": 48670.8,
+    "total_co2_tonnes_per_year": 2530.88,
+    "idle_co2_kg": 9619.4,
+    "moving_co2_kg": 39051.4,
+    "potential_savings_kg_per_week": 2292.3,
+    "potential_savings_tonnes_per_year": 119.2,
+    "trees_equivalent_per_year": 5676,
+    "fuel_saved_liters_per_week": 992.3,
+    "citizens_impacted": 17000,
+    "optimization_factor_pct": 23.8
   },
   "interventions": [
     {
-      "id": "BASELINE_MONITORING",
-      "name": "Routine Monitoring",
-      "icon": "\ud83d\udcca",
-      "severity": "LOW",
-      "description": "No specific risk indicators triggered.",
-      "action": "Continue routine monitoring."
+      "title": "Deploy Speed Calming & Signal Synchronization on S State St & W 79Th St",
+      "type": "MUNICIPAL_CORRIDOR_CALMING",
+      "priority": "MODERATE",
+      "target_reduction": "18% collision frequency reduction"
+    },
+    {
+      "title": "Pedestrian Crosswalk High-Visibility Illumination & Turn Signal Audit",
+      "type": "INFRASTRUCTURE_SAFETY",
+      "priority": "HIGH",
+      "target_reduction": "Eliminate left-turn crossing conflicts"
     }
   ],
-  "executive_briefing": "Aliganj is within safe operating parameters (35% risk). Continue routine monitoring. Optimizing signals could save 155 kg CO2/week, equivalent to 383 trees/year.",
+  "executive_briefing": "Chicago Police Beat 623 (Auburn Gresham - S State St & W 79Th St) logged 0 collisions in week 9. Machine learning incident risk is 35.6%, forecasted at 37.3% for next week.",
   "civilian_road_safety_radar": {
     "current_week": {
-      "week": 9,
-      "risk_score": 34.7,
-      "risk_percentage": "35%",
-      "risk_badge": "LOW RISK",
-      "risk_color": "#22c55e",
-      "description": "Corridor operating within normal baseline.",
-      "crashes_reported": 0
+      "period": "2024-W09",
+      "date_range": "Week 9, 2024",
+      "risk_score": 35.6,
+      "risk_percentage": "36%",
+      "risk_badge": "[ELEVATED TRAFFIC]",
+      "risk_color": "#eab308",
+      "description": "Corridor is operating within historical baseline.",
+      "crashes_reported": 0,
+      "crashes_rolling4w_avg": 1.5,
+      "dominant_weather": "CLEAR"
     },
     "upcoming_week": {
-      "predicted_risk_probability": 0.2369,
-      "predicted_risk_percentage": "24%",
-      "predicted_risk_badge": "LOW RISK",
-      "risk_color": "#22c55e",
+      "period": "2024-W10",
+      "predicted_risk_probability": 0.3728,
+      "predicted_risk_percentage": "37%",
+      "predicted_risk_badge": "[ELEVATED TRAFFIC]",
+      "risk_color": "#eab308",
       "description": "Forecast models project normal baseline traffic conditions.",
-      "trend_label": "[TREND: COOLING DOWN]"
+      "trend_label": "[TREND: STABLE]",
+      "trend_color": "#eab308",
+      "trend_percentage_change": "0%"
     },
     "why_accidents_might_happen": {
       "primary_collision_cause": {
-        "title": "Congestion Bottleneck & Merge Conflicts",
-        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+        "title": "Failing to Yield Right-of-Way",
+        "explanation": "Drivers turning left across oncoming traffic or turning on yellow without checking cross-traffic and crossing pedestrians.",
+        "historical_frequency_pct": 34.2
       },
       "behavior_factor": {
-        "title": "Tailgating & Speed Variance",
-        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+        "title": "Tailgating & Sudden Braking",
+        "explanation": "High-density commuter queues cause rear-end collisions when drivers follow too closely during rush hours.",
+        "risk_level": "MODERATE"
       },
       "street_environment": {
-        "zone_type": "Highway_Junction",
-        "average_speed_kmh": 58.29,
-        "congestion_level": 13.82
+        "posted_speed_limit_mph": 30.0,
+        "intersection_crossroad_density_pct": 29.0,
+        "title": "30 mph Zone | 29% Crossroad Density",
+        "explanation": "Frequent signalized crossroads combined with multi-lane traffic flow increase conflict points at peak times."
       }
     },
     "civilian_safety_guide": {
       "for_drivers": {
         "action": "Increase Following Distance",
-        "details": "Maintain 3 car lengths buffer during peak rush hours."
+        "details": "Maintain at least 3 car lengths of space behind the vehicle ahead. Avoid tailgating near transit stops and expressway exit ramps where sudden stops occur.",
+        "key_tip": "Leave 3-4 car lengths buffer on commercial transit corridors"
       },
       "for_pedestrians_and_cyclists": {
-        "action": "Double-Check Turning Vehicles",
-        "details": "Make eye contact with turning drivers at intersections before crossing."
+        "action": "Double-Check Turning Cars",
+        "details": "Make eye contact with drivers turning right on red before stepping into crosswalks. Use reflective gear or activate bicycle lights after dusk.",
+        "key_tip": "Never assume a turning driver has seen you at green lights"
       },
       "peak_danger_windows": {
-        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
-        "details": "Congestion peaks during evening travel windows."
+        "primary_peak": "4:30 PM - 7:30 PM Weekdays (Evening Commute Congestion)",
+        "secondary_peak": "10:00 PM - 2:00 AM Friday & Saturday (Reduced Lighting & Speed Variance)",
+        "details": "Evening rush hours experience 3x higher collision rates than midday. Exercise maximum patience during heavy congestion."
       }
     }
   },
   "raw_metrics": {
     "zone_id": "Zone_28",
+    "chicago_beat": "623",
     "week": 9,
-    "zone_type": "Highway_Junction",
-    "temporal_profile": "PERIODIC_SPIKE",
-    "population_density": 1845,
-    "road_capacity": 83,
-    "effective_road_capacity": 83.0,
-    "vehicle_density": 9.49,
-    "traffic_pressure": 0.114,
-    "congestion": 13.82,
-    "average_speed": 58.29,
-    "red_light_violations": 2,
-    "weather": "Normal",
-    "road_condition": "Good",
-    "special_event": 0,
-    "incident_count": 0,
-    "incident_occurred": 0,
-    "previous_week_vehicle_density": 5.18,
-    "previous_week_congestion": 4.04,
-    "previous_week_average_speed": 67.47,
-    "previous_week_red_light_violations": 2.0,
-    "previous_week_incident_count": 0.0,
-    "previous_week_incident_occurred": 0.0,
-    "previous_week_traffic_pressure": 0.062,
-    "rolling_4_week_avg_vehicle_density": 5.84,
-    "rolling_4_week_avg_congestion": 5.82,
-    "rolling_4_week_avg_speed": 62.8,
-    "rolling_4_week_avg_violations": 3.75,
-    "rolling_4_week_incident_count": 0.0,
-    "rolling_4_week_incident_rate": 0.0,
-    "rolling_4_week_avg_traffic_pressure": 0.076,
-    "vehicle_density_change": 4.31,
-    "congestion_change": 9.78,
-    "speed_change": -9.18,
-    "violations_change": 0.0,
-    "traffic_pressure_change": 0.052,
-    "incident_count_change": 0.0,
-    "vehicle_density_pct_change": 83.2,
-    "congestion_pct_change": 242.07,
-    "speed_pct_change": -13.61,
-    "vehicle_population_ratio": 5.144,
-    "congestion_trend_4w": -2.062,
-    "vehicle_density_trend_4w": -1.425,
-    "speed_trend_4w": 1.432,
-    "incident_trend_4w": 0.0,
-    "car_percentage": 46.0,
-    "motorcycle_percentage": 40.1,
-    "bus_percentage": 9.0,
-    "truck_percentage": 4.9,
-    "moving_vehicle_percentage": 89.5,
-    "slow_vehicle_percentage": 10.7,
-    "stopped_vehicle_percentage": 0.0,
-    "location_name": "Aliganj",
-    "city": "Lucknow",
-    "latitude": 26.886,
-    "longitude": 80.9462,
-    "predicted_risk_probability": 0.3473,
-    "risk_score": 34.7325,
-    "population_exposure_score": 3.4773,
-    "vehicle_exposure_score": 11.0121,
-    "temporal_trend_score": 37.1341,
-    "priority_score": 22.5348,
-    "priority_rank": 40,
-    "priority_level": "LOW",
-    "risk_prob": 0.3473
+    "crashes": 0,
+    "rolling4w_avg": 1.5,
+    "speed_mph": 30.0
   }
 }

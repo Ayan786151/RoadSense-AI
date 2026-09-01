@@ -1,225 +1,155 @@
 {
   "zone_id": "Zone_41",
-  "location_name": "Adyar",
-  "city": "Chennai",
-  "zone_type": "Highway_Junction",
+  "location_name": "Bridgeport - S California Ave & S Western Ave",
+  "city": "Chicago",
+  "zone_type": "Industrial, Rail & Arts Corridor",
   "week": 48,
-  "latitude": 13.0063,
-  "longitude": 80.2574,
+  "latitude": 41.8281,
+  "longitude": -87.694,
   "risk_analysis": {
-    "predicted_risk_probability": 0.5329,
-    "predicted_risk_percentage": 53.29,
-    "risk_label": "MODERATE RISK",
-    "risk_color": "#eab308",
-    "risk_delta_vs_prev_week": -9.9737,
+    "predicted_risk_probability": 0.803,
+    "predicted_risk_percentage": 80.3,
+    "risk_label": "CRITICAL RISK",
+    "risk_color": "#ef4444",
+    "risk_delta_vs_prev_week": -0.9,
     "actual_incident": 0
   },
   "priority": {
-    "priority_score": 41.6226,
-    "priority_rank": 27,
-    "priority_level": "MODERATE",
+    "priority_score": 63.58,
+    "priority_rank": 1,
+    "priority_level": "HIGH",
     "components": {
-      "risk_score": 53.295,
-      "population_exposure_score": 8.5351,
-      "vehicle_exposure_score": 36.408,
-      "temporal_trend_score": 72.5952
+      "risk_score": 80.3,
+      "population_exposure_score": 65.0,
+      "vehicle_exposure_score": 39.6,
+      "temporal_trend_score": 48.6
     },
     "explanation": {
-      "priority_level": "MODERATE",
-      "priority_score": 41.6,
-      "top_contributors": [
-        {
-          "factor": "Worsening Trend",
-          "icon": "\ud83d\udcc8",
-          "value": "73/100",
-          "impact": "HIGH",
-          "detail": "4-week congestion trend is actively worsening \u2014 conditions deteriorating",
-          "weight": 72.5952
-        },
-        {
-          "factor": "Risk Score",
-          "icon": "\ud83d\udfe1",
-          "value": "53/100",
-          "impact": "MEDIUM",
-          "detail": "Moderate model-estimated risk",
-          "weight": 53.295
-        },
-        {
-          "factor": "Congestion",
-          "icon": "\ud83d\ude97",
-          "value": "50/100",
-          "impact": "MEDIUM",
-          "detail": "Moderate congestion at 50",
-          "weight": 35.329
-        }
-      ],
-      "total_factors": 3,
-      "assessment": "This zone has moderate risk levels with contributing factors: Worsening Trend, Risk Score. Continue monitoring and schedule review if conditions worsen."
+      "priority_level": "HIGH",
+      "priority_score": 63.58,
+      "assessment": "Chicago corridor in 09th District - Deering exhibits high traffic hazard priority driven by Chicago crash history."
     }
   },
   "telemetry": {
-    "congestion": 50.47,
-    "congestion_delta": -1.13,
-    "average_speed_kmh": 39.77,
-    "speed_delta": -1.32,
-    "vehicle_density": 28.34,
-    "density_delta": 1.88,
-    "population_density": 2549,
-    "red_light_violations": 7,
-    "weather": "Light Rain",
+    "congestion": 38.3,
+    "congestion_delta": 0.0,
+    "average_speed_kmh": 48.3,
+    "speed_delta": 0.0,
+    "vehicle_density": 45.5,
+    "density_delta": 0.0,
+    "population_density": 8500,
+    "red_light_violations": 0,
+    "weather": "CLEAR",
     "special_event": 0
   },
   "signal_optimization": {
-    "base_green_seconds": 50,
-    "recommended_green_seconds": 71,
-    "change_seconds": 21,
-    "change_percent": 42.0,
-    "urgency": "CRITICAL",
-    "reason": "Severe congestion requires significantly extended green phase",
+    "base_green_seconds": 35,
+    "recommended_green_seconds": 44,
+    "change_seconds": 9,
+    "change_percent": 25.7,
+    "urgency": "HIGH",
+    "reason": "Elevated traffic density needs extended clearance time",
     "factors": {
-      "congestion_factor": 1.4,
-      "density_factor": 1.11,
-      "speed_factor": 0.85,
+      "congestion_factor": 1.31,
+      "density_factor": 1.18,
+      "speed_factor": 0.82,
       "event_boost": 1.0,
-      "weather_boost": 1.08
+      "weather_boost": 1.0
     }
   },
   "environmental_impact": {
-    "total_co2_kg_per_week": 23972.8,
-    "total_co2_tonnes_per_year": 1246.58,
-    "idle_co2_kg": 7895.4,
-    "moving_co2_kg": 16077.4,
-    "potential_savings_kg_per_week": 1977.6,
-    "potential_savings_tonnes_per_year": 102.83,
-    "trees_equivalent_per_year": 4896,
-    "fuel_saved_liters_per_week": 856.1,
-    "citizens_impacted": 5098,
-    "optimization_factor_pct": 25.0
+    "total_co2_kg_per_week": 48670.8,
+    "total_co2_tonnes_per_year": 2530.88,
+    "idle_co2_kg": 9619.4,
+    "moving_co2_kg": 39051.4,
+    "potential_savings_kg_per_week": 2292.3,
+    "potential_savings_tonnes_per_year": 119.2,
+    "trees_equivalent_per_year": 5676,
+    "fuel_saved_liters_per_week": 992.3,
+    "citizens_impacted": 17000,
+    "optimization_factor_pct": 23.8
   },
   "interventions": [
     {
-      "id": "ROAD_MAINTENANCE",
-      "name": "Road Maintenance Inspection",
-      "icon": "\ud83d\udee3\ufe0f",
-      "severity": "MEDIUM",
-      "description": "Deteriorated road surface combined with elevated risk indicates infrastructure maintenance need.",
-      "action": "Schedule road surface inspection and prioritize pothole repair, marking refresh, and drainage check."
+      "title": "Deploy Speed Calming & Signal Synchronization on S California Ave & S Western Ave",
+      "type": "MUNICIPAL_CORRIDOR_CALMING",
+      "priority": "HIGH",
+      "target_reduction": "18% collision frequency reduction"
+    },
+    {
+      "title": "Pedestrian Crosswalk High-Visibility Illumination & Turn Signal Audit",
+      "type": "INFRASTRUCTURE_SAFETY",
+      "priority": "MODERATE",
+      "target_reduction": "Eliminate left-turn crossing conflicts"
     }
   ],
-  "executive_briefing": "Adyar shows elevated risk at 53%. Continue routine monitoring. Optimizing signals could save 1978 kg CO2/week, equivalent to 4896 trees/year.",
+  "executive_briefing": "Chicago Police Beat 911 (Bridgeport - S California Ave & S Western Ave) logged 0 collisions in week 48. Machine learning incident risk is 80.3%, forecasted at 79.4% for next week.",
   "civilian_road_safety_radar": {
     "current_week": {
-      "week": 48,
-      "risk_score": 53.3,
-      "risk_percentage": "53%",
-      "risk_badge": "MODERATE RISK",
-      "risk_color": "#eab308",
-      "description": "Corridor operating within normal baseline.",
-      "crashes_reported": 0
+      "period": "2024-W48",
+      "date_range": "Week 48, 2024",
+      "risk_score": 80.3,
+      "risk_percentage": "80%",
+      "risk_badge": "[HIGH RISK ALERT]",
+      "risk_color": "#ef4444",
+      "description": "Elevated collision hazard recorded. Extra vigilance recommended.",
+      "crashes_reported": 0,
+      "crashes_rolling4w_avg": 1.5,
+      "dominant_weather": "CLEAR"
     },
     "upcoming_week": {
-      "predicted_risk_probability": 0.6044,
-      "predicted_risk_percentage": "60%",
-      "predicted_risk_badge": "HIGH RISK",
-      "risk_color": "#f97316",
+      "period": "2024-W49",
+      "predicted_risk_probability": 0.794,
+      "predicted_risk_percentage": "79%",
+      "predicted_risk_badge": "[HIGH RISK ALERT]",
+      "risk_color": "#ef4444",
       "description": "Forecast models project elevated collision probability.",
-      "trend_label": "[TREND: INCREASING HAZARD]"
+      "trend_label": "[TREND: STABLE]",
+      "trend_color": "#ef4444",
+      "trend_percentage_change": "0%"
     },
     "why_accidents_might_happen": {
       "primary_collision_cause": {
-        "title": "Congestion Bottleneck & Merge Conflicts",
-        "explanation": "High vehicle density causes abrupt braking and sideswipe risks at merging points."
+        "title": "Failing to Yield Right-of-Way",
+        "explanation": "Drivers turning left across oncoming traffic or turning on yellow without checking cross-traffic and crossing pedestrians.",
+        "historical_frequency_pct": 34.2
       },
       "behavior_factor": {
-        "title": "Tailgating & Speed Variance",
-        "explanation": "Drivers following too closely during peak hours increase rear-end impact frequency."
+        "title": "Tailgating & Sudden Braking",
+        "explanation": "High-density commuter queues cause rear-end collisions when drivers follow too closely during rush hours.",
+        "risk_level": "ELEVATED"
       },
       "street_environment": {
-        "zone_type": "Highway_Junction",
-        "average_speed_kmh": 39.77,
-        "congestion_level": 50.47
+        "posted_speed_limit_mph": 30.0,
+        "intersection_crossroad_density_pct": 32.0,
+        "title": "30 mph Zone | 32% Crossroad Density",
+        "explanation": "Frequent signalized crossroads combined with multi-lane traffic flow increase conflict points at peak times."
       }
     },
     "civilian_safety_guide": {
       "for_drivers": {
         "action": "Increase Following Distance",
-        "details": "Maintain 3 car lengths buffer during peak rush hours."
+        "details": "Maintain at least 3 car lengths of space behind the vehicle ahead. Avoid tailgating near transit stops and expressway exit ramps where sudden stops occur.",
+        "key_tip": "Leave 3-4 car lengths buffer on commercial transit corridors"
       },
       "for_pedestrians_and_cyclists": {
-        "action": "Double-Check Turning Vehicles",
-        "details": "Make eye contact with turning drivers at intersections before crossing."
+        "action": "Double-Check Turning Cars",
+        "details": "Make eye contact with drivers turning right on red before stepping into crosswalks. Use reflective gear or activate bicycle lights after dusk.",
+        "key_tip": "Never assume a turning driver has seen you at green lights"
       },
       "peak_danger_windows": {
-        "peak_window": "Evening Commute (4:30 PM - 7:30 PM)",
-        "details": "Congestion peaks during evening travel windows."
+        "primary_peak": "4:30 PM - 7:30 PM Weekdays (Evening Commute Congestion)",
+        "secondary_peak": "10:00 PM - 2:00 AM Friday & Saturday (Reduced Lighting & Speed Variance)",
+        "details": "Evening rush hours experience 3x higher collision rates than midday. Exercise maximum patience during heavy congestion."
       }
     }
   },
   "raw_metrics": {
     "zone_id": "Zone_41",
+    "chicago_beat": "911",
     "week": 48,
-    "zone_type": "Highway_Junction",
-    "temporal_profile": "GRADUAL_DETERIORATION",
-    "population_density": 2549,
-    "road_capacity": 42,
-    "effective_road_capacity": 34.78,
-    "vehicle_density": 28.34,
-    "traffic_pressure": 0.815,
-    "congestion": 50.47,
-    "average_speed": 39.77,
-    "red_light_violations": 7,
-    "weather": "Light Rain",
-    "road_condition": "Moderate",
-    "special_event": 0,
-    "incident_count": 0,
-    "incident_occurred": 0,
-    "previous_week_vehicle_density": 26.46,
-    "previous_week_congestion": 51.6,
-    "previous_week_average_speed": 41.09,
-    "previous_week_red_light_violations": 16.0,
-    "previous_week_incident_count": 1.0,
-    "previous_week_incident_occurred": 1.0,
-    "previous_week_traffic_pressure": 0.761,
-    "rolling_4_week_avg_vehicle_density": 30.98,
-    "rolling_4_week_avg_congestion": 45.88,
-    "rolling_4_week_avg_speed": 49.49,
-    "rolling_4_week_avg_violations": 10.0,
-    "rolling_4_week_incident_count": 4.0,
-    "rolling_4_week_incident_rate": 0.5,
-    "rolling_4_week_avg_traffic_pressure": 0.771,
-    "vehicle_density_change": 1.88,
-    "congestion_change": -1.13,
-    "speed_change": -1.32,
-    "violations_change": -9.0,
-    "traffic_pressure_change": 0.054,
-    "incident_count_change": 1.0,
-    "vehicle_density_pct_change": 7.11,
-    "congestion_pct_change": -2.19,
-    "speed_pct_change": -3.21,
-    "vehicle_population_ratio": 11.118,
-    "congestion_trend_4w": 1.284,
-    "vehicle_density_trend_4w": -2.235,
-    "speed_trend_4w": -1.556,
-    "incident_trend_4w": 0.0,
-    "car_percentage": 42.9,
-    "motorcycle_percentage": 40.9,
-    "bus_percentage": 9.9,
-    "truck_percentage": 6.4,
-    "moving_vehicle_percentage": 37.0,
-    "slow_vehicle_percentage": 34.6,
-    "stopped_vehicle_percentage": 28.3,
-    "location_name": "Adyar",
-    "city": "Chennai",
-    "latitude": 13.0063,
-    "longitude": 80.2574,
-    "predicted_risk_probability": 0.5329,
-    "risk_score": 53.295,
-    "population_exposure_score": 8.5351,
-    "vehicle_exposure_score": 36.408,
-    "temporal_trend_score": 72.5952,
-    "priority_score": 41.6226,
-    "priority_rank": 27,
-    "priority_level": "MODERATE",
-    "risk_prob": 0.5329
+    "crashes": 0,
+    "rolling4w_avg": 1.5,
+    "speed_mph": 30.0
   }
 }
