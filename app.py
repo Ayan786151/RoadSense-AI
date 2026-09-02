@@ -264,36 +264,24 @@ def main():
         [
             "01. SIMULATION & RISK ENGINE",
             "02. LIVE CCTV SURVEILLANCE",
-            "03. COMPUTER VISION STUDIO",
-            "04. GEOSPATIAL INCIDENT RADAR",
-            "05. RISK FACTOR WEIGHTAGE & HIERARCHY",
-            "06. 30-DAY CROSSROAD TRANSFORMATION",
-            "07. AREA PREDICTION & TRAJECTORY INTELLIGENCE",
-            "08. 4-WEEK ROLLING ML & REINFORCEMENT LAB",
-            "09. CHICAGO POLICE CRASH INTELLIGENCE & ZONE RADAR"
+            "03. RISK FACTOR WEIGHTAGE & HIERARCHY",
+            "04. 4-WEEK ROLLING ML & REINFORCEMENT LAB",
+            "05. CHICAGO POLICE CRASH INTELLIGENCE & ZONE RADAR"
         ],
         index=0
     )
 
     st.sidebar.markdown("---")
 
-    if app_mode.startswith("01"):
+    if app_mode.startswith("01") or "SIMULATION & RISK ENGINE" in app_mode:
         render_simulation_dashboard()
-    elif app_mode.startswith("02"):
+    elif app_mode.startswith("02") or "LIVE CCTV SURVEILLANCE" in app_mode:
         render_live_vision_dashboard()
-    elif app_mode.startswith("03"):
-        render_vision_studio()
-    elif app_mode.startswith("04"):
-        render_city_command_map()
-    elif app_mode.startswith("05"):
+    elif app_mode.startswith("03") or "RISK FACTOR WEIGHTAGE" in app_mode:
         render_risk_factors_module()
-    elif app_mode.startswith("06"):
-        render_crossroad_animation_tab()
-    elif app_mode.startswith("07"):
-        render_area_prediction_dashboard()
-    elif app_mode.startswith("08"):
+    elif app_mode.startswith("04") or "REINFORCEMENT LAB" in app_mode:
         render_reinforcement_lab()
-    elif app_mode.startswith("09") and render_chicago_crash_module:
+    elif (app_mode.startswith("05") or "CHICAGO POLICE CRASH" in app_mode) and render_chicago_crash_module:
         render_chicago_crash_module()
 
     # Sidebar Footer
@@ -883,7 +871,7 @@ def render_risk_factors_module():
     st.markdown("""
     <div class="telemetry-header" style="border-left: 4px solid #ef4444;">
         <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #ef4444; letter-spacing: 0.08em; text-transform: uppercase;">
-            SAFETY INTELLIGENCE MODULE 05
+            SAFETY INTELLIGENCE MODULE 03
         </div>
         <h2 style="margin: 4px 0 0 0; font-size: 22px;">
             Hazard Factor Weightage Matrix & Risk Hierarchy
