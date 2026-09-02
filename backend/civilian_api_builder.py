@@ -112,6 +112,8 @@ def build_civilian_radar_payload(
     return {
         "zone_id": str(zone_id),
         "zone_name": str(zone_name),
+        "display_name": f"Beat {zone_id}: {zone_name}",
+        "full_label": f"Beat {zone_id}: {zone_name} [{district}]",
         "district": str(district),
         "zone_type": str(zone_type),
         "posted_speed_limit_mph": float(speed_limit),
@@ -256,7 +258,9 @@ def push_civilian_safety_radar_to_api() -> Dict[str, Any]:
         zones_catalog.append({
             "zone_id": b_str,
             "zone_name": z_info["name"],
+            "display_name": f"Beat {b_str}: {z_info['name']}",
             "district": z_info["district"],
+            "full_label": f"Beat {b_str}: {z_info['name']} [{z_info['district']}]",
             "zone_type": z_info["type"],
             "posted_speed_limit_mph": speed,
             "current_risk_badge": clean_radar["current_week"]["risk_badge"],
@@ -275,11 +279,16 @@ def push_civilian_safety_radar_to_api() -> Dict[str, Any]:
     for rank, z in enumerate(sorted_by_risk[:10], 1):
         p_pct = z["upcoming_week"]["predicted_risk_percentage"]
         prob = z["upcoming_week"]["predicted_risk_probability"]
+        b_id = z["zone_id"]
+        z_n = z["zone_name"]
+        dist = z["district"]
         citywide_hotspots.append({
             "rank": rank,
-            "zone_id": z["zone_id"],
-            "zone_name": z["zone_name"],
-            "district": z["district"],
+            "zone_id": b_id,
+            "zone_name": z_n,
+            "display_name": f"Beat {b_id}: {z_n}",
+            "district": dist,
+            "full_label": f"Beat {b_id}: {z_n} [{dist}]",
             "forecast_risk_probability": prob,
             "forecast_risk_percentage": p_pct,
             "risk_badge": z["upcoming_week"]["predicted_risk_badge"],

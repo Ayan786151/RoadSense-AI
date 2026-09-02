@@ -180,13 +180,8 @@ def generate_chicago_continuous_full_grid(csv_path: Optional[str] = None) -> Tup
     for b in all_beats:
         b_rows = df_raw[df_raw["beat_id"] == b]
         info = resolve_chicago_zone_name(b)
-        emp_street = beat_empirical_streets.get(b, "")
-        
-        if emp_street:
-            comm_area = info["name"].split(" - ")[0] if " - " in info["name"] else info["name"]
-            zone_display_name = f"{comm_area} - {emp_street}"
-        else:
-            zone_display_name = info["name"]
+        # Use authentic Chicago beat name exactly as displayed on the frontend
+        zone_display_name = info["name"]
 
         spd = float(b_rows["POSTED_SPEED_LIMIT"].median()) if "POSTED_SPEED_LIMIT" in b_rows.columns else 30.0
         inter = float((b_rows["INTERSECTION_RELATED_I"] == "Y").mean()) if "INTERSECTION_RELATED_I" in b_rows.columns else 0.48

@@ -74,9 +74,10 @@ def run_chicago_api_population():
     for idx, b in enumerate(top_50_beats, 1):
         zid = f"Zone_{idx:02d}"
         b_slice = df_grid[df_grid["zone_id"] == b]
-        z_name = str(b_slice["zone_name"].iloc[0])
-        z_district = str(b_slice["district"].iloc[0])
-        z_type = str(b_slice.get("zone_type", pd.Series(["Urban Corridor"])).iloc[0])
+        info = resolve_chicago_zone_name(b)
+        z_name = info["name"]
+        z_district = info["district"]
+        z_type = info["type"]
         spd = float(b_slice["posted_speed_limit"].median()) if "posted_speed_limit" in b_slice.columns else 30.0
         inter_pct = round(float(b_slice["intersection_ratio"].median() * 100.0), 1) if "intersection_ratio" in b_slice.columns else 45.0
         
@@ -86,6 +87,8 @@ def run_chicago_api_population():
             "zone_id": zid,
             "beat_id": str(b),
             "location_name": z_name,
+            "beat_label": f"Beat {b}: {z_name}",
+            "full_label": f"Beat {b}: {z_name} [{z_district}]",
             "district": z_district,
             "zone_type": z_type,
             "speed_mph": spd,
