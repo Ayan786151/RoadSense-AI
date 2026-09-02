@@ -288,8 +288,8 @@ def main():
     st.sidebar.markdown("""
     <div style="padding: 16px 0; border-top: 1px solid #27272a; margin-top: 32px; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #71717a; text-align: left;">
         STATUS: OPERATIONAL<br>
-        TEAM: XPERTZ<br>
-        PIPELINE: YOLOV11 + ML ENGINE<br>
+        TEAM: DAWG <br>
+        PIPELINE: ML ENGINE<br>
         TELEMETRY: REAL-TIME INGESTION
     </div>
     """, unsafe_allow_html=True)
