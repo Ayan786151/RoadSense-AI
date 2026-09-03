@@ -1,4 +1,6 @@
 # HOW TO USE ROADSENSE API
 For records of all available zones: USE [THIS ENDPOINT](https://ayan786151.github.io/RoadSense-AI/api/v1/zones.json)
 For individual zone records, we have two available endpoints:
-- Use [THIS ENDPOINT](https://ayan786151.github.io/RoadSense-AI/api/v1/zones/Zone_01/all.json). Replace Zone name
+- Use [THIS ENDPOINT](https://ayan786151.github.io/RoadSense-AI/api/v1/zones/Zone_01/all.json). Replace Zone name with required zone name. This will return a structured list of data for all 52 trained weeks. 
+- Use [THIS ENDPOINT](https://ayan786151.github.io/RoadSense-AI/api/v1/zones/Zone_01/1). Replace Zone name with required zone name and the number before ".json"("1.json", for example) to change the targeted week.
+ 
