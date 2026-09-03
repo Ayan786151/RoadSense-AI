@@ -672,4 +672,6 @@ def render_simulation_dashboard():
     # Tab 5: Raw Telemetry
     with tab5:
         st.markdown("#### Raw Feature Vector Stream")
-        st.dataframe(current_row.T, width="stretch")
+        df_raw = current_row.to_frame(name="Value")
+        df_raw.index.name = "Feature"
+        st.dataframe(df_raw.astype(str), width="stretch")

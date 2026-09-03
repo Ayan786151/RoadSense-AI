@@ -783,9 +783,9 @@ def render_area_prediction_dashboard():
             })
         
         # Render forecast cards
-        st.markdown(f"""
-        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 20px;">
-            {''.join([f"""
+        cards_html = []
+        for fw in forecast_weeks:
+            cards_html.append(f"""
             <div style="background: #121215; border: 1px solid #27272a; border-top: 3px solid {fw['risk_color']}; padding: 12px 14px; border-radius: 4px;">
                 <div style="display: flex; justify-content: space-between; align-items: center;">
                     <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #a1a1aa;">{fw['step']} (W{fw['calendar_week']})</span>
@@ -793,11 +793,16 @@ def render_area_prediction_dashboard():
                 </div>
                 <div style="font-family: 'JetBrains Mono', monospace; font-size: 22px; font-weight: 800; color: {fw['risk_color']}; margin-top: 6px;">{fw['predicted_risk_pct']}%</div>
                 <div style="font-size: 11px; color: #a1a1aa; margin-top: 6px;">
-                    Cong: <b>{fw['projected_congestion']}</b> • Speed: <b>{fw['projected_speed_kmh']} km/h</b><br>
-                    Density: <b>{fw['projected_density']} veh/km</b> • Est. Incidents: <b>{fw['expected_incidents']}</b>
+                    Cong: <b>{fw['projected_congestion']}</b> &bull; Speed: <b>{fw['projected_speed_kmh']} km/h</b><br>
+                    Density: <b>{fw['projected_density']} veh/km</b> &bull; Est. Incidents: <b>{fw['expected_incidents']}</b>
                 </div>
             </div>
-            """ for fw in forecast_weeks])}
+            """)
+        
+        cards_grid = "".join(cards_html)
+        st.markdown(f"""
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 20px;">
+            {cards_grid}
         </div>
         """, unsafe_allow_html=True)
         
